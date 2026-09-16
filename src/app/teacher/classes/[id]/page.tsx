@@ -168,6 +168,16 @@ export default async function ClassPage({
               )}
               <StudentList classId={klass.id} students={klass.students} />
               <AddStudents classId={klass.id} variant="collapsed" />
+              {/* The register a school actually keeps: one row per student, one
+                  column per paper. The year to date by default, because a
+                  register holding every paper since the school opened is one
+                  nobody can read. */}
+              <p className="ui-hint">
+                <a href={`/api/classes/${klass.id}/marks/`}>Download this class’s marks</a>{" "}
+                as a spreadsheet — one row per student, one column per paper,
+                for this academic year. A paper still being marked says so
+                rather than showing a final mark.
+              </p>
             </>
           )}
         </Stack>

@@ -1362,6 +1362,34 @@ about sixty-five defects. The lessons are about where tests stop looking:
 - **A malformed id is a 404, not a 500.** Prisma throws on a non-UUID, so every
   `[id]` route validates the id before querying.
 
+### Exporting marks
+
+- **Marks only. Never mastery.** An estimate is a belief carrying a denominator
+  and a refusal band; in a spreadsheet it loses both and becomes a column
+  somebody averages and ranks by — the composite the product refuses everywhere
+  else, smuggled out in a file. A test greps the CSV for
+  `mastery|estimate|band|concept`.
+- **Null is not zero at the LAST boundary.** A paper nobody sat, and a paper
+  whose written answer nobody has read, export an empty marks cell — with a
+  `fully_marked` column and `marks_pending` beside it. The number alone would be
+  read as a final mark by the one system that cannot ask.
+- **The register says "3 (part marked)"** rather than printing a mark that is
+  not finished. Three states, three different cells: never sat is blank.
+- **Best attempt per paper, not last** — the same choice a term report makes,
+  because attempts exist so a student can improve and reporting the final go
+  punishes trying again. Two readers disagreeing about what a student scored is
+  worse than either rule alone.
+- **Every export writes an audit row.** A file holding a class's marks leaving
+  the product is exactly what somebody asks about a year later.
+- **A CSV carries a BOM and CRLF endings.** Without the BOM, Excel on Windows
+  reads a Devanagari name as the system codepage and mangles it; CRLF is what
+  RFC 4180 says and what school office software expects. A line break inside a
+  quoted field stays part of the value and must not become a second record.
+- **The download is a plain `<a href>` to a GET route**, not a fetch: the
+  browser saves the file, the office can bookmark the URL, and the audit row is
+  written server-side either way. `no-store`, because a marks file is a snapshot
+  of a moment and a cached copy answers "what does the register say now" wrongly.
+
 ### The live view of a paper being sat
 
 - **No marks while a paper is being written, and that IS the feature.** A

@@ -43,6 +43,11 @@ function session() {
       const res = await fetch(`${BASE}${path}`, { headers: { cookie } });
       return { status: res.status, html: await res.text() };
     },
+    // The whole Response: a download is judged by its headers as much as by
+    // its body.
+    async raw(path) {
+      return fetch(`${BASE}${path}`, { headers: { cookie } });
+    },
   };
 }
 
@@ -279,6 +284,30 @@ check("and carries no score at all",
 const stolenLive = await other.page(`/teacher/assignments/${assignmentId}/monitor/`);
 check("another organisation's live view is 404", stolenLive.status === 404,
   `status ${stolenLive.status}`);
+
+// --- Marks export (IMPLEMENTATION_PLAN.md §7.2) -------------------------------
+
+const exportRes = await teacher.raw(`/api/results/${assignmentId}/export/`);
+const exportBody = await exportRes.text();
+check("the marks export downloads", exportRes.status === 200, `status ${exportRes.status}`);
+check("as a CSV",
+  (exportRes.headers.get("content-type") ?? "").startsWith("text/csv"),
+  exportRes.headers.get("content-type") ?? "");
+check("as an attachment with a findable filename",
+  /attachment; filename=".*\.csv"/.test(exportRes.headers.get("content-disposition") ?? ""),
+  exportRes.headers.get("content-disposition") ?? "");
+// A marks file is a snapshot of a moment; a cached copy is a wrong answer to
+// "what does the register say now".
+check("and is not cached", (exportRes.headers.get("cache-control") ?? "").includes("no-store"));
+check("with the columns an office needs",
+  ["roll_number", "student", "marks", "out_of", "fully_marked"].every((column) =>
+    exportBody.includes(column)));
+check("and no mastery figure anywhere in it",
+  !/mastery|estimate|band/i.test(exportBody));
+
+const stolenExport = await other.raw(`/api/results/${assignmentId}/export/`);
+check("another organisation cannot download it", stolenExport.status === 404,
+  `status ${stolenExport.status}`);
 
 let failed = 0;
 for (const { name, pass, detail } of results) {

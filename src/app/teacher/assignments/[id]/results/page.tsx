@@ -61,6 +61,16 @@ export default async function ResultsPage({
         description={`${results.submitted} of ${results.expected} sat this paper.`}
         actions={
           <>
+            {/* A plain link, not a fetch: the browser saves the file and the
+                office can bookmark the URL. Audited server-side either way. */}
+            <a
+              href={`/api/results/${id}/export/`}
+              className="ui-button"
+              data-variant="secondary"
+              data-size="md"
+            >
+              <span>Download marks</span>
+            </a>
             {results.awaitingMarking > 0 && (
               <Link
                 href={`/teacher/assignments/${id}/marking`}
