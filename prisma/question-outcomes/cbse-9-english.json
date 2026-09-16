@@ -1,0 +1,15 @@
+{
+  "draft": "prisma/curriculum-drafts/cbse-9-english.json",
+  "format": "One digit per question, in source-id order within the chapter. The digit is the outcome's position in the chapter (1-based, topics in order); 0 means the question tests no outcome in the draft and is left untagged on purpose.",
+  "chapters": {
+    "1": "1221254533 1111152121 2121543335",
+    "2": "2121144533 1322112251 1111111435",
+    "3": "1112254533 1311211111 1115554333",
+    "4": "2121125533 1141211131 3111152155",
+    "5": "1122554333 1111122221 2555533333",
+    "6": "1122254433 1151115111 4113225443",
+    "7": "1112254333 1111111111 2222555333",
+    "8": "1112254533 1222221122 1555555333"
+  },
+  "book": "iebe1"
+}

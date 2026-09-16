@@ -1,0 +1,410 @@
+/* ===========================================================================
+   Integrations — the MIS/ERP webhook console
+   ---------------------------------------------------------------------------
+   Lives inside /i, so it inherits the institute shell: read at a desk, with the
+   receiving system's own configuration screen open in another tab. The job of
+   this sheet is to make the failing endpoint the thing you see first — an
+   integration nobody can see failing is one that fails silently for a month.
+
+   Every class name here begins `.ui-wh-` and was grepped against ui.css,
+   student.css, results.css, institute.css, report.css, readiness.css and
+   voice.css before it was used. `.ui-result-score` once meant two different
+   components in two files and whichever loaded second won.
+
+   Colour is never the only encoding: the "gave up" figure gets a colour AND a
+   different weight, and every status also carries a word in a Badge.
+   =========================================================================== */
+
+/* ------------------------------------------------------------- Catalogue -- */
+
+.ui-wh-explainer {
+  margin-top: 20px;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+}
+
+.ui-wh-catalogue {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.ui-wh-catalogue li {
+  display: grid;
+  gap: 3px;
+}
+
+/* A grid item stretches to the row by default, so the event code drew its
+   sunken background across the whole card — an empty grey band with a few
+   characters at one end. It hugs its text instead. */
+.ui-wh-catalogue li > .ui-wh-code {
+  justify-self: start;
+}
+
+.ui-wh-catalogue-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ui-wh-catalogue-blurb {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* `--text-tertiary` is documented as 14px-and-up only, so this is 14px and
+   uses --text-secondary. The measured ratio on --surface is what makes that a
+   rule rather than a preference. */
+.ui-wh-note {
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.ui-wh-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12.5px;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunken);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+/* ----------------------------------------------------------------- Form -- */
+
+.ui-wh-add {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+
+.ui-wh-form {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+}
+
+.ui-wh-fieldset {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  padding: 12px 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.ui-wh-fieldset legend {
+  padding: 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ui-wh-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.ui-wh-check input {
+  margin-top: 2px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  flex: none;
+}
+
+.ui-wh-check span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 13px, so `--text-secondary` rather than `--text-tertiary`. The shared
+   `.ui-hint` is 12.5px on the tertiary token; the tutor panel had to move off
+   it for exactly this reason and a screenshot is what caught it. */
+.ui-wh-hint {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-wh-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ui-wh-error {
+  margin: 0;
+  font-size: 14px;
+  color: var(--danger);
+}
+
+/* --------------------------------------------------------------- Secret -- */
+
+/* Shown once, and it has to look like it. Bordered in the accent rather than
+   in `--warning`: nothing has gone wrong, and dressing a successful creation as
+   a warning teaches people to dismiss warnings. */
+.ui-wh-secret {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  padding: 16px 18px;
+  background: var(--accent-wash);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-card);
+}
+
+.ui-wh-secret-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ui-wh-secret-body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.ui-wh-secret-value {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  /* A secret is one long unbroken token; without this it forces the card wider
+     than the viewport and the whole page scrolls sideways on a phone. */
+  overflow-wrap: anywhere;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------- Cards -- */
+
+.ui-wh-list {
+  margin-top: 28px;
+  display: grid;
+  gap: 14px;
+}
+
+.ui-wh-card {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+}
+
+.ui-wh-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ui-wh-card-id {
+  min-width: 0;
+}
+
+.ui-wh-label {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ui-wh-url {
+  margin: 2px 0 0;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.ui-wh-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ui-wh-events {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ui-wh-health {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.ui-wh-health dt {
+  font-size: 12.5px;
+  font-weight: 600;
+  /* 12.5px, so --text-secondary rather than --text-tertiary. */
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ui-wh-health dd {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+/* The count that has to be noticed, with weight as well as colour so it still
+   reads on a bad projector and in a black-and-white printout. */
+.ui-wh-health dd[data-alarm="yes"] {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.ui-wh-problem {
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  background: var(--warning-fill);
+  border: 1px solid var(--warning-border);
+  border-radius: var(--radius-control);
+  color: var(--text-primary);
+}
+
+.ui-wh-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ------------------------------------------------------------------ Log -- */
+
+/* A region that scrolls but has no tab stop cannot be scrolled by a keyboard at
+   all, so the container carries tabIndex={0} and a name. axe only fires when
+   the content actually overflows — which, on a real school's log, it does. */
+.ui-wh-log-scroll {
+  margin-top: 20px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.ui-wh-log-scroll:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.ui-wh-log {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 720px;
+}
+
+.ui-wh-log th,
+.ui-wh-log td {
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-wh-log th {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--surface-sunken);
+  white-space: nowrap;
+}
+
+.ui-wh-log tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ui-wh-log-problem {
+  display: block;
+  margin-top: 6px;
+  max-width: 46ch;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.ui-wh-log-code {
+  display: inline-block;
+  margin-left: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------- Touch -- */
+
+/* 44x44 is a TOUCH rule, so it lives here rather than on every control: raising
+   every button in a dense console for somebody holding a mouse inflates a
+   screen the rule is not about. And a target big enough in one direction is not
+   a target — the first pass at this in the design system set only min-height
+   and produced a 44x36 breadcrumb. */
+@media (max-width: 640px), (pointer: coarse) {
+  .ui-wh-check {
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .ui-wh-check input {
+    width: 22px;
+    height: 22px;
+    margin-top: 0;
+  }
+
+  .ui-wh-card-actions .ui-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ui-wh-card-head {
+    flex-direction: column;
+  }
+
+  /* A row that wraps puts a destructive-looking button under the wrong name.
+     At 360px the actions get their own full-width line, under the endpoint
+     they belong to, rather than wrapping beside the next card's heading. */
+  .ui-wh-card-actions > * {
+    flex: 1 1 auto;
+  }
+}

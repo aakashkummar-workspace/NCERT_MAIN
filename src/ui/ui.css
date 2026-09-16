@@ -1,0 +1,2462 @@
+/*
+ * Design system component styles.
+ *
+ * Every value here reads a token from globals.css. A literal colour, radius or
+ * shadow in this file is a bug — it means a token is missing.
+ *
+ * Specificity is kept flat on purpose: one class per component, data-attributes
+ * for variants. No nesting deeper than one level, so a later rule cannot
+ * silently cancel an earlier one.
+ */
+
+/* ---------------------------------------------------------------- Button -- */
+
+.ui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--radius-control);
+  /* The secondary appearance, in the base rule for the same reason the medium
+     size is: a <Link className="ui-button"> or a hand-written <button> with a
+     forgotten data-variant used to render as bare text on the page background —
+     an invisible control, which is worse than an ugly one. Every variant below
+     overrides all three properties, so nothing else changes. */
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  /* The medium size, in the base rule rather than only under
+     [data-size="md"]. A <Link className="ui-button"> cannot default a prop the
+     way the Button component does, so a forgotten data-size used to render a
+     control with no padding and no height at all — text jammed against a
+     border. The three data-size rules below still win on specificity. */
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+  text-decoration: none;
+  transition:
+    background-color var(--motion-instant) var(--ease),
+    border-color var(--motion-instant) var(--ease),
+    color var(--motion-instant) var(--ease);
+}
+
+/* Icon and label sit on one line. Tailwind's preflight makes every svg
+   display:block, and Button wraps its children in one span — so an icon passed
+   beside a label rendered ABOVE it, inside a button that then grew to two lines.
+   The label span is a flex row with the button's own gap, and an svg anywhere
+   in a button is inline and never squashed. */
+.ui-button > .ui-button-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.ui-button svg {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.ui-button[data-size="sm"] {
+  min-height: 32px;
+  padding: 0 12px;
+  font-size: 13px;
+}
+.ui-button[data-size="md"] {
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+.ui-button[data-size="lg"] {
+  min-height: 48px;
+  padding: 0 20px;
+  font-size: 15px;
+}
+.ui-button[data-full] {
+  width: 100%;
+}
+
+.ui-button[data-variant="primary"] {
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+  border-color: var(--primary-700);
+  color: #ffffff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.08), inset 0 1px 0 rgb(255 255 255 / 0.15);
+}
+.ui-button[data-variant="primary"]:hover:not(:disabled) {
+  filter: brightness(1.06);
+  box-shadow: 0 4px 12px rgb(74 86 210 / 0.25);
+}
+
+.ui-button[data-variant="secondary"] {
+  background: var(--surface);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+.ui-button[data-variant="secondary"]:hover:not(:disabled) {
+  background: var(--surface-sunken);
+}
+
+.ui-button[data-variant="ghost"] {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text-secondary);
+}
+.ui-button[data-variant="ghost"]:hover:not(:disabled) {
+  background: var(--surface-sunken);
+  color: var(--text-primary);
+}
+
+.ui-button[data-variant="danger"] {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #ffffff;
+}
+.ui-button[data-variant="danger"]:hover:not(:disabled) {
+  filter: brightness(0.92);
+}
+
+.ui-button[data-variant="ai"] {
+  background: var(--ai-surface);
+  color: var(--accent);
+  border-color: var(--ai-border);
+}
+.ui-button[data-variant="ai"]:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.ui-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ui-button-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--radius-full);
+  animation: ui-spin 700ms linear infinite;
+  flex: none;
+}
+
+@keyframes ui-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ui-button-spinner {
+    animation: none;
+    opacity: 0.6;
+  }
+}
+
+/* ----------------------------------------------------------------- Field -- */
+
+.ui-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ui-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: flex;
+  gap: 5px;
+  align-items: baseline;
+}
+
+/* Required is marked in words, not by a colour a screen reader skips. */
+.ui-label-optional {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-tertiary);
+}
+
+.ui-input,
+.ui-select,
+.ui-textarea {
+  min-height: 42px;
+  padding: 10px 14px;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 14.5px;
+  width: 100%;
+  transition: border-color var(--motion-fast) var(--ease), box-shadow var(--motion-fast) var(--ease);
+}
+.ui-textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.55;
+}
+.ui-input:focus,
+.ui-select:focus,
+.ui-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+.ui-input::placeholder,
+.ui-textarea::placeholder {
+  color: var(--text-tertiary);
+}
+.ui-input:hover:not(:disabled),
+.ui-select:hover:not(:disabled),
+.ui-textarea:hover:not(:disabled) {
+  border-color: var(--text-tertiary);
+}
+.ui-input[aria-invalid="true"],
+.ui-select[aria-invalid="true"],
+.ui-textarea[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+.ui-input:disabled,
+.ui-select:disabled,
+.ui-textarea:disabled {
+  background: var(--surface-sunken);
+  color: var(--text-tertiary);
+  cursor: not-allowed;
+}
+
+.ui-hint {
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+}
+
+.ui-error {
+  font-size: 12.5px;
+  color: var(--danger);
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+/* ------------------------------------------------------------------ Card -- */
+
+.ui-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--motion-fast) var(--ease), box-shadow var(--motion-fast) var(--ease);
+}
+.ui-card[data-padding="none"] {
+  padding: 0;
+}
+.ui-card[data-raised] {
+  box-shadow: var(--shadow-md);
+}
+
+.ui-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.ui-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+.ui-card-description {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* -------------------------------------------------------------- StatCard -- */
+
+.ui-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ui-stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+.ui-stat-value {
+  font-size: 32px;
+  line-height: 1.16;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+/* No evidence is an em dash, never a zero — 0% and "no data" mean opposite
+   things to a teacher. */
+.ui-stat-value[data-empty] {
+  color: var(--text-tertiary);
+}
+.ui-stat-context {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+/* ----------------------------------------------------------------- Badge -- */
+
+.ui-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+}
+.ui-badge[data-tone="neutral"] {
+  color: var(--text-secondary);
+  border-color: var(--border);
+  background: var(--surface-sunken);
+}
+.ui-badge[data-tone="primary"] {
+  color: var(--accent);
+  border-color: var(--primary-200);
+  background: var(--accent-wash);
+}
+.ui-badge[data-tone="success"] {
+  color: var(--success);
+  border-color: var(--success-border);
+  background: var(--success-fill);
+}
+.ui-badge[data-tone="warning"] {
+  color: var(--warning);
+  border-color: var(--warning-border);
+  background: var(--warning-fill);
+}
+.ui-badge[data-tone="danger"] {
+  color: var(--danger);
+  border-color: var(--danger-border);
+  background: var(--danger-fill);
+}
+.ui-badge[data-tone="ai"] {
+  color: var(--accent);
+  border-color: var(--ai-border);
+  background: var(--ai-surface);
+}
+
+/* ----------------------------------------------------------------- Alert -- */
+
+.ui-alert {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-control);
+  border: 1px solid;
+  font-size: 14px;
+}
+.ui-alert[data-tone="info"] {
+  color: var(--text-primary);
+  border-color: var(--info-border);
+  background: var(--info-fill);
+}
+.ui-alert[data-tone="success"] {
+  color: var(--text-primary);
+  border-color: var(--success-border);
+  background: var(--success-fill);
+}
+.ui-alert[data-tone="warning"] {
+  color: var(--text-primary);
+  border-color: var(--warning-border);
+  background: var(--warning-fill);
+}
+.ui-alert[data-tone="danger"] {
+  color: var(--text-primary);
+  border-color: var(--danger-border);
+  background: var(--danger-fill);
+}
+.ui-alert-icon {
+  flex: none;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.ui-alert-title {
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+/* ------------------------------------------------------------ EmptyState -- */
+
+.ui-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 48px 24px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+.ui-empty-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+  color: var(--text-tertiary);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+.ui-empty-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.ui-empty-body {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  max-width: 46ch;
+}
+.ui-empty-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+/* -------------------------------------------------------------- Skeleton -- */
+
+.ui-skeleton {
+  background: var(--surface-sunken);
+  border-radius: var(--radius-sm);
+  animation: skeleton-pulse 1.4s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ui-skeleton {
+    animation: none;
+  }
+}
+
+/* ----------------------------------------------------------- PageHeader -- */
+
+.ui-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.ui-page-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  margin-bottom: 6px;
+}
+.ui-page-title {
+  font-size: 28px;
+  line-height: 1.24;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+.ui-page-description {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+  max-width: 62ch;
+}
+.ui-page-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ---------------------------------------------------------------- Shell -- */
+
+.ui-shell {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.ui-sidebar {
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  /* A second bar beside the page bar read as a seam down the middle of the
+     product. The rail still scrolls when the navigation outgrows the window. */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.ui-sidebar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.ui-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 8px 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+.ui-brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-900));
+  box-shadow: 0 2px 8px rgb(74 86 210 / 0.28);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  flex: none;
+}
+.ui-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.ui-brand-name {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.ui-brand-badge {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.ui-brand-org {
+  display: block;
+  font-size: 11.5px;
+  color: var(--text-tertiary);
+}
+
+.ui-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ui-nav-group {
+  margin-bottom: 10px;
+}
+.ui-nav-section {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  padding: 8px 10px 6px;
+}
+.ui-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 38px;
+  padding: 0 10px;
+  border-radius: var(--radius-control);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: all var(--motion-instant) var(--ease);
+}
+.ui-nav-item:hover {
+  background: var(--surface-sunken);
+  color: var(--text-primary);
+}
+.ui-nav-item[aria-current="page"] {
+  background: var(--accent-wash);
+  color: var(--accent);
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1px rgb(74 86 210 / 0.18);
+}
+.ui-nav-icon {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+/* A disabled nav item says when it arrives rather than pretending to work. */
+.ui-nav-item[data-soon] {
+  color: var(--text-tertiary);
+  cursor: default;
+}
+.ui-nav-soon {
+  margin-left: auto;
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  color: var(--text-tertiary);
+}
+
+.ui-sidebar-footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ui-sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+}
+.ui-sidebar-user-meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+.ui-sidebar-user-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ui-sidebar-user-role {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ui-sidebar-footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.ui-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 32px;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.ui-topbar-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+}
+.ui-topbar-crumb-org {
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+.ui-topbar-crumb-link {
+  color: var(--text-tertiary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--motion-instant) var(--ease);
+}
+.ui-topbar-crumb-link:hover {
+  color: var(--accent);
+}
+.ui-topbar-crumb-sep {
+  color: var(--border-strong);
+  font-size: 12px;
+}
+.ui-topbar-crumb-active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.ui-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ui-content {
+  padding: 32px;
+  max-width: var(--content-max);
+  width: 100%;
+}
+
+.ui-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--accent-wash);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-size: 12.5px;
+  font-weight: 600;
+  flex: none;
+}
+
+/* One mark-scheme criterion in the question editor: name, marks, what earns
+   them, and Remove. The descriptor gets the room, because it is the part that
+   makes a rubric more than a list; the marks box needs only a few digits. */
+.ui-rubric-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(96px, 1fr) minmax(0, 3fr) auto;
+  gap: 12px;
+  align-items: start;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.ui-rubric-row > :last-child {
+  align-self: end;
+}
+@media (max-width: 640px) {
+  .ui-rubric-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 96px);
+  }
+  .ui-rubric-row > :nth-child(3) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile: the sidebar becomes a compact header — brand and account actions on
+   one row, every nav item on wrapping rows beneath.
+
+   It used to be a sideways scroller, and two things were wrong with that. The
+   nav groups stayed blocks, so each group's items stacked vertically and the
+   "row" was about 410px tall at 390px wide; and the footer sat to the right
+   of the scroll, so Settings and Sign out were off-screen with nothing on the
+   page saying there was more. A wrapping row needs no cue: everything is on
+   screen. */
+@media (max-width: 1023px) {
+  .ui-shell {
+    grid-template-columns: 1fr;
+  }
+  .ui-sidebar {
+    position: static;
+    height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "brand account"
+      "nav nav";
+    align-items: center;
+    gap: 8px 12px;
+    overflow: visible;
+    padding: 8px 16px 10px;
+  }
+  /* The brand and the nav share a wrapper on desktop; here they are placed
+     separately, so the wrapper steps out of the grid. */
+  .ui-sidebar > div:first-child {
+    display: contents;
+  }
+  .ui-brand {
+    grid-area: brand;
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+  .ui-nav {
+    grid-area: nav;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .ui-nav-group {
+    display: contents;
+  }
+  .ui-nav-section {
+    display: none;
+  }
+  .ui-sidebar-footer {
+    grid-area: account;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+  }
+  .ui-sidebar-user {
+    padding: 0;
+    background: none;
+  }
+  /* The organisation is in the top bar directly below; the name is on the
+     avatar. Repeating both here pushed Sign out off the row. */
+  .ui-sidebar-user-meta {
+    display: none;
+  }
+  .ui-sidebar-footer-actions {
+    gap: 4px;
+    padding: 0;
+  }
+  /* The org name already sits in the bar directly below; repeating it here
+     wrapped the brand onto three lines and squeezed the nav. */
+  .ui-brand-org {
+    display: none;
+  }
+  .ui-brand {
+    flex: none;
+    padding: 0;
+  }
+  .ui-brand-name {
+    white-space: nowrap;
+  }
+  .ui-nav-item {
+    white-space: nowrap;
+    padding: 0 10px;
+    gap: 6px;
+  }
+  /* The top bar wraps rather than pushing its action off the screen. With the
+     organization name and a breadcrumb beside "+ New assessment", the row was
+     up to 397px wide at 360px and the whole page scrolled sideways. */
+  .ui-topbar {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+  .ui-topbar-breadcrumbs {
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+  .ui-nav-soon {
+    display: none;
+  }
+  .ui-topbar,
+  .ui-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* ------------------------------------------------------------- Auth page -- */
+
+.ui-auth {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.ui-auth-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px;
+  background: var(--surface);
+}
+.ui-auth-inner {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+.ui-auth-aside {
+  background: var(--canvas);
+  border-left: 1px solid var(--border);
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 26px;
+}
+.ui-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 26px;
+}
+.ui-auth-foot {
+  margin-top: 22px;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+}
+/* Underlined, because inside a sentence the colour is the ONLY thing marking
+   these as links — 1.13:1 against the prose around them, where 3:1 is the bar.
+   A reader who cannot see the hue cannot see the link at all. */
+.ui-auth a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ui-loop {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ui-loop-step {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 12px;
+  align-items: start;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+}
+.ui-loop-num {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-strong);
+  color: var(--text-tertiary);
+  display: grid;
+  place-items: center;
+  font-size: 11.5px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.ui-loop-step strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .ui-auth {
+    grid-template-columns: 1fr;
+  }
+  .ui-auth-aside {
+    display: none;
+  }
+  .ui-auth-panel {
+    padding: 32px 20px;
+  }
+}
+
+/* ------------------------------------------------------------------ Grid -- */
+
+.ui-grid {
+  display: grid;
+  gap: 16px;
+  /* The auto columns live in the base rule, not only under [data-cols].
+     A hand-written <div className="ui-grid"> that forgets the attribute used
+     to lay four stat cards out as four full-width blocks down the page, which
+     reads as a bug rather than a grid. Same trap as .ui-button and data-size. */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.ui-grid[data-cols="auto"] {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.ui-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.ui-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ------------------------------------------------------------- Class grid -- */
+
+.ui-class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
+  gap: 14px;
+}
+
+.ui-class-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color var(--motion-fast) var(--ease),
+    background-color var(--motion-fast) var(--ease);
+}
+.ui-class-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-raised);
+}
+.ui-class-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.ui-class-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+.ui-class-meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.ui-class-foot {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.ui-class-count {
+  font-size: 20px;
+  font-weight: 600;
+}
+.ui-class-count-label {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+.ui-class-year {
+  margin-left: auto;
+  font-size: 11.5px;
+  color: var(--text-tertiary);
+}
+
+/* Two columns: the roster, and a rail for the code and next steps. */
+.ui-class-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 1023px) {
+  .ui-class-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------------------------------------- Student list -- */
+
+.ui-student-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ui-student-list li {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) 132px auto;
+  gap: 12px;
+  align-items: center;
+  min-height: var(--tap-min);
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.ui-student-list li:last-child {
+  border-bottom: 0;
+}
+.ui-student-roll {
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+}
+.ui-student-name {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.ui-student-phone {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+@media (max-width: 640px) {
+  /* Two rows rather than four: roll, name and Remove on the first, the phone
+     tucked under the name. Letting Remove wrap to its own full-width line made
+     every row three times taller and put the destructive action under the
+     WRONG student's name. */
+  .ui-student-list li {
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    row-gap: 1px;
+    padding: 8px 0;
+    align-items: center;
+  }
+  /* `.ui-roster-person` is the grid child now: the avatar and name share a
+     wrapper, and a rule placing only the name placed nothing. */
+  .ui-student-roll,
+  .ui-roster-person {
+    grid-row: 1;
+  }
+  .ui-student-list li .ui-button {
+    grid-row: 1;
+    grid-column: 3;
+  }
+  .ui-student-phone {
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 12px;
+  }
+}
+
+/* ------------------------------------------------------- Roster preview -- */
+
+.ui-preview {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+.ui-preview-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.ui-preview-rows {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+}
+.ui-preview-rows li {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 10px;
+  align-items: baseline;
+  padding: 7px 12px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border);
+  margin: 0;
+}
+.ui-preview-rows li:last-child {
+  border-bottom: 0;
+}
+.ui-preview-mark {
+  font-weight: 600;
+  text-align: center;
+}
+.ui-preview-rows li[data-status="added"] .ui-preview-mark {
+  color: var(--success);
+}
+.ui-preview-rows li[data-status="skipped"] {
+  background: var(--surface-sunken);
+  color: var(--text-secondary);
+}
+.ui-preview-rows li[data-status="skipped"] .ui-preview-mark {
+  color: var(--text-tertiary);
+}
+.ui-preview-name {
+  overflow-wrap: anywhere;
+}
+.ui-preview-reason {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  overflow-wrap: anywhere;
+}
+.ui-preview-problems {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  background: var(--warning-fill);
+  border: 1px solid var(--warning-border);
+  border-radius: var(--radius-control);
+  font-size: 12.5px;
+}
+
+/* ---------------------------------------------------------- Join code -- */
+
+.ui-join-code {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  font-variant-numeric: tabular-nums;
+  padding: 14px 16px;
+  text-align: center;
+  background: var(--surface-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+}
+
+.ui-credential-ticket {
+  background: linear-gradient(145deg, var(--surface) 0%, var(--surface-sunken) 100%);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-card);
+  padding: 14px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+.ui-credential-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-wash);
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.ui-credential-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 8px var(--success);
+}
+.ui-credential-code {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  font-family: var(--font-mono, monospace);
+  color: var(--text-primary);
+  user-select: all;
+  margin: 2px 0 8px;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: all var(--motion-instant) var(--ease);
+}
+.ui-credential-code:hover {
+  border-color: var(--primary-500);
+  background: var(--accent-wash);
+}
+
+/* --------------------------------------------------------- Next steps & Quest -- */
+
+.ui-next-steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.ui-next-steps li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+.ui-next-steps li::before {
+  content: counter(step);
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-strong);
+  color: var(--text-tertiary);
+  font-size: 11px;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+}
+.ui-next-steps li[data-done]::before {
+  content: "✓";
+  background: var(--success-fill);
+  border-color: var(--success-border);
+  color: var(--success);
+}
+.ui-next-steps li[data-done] {
+  color: var(--text-tertiary);
+  text-decoration: line-through;
+}
+
+.ui-quest-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.ui-quest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+.ui-quest-bar-bg {
+  height: 5px;
+  border-radius: 999px;
+  background: var(--surface-sunken);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.ui-quest-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-500), var(--primary-600));
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+.ui-quest-step-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ui-quest-step-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 8px 10px;
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: all var(--motion-instant) var(--ease);
+}
+.ui-quest-step-item:hover {
+  background: var(--surface-sunken);
+  border-color: var(--border-strong);
+}
+.ui-quest-step-item[data-active="true"] {
+  border-color: var(--primary-500);
+  background: var(--accent-wash);
+}
+.ui-quest-step-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: none;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+}
+.ui-quest-step-item[data-done="true"] .ui-quest-step-icon {
+  background: var(--success);
+  border-color: var(--success);
+  color: #fff;
+}
+.ui-quest-step-content {
+  flex: 1;
+}
+.ui-quest-step-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.ui-quest-step-item[data-done="true"] .ui-quest-step-title {
+  color: var(--text-secondary);
+}
+.ui-quest-step-desc {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  line-height: 1.35;
+}
+.ui-quest-step-action {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.ui-quest-step-action:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------------- Roster Studio Tabs -- */
+
+.ui-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--surface-sunken);
+  padding: 4px;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border);
+  margin-bottom: 14px;
+}
+.ui-tab-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: calc(var(--radius-control) - 2px);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--motion-instant) var(--ease);
+}
+.ui-tab-btn:hover {
+  color: var(--text-primary);
+}
+.ui-tab-btn[data-active="true"] {
+  background: var(--surface);
+  color: var(--text-primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.ui-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 20px;
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--radius-card);
+  background: var(--surface-sunken);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--motion-instant) var(--ease);
+  position: relative;
+}
+.ui-dropzone:hover,
+.ui-dropzone[data-dragover="true"] {
+  border-color: var(--primary-500);
+  background: var(--accent-wash);
+}
+.ui-dropzone-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+.ui-dropzone-title {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.ui-dropzone-desc {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  max-width: 400px;
+  line-height: 1.4;
+}
+
+.ui-helper-chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.ui-helper-chip {
+  font-size: 11px;
+  padding: 3px 9px;
+  background: var(--surface-sunken);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono, monospace);
+}
+
+.ui-textarea-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+.ui-line-count-badge {
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: var(--surface-sunken);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+/* ======================================================= Platform console == */
+/*
+ * Visually distinct from the teacher workspace on purpose. This surface writes
+ * curriculum that every organisation reads, and it must never be mistaken for
+ * the one scoped to a single tenant.
+ */
+
+.ui-platform {
+  min-height: 100vh;
+  background: var(--canvas);
+}
+
+.ui-platform-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 10px 32px;
+  background: var(--neutral-900);
+  color: var(--neutral-100);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.ui-platform-mark {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-600);
+  color: #ffffff;
+}
+.ui-platform-nav {
+  display: flex;
+  gap: 14px;
+  font-size: 14px;
+}
+.ui-platform-nav a {
+  color: var(--neutral-100);
+  text-decoration: none;
+}
+.ui-platform-nav a:hover {
+  text-decoration: underline;
+}
+.ui-platform-warning {
+  font-size: 12.5px;
+  color: var(--neutral-400);
+}
+.ui-platform-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ui-platform-right .ui-button[data-variant="ghost"] {
+  color: var(--neutral-100);
+}
+.ui-platform-right .ui-button[data-variant="ghost"]:hover:not(:disabled) {
+  background: rgb(255 255 255 / 0.1);
+  color: #ffffff;
+}
+.ui-platform-heading {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.ui-subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 12px;
+}
+.ui-subject-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  text-decoration: none;
+  color: inherit;
+}
+.ui-subject-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-raised);
+}
+.ui-subject-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+.ui-subject-meta {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+.ui-chapter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--surface);
+}
+.ui-chapter-list li {
+  margin: 0;
+  border-bottom: 1px solid var(--border);
+}
+.ui-chapter-list li:last-child {
+  border-bottom: 0;
+}
+.ui-chapter-list a {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  min-height: var(--tap-min);
+  padding: 10px 18px;
+  text-decoration: none;
+  color: inherit;
+}
+.ui-chapter-list a:hover {
+  background: var(--surface-sunken);
+}
+.ui-chapter-number {
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+}
+.ui-chapter-title {
+  font-size: 14.5px;
+  font-weight: 500;
+}
+
+.ui-provenance {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+  max-width: 80ch;
+}
+
+/* ----------------------------------------------------------- Outcomes -- */
+
+.ui-outcome-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ui-outcome {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  margin: 0;
+}
+.ui-outcome-list li:last-child .ui-outcome,
+.ui-outcome:last-child {
+  border-bottom: 0;
+}
+.ui-outcome-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+.ui-outcome-code {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-wash);
+  color: var(--accent);
+}
+.ui-outcome-marks {
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+}
+.ui-outcome-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 4px;
+}
+.ui-outcome-statement {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.55;
+  max-width: 78ch;
+}
+.ui-outcome-warning {
+  display: flex;
+  gap: 7px;
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  color: var(--warning);
+  max-width: 72ch;
+}
+.ui-outcome-ok {
+  display: flex;
+  gap: 7px;
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  color: var(--success);
+}
+.ui-outcome-concepts {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.ui-outcome-form {
+  margin-top: 14px;
+  padding: 16px;
+  background: var(--surface-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ui-outcome-form-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 12px;
+}
+@media (max-width: 640px) {
+  .ui-outcome-form-row {
+    grid-template-columns: 1fr;
+  }
+  .ui-platform-bar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .ui-platform-warning {
+    display: none;
+  }
+}
+
+/* ======================================================== Question bank == */
+
+.ui-bank-summary {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.ui-bank-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 13.5px;
+  cursor: pointer;
+}
+.ui-bank-chip:hover {
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+.ui-bank-chip[data-active] {
+  background: var(--accent-wash);
+  border-color: var(--primary-200);
+  color: var(--accent);
+  font-weight: 500;
+}
+.ui-bank-chip span {
+  font-weight: 600;
+}
+
+.ui-bank-filters {
+  display: grid;
+  /* Search, subject, type on one row. With two columns the type filter fell
+     onto a row of its own and stretched under the search box. The subject
+     column is wide enough for "Class 10 · Social Science – Political Science". */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 300px) minmax(0, 200px);
+  gap: 10px;
+}
+@media (max-width: 900px) {
+  .ui-bank-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ui-bank-filters > :first-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 640px) {
+  .ui-bank-filters {
+    grid-template-columns: 1fr;
+  }
+}
+/* Says how much of the result is on screen: a list of 100 rows out of 846 that
+   does not say so reads as the whole subject. */
+.ui-bank-count {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.ui-bank-more {
+  display: flex;
+  justify-content: center;
+}
+
+.ui-question-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  overflow: hidden;
+}
+.ui-question-list li {
+  margin: 0;
+  border-bottom: 1px solid var(--border);
+}
+.ui-question-list li:last-child {
+  border-bottom: 0;
+}
+.ui-question-list a {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: inherit;
+}
+.ui-question-list a:hover {
+  background: var(--surface-sunken);
+}
+.ui-question-stem {
+  font-size: 14.5px;
+  line-height: 1.5;
+  max-width: 92ch;
+}
+.ui-question-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+}
+.ui-question-chapter,
+.ui-question-subject {
+  margin-left: auto;
+}
+.ui-question-subject + .ui-question-chapter {
+  margin-left: 0;
+}
+.ui-question-subject + .ui-question-chapter::before {
+  content: "· ";
+}
+@media (max-width: 640px) {
+  .ui-question-chapter,
+  .ui-question-subject {
+    margin-left: 0;
+  }
+}
+
+.ui-linklike {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--accent);
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------- Editor -- */
+
+.ui-editor {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 1023px) {
+  .ui-editor {
+    grid-template-columns: 1fr;
+  }
+}
+.ui-editor-main,
+.ui-editor-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.ui-editor-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) 100px;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+@media (max-width: 640px) {
+  .ui-editor-row {
+    grid-template-columns: 1fr;
+  }
+}
+.ui-editor-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ui-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+}
+.ui-option-row {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+/*
+ * The correct-answer control is a button, not a checkbox, because on the
+ * single-answer types it MOVES the mark rather than adding one. Two correct
+ * answers on a one-answer question is the error that costs a student a mark
+ * they earned, so the control should not let it be expressed by accident.
+ */
+.ui-option-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+.ui-option-mark:hover {
+  border-color: var(--text-tertiary);
+}
+.ui-option-mark[data-correct] {
+  background: var(--success-fill);
+  border-color: var(--success-border);
+  color: var(--success);
+}
+
+.ui-outcome-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+.ui-outcome-choice {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 9px;
+  align-items: start;
+  font-size: 13px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.ui-outcome-choice input {
+  margin-top: 3px;
+}
+
+.ui-check-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ui-check-list li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 9px;
+  align-items: start;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* ------------------------------------------------------ Question view -- */
+
+.ui-question-full {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 74ch;
+}
+.ui-answer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ui-answer-list li {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  font-size: 14.5px;
+  margin: 0;
+}
+.ui-answer-list li[data-correct] {
+  border-color: var(--success-border);
+  background: var(--success-fill);
+}
+.ui-answer-key {
+  font-weight: 600;
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+}
+.ui-answer-plain {
+  margin: 14px 0 0;
+  font-size: 14.5px;
+}
+.ui-explanation {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.ui-explanation-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+.ui-explanation p {
+  margin: 6px 0 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 74ch;
+}
+
+.ui-facts {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 7px 14px;
+  margin: 14px 0 0;
+  font-size: 13.5px;
+}
+.ui-facts dt {
+  color: var(--text-tertiary);
+}
+.ui-facts dd {
+  margin: 0;
+}
+
+/* ========================================================= Assessments == */
+
+.ui-assessment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  overflow: hidden;
+}
+.ui-assessment-list li {
+  margin: 0;
+  border-bottom: 1px solid var(--border);
+}
+.ui-assessment-list li:last-child {
+  border-bottom: 0;
+}
+.ui-assessment-list a {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 15px 18px;
+  text-decoration: none;
+  color: inherit;
+}
+.ui-assessment-list a:hover {
+  background: var(--surface-sunken);
+}
+.ui-assessment-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+.ui-assessment-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+}
+
+.ui-new-assessment {
+  width: min(560px, 100%);
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  text-align: left;
+}
+
+/* ------------------------------------------------------------- Builder -- */
+
+.ui-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ui-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.ui-steps li {
+  margin: 0;
+}
+/*
+ * The step markers are numbered because the steps ARE a sequence — each one
+ * depends on the last. Numbering that encodes nothing is decoration; this does.
+ */
+.ui-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-tertiary);
+  font-size: 13.5px;
+  cursor: pointer;
+}
+.ui-step:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+.ui-step[data-state="current"] {
+  border-color: var(--primary-200);
+  background: var(--accent-wash);
+  color: var(--accent);
+  font-weight: 500;
+}
+.ui-step[data-state="done"] {
+  color: var(--text-secondary);
+}
+.ui-step-number {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  border: 1px solid currentColor;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.ui-step[data-state="done"] .ui-step-number {
+  background: var(--success-fill);
+  border-color: var(--success-border);
+  color: var(--success);
+}
+
+.ui-builder-nav {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.ui-mix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.ui-scope-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.ui-scope-chapter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ui-scope-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ui-pick-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 480px;
+  overflow-y: auto;
+}
+.ui-pick-list li {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+}
+.ui-pick-list li[data-chosen] {
+  border-color: var(--primary-200);
+  background: var(--accent-wash);
+}
+.ui-pick-list label {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 11px 14px;
+  cursor: pointer;
+}
+.ui-pick-stem {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.ui-pick-meta {
+  grid-column: 2;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.ui-review-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: q;
+}
+.ui-review-list li {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) 40px;
+  gap: 12px;
+  align-items: baseline;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border);
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.ui-review-list li:last-child {
+  border-bottom: 0;
+}
+.ui-review-number {
+  color: var(--text-tertiary);
+  font-size: 12.5px;
+}
+.ui-review-marks {
+  text-align: right;
+  color: var(--text-tertiary);
+  font-size: 12.5px;
+}
+
+/* ========================================================= Assignments == */
+
+.ui-assignment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ui-assignment-list li {
+  margin: 0;
+}
+.ui-assignment-list a {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  text-decoration: none;
+  color: inherit;
+}
+.ui-assignment-list a:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-sunken);
+}
+.ui-assignment-class {
+  font-size: 14.5px;
+  font-weight: 500;
+}
+.ui-assignment-when {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+}
+
+/*
+ * The window headline is the one number a teacher actually wants during a
+ * sitting — "Closes in 40 minutes" — so it is the largest thing on the card
+ * and the timestamps sit underneath it.
+ */
+.ui-window-headline {
+  margin: 0 0 12px;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/*
+ * Who sits an assignment. Its own list rather than the roster's, which carries
+ * a roll-number column and a Remove action that would both be empty here — a
+ * dead column reads as a bug even when nothing is wrong.
+ */
+.ui-sitter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ui-sitter-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: var(--tap-min);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  margin: 0;
+  font-size: 14px;
+}
+.ui-sitter-list li:last-child {
+  border-bottom: 0;
+}
+.ui-sitter-name {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+/* ======================================================= Touch targets --
+
+   DESIGN_SYSTEM.md §6 and §14 both promise "minimum tap target 44×44px,
+   enforced by an automated check in CI, not by inspection". The token has
+   existed since slice 0 — `--tap-min: 44px` in globals.css — and was applied to
+   six components out of the whole library. Nothing ever checked the rest.
+
+   The first run of `e2e/responsive.spec.ts` failed 11 of 12 screens. Two of
+   them — the student plan and the parent portal home — failed on EVERY control
+   they had. The student test player was the only screen that passed, which is
+   consistent with it being the one surface built without the shared shell.
+
+   ---------------------------------------------------------------------------
+   Why this is a media query and not a change to the base rules
+   ---------------------------------------------------------------------------
+   44×44 is a TOUCH rule. It exists because a fingertip is about 9mm across and
+   a mouse pointer is one pixel. Raising every button in the product to 44px
+   would inflate dense teacher screens — the marking queue, the question bank —
+   for a person holding a mouse, to satisfy a rule that is not about them.
+
+   So it applies where it means something: small viewports, and any pointer the
+   browser reports as coarse, which catches a tablet at 1024px too.
+
+   ---------------------------------------------------------------------------
+   §7 said 40px, §6 and §14 said 44
+   ---------------------------------------------------------------------------
+   The document contradicted itself about inputs. It is resolved in favour of
+   44 at touch widths and 40 elsewhere, which is what both sentences were
+   reaching for: §7 describes how a control looks on a desktop, §6 and §14
+   describe how big it has to be to hit. Neither had to lose.
+
+   Ordering note: this block is last in ui.css deliberately. Media queries add
+   no specificity, so these rules beat the base declarations above only by
+   coming after them. */
+@media (max-width: 640px), (pointer: coarse) {
+  /* Every button, whatever its size prop. `min-width` matters as much as
+     height: ThemeToggle was 37 × 32, the only control in the product failing
+     in both dimensions, and it is on all twelve screens. */
+  .ui-button,
+  .ui-button[data-size="sm"],
+  .ui-button[data-size="md"] {
+    min-height: var(--tap-min);
+    min-width: var(--tap-min);
+  }
+
+  .ui-input,
+  .ui-select {
+    min-height: var(--tap-min);
+  }
+
+  .ui-bank-chip {
+    min-height: var(--tap-min);
+  }
+
+  /* The sidebar nav drawn as a row on a phone. Its 38px height is right under
+     a mouse and was 6px short under a thumb on every teacher screen. */
+  .ui-nav-item {
+    min-height: var(--tap-min);
+  }
+
+  /* Controls drawn as text. These had `padding: 0` and a 13px font, which is a
+     20.8px target — "Sign out" and "Join a class with a code" on every student
+     and parent screen. The text stays the size it was; the HIT AREA grows,
+     which is the thing the rule is actually about. */
+  .ui-link-button,
+  .ui-student-link,
+  .ui-topbar-crumb-link,
+  .ui-quest-step-action,
+  .ui-join-regenerate,
+  .ui-brand,
+  .ui-plan-link a,
+  .ui-page-eyebrow a,
+  .ui-heatmap th[scope="row"] a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap-min);
+    /* Width as well as height. The first pass set only the height, and a
+       short breadcrumb — "Home" — came out 44 tall and 36.1 wide: a target
+       that is only big enough in one direction is not a target, and a thumb
+       does not care which direction was the easy one. Longer labels are
+       already wider than this and are unaffected. */
+    min-width: var(--tap-min);
+  }
+}

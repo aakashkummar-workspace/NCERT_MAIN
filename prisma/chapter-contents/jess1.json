@@ -1,0 +1,1007 @@
+{
+  "book": "jess1",
+  "bookTitle": "Contemporary India – II",
+  "class": 10,
+  "chapters": [
+    {
+      "bookChapter": 1,
+      "title": "Resources and Development",
+      "pages": 12,
+      "author": null,
+      "form": null,
+      "overview": "The chapter defines a resource and classifies resources by origin, exhaustibility, ownership and status of development. It explains why resource planning and conservation are needed, drawing on sustainable development, the Rio Earth Summit and Agenda 21. It then studies land as a resource, land use pattern and land degradation in India, and the major soil types of India with soil erosion and conservation methods.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Development of Resources",
+          "points": [
+            "Resources were believed to be free gifts of nature and were used indiscriminately.",
+            "This led to depletion of resources for the greed of a few, accumulation of resources in few hands (haves and have nots), and global ecological crises such as global warming, ozone layer depletion, pollution and land degradation.",
+            "An equitable distribution of resources is essential for sustained quality of life and global peace; resource planning is essential for sustainable existence of all forms of life."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Sustainable development",
+              "points": [
+                "Development should take place without damaging the environment, and development in the present should not compromise with the needs of future generations."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Rio de Janeiro Earth Summit, 1992",
+              "points": [
+                "In June 1992 more than 100 heads of states met in Rio de Janeiro, Brazil, for the first International Earth Summit on environmental protection and socio-economic development.",
+                "Leaders signed the Declaration on Global Climatic Change and Biological Diversity; the Convention endorsed the global Forest Principles and adopted Agenda 21."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Agenda 21",
+              "points": [
+                "Declaration signed at the United Nations Conference on Environment and Development (UNCED), Rio de Janeiro, 1992, to achieve global sustainable development.",
+                "It aims to combat environmental damage, poverty and disease through global co-operation; every local government should draw its own local Agenda 21."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Resource Planning",
+          "points": [
+            "Planning is the widely accepted strategy for judicious use of resources, important for India with its enormous diversity in resource availability.",
+            "Examples: Jharkhand, Chhattisgarh and Madhya Pradesh are rich in minerals and coal; Arunachal Pradesh has water but lacks infrastructure; Rajasthan has solar and wind energy but lacks water; Ladakh is deficient in water, infrastructure and some minerals.",
+            "Resources contribute to development only when accompanied by appropriate technological development and institutional changes, as the history of colonisation shows."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Resource Planning in India",
+              "points": [
+                "Involves identification and inventory of resources through surveying, mapping and estimation.",
+                "Evolving a planning structure with appropriate technology, skill and institutional set up.",
+                "Matching resource development plans with overall national development plans; efforts began with the First Five Year Plan."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Conservation of Resources",
+              "points": [
+                "Irrational consumption and over-utilisation of resources may lead to socio-economic and environmental problems.",
+                "Gandhiji: 'There is enough for everybody's need and not for any body's greed'; he favoured production by the masses over mass production.",
+                "Club of Rome advocated conservation in 1968; Schumacher's 'Small is Beautiful' (1974); Brundtland Commission Report (1987) introduced 'Sustainable Development' (book 'Our Common Future'); Earth Summit, Rio de Janeiro, 1992."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Land Resources",
+          "points": [
+            "Land is a natural resource of utmost importance supporting vegetation, wildlife, human life, economic activities, transport and communication, but it is of finite magnitude.",
+            "About 43 per cent of India's land area is plain, 30 per cent mountains and 27 per cent plateau region.",
+            "Plateaus possess rich reserves of minerals, fossil fuels and forests; mountains ensure perennial flow of some rivers and provide tourism."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Land Utilisation",
+          "points": [
+            "Land is used for forests; land not available for cultivation (barren and waste land, non-agricultural uses); other uncultivated land (permanent pastures, miscellaneous tree crops, culturable waste land); fallow lands (current and other than current fallow); and net sown area.",
+            "Culturable waste land is left uncultivated for more than 5 agricultural years; current fallow for one or less than one agricultural year; other fallow for 1 to 5 years.",
+            "Area sown more than once in an agricultural year plus net sown area is gross cropped area."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Land Use Pattern in India",
+          "points": [
+            "Land use is determined by physical factors (topography, climate, soil) and human factors (population density, technological capability, culture and traditions).",
+            "Total geographical area is 3.28 million sq km; land use data is available for only 93 per cent.",
+            "Net sown area is over 80 per cent in Punjab and Haryana and less than 10 per cent in Arunachal Pradesh, Mizoram, Manipur and Andaman Nicobar Islands; including other fallow lands, NSA is about 54 per cent of reporting area.",
+            "Forest area is far lower than the desired 33 per cent outlined in the National Forest Policy (1952); land under permanent pasture has decreased."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Land Degradation and Conservation Measures",
+          "points": [
+            "Ninety-five per cent of basic needs for food, shelter and clothing are obtained from land.",
+            "Deforestation, overgrazing, mining and quarrying contribute to degradation: mining in Jharkhand, Chhattisgarh, Madhya Pradesh and Odisha; overgrazing in Gujarat, Rajasthan, Madhya Pradesh and Maharashtra; over irrigation causing waterlogging, salinity and alkalinity in Punjab, Haryana and western Uttar Pradesh.",
+            "Mineral processing dust and industrial effluents also degrade land and water.",
+            "Remedies: afforestation, management of grazing, shelter belts, stabilising sand dunes with thorny bushes, managing waste lands, controlling mining, and treating industrial effluents."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Soil as a Resource",
+          "points": [
+            "Soil is the most important natural resource and a living system; it takes millions of years to form soil up to a few cm deep.",
+            "Relief, parent rock, climate, vegetation, other forms of life and time are important factors in soil formation; temperature change, running water, wind, glaciers and decomposers contribute.",
+            "Soil consists of organic (humus) and inorganic materials; the soil profile has top soil, subsoil, substratum and unweathered parent bed rock."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Classification of Soils",
+              "points": [
+                "Soils of India are classified on the basis of formation factors, colour, thickness, texture, age, chemical and physical properties."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Alluvial Soils",
+              "points": [
+                "Most widely spread and important soil; the entire northern plains are made of it, deposited by the Indus, Ganga and Brahmaputra; also in deltas of Mahanadi, Godavari, Krishna and Kaveri.",
+                "Consists of sand, silt and clay; coarse soils near the break of slope in piedmont plains such as Duars, Chos and Terai.",
+                "Old alluvial (Bangar) has more kanker nodules; new alluvial (Khadar) is finer and more fertile.",
+                "Rich in potash, phosphoric acid and lime, ideal for sugarcane, paddy, wheat, cereals and pulses; intensively cultivated and densely populated."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Black Soil",
+              "points": [
+                "Also called regur soil or black cotton soil; ideal for cotton.",
+                "Typical of the Deccan trap (Basalt) region, made of lava flows; covers plateaus of Maharashtra, Saurashtra, Malwa, Madhya Pradesh and Chhattisgarh and extends along Godavari and Krishna valleys.",
+                "Clayey, holds moisture, rich in calcium carbonate, magnesium, potash and lime but poor in phosphoric contents.",
+                "Develops deep cracks in hot weather that aid aeration; sticky when wet."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Red and Yellow Soils",
+              "points": [
+                "Red soil develops on crystalline igneous rocks in low rainfall areas of eastern and southern Deccan plateau; also in Odisha, Chhattisgarh, southern middle Ganga plain and Western Ghats piedmont.",
+                "Reddish colour is due to diffusion of iron; it looks yellow in a hydrated form."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Laterite Soil",
+              "points": [
+                "From Latin 'later' meaning brick; develops in tropical and subtropical climate with alternate wet and dry seasons, due to intense leaching.",
+                "Deep, acidic (pH<6.0), generally deficient in plant nutrients; found in southern states, Western Ghats of Maharashtra, Odisha, parts of West Bengal and North-east.",
+                "With soil conservation it is useful for tea and coffee in Karnataka, Kerala and Tamil Nadu; red laterite soils suit cashew nut."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Arid Soils",
+              "points": [
+                "Red to brown, sandy and saline; lack humus and moisture due to dry climate.",
+                "Lower horizons have Kankar, which restricts infiltration; after irrigation they become cultivable, as in western Rajasthan."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Forest Soils",
+              "points": [
+                "Found in hilly and mountainous areas; loamy and silty on valley sides, coarse grained on upper slopes.",
+                "Acidic with low humus in snow-covered Himalayas; fertile in lower valleys, river terraces and alluvial fans."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Soil Erosion and Soil Conservation",
+              "points": [
+                "Soil erosion is the denudation of the soil cover and subsequent washing down; caused by deforestation, over-grazing, construction, mining and by wind, glacier and water.",
+                "Running water makes gullies in clayey soils, creating bad land (ravines in the Chambal basin); sheet erosion washes top soil over large areas; wind erosion blows soil away; ploughing up and down slopes causes erosion.",
+                "Conservation methods: contour ploughing, terrace cultivation (western and central Himalayas), strip cropping, and shelter belts which have stabilised sand dunes in western India."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        { "term": "Resource", "meaning": "Everything available in our environment which can be used to satisfy our needs, provided it is technologically accessible, economically feasible and culturally acceptable." },
+        { "term": "Sustainable economic development", "meaning": "Development should take place without damaging the environment, and development in the present should not compromise with the needs of the future generations." },
+        { "term": "Agenda 21", "meaning": "Declaration signed by world leaders in 1992 at UNCED, Rio de Janeiro, aiming at global sustainable development by combating environmental damage, poverty and disease through global co-operation." },
+        { "term": "Net sown area", "meaning": "The physical extent of land on which crops are sown and harvested." },
+        { "term": "Gross cropped area", "meaning": "Area sown more than once in an agricultural year plus net sown area." },
+        { "term": "Culturable waste land", "meaning": "Land left uncultivated for more than 5 agricultural years." },
+        { "term": "Current fallow", "meaning": "Land left without cultivation for one or less than one agricultural year." },
+        { "term": "Bangar and Khadar", "meaning": "Old alluvial (Bangar) soil with higher concentration of kanker nodules, and new alluvial (Khadar) soil with more fine particles, more fertile." },
+        { "term": "Regur soil", "meaning": "Black soil, also known as black cotton soil, ideal for growing cotton." },
+        { "term": "Laterite", "meaning": "Derived from the Latin word 'later' meaning brick; soil formed by intense leaching under tropical and subtropical climate." },
+        { "term": "Soil erosion", "meaning": "The denudation of the soil cover and subsequent washing down." },
+        { "term": "Bad land / ravines", "meaning": "Land cut by gullies and unfit for cultivation; in the Chambal basin such lands are called ravines." },
+        { "term": "Sheet erosion", "meaning": "When water flows as a sheet over large areas down a slope and the top soil is washed away." },
+        { "term": "Contour ploughing", "meaning": "Ploughing along the contour lines to decelerate the flow of water down slopes." },
+        { "term": "Strip cropping", "meaning": "Dividing large fields into strips with strips of grass left between crops to break the force of wind." },
+        { "term": "Shelter belts", "meaning": "Rows of trees planted to create shelter, which help stabilise sand dunes and the desert." }
+      ],
+      "keyResults": [
+        { "label": "Classification of resources", "statement": "On the basis of origin – biotic and abiotic; exhaustibility – renewable and non-renewable; ownership – individual, community, national and international; status of development – potential, developed stock and reserves." },
+        { "label": "Date: 1968", "statement": "The Club of Rome advocated resource conservation in a systematic way for the first time." },
+        { "label": "Date: 1974", "statement": "Schumacher presented Gandhian philosophy in his book Small is Beautiful." },
+        { "label": "Date: 1987", "statement": "Brundtland Commission Report introduced the concept of Sustainable Development (Our Common Future)." },
+        { "label": "Date: June 1992", "statement": "First International Earth Summit at Rio de Janeiro, Brazil; Agenda 21 adopted." },
+        { "label": "Relief of India", "statement": "About 43 per cent plains, 30 per cent mountains, 27 per cent plateau." },
+        { "label": "Geographical area", "statement": "Total geographical area of India is 3.28 million sq km; land use data available for 93 per cent." },
+        { "label": "National Forest Policy (1952)", "statement": "Outlined a desired forest area of 33 per cent of geographical area." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 3 },
+        { "name": "Project/Activity", "questions": 4 }
+      ],
+      "bookSummary": [],
+      "notes": "Page 8 is a map (India: Major Soil Types) with no extractable text; the land use pie chart (Fig. 1.4) values could not be matched to categories from the extraction."
+    },
+    {
+      "bookChapter": 2,
+      "title": "Forest and Wildlife Resources",
+      "pages": 6,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explains India's biodiversity and why forests and wildlife must be conserved. It describes the Indian Wildlife (Protection) Act 1972, Project Tiger, and the classification of forests into reserved, protected and unclassed forests. It closes with community conservation such as the Chipko movement, Joint Forest Management and sacred groves.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Flora and Fauna in India",
+          "points": [
+            "Humans and all living organisms form a complex web of ecological system; forests are primary producers on which all other living beings depend.",
+            "India is one of the world's richest countries in biological diversity, but flora and fauna are under great stress due to insensitivity to the environment."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Conservation of Forest and Wildlife in India",
+          "points": [
+            "Conservation preserves ecological diversity, life support systems (water, air, soil) and genetic diversity of plants and animals.",
+            "The Indian Wildlife (Protection) Act was implemented in 1972 with an all-India list of protected species, banning hunting, protecting habitats and restricting wildlife trade.",
+            "Projects protect the tiger, one-horned rhinoceros, Kashmir stag (hangul), three types of crocodiles, Asiatic lion and others; the Indian elephant, black buck, great Indian bustard and snow leopard have legal protection.",
+            "Under Wildlife Act notifications of 1980 and 1986 butterflies, moths, beetles and one dragonfly were added; in 1991 plants were added, starting with six species."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Project Tiger",
+              "points": [
+                "In 1973 the tiger population had dwindled to 1,827 from an estimated 55,000 at the turn of the century.",
+                "Threats: poaching for trade, shrinking habitat, depletion of prey base, growing human population; India and Nepal host about two-thirds of surviving tigers.",
+                "Project Tiger was launched in 1973; tiger reserves include Corbett (Uttarakhand), Sunderbans (West Bengal), Bandhavgarh (Madhya Pradesh), Sariska (Rajasthan), Manas (Assam) and Periyar (Kerala)."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Types and Distribution of Forest and Wildlife Resources",
+          "points": [
+            "Reserved forests: more than half of total forest land; most valuable for conservation.",
+            "Protected forests: almost one-third of forest area, protected from further depletion.",
+            "Unclassed forests: other forests and wastelands belonging to government, private individuals and communities.",
+            "Reserved and protected forests are permanent forest estates; Madhya Pradesh has the largest area under permanent forests (75 per cent of its forest area); North-eastern states and parts of Gujarat have high percentages of unclassed forests."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Community and Conservation",
+          "points": [
+            "In Sariska Tiger Reserve villagers fought against mining citing the Wildlife Protection Act.",
+            "Five villages in Alwar district, Rajasthan declared 1,200 hectares as the Bhairodev Dakav 'Sonchuri' with their own rules banning hunting.",
+            "The Chipko movement resisted deforestation and showed community afforestation with indigenous species can succeed; Beej Bachao Andolan in Tehri and Navdanya showed diversified crop production without synthetic chemicals is viable.",
+            "Joint Forest Management (JFM) has been in formal existence since 1988 when Odisha passed the first resolution; village institutions protect degraded forest land and get non-timber forest produce and a share in timber."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Sacred groves - a wealth of diverse and rare species",
+              "points": [
+                "Nature worship has preserved virgin forests called Sacred Groves, left untouched by local people.",
+                "Mundas and Santhals of Chota Nagpur worship mahua and kadamba trees; tribals of Odisha and Bihar worship tamarind and mango trees during weddings.",
+                "Macaques and langurs around temples are fed daily; in Bishnoi villages of Rajasthan blackbuck, nilgai and peacocks are protected."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        { "term": "Biodiversity or Biological Diversity", "meaning": "Immensely rich in wildlife and cultivated species, diverse in form and function but closely integrated in a system through multiple network of interdependencies." },
+        { "term": "Reserved Forests", "meaning": "More than half of total forest land; regarded as the most valuable for conservation of forest and wildlife resources." },
+        { "term": "Protected Forests", "meaning": "Almost one-third of total forest area, declared by the Forest Department and protected from further depletion." },
+        { "term": "Unclassed Forests", "meaning": "Other forests and wastelands belonging to both government and private individuals and communities." },
+        { "term": "Permanent forest estates", "meaning": "Reserved and protected forests maintained for producing timber and other forest produce, and for protective reasons." },
+        { "term": "Joint forest management (JFM)", "meaning": "Programme involving local communities in management and restoration of degraded forests through village institutions, in return for intermediary benefits." },
+        { "term": "Sacred Groves", "meaning": "Virgin forests preserved in pristine form due to nature worship, the forests of God and Goddesses, where interference is banned." }
+      ],
+      "keyResults": [
+        { "label": "Date: 1972", "statement": "Indian Wildlife (Protection) Act implemented." },
+        { "label": "Date: 1973", "statement": "Project Tiger launched; tiger population had dwindled to 1,827 from about 55,000." },
+        { "label": "Date: 1988", "statement": "Odisha passed the first resolution for joint forest management." },
+        { "label": "Date: 1991", "statement": "Plants added to the list of protected species for the first time, starting with six species." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 4 }
+      ],
+      "bookSummary": [],
+      "notes": null
+    },
+    {
+      "bookChapter": 3,
+      "title": "Water Resources",
+      "pages": 11,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explains why water, though renewable, is scarce, and the need for its conservation and management. It discusses dams and multi-purpose river projects, their benefits and the objections to them. It then describes traditional and modern rainwater harvesting systems in India, including tankas in Rajasthan, rooftop harvesting in Shillong and Gendathur, and bamboo drip irrigation in Meghalaya.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Water Scarcity and the Need for Water Conservation and Management",
+          "points": [
+            "Freshwater comes from surface run off and groundwater renewed through the hydrological cycle, making water renewable; by 2025 nearly two billion people may live in absolute water scarcity.",
+            "Water scarcity is mostly caused by over-exploitation, excessive use and unequal access among social groups, and by large growing populations needing water for food production.",
+            "Irrigated agriculture is the largest consumer of water; tube-wells lower groundwater levels; industrialisation and urbanisation add pressure on water and energy.",
+            "Water may be available but polluted by domestic and industrial wastes, chemicals, pesticides and fertilisers.",
+            "Jal Jeevan Mission aims at 55 litres per capita per day of potable piped water to every rural household; Atal Bhujal Yojana works in 8220 water stressed Gram Panchayats of seven states."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Multi-purpose River Projects and Integrated Water Resources Management",
+          "points": [
+            "Ancient India built dams, reservoirs, embankments and canals: Sringaverapura near Allahabad (1st century B.C.), works under Chandragupta Maurya, Bhopal Lake (11th century), tank in Hauz Khas built by Allauddin Khilji (13th–14th century).",
+            "Dams are now built for irrigation, electricity, water supply, flood control, recreation, inland navigation and fish breeding, hence called multi-purpose projects (e.g. Bhakra–Nangal in Sutluj-Beas basin, Hirakud in Mahanadi basin).",
+            "Jawaharlal Nehru called dams the 'temples of modern India'.",
+            "Objections: poor sediment flow, fragmentation of rivers affecting aquatic fauna, submergence of vegetation and soil, floods triggered by sedimentation, induced earthquakes, water-borne diseases, and shift to water intensive crops causing salinisation.",
+            "Pradhan Mantri Krishi Sinchayee Yojana aims at 'har khet ko pani' and 'per drop more crop'; Sardar Sarovar Dam on the Narmada covers four states; the Krishna-Godavari dispute concerns diversion of water at Koyna."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Rainwater Harvesting",
+          "points": [
+            "Traditional systems include 'guls' or 'kuls' of the Western Himalayas, rooftop harvesting in Rajasthan, inundation channels in Bengal, 'khadins' in Jaisalmer and 'Johads' in Rajasthan.",
+            "In Bikaner, Phalodi and Barmer houses had underground tankas connected to sloping roofs; the first spell of rain was not collected; rainwater (palar pani) is considered the purest form of natural water.",
+            "Rooftop harvesting is declining in western Rajasthan due to the Indira Gandhi Canal.",
+            "Gendathur village in Mysuru, Karnataka: about 200 households harvest rooftop water; Tamil Nadu made rooftop rainwater harvesting compulsory for all houses; in Shillong 15-25 per cent of household water requirement comes from rooftop harvesting."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Bamboo Drip Irrigation System",
+          "points": [
+            "In Meghalaya a 200-year-old system taps stream and spring water using bamboo pipes.",
+            "About 18-20 litres of water enter the pipes and reduce to 20-80 drops per minute at the plant site."
+          ]
+        }
+      ],
+      "keyTerms": [
+        { "term": "Dam", "meaning": "A barrier across flowing water that obstructs, directs or retards the flow, often creating a reservoir, lake or impoundment." },
+        { "term": "Spillway or weir", "meaning": "Section of a dam over which or through which water is intended to flow intermittently or continuously." },
+        { "term": "Multi-purpose projects", "meaning": "Dams where the many uses of the impounded water are integrated with one another." },
+        { "term": "Tankas", "meaning": "Underground tanks in Rajasthan houses for storing rooftop rainwater for drinking." },
+        { "term": "Palar pani", "meaning": "Rainwater, as commonly referred to in western Rajasthan, considered the purest form of natural water." },
+        { "term": "Guls or kuls", "meaning": "Diversion channels of the Western Himalayas for agriculture." },
+        { "term": "Khadins and Johads", "meaning": "Agricultural fields converted into rain fed storage structures in Jaisalmer and other parts of Rajasthan." }
+      ],
+      "keyResults": [
+        { "label": "Classification of dams", "statement": "By structure and materials: timber, embankment or masonry dams; by height: large and major dams, or low, medium height and high dams." },
+        { "label": "Jal Jeevan Mission", "statement": "Assured supply of potable piped water at 55 litres per capita per day to every rural household." },
+        { "label": "Gendathur", "statement": "Annual precipitation of 1,000 mm; every house can collect about 50,000 litres annually." },
+        { "label": "Sardar Sarovar Project", "statement": "Irrigation to 18.45 lakh hectare in 3112 villages in 15 districts of Gujarat, 2,46,000 hectare in Barmer and Jalore and 37,500 hectare in Maharashtra." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 3 }
+      ],
+      "bookSummary": [],
+      "notes": "Page 6 is a map (India: Major Rivers and Dams) with no text. The heading 'Multi-purpose River Projects and Integrated Water Resources Management' is set in small capitals and extracted garbled, so it may not match the text file letter for letter."
+    },
+    {
+      "bookChapter": 4,
+      "title": "Agriculture",
+      "pages": 12,
+      "author": null,
+      "form": null,
+      "overview": "The chapter describes the types of farming practised in India and the three cropping seasons. It details the geographical conditions and producing states of major food and non-food crops. It ends with technological and institutional reforms in agriculture and the Bhoodan–Gramdan movement.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Types of Farming",
+          "points": [
+            "Two-thirds of India's population is engaged in agriculture, a primary activity producing food and raw materials; farming varies from subsistence to commercial."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Primitive Subsistence Farming",
+              "points": [
+                "Practised on small patches with primitive tools like hoe, dao and digging sticks and family/community labour; depends on monsoon and natural soil fertility.",
+                "It is 'slash and burn' agriculture: farmers shift to a fresh patch when fertility falls; productivity is low.",
+                "Called jhumming in north-east, Pamlou in Manipur, Dipa in Bastar; Bewar or Dahiya in Madhya Pradesh, Podu or Penda in Andhra Pradesh, Kumari in Western Ghats, Khil in Himalayan belt, Kuruwa in Jharkhand; abroad Milpa, Conuco, Roca, Masole, Ladang, Ray."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Intensive Subsistence Farming",
+              "points": [
+                "Practised in areas of high population pressure; labour-intensive with high doses of biochemical inputs and irrigation.",
+                "The 'right of inheritance' has made land holdings uneconomical, yet farmers take maximum output for lack of alternative livelihood."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Commercial Farming",
+              "points": [
+                "Uses higher doses of modern inputs such as HYV seeds, chemical fertilisers, insecticides and pesticides.",
+                "Degree of commercialisation varies: rice is commercial in Haryana and Punjab but subsistence in Odisha.",
+                "Plantation is commercial farming of a single crop on a large area, an interface of agriculture and industry; tea, coffee, rubber, sugarcane and banana are important plantation crops."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Cropping Pattern",
+          "points": [
+            "India has three cropping seasons: rabi, kharif and zaid.",
+            "Rabi crops (wheat, barley, peas, gram, mustard) are sown October–December and harvested April–June; western temperate cyclones and the green revolution help them.",
+            "Kharif crops (paddy, maize, jowar, bajra, tur, moong, urad, cotton, jute, groundnut, soyabean) are sown with the monsoon and harvested September-October; Assam, West Bengal and Odisha grow three paddy crops: Aus, Aman and Boro.",
+            "Zaid is a short summer season for watermelon, muskmelon, cucumber, vegetables and fodder crops."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Major Crops",
+              "points": [
+                "Rice: staple food; India is second largest producer after China; kharif crop needing above 25°C, high humidity and rainfall above 100 cm; canals and tubewells allow it in Punjab, Haryana, western Uttar Pradesh and Rajasthan.",
+                "Wheat: second most important cereal; rabi crop needing cool growing season, bright sunshine at ripening and 50 to 75 cm rainfall; zones are the Ganga-Satluj plains and the black soil region of the Deccan.",
+                "Millets: jowar, bajra and ragi are coarse grains with high nutritional value; jowar is third most important food crop; bajra grows on sandy and shallow black soils; ragi grows in dry regions.",
+                "Maize: food and fodder; kharif crop needing 21°C to 27°C, grows in old alluvial soil.",
+                "Pulses: India is the largest producer and consumer; leguminous crops (except arhar) fix nitrogen and are grown in rotation."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Food Crops other than Grains",
+              "points": [
+                "Sugarcane: tropical and subtropical crop needing 21°C to 27°C and 75–100 cm rainfall; India is second largest producer after Brazil.",
+                "Oil Seeds: about 12 per cent of total cropped area; groundnut (kharif) is about half of major oilseeds, Gujarat largest producer in 2019–20; linseed and mustard are rabi crops.",
+                "Tea: plantation crop introduced by the British; needs warm moist frost-free climate and well-drained humus-rich soil, abundant cheap skilled labour; India second largest producer after China in 2020.",
+                "Coffee: Arabica variety from Yemen, first grown on Baba Budan Hills; confined to Nilgiri in Karnataka, Kerala and Tamil Nadu.",
+                "Horticulture crops: in 2020 India was second largest producer of fruits and vegetables after China."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Non Food Crops",
+              "points": [
+                "Rubber: equatorial crop needing rainfall over 200 cm and temperature above 25°C; grown in Kerala, Tamil Nadu, Karnataka, Andaman and Nicobar and Garo hills.",
+                "Fibre crops: cotton, jute, hemp and natural silk; rearing silk worms is sericulture.",
+                "Cotton: India believed to be its original home; second largest producer after China; grows in drier black cotton soil of Deccan, needs 210 frost-free days, kharif crop maturing in 6 to 8 months.",
+                "Jute: the golden fibre; grows on flood plain soils renewed every year; West Bengal, Bihar, Assam, Odisha and Meghalaya are major producers."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Technological and Institutional Reforms",
+          "points": [
+            "Agriculture provides livelihood for more than 60 per cent of the population and needs technical and institutional reforms.",
+            "After Independence collectivisation, consolidation of holdings, cooperation and abolition of zamindari were given priority; 'Land reform' was the main focus of the First Five Year Plan.",
+            "The Green Revolution and the White Revolution (Operation Flood) in the 1960s and 1970s concentrated development in few areas; a comprehensive land development programme followed in the 1980s and 1990s.",
+            "Steps include crop insurance, Grameen banks, cooperative societies, Kisan Credit Card (KCC), Personal Accident Insurance Scheme (PAIS), weather bulletins, and minimum support, remunerative and procurement prices."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Bhoodan – Gramdan",
+              "points": [
+                "Vinoba Bhave, Gandhiji's spiritual heir, undertook padyatra; at Pochampally in Telangana Shri Ram Chandra Reddy offered 80 acres for 80 landless villagers – 'Bhoodan'.",
+                "Zamindars offering villages to the landless was 'Gramdan'; the movement is also called the Blood-less Revolution."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        { "term": "Primitive subsistence farming", "meaning": "'Slash and burn' agriculture on small patches with primitive tools and family/community labour, shifting when fertility decreases." },
+        { "term": "Intensive subsistence farming", "meaning": "Labour-intensive farming in areas of high population pressure using high doses of biochemical inputs and irrigation." },
+        { "term": "Commercial farming", "meaning": "Farming using higher doses of modern inputs such as HYV seeds, chemical fertilisers, insecticides and pesticides to obtain higher productivity." },
+        { "term": "Plantation", "meaning": "Commercial farming in which a single crop is grown on a large area; an interface of agriculture and industry." },
+        { "term": "Rabi", "meaning": "Crops sown in winter from October to December and harvested in summer from April to June." },
+        { "term": "Kharif", "meaning": "Crops grown with the onset of monsoon and harvested in September-October." },
+        { "term": "Zaid", "meaning": "Short season during the summer months between rabi and kharif seasons." },
+        { "term": "Sericulture", "meaning": "Rearing of silk worms for the production of silk fibre." },
+        { "term": "Bhoodan", "meaning": "Voluntary gift of land to the landless, begun when Ram Chandra Reddy offered 80 acres to Vinoba Bhave." },
+        { "term": "Gramdan", "meaning": "Offer by zamindars to distribute some villages among the landless." }
+      ],
+      "keyResults": [
+        { "label": "Rice", "statement": "Requires temperature above 25°C, high humidity and annual rainfall above 100 cm." },
+        { "label": "Wheat", "statement": "Requires 50 to 75 cm of annual rainfall evenly distributed over the growing season." },
+        { "label": "Maize", "statement": "Requires temperature between 21°C to 27°C." },
+        { "label": "Sugarcane", "statement": "Requires 21°C to 27°C and annual rainfall between 75 cm and 100 cm." },
+        { "label": "Rubber", "statement": "Requires rainfall of more than 200 cm and temperature above 25°C." },
+        { "label": "Cotton", "statement": "Requires high temperature, light rainfall or irrigation, 210 frost-free days and bright sunshine." },
+        { "label": "India's rank", "statement": "Second largest producer of rice (after China), sugarcane (after Brazil), tea, fruits and vegetables, cotton (after China); largest producer of pulses." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 3 },
+        { "name": "Project Work", "questions": 2 },
+        { "name": "Activity", "questions": 6 }
+      ],
+      "bookSummary": [],
+      "notes": "Pages 4 and 6 are maps (Distribution of Rice, Distribution of Wheat). Several run-in headings were extracted garbled (e.g. 'Technological and Institutional Reforms', 'Horticulture Crops', 'Non-Food Crops'); crop sub-headings are summarised as points."
+    },
+    {
+      "bookChapter": 5,
+      "title": "Minerals and Energy Resources",
+      "pages": 16,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explains what minerals are, how they occur, and the distribution of ferrous, non-ferrous and non-metallic minerals in India. It discusses the hazards of mining and the need to conserve minerals. It then describes conventional and non-conventional sources of energy and the conservation of energy resources.",
+      "sections": [
+        {
+          "number": null,
+          "title": "What is a mineral?",
+          "points": [
+            "Geologists define a mineral as a homogenous, naturally occurring substance with a definable internal structure, ranging from hardest diamond to softest talc.",
+            "Rocks are combinations of minerals; over 2000 minerals are identified but only a few are abundant.",
+            "Mineral intake is about 0.3 per cent of nutrients, yet without them we could not use the other 99.7 per cent."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Study of Minerals by Geographers and Geologists",
+              "points": [
+                "Geographers study minerals as part of the earth's crust, their distribution and associated economic activities; geologists study formation, age and composition."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Mode of Occurrence of Minerals",
+          "points": [
+            "Minerals are usually found in ores; the mineral content must be sufficient for commercially viable extraction.",
+            "In igneous and metamorphic rocks they occur in veins (smaller) and lodes (larger) — tin, copper, zinc, lead.",
+            "In sedimentary rocks they occur in beds or layers (coal, some iron ore, gypsum, potash salt, sodium salt).",
+            "Decomposition of surface rocks leaves residual mass containing ores such as bauxite; alluvial placer deposits contain gold, silver, tin and platinum; ocean waters yield common salt, magnesium and bromine, and ocean beds manganese nodules.",
+            "Rat-hole mining in Jowai and Cherapunjee, Meghalaya was declared illegal by the National Green Tribunal.",
+            "Peninsular rocks contain most coal, metallic minerals and mica; sedimentary rocks in Gujarat and Assam have petroleum; the northern alluvial plains are almost devoid of economic minerals."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Ferrous Minerals",
+              "points": [
+                "Account for about three-fourths of the value of metallic mineral production.",
+                "Iron ore: magnetite is the finest ore (up to 70 per cent iron); hematite is most important industrial ore (50-60 per cent); in 2018–19, 97% came from Odisha, Chhattisgarh, Karnataka and Jharkhand.",
+                "Belts: Odisha-Jharkhand (Badampahar, Gua, Noamundi); Durg-Bastar-Chandrapur (Bailadila, exported to Japan and South Korea via Vishakhapatnam); Ballari-Chitradurga-Chikkamagaluru-Tumakuru (Kudremukh, 100 per cent export unit, slurry pipeline to Mangaluru); Maharashtra-Goa (exported through Marmagao).",
+                "Manganese: used in steel and ferro-manganese alloy, about 10 kg per tonne of steel; also bleaching powder, insecticides and paints."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Non-Ferrous Minerals",
+              "points": [
+                "India's reserves and production are not very satisfactory; they include copper, bauxite, lead, zinc and gold.",
+                "Copper: India is critically deficient; used in electrical cables; Balaghat (Madhya Pradesh), Khetri (Rajasthan) and Singhbhum (Jharkhand).",
+                "Bauxite: source of alumina and aluminium; deposits in Amarkantak plateau, Maikal hills and Bilaspur-Katni; Odisha largest producer in 2018-19, Panchpatmali deposits in Koraput."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Non-Metallic Minerals",
+              "points": [
+                "Mica splits into thin sheets and has excellent di-electric strength and insulating properties, indispensable in electric and electronic industries.",
+                "Koderma-Gaya-Hazaribagh belt of Jharkhand is the leading producer; also Ajmer in Rajasthan and Nellore in Andhra Pradesh."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Rock Minerals",
+              "points": [
+                "Limestone is found in rocks of calcium carbonates or calcium and magnesium carbonates in sedimentary rocks.",
+                "It is the basic raw material for cement and essential for smelting iron ore in the blast furnace."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Hazards of Mining",
+              "points": [
+                "Dust and noxious fumes cause pulmonary diseases; risk of roof collapse, inundation and fires in coalmines.",
+                "Water sources get contaminated; waste and slurry degrade land and pollute rivers; stricter safety regulations are needed to prevent a 'killer industry'."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Conservation of Minerals",
+          "points": [
+            "Workable mineral deposits are only one per cent of the earth's crust; replenishment is infinitely slow, so minerals are finite and non-renewable.",
+            "Continued extraction increases costs and lowers quality.",
+            "Conservation needs improved technologies for low grade ores, recycling of metals, using scrap metals and substitutes."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Energy Resources",
+          "points": [
+            "Energy is generated from fuel minerals and electricity; sources are conventional (firewood, cattle dung cake, coal, petroleum, natural gas, electricity) and non-conventional (solar, wind, tidal, geothermal, biogas, atomic).",
+            "More than 70 per cent of rural household energy comes from firewood and dung cake."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Conventional Sources of Energy",
+              "points": [
+                "Coal: most abundant fossil fuel; forms are peat, lignite (Neyveli), bituminous (metallurgical coal) and anthracite; Gondwana coal (over 200 million years) in Damodar valley – Jharia, Raniganj, Bokaro; tertiary coal (about 55 million years) in Meghalaya, Assam, Arunachal Pradesh and Nagaland.",
+                "Petroleum: next major energy source after coal; refineries are a 'nodal industry'; found in anticlines and fault traps of tertiary rocks; Mumbai High, Gujarat (Ankeleshwar) and Assam (Digboi, Naharkatiya, Moran-Hugrijan).",
+                "Natural Gas: found with petroleum; used as CNG and PNG; reserves in Mumbai High, Cambay basin and Krishna-Godavari basin; the 1,700 km HVJ pipeline by GAIL, with infrastructure expanded to 18,500 km.",
+                "Electricity: per capita consumption is an index of development; hydro electricity from fast flowing water (Bhakra Nangal, Damodar Valley corporation, Kopili); thermal electricity from coal, petroleum and natural gas."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Non-Conventional Sources of Energy",
+              "points": [
+                "Rising prices, potential shortages and environmental problems of fossil fuels create need for renewable sources.",
+                "Nuclear or Atomic Energy: obtained by altering the structure of atoms; uranium and thorium from Jharkhand and the Aravalli ranges; Monazite sands of Kerala are rich in thorium.",
+                "Solar Energy: photovoltaic technology converts sunlight into electricity; popular in rural and remote areas.",
+                "Wind power: largest wind farm cluster from Nagarcoil to Madurai in Tamil Nadu; Nagarcoil and Jaisalmer known for wind energy.",
+                "Biogas: from shrubs, farm, animal and human waste; 'Gobar gas plants' give energy and improved manure.",
+                "Tidal Energy: floodgate dams across inlets; Gulf of Khambhat, Gulf of Kuchchh and Sunderban region; Geo Thermal Energy: experimental projects in Parvati valley near Manikaran (Himachal Pradesh) and Puga Valley (Ladakh)."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Conservation of Energy Resources",
+              "points": [
+                "Promotion of energy conservation and increased use of renewable energy are the twin planks of sustainable energy.",
+                "India is one of the least energy efficient countries; citizens can use public transport, switch off electricity, use power-saving devices and non-conventional sources — 'energy saved is energy produced'."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        { "term": "Mineral", "meaning": "A homogenous, naturally occurring substance with a definable internal structure." },
+        { "term": "Ore", "meaning": "An accumulation of any mineral mixed with other elements." },
+        { "term": "Veins and lodes", "meaning": "Smaller (veins) and larger (lodes) occurrences of minerals in cracks, crevices, faults or joints of igneous and metamorphic rocks." },
+        { "term": "Placer deposits", "meaning": "Alluvial deposits in sands of valley floors and base of hills containing minerals not corroded by water." },
+        { "term": "Rat hole mining", "meaning": "Coal mining by family members in the form of a long narrow tunnel, as in Jowai and Cherapunjee." },
+        { "term": "Magnetite", "meaning": "The finest iron ore with iron content up to 70 per cent and excellent magnetic qualities." },
+        { "term": "Hematite", "meaning": "The most important industrial iron ore by quantity used, with 50-60 per cent iron." },
+        { "term": "Peat, lignite, bituminous, anthracite", "meaning": "Forms of coal: peat has low carbon and high moisture; lignite is low grade brown coal; bituminous is most popular commercial coal; anthracite is highest quality hard coal." },
+        { "term": "Nodal industry", "meaning": "Petroleum refineries act as a nodal industry for synthetic textile, fertiliser and chemical industries." },
+        { "term": "Geo thermal energy", "meaning": "Heat and electricity produced by using the heat from the interior of the Earth." }
+      ],
+      "keyResults": [
+        { "label": "Iron ore production 2018–19", "statement": "Almost 97% came from Odisha, Chhattisgarh, Karnataka and Jharkhand." },
+        { "label": "Manganese", "statement": "Nearly 10 kg of manganese is required to manufacture one tonne of steel." },
+        { "label": "Coal ages", "statement": "Gondwana coal is a little over 200 million years old; tertiary deposits are about 55 million years old." },
+        { "label": "HVJ pipeline", "statement": "First 1,700 km Hazira-Vijaipur-Jagdishpur cross country gas pipeline by GAIL; network expanded to 18,500 km, expected to exceed 34,000 km." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 3 },
+        { "name": "Activity", "questions": null }
+      ],
+      "bookSummary": [],
+      "notes": "Pages 5, 10 and 12 are maps with no body text; pie chart state shares were partly unreadable in extraction."
+    },
+    {
+      "bookChapter": 6,
+      "title": "Manufacturing Industries",
+      "pages": 13,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explains the importance of manufacturing and classifies industries by raw material, role, capital, ownership and bulk. It describes agro-based industries (textiles, sugar) and mineral-based industries (iron and steel, aluminium, chemicals, fertilizers, cement, automobiles, IT and electronics). It closes with industrial pollution and measures to control environmental degradation, including NTPC's example.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Importance of Manufacturing",
+          "points": [
+            "Manufacturing is production of goods in large quantities after processing raw materials into more valuable products; it falls in the secondary sector.",
+            "It modernises agriculture, reduces dependence on agricultural income, helps eradicate unemployment and poverty, reduces regional disparities, and brings foreign exchange through exports.",
+            "Agriculture and industry move hand in hand; agro-industries raised agricultural productivity."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Classification of Industries",
+          "points": [
+            "By source of raw materials: agro based and mineral based.",
+            "By main role: basic or key industries and consumer industries.",
+            "By capital investment: small scale industry defined by maximum investment, at present rupees one crore.",
+            "By ownership: public sector (BHEL, SAIL), private sector (TISCO, Bajaj Auto, Dabur), joint sector (Oil India Ltd.), cooperative sector (sugar in Maharashtra, coir in Kerala).",
+            "By bulk and weight: heavy industries (iron and steel) and light industries (electrical goods)."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Agro-based Industries",
+          "points": [
+            "Cotton, jute, silk, woollen textiles, sugar and edible oil industries use agricultural raw materials.",
+            "Textile industry contributes to industrial production, employment and foreign exchange and is the only industry complete in the value chain."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Cotton Textiles",
+              "points": [
+                "Hand spinning and handloom in ancient India; power-looms after the 18th century; the first successful textile mill was established in Mumbai in 1854.",
+                "Early concentration in Maharashtra and Gujarat due to raw cotton, market, transport, ports, labour and moist climate.",
+                "Spinning is centralised in Maharashtra, Gujarat and Tamil Nadu while weaving is decentralised; khadi provides cottage employment."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Jute Textiles",
+              "points": [
+                "India is the largest producer of raw jute and jute goods and second exporter after Bangladesh; mills are along the Hugli river in West Bengal.",
+                "First jute mill set up near Kolkata in 1855 at Rishra; after Partition three-fourth of jute area went to Bangladesh.",
+                "Location factors: nearby jute areas, cheap water transport, rail and road network, abundant water, cheap labour, and Kolkata's banking, insurance and port facilities."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Sugar Industry",
+              "points": [
+                "India is second world producer of sugar and first in gur and khandsari; raw material is bulky and loses sucrose in haulage.",
+                "Sixty per cent mills are in Uttar Pradesh and Bihar; the seasonal industry suits the cooperative sector.",
+                "Mills are shifting to southern and western states, especially Maharashtra, due to higher sucrose content, longer crushing season and successful cooperatives."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Mineral-based Industries",
+          "points": [
+            "Industries that use minerals and metals as raw materials."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Iron and Steel Industry",
+              "points": [
+                "Basic industry on which all other industries depend for machinery; production and consumption of steel is an index of development.",
+                "Heavy industry; iron ore, coking coal and limestone are required in the ratio of approximately 4 : 2 : 1, with some manganese.",
+                "Chhotanagpur plateau has maximum concentration due to low cost iron ore, high grade raw materials nearby, cheap labour and home market."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Aluminium Smelting",
+              "points": [
+                "Second most important metallurgical industry; aluminium is light, corrosion resistant, a good conductor and malleable.",
+                "Plants in Odisha, West Bengal, Kerala, Uttar Pradesh, Chhattisgarh, Maharashtra and Tamil Nadu; regular electricity and assured cheap raw material (bauxite) decide location."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Chemical Industries",
+              "points": [
+                "Fast growing; inorganic chemicals include sulphuric acid, nitric acid, alkalies, soda ash and caustic soda and are widely spread.",
+                "Organic chemicals include petrochemicals, with plants near oil refineries; the chemical industry is its own largest consumer."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Fertilizer Industry",
+              "points": [
+                "Produces nitrogenous (urea), phosphatic, DAP and complex (NPK) fertilizers; potash is entirely imported.",
+                "Expanded after the Green Revolution; Gujarat, Tamil Nadu, Uttar Pradesh, Punjab and Kerala produce half."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Cement Industry",
+              "points": [
+                "Essential for construction; needs bulky raw materials limestone, silica and gypsum, plus coal, electric power and rail transport.",
+                "First cement plant set up in Chennai in 1904; plants in Gujarat have access to Gulf markets."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Automobile Industry",
+              "points": [
+                "Trucks, buses, cars, motor cycles, scooters, three-wheelers and multi-utility vehicles are made in India; liberalisation stimulated demand.",
+                "Located around Delhi, Gurugram, Mumbai, Pune, Chennai, Kolkata, Lucknow, Indore, Hyderabad, Jamshedpur and Bengaluru."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Information Technology and Electronics Industry",
+              "points": [
+                "Covers products from transistor sets to computers and telecommunication equipment; Bengaluru is the electronic capital of India.",
+                "Major impact on employment generation; growth in hardware and software is key to its success."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Industrial Pollution and Environmental Degradation",
+          "points": [
+            "Industries cause four types of pollution: air, water, land and noise; thermal power plants are also polluters.",
+            "Air pollution from sulphur dioxide, carbon monoxide and particulate matter; toxic gas leaks such as the Bhopal Gas tragedy.",
+            "Water pollution from paper, pulp, chemical, textile, refineries, tanneries and electroplating industries; thermal pollution from hot water; nuclear wastes cause cancers and birth defects.",
+            "Dumping of wastes renders soil useless and contaminates groundwater; noise causes hearing impairment and stress."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Control of Environmental Degradation",
+          "points": [
+            "Every litre of industrial waste water pollutes eight times the quantity of freshwater.",
+            "Remedies: reusing and recycling water, rainwater harvesting, treating hot water and effluents in primary, secondary and tertiary phases, and legally regulating groundwater overdraw.",
+            "Air: smoke stacks with electrostatic precipitators, fabric filters, scrubbers and inertial separators; using oil or gas instead of coal; noise: silencers, redesigned machinery, earplugs."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "NTPC shows the way",
+              "points": [
+                "NTPC has ISO certification for EMS 14001 and preserves the environment through optimum use of equipment, maximising ash utilisation, green belts, ash pond management and ecological monitoring."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        { "term": "Manufacturing", "meaning": "Production of goods in large quantities after processing from raw materials to more valuable products." },
+        { "term": "Basic or key industries", "meaning": "Industries which supply their products as raw materials to manufacture other goods, e.g. iron and steel." },
+        { "term": "Consumer industries", "meaning": "Industries that produce goods for direct use by consumers, e.g. sugar, toothpaste, paper." },
+        { "term": "Small scale industry", "meaning": "Defined with reference to the maximum investment allowed on the assets of a unit, at present rupees one crore." },
+        { "term": "Joint sector industries", "meaning": "Industries jointly run by the state and individuals or a group of individuals." },
+        { "term": "Cooperative sector industries", "meaning": "Industries owned and operated by producers or suppliers of raw materials, workers or both, sharing profits or losses proportionately." },
+        { "term": "Mineral-based industries", "meaning": "Industries that use minerals and metals as raw materials." },
+        { "term": "Thermal pollution of water", "meaning": "When hot water from factories and thermal plants is drained into rivers and ponds before cooling." }
+      ],
+      "keyResults": [
+        { "label": "Date: 1854", "statement": "First successful textile mill established in Mumbai." },
+        { "label": "Date: 1855", "statement": "First jute mill set up near Kolkata at Rishra." },
+        { "label": "Date: 1904", "statement": "First cement plant set up in Chennai." },
+        { "label": "Steel raw material ratio", "statement": "Iron ore, coking coal and limestone in the ratio of approximately 4 : 2 : 1." },
+        { "label": "Treatment of industrial effluents", "statement": "Primary (mechanical: screening, grinding, flocculation, sedimentation), secondary (biological), tertiary (biological, chemical and physical, recycling wastewater)." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 3 },
+        { "name": "Project Work", "questions": 3 },
+        { "name": "Activity", "questions": null }
+      ],
+      "bookSummary": [],
+      "notes": "Pages 4, 6 and 10 are maps (cotton, woollen and silk industries; iron and steel plants; software technology parks) with no text; flow charts (Fig. 6.1, 6.2, 6.4, 6.5) did not extract."
+    },
+    {
+      "bookChapter": 7,
+      "title": "Lifelines of National Economy",
+      "pages": 13,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explains how transport, communication and trade act as lifelines of India's economy. It describes roadways, railways, pipelines, waterways, major sea ports and airways. It then covers communication, international trade and tourism as a trade.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Transport",
+          "points": [
+            "Movement of goods and services from supply to demand locations requires transport; transport is classified into land, water and air.",
+            "Transport, communication and trade are complementary to each other."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Roadways",
+              "points": [
+                "India has the second largest road network in the world, about 62.16 lakh km (2020–21).",
+                "Roads are cheaper to build, traverse dissected and mountainous terrain, are economical for short distances, give door-to-door service and act as feeders.",
+                "Six classes: Golden Quadrilateral Super Highways (Delhi-Kolkata-Chennai-Mumbai, with North-South and East-West corridors, by NHAI), National Highways, State Highways, District Roads, Other Roads (Pradhan Mantri Grameen Sadak Yojana) and Border Roads (Border Roads Organisation, 1960).",
+                "Roads are metalled (all weather) or unmetalled; the Atal Tunnel (9.02 km) connects Manali to Lahul-Spiti."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Railways",
+              "points": [
+                "Principal mode of transport for freight and passengers and a great integrating force; reorganised into 17 zones; first train ran from Mumbai to Thane in 1853 over 34 km.",
+                "Network extends over 67,956 km across broad, metre and narrow gauges.",
+                "Distribution influenced by physiographic, economic and administrative factors; northern plains most favourable; Himalayas, Rajasthan sands and forested tracts difficult; Konkan railway crossed the Sahyadri.",
+                "Problems include ticketless travel, theft and damage of railway property and chain pulling."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Pipelines",
+              "points": [
+                "Used for crude oil, petroleum products, natural gas and slurry; allowed inland refineries at Barauni, Mathura and Panipat.",
+                "High initial cost but minimal running cost; rules out trans-shipment losses and delays.",
+                "Three networks: upper Assam to Kanpur; Salaya (Gujarat) to Jalandhar (Punjab); and the Hazira-Vijaipur-Jagdishpur (HVJ) gas pipeline."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Waterways",
+              "points": [
+                "Cheapest, fuel-efficient and environment friendly transport, suitable for heavy and bulky goods; 14,500 km of inland navigation waterways.",
+                "111 inland waterways were declared National Waterways by the National Waterways Act, 2016.",
+                "N.W. No.1 Ganga (Prayagraj–Haldia, 1620 km); No.2 Brahmaputra (Sadiya–Dhubri, 891 km); No.3 West-Coast Canal in Kerala (205 km); No.4 Godavari and Krishna with Kakinada Puducherry canals (1078 km); No.5 Brahmani, Matai, Mahanadi delta channels and East Coast Canal (588 km).",
+                "95 per cent of the country's trade volume (68 per cent by value) moves by sea."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Major Sea Ports",
+              "points": [
+                "Coastline of 11098.81 km with 12 major and 200 notified non-major ports.",
+                "Deendayal Port (Kandla) was the first port developed after Independence after the loss of Karachi; Mumbai is the biggest port; Jawaharlal Nehru port decongests Mumbai; Mormugao is the premier iron ore exporting port; New Mangalore exports Kudremukh iron ore; Cochin at a lagoon entrance.",
+                "East coast: V.O. Chidambaranar (Tuticorin) with natural harbour; Chennai one of the oldest artificial ports; Vishakhapatnam the deepest landlocked port; Paradwip exports iron ore; Shyama Prasad Mookerjee, Kolkata an inland riverine tidal port; Haldia a subsidiary port."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Airways",
+              "points": [
+                "Fastest, most comfortable and prestigious mode; covers mountains, deserts, forests and oceans, and eases access in the north-east.",
+                "Pawanhans Helicopters Ltd. serves ONGC off-shore operations and difficult terrains.",
+                "UDAN (Ude Desh ka Aam Nagrik) Regional Connectivity Scheme makes flying affordable for common citizens."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Communication",
+          "points": [
+            "The Indian postal network is the largest in the world; first-class mail (cards, envelopes) is airlifted, second-class mail by surface; six mail channels: Rajdhani, Metro, Green, Business, Bulk Mail and Periodical.",
+            "India has one of the largest telecom networks in Asia; more than two-thirds of villages have STD, at a uniform rate across India.",
+            "Mass communication: All India Radio (Akashwani), Doordarshan, newspapers in about 100 languages (most in Hindi), and films certified by the Central Board of Film Certification; India is the largest producer of feature films.",
+            "Digital India aims at knowledge based transformation: IT (Indian Talent) + IT (Information Technology) = IT (India Tomorrow)."
+          ]
+        },
+        {
+          "number": null,
+          "title": "International Trade",
+          "points": [
+            "Trade is exchange of goods among people, states and countries; trade between two countries is international trade, an economic barometer for a country.",
+            "Balance of trade is the difference between export and import; favourable when exports exceed imports, unfavourable when imports exceed exports.",
+            "Exports include gems and jewellery, chemicals, agriculture products; imports include petroleum crude, gems and jewellery, chemicals, base metals, electronic items and machinery; India earns foreign exchange through IT exports."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Tourism as a Trade",
+          "points": [
+            "Tourism has grown remarkably over two decades with schemes like Swadesh Darshan 2.0, Vibrant Village Programme, PRASHAD and Paryatan Mitra.",
+            "It promotes national integration, supports local handicrafts and international understanding of our culture.",
+            "Foreign tourists come for heritage, eco, adventure, cultural, medical and business tourism."
+          ]
+        }
+      ],
+      "keyTerms": [
+        { "term": "Golden Quadrilateral Super Highways", "meaning": "Six-lane Super Highways linking Delhi-Kolkata-Chennai-Mumbai and Delhi to reduce time and distance between mega cities." },
+        { "term": "National Highways", "meaning": "Primary road systems linking extreme parts of the country." },
+        { "term": "State Highways", "meaning": "Roads linking a state capital with different district headquarters." },
+        { "term": "District Roads", "meaning": "Roads connecting the district headquarters with other places of the district." },
+        { "term": "Trade", "meaning": "The exchange of goods among people, states and countries." },
+        { "term": "International trade", "meaning": "Trade between two countries." },
+        { "term": "Balance of trade", "meaning": "The difference between a country's export and import; favourable if exports exceed imports, unfavourable if imports exceed exports." }
+      ],
+      "keyResults": [
+        { "label": "Road network", "statement": "About 62.16 lakh km (2020–21), second largest in the world." },
+        { "label": "Date: 1853", "statement": "First train steamed off from Mumbai to Thane, covering 34 km." },
+        { "label": "Railway track (Table 7.1)", "statement": "Broad Gauge (1.676 m) 63950 km, Metre Gauge (1.000 m) 2,402 km, Narrow Gauge (0.762 and 0.610 m) 1,604 km; total 67,956 km." },
+        { "label": "Date: 1960", "statement": "Border Roads Organisation established." },
+        { "label": "National Waterways Act, 2016", "statement": "111 inland waterways declared National Waterways." },
+        { "label": "Ports", "statement": "Coastline of 11098.81 km with 12 major and 200 notified non-major ports; major ports handle 95 per cent of foreign trade." }
+      ],
+      "activities": ["Activity"],
+      "exercises": [
+        { "name": "Exercises", "questions": 3 },
+        { "name": "Quiz Drive", "questions": 5 }
+      ],
+      "bookSummary": [],
+      "notes": "Pages 3, 6 (map with activity) and 9 are maps with little text."
+    }
+  ]
+}

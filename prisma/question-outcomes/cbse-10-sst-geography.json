@@ -1,0 +1,14 @@
+{
+  "draft": "prisma/curriculum-drafts/cbse-10-sst-geography.json",
+  "format": "One digit per question, in source-id order within the chapter. The digit is the outcome's position in the chapter (1-based, topics in order); 0 means the question tests no outcome in the draft and is left untagged on purpose.",
+  "chapters": {
+    "1": "1133456312 2222222222 3333333444 56",
+    "2": "3344435555 1113323333 3444455555",
+    "3": "1143222333 1114332322 2222243333",
+    "4": "2211333334 1111223333 3333333344",
+    "5": "1112222333 1211122222 2113333333",
+    "6": "1223333334 1223333333 3333333334",
+    "7": "1211112223 2111111111 2222221333"
+  },
+  "book": "jess1"
+}

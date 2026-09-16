@@ -1,0 +1,12 @@
+{
+  "draft": "prisma/curriculum-drafts/cbse-10-sst-history.json",
+  "format": "One digit per question, in source-id order within the chapter. The digit is the outcome's position in the chapter (1-based, topics in order); 0 means the question tests no outcome in the draft and is left untagged on purpose.",
+  "chapters": {
+    "1": "5122342334 1112212222 4444422223 34",
+    "2": "1122222345 1112222323 3333333445 53",
+    "3": "1112222224 1111112222 2222222333 33",
+    "4": "1122223343 1122222222 2333334444 43",
+    "5": "1111222344 1111122222 2222223334 44"
+  },
+  "book": "jess3"
+}

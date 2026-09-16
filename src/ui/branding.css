@@ -1,0 +1,374 @@
+/*
+ * White labelling: the logo in a lockup, the attribution line, a report's
+ * letterhead, and the branding editor.
+ *
+ * Every colour here is a token, so a school's theme reaches it the same way it
+ * reaches everything else. The editor's classes are `ui-bx-*`; grep the other
+ * stylesheets before adding a `.ui-*` name here.
+ */
+
+/* ---- The lockup ------------------------------------------------------- */
+
+/* The same footprint as the letter mark, so a logo does not move the bar. A
+   wide logo is letterboxed inside that box rather than stretched or cropped. */
+.ui-brand-logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex: none;
+}
+
+.ui-powered-by {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 640px) {
+  /* A school's name is often long, and the mobile bar keeps it on one line.
+     Truncate rather than push the bar wider than a 360px phone. */
+  .ui-brand-text {
+    min-width: 0;
+  }
+  .ui-brand-name {
+    display: block;
+    max-width: 16ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* ---- The letterhead --------------------------------------------------- */
+
+.ui-report-letterhead {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--accent);
+}
+.ui-report-letterhead-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex: none;
+}
+.ui-report-letterhead-text {
+  min-width: 0;
+}
+.ui-report-letterhead-name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+.ui-report-letterhead-tagline {
+  margin: 2px 0 6px;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.ui-report-letterhead-line {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.ui-report-signatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 40px;
+  margin: 36px 0 12px;
+}
+.ui-report-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 140px;
+  flex: 1 1 140px;
+}
+.ui-report-signature-line {
+  display: block;
+  height: 40px;
+  border-bottom: 1px solid var(--border-strong);
+}
+.ui-report-signature-role {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-report-school-foot {
+  margin: 16px 0 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-report-powered {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+@media print {
+  .ui-report-letterhead {
+    border-bottom-color: #000000;
+  }
+  .ui-report-letterhead-name {
+    color: #000000;
+  }
+  .ui-report-letterhead-tagline,
+  .ui-report-letterhead-line,
+  .ui-report-signature-role,
+  .ui-report-school-foot {
+    color: #333333;
+  }
+  .ui-report-signature-line {
+    border-bottom-color: #000000;
+  }
+  .ui-report-letterhead,
+  .ui-report-signatures {
+    break-inside: avoid;
+  }
+}
+
+/* ---- The editor ------------------------------------------------------- */
+
+/* The same editor, as a section at the foot of the teacher's Settings page. */
+.ui-settings-branding {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 80px;
+}
+.ui-settings-branding > .ui-hint {
+  margin: 4px 0 20px;
+}
+
+.ui-bx {
+  display: grid;
+  /* An implicit track sizes to min-content, and one long hex row or school name
+     then pushes a 360px phone sideways. */
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+@media (min-width: 1100px) {
+  .ui-bx {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 380px);
+    align-items: start;
+  }
+  .ui-bx-aside {
+    position: sticky;
+    top: 16px;
+  }
+}
+
+.ui-bx-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 20px;
+  display: grid;
+  gap: 14px;
+  margin: 0 0 20px;
+  /* A <fieldset> defaults to `min-inline-size: min-content`, which `min-width`
+     does not override — the editor was 55px wider than a 360px phone until a
+     screenshot showed it. */
+  min-width: 0;
+  min-inline-size: 0;
+}
+.ui-bx-section > legend,
+.ui-bx-section > h2 {
+  font-size: 16px;
+  font-weight: 650;
+  margin: 0;
+  padding: 0;
+}
+.ui-bx-section > p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.ui-bx-fields {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.ui-bx-hint {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.ui-bx-error {
+  font-size: 13px;
+  color: var(--danger);
+}
+
+.ui-bx-logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.ui-bx-logo-preview {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  background: var(--surface-raised);
+}
+
+.ui-bx-colours {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.ui-bx-colour {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.ui-bx-colour input[type="color"] {
+  width: 44px;
+  height: 44px;
+  padding: 2px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  flex: none;
+}
+.ui-bx-colour .ui-input {
+  /* Seven characters plus the input's own padding; 9ch clipped "#f5c400". */
+  width: 12ch;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.ui-bx-colour-label {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.ui-bx-check {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 14px;
+}
+.ui-bx-check input {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  flex: none;
+}
+
+.ui-bx-verdicts {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.ui-bx-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+/* The preview is drawn with the CANDIDATE colours as inline custom properties,
+   so it shows what will render before anything is saved. */
+.ui-bx-preview {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.ui-bx-preview-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--pv-surface);
+  border-bottom: 1px solid var(--pv-border);
+  color: var(--pv-text);
+  font-weight: 700;
+  min-width: 0;
+}
+.ui-bx-preview-bar span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ui-bx-preview-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-size: 13px;
+  background: linear-gradient(135deg, var(--pv-primary), var(--pv-primary-dark));
+  flex: none;
+  object-fit: contain;
+}
+img.ui-bx-preview-mark {
+  background: transparent;
+}
+.ui-bx-preview-body {
+  background: var(--pv-canvas);
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+.ui-bx-preview-card {
+  background: var(--pv-surface);
+  border: 1px solid var(--pv-border);
+  border-radius: 10px;
+  padding: 12px;
+  display: grid;
+  gap: 4px;
+}
+.ui-bx-preview-title {
+  color: var(--pv-text);
+  font-weight: 650;
+  font-size: 14px;
+}
+.ui-bx-preview-secondary {
+  color: var(--pv-text-2);
+  font-size: 13px;
+}
+.ui-bx-preview-tertiary {
+  color: var(--pv-text-3);
+  font-size: 12px;
+}
+.ui-bx-preview-link {
+  color: var(--pv-accent);
+  font-size: 13px;
+  font-weight: 600;
+}
+.ui-bx-preview-button {
+  justify-self: start;
+  background: linear-gradient(135deg, var(--pv-primary), var(--pv-primary-dark));
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.ui-bx-preview-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 6px 14px;
+  background: var(--surface-sunken);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

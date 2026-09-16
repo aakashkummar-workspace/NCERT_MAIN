@@ -1,0 +1,707 @@
+/* ==========================================================================
+   Landing & Marketing surfaces
+   ==========================================================================
+   All values read tokens from globals.css. Both themes work automatically.
+   ---------------------------------------------------------------------- */
+
+.ui-landing {
+  min-height: 100vh;
+  background: var(--canvas);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------------------------------------------------- Navigation -- */
+
+.ui-landing-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-landing-header-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ui-landing-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.ui-landing-logo-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-900));
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 0 2px 8px rgb(74 86 210 / 0.25);
+}
+
+.ui-landing-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-landing-brand-title {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.ui-landing-brand-tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ui-landing-nav-links {
+  display: none;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .ui-landing-nav-links {
+    display: flex;
+  }
+}
+
+.ui-landing-nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--motion-fast) var(--ease);
+}
+
+.ui-landing-nav-link:hover {
+  color: var(--text-primary);
+}
+
+.ui-landing-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---------------------------------------------------------------------- Hero -- */
+
+.ui-landing-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 24px 80px;
+  text-align: center;
+  background: radial-gradient(
+    circle at 50% -20%,
+    color-mix(in srgb, var(--primary-500) 12%, transparent),
+    transparent 70%
+  );
+}
+
+.ui-landing-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ui-landing-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: var(--ai-surface);
+  border: 1px solid var(--ai-border);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.ui-landing-h1 {
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.ui-landing-h1-accent {
+  background: linear-gradient(135deg, var(--primary-600), var(--series-7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ui-landing-lead {
+  font-size: clamp(16px, 2.2vw, 20px);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 720px;
+  margin-bottom: 36px;
+}
+
+.ui-landing-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 48px;
+}
+
+.ui-landing-metrics-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  width: 100%;
+}
+
+.ui-landing-metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.ui-landing-metric-val {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.ui-landing-metric-label {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+/* ------------------------------------------------------------- Feedback Loop -- */
+
+.ui-landing-section {
+  padding: 80px 24px;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.ui-landing-section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
+
+.ui-landing-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.ui-landing-section-title {
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.ui-landing-section-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Stepper cards */
+.ui-landing-stepper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.ui-landing-step-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform var(--motion-fast) var(--ease),
+    border-color var(--motion-fast) var(--ease),
+    box-shadow var(--motion-fast) var(--ease);
+}
+
+.ui-landing-step-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.ui-landing-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-wash);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.ui-landing-step-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ui-landing-step-body {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ----------------------------------------------------------- Interactive Demo -- */
+
+.ui-landing-demo-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.ui-landing-demo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunken);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.ui-landing-demo-q {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.ui-landing-demo-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ui-landing-demo-opt {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 14.5px;
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--motion-instant) var(--ease);
+}
+
+.ui-landing-demo-opt:hover {
+  background: var(--surface-sunken);
+  border-color: var(--border-strong);
+}
+
+.ui-landing-demo-opt[data-selected="true"] {
+  border-color: var(--accent);
+  background: var(--accent-wash);
+}
+
+.ui-landing-demo-opt[data-state="correct"] {
+  border-color: var(--success);
+  background: var(--success-fill);
+}
+
+.ui-landing-demo-opt[data-state="incorrect"] {
+  border-color: var(--danger);
+  background: var(--danger-fill);
+}
+
+.ui-landing-demo-feedback {
+  padding: 18px;
+  border-radius: var(--radius-card);
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  border: 1px solid var(--border);
+}
+
+.ui-landing-demo-feedback[data-state="correct"] {
+  background: var(--success-fill);
+  border-color: var(--success-border);
+  color: var(--success);
+}
+
+.ui-landing-demo-feedback[data-state="incorrect"] {
+  background: var(--ai-surface);
+  border-color: var(--ai-border);
+  color: var(--text-primary);
+}
+
+/* -------------------------------------------------------- Curriculum Explorer -- */
+
+.ui-landing-curriculum-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.ui-landing-tab-btn {
+  padding: 8px 18px;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--motion-instant) var(--ease);
+}
+
+.ui-landing-tab-btn:hover {
+  background: var(--surface-sunken);
+  color: var(--text-primary);
+}
+
+.ui-landing-tab-btn[data-active="true"] {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.ui-landing-chapters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.ui-landing-chapter-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-landing-chapter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ui-landing-chapter-num {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.ui-landing-chapter-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ui-landing-chapter-concepts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.ui-landing-concept-tag {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--surface-sunken);
+  color: var(--text-secondary);
+}
+
+/* ------------------------------------------------------------------- Pricing -- */
+
+.ui-landing-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.ui-landing-price-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.ui-landing-price-card[data-featured="true"] {
+  border-color: var(--accent);
+  box-shadow: 0 8px 30px rgb(74 86 210 / 0.12);
+}
+
+.ui-landing-featured-tag {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 12px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ui-landing-plan-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.ui-landing-plan-desc {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin-bottom: 20px;
+  min-height: 38px;
+}
+
+.ui-landing-price-num {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.ui-landing-price-period {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-tertiary);
+}
+
+.ui-landing-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.ui-landing-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.ui-landing-feature-check {
+  color: var(--success);
+  flex: none;
+}
+
+/* -------------------------------------------------------------------- Footer -- */
+
+.ui-landing-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  padding: 64px 24px 32px;
+}
+
+.ui-landing-footer-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ui-landing-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .ui-landing-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.ui-landing-footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-landing-footer-heading {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 4px;
+}
+
+.ui-landing-footer-link {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--motion-fast) var(--ease);
+}
+
+.ui-landing-footer-link:hover {
+  color: var(--text-primary);
+}
+
+.ui-landing-footer-bottom {
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-tertiary);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ------------------------------------------------------------ Compact menu -- */
+
+/* The section links are hidden below 768px, so a phone needs another way to
+   them. A <details> element: no script, keyboard-operable, closes on a second
+   press. Hidden again at the width where the full links come back. */
+.ui-landing-menu {
+  position: relative;
+}
+
+.ui-landing-menu > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.ui-landing-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.ui-landing-menu-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  z-index: 60;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-md, 0 8px 24px rgb(0 0 0 / 0.12));
+}
+
+.ui-landing-menu-panel a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: var(--radius-control);
+  font-size: 15px;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.ui-landing-menu-panel a:hover {
+  background: var(--surface-sunken);
+}
+
+@media (min-width: 768px) {
+  .ui-landing-menu {
+    display: none;
+  }
+}
+
+/* A 390px header overflowed by 3px: brand, tagline, theme toggle and two
+   buttons do not fit beside 24px gutters. The tagline goes, the gutters come
+   in to the product's 16px, and Sign in moves into the menu. */
+@media (max-width: 767px) {
+  .ui-landing-header-inner {
+    padding: 12px 16px;
+    gap: 8px;
+  }
+  .ui-landing-brand-tag {
+    display: none;
+  }
+  .ui-landing-nav-actions {
+    gap: 8px;
+  }
+  .ui-landing-signin {
+    display: none;
+  }
+}

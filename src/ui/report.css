@@ -1,0 +1,489 @@
+/* ============================================================================
+   The report sheet
+
+   Rendered on the teacher's side and on the parent's, from the same component.
+
+   Printing is not a nice-to-have here: PRODUCT_REQUIREMENTS.md asks for a
+   downloadable term report, and the honest way to deliver that is a page the
+   browser can save as a PDF on any device — including the phone a parent is
+   actually holding. A PDF library would add a large server dependency, produce
+   a file that ignores the reader's font size, and still need this stylesheet to
+   look like anything. So the print rules below ARE the download feature, and
+   they are maintained as such rather than tacked on.
+   ========================================================================= */
+
+.ui-report {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 28px 30px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  /* A document, not an app screen: measured for reading, not for filling the
+     window. Roughly 80 characters at this size. */
+  max-width: 760px;
+}
+
+.ui-report-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--border-strong);
+}
+
+.ui-report-org {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  color: var(--text-secondary);
+}
+
+.ui-report-name {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.ui-report-period {
+  font-size: 14px;
+  margin: 6px 0 0;
+  color: var(--text-secondary);
+}
+
+.ui-report-issued {
+  flex: 0 0 auto;
+  font-size: 13px;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.ui-report-superseded {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: var(--radius-control);
+  background: var(--warning-fill);
+  border: 1px solid var(--warning-border);
+  color: var(--text-primary);
+}
+
+.ui-report-stale {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ui-report-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-report-heading {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* Three figures, not one. There is deliberately no overall score anywhere in
+   this document — the counts and their denominator are what can be acted on. */
+.ui-report-figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.ui-report-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+}
+
+.ui-report-figure-value {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.ui-report-figure-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-report-summary {
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.ui-report-concepts,
+.ui-report-movements,
+.ui-report-suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-report-concepts li,
+.ui-report-movements li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 15px;
+  padding: 9px 12px;
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+}
+
+.ui-report-concepts[data-tone="attention"] li {
+  background: var(--warning-fill);
+}
+
+.ui-report-concept-figure {
+  flex: 0 0 auto;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Direction is never colour alone — the arrow is in the text, and these have
+   to survive a black-and-white printout, which is exactly how a term report
+   most often arrives. */
+.ui-report-movements li[data-direction="up"] {
+  background: var(--success-fill);
+}
+
+.ui-report-movements li[data-direction="down"] {
+  background: var(--warning-fill);
+}
+
+.ui-report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.ui-report-table th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 0 10px 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-report-table td {
+  padding: 10px 10px 10px 0;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.ui-report-subject {
+  display: block;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.ui-report-note,
+.ui-report-foot {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.ui-report-foot {
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.ui-report-suggestions li {
+  font-size: 15px;
+  line-height: 1.6;
+  padding-left: 18px;
+  position: relative;
+}
+
+.ui-report-suggestions li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--text-secondary);
+}
+
+/* The action bar above the sheet. Not part of the document, so it prints away. */
+.ui-report-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 640px) {
+  .ui-report {
+    padding: 20px 18px;
+  }
+
+  .ui-report-head {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ui-report-figures {
+    gap: 20px;
+  }
+
+  .ui-report-actions .ui-button {
+    width: 100%;
+  }
+}
+
+/* ============================================================== Printing --
+
+   This is the download. Everything that is chrome comes off, the sheet loses
+   its card framing because paper is already a card, and the colours are forced
+   to ink — a parent's printer is not going to reproduce a fill, and a row whose
+   only signal was a background colour would print as an empty row. */
+@media print {
+  @page {
+    margin: 16mm;
+  }
+
+  body {
+    background: #ffffff !important;
+  }
+
+  /* The app around the document: the teacher's sidebar, the student and parent
+     top bars, the action bar, and the page heading that repeats the name
+     already on the sheet.
+
+     These are the REAL class names, checked against the shells rather than
+     guessed — the first version invented `.ui-app-nav` and `.ui-topbar`,
+     neither of which exists, so a report printed with the whole navigation
+     rail down the left of the page. A print screenshot caught it, which no
+     test would have. */
+  .ui-sidebar,
+  .ui-topbar,
+  .ui-student-bar,
+  .ui-report-actions,
+  .ui-page-header {
+    display: none !important;
+  }
+
+  /* NOT a bare `footer` selector. The sheet's own closing caveat is a
+     <footer>, and hiding every footer took it off the printed page — which is
+     the one place it has to be, because the caveat travels with the document
+     and the document is what leaves the building. */
+
+  /* The shells lay the page out as a grid or a flex row with the navigation as
+     the first column. With that column gone the document still has to occupy
+     the page rather than the second track of a grid that no longer applies. */
+  .ui-shell,
+  .ui-student,
+  .ui-main {
+    display: block !important;
+  }
+
+  .ui-content,
+  .ui-student-main,
+  .ui-main {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    width: auto !important;
+  }
+
+  .ui-report {
+    max-width: none;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .ui-report-org,
+  .ui-report-period,
+  .ui-report-issued,
+  .ui-report-heading,
+  .ui-report-figure-label,
+  .ui-report-concept-figure,
+  .ui-report-subject,
+  .ui-report-note,
+  .ui-report-foot {
+    color: #333333;
+  }
+
+  /* Fills become rules. A concept that "needs attention" must still be
+     distinguishable on a black-and-white printout, which is how most of these
+     will actually be read. */
+  .ui-report-concepts li,
+  .ui-report-movements li {
+    background: transparent !important;
+    border: 1px solid #999999;
+    border-radius: 0;
+  }
+
+  .ui-report-concepts[data-tone="attention"] li,
+  .ui-report-movements li[data-direction="down"] {
+    border-left: 4px solid #000000;
+  }
+
+  .ui-report-movements li[data-direction="up"] {
+    border-left: 4px solid #999999;
+  }
+
+  .ui-report-superseded {
+    background: transparent !important;
+    border: 2px solid #000000;
+  }
+
+  /* A section split across a page break is a report somebody misreads. */
+  .ui-report-block,
+  .ui-report-table tr {
+    break-inside: avoid;
+  }
+
+  .ui-report-foot {
+    border-top: 1px solid #999999;
+  }
+}
+
+/* ================================================= Writing them, listing -- */
+
+.ui-report-generate {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  margin-bottom: 22px;
+}
+
+.ui-report-generate-fields {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 14px;
+}
+
+.ui-report-generate-error {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--warning-fill);
+  color: var(--text-primary);
+}
+
+.ui-report-run {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.ui-report-run-head {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Named, never a count. A teacher who gets 26 of 30 needs to know WHICH four,
+   before one of those four's parents asks. */
+.ui-report-run-skipped {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-report-run-skipped li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+}
+
+.ui-report-run-skipped span {
+  color: var(--text-secondary);
+}
+
+.ui-report-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-report-list a {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* A superseded sheet is still a true record of what was said on the day, so it
+   stays in the list and readable — recessive, never hidden. */
+.ui-report-list li[data-superseded] a {
+  background: var(--surface-sunken);
+}
+
+.ui-report-list-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  min-width: 0;
+}
+
+.ui-report-list-meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .ui-report-generate-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .ui-report-list a {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

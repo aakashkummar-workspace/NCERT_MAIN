@@ -1,0 +1,155 @@
+/*
+ * Voice input — src/ui/VoiceInput.tsx.
+ *
+ * Registered in src/app/layout.tsx so the slice styles itself without
+ * contending with another slice for a shared sheet. Every value reads a token
+ * from globals.css; a literal colour or radius here would mean a missing token.
+ *
+ * `.ui-voice*` is grepped against the other sheets — one class name, one
+ * component, across files. The button itself is a plain `.ui-button` rather
+ * than a bespoke control, which is what gives it the focus ring, the variants
+ * and — the part that matters here — the 44×44 touch minimum from the media
+ * query at the end of ui.css, for free and without restating it.
+ */
+
+.ui-voice {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.ui-voice-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* The hint wraps under the button on a narrow phone rather than squeezing
+     it: a row that wraps is fine, a control that shrinks below the touch
+     minimum is not. */
+  flex-wrap: wrap;
+}
+
+.ui-voice-hint {
+  font-size: 13px;
+  line-height: 1.5;
+  /* --text-secondary, not --text-tertiary: globals.css documents the tertiary
+     token as 14px-and-up only, and this line is 13. The same correction the
+     tutor's help panel had to make. */
+  color: var(--text-secondary);
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+/* ------------------------------------------------------------------ dot -- */
+
+/*
+ * The recording indicator, and it is never the only signal — the button's name
+ * changes to "Stop" and the status line says "Listening" in words. This is for
+ * the glance, and it survives a colourblind reader and a bad projector because
+ * it also changes SIZE and gains a ring.
+ */
+.ui-voice-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--neutral-400);
+  flex-shrink: 0;
+  transition:
+    background-color var(--motion-fast) var(--ease),
+    box-shadow var(--motion-fast) var(--ease);
+}
+
+.ui-voice-dot[data-listening] {
+  background: var(--danger);
+  box-shadow: 0 0 0 3px var(--danger-fill);
+  animation: ui-voice-pulse 1.4s var(--ease) infinite;
+}
+
+/* Inside a primary button the fill is dark, so the ring has to come off the
+   button rather than off the page. */
+.ui-button[data-variant="primary"] .ui-voice-dot[data-listening] {
+  background: var(--text-inverse);
+  box-shadow: 0 0 0 3px rgb(255 255 255 / 0.28);
+}
+
+@keyframes ui-voice-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* globals.css already flattens every animation under prefers-reduced-motion,
+   which leaves the dot static — so the static state has to be legible on its
+   own. It is: full opacity, the danger fill, and a ring the idle dot does not
+   have. Nothing here depends on the pulse to be readable. */
+
+/* --------------------------------------------------------------- status -- */
+
+/*
+ * Always present, even when empty. A live region that mounts at the moment it
+ * has something to say is announced unreliably; one whose text changes is not.
+ * Zero height when blank so it costs no layout on a page with a clock running.
+ */
+.ui-voice-status {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  min-height: 0;
+  color: var(--text-secondary);
+}
+
+/* Collapsed, NOT `display: none`. A hidden element is removed from the
+   accessibility tree, so toggling display and content together announces like a
+   freshly inserted live region — the unreliable thing this element exists to
+   avoid. Zero height with overflow hidden keeps it rendered and in the tree
+   while costing no layout on a page with a clock running. */
+.ui-voice-status:empty {
+  height: 0;
+  overflow: hidden;
+}
+
+.ui-voice-status[data-tone="listening"] {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.ui-voice-status[data-tone="error"] {
+  color: var(--danger);
+  background: var(--danger-fill);
+  border: 1px solid var(--danger-border);
+  border-radius: var(--radius-control);
+  padding: 8px 12px;
+  font-weight: 500;
+}
+
+/* -------------------------------------------------------------- interim -- */
+
+/*
+ * What the recogniser has heard but not yet committed. Deliberately quieter
+ * and italic: a student must be able to tell at a glance which words are in
+ * their answer and which are still being decided, because the ones here can
+ * still change under them.
+ */
+.ui-voice-interim {
+  margin: 0;
+  padding: 8px 12px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .ui-voice-hint {
+    /* Below the button on a phone, at full width, rather than a two-word column
+       beside it. */
+    flex-basis: 100%;
+  }
+}

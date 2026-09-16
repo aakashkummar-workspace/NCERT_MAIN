@@ -1,0 +1,552 @@
+{
+  "board": "CBSE",
+  "grade": 9,
+  "subject": "Mathematics",
+  "status": "DRAFT — for review by a Mathematics teacher before it is relied on",
+  "source": "Drafted against NCERT Class IX Mathematics 'Ganita Manjari' Part 1 (iemh1) and the 497 questions imported from C:/dev/sirah_project/NCERT/data. Many of those questions are older NCERT and exemplar items mapped into the new book's chapters — Heron's formula in Chapter 6, circle theorems in Chapter 5 — so the outcomes cover what the questions test as well as what the new chapter titles announce.",
+  "notes": [
+    "Prerequisites link several of these concepts to the Class 10 concepts they prepare for, so a Class 10 gap can name a Class 9 root cause."
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "topics": [
+        {
+          "title": "The coordinate plane",
+          "outcomes": [
+            {
+              "code": "M9-01-1",
+              "statement": "Identifies the abscissa and ordinate of a point, and the quadrant or axis on which a point lies from the signs of its coordinates.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "M9-01-2",
+              "statement": "Uses coordinates to plot points and to find a missing vertex of a figure whose sides are parallel to the axes.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Distance between points",
+          "outcomes": [
+            {
+              "code": "M9-01-3",
+              "statement": "Calculates the distance between two points on a horizontal or vertical line from their coordinates.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-01-4",
+              "statement": "Applies Pythagoras' theorem to calculate the distance of a point from the origin, or between two points, and compares distances.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Plotting points on the coordinate plane",
+          "outcomes": [
+            "M9-01-1",
+            "M9-01-2"
+          ]
+        },
+        {
+          "name": "Distance on the coordinate plane",
+          "outcomes": [
+            "M9-01-3",
+            "M9-01-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "topics": [
+        {
+          "title": "Linear polynomials and their values",
+          "outcomes": [
+            {
+              "code": "M9-02-1",
+              "statement": "Calculates the value of a linear or quadratic polynomial for a given value of the variable.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-02-2",
+              "statement": "Identifies a linear equation in two variables, writes its solutions, and describes the graph of equations such as y = 6.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Modelling with linear relations",
+          "outcomes": [
+            {
+              "code": "M9-02-3",
+              "statement": "Writes a linear rule y = ax + b for a growing pattern or a situation such as a bill with a fixed and a variable charge, and uses it to predict.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-02-4",
+              "statement": "Solves word problems about numbers, lengths, coins and costs by forming and solving a linear equation.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Linear polynomials and their values",
+          "outcomes": [
+            "M9-02-1",
+            "M9-02-2"
+          ]
+        },
+        {
+          "name": "Modelling situations with linear relations",
+          "outcomes": [
+            "M9-02-3",
+            "M9-02-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "topics": [
+        {
+          "title": "Rational and irrational numbers",
+          "outcomes": [
+            {
+              "code": "M9-03-1",
+              "statement": "Classifies a number as rational or irrational, and explains why every rational number has a terminating or recurring decimal expansion.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "M9-03-2",
+              "statement": "Converts between fractions and decimal expansions, including writing a recurring or terminating decimal as a fraction in lowest terms.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Surds and exponents",
+          "outcomes": [
+            {
+              "code": "M9-03-3",
+              "statement": "Uses factorisation to write a surd such as √75 in its simplest form, and rationalises a denominator such as 1/(√7 − 2).",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-03-4",
+              "statement": "Applies the laws of exponents to simplify expressions with integral and rational powers.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Rational and irrational numbers",
+          "outcomes": [
+            "M9-03-1",
+            "M9-03-2"
+          ]
+        },
+        {
+          "name": "Surds and laws of exponents",
+          "outcomes": [
+            "M9-03-3",
+            "M9-03-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "topics": [
+        {
+          "title": "Identities for squares and cubes",
+          "outcomes": [
+            {
+              "code": "M9-04-1",
+              "statement": "Applies the identities for (a ± b)² and (a + b)(a − b) to expand expressions and to calculate squares such as 96².",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-04-2",
+              "statement": "Applies the identities for (a ± b)³ to expand cubes.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-04-3",
+              "statement": "Uses an identity to find a² + b² or a³ + b³ from the values of a + b and ab.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Factorisation",
+          "outcomes": [
+            {
+              "code": "M9-04-4",
+              "statement": "Uses splitting the middle term and the identities to factorise quadratic expressions such as x² − 8x + 12.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Algebraic identities",
+          "outcomes": [
+            "M9-04-1",
+            "M9-04-2",
+            "M9-04-3"
+          ]
+        },
+        {
+          "name": "Factorising quadratic expressions",
+          "outcomes": [
+            "M9-04-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "topics": [
+        {
+          "title": "Chords of a circle",
+          "outcomes": [
+            {
+              "code": "M9-05-1",
+              "statement": "Applies the fact that the perpendicular from the centre bisects a chord to calculate a chord's length, its distance from the centre, or the radius.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-05-2",
+              "statement": "Relates equal chords to equal angles at the centre and to equal distances from the centre.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Angles in a circle",
+          "outcomes": [
+            {
+              "code": "M9-05-3",
+              "statement": "Applies the theorem that the angle an arc subtends at the centre is double the angle it subtends at the circle.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-05-4",
+              "statement": "Uses the facts that angles in the same segment are equal and the angle in a semicircle is a right angle.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-05-5",
+              "statement": "Applies the property that opposite angles of a cyclic quadrilateral sum to 180°.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Chords and their distance from the centre",
+          "outcomes": [
+            "M9-05-1",
+            "M9-05-2"
+          ]
+        },
+        {
+          "name": "Angles subtended by arcs and cyclic quadrilaterals",
+          "outcomes": [
+            "M9-05-3",
+            "M9-05-4",
+            "M9-05-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "topics": [
+        {
+          "title": "Perimeter and area of plane figures",
+          "outcomes": [
+            {
+              "code": "M9-06-1",
+              "statement": "Calculates the perimeter and area of squares, rectangles, parallelograms and triangles from their sides and heights.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-06-2",
+              "statement": "Calculates the circumference and area of a circle or a semicircle, and a radius from a given area or circumference.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-06-3",
+              "statement": "Explains why a median divides a triangle into two triangles of equal area, and finds areas of figures formed by joining mid-points.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Heron's formula",
+          "outcomes": [
+            {
+              "code": "M9-06-4",
+              "statement": "Applies Heron's formula to calculate the area of a triangle from its three sides, including equilateral and isosceles triangles.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Area and perimeter of plane figures",
+          "outcomes": [
+            "M9-06-1",
+            "M9-06-2",
+            "M9-06-3"
+          ]
+        },
+        {
+          "name": "Heron's formula",
+          "outcomes": [
+            "M9-06-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "topics": [
+        {
+          "title": "Sample spaces and probability",
+          "outcomes": [
+            {
+              "code": "M9-07-1",
+              "statement": "Lists the sample space of an experiment such as rolling a die or tossing coins, including by drawing a tree diagram.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "M9-07-2",
+              "statement": "Calculates the experimental probability of an event from recorded trials, and distinguishes it from theoretical probability.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-07-3",
+              "statement": "Calculates the theoretical probability of an event with equally likely outcomes, and the probability that an event does not happen.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Experimental and theoretical probability",
+          "outcomes": [
+            "M9-07-1",
+            "M9-07-2",
+            "M9-07-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "topics": [
+        {
+          "title": "Rules for sequences",
+          "outcomes": [
+            {
+              "code": "M9-08-1",
+              "statement": "Writes the explicit rule and the recursive rule for a sequence, and uses either to find a term.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-08-2",
+              "statement": "Identifies whether a sequence is arithmetic, geometric or neither, and recognises special sequences such as triangular numbers.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Arithmetic and geometric progressions",
+          "outcomes": [
+            {
+              "code": "M9-08-3",
+              "statement": "Uses the rule of an arithmetic progression to find a term, or to decide whether a number is a term.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-08-4",
+              "statement": "Calculates the common ratio and a given term of a geometric progression.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M9-08-5",
+              "statement": "Calculates the sum of the first n natural numbers, and finds n for a given sum.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Explicit and recursive rules for sequences",
+          "outcomes": [
+            "M9-08-1",
+            "M9-08-2"
+          ]
+        },
+        {
+          "name": "Arithmetic and geometric progressions",
+          "outcomes": [
+            "M9-08-3",
+            "M9-08-4",
+            "M9-08-5"
+          ]
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "concept": "Distance on the coordinate plane",
+      "requires": "Plotting points on the coordinate plane"
+    },
+    {
+      "concept": "Modelling situations with linear relations",
+      "requires": "Linear polynomials and their values"
+    },
+    {
+      "concept": "Surds and laws of exponents",
+      "requires": "Rational and irrational numbers"
+    },
+    {
+      "concept": "Factorising quadratic expressions",
+      "requires": "Algebraic identities"
+    },
+    {
+      "concept": "Arithmetic and geometric progressions",
+      "requires": "Explicit and recursive rules for sequences"
+    },
+    {
+      "concept": "Heron's formula",
+      "requires": "Area and perimeter of plane figures"
+    },
+    {
+      "concept": "Distance between two points",
+      "requires": "Distance on the coordinate plane"
+    },
+    {
+      "concept": "Irrational numbers and proof by contradiction",
+      "requires": "Rational and irrational numbers"
+    },
+    {
+      "concept": "Solving quadratic equations",
+      "requires": "Factorising quadratic expressions"
+    },
+    {
+      "concept": "Solving a pair of linear equations",
+      "requires": "Modelling situations with linear relations"
+    },
+    {
+      "concept": "nth term of an arithmetic progression",
+      "requires": "Arithmetic and geometric progressions"
+    },
+    {
+      "concept": "Probability of a simple event",
+      "requires": "Experimental and theoretical probability"
+    },
+    {
+      "concept": "Tangent perpendicular to the radius",
+      "requires": "Chords and their distance from the centre"
+    },
+    {
+      "concept": "Arc length and area of a sector",
+      "requires": "Area and perimeter of plane figures"
+    },
+    {
+      "concept": "Algebraic identities",
+      "requires": "Linear polynomials and their values",
+      "why": "Identities are statements about polynomials, so the vocabulary — term, degree, like terms — has to be in place.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    },
+    {
+      "concept": "Area and perimeter of plane figures",
+      "requires": "Chords and their distance from the centre",
+      "why": "Half this chapter measures circles, using the names the circles chapter has just defined.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+/* Class announcements (teacher class page) and saved questions (student).
+
+   Every class here is `ui-ann-*` or `ui-saved-*`, checked against every other
+   stylesheet before naming — `.ui-result-score` meaning two different things in
+   two files is how a teacher's class list rendered as cards. */
+
+/* ------------------------------------------------------- Announcements -- */
+
+.ui-ann-compose {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ui-ann-textarea {
+  width: 100%;
+  min-height: 84px;
+  resize: vertical;
+}
+
+.ui-ann-compose-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* The button carries the class name, which can be long. It may wrap its text
+   rather than push the row wider than a phone. */
+.ui-ann-compose-foot .ui-button {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+
+.ui-ann-count {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+/* Over the limit is said in colour AND in the figure itself, which the
+   teacher is already reading. */
+.ui-ann-count[data-over] {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.ui-ann-error {
+  margin: 10px 0 0;
+}
+
+.ui-ann-empty {
+  margin: 14px 0 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.ui-ann-list {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-ann-item {
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+  min-width: 0;
+}
+
+/* A text node with the teacher's own line breaks kept. Never HTML. */
+.ui-ann-body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.ui-ann-meta {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+/* Remove stays at the row's end when the date wraps above it, rather than
+   sitting under the text as if it belonged to the next announcement. */
+.ui-ann-meta .ui-button {
+  margin-left: auto;
+}
+
+.ui-ann-truncated {
+  margin-top: 10px;
+}
+
+/* ---------------------------------------------------------------- Saved -- */
+
+.ui-saved-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: flex-start;
+  gap: 4px;
+}
+
+.ui-saved-toggle .ui-button[data-saved] {
+  color: var(--accent);
+}
+
+.ui-saved-error {
+  font-size: 12.5px;
+  color: var(--danger);
+}
+
+.ui-saved-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ui-saved-item {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ui-saved-meta {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+.ui-saved-stem {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.5;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.ui-saved-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ui-saved-options li {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.ui-saved-key {
+  flex: 0 0 auto;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ui-saved-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ui-saved-date {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+.ui-saved-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ui-saved-truncated {
+  margin-top: 14px;
+}

@@ -1,0 +1,343 @@
+{
+  "board": "CBSE",
+  "grade": 10,
+  "subject": "Social Science – History",
+  "status": "DRAFT — for review by a Social Science teacher before it is relied on",
+  "source": "Drafted against NCERT Class X 'India and the Contemporary World – II' (jess3, 2025-26) and the 160 questions imported from C:/dev/sirah_project/NCERT/data.",
+  "notes": [],
+  "chapters": [
+    {
+      "number": 1,
+      "topics": [
+        {
+          "title": "The French Revolution and liberal nationalism",
+          "outcomes": [
+            {
+              "code": "H10-01-1",
+              "statement": "Explains how the French Revolution and the Napoleonic Code spread the idea of the nation across Europe.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "H10-01-2",
+              "statement": "Describes liberal nationalism and the revolutions of 1848, including what the middle classes demanded.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "The making of Germany and Italy",
+          "outcomes": [
+            {
+              "code": "H10-01-3",
+              "statement": "Describes the unification of Germany under Bismarck and of Italy under Mazzini, Cavour and Garibaldi.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "H10-01-4",
+              "statement": "Explains how romantic imagination, allegory and culture such as Greek independence helped create national feeling.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "H10-01-5",
+              "statement": "Explains why the Balkans became a source of nationalist tension after 1871, and how nationalism became linked with imperialism.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "The French Revolution and liberal nationalism",
+          "outcomes": [
+            "H10-01-1",
+            "H10-01-2"
+          ]
+        },
+        {
+          "name": "Unification of Germany and Italy",
+          "outcomes": [
+            "H10-01-3",
+            "H10-01-4",
+            "H10-01-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "topics": [
+        {
+          "title": "The First World War, Khilafat and Non-Cooperation",
+          "outcomes": [
+            {
+              "code": "H10-02-1",
+              "statement": "Explains why the Rowlatt Act and the Jallianwala Bagh massacre outraged Indians.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "H10-02-2",
+              "statement": "Describes how different social groups — towns, peasants in Awadh, tribals in the Gudem Hills, plantation workers — joined the Non-Cooperation Movement.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Civil Disobedience and a sense of collective belonging",
+          "outcomes": [
+            {
+              "code": "H10-02-3",
+              "statement": "Describes the Salt March and the Civil Disobedience Movement, including the Simon Commission and the Gandhi-Irwin Pact.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "H10-02-4",
+              "statement": "Explains the limits of the Civil Disobedience Movement for Dalits and Muslims.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "H10-02-5",
+              "statement": "Explains how history, folklore, images and symbols such as the flag built a sense of collective belonging.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "The Non-Cooperation Movement",
+          "outcomes": [
+            "H10-02-1",
+            "H10-02-2"
+          ]
+        },
+        {
+          "name": "The Civil Disobedience Movement",
+          "outcomes": [
+            "H10-02-3",
+            "H10-02-4",
+            "H10-02-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "topics": [
+        {
+          "title": "The pre-modern and nineteenth-century world economy",
+          "outcomes": [
+            {
+              "code": "H10-03-1",
+              "statement": "Describes the pre-modern links of trade, such as the silk routes and the exchange of food crops.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "H10-03-2",
+              "statement": "Explains how the world economy took shape in the nineteenth century, including the role of technology such as refrigerated ships and of colonialism.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "The inter-war economy and after",
+          "outcomes": [
+            {
+              "code": "H10-03-3",
+              "statement": "Explains the causes of the Great Depression and why agricultural regions were hit hardest.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "H10-03-4",
+              "statement": "Describes the post-war international economic order, including the Bretton Woods institutions.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Trade and the pre-modern world",
+          "outcomes": [
+            "H10-03-1",
+            "H10-03-2"
+          ]
+        },
+        {
+          "name": "The Great Depression and the post-war economy",
+          "outcomes": [
+            "H10-03-3",
+            "H10-03-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "topics": [
+        {
+          "title": "Industrialisation in Europe",
+          "outcomes": [
+            {
+              "code": "H10-04-1",
+              "statement": "Explains proto-industrialisation and the role of cities such as London as finishing centres.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "H10-04-2",
+              "statement": "Explains why hand labour persisted in Victorian Britain, and why women spinners attacked the Spinning Jenny.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Industrialisation in the colonies",
+          "outcomes": [
+            {
+              "code": "H10-04-3",
+              "statement": "Describes what happened to Indian weavers under colonial rule, including the effect of the American Civil War.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "H10-04-4",
+              "statement": "Explains the growth of Indian factories, early entrepreneurs and the effect of the First World War on Indian industry.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Proto-industrialisation and factories in Europe",
+          "outcomes": [
+            "H10-04-1",
+            "H10-04-2"
+          ]
+        },
+        {
+          "name": "Industrial growth in colonial India",
+          "outcomes": [
+            "H10-04-3",
+            "H10-04-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "topics": [
+        {
+          "title": "Print in China, Japan and Europe",
+          "outcomes": [
+            {
+              "code": "H10-05-1",
+              "statement": "Describes the early history of print in China and Japan, and Gutenberg's press in Europe.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "H10-05-2",
+              "statement": "Explains how print created a reading public and helped bring about the Reformation and the French Revolution, and why the Church censored books.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Print in India",
+          "outcomes": [
+            {
+              "code": "H10-05-3",
+              "statement": "Describes how print came to India and how it spread religious reform and debate.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "H10-05-4",
+              "statement": "Explains how print created new readers among women, workers and the lower castes, and how the colonial state censored it.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "The print revolution in the world",
+          "outcomes": [
+            "H10-05-1",
+            "H10-05-2"
+          ]
+        },
+        {
+          "name": "Print culture in India",
+          "outcomes": [
+            "H10-05-3",
+            "H10-05-4"
+          ]
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "concept": "Unification of Germany and Italy",
+      "requires": "The French Revolution and liberal nationalism"
+    },
+    {
+      "concept": "The Civil Disobedience Movement",
+      "requires": "The Non-Cooperation Movement"
+    },
+    {
+      "concept": "The Great Depression and the post-war economy",
+      "requires": "Trade and the pre-modern world"
+    },
+    {
+      "concept": "Industrial growth in colonial India",
+      "requires": "Proto-industrialisation and factories in Europe"
+    },
+    {
+      "concept": "Print culture in India",
+      "requires": "The print revolution in the world"
+    }
+  ]
+}

@@ -1,0 +1,1786 @@
+/* ==========================================================================
+   Results, marking, and review
+   ==========================================================================
+   Three surfaces that all answer "how did this go?" — the teacher's class
+   view, the marking board, and the student's own review. Tokens only, so both
+   themes come out of globals.css with no second palette to keep in step.
+   ---------------------------------------------------------------------- */
+
+/* -------------------------------------------------------- Student rows -- */
+
+.ui-result-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-result-rows li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: var(--tap-min);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.ui-result-rows li:last-child {
+  border-bottom: 0;
+}
+
+.ui-result-name {
+  flex: 1;
+  min-width: 0;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+/* Deliberately NOT .ui-result-score — student.css already owns that name for
+   the big score panel on a student's own result, and two components sharing a
+   class name across two stylesheets is a collision waiting for whichever one
+   loads second. */
+.ui-row-score {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 62px;
+  text-align: right;
+}
+
+.ui-released {
+  font-size: 13px;
+  color: var(--success);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------- Item analysis -- */
+
+.ui-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ui-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-item + .ui-item {
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+}
+
+.ui-item-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.ui-item-position {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.ui-item-stem {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.ui-item-facility {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* A bar, because a column of percentages is a table nobody scans. The one
+   colour change is reserved for the questions that need a lesson. */
+.ui-facility {
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--surface-sunken);
+  overflow: hidden;
+}
+
+.ui-facility-fill {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+}
+
+.ui-facility-fill[data-low] {
+  background: var(--warning);
+}
+
+.ui-item-note {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.ui-item-note[data-tone="warning"] {
+  color: var(--warning);
+}
+
+.ui-choices {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ui-choices li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunken);
+  font-size: 13px;
+}
+
+/* The key is marked by a border as well as a fill, so it survives a
+   colourblind reader and a printed page. */
+.ui-choices li[data-correct] {
+  background: var(--success-fill);
+  box-shadow: inset 0 0 0 1px var(--success-border);
+}
+
+.ui-choice-key {
+  font-weight: 700;
+  min-width: 18px;
+}
+
+.ui-choice-text {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.ui-choice-count {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ui-attention {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.ui-attention li {
+  display: flex;
+  gap: 8px;
+}
+
+/* ------------------------------------------------------ Marking board -- */
+
+.ui-marking {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ui-marking-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ui-marking-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ui-marking-tab[data-current] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--text-inverse);
+}
+
+.ui-marking-count {
+  min-width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  background: var(--warning-fill);
+  color: var(--warning);
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+/* The mark scheme stays put while the answers scroll under it — that is the
+   whole reason marking runs question by question. */
+.ui-scheme {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ui-scheme-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 600;
+}
+
+.ui-scheme-head .ui-link-button {
+  margin-left: auto;
+}
+
+.ui-scheme-stem {
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.ui-scheme-key {
+  background: var(--accent-wash);
+  border-radius: var(--radius-control);
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.ui-scheme-key p {
+  margin: 0;
+}
+
+.ui-scheme-key p + p {
+  margin-top: 6px;
+  color: var(--text-secondary);
+}
+
+.ui-scheme-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.ui-marking-progress {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.ui-answers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-answer {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Marked answers recede rather than disappear. A marker scrolling back to
+   check what they gave the third student must be able to find it.
+   --surface-raised is a hair off white and did not read as a state at all;
+   sunken does, and the awarded score carries the rest. */
+.ui-answer[data-marked] {
+  background: var(--surface-sunken);
+}
+
+.ui-answer-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-tertiary);
+}
+
+.ui-answer-awarded {
+  font-size: 14px;
+  color: var(--success);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.ui-answer-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* One tap per mark. A number field is a tap, a keyboard, a value and a submit
+   — four times the work, thirty times over. */
+.ui-marks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ui-mark {
+  min-width: var(--tap-min);
+  min-height: var(--tap-min);
+  padding: 0 10px;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+
+.ui-mark:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.ui-mark[data-chosen] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--text-inverse);
+}
+
+.ui-mark:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.ui-answer-feedback {
+  font-size: 14px;
+}
+
+/* Comments are optional and most answers get none, so the box is not there
+   until it is wanted. Three empty textareas on screen halve the number of
+   answers a marker can see at once, which is the whole economy of this page. */
+.ui-comment-toggle {
+  align-self: flex-start;
+}
+
+/* --------------------------------------------------------- The review -- */
+
+.ui-review-note {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin: 0 0 10px;
+}
+
+.ui-review {
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-breakdown li:last-child .ui-review {
+  border-bottom: 0;
+}
+
+.ui-review > summary {
+  cursor: pointer;
+  list-style: none;
+  border-bottom: 0;
+}
+
+.ui-review > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* A caret, because hover is not an affordance on a phone and a row that opens
+   has to look like a row that opens before it is touched. */
+.ui-review > summary::after {
+  /* A CSS escape rather than the literal "›": the literal was corrupted
+     into a stray control byte and the letter "a" by an encoding accident, and a
+     rotated "a" beside every score is what students saw. */
+  content: "\203A";
+  flex-shrink: 0;
+  margin-left: 4px;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--text-tertiary);
+  transform: rotate(90deg);
+  transition: transform var(--motion-fast) ease;
+}
+
+.ui-review[open] > summary::after {
+  transform: rotate(-90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-review > summary::after {
+    transition: none;
+  }
+}
+
+.ui-review > summary:hover {
+  background: var(--surface-sunken);
+}
+
+.ui-review[open] > summary {
+  background: var(--surface-sunken);
+}
+
+.ui-review-body {
+  padding: 4px 16px 18px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ui-review-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ui-review-options li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ui-review-options li[data-correct] {
+  border-color: var(--success-border);
+  background: var(--success-fill);
+}
+
+/* What they chose is marked by a ring, so an option that is both chosen and
+   correct still reads as both. */
+.ui-review-options li[data-chose] {
+  box-shadow: inset 0 0 0 2px var(--border-strong);
+}
+
+.ui-review-options li[data-chose][data-correct] {
+  box-shadow: inset 0 0 0 2px var(--success);
+}
+
+.ui-review-option-text {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.ui-review-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.ui-review-tag[data-tone="correct"] {
+  color: var(--success);
+}
+
+.ui-review-label {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  margin: 8px 0 0;
+}
+
+.ui-review-text {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* The teacher's own words, set apart from the machine's. */
+.ui-review-text[data-tone="feedback"] {
+  border-left: 3px solid var(--accent);
+  padding-left: 12px;
+  color: var(--text-primary);
+}
+
+@media (max-width: 640px) {
+  .ui-review-body {
+    padding: 4px 14px 16px 14px;
+  }
+  .ui-scheme {
+    position: static;
+  }
+  .ui-result-rows li {
+    flex-wrap: wrap;
+  }
+  .ui-result-name {
+    flex: 1 1 100%;
+  }
+  .ui-row-score {
+    margin-left: auto;
+  }
+}
+
+/* ============================================================== Mastery -- */
+
+.ui-student-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.ui-student-link:hover {
+  color: var(--text-primary);
+}
+
+.ui-mastery-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-mastery-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-mastery-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ui-mastery-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.ui-mastery-where {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin: 3px 0 0;
+}
+
+.ui-mastery {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ui-mastery-track {
+  flex: 1;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--surface-sunken);
+  overflow: hidden;
+}
+
+.ui-mastery-fill {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-full);
+}
+
+.ui-mastery-fill[data-band="SECURE"] {
+  background: var(--mastery-secure);
+}
+.ui-mastery-fill[data-band="DEVELOPING"] {
+  background: var(--mastery-developing);
+}
+.ui-mastery-fill[data-band="FRAGILE"] {
+  background: var(--mastery-fragile);
+}
+.ui-mastery-fill[data-band="CRITICAL"] {
+  background: var(--mastery-critical);
+}
+
+.ui-mastery-value {
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 40px;
+  text-align: right;
+}
+
+.ui-mastery-unknown {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+  font-style: italic;
+}
+
+.ui-mastery-chip {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.ui-mastery-chip[data-band="SECURE"] {
+  background: var(--success-fill);
+  border-color: var(--success-border);
+  color: var(--mastery-secure);
+}
+.ui-mastery-chip[data-band="DEVELOPING"] {
+  background: var(--accent-wash);
+  border-color: var(--primary-200);
+  color: var(--mastery-developing);
+}
+.ui-mastery-chip[data-band="FRAGILE"] {
+  background: var(--warning-fill);
+  border-color: var(--warning-border);
+  color: var(--mastery-fragile);
+}
+.ui-mastery-chip[data-band="CRITICAL"] {
+  background: var(--danger-fill);
+  border-color: var(--danger-border);
+  color: var(--mastery-critical);
+}
+.ui-mastery-chip[data-band="INSUFFICIENT"] {
+  background: var(--surface-sunken);
+  border-color: var(--border);
+  color: var(--text-secondary);
+}
+
+.ui-mastery-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+.ui-trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+}
+
+.ui-trend[data-trend="IMPROVING"] {
+  color: var(--success);
+}
+.ui-trend[data-trend="DECLINING"] {
+  color: var(--warning);
+}
+
+/* ============================================================ Analytics -- */
+
+.ui-analytics-classes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ui-analytics-classes a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  text-decoration: none;
+  color: inherit;
+}
+
+.ui-analytics-classes a:hover {
+  border-color: var(--border-strong);
+}
+
+.ui-analytics-class-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ui-analytics-class-meta,
+.ui-analytics-where {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-concept-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ui-concept-row + .ui-concept-row {
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+}
+
+.ui-concept-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.ui-concept-name {
+  font-size: 14px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.ui-concept-mean {
+  font-size: 13px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* One stacked bar per concept: the whole class, split by band. A 2px surface
+   gap between segments keeps adjacent bands apart at any width. */
+.ui-band-bar {
+  display: flex;
+  gap: 2px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: var(--surface-sunken);
+}
+
+.ui-band-segment {
+  display: block;
+  height: 100%;
+}
+
+.ui-band-segment[data-band="SECURE"],
+.ui-band-dot[data-band="SECURE"],
+.ui-heat-cell[data-band="SECURE"] {
+  background: var(--mastery-secure);
+}
+.ui-band-segment[data-band="DEVELOPING"],
+.ui-band-dot[data-band="DEVELOPING"],
+.ui-heat-cell[data-band="DEVELOPING"] {
+  background: var(--mastery-developing);
+}
+.ui-band-segment[data-band="FRAGILE"],
+.ui-band-dot[data-band="FRAGILE"],
+.ui-heat-cell[data-band="FRAGILE"] {
+  background: var(--mastery-fragile);
+}
+.ui-band-segment[data-band="CRITICAL"],
+.ui-band-dot[data-band="CRITICAL"],
+.ui-heat-cell[data-band="CRITICAL"] {
+  background: var(--mastery-critical);
+}
+.ui-band-segment[data-band="INSUFFICIENT"],
+.ui-band-dot[data-band="INSUFFICIENT"] {
+  background: var(--mastery-unknown);
+}
+
+.ui-concept-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.ui-concept-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ui-band-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.ui-legend {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 0 0 14px;
+  padding: 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.ui-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* The grid scrolls inside its own container. The page body never scrolls
+   sideways, however many concepts a subject grows to. */
+.ui-heatmap-scroll {
+  overflow-x: auto;
+}
+
+.ui-heatmap {
+  border-collapse: separate;
+  border-spacing: 4px;
+  font-size: 13px;
+}
+
+.ui-heatmap th {
+  font-weight: 600;
+  text-align: left;
+  vertical-align: bottom;
+  color: var(--text-secondary);
+  font-size: 12px;
+  padding: 0 6px 4px 0;
+}
+
+.ui-heatmap thead th {
+  max-width: 140px;
+  white-space: normal;
+}
+
+.ui-heatmap tbody th {
+  white-space: nowrap;
+  color: var(--text-primary);
+  font-size: 13px;
+}
+
+.ui-heatmap tbody th a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ui-heatmap tbody th a:hover {
+  text-decoration: underline;
+}
+
+.ui-heatmap td {
+  padding: 0;
+}
+
+/* The number is the redundant encoding — colour is never alone in carrying a
+   value here. White on every filled band; all four mastery colours are chosen
+   to hold contrast under white text. */
+.ui-heat-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #ffffff;
+  background: var(--surface-sunken);
+}
+
+.ui-heat-cell[data-band="INSUFFICIENT"] {
+  background: var(--surface-sunken);
+  color: var(--text-tertiary);
+}
+
+.ui-sitting-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-sitting-list li {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.ui-sitting-list li:last-child {
+  border-bottom: 0;
+}
+
+/* The title takes its own line. This list lives in a narrow side column, and
+   a paper title sharing a row with a date and a score wrapped mid-title with
+   the date stranded beside the first line. */
+.ui-sitting-title {
+  flex: 1 1 100%;
+  min-width: 0;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.ui-sitting-list li .ui-row-score {
+  margin-left: auto;
+}
+
+.ui-sitting-when {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+/* ========================================================== Generation -- */
+
+.ui-generate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+/* The chapter select carries a long label and deserves the whole row. */
+.ui-generate-grid > *:first-child {
+  grid-column: 1 / -1;
+}
+
+.ui-rejected {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ui-rejected li {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+  font-size: 13px;
+}
+
+.ui-rejected-stem {
+  overflow-wrap: anywhere;
+}
+
+.ui-rejected-reason {
+  color: var(--warning);
+  font-weight: 500;
+}
+
+/* =============================================================== Gaps -- */
+
+.ui-gaps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ui-gap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* A severity stripe, so the shape of the list reads before any of it does.
+     Colour is never alone: the severity badge says the same thing in words. */
+  border-left: 4px solid var(--border-strong);
+}
+
+.ui-gap[data-severity="HIGH"] {
+  border-left-color: var(--danger);
+}
+.ui-gap[data-severity="MEDIUM"] {
+  border-left-color: var(--warning);
+}
+.ui-gap[data-severity="LOW"] {
+  border-left-color: var(--border-strong);
+}
+
+.ui-gap-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ui-gap-title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.ui-gap-where {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin: 3px 0 0;
+}
+
+.ui-gap-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.ui-gap-finding {
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.ui-gap-cause {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--accent-wash);
+  color: var(--text-primary);
+}
+
+.ui-gap-cause[data-tone="danger"] {
+  background: var(--danger-fill);
+}
+
+.ui-gap-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.ui-gap-when {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* ====================================================== Platform console -- */
+
+.ui-cost-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-cost-rows li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.ui-cost-rows li:last-child {
+  border-bottom: 0;
+}
+
+.ui-cost-name {
+  flex: 1;
+  min-width: 0;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.ui-audit-filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.ui-audit {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.ui-audit th {
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  padding: 0 12px 8px 0;
+  white-space: nowrap;
+}
+
+.ui-audit td {
+  padding: 8px 12px 8px 0;
+  border-top: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.ui-audit code {
+  font-size: 12px;
+  background: var(--surface-sunken);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.ui-flag-list {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ============================================================= Insight -- */
+
+.ui-insight {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ui-insight-summary {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ui-insight-line {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+}
+
+.ui-insight-line[data-tone="next"] {
+  background: var(--accent-wash);
+}
+
+.ui-insight-line[data-tone="good"] {
+  background: var(--success-fill);
+}
+
+.ui-insight-label {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-tertiary);
+}
+
+/* ====================================================== Students index -- */
+
+.ui-student-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-student-rows a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 12px;
+  align-items: center;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  text-decoration: none;
+  color: inherit;
+}
+
+.ui-student-rows a:hover {
+  border-color: var(--border-strong);
+}
+
+.ui-student-row-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ui-student-row-name {
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.ui-student-row-meta {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.ui-student-row-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.ui-student-row-weakest {
+  grid-column: 1 / -1;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ========================================================= Entitlements -- */
+
+.ui-entitlements {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-entitlements li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.ui-entitlements li:last-child {
+  border-bottom: 0;
+}
+
+/* A spent allowance is the one row on this card worth noticing. */
+.ui-entitlements li[data-spent] .ui-entitlement-value {
+  color: var(--warning);
+  font-weight: 700;
+}
+
+.ui-entitlement-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.ui-entitlement-value {
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .ui-student-rows a {
+    grid-template-columns: 1fr;
+  }
+  .ui-student-row-tags {
+    justify-content: flex-start;
+  }
+}
+
+/* ======================================================== Interventions -- */
+
+/* The gap-to-improvement loop, sitting inside the gap card. Sunken rather
+   than raised: it is part of the card, not a second card on top of it. */
+.ui-intervention {
+  background: var(--surface-sunken);
+  border-radius: var(--radius-control);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-intervention[data-empty="true"] {
+  background: transparent;
+  padding: 0;
+}
+
+.ui-intervention[data-outcome="met"] {
+  background: var(--success-fill);
+}
+
+/* Missed is amber, never red. The gap's own severity stripe is the red on this
+   card; a failed intervention is information, not an alarm. */
+.ui-intervention[data-outcome="missed"] {
+  background: var(--warning-fill);
+}
+
+.ui-intervention-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ui-intervention-kind {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.ui-intervention-line {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.ui-intervention-delta {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.ui-intervention-delta[data-direction="up"] {
+  color: var(--success);
+}
+
+/* No movement is stated in words beside it, so this never carries the meaning
+   alone. */
+.ui-intervention-delta[data-direction="flat"] {
+  color: var(--text-secondary);
+}
+
+.ui-intervention-verdict {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.ui-intervention-note {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.ui-intervention-error {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: var(--radius-control);
+  background: var(--danger-fill);
+  color: var(--text-primary);
+}
+
+.ui-intervention-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--surface-sunken);
+  border-radius: var(--radius-control);
+  padding: 12px 14px;
+}
+
+.ui-intervention-window {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.ui-intervention-window label,
+.ui-intervention-note-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.ui-intervention-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ui-intervention-hint {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--text-tertiary);
+  flex: 1 1 220px;
+}
+
+/* ========================================================== AI Copilot -- */
+
+.ui-copilot-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 24px;
+  align-items: start;
+}
+
+.ui-copilot {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.ui-copilot-empty {
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.ui-copilot-empty > p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 16px;
+  color: var(--text-secondary);
+}
+
+.ui-copilot-suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-copilot-suggestions button {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.45;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.ui-copilot-suggestions button:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent-wash);
+}
+
+.ui-copilot-turns {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ui-copilot-question {
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: var(--radius-card);
+  background: var(--surface-sunken);
+  font-weight: 500;
+}
+
+/* The AI surface treatment, so an answer is never mistaken for a figure the
+   product computed. */
+.ui-copilot-answer {
+  padding: 16px 18px;
+  border: 1px solid var(--ai-border);
+  border-radius: var(--radius-card);
+  background: var(--ai-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-copilot-text {
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.ui-copilot-citations {
+  font-size: 13px;
+}
+
+.ui-copilot-citations summary {
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.ui-copilot-citations ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.ui-copilot-actions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-copilot-actions li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  font-size: 14px;
+}
+
+.ui-copilot-actions span {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.ui-copilot-working {
+  font-size: 14px;
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: var(--radius-card);
+  background: var(--ai-surface);
+  color: var(--text-secondary);
+}
+
+.ui-copilot-error {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--danger-fill);
+  color: var(--text-primary);
+}
+
+.ui-copilot-compose {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.ui-copilot-compose .ui-textarea {
+  flex: 1;
+  min-width: 0;
+}
+
+.ui-copilot-history ul {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ui-copilot-history a {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 9px 11px;
+  border-radius: var(--radius-control);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.ui-copilot-history a:hover,
+.ui-copilot-history a[data-current] {
+  background: var(--surface-sunken);
+  color: var(--text-primary);
+}
+
+.ui-copilot-history-meta {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 960px) {
+  .ui-copilot-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  /* The thread comes first on a phone; the history is a footnote there. */
+  .ui-copilot-history {
+    order: 2;
+  }
+}
+
+/* ============================================================== Rubrics -- */
+
+.ui-criteria {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+}
+
+.ui-criterion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ui-criterion-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1 1 180px;
+}
+
+.ui-criterion-label strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* The descriptor is what makes it a mark scheme rather than a list of labels:
+   it is the standard the twentieth answer is judged against. */
+.ui-criterion-descriptor {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.ui-criteria-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.ui-criteria-total {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* --------------------------------- What the student sees afterwards -- */
+
+/* `ui-criteria-list`, not `ui-breakdown`: student.css already owns
+   `.ui-breakdown` for the question-by-question list this sits inside, and
+   `.ui-breakdown li { display: grid }` reached the answer options nested in it,
+   splitting every option into two columns. One class name, one component. */
+.ui-criteria-list {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ui-criteria-list li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  padding: 9px 12px;
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+  font-size: 14px;
+}
+
+.ui-criteria-label {
+  font-weight: 500;
+}
+
+.ui-criteria-marks {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* The per-criterion note, where the useful part of the feedback usually is. */
+.ui-criteria-note {
+  grid-column: 1 / -1;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}

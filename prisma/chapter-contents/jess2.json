@@ -1,0 +1,719 @@
+{
+  "book": "jess2",
+  "bookTitle": "Understanding Economic Development",
+  "class": 10,
+  "chapters": [
+    {
+      "bookChapter": 1,
+      "title": "Development",
+      "pages": 16,
+      "author": null,
+      "form": null,
+      "overview": "The chapter shows that different people have different, sometimes conflicting, developmental goals, and that people seek income as well as non-material goals such as freedom, security and respect. It explains how countries and states are compared using average (per capita) income and why income alone is inadequate, using the example of Haryana, Kerala and Bihar and the Human Development Report. It ends with the sustainability of development, using groundwater and crude oil as examples.",
+      "sections": [
+        {
+          "number": null,
+          "title": "What Development Promises — Different People, Different Goals",
+          "points": [
+            "Table 1.1 lists developmental goals of different categories of persons such as landless rural labourers, prosperous farmers from Punjab, urban unemployed youth and an adivasi from Narmada valley.",
+            "Different persons can have different developmental goals, and what may be development for one may not be development for the other; it may even be destructive for the other.",
+            "Example: industrialists may want more dams for electricity while tribals displaced by them may prefer small check dams or tanks."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Income and Other Goals",
+          "points": [
+            "People desire regular work, better wages and decent prices for their crops — in other words, more income.",
+            "People also seek equal treatment, freedom, security and respect of others; these may sometimes be more important than more income.",
+            "Quality of life depends on non-material things too; what cannot be measured is not unimportant.",
+            "If women are engaged in paid work their dignity increases, and a safe and secure environment may allow more women to take up jobs or run a business."
+          ]
+        },
+        {
+          "number": null,
+          "title": "National Development",
+          "points": [
+            "Different persons could have different as well as conflicting notions of a country's development.",
+            "National development means thinking about what is a fair and just path for all and whether an idea benefits many people or only a small group."
+          ]
+        },
+        {
+          "number": null,
+          "title": "How to Compare Different Countries or States?",
+          "points": [
+            "For comparing countries, income is considered one of the most important attributes; countries with higher income are more developed.",
+            "Total income is not useful for comparison because populations differ, so average income (per capita income) — total income divided by total population — is used.",
+            "World Development Reports of the World Bank use this criterion: per capita income of US$ 66,500 per annum and above in 2024 is high income; about US$ 2,300 or less is low income; India, at about US$ 11,000 in 2024, is a low middle income country.",
+            "Averages hide disparities: Table 1.2 shows two countries with identical average income, but country A has a more equitable distribution than country B."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Income and Other Criteria",
+          "points": [
+            "Table 1.3: per capita income for 2023–24 was Rs 3,25,759 in Haryana, Rs 2,81,001 in Kerala and Rs 60,337 in Bihar.",
+            "Table 1.4 compares infant mortality rate, literacy rate and net attendance ratio: Kerala's IMR was 6 while Haryana's was 28, even though Haryana has higher per capita income.",
+            "About one-third of children aged 15–17 years in Bihar are not attending school in secondary classes."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Public Facilities",
+          "points": [
+            "Money in your pocket cannot buy all the goods and services needed to live well, such as a pollution-free environment or unadulterated medicines.",
+            "For many important things the best and cheapest way is to provide goods and services collectively, such as schools and health facilities.",
+            "Kerala has a low IMR because of adequate provision of basic health and educational facilities; where the Public Distribution System (PDS) functions well, health and nutrition are likely to be better."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Human Development Report",
+          "points": [
+            "Health and education indicators have come to be widely used along with income as a measure of development.",
+            "The Human Development Report published by UNDP compares countries based on educational levels, health status and per capita income.",
+            "Table 1.6 (2023): Sri Lanka ranks 89, India 130, Bangladesh 130, Nepal 145, Myanmar 150 and Pakistan 168 in HDI; Sri Lanka is ahead of India in every respect, and Nepal and Bangladesh have better life expectancy than India despite lower per capita income.",
+            "By prefixing 'Human' to development, the report makes clear that what matters is people, their health and well being."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Sustainability of Development",
+          "points": [
+            "Since the second half of the twentieth century scientists have warned that present types and levels of development are not sustainable.",
+            "Example 1: Groundwater in India — about 300 districts reported a water level decline of over 4 metres in 20 years, and nearly one-third of the country is overusing groundwater.",
+            "Renewable resources like groundwater can be overused if use exceeds replenishment; non-renewable resources like crude oil have a fixed stock and will get exhausted.",
+            "Example 2: Exhaustion of Natural Resources — Table 1.7 shows world crude oil reserves would last about 50 years at the present rate of extraction.",
+            "Consequences of environmental degradation do not respect national or state boundaries; sustainability is a new area of knowledge involving scientists, economists and philosophers."
+          ]
+        }
+      ],
+      "keyTerms": [
+        { "term": "Average income / Per capita income", "meaning": "The total income of the country divided by its total population." },
+        { "term": "Infant Mortality Rate (IMR)", "meaning": "The number of children that die before the age of one year as a proportion of 1000 live children born in that particular year." },
+        { "term": "Literacy Rate", "meaning": "The proportion of literate population in the 7-and-above age group." },
+        { "term": "Net Attendance Ratio", "meaning": "The total number of children of age group 15-17 years attending school as a percentage of total number of children in the same age group." },
+        { "term": "Life Expectancy at birth", "meaning": "Average expected length of life of a person at the time of birth." },
+        { "term": "Human Development Index (HDI)", "meaning": "Index used in the Human Development Report of UNDP to rank countries on educational levels, health status and per capita income." },
+        { "term": "Body Mass Index (BMI)", "meaning": "Weight in kg divided by the square of the height in metres, used to find out whether a person is properly nourished." },
+        { "term": "Renewable resources", "meaning": "Resources replenished by nature, as in the case of crops, plants and groundwater, which may still be overused." },
+        { "term": "Non-renewable resources", "meaning": "Resources which will get exhausted after a few years of use; a fixed stock on earth which cannot be replenished." }
+      ],
+      "keyResults": [
+        { "label": "World Bank classification, 2024", "statement": "Per capita income of US$ 66,500 per annum and above: high income countries; about US$ 2,300 or less: low-income countries; India about US$ 11,000: low middle income." },
+        { "label": "Table 1.3 Per capita income 2023–24", "statement": "Haryana Rs 3,25,759; Kerala Rs 2,81,001; Bihar Rs 60,337." },
+        { "label": "Infant Mortality Rate (2020)", "statement": "Kerala 6, Haryana 28, Bihar 27 per 1,000 live births." },
+        { "label": "Table 1.6 HDI ranks (out of 193)", "statement": "Sri Lanka 89, India 130, Bangladesh 130, Nepal 145, Myanmar 150, Pakistan 168." },
+        { "label": "Table 1.7 Crude oil reserves (2017)", "statement": "Middle East 836 thousand million barrels (70 years); USA 69 (10.5 years); World 1732 (47 years)." },
+        { "label": "Quotation", "statement": "\"We have not inherited the world from our forefathers — we have borrowed it from our children.\"" }
+      ],
+      "activities": ["Activity 1", "Activity 2", "Activity 3"],
+      "exercises": [
+        { "name": "Exercises", "questions": 13 },
+        { "name": "Additional Project / Activity", "questions": null }
+      ],
+      "bookSummary": [],
+      "notes": "The chapter opens with Notes for the Teacher. Some cells of Table 1.4 (Kerala and Bihar literacy and attendance figures) were jumbled in extraction and are not reproduced."
+    },
+    {
+      "bookChapter": 2,
+      "title": "Sectors of the Indian Economy",
+      "pages": 20,
+      "author": null,
+      "form": null,
+      "overview": "The chapter classifies economic activities into primary, secondary and tertiary sectors and explains how GDP is measured by counting final goods and services. It traces the historical shift between sectors, the rising share of the tertiary sector in India's production while employment remains in the primary sector, and the problem of underemployment with ways to create employment such as MGNREGA. It also classifies activities as organised and unorganised, and public and private.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Sectors of Economic Activities",
+          "points": [
+            "Economic activities are grouped (classified) using an important criterion; these groups are called sectors.",
+            "Primary sector: producing a good by exploiting natural resources (agriculture, dairy, fishing, forestry); also called agriculture and related sector.",
+            "Secondary sector: natural products changed into other forms through manufacturing; also called industrial sector.",
+            "Tertiary sector: activities such as transport, storage, communication, banking and trade that aid production and generate services; also called service sector, including teachers, doctors and IT-based services.",
+            "The three sectors are highly interdependent, e.g. a sugar mill depends on farmers selling sugarcane."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Comparing the Three Sectors",
+          "points": [
+            "Values of goods and services, not their numbers, are added to find total production.",
+            "Only final goods and services are counted; intermediate goods (like wheat and flour used to make biscuits) are already included in the value of final goods.",
+            "The sum of production in the three sectors is the Gross Domestic Product (GDP), the value of all final goods and services produced within a country during a particular year.",
+            "The Indian Government now reports sectoral contribution to Gross Value Added (GVA), which adjusts for taxes and subsidies."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Historical Change in Sectors",
+              "points": [
+                "At initial stages of development the primary sector was the most important.",
+                "With new methods of manufacturing, the secondary sector gradually became most important in production and employment.",
+                "In the past 100 years developed countries shifted further to the tertiary sector, which is now most important in production and employment."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Primary, Secondary and Tertiary Sectors in India",
+          "points": [
+            "Graph 1 compares GVA by the three sectors in 1977–78 and 2017–18."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Rising Importance of the Tertiary Sector in Production",
+              "points": [
+                "Between 1977–78 and 2017–18 production increased most in the tertiary sector, which became the largest producing sector replacing the primary sector.",
+                "Reasons: basic services such as hospitals, schools, police and banks must be provided; development of agriculture and industry raises demand for transport, trade and storage; rising incomes create demand for eating out, tourism, private schools; new IT-based services.",
+                "Not all of the service sector is growing equally: many workers such as small shopkeepers and repair persons barely earn a living."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Where are most of the people employed?",
+              "points": [
+                "A similar shift has not taken place in employment; the primary sector continues to be the largest employer.",
+                "Industrial output rose more than nine times but employment about three times; service production rose 14 times but employment around five times.",
+                "More than half the workers are in the primary sector producing only about one sixth of GVA, so agricultural workers are underemployed.",
+                "Laxmi's family on a two-hectare plot illustrates disguised unemployment: everyone works but no one is fully employed; underemployment also exists among urban casual workers."
+              ]
+            },
+            {
+              "number": null,
+              "title": "How to Create More Employment?",
+              "points": [
+                "Irrigation (a well, dams and canals), better rural roads, transport and storage, and cheap agricultural credit can create employment.",
+                "Industries and services in semi-rural areas such as dal mills, cold storage, honey collection centres and food processing can employ many.",
+                "The Planning Commission (now NITI Aayog) estimated nearly 20 lakh jobs in education and additional employment for more than 35 lakh people in tourism.",
+                "The Right to Work was implemented in about 625 districts through MGNREGA 2005, guaranteeing 100 days of employment in a year or unemployment allowance; in 2025 it was replaced by Viksit Bharat-G RAM G 2025."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Division of Sectors as Organised and Unorganised",
+          "points": [
+            "The organised sector covers enterprises with regular terms of employment, registered by the government and following laws such as the Factories Act, Minimum Wages Act, Payment of Gratuity Act and Shops and Establishments Act.",
+            "Organised sector workers enjoy job security, fixed hours, overtime, paid leave, provident fund, gratuity, medical benefits and pensions (e.g. Kanta).",
+            "The unorganised sector has small scattered units largely outside government control, low-paid irregular jobs and no job security (e.g. Kamal, a daily wage labourer)."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "How to Protect Workers in the Unorganised Sector?",
+              "points": [
+                "Organised sector employment has expanded slowly, and since the 1990s many organised sector workers have lost jobs.",
+                "In rural areas the unorganised sector comprises landless labourers, small and marginal farmers, sharecroppers and artisans; nearly 80 per cent of rural households are small and marginal farmers needing support.",
+                "In urban areas it comprises small-scale industry workers, casual workers, street vendors, head load workers, garment makers and rag pickers.",
+                "Most workers from scheduled castes, tribes and backward communities are in this sector and also face social discrimination; protection is needed for economic and social development."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Sectors in Terms of Ownership: Public and Private Sectors",
+          "points": [
+            "In the public sector the government owns most assets and provides services (e.g. Railways, post office); in the private sector ownership is with individuals or companies (e.g. TISCO, RIL) guided by profit.",
+            "Government undertakes heavy spending on roads, bridges, railways, harbours, electricity and irrigation that the private sector will not provide at reasonable cost.",
+            "Government supports activities such as supplying electricity at affordable rates and buying wheat and rice at a 'fair price' to sell cheaply through ration shops.",
+            "Health, education, safe drinking water, housing and nutrition are primary responsibilities of government; IMR of Odisha (36) and Madhya Pradesh (43) is higher than some of the poorest regions of the world."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Summing Up",
+          "points": [
+            "Economic activities can be classified as primary, secondary or tertiary; the tertiary sector contributes most to GDP but employment remains in the primary sector.",
+            "Most people work in the unorganised sector and need protection.",
+            "Public activities must focus on certain important areas."
+          ]
+        }
+      ],
+      "keyTerms": [
+        { "term": "Primary sector", "meaning": "Activities in which a good is produced by exploiting natural resources; also called agriculture and related sector." },
+        { "term": "Secondary sector", "meaning": "Activities in which natural products are changed into other forms through manufacturing; also called industrial sector." },
+        { "term": "Tertiary sector", "meaning": "Activities that help the development of primary and secondary sectors by generating services; also called service sector." },
+        { "term": "Final goods", "meaning": "Goods that reach the consumers." },
+        { "term": "Intermediate goods", "meaning": "Goods used up in producing final goods and services." },
+        { "term": "Gross Domestic Product (GDP)", "meaning": "The value of all final goods and services produced within a country during a particular year." },
+        { "term": "Gross Value Added (GVA)", "meaning": "Measures the contribution of the three sectors of an economy after adjusting for taxes and subsidies." },
+        { "term": "Underemployment / disguised unemployment", "meaning": "A situation where people are apparently working but all of them are made to work less than their potential; the underemployment is hidden." },
+        { "term": "Organised sector", "meaning": "Enterprises or places of work where terms of employment are regular, registered by the government and following its rules and regulations." },
+        { "term": "Unorganised sector", "meaning": "Small and scattered units largely outside the control of the government, with low-paid, irregular and insecure jobs." },
+        { "term": "Public sector", "meaning": "Sector in which the government owns most of the assets and provides all the services." },
+        { "term": "Private sector", "meaning": "Sector in which ownership of assets and delivery of services is in the hands of private individuals or companies." }
+      ],
+      "keyResults": [
+        { "label": "MGNREGA 2005", "statement": "All those able to, and in need of, work in rural areas were guaranteed 100 days of employment in a year; if not provided, unemployment allowance is given. Replaced in 2025 by Viksit Bharat-G RAM G 2025." },
+        { "label": "Growth 1977–78 to 2017–18", "statement": "Industrial output rose more than nine times while employment rose around three times; service production rose 14 times while employment rose around five times." },
+        { "label": "Population", "statement": "About 60 per cent of India's population is aged 5-29 years, of whom only about 51 per cent attend educational institutions." },
+        { "label": "Table 2.3 Workers (late 1990s, millions)", "statement": "Secondary: 41 organised, 74 unorganised, total 115; Tertiary: 40 organised, 88 unorganised, total 128; Primary total 232 with 1 organised." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 24 }
+      ],
+      "bookSummary": [
+        "In this chapter we have looked at ways of classifying economic activities into some meaningful groups, such as whether an activity relates to the primary, secondary or tertiary sectors.",
+        "Data for India shows that while goods and services produced in the tertiary sector contribute the most to GDP, employment remains in the primary sector.",
+        "We have also seen what can be done for increasing employment opportunities in the country.",
+        "Another classification is whether people work in organised or unorganised sectors; most people work in the unorganised sectors and protection is necessary for them.",
+        "We also looked at the difference between private and public activities, and why it is important for public activities to focus on certain areas."
+      ],
+      "notes": "The chapter opens with Notes for the Teacher. Graphs 1–3 are images whose values did not extract; some cells of Table 2.3 are missing in the text."
+    },
+    {
+      "bookChapter": 3,
+      "title": "Money and Credit",
+      "pages": 16,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explains money as a medium of exchange that removes the need for double coincidence of wants, and modern forms of money — currency and demand deposits — linked to banks. It describes how banks lend, how credit can help or push a borrower into a debt trap, the terms of credit, and formal and informal sources of credit in India. It ends with Self Help Groups and the Grameen Bank of Bangladesh as ways of reaching the poor.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Money as a Medium of Exchange",
+          "points": [
+            "A person holding money can easily exchange it for any commodity or service.",
+            "In a barter system goods are directly exchanged and double coincidence of wants is essential: what one person desires to sell is exactly what the other wishes to buy.",
+            "Money eliminates the need for double coincidence of wants by acting as an intermediate in the exchange process, so it is called a medium of exchange."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Modern Forms of Money",
+          "points": [
+            "Earlier, grains and cattle and then gold, silver and copper coins were used as money."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Currency",
+              "points": [
+                "Modern currency (paper notes and coins) is not made of precious metal and has no use of its own.",
+                "It is accepted because it is authorised by the government; the Reserve Bank of India issues currency notes on behalf of the central government.",
+                "Rupee is a legal medium of payment that cannot be refused in India."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Deposits with Banks",
+              "points": [
+                "People deposit extra cash in bank accounts, which keeps it safe and earns interest; since these can be withdrawn on demand they are called demand deposits.",
+                "A cheque is a paper instructing the bank to pay a specific amount from the person's account to the person in whose name it is issued (e.g. M. Salim paying the leather supplier).",
+                "Demand deposits are accepted widely as a means of payment and constitute money in the modern economy along with currency."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Loan Activities of Banks",
+          "points": [
+            "Banks in India hold about 5 per cent of their deposits as cash to pay depositors.",
+            "Banks use the major portion of deposits to extend loans, mediating between depositors with surplus funds and borrowers.",
+            "Banks charge a higher interest rate on loans than they pay on deposits; the difference is their main source of income."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Two Different Credit Situations",
+          "points": [
+            "Credit (loan) is an agreement in which the lender supplies the borrower with money, goods or services in return for the promise of future payment.",
+            "Festival Season: Salim obtains credit from the leather supplier and a large trader to meet working capital needs, completes the order and makes a profit — credit plays a positive role.",
+            "Swapna's Problem: a small farmer's groundnut crop fails after a moneylender's loan; she cannot repay and has to sell part of her land — a debt-trap.",
+            "Whether credit is useful depends on the risks in the situation and whether there is support in case of loss; in rural areas the main demand for credit is for crop production."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Terms of Credit",
+          "points": [
+            "Every loan agreement specifies an interest rate to be paid along with the principal.",
+            "Lenders may demand collateral, an asset the borrower owns (land, building, vehicle, livestock, bank deposits) used as a guarantee until the loan is repaid.",
+            "Interest rate, collateral and documentation requirement, and mode of repayment together comprise the terms of credit (e.g. Megha's house loan of Rs 5 lakhs at 12 per cent for 10 years)."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Variety of Credit Arrangements",
+          "points": [
+            "Example of a Village (Sonpur): Shyamal borrowed from a moneylender at five per cent per month and now from a trader at three per cent per month who makes him sell the crop to him.",
+            "Arun, with seven acres, got a bank loan at 8.5 per cent per annum repayable in three years.",
+            "Rama, a landless agricultural labourer, borrows from her employer at 5 per cent per month and repays by working for him.",
+            "Loans from Cooperatives: members pool resources; Krishak Cooperative with 2300 farmer members uses deposits as collateral to get a bank loan and lends to members."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Formal Sector Credit in India",
+          "points": [
+            "Formal sector loans come from banks and cooperatives; informal lenders include moneylenders, traders, employers, relatives and friends.",
+            "The Reserve Bank of India supervises formal lenders, monitoring cash balances and ensuring loans reach small cultivators and small borrowers; no organisation supervises informal lenders.",
+            "Informal lenders charge much higher interest, which can lead to increasing debt and debt trap; cheap and affordable credit is crucial for the country's development.",
+            "Graph 1 (2019): commercial banks 51%, moneylenders 23%, cooperative banks and society 10%, relatives and friends 7% of rural credit."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Formal and Informal Credit: Who gets what?",
+              "points": [
+                "54 per cent of loans of poor urban households are from informal sources, but only 17 per cent for rich urban households (83 per cent formal).",
+                "The formal sector meets only about half of rural credit needs; banks and cooperatives must lend more, and formal credit must be distributed more equally so the poor benefit."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Self-Help Groups for the Poor",
+          "points": [
+            "Absence of collateral prevents the poor from getting bank loans, while moneylenders lend without collateral but charge high rates and harass borrowers.",
+            "A typical SHG has 15-20 members, usually women from one neighbourhood, who save Rs 25 to Rs 100 or more and take small loans from the group.",
+            "After a year or two of regular saving the group becomes eligible for a bank loan in its name to create self-employment; the group decides loans and is responsible for repayment.",
+            "SHGs overcome lack of collateral, make women financially self-reliant and provide a platform on social issues such as health, nutrition and domestic violence."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Grameen Bank of Bangladesh",
+              "points": [
+                "Started in the 1970s as a small project, it had over 9 million members in about 81,600 villages in 2018; almost all borrowers are poor women.",
+                "Its founder Professor Muhammad Yunus received the 2006 Nobel Prize for Peace."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Summing Up",
+          "points": [
+            "Modern forms of money are linked with the banking system, between depositors and borrowers.",
+            "Credit can have a positive impact or make the borrower worse off; it comes from formal or informal sources with very different terms.",
+            "Total formal sector credit must increase and the poor should get a much greater share of formal loans."
+          ]
+        }
+      ],
+      "keyTerms": [
+        { "term": "Double coincidence of wants", "meaning": "What a person desires to sell is exactly what the other wishes to buy; an essential feature of barter." },
+        { "term": "Barter system", "meaning": "A system where goods are directly exchanged without the use of money." },
+        { "term": "Medium of exchange", "meaning": "Money, because it acts as an intermediate in the exchange process." },
+        { "term": "Demand deposits", "meaning": "Deposits in bank accounts that can be withdrawn on demand." },
+        { "term": "Cheque", "meaning": "A paper instructing the bank to pay a specific amount from the person's account to the person in whose name the cheque has been issued." },
+        { "term": "Credit (loan)", "meaning": "An agreement in which the lender supplies the borrower with money, goods or services in return for the promise of future payment." },
+        { "term": "Debt-trap", "meaning": "A situation in which credit pushes the borrower into a position from which recovery is very painful." },
+        { "term": "Collateral", "meaning": "An asset that the borrower owns and uses as a guarantee to a lender until the loan is repaid." },
+        { "term": "Terms of credit", "meaning": "Interest rate, collateral and documentation requirement, and the mode of repayment together." },
+        { "term": "Self Help Groups (SHGs)", "meaning": "Small groups of rural poor, particularly women, who pool their savings and take loans from the group and later from banks." },
+        { "term": "Demonetisation", "meaning": "Declaring currency notes invalid and replacing them, as with Rs 500 and Rs 1,000 notes in November 2016 (Notes for the Teacher)." }
+      ],
+      "keyResults": [
+        { "label": "Reserve Bank of India", "statement": "Issues currency notes on behalf of the central government and supervises the functioning of formal sources of loans." },
+        { "label": "Bank cash holding", "statement": "Banks in India hold about 5 per cent of their deposits as cash." },
+        { "label": "Graph 1: Sources of credit in rural India, 2019", "statement": "Commercial banks 51%, moneylenders 23%, cooperative banks and society 10%, relatives and friends 7%, other formal agencies 5%, other informal agencies 3%, landlords 1%." },
+        { "label": "Grameen Bank, 2018", "statement": "Over 9 million members in about 81,600 villages across Bangladesh." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 13 },
+        { "name": "Additional Project / Activity", "questions": null }
+      ],
+      "bookSummary": [
+        "In this chapter we have looked at the modern forms of money and how they are linked with the banking system.",
+        "On one side are the depositors who keep their money in the banks and on the other side are the borrowers who take loans from these banks.",
+        "Credit can have a positive impact, or in certain situations make the borrower worse off.",
+        "Credit is available from formal or informal sources, and terms of credit vary substantially between them.",
+        "At present richer households receive credit from formal sources whereas the poor depend on informal sources; total formal credit must increase and the poor should get a much greater share of formal loans."
+      ],
+      "notes": "The chapter opens with Notes for the Teacher. Graph 2 percentages for the middle household groups did not extract."
+    },
+    {
+      "bookChapter": 4,
+      "title": "Globalisation and the Indian Economy",
+      "pages": 20,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explains how multinational corporations (MNCs) spread and interlink production across countries and how foreign trade integrates markets. It defines globalisation as rapid integration of countries through foreign trade and foreign investment, and describes the factors enabling it: technology, liberalisation and the WTO. It then assesses the uneven impact of globalisation in India on consumers, companies, small producers and workers, and the struggle for fair globalisation.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Production across Countries",
+          "points": [
+            "Until the middle of the twentieth century production was largely organised within countries and trade was the main channel connecting countries.",
+            "A MNC is a company that owns or controls production in more than one nation, setting up offices and factories where labour and resources are cheap.",
+            "Example: an MNC designs products in the US, makes components in China, assembles in Mexico and Eastern Europe, and runs customer care from call centres in India — possibly 50-60 per cent cost-savings."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Interlinking Production across Countries",
+          "points": [
+            "MNCs set up production close to markets, where skilled and unskilled labour is cheap and other factors are assured, and look for favourable government policies.",
+            "Money spent to buy assets is investment; investment by MNCs is foreign investment.",
+            "MNCs set up joint production with local companies, providing money and latest technology.",
+            "The most common route is buying up local companies (e.g. Cargill Foods bought Parakh Foods); MNCs also place orders with small producers in garments, footwear and sports items.",
+            "Ford Motors came to India in 1995, spent Rs 1700 crore on a plant near Chennai with Mahindra and Mahindra."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Foreign Trade and Integration of Markets",
+          "points": [
+            "Foreign trade lets producers reach beyond domestic markets and gives buyers a wider choice of goods.",
+            "Chinese Toys in India: cheaper, newly designed Chinese toys replaced Indian toys in 70 to 80 per cent of shops, benefiting buyers and Chinese makers but hurting Indian toy makers.",
+            "With trade, choice rises, prices of similar goods in the two markets tend to become equal, and producers compete closely — integration of markets."
+          ]
+        },
+        {
+          "number": null,
+          "title": "What is Globalisation?",
+          "points": [
+            "More MNCs are seeking cheap locations; foreign investment and foreign trade have both risen, and much trade is controlled by MNCs.",
+            "Globalisation is the process of rapid integration or interconnection between countries through greater foreign investment and trade.",
+            "Goods, services, investments and technology move between countries; movement of people has not increased much due to restrictions."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Factors that have Enabled Globalisation",
+          "points": [
+            "Rapid improvement in technology, liberalisation of trade and investment policies, and pressures from international organisations."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Technology",
+              "points": [
+                "Improvements in transportation, such as containers and falling air transport costs, allowed faster delivery at lower cost.",
+                "Information and communication technology — telecommunications, computers and Internet — spread production of services across countries (e.g. a London magazine designed and printed in Delhi)."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Liberalisation of foreign trade and foreign investment policy",
+              "points": [
+                "Tax on imports is an example of a trade barrier used to regulate foreign trade.",
+                "After Independence India put barriers on foreign trade and investment to protect domestic producers in the 1950s and 1960s, allowing only essential imports.",
+                "Starting around 1991 barriers were removed to a large extent so that Indian producers could compete globally.",
+                "Removing barriers or restrictions set by the government is liberalisation."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "World Trade Organisation",
+          "points": [
+            "WTO, started at the initiative of developed countries, aims to liberalise international trade and establishes rules for it; about 160 countries are members.",
+            "Developed countries have unfairly retained trade barriers while developing countries were forced to remove them.",
+            "In the US agriculture is 1% of GDP and 0.5% of employment, yet US farmers receive massive government sums and sell farm products abroad at low prices, hurting farmers elsewhere."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Impact of Globalisation in India",
+          "points": [
+            "Well-off urban consumers have gained greater choice, improved quality and lower prices.",
+            "MNCs invested in cell phones, automobiles, electronics, soft drinks, fast food and banking, creating jobs and helping local suppliers.",
+            "Top Indian companies benefited from competition, and some emerged as multinationals: Tata Motors, Infosys, Ranbaxy, Asian Paints, Sundaram Fasteners; IT services such as call centres grew.",
+            "Governments set up Special Economic Zones (SEZs) with world class facilities and a five-year tax exemption, and allowed flexibility in labour laws to attract foreign investment."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Small producers: Compete or perish",
+              "points": [
+                "Small manufacturers of batteries, capacitors, plastics, toys, tyres, dairy products and vegetable oil have been hit hard; small and medium industries employ 11 crore workers, next only to agriculture.",
+                "Ravi's capacitor unit in Hosur shrank after import restrictions were removed as per the WTO agreement in 2001."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Competition and Uncertain Employment",
+              "points": [
+                "Employers now employ workers 'flexibly', so jobs are no longer secure.",
+                "Garment exporters cut labour costs for MNC orders by hiring temporary workers with long hours and low wages (e.g. Sushila).",
+                "Conditions in the organised sector have come to resemble the unorganised sector."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "The Struggle for a Fair Globalisation",
+          "points": [
+            "People with education, skill and wealth made the best use of globalisation; many have not shared its benefits.",
+            "Fair globalisation would create opportunities for all and ensure benefits are shared better.",
+            "Government can implement labour laws, support small producers, use trade and investment barriers if necessary, and negotiate at the WTO for 'fairer rules' with other developing countries; people's organisations also influence WTO decisions."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Summing Up",
+          "points": [
+            "Globalisation is the process of rapid integration of countries through greater foreign trade and foreign investment, with MNCs playing a major role.",
+            "Technology, particularly IT, liberalisation and WTO pressure have facilitated it.",
+            "Well-off consumers and skilled producers have benefited while many small producers and workers have suffered; fair globalisation would share benefits better."
+          ]
+        }
+      ],
+      "keyTerms": [
+        { "term": "Multinational corporation (MNC)", "meaning": "A company that owns or controls production in more than one nation." },
+        { "term": "Investment", "meaning": "The money that is spent to buy assets such as land, building, machines and other equipment." },
+        { "term": "Foreign investment", "meaning": "Investment made by MNCs." },
+        { "term": "Integration of markets", "meaning": "Connecting of markets in different countries through foreign trade." },
+        { "term": "Globalisation", "meaning": "The process of rapid integration or interconnection between countries." },
+        { "term": "Trade barrier", "meaning": "A restriction such as tax on imports or quotas that governments use to regulate foreign trade." },
+        { "term": "Quotas", "meaning": "A limit placed on the number of goods that can be imported." },
+        { "term": "Liberalisation", "meaning": "Removing barriers or restrictions set by the government." },
+        { "term": "World Trade Organisation (WTO)", "meaning": "An organisation whose aim is to liberalise international trade, establishing rules regarding international trade." },
+        { "term": "Special Economic Zones (SEZs)", "meaning": "Industrial zones with world class facilities set up to attract foreign companies to invest in India." },
+        { "term": "Fair globalisation", "meaning": "Globalisation that would create opportunities for all and ensure that its benefits are shared better." }
+      ],
+      "keyResults": [
+        { "label": "Date: 1991", "statement": "Far-reaching changes in policy; barriers on foreign trade and foreign investment removed to a large extent." },
+        { "label": "Date: 1995", "statement": "Ford Motors came to India and spent Rs 1700 crore to set up a plant near Chennai." },
+        { "label": "Date: 2001", "statement": "Government removed restrictions on imports of capacitors as per its agreement at WTO." },
+        { "label": "WTO membership", "statement": "About 160 countries of the world are currently members of the WTO." },
+        { "label": "SEZ tax holiday", "statement": "Companies setting up units in SEZs do not pay taxes for an initial period of five years." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 13 },
+        { "name": "Additional Activity / Project", "questions": 2 }
+      ],
+      "bookSummary": [
+        "Globalisation is the process of rapid integration of countries, happening through greater foreign trade and foreign investment.",
+        "MNCs are playing a major role, looking for locations around the world that are cheap for their production, so production is organised in complex ways.",
+        "Technology, particularly IT, has played a big role in organising production across countries, and liberalisation of trade and investment has facilitated globalisation by removing barriers.",
+        "At the international level, WTO has put pressure on developing countries to liberalise trade and investment.",
+        "While globalisation has benefited well-off consumers and producers with skill, education and wealth, many small producers and workers have suffered; fair globalisation would create opportunities for all and share benefits better."
+      ],
+      "notes": "The chapter opens with Notes for the Teacher."
+    },
+    {
+      "bookChapter": 5,
+      "title": "Consumer Rights",
+      "pages": 19,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explains how consumers are exploited in the marketplace and why rules and regulations are needed to protect them. It traces the consumer movement in India and internationally, and describes consumer rights — safety, information, choice and redressal — with case studies and the three-tier Consumer Disputes Redressal Commissions under COPRA. It ends with how to become well-informed consumers and the progress and problems of the consumer movement.",
+      "sections": [
+        {
+          "number": null,
+          "title": "The Consumer in the Marketplace",
+          "points": [
+            "Rules and regulations are required to protect consumers, who are often in a weak position; sellers try to shift all responsibility onto the buyer.",
+            "Exploitation happens through unfair trade practices such as weighing less, adding unmentioned charges and selling adulterated or defective goods.",
+            "Markets are unfair when producers are few and powerful and consumers scattered; large companies may pass false information, e.g. powder milk claimed to be better than mother's milk, and cigarette companies denying cancer risk."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Consumer Movement",
+          "points": [
+            "The consumer movement arose out of dissatisfaction of consumers with unfair practices and no legal system to protect them; responsibility for quality has shifted to sellers.",
+            "In India it originated as a 'social force' in an organised form in the 1960s due to food shortages, hoarding, black marketing and adulteration; till the 1970s organisations wrote articles and held exhibitions.",
+            "In 1985 the United Nations adopted the UN Guidelines for Consumer Protection; Consumers International is an umbrella body of over 200 member organisations from over 100 countries.",
+            "In 1986 the Indian government enacted the Consumer Protection Act 1986 (COPRA), amended in 2019."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Consumer Rights",
+          "points": [
+            "Consumers have rights to safety, information, choice, redressal, representation and consumer education."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Safety is everyone's right",
+              "points": [
+                "Consumers have the right to be protected against marketing of goods and delivery of services hazardous to life and property.",
+                "Reji's Suffering: Reji Mathew was crippled by improper anaesthesia in a Kerala clinic; the National Consumer Disputes Redressal Commission held the hospital responsible for medical negligence.",
+                "Bad quality products exist because supervision of safety rules is weak and the consumer movement is not strong enough."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Information about goods and services",
+              "points": [
+                "Consumers have the right to be informed about particulars such as ingredients, price, batch number, dates of manufacture and expiry, and manufacturer's address.",
+                "Consumers can complain if goods are sold above the MRP (maximum retail price) and can bargain below it.",
+                "The RTI (Right to Information) Act, October 2005, ensures citizens information about functions of government departments (e.g. Amritha obtained her job result)."
+              ]
+            },
+            {
+              "number": null,
+              "title": "When choice is denied",
+              "points": [
+                "Any consumer who receives a service has the right to choose whether to continue to receive it.",
+                "A Refund: Abirami was denied a refund by a coaching institute; the District Commission ordered Rs 28,000 refunded and the State Commission fined the institute Rs 25,000 and barred advance collection of fees for the entire course.",
+                "Tied sales, such as insisting on buying a stove with a gas connection, deny choice."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Where should consumers go to get justice?",
+              "points": [
+                "Consumers have the right to seek redressal against unfair trade practices and exploitation and to get compensation depending on the degree of damage.",
+                "A consumer can file a complaint with or without lawyers, physically or through internet, individually or as a class action suit (e.g. Prakash's money-order case).",
+                "Consumer forums or consumer protection councils guide and represent consumers; Residents' Welfare Associations take up cases for members.",
+                "Under COPRA a three-tier quasi-judicial machinery: District Commission (claims up to Rs 1 crore), State Commission (Rs 1 crore to Rs 10 crore) and National Commission (exceeding Rs 10 crore)."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Learning to Become Well-informed Consumers",
+          "points": [
+            "Conscious consumers can distinguish and make informed choices; COPRA led to separate Departments of Consumer Affairs in central and state governments.",
+            "ISI and Agmark: logos such as ISI, Agmark, Hallmark or +F assure quality; certification is mandatory for products affecting health and safety or of mass consumption like LPG cylinders, food colours, cement and packaged drinking water."
+          ]
+        },
+        {
+          "number": null,
+          "title": "Taking the Consumer Movement Forward",
+          "points": [
+            "India observes 24 December as National Consumers' Day, the day Parliament enacted the Consumer Protection Act in 1986.",
+            "There are more than 2000 consumer groups, of which only about 50-60 are well organised and recognised.",
+            "The redressal process is becoming cumbersome, expensive and time consuming; cash memos are often not issued.",
+            "COPRA was amended in 2019 to include buying through internet, hold service providers and manufacturers responsible, and encourage mediation; consumer movements are effective only with consumers' active involvement."
+          ]
+        }
+      ],
+      "keyTerms": [
+        { "term": "Consumer movement", "meaning": "An organised 'social force' to protect and promote the interests of consumers against unethical and unfair trade practices." },
+        { "term": "COPRA", "meaning": "Consumer Protection Act 1986, enacted by the Indian government and amended in 2019." },
+        { "term": "MRP", "meaning": "Maximum retail price printed on a packet, above which a good cannot be sold." },
+        { "term": "RTI Act", "meaning": "Right to Information Act, enacted in October 2005, ensuring citizens all the information about the functions of government departments." },
+        { "term": "Class action suit", "meaning": "A complaint filed by consumers as a group." },
+        { "term": "Consumer protection councils / consumer forums", "meaning": "Voluntary organisations that guide consumers on how to file cases and represent them in the Consumer Disputes Redressal Commissions." },
+        { "term": "Mediator", "meaning": "A neutral intermediary outside the Consumer Disputes Redressal Commission who helps settle disputes." },
+        { "term": "ISI, Agmark, Hallmark", "meaning": "Logos and certification that help consumers get assured of quality when producers follow certain quality standards." }
+      ],
+      "keyResults": [
+        { "label": "Date: 1960s", "statement": "Consumer movement in an organised form began in India." },
+        { "label": "Date: 1985", "statement": "United Nations adopted the UN Guidelines for Consumer Protection." },
+        { "label": "Date: 1986", "statement": "Consumer Protection Act 1986 (COPRA) enacted; 24 December is National Consumers' Day." },
+        { "label": "Date: October 2005", "statement": "Right to Information (RTI) Act enacted." },
+        { "label": "Date: 2019", "statement": "COPRA amended to include buying through internet and encourage mediation." },
+        { "label": "Consumer Disputes Redressal Commissions", "statement": "District: claims up to Rs 1 crore; State: between Rs 1 crore and Rs 10 crore; National: exceeding Rs 10 crore." },
+        { "label": "Consumer rights under COPRA", "statement": "Right to choice, information, redressal, representation, safety and consumer education." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 13 },
+        { "name": "Additional Projects / Activities", "questions": 6 }
+      ],
+      "bookSummary": [],
+      "notes": "The chapter opens with Notes for the Teacher; pages 17–19 are the book's appendices (BMI tables for adolescent girls and boys) and Suggested Readings, not part of the chapter content. The illustrated steps of Prakash's case were extracted out of order."
+    }
+  ]
+}

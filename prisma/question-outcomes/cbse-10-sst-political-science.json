@@ -1,0 +1,12 @@
+{
+  "draft": "prisma/curriculum-drafts/cbse-10-sst-political-science.json",
+  "format": "One digit per question, in source-id order within the chapter. The digit is the outcome's position in the chapter (1-based, topics in order); 0 means the question tests no outcome in the draft and is left untagged on purpose.",
+  "chapters": {
+    "1": "1111222341 1111111122 2243333444",
+    "2": "1222134344 1111222233 3333334444",
+    "3": "1112123344 1111111233 3333344444",
+    "4": "1112233344 1111113222 2213333344",
+    "5": "2211113211 1111111112 2223333333"
+  },
+  "book": "jess4"
+}

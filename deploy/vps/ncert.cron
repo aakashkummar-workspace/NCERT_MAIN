@@ -1,0 +1,19 @@
+# /etc/cron.d/ncert — Sahayak's scheduled jobs (DEPLOYMENT.md §9).
+#
+# Each call runs INSIDE the container, so the app publishes no port and the
+# secret never appears here: `$CRON_SECRET` is expanded by the container's own
+# shell from its env file. Output goes to /var/log/ncert-cron.log.
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Every minute: deliver queued webhooks.
+* * * * *    root docker exec ncert-app sh -c 'curl -fsS -m 55 -X POST -H "Authorization: Bearer $CRON_SECRET" http://127.0.0.1:3000/api/cron/deliver-webhooks/' >> /var/log/ncert-cron.log 2>&1
+
+# Every 5 minutes: auto-submit abandoned papers; copy the library into new schools.
+*/5 * * * *  root docker exec ncert-app sh -c 'curl -fsS -m 240 -X POST -H "Authorization: Bearer $CRON_SECRET" http://127.0.0.1:3000/api/cron/sweep-attempts/' >> /var/log/ncert-cron.log 2>&1
+2-59/5 * * * * root docker exec ncert-app sh -c 'curl -fsS -m 240 -X POST -H "Authorization: Bearer $CRON_SECRET" http://127.0.0.1:3000/api/cron/share-library/' >> /var/log/ncert-cron.log 2>&1
+
+# Nightly (IST, the container's TZ is not the host's — these are host times, UTC):
+# 20:30 UTC = 02:00 IST refresh decayed mastery; 21:00 UTC = 02:30 IST type mistakes.
+30 20 * * *  root docker exec ncert-app sh -c 'curl -fsS -m 1800 -X POST -H "Authorization: Bearer $CRON_SECRET" http://127.0.0.1:3000/api/cron/refresh-mastery/' >> /var/log/ncert-cron.log 2>&1
+0 21 * * *   root docker exec ncert-app sh -c 'curl -fsS -m 1800 -X POST -H "Authorization: Bearer $CRON_SECRET" http://127.0.0.1:3000/api/cron/classify-mistakes/' >> /var/log/ncert-cron.log 2>&1

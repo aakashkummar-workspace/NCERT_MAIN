@@ -1,0 +1,22 @@
+# Never bake secrets or local state into an image. The server's
+# /opt/ncert/.env is passed at run time instead.
+.env
+.env.*
+!.env.example
+
+node_modules
+.next
+.git
+.vscode
+.claude
+coverage
+playwright-report
+test-results
+tests
+e2e
+graphify-out
+*.log
+.seed-*.mts
+.*.mts
+Dockerfile
+.dockerignore

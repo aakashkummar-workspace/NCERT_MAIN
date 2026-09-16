@@ -1,0 +1,2625 @@
+// Sahayak — schema through slice 2: identity, tenancy, audit, classes, roster.
+//
+// Questions, assessments and attempts arrive in later slices. Only the head of
+// the curriculum tree is here — a class needs a grade and a subject to exist at
+// all; chapters, topics and learning outcomes land in slice 3.
+//
+// Row-level security policies are NOT here — Prisma cannot express them. They
+// live in prisma/rls.sql and are applied by `npm run db:rls`. A policy that is
+// not in version control is a policy that does not exist.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+
+  // The same database reached without the connection pooler.
+  //
+  // Every managed Postgres this deploys on sits behind PgBouncer in transaction
+  // mode. That is right for the app and wrong for migrations, which need
+  // session state: advisory locks to serialise concurrent deploys, and
+  // CREATE TYPE / ALTER TABLE inside one long-lived session. Run
+  // `prisma migrate deploy` through the pooler and it fails partway with a lock
+  // or prepared-statement error that names neither cause.
+  //
+  // Locally the two are the same string. See DEPLOYMENT.md section 3.
+  directUrl = env("DIRECT_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Enums
+// ---------------------------------------------------------------------------
+
+enum OrganizationType {
+  SOLO_TEACHER
+  TUITION_CENTRE
+  COACHING_INSTITUTE
+  SCHOOL
+}
+
+enum OrganizationStatus {
+  TRIAL
+  ACTIVE
+  SUSPENDED
+  CANCELLED
+}
+
+enum UserStatus {
+  PENDING
+  ACTIVE
+  DISABLED
+}
+
+/// Role is a property of a MEMBERSHIP, never of a user. A person may teach at
+/// one centre and parent a child at another.
+enum MemberRole {
+  OWNER
+  ADMIN
+  TEACHER
+  STUDENT
+  PARENT
+}
+
+enum MembershipStatus {
+  INVITED
+  ACTIVE
+  SUSPENDED
+}
+
+// ---------------------------------------------------------------------------
+// Tenancy
+// ---------------------------------------------------------------------------
+
+model Organization {
+  id           String             @id @default(uuid()) @db.Uuid
+  name         String
+  slug         String             @unique
+  type         OrganizationType   @default(SOLO_TEACHER)
+  status       OrganizationStatus @default(TRIAL)
+  academicYear String             @default("2026-27") @map("academic_year")
+
+  /// Which board's syllabus this organization teaches.
+  ///
+  /// NOT NULL and with no application-level default. Every curriculum read is
+  /// scoped by it, and a read that can fall back to a default is a read that
+  /// eventually shows an ICSE school the CBSE syllabus — silently, and looking
+  /// exactly like a correct answer. The migration backfills every existing row
+  /// with CBSE, which is where those customers already were.
+  ///
+  /// It points across the plane boundary on purpose: boards are global
+  /// curriculum rows, and this is the tenant's one declared edge into the
+  /// shared tree.
+  boardId      String             @map("board_id") @db.Uuid
+
+  settings     Json               @default("{}")
+
+  /// The shared question library (core/library). Requested is stamped by the
+  /// column default when an organization is created, so signup does nothing
+  /// extra on a path that must not fail; the scheduled sweep copies the library
+  /// in afterwards and stamps synced. Organizations that existed before the
+  /// library have no request until one is made for them.
+  libraryRequestedAt      DateTime? @default(now()) @map("library_requested_at")
+  librarySyncedAt         DateTime? @map("library_synced_at")
+  /// Whether the NCERT Exemplar questions were included in the last sync —
+  /// so switching them on later re-queues every organization that lacks them.
+  libraryIncludesExemplar Boolean   @default(false) @map("library_includes_exemplar")
+
+  createdAt    DateTime           @default(now()) @map("created_at")
+  updatedAt    DateTime           @default(now()) @updatedAt @map("updated_at")
+  deletedAt    DateTime?          @map("deleted_at")
+
+  board       Board        @relation(fields: [boardId], references: [id])
+  memberships Membership[]
+  sessions    Session[]
+  invitations Invitation[]
+  auditLogs   AuditLog[]
+  classes     Class[]
+  questions   Question[]
+  assessments Assessment[]
+  branding    OrganizationBranding?
+  logos       OrganizationLogo[]
+
+  @@index([status])
+  @@index([boardId])
+  @@map("organizations")
+}
+
+/// How a school presents itself: its name and logo on every screen, its colours,
+/// and the official details a printed report carries.
+///
+/// One row per organization, and no row is an ordinary state — it means Sahayak's
+/// own look. The row is also kept when a plan lapses: what RENDERS is gated by
+/// the `white_label` entitlement at read time (core/branding), so a school that
+/// renews gets its branding back rather than having to type it all in again.
+model OrganizationBranding {
+  organizationId String @id @map("organization_id") @db.Uuid
+
+  displayName String? @map("display_name")
+  /// The letters in the square mark when there is no logo.
+  shortName   String? @map("short_name")
+  tagline     String?
+
+  /// The current logo. Logos are never deleted — a stamped report points at the
+  /// one it was written with — so replacing one moves this pointer.
+  logoId String? @map("logo_id") @db.Uuid
+
+  /// A validated `Theme` (core/branding/theme.ts). Re-validated on every render,
+  /// because this column is also reachable from a migration and from psql.
+  theme Json @default("{}")
+
+  address           String?
+  affiliationNumber String? @map("affiliation_number")
+  schoolCode        String? @map("school_code")
+  principalName     String? @map("principal_name")
+  contactPhone      String? @map("contact_phone")
+  contactEmail      String? @map("contact_email")
+  website           String?
+
+  /// Printed ABOVE the sheet's own caveat, never instead of it.
+  reportFooter String?  @map("report_footer")
+  /// "Class teacher", "Principal" — the signature lines on a printed report.
+  signatories  String[] @default([])
+
+  hidePoweredBy Boolean @default(false) @map("hide_powered_by")
+
+  updatedById String?  @map("updated_by_id") @db.Uuid
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @default(now()) @updatedAt @map("updated_at")
+
+  organization Organization      @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  logo         OrganizationLogo? @relation(fields: [logoId], references: [id])
+
+  @@map("organization_branding")
+}
+
+/// An uploaded logo. Immutable: a new upload is a new row.
+///
+/// Stored in the database rather than an object store because there is no object
+/// store, the files are capped at 512 KB, and a school has one or two in its
+/// life. The day there is a `files` table (DATABASE_SCHEMA.md) these move there.
+model OrganizationLogo {
+  id             String   @id @default(uuid()) @db.Uuid
+  organizationId String   @map("organization_id") @db.Uuid
+  /// Decided from the file's own first bytes, never from what the browser said.
+  mime           String
+  bytes          Bytes
+  byteSize       Int      @map("byte_size")
+  sha256         String
+  uploadedById   String   @map("uploaded_by_id") @db.Uuid
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  organization Organization           @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  brandings    OrganizationBranding[]
+
+  @@index([organizationId, createdAt])
+  @@map("organization_logos")
+}
+
+/// Identity is global; membership is per-organization. There is deliberately no
+/// separate `students` table — a student who later becomes a tutor must not
+/// become two people.
+model User {
+  id            String     @id @default(uuid()) @db.Uuid
+  email         String?    @unique
+  phone         String?    @unique
+  passwordHash  String?    @map("password_hash")
+  fullName      String     @map("full_name")
+  avatarUrl     String?    @map("avatar_url")
+  locale        String     @default("en-IN")
+  status        UserStatus @default(ACTIVE)
+  /// Cross-tenant reach over the curriculum plane and tenant administration.
+  /// Not a MemberRole: those describe a person INSIDE one organization, and
+  /// this is the opposite of that. Every action taken under it is audited.
+  platformAdmin Boolean    @default(false) @map("platform_admin")
+  lastLoginAt   DateTime?  @map("last_login_at")
+  createdAt     DateTime   @default(now()) @map("created_at")
+  updatedAt     DateTime   @default(now()) @updatedAt @map("updated_at")
+  deletedAt     DateTime?  @map("deleted_at")
+
+  memberships Membership[]
+  sessions    Session[]
+
+  @@map("users")
+}
+
+model Membership {
+  id             String           @id @default(uuid()) @db.Uuid
+  organizationId String           @map("organization_id") @db.Uuid
+  userId         String           @map("user_id") @db.Uuid
+  role           MemberRole
+  status         MembershipStatus @default(ACTIVE)
+  invitedById    String?          @map("invited_by_id") @db.Uuid
+  joinedAt       DateTime?        @map("joined_at")
+  leftAt         DateTime?        @map("left_at")
+  createdAt      DateTime         @default(now()) @map("created_at")
+  updatedAt      DateTime         @default(now()) @updatedAt @map("updated_at")
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sessions     Session[]
+
+  @@unique([organizationId, userId])
+  @@index([organizationId, role, status])
+  @@index([userId])
+  @@map("memberships")
+}
+
+/// The cookie carries a random 32-byte token; only its SHA-256 lands here. A
+/// database leak must not be a session-hijack kit.
+model Session {
+  id             String    @id @default(uuid()) @db.Uuid
+  userId         String    @map("user_id") @db.Uuid
+  organizationId String    @map("organization_id") @db.Uuid
+  membershipId   String    @map("membership_id") @db.Uuid
+  tokenHash      Bytes     @unique @map("token_hash")
+  userAgent      String?   @map("user_agent")
+  ip             String?
+  createdAt      DateTime  @default(now()) @map("created_at")
+  lastSeenAt     DateTime  @default(now()) @map("last_seen_at")
+  expiresAt      DateTime  @map("expires_at")
+  revokedAt      DateTime? @map("revoked_at")
+
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  membership   Membership   @relation(fields: [membershipId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([organizationId])
+  @@index([expiresAt])
+  @@map("sessions")
+}
+
+model Invitation {
+  id             String     @id @default(uuid()) @db.Uuid
+  organizationId String     @map("organization_id") @db.Uuid
+  email          String?
+  phone          String?
+  role           MemberRole
+
+  /// Which child this invitation is about. Set only for PARENT invitations:
+  /// a parent is never invited to an organization in general, only to one
+  /// named student, and accepting creates exactly that one edge.
+  studentUserId String?       @map("student_user_id") @db.Uuid
+  /// Recorded on the invitation so the consent row can carry it through.
+  relationship  Relationship?
+
+  tokenHash   Bytes     @unique @map("token_hash")
+  invitedById String    @map("invited_by_id") @db.Uuid
+  expiresAt   DateTime  @map("expires_at")
+  acceptedAt  DateTime? @map("accepted_at")
+  revokedAt   DateTime? @map("revoked_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId, role])
+  @@map("invitations")
+}
+
+/// Append-only. UPDATE and DELETE raise from a trigger — see prisma/rls.sql.
+/// organizationId is nullable because platform-admin actions are legitimately
+/// cross-tenant, and those are exactly the ones worth logging.
+model AuditLog {
+  id             String   @id @default(uuid()) @db.Uuid
+  organizationId String?  @map("organization_id") @db.Uuid
+  actorUserId    String?  @map("actor_user_id") @db.Uuid
+  actorRole      String?  @map("actor_role")
+  action         String
+  entityType     String   @map("entity_type")
+  entityId       String?  @map("entity_id")
+  before         Json?
+  after          Json?
+  ip             String?
+  userAgent      String?  @map("user_agent")
+  requestId      String?  @map("request_id")
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  organization Organization? @relation(fields: [organizationId], references: [id], onDelete: SetNull)
+
+  @@index([organizationId, createdAt])
+  @@index([entityType, entityId])
+  @@index([actorUserId, createdAt])
+  @@map("audit_logs")
+}
+
+// ===========================================================================
+// Slice 1–2: curriculum head, classes, roster
+// ===========================================================================
+
+// ---------------------------------------------------------------------------
+// Curriculum plane — global, platform-owned, read-only to tenants
+// ---------------------------------------------------------------------------
+//
+// Only the head of the tree lands here. A class is "Class 10-A Mathematics",
+// so it needs a grade and a subject before it can exist at all; chapters,
+// topics and learning outcomes arrive with slice 3.
+//
+// No organization_id anywhere in this plane. Shared ids are the whole point:
+// "Mathematics" must mean the same row in every tenant, or there is no
+// cross-tenant intelligence to build later.
+
+model Board {
+  id        String   @id @default(uuid()) @db.Uuid
+  code      String   @unique // 'CBSE'
+  name      String
+  country   String   @default("IN")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  grades        Grade[]
+  organizations Organization[]
+
+  @@map("boards")
+}
+
+model Grade {
+  id      String @id @default(uuid()) @db.Uuid
+  boardId String @map("board_id") @db.Uuid
+  number  Int // 9 | 10
+  label   String // 'Class 9'
+
+  board       Board        @relation(fields: [boardId], references: [id], onDelete: Cascade)
+  subjects    Subject[]
+  assessments Assessment[]
+  classes     Class[]
+
+  @@unique([boardId, number])
+  @@map("grades")
+}
+
+model Subject {
+  id        String @id @default(uuid()) @db.Uuid
+  gradeId   String @map("grade_id") @db.Uuid
+  code      String // 'MATH'
+  name      String // 'Mathematics'
+  shortName String @map("short_name") // 'Maths'
+  sortOrder Int    @default(0) @map("sort_order")
+
+  grade       Grade        @relation(fields: [gradeId], references: [id], onDelete: Cascade)
+  classes     Class[]
+  chapters    Chapter[]
+  questions   Question[]
+  assessments Assessment[]
+
+  @@unique([gradeId, code])
+  @@map("subjects")
+}
+
+// ---------------------------------------------------------------------------
+// Tenant plane
+// ---------------------------------------------------------------------------
+
+enum ClassStatus {
+  ACTIVE
+  ARCHIVED
+}
+
+enum EnrolmentStatus {
+  ACTIVE
+  LEFT
+  REMOVED
+}
+
+enum ClassTeacherRole {
+  PRIMARY
+  ASSISTANT
+}
+
+model Class {
+  id             String      @id @default(uuid()) @db.Uuid
+  organizationId String      @map("organization_id") @db.Uuid
+  name           String // 'Class 10-A'
+  gradeId        String      @map("grade_id") @db.Uuid
+  subjectId      String      @map("subject_id") @db.Uuid
+  academicYear   String      @map("academic_year")
+  ownerTeacherId String      @map("owner_teacher_id") @db.Uuid
+  status         ClassStatus @default(ACTIVE)
+  /// Shared with students so they can find this class at sign-in. Rotatable,
+  /// because a code that leaked cannot be un-shared.
+  joinCode       String?     @unique @map("join_code")
+  createdAt      DateTime    @default(now()) @map("created_at")
+  updatedAt      DateTime    @default(now()) @updatedAt @map("updated_at")
+  deletedAt      DateTime?   @map("deleted_at")
+
+  organization Organization     @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  grade        Grade            @relation(fields: [gradeId], references: [id])
+  subject      Subject          @relation(fields: [subjectId], references: [id])
+  teachers     ClassTeacher[]
+  enrolments   ClassEnrolment[]
+  assessments  Assessment[]
+  assignments  Assignment[]
+  announcements Announcement[]
+
+  @@index([organizationId, status])
+  @@index([organizationId, ownerTeacherId])
+  @@map("classes")
+}
+
+model ClassTeacher {
+  id             String           @id @default(uuid()) @db.Uuid
+  /// Carried even though it is derivable through classId. Every tenant table
+  /// has one, so the RLS policy is the same everywhere and the audit that
+  /// enumerates information_schema has nothing to special-case.
+  organizationId String           @map("organization_id") @db.Uuid
+  classId        String           @map("class_id") @db.Uuid
+  teacherUserId  String           @map("teacher_user_id") @db.Uuid
+  role           ClassTeacherRole @default(PRIMARY)
+  createdAt      DateTime         @default(now()) @map("created_at")
+
+  class Class @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  @@unique([classId, teacherUserId])
+  @@index([organizationId, teacherUserId])
+  @@map("class_teachers")
+}
+
+/// Enrolment is time-bounded so a mid-year transfer keeps its history without
+/// polluting the new class's past results.
+model ClassEnrolment {
+  id             String          @id @default(uuid()) @db.Uuid
+  organizationId String          @map("organization_id") @db.Uuid
+  classId        String          @map("class_id") @db.Uuid
+  studentUserId  String          @map("student_user_id") @db.Uuid
+  status         EnrolmentStatus @default(ACTIVE)
+  joinedAt       DateTime        @default(now()) @map("joined_at")
+  leftAt         DateTime?       @map("left_at")
+
+  class Class @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  @@unique([classId, studentUserId, joinedAt])
+  @@index([organizationId, classId, status])
+  @@index([organizationId, studentUserId])
+  @@map("class_enrolments")
+}
+
+model StudentProfile {
+  userId         String   @id @map("user_id") @db.Uuid
+  organizationId String   @map("organization_id") @db.Uuid
+  rollNumber     String?  @map("roll_number")
+  guardianPhone  String?  @map("guardian_phone")
+  admissionYear  String?  @map("admission_year")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@unique([organizationId, rollNumber])
+  @@index([organizationId])
+  @@map("student_profiles")
+}
+
+model TeacherProfile {
+  userId         String   @id @map("user_id") @db.Uuid
+  organizationId String   @map("organization_id") @db.Uuid
+  qualification  String?
+  bio            String?
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@index([organizationId])
+  @@map("teacher_profiles")
+}
+
+// ===========================================================================
+// Slice 3: the rest of the curriculum tree
+// ===========================================================================
+//
+// subject → chapter → topic → learning_outcome, plus concepts, which are what
+// mastery is actually measured against.
+//
+// Still the global plane: no organization_id, readable by every tenant,
+// writable only by the platform over DIRECT_URL.
+
+model Chapter {
+  id        String  @id @default(uuid()) @db.Uuid
+  subjectId String  @map("subject_id") @db.Uuid
+  number    Int
+  title     String
+  /// Where this chapter's definition came from — an NCERT book code, a CBSE
+  /// syllabus document, or the person who entered it. A curriculum row with no
+  /// provenance is a claim nobody can check.
+  source    String?
+  sortOrder Int     @default(0) @map("sort_order")
+  /// Read from the NCERT book; see prisma/chapter-contents. Null until then.
+  contents  Json?
+
+  subject   Subject    @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  topics    Topic[]
+  questions Question[]
+
+  @@unique([subjectId, number])
+  @@index([subjectId])
+  @@map("chapters")
+}
+
+model Topic {
+  id        String @id @default(uuid()) @db.Uuid
+  chapterId String @map("chapter_id") @db.Uuid
+  title     String
+  sortOrder Int    @default(0) @map("sort_order")
+
+  chapter  Chapter           @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  outcomes LearningOutcome[]
+
+  @@index([chapterId])
+  @@map("topics")
+}
+
+enum BloomLevel {
+  REMEMBER
+  UNDERSTAND
+  APPLY
+  ANALYSE
+  EVALUATE
+  CREATE
+}
+
+enum Competency {
+  KNOWLEDGE
+  UNDERSTANDING
+  APPLICATION
+  PROBLEM_SOLVING
+  ANALYSIS
+  EVALUATION
+}
+
+/// The smallest curricular claim a question can test.
+///
+/// `statement` is not a label — it is prompt material. With no seeded question
+/// bank to few-shot from, an outcome statement is the ONLY grounding an AI
+/// generator has, so it must describe what a student can do precisely enough
+/// that a question could be written from it alone. See RISKS.md, Risk 1.
+model LearningOutcome {
+  id           String     @id @default(uuid()) @db.Uuid
+  topicId      String     @map("topic_id") @db.Uuid
+  code         String
+  statement    String
+  bloomLevel   BloomLevel @default(UNDERSTAND) @map("bloom_level")
+  competency   Competency @default(UNDERSTANDING)
+  typicalMarks Int        @default(1) @map("typical_marks")
+  sortOrder    Int        @default(0) @map("sort_order")
+  createdAt    DateTime   @default(now()) @map("created_at")
+  /// Review by a subject teacher (core/curriculum/review.ts). Null means not
+  /// reviewed — every imported draft starts that way — and any edit clears it,
+  /// because the review was given to the previous wording.
+  reviewedAt   DateTime? @map("reviewed_at")
+  reviewedById String?   @map("reviewed_by_id") @db.Uuid
+  updatedAt    DateTime   @default(now()) @updatedAt @map("updated_at")
+
+  topic    Topic            @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  concepts ConceptOutcome[]
+
+  @@unique([topicId, code])
+  @@index([topicId])
+  @@map("learning_outcomes")
+}
+
+/// The unit mastery is measured against.
+///
+/// Separate from LearningOutcome because the same idea — ratio and proportion,
+/// say — is tested by outcomes in several chapters and in two subjects.
+/// Measuring per outcome fragments the evidence; measuring per concept
+/// concentrates it.
+model Concept {
+  id          String   @id @default(uuid()) @db.Uuid
+  slug        String   @unique
+  name        String
+  description String?
+  createdAt   DateTime @default(now()) @map("created_at")
+  /// Review by a subject teacher (core/curriculum/review.ts). Null means not
+  /// reviewed — every imported draft starts that way — and any edit clears it,
+  /// because the review was given to the previous wording.
+  reviewedAt   DateTime? @map("reviewed_at")
+  reviewedById String?   @map("reviewed_by_id") @db.Uuid
+
+  outcomes      ConceptOutcome[]
+  prerequisites ConceptPrerequisite[] @relation("concept")
+  requiredBy    ConceptPrerequisite[] @relation("prerequisite")
+
+  @@map("concepts")
+}
+
+model ConceptOutcome {
+  conceptId         String  @map("concept_id") @db.Uuid
+  learningOutcomeId String  @map("learning_outcome_id") @db.Uuid
+  weight            Decimal @default(1.0) @db.Decimal(3, 2)
+
+  concept Concept         @relation(fields: [conceptId], references: [id], onDelete: Cascade)
+  outcome LearningOutcome @relation(fields: [learningOutcomeId], references: [id], onDelete: Cascade)
+
+  @@id([conceptId, learningOutcomeId])
+  @@map("concept_outcomes")
+}
+
+/// The root-cause graph. What turns "weak in Trigonometry" into "weak in
+/// Trigonometry BECAUSE similar triangles never landed" — a different, and far
+/// more useful, sentence for a teacher.
+model ConceptPrerequisite {
+  conceptId      String  @map("concept_id") @db.Uuid
+  prerequisiteId String  @map("prerequisite_concept_id") @db.Uuid
+  strength       Decimal @default(1.0) @db.Decimal(3, 2)
+
+  concept      Concept @relation("concept", fields: [conceptId], references: [id], onDelete: Cascade)
+  prerequisite Concept @relation("prerequisite", fields: [prerequisiteId], references: [id], onDelete: Cascade)
+
+  @@id([conceptId, prerequisiteId])
+  @@map("concept_prerequisites")
+}
+
+// ===========================================================================
+// Slice 4: the question bank
+// ===========================================================================
+
+/// The one entity that spans both planes. A GLOBAL question is platform-owned
+/// and readable by everyone; ORGANIZATION and PRIVATE questions belong to one
+/// tenant. The CHECK constraint in rls.sql enforces that organization_id is
+/// NULL exactly when visibility is GLOBAL — by convention it would drift.
+enum QuestionVisibility {
+  GLOBAL
+  ORGANIZATION
+  PRIVATE
+}
+
+enum QuestionType {
+  MCQ
+  MULTI_SELECT
+  TRUE_FALSE
+  NUMERIC
+  FILL_BLANK
+  ASSERTION_REASON
+  VSA
+  SA
+  LA
+  CASE_STUDY
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+}
+
+enum QuestionStatus {
+  DRAFT
+  IN_REVIEW
+  APPROVED
+  REJECTED
+  ARCHIVED
+}
+
+/// Who holds the copyright on a question's wording.
+enum QuestionProvenance {
+  /// Written for this bank. Shareable with every school.
+  ORIGINAL
+  /// Verbatim NCERT Exemplar, © NCERT. Shared only once NCERT has granted
+  /// permission in writing — QUESTION_LIBRARY_INCLUDE_EXEMPLAR.
+  NCERT_EXEMPLAR
+}
+
+enum QuestionSource {
+  MANUAL
+  AI_GENERATED
+  IMPORTED
+}
+
+model Question {
+  id             String             @id @default(uuid()) @db.Uuid
+  organizationId String?            @map("organization_id") @db.Uuid
+  visibility     QuestionVisibility @default(ORGANIZATION)
+  createdById    String             @map("created_by_id") @db.Uuid
+
+  subjectId        String  @map("subject_id") @db.Uuid
+  chapterId        String? @map("chapter_id") @db.Uuid
+  primaryOutcomeId String? @map("primary_outcome_id") @db.Uuid
+
+  type                QuestionType
+  difficulty          Difficulty     @default(MEDIUM)
+  marks               Int            @default(1)
+  expectedTimeSeconds Int?           @map("expected_time_seconds")
+  status              QuestionStatus @default(DRAFT)
+  source              QuestionSource @default(MANUAL)
+
+  /// Where the WORDING came from, which decides whether it may be shared.
+  /// Null for a school's own questions. See core/library.
+  provenance      QuestionProvenance?
+  /// The library question this row was copied from. No foreign key: the source
+  /// lives in another tenant, the same deliberate cross-plane shape as
+  /// `concept_evidence.concept_id`.
+  libraryOriginId String?             @map("library_origin_id") @db.Uuid
+  /// The outcome tag was checked by a reviewer. Separate from approval: a
+  /// question can be correctly worded and filed under the wrong outcome, and
+  /// the tag is what routes its evidence to a concept.
+  tagReviewedAt   DateTime? @map("tag_reviewed_at")
+  tagReviewedById String?   @map("tag_reviewed_by_id") @db.Uuid
+
+  /// The version a reader gets. An attempt records the version it was SERVED,
+  /// so a paper written in August still marks the way it did in August even
+  /// after the question is edited in December.
+  currentVersionId String? @unique @map("current_version_id") @db.Uuid
+
+  /// Approval is a human act with a name on it. AI-generated questions are
+  /// created DRAFT and can only reach APPROVED through this field being set.
+  approvedById    String?   @map("approved_by_id") @db.Uuid
+  approvedAt      DateTime? @map("approved_at")
+  rejectedById    String?   @map("rejected_by_id") @db.Uuid
+  rejectedAt      DateTime? @map("rejected_at")
+  rejectionReason String?   @map("rejection_reason")
+
+  /// SHA-256 of the normalised stem and options. Catches the exact duplicate a
+  /// teacher creates by pasting the same question twice; near-duplicate
+  /// detection by embedding arrives with AI generation.
+  contentHash Bytes? @map("content_hash")
+
+  /// What the validator warned about, shown on the card the teacher reviews.
+  ///
+  /// Flags only. A question the validator REJECTED was never saved, so nothing
+  /// here is a reason not to trust the row — it is advice, and the teacher is
+  /// still the one who decides.
+  aiFlags Json? @map("ai_flags")
+
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt DateTime? @map("deleted_at")
+
+  organization Organization?        @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  subject      Subject              @relation(fields: [subjectId], references: [id])
+  chapter      Chapter?             @relation(fields: [chapterId], references: [id])
+  versions     QuestionVersion[]    @relation("questionVersions")
+  outcomes     QuestionOutcome[]
+  assessments  AssessmentQuestion[]
+  savedBy      SavedQuestion[]
+
+  @@index([organizationId, status])
+  @@index([organizationId, subjectId, chapterId, status])
+  @@index([organizationId, contentHash])
+  @@index([primaryOutcomeId])
+  @@index([organizationId, libraryOriginId])
+  @@map("questions")
+}
+
+/// Why an approved question is immutable: an attempt references the version it
+/// was served. Editing creates version n+1 and leaves the old row alone.
+model QuestionVersion {
+  id         String @id @default(uuid()) @db.Uuid
+  questionId String @map("question_id") @db.Uuid
+  version    Int
+
+  stem      String
+  /// [{ key, text, isCorrect }] for choice types; null otherwise.
+  options   Json?
+  /// Shape depends on the question type. Null for the subjective types, which
+  /// a person marks — never an empty object, which would read as "no correct
+  /// answer" rather than "not machine-markable".
+  answerKey Json?
+
+  /// The mark scheme, for the subjective types a person marks.
+  ///
+  /// `[{ id, label, marks, descriptor }]`, and the marks must sum to the
+  /// question's total — a rubric whose parts add to 5 on a 6-mark question is
+  /// one that cannot award full marks, which nobody discovers until the
+  /// twentieth paper.
+  ///
+  /// It lives on the VERSION, not the question, for the same reason the answer
+  /// key does: an approved question is immutable, the mark scheme is part of
+  /// what was approved, and a paper marked in August must still be explainable
+  /// in December. Editing the rubric creates version n+1.
+  ///
+  /// Null is a real state and stays supported: a rubric is an improvement on
+  /// typing a number, never a gate in front of it.
+  rubric      Json?
+  explanation String?
+  hint        String?
+
+  createdById String   @map("created_by_id") @db.Uuid
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  question Question @relation("questionVersions", fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([questionId, version])
+  @@index([questionId])
+  @@map("question_versions")
+}
+
+/// A question with no outcome can be scored but can never inform mastery,
+/// which makes it worthless to the part of the product that matters. So it
+/// cannot be APPROVED without one.
+model QuestionOutcome {
+  questionId        String  @map("question_id") @db.Uuid
+  learningOutcomeId String  @map("learning_outcome_id") @db.Uuid
+  weight            Decimal @default(1.0) @db.Decimal(3, 2)
+  isPrimary         Boolean @default(false) @map("is_primary")
+
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@id([questionId, learningOutcomeId])
+  @@index([learningOutcomeId])
+  @@map("question_outcomes")
+}
+
+// ===========================================================================
+// Slice 5: assessments
+// ===========================================================================
+
+enum AssessmentStatus {
+  DRAFT
+  PUBLISHED
+  CLOSED
+  ARCHIVED
+}
+
+/// An assessment is a DEFINITION, not an event. Giving it to people is an
+/// assignment, which arrives in the next slice.
+model Assessment {
+  id             String  @id @default(uuid()) @db.Uuid
+  organizationId String  @map("organization_id") @db.Uuid
+  createdById    String  @map("created_by_id") @db.Uuid
+  classId        String? @map("class_id") @db.Uuid
+
+  title           String
+  description     String?
+  subjectId       String  @map("subject_id") @db.Uuid
+  gradeId         String  @map("grade_id") @db.Uuid
+  durationMinutes Int     @map("duration_minutes")
+  totalMarks      Int     @map("total_marks")
+  passingMarks    Int?    @map("passing_marks")
+
+  /// The declared plan: counts, the difficulty and type mix, and the
+  /// curriculum scope. Read only by the builder and, later, the generator —
+  /// never joined against, which is why it is jsonb rather than columns.
+  blueprint Json @default("{}")
+
+  /// Shuffle, negative marking, review policy, attempts allowed. Same
+  /// reasoning: read as a whole, never queried by a field.
+  settings Json @default("{}")
+
+  status      AssessmentStatus @default(DRAFT)
+  publishedAt DateTime?        @map("published_at")
+  closedAt    DateTime?        @map("closed_at")
+  createdAt   DateTime         @default(now()) @map("created_at")
+  updatedAt   DateTime         @default(now()) @updatedAt @map("updated_at")
+  deletedAt   DateTime?        @map("deleted_at")
+
+  organization Organization         @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  subject      Subject              @relation(fields: [subjectId], references: [id])
+  grade        Grade                @relation(fields: [gradeId], references: [id])
+  class        Class?               @relation(fields: [classId], references: [id])
+  questions    AssessmentQuestion[]
+  assignments  Assignment[]
+
+  @@index([organizationId, status])
+  @@index([organizationId, classId])
+  @@map("assessments")
+}
+
+/// The paper itself, one row per question in order.
+///
+/// `questionVersionId` is stamped at PUBLISH and never changes afterwards.
+/// That is what makes a paper written in August keep marking the way it did in
+/// August, even after the source question is edited in December.
+model AssessmentQuestion {
+  id                String  @id @default(uuid()) @db.Uuid
+  organizationId    String  @map("organization_id") @db.Uuid
+  assessmentId      String  @map("assessment_id") @db.Uuid
+  questionId        String  @map("question_id") @db.Uuid
+  questionVersionId String? @map("question_version_id") @db.Uuid
+  position          Int
+  marks             Int
+  section           String?
+
+  assessment Assessment @relation(fields: [assessmentId], references: [id], onDelete: Cascade)
+  question   Question   @relation(fields: [questionId], references: [id])
+
+  @@unique([assessmentId, position])
+  @@unique([assessmentId, questionId])
+  @@index([organizationId, assessmentId])
+  @@map("assessment_questions")
+}
+
+// ===========================================================================
+// Slice 6: assignments
+// ===========================================================================
+
+enum ResultsPolicy {
+  /// The student sees the score the moment they submit.
+  IMMEDIATE
+  /// Nobody sees a score until the window shuts — the usual choice, because it
+  /// stops the first finisher telling the rest what came up.
+  AFTER_CLOSE
+  /// The teacher releases them by hand.
+  MANUAL
+}
+
+/// An assessment given to people, in a window.
+///
+/// There is deliberately NO status column. Whether an assignment is scheduled,
+/// open or closed is a function of the window and the current time, so storing
+/// it would mean a scheduled job flipping rows — and a row whose status is
+/// stale between ticks. Derived at read time it cannot drift, and it needs no
+/// cron. `cancelledAt` is the one piece of state a clock cannot produce.
+model Assignment {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  assessmentId   String @map("assessment_id") @db.Uuid
+  classId        String @map("class_id") @db.Uuid
+  assignedById   String @map("assigned_by_id") @db.Uuid
+
+  opensAt  DateTime @map("opens_at")
+  closesAt DateTime @map("closes_at")
+
+  /// Minutes, when this sitting should run shorter or longer than the paper's
+  /// own duration — extra time for a student who needs it, say.
+  durationOverrideMinutes Int? @map("duration_override_minutes")
+
+  maxAttempts   Int           @default(1) @map("max_attempts")
+  resultsPolicy ResultsPolicy @default(AFTER_CLOSE) @map("results_policy")
+
+  /// Set when a teacher releases results by hand, or when the window shuts
+  /// under AFTER_CLOSE. Read by the student result page in a later slice.
+  resultsReleasedAt DateTime? @map("results_released_at")
+
+  cancelledAt DateTime? @map("cancelled_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @default(now()) @updatedAt @map("updated_at")
+
+  assessment Assessment         @relation(fields: [assessmentId], references: [id])
+  class      Class              @relation(fields: [classId], references: [id])
+  targets    AssignmentTarget[]
+  attempts   Attempt[]
+
+  @@index([organizationId, classId])
+  @@index([organizationId, assessmentId])
+  @@index([organizationId, opensAt, closesAt])
+  @@map("assignments")
+}
+
+/// Present only when the assignment goes to a SUBSET of the class.
+///
+/// No rows means the whole class, which is both the common case and the one
+/// that keeps working when a student joins the class tomorrow.
+model AssignmentTarget {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  assignmentId   String @map("assignment_id") @db.Uuid
+  studentUserId  String @map("student_user_id") @db.Uuid
+
+  assignment Assignment @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+
+  @@unique([assignmentId, studentUserId])
+  @@index([organizationId, studentUserId])
+  @@map("assignment_targets")
+}
+
+// ===========================================================================
+// Slice 7: attempts — the test player
+// ===========================================================================
+
+enum AttemptStatus {
+  IN_PROGRESS
+  SUBMITTED
+  /// Objective items marked. Separate from RELEASED because a teacher decides
+  /// when students see anything.
+  SCORED
+  RELEASED
+  VOID
+}
+
+enum SubmitReason {
+  MANUAL
+  /// The clock ran out while the student was on the page.
+  TIMEOUT
+  /// The clock ran out while the page was closed; the cron sweep finished it.
+  SWEEP
+}
+
+enum GradeSource {
+  AUTO
+  TEACHER
+  AI_ASSISTED
+}
+
+/// One student's single sitting of one assignment.
+model Attempt {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  assignmentId   String @map("assignment_id") @db.Uuid
+  studentUserId  String @map("student_user_id") @db.Uuid
+
+  /// The idempotency key, generated by the CLIENT before it has ever reached
+  /// the network. A student on a flaky connection tapping Start twice must not
+  /// create two sittings.
+  clientAttemptId String @map("client_attempt_id") @db.Uuid
+  attemptNumber   Int    @default(1) @map("attempt_number")
+
+  status AttemptStatus @default(IN_PROGRESS)
+
+  /// The clock is DERIVED from these two, never accumulated. A phone that
+  /// backgrounds the tab for forty minutes must come back with the correct
+  /// remaining time, and a counted clock will not.
+  startedAt  DateTime @default(now()) @map("started_at")
+  durationMs Int      @map("duration_ms")
+  expiresAt  DateTime @map("expires_at")
+
+  submittedAt  DateTime?     @map("submitted_at")
+  submitReason SubmitReason? @map("submit_reason")
+  scoredAt     DateTime?     @map("scored_at")
+  releasedAt   DateTime?     @map("released_at")
+  /// When the student last opened this result. Teacher feedback written after
+  /// it (an answer `graded_at` later than this) is "new" on their home page.
+  /// A stamp rather than a per-comment read flag, because what matters is
+  /// whether they have looked since the teacher last said something.
+  feedbackSeenAt DateTime? @map("feedback_seen_at")
+
+  rawScore   Decimal? @map("raw_score") @db.Decimal(6, 2)
+  maxScore   Decimal? @map("max_score") @db.Decimal(6, 2)
+  percentage Decimal? @db.Decimal(5, 2)
+
+  /// Browser signals, recorded as SIGNALS. Shown to a teacher as "3 tab
+  /// switches", never as "cheating detected" — a browser cannot police a
+  /// second device, and a product that claims otherwise gets used against a
+  /// student it was wrong about.
+  tabSwitches Int     @default(0) @map("tab_switches")
+  device      Json    @default("{}")
+  ip          String?
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  assignment Assignment      @relation(fields: [assignmentId], references: [id])
+  answers    AttemptAnswer[]
+
+  @@unique([assignmentId, studentUserId, clientAttemptId])
+  @@unique([assignmentId, studentUserId, attemptNumber])
+  @@index([organizationId, assignmentId, status])
+  @@index([organizationId, studentUserId])
+  @@index([status, expiresAt])
+  @@map("attempts")
+}
+
+model AttemptAnswer {
+  id                   String @id @default(uuid()) @db.Uuid
+  organizationId       String @map("organization_id") @db.Uuid
+  attemptId            String @map("attempt_id") @db.Uuid
+  assessmentQuestionId String @map("assessment_question_id") @db.Uuid
+
+  /// The version the student was actually SERVED. Scoring reads this, not the
+  /// question's current version, so an edit after the sitting cannot change
+  /// what a past answer was marked against.
+  questionVersionId String? @map("question_version_id") @db.Uuid
+
+  /// Shape depends on the question type. Null means untouched.
+  response Json?
+
+  /// Null is not zero. An unmarked subjective answer scores null until a
+  /// person marks it; only a student who explicitly left a question blank
+  /// scores zero. A null that becomes a 0 inside an average is how a product
+  /// tells a parent their child failed a question nobody has marked.
+  isCorrect    Boolean?     @map("is_correct")
+  awardedMarks Decimal?     @map("awarded_marks") @db.Decimal(5, 2)
+  maxMarks     Decimal      @map("max_marks") @db.Decimal(5, 2)
+  gradeSource  GradeSource? @map("grade_source")
+
+  /// What the marker said, shown to the student when results are released.
+  /// A subjective answer marked 1 out of 3 with no reason is the opaque
+  /// grading this product exists to improve on — the number without the
+  /// sentence teaches nobody anything.
+  feedback String? @db.VarChar(2000)
+
+  /// Marks per rubric criterion: `[{ criterionId, marks, note }]`.
+  ///
+  /// The structural version of the sentence above. "Method 2/3, working 1/2,
+  /// answer 0/1" tells a student where they lost it; "3 out of 6" tells them
+  /// only that they did. Null when the question had no rubric or the marker
+  /// typed a total directly, which stays allowed.
+  rubricScores Json? @map("rubric_scores")
+
+  timeSpentSeconds Int     @default(0) @map("time_spent_seconds")
+  visitCount       Int     @default(0) @map("visit_count")
+  markedForReview  Boolean @default(false) @map("marked_for_review")
+
+  /// Last-write-wins ordering, from the client. A batch that arrives out of
+  /// order after a reconnect must not overwrite a newer answer with an older
+  /// one.
+  clientSeq  Int       @default(0) @map("client_seq")
+  answeredAt DateTime? @map("answered_at")
+  gradedAt   DateTime? @map("graded_at")
+
+  attempt Attempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+
+  @@unique([attemptId, assessmentQuestionId])
+  @@index([organizationId, attemptId])
+  @@map("attempt_answers")
+}
+
+/// A one-time code for phone sign-in.
+///
+/// Pre-tenant, like everything else in the auth seam: a student signing in has
+/// no organization yet. Only the SHA-256 is stored, and the table is reachable
+/// solely through SECURITY DEFINER functions — no tenant can read it.
+model LoginCode {
+  id         String    @id @default(uuid()) @db.Uuid
+  phone      String
+  codeHash   Bytes     @map("code_hash")
+  expiresAt  DateTime  @map("expires_at")
+  attempts   Int       @default(0)
+  consumedAt DateTime? @map("consumed_at")
+  createdAt  DateTime  @default(now()) @map("created_at")
+
+  @@index([phone, createdAt])
+  @@index([expiresAt])
+  @@map("login_codes")
+}
+
+// ===========================================================================
+// Slice 9: the evidence ledger and the mastery estimate
+// ===========================================================================
+//
+// Two tables, and the split between them is the whole design. `concept_evidence`
+// is an append-only record of what happened; `student_concept_mastery` is a
+// belief derived from it, and is a cache in the strict sense — deleting every
+// row and recomputing must produce exactly the same values.
+//
+// The estimator will change. Its first version is deliberately simple and its
+// third will not be. Without the ledger, changing the algorithm silently
+// rewrites history, and nobody can tell afterwards whether the students
+// improved or the formula did.
+
+/// One answered question, as it bears on one concept.
+///
+/// A question mapped to two concepts produces two rows. That is not
+/// duplication: the same answer really is evidence about both, and folding it
+/// into one would make the estimator's arithmetic depend on which concept it
+/// happened to look at first.
+model ConceptEvidence {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  studentUserId  String @map("student_user_id") @db.Uuid
+  conceptId      String @map("concept_id") @db.Uuid
+
+  /// Exactly one of these is set, and `source` says which.
+  ///
+  /// ---------------------------------------------------------------------------
+  /// Practice IS evidence, at a reduced weight
+  /// ---------------------------------------------------------------------------
+  /// The alternative was to exclude it, and that fails the product's own North
+  /// Star: `PRACTICE_SET` is an intervention kind, and an intervention whose
+  /// effect can never appear in the mastery figure can never be measured as
+  /// having worked.
+  ///
+  /// But it cannot count the same as a supervised paper either. Practice is
+  /// untimed, unwatched, and has an explanation one tap away — counting it at
+  /// full weight would make mastery a function of persistence, and a gap that
+  /// closed because a student ground practice at home is a gap the teacher
+  /// stops teaching.
+  ///
+  /// So it is weighted down (see PRACTICE_WEIGHT in core/mastery/ledger.ts) and
+  /// stamped with its source, which is what makes the decision reversible: if
+  /// 0.4 turns out to be the wrong number, `rebuildMastery` re-derives every
+  /// estimate from a ledger that recorded which was which. That is the whole
+  /// reason the ledger exists.
+  attemptAnswerId  String?        @map("attempt_answer_id") @db.Uuid
+  practiceAnswerId String?        @map("practice_answer_id") @db.Uuid
+  source           EvidenceSource @default(ASSESSMENT)
+
+  /// Marks earned as a fraction, 0..1.
+  ///
+  /// DATABASE_SCHEMA.md called for `is_correct boolean`. It is a score here
+  /// instead, because two marks out of three is neither right nor wrong, and
+  /// rounding it at the ledger destroys information the estimator wants and
+  /// can never recover. Objective questions simply store 1 or 0.
+  score Decimal @db.Decimal(4, 3)
+
+  difficulty Difficulty
+
+  /// How much of the question's evidence belongs to this concept: 1.0 through
+  /// a primary outcome, less through a secondary one.
+  weight Decimal @default(1.0) @db.Decimal(3, 2)
+
+  /// When the student answered — not when this row was written. A paper marked
+  /// in December is still evidence about the day it was sat, and the recency
+  /// decay has to measure from that.
+  observedAt DateTime @map("observed_at")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  /// Re-marking an answer updates its evidence rather than adding more. Without
+  /// this, a teacher changing 1/3 to 2/3 would leave both marks on the record
+  /// and count the question twice.
+  @@unique([attemptAnswerId, conceptId])
+  @@unique([practiceAnswerId, conceptId])
+  @@index([organizationId, studentUserId, conceptId, observedAt])
+  @@index([organizationId, conceptId])
+  @@index([organizationId, studentUserId, source])
+  @@map("concept_evidence")
+}
+
+/// What we believe about one student and one concept.
+///
+/// Derived, never authoritative. Every field here is reproducible from
+/// `concept_evidence` by `core/mastery/estimate.ts`, and a recomputation that
+/// disagreed with a stored row would be a bug in the cache, never a second
+/// opinion.
+model StudentConceptMastery {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  studentUserId  String @map("student_user_id") @db.Uuid
+  conceptId      String @map("concept_id") @db.Uuid
+
+  /// NULL when the band is INSUFFICIENT.
+  ///
+  /// Not "stored but not displayed". A number the product has refused to stand
+  /// behind should not be sitting in a column where the next feature's join
+  /// can find it and average it into something that looks authoritative.
+  estimate   Decimal? @db.Decimal(4, 3)
+  confidence Decimal? @db.Decimal(4, 3)
+
+  /// Raw rows in the ledger, and the sum of their decayed weights. Both are
+  /// reported: "six answers, but all from last year" is a thing a teacher
+  /// should be able to see.
+  evidenceCount     Int     @map("evidence_count")
+  effectiveEvidence Decimal @map("effective_evidence") @db.Decimal(6, 3)
+
+  band MasteryBand
+
+  previousEstimate Decimal?     @map("previous_estimate") @db.Decimal(4, 3)
+  trend            MasteryTrend @default(UNKNOWN)
+
+  lastEvidenceAt DateTime? @map("last_evidence_at")
+  computedAt     DateTime  @default(now()) @map("computed_at")
+
+  @@unique([studentUserId, conceptId])
+  @@index([organizationId, conceptId, band])
+  @@index([organizationId, studentUserId])
+  @@map("student_concept_mastery")
+}
+
+enum MasteryBand {
+  CRITICAL
+  FRAGILE
+  DEVELOPING
+  SECURE
+  INSUFFICIENT
+}
+
+enum MasteryTrend {
+  IMPROVING
+  STABLE
+  DECLINING
+  UNKNOWN
+}
+
+// ===========================================================================
+// Slice 11: the AI layer
+// ===========================================================================
+//
+// Four tables, and none of them stores a prompt or a completion verbatim. What
+// is kept is what a bill, an audit and a debugging session actually need: which
+// feature ran, under which prompt version, what it cost, and a SCRUBBED summary
+// of what went in.
+
+/// One AI operation, as the product understands it.
+///
+/// A generation is a unit of work a person asked for — "write me eight
+/// questions on similar triangles" — not a unit of work the provider did. One
+/// generation may cost several calls, and every one of those is an `ai_usage`
+/// row underneath this.
+model AIGeneration {
+  id String @id @default(uuid()) @db.Uuid
+
+  /// Null marks a platform-level operation with no tenant behind it — bulk
+  /// re-validation, say. Same shape as `audit_logs`: a NULL row matches no
+  /// tenant policy, so it is invisible to every organization rather than
+  /// visible to all of them.
+  organizationId String? @map("organization_id") @db.Uuid
+  requestedById  String? @map("requested_by_id") @db.Uuid
+
+  feature AIFeature
+  status  AIGenerationStatus @default(QUEUED)
+
+  /// The SCRUBBED payload, and only that. Debugging comfort is not a reason to
+  /// keep the unscrubbed one — a leaked prompt log must not become a
+  /// student-data incident.
+  inputSummary Json @default("{}") @map("input_summary")
+  outputRef    Json @default("{}") @map("output_ref")
+
+  requestedCount Int @default(0) @map("requested_count")
+  producedCount  Int @default(0) @map("produced_count")
+  acceptedCount  Int @default(0) @map("accepted_count")
+
+  errorCode    String? @map("error_code")
+  errorMessage String? @map("error_message")
+
+  startedAt  DateTime  @default(now()) @map("started_at")
+  finishedAt DateTime? @map("finished_at")
+
+  usage AIUsage[]
+
+  @@index([organizationId, feature, startedAt])
+  @@map("ai_generations")
+}
+
+/// One provider call. Written for EVERY call, including failures and refusals.
+///
+/// A retry storm is invisible in a success-only ledger, and that invisibility
+/// is exactly what produces a surprise bill at the end of the month.
+model AIUsage {
+  id             String  @id @default(uuid()) @db.Uuid
+  generationId   String? @map("ai_generation_id") @db.Uuid
+  organizationId String? @map("organization_id") @db.Uuid
+
+  feature       AIFeature
+  provider      String
+  model         String
+  promptVersion String?   @map("prompt_version")
+
+  inputTokens       Int @default(0) @map("input_tokens")
+  outputTokens      Int @default(0) @map("output_tokens")
+  cachedInputTokens Int @default(0) @map("cached_input_tokens")
+
+  latencyMs  Int    @default(0) @map("latency_ms")
+  /// Millionths of a US dollar. An integer, because money in a float is how a
+  /// ledger stops adding up.
+  costMicros BigInt @default(0) @map("cost_micros")
+
+  status    AICallStatus
+  createdAt DateTime     @default(now()) @map("created_at")
+
+  generation AIGeneration? @relation(fields: [generationId], references: [id], onDelete: SetNull)
+
+  @@index([organizationId, createdAt])
+  @@index([feature, createdAt])
+  @@map("ai_usage")
+}
+
+/// What one organization may spend, in a window.
+///
+/// Checked BEFORE the call, not reconciled after. A budget that is only
+/// discovered to be exceeded once the money is gone is a report, not a control.
+model AIBudget {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+
+  period  BudgetPeriod
+  /// Null means the limit covers every feature together.
+  feature AIFeature?
+
+  limitMicros BigInt @map("limit_micros")
+  spentMicros BigInt @default(0) @map("spent_micros")
+
+  windowStart DateTime @map("window_start")
+  windowEnd   DateTime @map("window_end")
+
+  @@unique([organizationId, period, feature, windowStart])
+  @@index([organizationId, windowEnd])
+  @@map("ai_budgets")
+}
+
+/// The prompt itself, versioned.
+///
+/// On the global plane, with no `organization_id`: a prompt is platform
+/// property in the same way the curriculum is, and one tenant editing the
+/// prompt every other tenant's questions come from is not a feature.
+///
+/// Versioned because `ai_usage.prompt_version` has to mean something. "The
+/// questions got worse in March" is only answerable if the prompt that produced
+/// them is still on record.
+model PromptVersion {
+  id        String    @id @default(uuid()) @db.Uuid
+  feature   AIFeature
+  version   Int
+  /// The system prompt. Everything above the cache breakpoint.
+  template  String
+  modelTier ModelTier @map("model_tier")
+  /// The JSON schema the response is parsed against, kept beside the prompt
+  /// that promised it.
+  schema    Json      @default("{}")
+  active    Boolean   @default(false)
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@unique([feature, version])
+  @@index([feature, active])
+  @@map("prompt_versions")
+}
+
+enum AIFeature {
+  QUESTION_GENERATION
+  QUESTION_VALIDATION
+  PERFORMANCE_ANALYSIS
+  TEACHER_COPILOT
+  STUDENT_TUTOR
+  REPORT_GENERATION
+  RECOMMENDATION
+  CLASSIFICATION
+}
+
+enum AIGenerationStatus {
+  QUEUED
+  RUNNING
+  SUCCEEDED
+  PARTIAL
+  FAILED
+  REFUSED
+}
+
+enum AICallStatus {
+  SUCCEEDED
+  FAILED
+  REFUSED
+  TIMED_OUT
+}
+
+enum BudgetPeriod {
+  DAY
+  MONTH
+}
+
+/// Tiers, not model names. Business logic names a tier; configuration maps it
+/// to a model id. Changing which model serves BALANCED is an environment
+/// change, never a code change.
+enum ModelTier {
+  FAST
+  BALANCED
+  DEEP
+}
+
+// ===========================================================================
+// Slice 12: learning gaps
+// ===========================================================================
+//
+// The link the whole product exists to close: mastery says what a class knows,
+// a gap says what to do about it on Monday.
+
+/// A concept where mastery is below threshold, WITH ENOUGH EVIDENCE TO SAY SO.
+///
+/// Derived, never hand-entered. A teacher cannot create one, and — the
+/// invariant that matters most — cannot close one either: a gap resolves only
+/// on new evidence, never on the passage of time and never on somebody
+/// clicking "done". A product where a gap can be dismissed is a product where
+/// the number on the dashboard is about how tidy the teacher is.
+model LearningGap {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+
+  scope     GapScope
+  /// The student, or the class. Which one depends on `scope`.
+  scopeId   String   @map("scope_id") @db.Uuid
+  conceptId String   @map("concept_id") @db.Uuid
+
+  severity GapSeverity
+  status   GapStatus   @default(DETECTED)
+
+  /// How many students this covers: 1 at student scope, the count below
+  /// threshold at class scope.
+  affectedStudentCount Int     @map("affected_student_count")
+  /// The mean estimate across those students, at the moment of detection.
+  meanEstimate         Decimal @map("mean_estimate") @db.Decimal(4, 3)
+  /// Students who had an estimate at all — the denominator, kept because a
+  /// figure without one is not a finding.
+  measuredStudentCount Int     @map("measured_student_count")
+
+  /// A concept this one is built on, where the class is ALSO weak.
+  ///
+  /// The single most useful field here. "They cannot do similar triangles" is
+  /// a symptom; "they cannot do ratio, which similar triangles needs" is
+  /// something to teach on Monday, and reteaching the symptom would have
+  /// wasted the lesson.
+  rootCauseConceptId String? @map("root_cause_concept_id") @db.Uuid
+
+  /// Stamped when the gap was first seen and never moved, so "how long has
+  /// this been true" has an answer.
+  detectedAt       DateTime  @default(now()) @map("detected_at")
+  /// Re-stamped every time detection confirms the gap is still there.
+  lastSeenAt       DateTime  @default(now()) @map("last_seen_at")
+  resolvedAt       DateTime? @map("resolved_at")
+  /// When somebody said they had seen it. Acknowledging is not resolving.
+  acknowledgedAt   DateTime? @map("acknowledged_at")
+  acknowledgedById String?   @map("acknowledged_by_id") @db.Uuid
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@unique([scope, scopeId, conceptId])
+  @@index([organizationId, status, severity])
+  @@index([organizationId, scope, scopeId])
+  @@map("learning_gaps")
+}
+
+enum GapScope {
+  STUDENT
+  CLASS
+}
+
+enum GapSeverity {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum GapStatus {
+  DETECTED
+  ACKNOWLEDGED
+  INTERVENING
+  RESOLVED
+  /// Survived an intervention and is still there. The most important signal in
+  /// the product, and it must never be indistinguishable from a fresh gap.
+  PERSISTING
+}
+
+// ===========================================================================
+// Plans, entitlements and subscriptions
+// ===========================================================================
+//
+// **No price is hard-coded anywhere in the application.** A feature check is
+// `can(organizationId, "ai_generations_per_month")`, and the answer comes from
+// `entitlements` joined through the active subscription. Adding a plan, moving
+// a limit or running a promotion is data — never a deploy.
+//
+// These three tables are on the GLOBAL plane, like the curriculum: a plan is
+// platform property, and a tenant editing the limits it is billed against is
+// not a feature. Only `subscriptions` is per-organization.
+
+/// What can be bought. Platform-owned, readable by everybody.
+model Plan {
+  id   String @id @default(uuid()) @db.Uuid
+  code String @unique
+  name String
+
+  /// Paise, not rupees, and an integer. Money in a float is how a bill stops
+  /// adding up, and the smallest unit is the only one that never rounds.
+  pricePaise Int          @map("price_paise")
+  interval   PlanInterval @default(MONTH)
+
+  /// Whether it appears on a pricing page. A bespoke School contract is a real
+  /// plan and not a public one.
+  isPublic  Boolean @default(true) @map("is_public")
+  sortOrder Int     @default(0) @map("sort_order")
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  entitlements  Entitlement[]
+  subscriptions Subscription[]
+
+  @@index([isPublic, sortOrder])
+  @@map("plans")
+}
+
+/// One capability, and how much of it.
+///
+/// A missing row means "not included", not "unlimited". The default has to be
+/// the restrictive one: a capability added next month is then unavailable
+/// everywhere until somebody grants it, rather than free for everybody until
+/// somebody remembers to charge.
+model Entitlement {
+  id     String @id @default(uuid()) @db.Uuid
+  planId String @map("plan_id") @db.Uuid
+  key    String
+
+  /// Null with `unlimited = false` means the capability is on with no ceiling
+  /// on count — a boolean feature like `parent_portal`.
+  limitValue Int     @default(0) @map("limit_value")
+  unlimited  Boolean @default(false)
+
+  plan Plan @relation(fields: [planId], references: [id], onDelete: Cascade)
+
+  @@unique([planId, key])
+  @@map("entitlements")
+}
+
+/// What one organization is on.
+model Subscription {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @unique @map("organization_id") @db.Uuid
+  planId         String @map("plan_id") @db.Uuid
+
+  status SubscriptionStatus @default(TRIALING)
+
+  trialEndsAt        DateTime? @map("trial_ends_at")
+  currentPeriodStart DateTime  @default(now()) @map("current_period_start")
+  currentPeriodEnd   DateTime? @map("current_period_end")
+
+  /// Whoever takes the money. Empty until there is a payment provider.
+  provider    String?
+  providerRef String?   @map("provider_ref")
+  cancelledAt DateTime? @map("cancelled_at")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  plan Plan @relation(fields: [planId], references: [id])
+
+  @@index([status, currentPeriodEnd])
+  @@map("subscriptions")
+}
+
+/// How much of a metered entitlement has been used, in a window.
+///
+/// Separate from `ai_budgets`, which is about money. This is about the thing
+/// being sold: "5 AI generations a month" is a product promise, and a budget in
+/// dollars is an operational guard. Conflating them would mean a price change
+/// silently moved a safety limit.
+model UsageCounter {
+  id             String   @id @default(uuid()) @db.Uuid
+  organizationId String   @map("organization_id") @db.Uuid
+  key            String
+  periodStart    DateTime @map("period_start")
+  value          Int      @default(0)
+
+  /// A database default as well as a Prisma one. `@default(now()) @updatedAt` alone leaves the
+  /// column NOT NULL with nothing to fill it, so any writer that is not Prisma
+  /// — a migration, a maintenance script, a psql session — fails on a
+  /// constraint it had no way to know about.
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@unique([organizationId, key, periodStart])
+  @@index([organizationId, periodStart])
+  @@map("usage_counters")
+}
+
+enum PlanInterval {
+  MONTH
+  YEAR
+}
+
+enum SubscriptionStatus {
+  TRIALING
+  ACTIVE
+  PAST_DUE
+  CANCELLED
+  EXPIRED
+}
+
+// ===========================================================================
+// Interventions
+// ===========================================================================
+//
+// The other half of the loop. A gap says what is wrong; an intervention is what
+// somebody did about it, and — the only reason this table exists — what
+// happened next.
+
+/// A deliberate action taken against a gap, with a stamped baseline.
+///
+/// ---------------------------------------------------------------------------
+/// The baseline is the whole point
+/// ---------------------------------------------------------------------------
+/// `baselineMastery` is written at creation and never touched again. Without
+/// that stamp "improvement" is unfalsifiable — the number would be compared
+/// against whatever mastery happens to be when somebody looks, which always
+/// flatters the intervention, and an unfalsifiable improvement claim is the
+/// thing that eventually loses the customer.
+///
+/// So the measurement is: what it was when we started, what it is now, and how
+/// many students were behind it. All three, or none.
+model Intervention {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  learningGapId  String @map("learning_gap_id") @db.Uuid
+  createdById    String @map("created_by_id") @db.Uuid
+
+  kind InterventionKind
+
+  /// The remedial paper, when one was built. Null for a lesson taught in a
+  /// room, which is a real intervention and leaves no row anywhere else.
+  assessmentId String? @map("assessment_id") @db.Uuid
+  assignmentId String? @map("assignment_id") @db.Uuid
+
+  /// Stamped at creation. NEVER updated.
+  baselineMastery      Decimal @map("baseline_mastery") @db.Decimal(4, 3)
+  baselineStudentCount Int     @map("baseline_student_count")
+  /// What would count as having worked. Recorded so success is defined before
+  /// the result is known, rather than after it.
+  targetMastery        Decimal @map("target_mastery") @db.Decimal(4, 3)
+
+  /// Null until measured. Null is not zero here either.
+  outcomeMastery      Decimal? @map("outcome_mastery") @db.Decimal(4, 3)
+  outcomeStudentCount Int?     @map("outcome_student_count")
+
+  status InterventionStatus @default(PLANNED)
+
+  note String? @db.VarChar(1000)
+
+  createdAt  DateTime  @default(now()) @map("created_at")
+  measuredAt DateTime? @map("measured_at")
+  updatedAt  DateTime  @default(now()) @updatedAt @map("updated_at")
+
+  @@index([organizationId, status])
+  @@index([organizationId, learningGapId])
+  @@map("interventions")
+}
+
+enum InterventionKind {
+  /// A remedial paper, built from the bank and assigned to the affected group.
+  REMEDIAL_ASSESSMENT
+  /// A set to practise. Arrives with personalised practice.
+  PRACTICE_SET
+  /// A lesson. The most common real intervention, and the one the product
+  /// would otherwise never see.
+  LESSON_PLAN
+  MANUAL
+}
+
+enum InterventionStatus {
+  PLANNED
+  ACTIVE
+  /// Measured, whichever way it went. A measured failure is worth more than an
+  /// unmeasured success.
+  MEASURED
+  ABANDONED
+}
+
+// ===========================================================================
+// The Mistake Bank — a student's own wrong answers, typed and revisited
+// ===========================================================================
+
+/// One wrong answer, kept so the student can come back to it.
+///
+/// **A mistake is a settled wrong answer, not a low score.** The same
+/// discipline as everywhere else: an unmarked written answer is not a mistake,
+/// it is unmarked, and recording it as one would put a student's own three
+/// paragraphs in front of them under the heading "you got this wrong" before
+/// anybody had read them.
+///
+/// **It resolves on independent evidence.** Getting the SAME question right a
+/// second time mostly measures memory of the answer — that is `RETRIED`, which
+/// is engagement rather than proof. `RESOLVED` requires a different question on
+/// the same concept, answered correctly after the mistake was made, which is
+/// exactly what `concept_evidence` already records.
+model StudentMistake {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  studentUserId  String @map("student_user_id") @db.Uuid
+
+  /// The answer this came from. One mistake per answer, forever — re-running
+  /// the recorder on a marked paper must not deal the same card twice.
+  attemptAnswerId String @unique @map("attempt_answer_id") @db.Uuid
+
+  questionId        String  @map("question_id") @db.Uuid
+  /// The version they were SERVED. A question edited in December must not
+  /// change what they see when they revisit a September mistake.
+  questionVersionId String? @map("question_version_id") @db.Uuid
+
+  /// Null when the question maps to no concept. Such a mistake is still worth
+  /// showing the student — it just cannot resolve on concept evidence.
+  conceptId String? @map("concept_id") @db.Uuid
+
+  mistakeType MistakeType @map("mistake_type")
+
+  /// How the type was arrived at. A rule-typed mistake costs nothing and is
+  /// certain; a model-typed one is a judgement, and the two should never be
+  /// indistinguishable in the data.
+  typeSource MistakeTypeSource @default(RULE) @map("type_source")
+
+  /// Why, in a sentence, when a model was asked. Shown to the student.
+  typeReason String? @map("type_reason") @db.VarChar(400)
+
+  status MistakeStatus @default(UNRESOLVED)
+
+  /// How many times they have come back to this exact question.
+  retryCount       Int       @default(0) @map("retry_count")
+  lastRetriedAt    DateTime? @map("last_retried_at")
+  /// True only for the most recent retry. Null before the first.
+  lastRetryCorrect Boolean?  @map("last_retry_correct")
+
+  /// When independent evidence closed it. Never set by a person.
+  resolvedAt DateTime? @map("resolved_at")
+
+  /// When the paper was SAT, not when it was marked. A December marking
+  /// session is not a December mistake.
+  occurredAt DateTime @map("occurred_at")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@index([organizationId, studentUserId, status])
+  @@index([organizationId, studentUserId, conceptId])
+  @@index([organizationId, mistakeType, typeSource])
+  @@map("student_mistakes")
+}
+
+enum MistakeType {
+  /// They do not understand the idea. The expensive one to fix, and the one
+  /// worth spending a token to identify.
+  CONCEPTUAL
+  /// They understand it and executed it wrongly — a sign slip, a step skipped.
+  PROCEDURAL
+  /// They know it. Answered too fast, or contradicted their own working.
+  CARELESS
+  /// Blank. Free to classify, and it means something different from wrong.
+  UNATTEMPTED
+  /// They answered a question the paper did not ask.
+  MISREAD
+  /// Ran out of clock. Free to classify from the timestamps.
+  TIME_PRESSURE
+  /// Nothing has looked at it yet. Never shown as a type — the card says so.
+  UNCLASSIFIED
+}
+
+enum MistakeTypeSource {
+  /// Free, certain, and the majority. See core/mistakes/classify.ts.
+  RULE
+  /// A FAST-tier model, nightly and in batches. Never on a blocking path.
+  MODEL
+  /// Nothing has classified it yet.
+  PENDING
+}
+
+enum MistakeStatus {
+  UNRESOLVED
+  /// They came back and got this same question right. Engagement, not proof.
+  RETRIED
+  /// Independent evidence: a different question on the same concept, right,
+  /// after this. The only way a mistake closes.
+  RESOLVED
+}
+
+// ===========================================================================
+// Personalised practice — the student's own half of the loop
+// ===========================================================================
+
+/// A set of questions a student chose to work through, untimed.
+///
+/// ---------------------------------------------------------------------------
+/// Practice is not a test, and the difference is the point
+/// ---------------------------------------------------------------------------
+/// No clock, no submission ceremony, and feedback after every single question
+/// rather than at the end. A practice runner that behaves like the exam player
+/// teaches nothing the exam did not already teach — the whole value is being
+/// told *immediately* that the answer was wrong and why, while the reasoning
+/// is still in the student's head.
+model PracticeSession {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  studentUserId  String @map("student_user_id") @db.Uuid
+
+  /// Why these questions. Recorded because "I chose this" and "the product told
+  /// me to" are different sessions, and only one of them measures whether the
+  /// recommendations are any good.
+  source PracticeSource
+
+  /// What it was about. Stored rather than re-derived: the recommendation that
+  /// produced this session is a claim, and a claim you cannot look up later is
+  /// a claim you cannot check.
+  conceptIds String[] @map("concept_ids") @db.Uuid
+
+  questionCount Int @map("question_count")
+
+  /// The level the set opened at, stamped once.
+  ///
+  /// Not re-derived per question: practice writes evidence, so a re-derived
+  /// base would drift upward mid-session as the student answered, and the
+  /// ceiling that stops two lucky answers reaching HARD would move with it.
+  /// The same reasoning as an intervention's baseline, for the same reason.
+  baseDifficulty Difficulty @default(MEDIUM) @map("base_difficulty")
+
+  /// Null until they finish. A session abandoned halfway is a real outcome and
+  /// is left visible as one rather than tidied away.
+  completedAt DateTime? @map("completed_at")
+  /// Fraction correct, 0..1. Null until completed.
+  score       Decimal?  @db.Decimal(4, 3)
+
+  startedAt DateTime @default(now()) @map("started_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  answers PracticeAnswer[]
+
+  @@index([organizationId, studentUserId, startedAt])
+  @@map("practice_sessions")
+}
+
+model PracticeAnswer {
+  id                String @id @default(uuid()) @db.Uuid
+  organizationId    String @map("organization_id") @db.Uuid
+  practiceSessionId String @map("practice_session_id") @db.Uuid
+
+  questionId        String  @map("question_id") @db.Uuid
+  /// Frozen at serve time, exactly as an attempt does it.
+  questionVersionId String? @map("question_version_id") @db.Uuid
+
+  position Int
+
+  response  Json?
+  /// Null until answered. Practice only serves machine-markable questions, so
+  /// there is no third "awaiting a person" state here — see core/practice.
+  isCorrect Boolean? @map("is_correct")
+
+  timeSpentSeconds Int @default(0) @map("time_spent_seconds")
+
+  answeredAt DateTime? @map("answered_at")
+  createdAt  DateTime  @default(now()) @map("created_at")
+
+  session PracticeSession @relation(fields: [practiceSessionId], references: [id], onDelete: Cascade)
+
+  @@unique([practiceSessionId, position])
+  @@index([organizationId, questionId])
+  @@map("practice_answers")
+}
+
+enum PracticeSource {
+  /// The product chose it, from mastery and mistakes.
+  RECOMMENDED
+  /// Built from the mistake bank.
+  MISTAKE_REVIEW
+  /// The student picked the concept.
+  SELF_SELECTED
+  /// A teacher set it as an intervention.
+  ASSIGNED
+}
+
+enum EvidenceSource {
+  /// A supervised, marked paper. The gold standard, weighted 1.0.
+  ASSESSMENT
+  /// Untimed, unwatched, with an explanation a tap away. Weighted down.
+  PRACTICE
+}
+
+// ===========================================================================
+// The parent portal — a consented edge, not a role
+// ===========================================================================
+
+/// One parent's access to one student.
+///
+/// ---------------------------------------------------------------------------
+/// Access is the edge, never the role
+/// ---------------------------------------------------------------------------
+/// A PARENT membership grants nothing. The authorize matrix gives the role
+/// `profile:read_own` and nothing else, deliberately: everything a parent can
+/// see comes from a row here, so "is a parent" and "may read this child" are
+/// different questions and only the second one is ever asked.
+///
+/// That also makes the answer to "which children?" a query rather than a
+/// judgement, which is what keeps a parent from ever seeing another family's
+/// child by a mistake in a filter.
+///
+/// ---------------------------------------------------------------------------
+/// What is deliberately NOT reachable through it
+/// ---------------------------------------------------------------------------
+/// Tutor conversations, mistake-bank contents, and free-text answers. A child
+/// who believes a parent reads every question they ask stops asking questions,
+/// which destroys the feature's value and the child's interest at once. The
+/// boundary is enforced structurally — `core/parent/read.ts` is the only module
+/// a parent route may read student data through, and an ESLint fence stops the
+/// routes importing anything else.
+model ParentStudentLink {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  parentUserId   String @map("parent_user_id") @db.Uuid
+  studentUserId  String @map("student_user_id") @db.Uuid
+
+  /// On the EDGE, not on a parent profile. A man may be father to one student
+  /// and guardian to another; hanging it off the person makes that
+  /// unrepresentable, which is why there is no `parent_profiles` table here
+  /// even though DATABASE_SCHEMA.md sketched one — it would have carried this
+  /// column and nothing else.
+  relationship Relationship
+
+  /// Explicit, timestamped, and attributed. Null means invited but not yet
+  /// accepted, and such a link grants nothing.
+  consentGrantedAt DateTime? @map("consent_granted_at")
+  consentGrantedBy String?   @map("consent_granted_by") @db.Uuid
+
+  /// What this link may read. Today `{"performance": true}` is the only shape
+  /// honoured, and the reader checks it rather than assuming — a scope column
+  /// nothing consults is a promise in a comment.
+  scope Json @default("{\"performance\": true}")
+
+  /// Revocation is a stamp, not a delete: who could see what, and until when,
+  /// is a question that gets asked after the fact.
+  revokedAt DateTime? @map("revoked_at")
+  revokedBy String?   @map("revoked_by") @db.Uuid
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@unique([parentUserId, studentUserId])
+  @@index([organizationId, parentUserId])
+  @@index([organizationId, studentUserId])
+  @@map("parent_student_links")
+}
+
+enum Relationship {
+  FATHER
+  MOTHER
+  GUARDIAN
+}
+
+// ===========================================================================
+// The AI Teacher Copilot — last, because it reasons over everything else
+// ===========================================================================
+
+/// One conversation between a teacher and the Copilot.
+///
+/// ---------------------------------------------------------------------------
+/// Kept, because a teacher comes back to it
+/// ---------------------------------------------------------------------------
+/// The question a teacher asks on Friday about a class is one they will want
+/// the answer to again on Monday, and re-asking it costs a DEEP-tier call — the
+/// most expensive thing in the product. Persisting the thread is a cost control
+/// as much as a convenience.
+///
+/// It is also the audit trail. A teacher who changed a lesson plan because of
+/// something this said should be able to show what it said.
+model CopilotConversation {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  teacherUserId  String @map("teacher_user_id") @db.Uuid
+
+  /// The first question, trimmed. Generated from the text rather than by a
+  /// second model call — a title is not worth a token.
+  title String @db.VarChar(200)
+
+  /// Scoped to one class when the teacher opened it from there. Null means
+  /// "everything I teach", which is a different and more expensive question.
+  classId String? @map("class_id") @db.Uuid
+
+  createdAt     DateTime @default(now()) @map("created_at")
+  lastMessageAt DateTime @default(now()) @map("last_message_at")
+  updatedAt     DateTime @default(now()) @updatedAt @map("updated_at")
+
+  messages CopilotMessage[]
+
+  @@index([organizationId, teacherUserId, lastMessageAt])
+  @@map("copilot_conversations")
+}
+
+model CopilotMessage {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  conversationId String @map("conversation_id") @db.Uuid
+
+  role    CopilotRole
+  content String      @db.VarChar(8000)
+
+  /// What the answer was built from, so a teacher can check it.
+  ///
+  /// An answer a teacher will act on across a whole cohort has to be
+  /// auditable — "27% of 10-A are below the line on Similarity" is a claim, and
+  /// the row it came from is what makes it one rather than an assertion.
+  citations Json?
+
+  /// The ledger row for this turn. Null on the teacher's own messages.
+  generationId String? @map("generation_id") @db.Uuid
+  costMicros   Int?    @map("cost_micros")
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  conversation CopilotConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId, conversationId, createdAt])
+  @@map("copilot_messages")
+}
+
+enum CopilotRole {
+  USER
+  ASSISTANT
+}
+
+// ===========================================================================
+// The AI student tutor — help on one question, never the answer
+// ===========================================================================
+
+/// A student asking for help on ONE question.
+///
+/// ---------------------------------------------------------------------------
+/// Always entered from a question
+/// ---------------------------------------------------------------------------
+/// UX_FLOW.md: *"✦ AI tutor (always entered from a question)"*. There is no
+/// blank chat box and no `questionId`-less row this table can hold — a tutor a
+/// student can open and type anything into is a homework machine, and the
+/// anchor is what stops it being one.
+///
+/// ---------------------------------------------------------------------------
+/// It escalates, and the escalation is the record
+/// ---------------------------------------------------------------------------
+/// A student who needed the full method has had more help than one who needed a
+/// nudge, and `maxLevel` is what says so. It is read by the practice evidence
+/// writer — an answer given after being walked through says nothing about what
+/// the student can do alone, so it produces no evidence at all.
+model TutorSession {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  studentUserId  String @map("student_user_id") @db.Uuid
+
+  /// The question this is about. Not nullable, and that is the design.
+  questionId        String  @map("question_id") @db.Uuid
+  /// The version they were SERVED, so December's edit cannot change what they
+  /// were helped with in September.
+  questionVersionId String? @map("question_version_id") @db.Uuid
+
+  /// Where they were when they asked, so the help can be offered again there.
+  practiceAnswerId String? @map("practice_answer_id") @db.Uuid
+  studentMistakeId String? @map("student_mistake_id") @db.Uuid
+
+  /// The furthest they have escalated. HINT < STEPS < EXPLAIN.
+  maxLevel TutorLevel @default(HINT) @map("max_level")
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  lastAskedAt DateTime @default(now()) @map("last_asked_at")
+  updatedAt   DateTime @default(now()) @updatedAt @map("updated_at")
+
+  turns TutorTurn[]
+
+  /// One session per student per question. Asking again continues the same
+  /// thread rather than resetting the escalation, which would make "how much
+  /// help did this need" unanswerable.
+  @@unique([studentUserId, questionId])
+  @@index([organizationId, studentUserId, lastAskedAt])
+  @@map("tutor_sessions")
+}
+
+model TutorTurn {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  sessionId      String @map("session_id") @db.Uuid
+
+  level   TutorLevel
+  content String     @db.VarChar(4000)
+
+  /// True when the model gave the answer away and the authored hint was served
+  /// instead. Counted rather than hidden: if this is not rare, the prompt is
+  /// wrong and somebody has to be able to see that.
+  wasWithheld Boolean @default(false) @map("was_withheld")
+
+  generationId String? @map("generation_id") @db.Uuid
+  costMicros   Int?    @map("cost_micros")
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  session TutorSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId, sessionId, createdAt])
+  @@map("tutor_turns")
+}
+
+enum TutorLevel {
+  /// A nudge at what to notice. No method, no arithmetic.
+  HINT
+  /// The method, without doing it for them.
+  STEPS
+  /// The underlying idea, said more simply than the explanation does.
+  EXPLAIN
+}
+
+/// A report handed to somebody.
+///
+/// ---------------------------------------------------------------------------
+/// Stamped, not derived — the opposite decision from the study plan
+/// ---------------------------------------------------------------------------
+/// `core/plan` stores nothing and re-derives on every read, because a plan that
+/// is out of date is a plan that is wrong. A report is the other kind of
+/// artefact entirely: it is HANDED TO SOMEBODY. A parent shown "62% across 4 of
+/// 9 chapters" at a September meeting must be able to bring that same sheet in
+/// December and have it still say that.
+///
+/// A report regenerated on every view would change silently under a
+/// conversation, and a parent told one thing who later reads another stops
+/// believing both readings. So the payload is written once, in the transaction
+/// that creates the row, and nothing updates it — the same invariant, and the
+/// same reasoning, as an intervention's stamped baseline.
+model Report {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+
+  studentUserId String  @map("student_user_id") @db.Uuid
+  /// The class it was generated from. Context, not access control.
+  classId       String? @map("class_id") @db.Uuid
+
+  kind ReportKind @default(TERM)
+
+  /// What the report covers. Every figure inside is computed over this window.
+  periodStart DateTime @map("period_start")
+  periodEnd   DateTime @map("period_end")
+
+  generatedById String   @map("generated_by_id") @db.Uuid
+  generatedAt   DateTime @default(now()) @map("generated_at")
+
+  /// The whole report, as it read on the day. Never recomputed.
+  payload Json
+
+  /// Which shape `payload` is in.
+  ///
+  /// A stored document outlives the code that wrote it. Without this, adding a
+  /// field in March means every report written before March renders wrong or
+  /// crashes — the same reason an attempt records the question version it was
+  /// served rather than the current one.
+  payloadVersion Int @default(1) @map("payload_version")
+
+  /// The school's letterhead as it stood when the report was written, or null
+  /// when the school was not branded. Stamped for the payload's reason: a sheet
+  /// signed off under one principal must not name the next one when reprinted.
+  letterhead Json?
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  /// Newest first, per student. There is deliberately no unique constraint on
+  /// (student, period): regenerating SUPERSEDES rather than overwrites, so
+  /// "what did we tell this parent in September" always has an answer.
+  @@index([organizationId, studentUserId, generatedAt])
+  @@index([organizationId, classId, generatedAt])
+  @@map("reports")
+}
+
+enum ReportKind {
+  /// One student, one period. What a parent is handed.
+  TERM
+}
+
+/// Every SMS the product tried to send.
+///
+/// ---------------------------------------------------------------------------
+/// Written for the support call, not for analytics
+/// ---------------------------------------------------------------------------
+/// A student says they did not get their code. Without this row the only
+/// honest answer is "we do not know", and the second-best answer — "the API
+/// returned 200" — is not an answer about whether a phone buzzed.
+///
+/// So every attempt is recorded, including the failures and the ones that were
+/// never sent at all, with the provider's own message id where there is one.
+/// A success-only ledger hides exactly the case somebody is ringing about.
+///
+/// ---------------------------------------------------------------------------
+/// `organization_id` is nullable, and that is the pre-tenant seam again
+/// ---------------------------------------------------------------------------
+/// A student signing in has no tenant yet — the code is what will eventually
+/// tell us which one. So an OTP row carries no organization, exactly as an
+/// `audit_logs` row for a platform action does, and is readable only by the
+/// platform role. A message sent to a parent, which happens inside a known
+/// tenant, does carry one.
+model SmsMessage {
+  id             String  @id @default(uuid()) @db.Uuid
+  organizationId String? @map("organization_id") @db.Uuid
+
+  /// E.164 without the plus, as the provider takes it.
+  ///
+  /// Stored in full because "did 98765 43210 get their code" is the question
+  /// this table exists to answer, and a hash cannot be looked up by a person
+  /// reading a support ticket. The console masks it on the way out — the same
+  /// treatment a pending parent invitation already gets.
+  phone String
+
+  /// Which registered template was used. India requires every commercial SMS
+  /// to match a DLT-registered template exactly, so this is not a label — it
+  /// is the thing the regulator matches against.
+  template SmsTemplate
+
+  status SmsStatus @default(QUEUED)
+
+  /// The provider's id, for reconciling against their dashboard and for a
+  /// delivery receipt to find its way back to this row later.
+  providerMessageId String? @map("provider_message_id")
+  provider          String?
+
+  /// What it cost. SMS is billed per message and per segment, so an unthrottled
+  /// send is a bill rather than merely a bug.
+  costMicros Int? @map("cost_micros")
+
+  /// The provider's own error, for us. Never shown to a person — the same rule
+  /// the AI gateway follows.
+  error String?
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([phone, createdAt])
+  @@index([organizationId, createdAt])
+  @@index([status, createdAt])
+  @@map("sms_messages")
+}
+
+enum SmsTemplate {
+  /// The six-digit sign-in code. The only one a student ever receives.
+  LOGIN_CODE
+  /// A parent invitation link.
+  PARENT_INVITE
+}
+
+enum SmsStatus {
+  /// Accepted by us, not yet handed to a provider.
+  QUEUED
+  /// The provider accepted it. NOT the same as delivered — a handset is a
+  /// thing we do not hear about unless a receipt comes back.
+  SENT
+  /// A delivery receipt confirmed it arrived.
+  DELIVERED
+  /// The provider rejected it, or we could not reach them.
+  FAILED
+  /// Never attempted: no provider is configured, or a safety limit refused it.
+  /// Recorded rather than dropped, because "nothing was sent" is the fact a
+  /// support call needs and silence looks identical to a bug.
+  SKIPPED
+}
+
+// ===========================================================================
+// Phase 3: MIS/ERP integration webhooks
+// ===========================================================================
+//
+// A school that already runs an MIS does not want a second system of record.
+// It wants the two things this product knows that its MIS does not — a paper
+// exists, and here are the marks — to arrive in the software the office
+// already uses. That is one outbound HTTP call, and everything below exists
+// because the call is the easy part and the guarantees around it are not.
+//
+// DATABASE_SCHEMA.md section 9 settled the shape: an `outbox` written in the
+// same transaction as the state change, and a `jobs` queue claimed with
+// `for update skip locked`. Both are implemented here as written, and the two
+// deliberate deviations are marked where they occur.
+
+/// Where a school's MIS wants to be told, and what it wants to be told about.
+model WebhookEndpoint {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+
+  /// https only. Enforced in core/webhooks/endpoints.ts, not here: a URL that
+  /// fails validation should reach a person as a sentence, not as a constraint
+  /// violation.
+  url String
+
+  /// What the office calls this integration. "Fedena", "the office server".
+  label String
+
+  /// -----------------------------------------------------------------------
+  /// Why this is stored in a form we can read back, unlike every other secret
+  /// -----------------------------------------------------------------------
+  /// A password is stored as an argon2 hash and a session token as a SHA-256
+  /// hash, because in both cases the only question ever asked is "does this
+  /// match", and a one-way function answers it.
+  ///
+  /// This one is different in kind. It is an HMAC key: the product has to
+  /// COMPUTE with it on every delivery, and a hash cannot sign. There is no
+  /// arrangement in which we hold only a digest and still produce a signature
+  /// the receiver can verify — that is what "shared secret" means.
+  ///
+  /// So the mitigations are the ones actually available:
+  ///
+  ///   - It is generated here, never chosen by a person, so it is not a
+  ///     password somebody has also used somewhere that matters.
+  ///   - It is returned exactly once, by the call that creates or rotates it.
+  ///     No read path in core/webhooks/endpoints.ts selects this column, and
+  ///     there is deliberately no route that reveals it — a reveal endpoint is
+  ///     a permanent way to lift every integration key in the product with one
+  ///     borrowed session, and it would exist to save somebody two minutes.
+  ///   - Losing it is recoverable by ROTATING it, which is those same two
+  ///     minutes and leaves an audit row saying who did it.
+  ///
+  /// Encryption at rest would add a step for an attacker holding a database
+  /// dump, and is worth doing the day there is a key-management story better
+  /// than "an environment variable beside DATABASE_URL". Today that would move
+  /// the secret rather than protect it, so it is not claimed.
+  secret String
+
+  /// Which events this endpoint is subscribed to. An empty array is a valid
+  /// state and means "nothing": an endpoint subscribed to everything by
+  /// default is how a school's server starts receiving traffic nobody asked
+  /// for.
+  events WebhookEvent[]
+
+  /// Deliveries are attempted only while this is true, and it is read at SEND
+  /// time rather than at queue time — see core/webhooks/deliver.ts.
+  active Boolean @default(true)
+
+  /// Stamped rather than inferred from `active`, so "when did this stop" has an
+  /// answer during the support call that follows.
+  deactivatedAt DateTime? @map("deactivated_at")
+
+  createdById String   @map("created_by_id") @db.Uuid
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@index([organizationId, active])
+  @@map("webhook_endpoints")
+}
+
+/// The event catalogue.
+///
+/// Deliberately an enum rather than a free-text topic, which is the one place
+/// this departs from DATABASE_SCHEMA.md section 9 in spirit. The emitters are
+/// database triggers, and a topic misspelled in a trigger is an event that is
+/// written, published, matched against nobody's subscription and dropped
+/// silently forever. As an enum the same typo fails `npm run db:rls` out loud.
+///
+/// It also makes the subscription list on the console a fixed set of
+/// checkboxes rather than a text box, which is the difference between a school
+/// configuring an integration and a school guessing at one.
+enum WebhookEvent {
+  /// A paper exists and is final. Sent at PUBLISH, never at creation: a draft
+  /// has no frozen question versions and its marks may still move, and an MIS
+  /// that put a draft on a timetable would be advertising a test that changes.
+  /// Carries no student data of any kind.
+  ASSESSMENT_PUBLISHED
+
+  /// Marks are a fact and the students have been told.
+  ///
+  /// Sent at RELEASE and never at submission. The release gate is this
+  /// product's own decision about when a mark stops being provisional —
+  /// `resultsVisible()` — and an integration firing at submission would route
+  /// around it, putting a half-marked paper into a school report system before
+  /// the child who sat it has seen anything.
+  RESULTS_RELEASED
+
+  /// A student is on a class roster.
+  ///
+  /// Worth emitting because enrolment can start HERE: a student who joins with
+  /// a class code was never imported from the MIS, so the office has no other
+  /// way to learn about them. Carries the student's id, the class id and the
+  /// date, and nothing that identifies a child to anybody who does not already
+  /// know them.
+  STUDENT_ENROLLED
+}
+
+/// Events, written in the same transaction as the thing that happened.
+///
+/// ---------------------------------------------------------------------------
+/// That transaction is the entire reason this table exists
+/// ---------------------------------------------------------------------------
+/// The obvious implementation of a webhook is an HTTP call at the end of the
+/// function that did the work. It has two failure modes and both are silent:
+///
+///   - The call succeeds and the transaction then rolls back. The school's MIS
+///     has been told about a paper that does not exist, and nothing in this
+///     database disagrees with it.
+///   - The transaction commits and the process dies before the call. The paper
+///     exists, the office never hears, and no row anywhere records that
+///     anybody meant to tell them.
+///
+/// A row written INSIDE the transaction can have neither. If the state change
+/// rolls back the event goes with it; if the state change commits the event is
+/// durable and will be delivered eventually. "Eventually" is a real weakening
+/// and it is the right one: a school's server being down must not be able to
+/// fail a teacher's publish.
+///
+/// The rows are written by triggers in prisma/rls.sql rather than by
+/// application code, which is stronger still: the guarantee then holds for
+/// every path that changes the row, including the next feature's, including a
+/// backfill script, and including one whose author never read this comment.
+model OutboxEvent {
+  id String @id @default(uuid()) @db.Uuid
+
+  /// -----------------------------------------------------------------------
+  /// NOT NULL, where section 9 writes `organization_id null`
+  /// -----------------------------------------------------------------------
+  /// The doc leaves it nullable in anticipation of platform-level events. Under
+  /// RLS a NULL organization is a row the app role can neither read nor write —
+  /// `NULL = app_current_org()` is NULL, not true — so a nullable column here
+  /// would be one only a SECURITY DEFINER function could ever fill: a seam with
+  /// no caller. When a platform-level event exists, relaxing this is one
+  /// migration, made alongside the code that needs it.
+  organizationId String @map("organization_id") @db.Uuid
+
+  topic WebhookEvent
+
+  /// What was true at the moment it happened, assembled from the changed row
+  /// alone. Never a name, never a phone number, never anything a student typed
+  /// — see core/webhooks/payload.ts, which is where that rule is stated and
+  /// tested.
+  payload Json
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  /// When fan-out turned this into delivery jobs. Null means nothing has looked
+  /// at it yet; a value does NOT mean anything was delivered, or even that any
+  /// endpoint wanted it.
+  publishedAt DateTime? @map("published_at")
+
+  @@index([organizationId, publishedAt, createdAt])
+  @@map("outbox")
+}
+
+/// The queue. Section 9's design, unchanged.
+model Job {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+
+  /// Which runner picks this up. One queue today; the column is here because
+  /// putting webhook delivery and, say, nightly report generation on the same
+  /// runner means a slow school server delays everything else.
+  queue String @default("default")
+
+  /// What to do. `webhook.deliver` is the only value so far.
+  type String
+
+  payload Json
+
+  status   JobStatus @default(PENDING)
+  priority Int       @default(100)
+
+  attempts    Int @default(0)
+  maxAttempts Int @default(5) @map("max_attempts")
+
+  /// When it may next be tried. Backoff moves this forward, and it is what the
+  /// console shows as "next retry".
+  runAfter DateTime @default(now()) @map("run_after")
+
+  /// Who holds it, and until when. A runner that dies mid-delivery leaves a
+  /// RUNNING row whose lock expires, and the next pass returns it to PENDING —
+  /// which is why the lock carries a clock rather than being a boolean.
+  lockedBy    String?   @map("locked_by")
+  lockedUntil DateTime? @map("locked_until")
+
+  /// The last failure, in a structured form this product wrote — never a
+  /// receiver's own prose passed through. core/webhooks/failure.ts owns both
+  /// ends of it.
+  lastError String? @map("last_error")
+
+  /// -----------------------------------------------------------------------
+  /// `unique (type, dedupe_key) where dedupe_key is not null`, spelled the way
+  /// Postgres already behaves
+  /// -----------------------------------------------------------------------
+  /// A plain UNIQUE treats NULLs as distinct, so unlimited rows may carry a
+  /// null dedupe key while a non-null one is unique per type. That is exactly
+  /// the partial index section 9 describes, expressible in Prisma, and
+  /// identical in effect.
+  ///
+  /// Fan-out uses `<outboxId>:<endpointId>`, which is what makes running it
+  /// twice — after a crash, or from two schedulers — queue nothing the second
+  /// time.
+  dedupeKey String? @map("dedupe_key")
+
+  createdAt  DateTime  @default(now()) @map("created_at")
+  finishedAt DateTime? @map("finished_at")
+
+  @@unique([type, dedupeKey])
+  @@index([status, queue, runAfter])
+  @@index([organizationId, type, createdAt])
+  @@map("jobs")
+}
+
+enum JobStatus {
+  /// Waiting for `run_after`. Both "never tried" and "failed, will try again"
+  /// live here — the difference is `attempts`.
+  PENDING
+
+  /// Claimed by a runner, which holds it until `locked_until`.
+  RUNNING
+
+  /// Done.
+  SUCCEEDED
+
+  /// Terminal, and NOT an error to chase: a refusal. The endpoint was
+  /// deactivated between queueing and sending, or the event describes something
+  /// that no longer exists. Retrying would produce the same refusal at the same
+  /// cost, so it does not go back to PENDING.
+  FAILED
+
+  /// Exhausted `max_attempts`.
+  ///
+  /// Section 9: "A job that exhausts max_attempts goes DEAD and raises an alert
+  /// rather than disappearing." Both halves matter. The row survives, so an
+  /// event that was never delivered is still nameable months later; and the
+  /// console surfaces the count, because an integration nobody can see failing
+  /// is one that fails silently for a month and is then discovered by a parent
+  /// asking why the report card is empty.
+  DEAD
+}
+
+/// A short message from a teacher to one class — "Monday's test covers
+/// chapters 1 and 2". Shown on the home page of every student enrolled.
+///
+/// Deliberately not a chat: one direction, no replies, no attachments. Each
+/// addition would be a moderation problem in a product for fifteen-year-olds.
+model Announcement {
+  id             String    @id @default(uuid()) @db.Uuid
+  organizationId String    @map("organization_id") @db.Uuid
+  classId        String    @map("class_id") @db.Uuid
+  authorId       String    @map("author_id") @db.Uuid
+  body           String    @db.VarChar(1000)
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @default(now()) @updatedAt @map("updated_at")
+  /// Removal is a stamp, like everything a student has already read.
+  deletedAt      DateTime? @map("deleted_at")
+
+  class Class @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId, classId, createdAt])
+  @@map("announcements")
+}
+
+/// A question a student chose to come back to. Their own list, private to them.
+model SavedQuestion {
+  id             String   @id @default(uuid()) @db.Uuid
+  organizationId String   @map("organization_id") @db.Uuid
+  studentUserId  String   @map("student_user_id") @db.Uuid
+  questionId     String   @map("question_id") @db.Uuid
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([studentUserId, questionId])
+  @@index([organizationId, studentUserId, createdAt])
+  @@map("saved_questions")
+}

@@ -1,0 +1,952 @@
+/* ===========================================================================
+   The institute console
+   ---------------------------------------------------------------------------
+   Desktop-first, unlike the student and parent surfaces: an owner reads this at
+   a desk with a spreadsheet open beside it, and the comparison table is the
+   point of the page. It still has to survive a phone, so every table scrolls
+   inside its own container and the page body never scrolls sideways.
+
+   Every class name here was grepped against the other three stylesheets before
+   it was used. `.ui-result-score` once meant two different components in two
+   files and whichever loaded second won.
+   =========================================================================== */
+
+.ui-institute {
+  min-height: 100dvh;
+  background: var(--surface-sunken);
+}
+
+.ui-institute-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 24px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.ui-institute-nav {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.ui-institute-nav a {
+  padding: 7px 12px;
+  border-radius: var(--radius-control);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.ui-institute-nav a:hover {
+  background: var(--surface-sunken);
+  color: var(--text-primary);
+}
+
+/* The current tab: an underline as well as a colour, drawn from the same
+   aria-current a screen reader announces, so the two cannot disagree. */
+.ui-institute-nav a[aria-current="page"] {
+  color: var(--text-primary);
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--primary-600);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ui-institute-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ------------------------------------------------------------ Exceptions -- */
+
+.ui-exceptions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ui-exception-none {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 8px;
+  padding: 16px 18px;
+  border-radius: var(--radius-card);
+  background: var(--success-fill);
+  color: var(--text-primary);
+}
+
+.ui-exception-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-exception {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  /* A severity stripe. Colour is never alone — the heading above each group
+     says the same thing in words. */
+  border-left: 4px solid var(--border-strong);
+}
+
+.ui-exception[data-severity="high"] {
+  border-left-color: var(--danger);
+}
+
+.ui-exception[data-severity="medium"] {
+  border-left-color: var(--warning);
+}
+
+.ui-exception-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.ui-exception-subject {
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.ui-exception-message {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* ---------------------------------------------------------------- Tables -- */
+
+/* Wide content scrolls inside its own container, so the page body never does. */
+.ui-table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.ui-table th,
+.ui-table td {
+  padding: 11px 14px;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-table th {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  background: var(--surface-raised);
+  position: sticky;
+  top: 0;
+}
+
+.ui-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ui-table td.tabular,
+.ui-table th.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* The number carries the band, never a colour on its own: this has to survive
+   a colourblind reader, a bad projector and a printout. Same rule as the
+   teacher's heatmap. */
+.ui-table [data-band] {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.ui-table [data-band="SECURE"] {
+  background: var(--success-fill);
+  color: var(--success);
+}
+.ui-table [data-band="DEVELOPING"] {
+  background: var(--accent-wash);
+  color: var(--primary-700);
+}
+.ui-table [data-band="FRAGILE"] {
+  background: var(--warning-fill);
+  color: var(--warning);
+}
+.ui-table [data-band="CRITICAL"] {
+  background: var(--danger-fill);
+  color: var(--danger);
+}
+
+/* A refusal is not a zero and must not look like one. */
+.ui-refused {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-tertiary);
+}
+
+/* ---------------------------------------------------------------- Staff -- */
+
+.ui-invite {
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.ui-invite-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ui-invite-form .ui-field {
+  flex: 1 1 200px;
+  min-width: 0;
+}
+
+.ui-invite-error {
+  font-size: 14px;
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--danger-fill);
+  color: var(--text-primary);
+}
+
+.ui-invite-link {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+}
+
+.ui-invite-link p {
+  font-size: 13px;
+  margin: 0 0 8px;
+  color: var(--text-secondary);
+}
+
+.ui-invite-link code {
+  display: block;
+  font-size: 13px;
+  /* A link that wraps is a link somebody can copy. One that overflows is one
+     they copy half of. */
+  overflow-wrap: anywhere;
+  color: var(--text-primary);
+}
+
+.ui-staff-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-staff-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  flex-wrap: wrap;
+}
+
+.ui-staff-row[data-muted] {
+  opacity: 0.7;
+}
+
+.ui-staff-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 200px;
+  min-width: 0;
+}
+
+.ui-staff-name {
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.ui-staff-meta {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  overflow-wrap: anywhere;
+}
+
+.ui-staff-activity {
+  font-size: 13px;
+  color: var(--text-secondary);
+  flex: 0 0 auto;
+}
+
+.ui-staff-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.ui-staff-actions .ui-select {
+  min-height: 32px;
+  padding: 0 28px 0 10px;
+  font-size: 13px;
+}
+
+.ui-staff-self {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.ui-staff-error {
+  font-size: 12px;
+  color: var(--danger);
+}
+
+@media (max-width: 720px) {
+  .ui-institute-bar {
+    gap: 12px;
+  }
+  /* The tabs take a line of their own and WRAP. They used to scroll, and
+     `flex: 1` gave the strip a zero basis, so at 390px it was 70px wide and
+     showed "Dashboa". A wrapped row needs no scroll region and hides nothing. */
+  .ui-institute-nav {
+    order: 3;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+  }
+  .ui-institute-right {
+    margin-left: auto;
+  }
+  .ui-exception {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  /* A destructive action must not wrap under somebody else's name — the
+     student list taught this once. */
+  .ui-staff-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* ============================================================== Concepts --
+
+   The platform console's concept plane. Lives here with the other platform
+   styles rather than in its own sheet: `.ui-*` names are global across every
+   stylesheet, and one more file is one more place to check before naming
+   anything. */
+
+.ui-concept-new {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.ui-concept-new-fields,
+.ui-concept-add {
+  display: flex;
+  gap: 14px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.ui-concept-new-fields .ui-field,
+.ui-concept-add .ui-field {
+  flex: 1 1 240px;
+}
+
+/* Separated from the list above it: without the rule the "Add a prerequisite"
+   row read as part of the row it sat under. */
+.ui-concept-add {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+
+/* Sections in the concept editor are separate acts — what measures this
+   concept, and what it rests on — so they get air between them rather than
+   running together as one long form. */
+.ui-concept-links + .ui-hint {
+  margin-top: 4px;
+}
+
+.ui-concept-error,
+.ui-concept-warning {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  color: var(--text-primary);
+}
+
+/* An error blocks; a warning advises. Two different colours because they are
+   two different claims, and a warning that looks like an error gets treated as
+   one until somebody learns to ignore both. */
+.ui-concept-error {
+  background: var(--danger-fill);
+}
+
+.ui-concept-warning {
+  background: var(--warning-fill);
+}
+
+.ui-concept-list,
+.ui-uncovered-list,
+.ui-concept-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-concept-list a {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.ui-concept-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  min-width: 0;
+}
+
+.ui-concept-meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-uncovered-list li,
+.ui-concept-links li {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+}
+
+.ui-uncovered-list li {
+  grid-template-columns: auto 1fr auto;
+}
+
+.ui-uncovered-code {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ui-uncovered-statement {
+  font-size: 14px;
+  line-height: 1.5;
+  min-width: 0;
+}
+
+.ui-uncovered-where {
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .ui-concept-list a,
+  .ui-uncovered-list li,
+  .ui-concept-links li {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .ui-uncovered-where {
+    white-space: normal;
+  }
+}
+
+/* Proposals awaiting a person. Visibly drafts rather than records: a dashed
+   edge, because the whole point is that nothing here exists yet. */
+.ui-draft-list {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-draft {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 18px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-card);
+  background: var(--surface-sunken);
+}
+
+.ui-draft-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.ui-draft-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.ui-draft-description {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 4px 0 0;
+  color: var(--text-secondary);
+}
+
+.ui-draft-rationale {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* The outcomes in full, on the surface rather than the sunken ground, because
+   reading them IS the review. */
+.ui-draft-outcomes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ui-draft-outcomes li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .ui-draft-head {
+    flex-direction: column;
+  }
+
+  .ui-draft-outcomes li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+/* =================================================== Institute analytics --
+
+   Appended for the advanced analytics page: findings, the cross-batch concept
+   cards, and the improvement claims.
+
+   Every name here was grepped against ui.css, results.css, student.css,
+   report.css, readiness.css and the rest of this file before it was used.
+   `.ui-insight` was the obvious name for a finding and it already means the AI
+   class narrative in results.css — which is exactly how `.ui-result-score`
+   became two components in two stylesheets and whichever loaded second won.
+   So: `.ui-finding-*`, `.ui-spread-*`, `.ui-cohort-*`, `.ui-claim-*`. */
+
+.ui-finding-group {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  margin: 0 0 8px;
+}
+
+.ui-finding-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Stacked rather than the single row `.ui-exception` uses, because a finding
+   here ends in a SENTENCE about what to do rather than in a label. Squeezing
+   that in beside a button is how it becomes something nobody reads. */
+.ui-finding {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  /* A severity stripe. Colour is never alone — the heading above each group
+     says the same thing in words. */
+  border-left: 4px solid var(--border-strong);
+}
+
+.ui-finding[data-severity="high"] {
+  border-left-color: var(--danger);
+}
+
+.ui-finding[data-severity="medium"] {
+  border-left-color: var(--warning);
+}
+
+.ui-finding-subject {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  /* A concept name is authored text and can be long. It wraps rather than
+     pushing the card sideways. */
+  overflow-wrap: anywhere;
+}
+
+.ui-finding-message {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* The action reads as its own block, because it is the half of the finding
+   that is worth anything. A finding that ends in a number ends nowhere. */
+.ui-finding-action {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+  color: var(--text-primary);
+}
+
+.ui-finding-go {
+  align-self: flex-start;
+}
+
+.ui-spread-section {
+  margin-top: 28px;
+}
+
+.ui-spread-section .ui-hint {
+  display: block;
+  margin: 0 0 12px;
+  max-width: 78ch;
+}
+
+.ui-spread-none {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--text-secondary);
+}
+
+.ui-spread-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-spread-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.ui-spread-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ui-spread-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.ui-spread-sentence {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.ui-spread-action {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+}
+
+.ui-spread-note {
+  display: block;
+  margin-top: 28px;
+  max-width: 78ch;
+}
+
+/* The verdict, in words. `data-verdict` only tints it — a reader who cannot see
+   the tint still reads "Weak in more than one class". */
+.ui-verdict {
+  flex: 0 0 auto;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--surface-sunken);
+  color: var(--text-secondary);
+}
+
+.ui-verdict[data-verdict="systemic"] {
+  background: var(--danger-fill);
+  color: var(--danger);
+}
+
+.ui-verdict[data-verdict="localised"] {
+  background: var(--warning-fill);
+  color: var(--warning);
+}
+
+.ui-verdict[data-verdict="steady"] {
+  background: var(--success-fill);
+  color: var(--success);
+}
+
+/* One chip per class, each carrying the students its number was computed over.
+   A chip with a percentage and no denominator would be the whole mistake this
+   page exists to avoid. */
+.ui-cohort-chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ui-cohort-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.ui-cohort-chip-name {
+  font-weight: 600;
+}
+
+/* The band colours again, outside a table. Restated rather than shared, because
+   `.ui-table [data-band]` is scoped to a table and a chip is not one. */
+.ui-cohort-chip [data-band] {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.ui-cohort-chip [data-band="SECURE"] {
+  background: var(--success-fill);
+  color: var(--success);
+}
+.ui-cohort-chip [data-band="DEVELOPING"] {
+  background: var(--accent-wash);
+  color: var(--primary-700);
+}
+.ui-cohort-chip [data-band="FRAGILE"] {
+  background: var(--warning-fill);
+  color: var(--warning);
+}
+.ui-cohort-chip [data-band="CRITICAL"] {
+  background: var(--danger-fill);
+  color: var(--danger);
+}
+
+/* The improvement claim, or the refusal standing in its place. Both get the
+   same room: "there is not enough to say" is a finding here, not an empty
+   state. */
+.ui-claim {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.ui-claim[data-claimed] {
+  background: var(--accent-wash);
+  border-color: transparent;
+}
+
+.ui-claim-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-claim-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+/* Words first, colour second. A measured failure is worth more than an
+   unmeasured success, so it is labelled plainly rather than tinted quietly. */
+.ui-claim-verdict {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--warning-fill);
+  color: var(--warning);
+}
+
+.ui-claim-row[data-reached] .ui-claim-verdict {
+  background: var(--success-fill);
+  color: var(--success);
+}
+
+.ui-claim-sentence {
+  font-size: 14px;
+  line-height: 1.6;
+  min-width: 0;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 720px) {
+  /* A control a thumb has to hit. `data-size="sm"` is 32px, which is fine for
+     a mouse and not for a phone. This block sits after ui.css and matches with
+     the same specificity, so it wins on order. */
+  .ui-button.ui-finding-go {
+    min-height: 44px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  .ui-claim-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .ui-claim-row .ui-finding-go,
+  .ui-claim-verdict {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 400px) {
+  /* 360px is the floor this product is checked at. The cards give up padding
+     before they give up words, and a chip goes full width rather than pushing
+     the row sideways. */
+  .ui-finding,
+  .ui-spread-card {
+    padding: 14px;
+  }
+
+  .ui-cohort-chip {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* A tab is a touch target on a phone. Same rule, and the same query, as the
+   shared controls in ui.css: 44 in both directions, only under a thumb. */
+@media (max-width: 640px), (pointer: coarse) {
+  .ui-institute-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap-min);
+    min-width: var(--tap-min);
+  }
+}

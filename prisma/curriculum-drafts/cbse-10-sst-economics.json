@@ -1,0 +1,323 @@
+{
+  "board": "CBSE",
+  "grade": 10,
+  "subject": "Social Science – Economics",
+  "status": "DRAFT — for review by a Social Science teacher before it is relied on",
+  "source": "Drafted against NCERT Class X 'Understanding Economic Development' (jess2, 2025-26) and the 150 questions imported from C:/dev/sirah_project/NCERT/data.",
+  "notes": [],
+  "chapters": [
+    {
+      "number": 1,
+      "topics": [
+        {
+          "title": "Development goals",
+          "outcomes": [
+            {
+              "code": "EC10-01-1",
+              "statement": "Explains why different people have different, and sometimes conflicting, goals of development.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "EC10-01-2",
+              "statement": "Explains why income alone does not capture development, using goals such as security, freedom and equal treatment.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Measuring development",
+          "outcomes": [
+            {
+              "code": "EC10-01-3",
+              "statement": "Uses per capita income, as the World Development Report does, to compare and classify countries.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "EC10-01-4",
+              "statement": "Compares states using the Infant Mortality Rate, literacy rate and attendance ratio, and explains why Kerala does better than Haryana on them.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "EC10-01-5",
+              "statement": "Explains the Human Development Index and why sustainable development requires protecting resources such as groundwater.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Goals and meaning of development",
+          "outcomes": [
+            "EC10-01-1",
+            "EC10-01-2"
+          ]
+        },
+        {
+          "name": "Measuring and comparing development",
+          "outcomes": [
+            "EC10-01-3",
+            "EC10-01-4",
+            "EC10-01-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "topics": [
+        {
+          "title": "Sectors of economic activity",
+          "outcomes": [
+            {
+              "code": "EC10-02-1",
+              "statement": "Classifies economic activities into the primary, secondary and tertiary sectors, with examples.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "EC10-02-2",
+              "statement": "Explains the growth of the tertiary sector in India, and why it does not match that sector's share of employment.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Organised, unorganised, public and private sectors",
+          "outcomes": [
+            {
+              "code": "EC10-02-3",
+              "statement": "Distinguishes the organised from the unorganised sector, and explains how workers in the unorganised sector can be protected.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "EC10-02-4",
+              "statement": "Distinguishes the public from the private sector by ownership, and explains why government provides some services.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "EC10-02-5",
+              "statement": "Explains underemployment and disguised unemployment, and the purpose of the MGNREGA scheme.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Primary, secondary and tertiary sectors",
+          "outcomes": [
+            "EC10-02-1",
+            "EC10-02-2"
+          ]
+        },
+        {
+          "name": "Organised, unorganised, public and private sectors",
+          "outcomes": [
+            "EC10-02-3",
+            "EC10-02-4",
+            "EC10-02-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "topics": [
+        {
+          "title": "Money and banks",
+          "outcomes": [
+            {
+              "code": "EC10-03-1",
+              "statement": "Explains how money removes the need for a double coincidence of wants in a barter system.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "EC10-03-2",
+              "statement": "Describes modern forms of money, including currency and demand deposits, and how banks lend out deposits.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Credit",
+          "outcomes": [
+            {
+              "code": "EC10-03-3",
+              "statement": "Explains the terms of credit — interest rate, collateral and documentation — and how credit can help or trap a borrower.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "EC10-03-4",
+              "statement": "Compares formal and informal sources of credit, and explains the role of self-help groups and cooperatives.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Money as a medium of exchange",
+          "outcomes": [
+            "EC10-03-1",
+            "EC10-03-2"
+          ]
+        },
+        {
+          "name": "Formal and informal credit",
+          "outcomes": [
+            "EC10-03-3",
+            "EC10-03-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "topics": [
+        {
+          "title": "MNCs and foreign trade",
+          "outcomes": [
+            {
+              "code": "EC10-04-1",
+              "statement": "Explains what a multinational corporation is and the ways MNCs spread production across countries.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "EC10-04-2",
+              "statement": "Explains how foreign trade integrates markets across countries.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Globalisation",
+          "outcomes": [
+            {
+              "code": "EC10-04-3",
+              "statement": "Explains globalisation and the roles of technology, liberalisation and the WTO in it.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "EC10-04-4",
+              "statement": "Evaluates the impact of globalisation on Indian producers, workers and consumers, and what fair globalisation requires.",
+              "bloom": "EVALUATE",
+              "competency": "EVALUATION",
+              "marks": 3
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "MNCs and integration of markets",
+          "outcomes": [
+            "EC10-04-1",
+            "EC10-04-2"
+          ]
+        },
+        {
+          "name": "Globalisation and its impact on India",
+          "outcomes": [
+            "EC10-04-3",
+            "EC10-04-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "topics": [
+        {
+          "title": "The consumer movement",
+          "outcomes": [
+            {
+              "code": "EC10-05-1",
+              "statement": "Explains how consumers are exploited in the market and how the consumer movement arose in India.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Consumer rights and redress",
+          "outcomes": [
+            {
+              "code": "EC10-05-2",
+              "statement": "Describes the rights of consumers — safety, information, choice, redressal and representation.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "EC10-05-3",
+              "statement": "Describes the Consumer Protection Act and the three-tier system of consumer courts, including how a consumer seeks redress.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Consumer exploitation and the consumer movement",
+          "outcomes": [
+            "EC10-05-1"
+          ]
+        },
+        {
+          "name": "Consumer rights and COPRA",
+          "outcomes": [
+            "EC10-05-2",
+            "EC10-05-3"
+          ]
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "concept": "Formal and informal credit",
+      "requires": "Money as a medium of exchange"
+    },
+    {
+      "concept": "Globalisation and its impact on India",
+      "requires": "MNCs and integration of markets"
+    }
+  ]
+}

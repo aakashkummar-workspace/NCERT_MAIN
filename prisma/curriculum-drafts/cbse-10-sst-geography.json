@@ -1,0 +1,453 @@
+{
+  "board": "CBSE",
+  "grade": 10,
+  "subject": "Social Science – Geography",
+  "status": "DRAFT — for review by a Social Science teacher before it is relied on",
+  "source": "Drafted against NCERT Class X 'Contemporary India' (jess1, 2025-26 rationalised) and the 212 questions imported from C:/dev/sirah_project/NCERT/data.",
+  "notes": [],
+  "chapters": [
+    {
+      "number": 1,
+      "topics": [
+        {
+          "title": "Resources and their development",
+          "outcomes": [
+            {
+              "code": "G10-01-1",
+              "statement": "Classifies resources by origin, exhaustibility, ownership and status of development, with examples.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-01-2",
+              "statement": "Explains sustainable development and resource planning, and why the Rio de Janeiro Earth Summit and Agenda 21 matter to it.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-01-3",
+              "statement": "Describes India's land use pattern, including culturable waste land and land degradation, and the measures that conserve land.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Soil as a resource",
+          "outcomes": [
+            {
+              "code": "G10-01-4",
+              "statement": "Distinguishes the major soils of India — alluvial, black, red and yellow, laterite, arid and forest — by formation, distribution and suitable crops.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-01-5",
+              "statement": "Distinguishes khadar from bangar, and explains what the kankar layer does in arid soils.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-01-6",
+              "statement": "Explains the causes of soil erosion and the methods used to conserve soil.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Types and planning of resources",
+          "outcomes": [
+            "G10-01-1",
+            "G10-01-2",
+            "G10-01-3"
+          ]
+        },
+        {
+          "name": "Soils of India and soil conservation",
+          "outcomes": [
+            "G10-01-4",
+            "G10-01-5",
+            "G10-01-6"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "topics": [
+        {
+          "title": "Biodiversity and its loss",
+          "outcomes": [
+            {
+              "code": "G10-02-1",
+              "statement": "Explains what biodiversity is and why the flora and fauna of India are under threat.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-02-2",
+              "statement": "Classifies species as normal, endangered, vulnerable, rare, endemic or extinct, with Indian examples.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Conservation of forests and wildlife",
+          "outcomes": [
+            {
+              "code": "G10-02-3",
+              "statement": "Describes the Indian Wildlife (Protection) Act and Project Tiger, and what each protects.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-02-4",
+              "statement": "Classifies forests as reserved, protected or unclassed, and explains the purpose of each.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-02-5",
+              "statement": "Explains the role of communities in conservation, such as the Chipko movement, sacred groves and the villagers of Sariska.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Biodiversity and threatened species",
+          "outcomes": [
+            "G10-02-1",
+            "G10-02-2"
+          ]
+        },
+        {
+          "name": "Conservation of forests and wildlife",
+          "outcomes": [
+            "G10-02-3",
+            "G10-02-4",
+            "G10-02-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "topics": [
+        {
+          "title": "Water scarcity",
+          "outcomes": [
+            {
+              "code": "G10-03-1",
+              "statement": "Explains why water scarcity arises even where water is abundant, in terms of over-use, unequal access and pollution.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Dams and rainwater harvesting",
+          "outcomes": [
+            {
+              "code": "G10-03-2",
+              "statement": "Evaluates multipurpose river projects, weighing their benefits against their effects on rivers, people and aquatic life.",
+              "bloom": "EVALUATE",
+              "competency": "EVALUATION",
+              "marks": 3
+            },
+            {
+              "code": "G10-03-3",
+              "statement": "Describes traditional and modern methods of rainwater harvesting across India's regions, including tanks, guls, kuls and rooftop harvesting.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-03-4",
+              "statement": "Identifies the objectives of national water programmes such as 'Har khet ko pani' and 'per drop more crop'.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Water scarcity and its causes",
+          "outcomes": [
+            "G10-03-1"
+          ]
+        },
+        {
+          "name": "Multipurpose projects and rainwater harvesting",
+          "outcomes": [
+            "G10-03-2",
+            "G10-03-3",
+            "G10-03-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "topics": [
+        {
+          "title": "Types of farming and cropping seasons",
+          "outcomes": [
+            {
+              "code": "G10-04-1",
+              "statement": "Distinguishes primitive subsistence, intensive subsistence and commercial farming, including the tools and inputs of each.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-04-2",
+              "statement": "Describes the rabi, kharif and zaid seasons and the crops grown in each.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Major crops and agricultural reform",
+          "outcomes": [
+            {
+              "code": "G10-04-3",
+              "statement": "Relates each major food and non-food crop — rice, wheat, millets, pulses, sugarcane, tea, coffee, rubber, cotton, jute — to its growing conditions and main producing areas.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-04-4",
+              "statement": "Explains the institutional and technological reforms made to improve Indian agriculture.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Types of farming and cropping seasons",
+          "outcomes": [
+            "G10-04-1",
+            "G10-04-2"
+          ]
+        },
+        {
+          "name": "Major crops of India",
+          "outcomes": [
+            "G10-04-3",
+            "G10-04-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "topics": [
+        {
+          "title": "Minerals",
+          "outcomes": [
+            {
+              "code": "G10-05-1",
+              "statement": "Defines a mineral and an ore, and describes the modes in which minerals occur.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "G10-05-2",
+              "statement": "Classifies minerals as ferrous, non-ferrous or non-metallic, and relates iron ore, manganese, bauxite, copper and mica to their uses and main belts.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Energy resources",
+          "outcomes": [
+            {
+              "code": "G10-05-3",
+              "statement": "Distinguishes conventional from non-conventional sources of energy, and describes the occurrence of coal, petroleum and natural gas in India.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-05-4",
+              "statement": "Explains why conserving energy resources and using non-conventional sources matters.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Minerals and their distribution",
+          "outcomes": [
+            "G10-05-1",
+            "G10-05-2"
+          ]
+        },
+        {
+          "name": "Conventional and non-conventional energy",
+          "outcomes": [
+            "G10-05-3",
+            "G10-05-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "topics": [
+        {
+          "title": "Importance and location of industries",
+          "outcomes": [
+            {
+              "code": "G10-06-1",
+              "statement": "Explains the importance of manufacturing to a country's economy.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-06-2",
+              "statement": "Classifies industries by source of raw material, ownership and bulk of raw material, and explains the factors that decide an industry's location.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Major industries and pollution",
+          "outcomes": [
+            {
+              "code": "G10-06-3",
+              "statement": "Describes the cotton textile, sugar, iron and steel, chemical and information technology industries, including the problems each faces.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-06-4",
+              "statement": "Explains how industries cause air, water, land and noise pollution and how it can be controlled.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Importance and location of industries",
+          "outcomes": [
+            "G10-06-1",
+            "G10-06-2"
+          ]
+        },
+        {
+          "name": "Agro-based and mineral-based industries",
+          "outcomes": [
+            "G10-06-3",
+            "G10-06-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "topics": [
+        {
+          "title": "Transport",
+          "outcomes": [
+            {
+              "code": "G10-07-1",
+              "statement": "Compares roads, railways, pipelines, waterways and airways in India as means of transport, including their advantages and limits.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "G10-07-2",
+              "statement": "Describes the Golden Quadrilateral and North-South and East-West corridors, the national waterways and India's major sea ports.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Communication and trade",
+          "outcomes": [
+            {
+              "code": "G10-07-3",
+              "statement": "Explains the importance of communication services, international trade and tourism as lifelines of the economy.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Transport networks of India",
+          "outcomes": [
+            "G10-07-1",
+            "G10-07-2"
+          ]
+        },
+        {
+          "name": "Communication and international trade",
+          "outcomes": [
+            "G10-07-3"
+          ]
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "concept": "Soils of India and soil conservation",
+      "requires": "Types and planning of resources"
+    },
+    {
+      "concept": "Multipurpose projects and rainwater harvesting",
+      "requires": "Water scarcity and its causes"
+    },
+    {
+      "concept": "Agro-based and mineral-based industries",
+      "requires": "Minerals and their distribution"
+    }
+  ]
+}

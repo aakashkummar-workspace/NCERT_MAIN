@@ -1,0 +1,602 @@
+{
+  "book": "jess4",
+  "bookTitle": "Democratic Politics",
+  "class": 10,
+  "chapters": [
+    {
+      "bookChapter": 1,
+      "title": "Power-sharing",
+      "pages": 12,
+      "author": null,
+      "form": null,
+      "overview": "The chapter carries forward the idea that in a democracy power does not rest with any one organ of government. Through the contrasting stories of Belgium, which accommodated its linguistic communities, and Sri Lanka, where majoritarianism led to civil war, it draws conclusions about why power sharing is desirable and describes the different forms power sharing takes in modern democracies.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Belgium and Sri Lanka",
+          "points": [
+            "Belgium is a small European country of a little over one crore people; 59 per cent live in the Flemish region and speak Dutch, 40 per cent in Wallonia speak French and one per cent speak German.",
+            "In Brussels 80 per cent speak French and 20 per cent Dutch, so the Dutch-speaking majority in the country was a minority in the capital.",
+            "The richer French-speaking minority was resented by the Dutch-speaking community, causing tensions in the 1950s and 1960s.",
+            "Sri Lanka has about two crore people: Sinhala-speakers are 74 per cent and Tamil-speakers 18 per cent, divided into Sri Lankan Tamils (13 per cent) and Indian Tamils.",
+            "Most Sinhala-speakers are Buddhists and most Tamils Hindus or Muslims; about 7 per cent are Christians."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Majoritarianism in Sri Lanka",
+          "points": [
+            "Sri Lanka became independent in 1948, and Sinhala leaders sought dominance over government by virtue of their majority.",
+            "A 1956 Act recognised Sinhala as the only official language; preferential policies favoured Sinhala applicants for university positions and government jobs, and the constitution required the state to protect and foster Buddhism.",
+            "These measures increased the alienation of Sri Lankan Tamils, who felt denied equal political rights and opportunities.",
+            "Tamils demanded recognition of Tamil, regional autonomy and equal opportunity; by the 1980s organisations demanded an independent Tamil Eelam in the north and east.",
+            "Distrust turned into a civil war that killed thousands, created refugees, set back the country's social, cultural and economic life, and ended in 2009."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Accommodation in Belgium",
+          "points": [
+            "Belgian leaders recognised regional differences and cultural diversities and amended their constitution four times between 1970 and 1993.",
+            "The constitution requires equal numbers of Dutch and French-speaking ministers in the central government, and some laws need a majority from each linguistic group.",
+            "Many central powers were given to State Governments of the two regions, which are not subordinate to the Central Government.",
+            "Brussels has a separate government with equal representation for both communities.",
+            "A third 'community government', elected by each language community wherever they live, has power over cultural, educational and language-related issues.",
+            "The arrangements avoided civic strife and a possible division of the country, and Brussels was chosen as headquarters of the European Union."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Why power sharing is desirable?",
+          "points": [
+            "Belgium shows that unity is possible by respecting the feelings and interests of different communities; Sri Lanka shows that a majority forcing dominance can undermine unity.",
+            "Prudential reason: power sharing reduces the possibility of conflict between social groups and ensures stability of political order.",
+            "Tyranny of the majority is oppressive for the minority and often affects the majority adversely as well.",
+            "Moral reason: power sharing is the very spirit of democracy, as people have a right to be consulted on how they are governed.",
+            "Prudential reasons stress better outcomes, while moral reasons emphasise the act of power sharing as valuable in itself."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Forms of power-sharing",
+          "points": [
+            "Power sharing emerged in opposition to the notion of undivided political power; in a democracy people are the source of all political power.",
+            "Horizontal distribution: power shared among legislature, executive and judiciary, each checking the others in a system of checks and balances.",
+            "Vertical division: power shared among governments at different levels – federal (Central or Union) government, State governments, and lower levels such as municipality and panchayat.",
+            "Power shared among social groups, such as the community government in Belgium or reserved constituencies for weaker sections and women.",
+            "Power sharing through political parties, pressure groups and movements: party competition, coalition governments, and interest groups influencing decisions."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        { "term": "Ethnic", "meaning": "A social division based on shared culture; members believe in common descent because of similarities of physical type or culture, and need not share religion or nationality." },
+        { "term": "Majoritarianism", "meaning": "A belief that the majority community should be able to rule a country in whichever way it wants, disregarding the wishes and needs of the minority." },
+        { "term": "Civil war", "meaning": "A violent conflict between opposing groups within a country that becomes so intense that it appears like a war." },
+        { "term": "Prudential", "meaning": "Based on prudence, or careful calculation of gains and losses; usually contrasted with decisions based purely on moral considerations." },
+        { "term": "Community government", "meaning": "In Belgium, a government elected by people belonging to one language community, no matter where they live, with power over cultural, educational and language-related issues." },
+        { "term": "Checks and balances", "meaning": "An arrangement in which each organ of government checks the others, resulting in a balance of power among institutions." },
+        { "term": "Horizontal distribution of power", "meaning": "Sharing of power among organs of government placed at the same level, such as legislature, executive and judiciary." },
+        { "term": "Vertical division of power", "meaning": "Division of powers involving higher and lower levels of government." },
+        { "term": "Coalition government", "meaning": "A government formed when an elected alliance of two or more parties shares power." }
+      ],
+      "keyResults": [
+        { "label": "Belgium's population", "statement": "59 per cent Dutch-speaking (Flemish region), 40 per cent French-speaking (Wallonia), 1 per cent German-speaking; Brussels is 80 per cent French and 20 per cent Dutch-speaking." },
+        { "label": "Sri Lanka's population", "statement": "Sinhala-speakers 74 per cent, Tamil-speakers 18 per cent (Sri Lankan Tamils 13 per cent); about 7 per cent Christians." },
+        { "label": "1948", "statement": "Sri Lanka emerged as an independent country." },
+        { "label": "1956", "statement": "Act passed in Sri Lanka recognising Sinhala as the only official language." },
+        { "label": "1980s", "statement": "Political organisations in Sri Lanka demanded an independent Tamil Eelam." },
+        { "label": "2009", "statement": "Sri Lankan civil war ended." },
+        { "label": "1970-1993", "statement": "Belgium amended its constitution four times to accommodate its communities." },
+        { "label": "Lebanon's power-sharing pact", "statement": "President must be a Maronite Catholic, Prime Minister a Sunni Muslim, Deputy Prime Minister an Orthodox Christian and Speaker a Shi'a Muslim." },
+        { "label": "Germany, 2005", "statement": "Christian Democratic Union and Social Democratic Party formed a grand coalition as neither won a clear majority." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 9 }
+      ],
+      "bookSummary": [],
+      "notes": "The book does not number its headings and sets 'Why power sharing is desirable?' in smaller type than the other headings; it is listed as its own section here. Activity boxes are not labelled. The chapter has no end summary."
+    },
+    {
+      "bookChapter": 2,
+      "title": "Federalism",
+      "pages": 16,
+      "author": null,
+      "form": null,
+      "overview": "The chapter focuses on federalism, the vertical division of power among levels of government. It explains what federalism is and its key features, the constitutional provisions that make India a federal country, how federalism is practised through linguistic States, language policy and Centre-State relations, and decentralisation through local government as a third tier.",
+      "sections": [
+        {
+          "number": null,
+          "title": "What is federalism?",
+          "points": [
+            "In 1993 Belgium gave regional governments constitutional powers no longer dependent on the central government, shifting from a unitary to a federal form; Sri Lanka remains practically unitary.",
+            "Federalism is a system in which power is divided between a central authority and various constituent units, with both levels enjoying power independently.",
+            "Under a unitary system there is one level of government or sub-units are subordinate; in a federal system the central government cannot order a state government.",
+            "Key features: two or more tiers; each tier with its own jurisdiction over the same citizens; jurisdictions specified and guaranteed in the constitution; fundamental provisions changeable only with both levels' consent; courts as umpire; specified sources of revenue; dual objectives of unity and accommodating regional diversity.",
+            "'Coming together' federations such as the USA, Switzerland and Australia give constituent States equal and strong powers.",
+            "'Holding together' federations such as India, Spain and Belgium have a more powerful Central Government, and units may have unequal powers."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "What makes India a federal country?",
+          "points": [
+            "The Constitution declared India a Union of States; it did not use the word federation but is based on federal principles.",
+            "It originally provided a two-tier system of Union and State governments; a third tier of Panchayats and Municipalities was added later.",
+            "The Union List covers national subjects like defence, foreign affairs, banking, communications and currency; the State List covers police, trade, commerce, agriculture and irrigation.",
+            "The Concurrent List covers education, forest, trade unions, marriage, adoption and succession; if laws conflict, the Union law prevails, and the Union legislates on 'residuary' subjects.",
+            "Some States such as Assam, Nagaland, Arunachal Pradesh and Mizoram have special powers under Article 371; Union Territories like Chandigarh, Lakshadweep and Delhi have little power.",
+            "Changes to power sharing need a two-thirds majority in both Houses of Parliament and ratification by at least half the State legislatures; courts decide disputes."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "How is federalism practised?",
+          "points": [
+            "Constitutional provisions are necessary but not sufficient; the real success of federalism in India is due to the nature of democratic politics."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Linguistic States",
+              "points": [
+                "Creation of linguistic States was the first major test for democratic politics; boundaries were changed so people speaking the same language lived in the same State.",
+                "Some States such as Nagaland, Uttarakhand and Jharkhand were created on the basis of culture, ethnicity or geography.",
+                "Leaders feared disintegration, but linguistic States made the country more united and administration easier."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Language policy",
+              "points": [
+                "The Constitution gave no language the status of national language; Hindi was identified as the official language, with 21 other Scheduled Languages.",
+                "The use of English for official purposes was to stop in 1965, but after demands from non-Hindi States, violent in Tamil Nadu, English continued along with Hindi.",
+                "Promotion of Hindi does not mean imposition; this flexibility helped India avoid Sri Lanka's situation.",
+                "The 2011 Census recorded more than 1300 mother tongues grouped into 121 major languages, 22 of them Scheduled; Hindi is the mother tongue of about 44 per cent of Indians."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Centre-State relations",
+              "points": [
+                "For a long time the same party ruled at the Centre and in most States, and the Centre often misused the Constitution to dismiss State governments run by rival parties.",
+                "After 1990 regional parties rose and coalition governments at the Centre began, creating a new culture of power sharing and respect for State autonomy.",
+                "A Supreme Court judgement made arbitrary dismissal of State governments difficult."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Decentralisation in India",
+          "points": [
+            "States in India are as large as European countries and internally diverse, so a third tier of local government is needed.",
+            "Decentralisation means taking power from Central and State governments and giving it to local government, since many issues are best settled locally and people can participate directly.",
+            "Before 1992 panchayats and municipalities were under State control, elections were irregular and they had no powers or resources of their own.",
+            "The 1992 amendment made regular elections mandatory, reserved seats for SC, ST and OBC, reserved at least one-third of positions for women, created State Election Commissions and required States to share powers and revenue.",
+            "Rural local government (panchayati raj) comprises the gram panchayat under the gram sabha, the panchayat samiti, and the zilla parishad; urban areas have municipalities and municipal corporations headed by a chairperson or mayor.",
+            "With about 36 lakh elected representatives it is the largest experiment in democracy, but gram sabhas are irregular and States have not transferred significant powers or resources."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        { "term": "Federalism", "meaning": "A system of government in which power is divided between a central authority and various constituent units of the country." },
+        { "term": "Jurisdiction", "meaning": "The area over which someone has legal authority, defined by geographical boundaries or kinds of subjects." },
+        { "term": "Coalition government", "meaning": "A government formed by the coming together of at least two political parties, usually as an alliance with a common programme." },
+        { "term": "Residuary subjects", "meaning": "Subjects that do not fall in any of the three lists, on which the Union Government has the power to legislate." },
+        { "term": "Union Territories", "meaning": "Areas too small to be independent States that could not be merged with existing States, run with special powers of the Central Government." },
+        { "term": "Decentralisation", "meaning": "When power is taken away from Central and State governments and given to local government." },
+        { "term": "Gram sabha", "meaning": "All the voters of a village, which supervises the gram panchayat and meets at least twice or thrice a year to approve its budget and review its performance." },
+        { "term": "Gram panchayat", "meaning": "A village council of ward members (panch) and a president (sarpanch), directly elected by the adult population." },
+        { "term": "Zilla parishad", "meaning": "All the panchayat samitis or mandals in a district together; its chairperson is the political head." },
+        { "term": "Scheduled Languages", "meaning": "The 22 languages included in the Eighth Schedule of the Indian Constitution." }
+      ],
+      "keyResults": [
+        { "label": "Federal countries", "statement": "Only 25 of the world's 193 countries have federal systems, but their citizens make up 40 per cent of the world's population." },
+        { "label": "1993", "statement": "Belgium's regional governments given constitutional powers, making it federal." },
+        { "label": "Article 371", "statement": "Gives special powers to States such as Assam, Nagaland, Arunachal Pradesh and Mizoram, especially over land rights, culture and preferential employment." },
+        { "label": "Amending federal provisions", "statement": "Requires a two-thirds majority in both Houses of Parliament and ratification by at least half of the total States." },
+        { "label": "1965", "statement": "Date by which English was to stop being used for official purposes; it was continued along with Hindi." },
+        { "label": "After 1990", "statement": "Rise of regional parties and the era of coalition governments at the Centre." },
+        { "label": "Census of India 2011", "statement": "More than 1300 mother tongues, 121 major languages, 22 Scheduled Languages; Hindi 43.63 per cent, Bengali 8.03, Marathi 6.86, Telugu 6.70, Tamil 5.70; English the mother tongue of 0.02 per cent." },
+        { "label": "1992 Constitutional amendment", "statement": "Made the third tier more powerful: regular elections, reservations including one-third for women, State Election Commissions and sharing of powers and revenue." },
+        { "label": "Local representatives", "statement": "About 36 lakh elected representatives in panchayats and municipalities." },
+        { "label": "Porto Alegre, Brazil", "statement": "About 20,000 people participate each year in making the budget of a city of nearly 13 lakh." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 12 }
+      ],
+      "bookSummary": [],
+      "notes": "The book does not number its headings. The text on language policy says Hindi is the mother tongue of about 40 per cent of Indians, while the box on linguistic diversity gives about 44 per cent (43.63 in the table); both are as printed. The Ramachandra Guha excerpt on page 11 did not extract (only the prompt survives), and some exercise tables are jumbled in extraction. The chapter has no end summary."
+    },
+    {
+      "bookChapter": 3,
+      "title": "Gender, Religion and Caste",
+      "pages": 17,
+      "author": null,
+      "form": null,
+      "overview": "The chapter applies the idea that social diversity need not threaten democracy to three social differences in India: gender, religion and caste. For each it looks at the nature of the division and how it is expressed in politics, asking whether those expressions are healthy for democracy – gender largely positive, communalism largely negative, and caste with both positive and negative aspects.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Gender and politics",
+          "points": [
+            "Gender division is a hierarchical social division seen everywhere but rarely recognised in politics; it is based on social expectations and stereotypes, not biology."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Public/private division",
+              "points": [
+                "A sexual division of labour means women do the work inside the home and men the work outside; when such jobs are paid, men take them up.",
+                "Most women do paid work in addition to domestic labour, but their work is not valued or recognised, and their role in public life is minimal.",
+                "Women's agitations for voting rights and equal status, and radical feminist movements for equality in personal and family life, improved women's role in public life; participation is very high in Scandinavian countries.",
+                "India remains a male-dominated, patriarchal society: female literacy is 54 per cent against 76 per cent for men, and girls drop out as parents prefer spending on sons.",
+                "An average woman works one hour more than a man daily, much of it unpaid; despite the Equal Remuneration Act, 1976, women are paid less for the same work.",
+                "Sex-selective abortion reduced the child sex ratio to 919, below 850 or even 800 in some States, and women face harassment and domestic violence."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Women’s political representation",
+              "points": [
+                "Feminists concluded that women's problems will not get adequate attention unless women control power, for instance as elected representatives.",
+                "Women's share in the Lok Sabha touched 14.36 per cent for the first time in 2019, and is less than 5 per cent in state assemblies; India is among the bottom group of nations.",
+                "One-third of seats in panchayats and municipalities are reserved for women, giving more than 10 lakh elected women representatives.",
+                "In 2023 the Nari Shakti Vandan Adhiniyam (Women's Reservation Act, 2023) was passed, giving 33 per cent reservation for women in the Lok Sabha, State Legislative Assemblies and the Delhi Assembly.",
+                "Gender division shows that some social divisions need to be expressed in politics and that disadvantaged groups benefit when they are."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Religion, communalism and politics",
+          "points": [
+            "Religious diversity is widespread, and unlike gender, religious differences are often expressed in politics.",
+            "Gandhiji held that politics must be guided by ethics drawn from religion; human rights groups seek protection of minorities; the women's movement seeks fairer family laws.",
+            "Such political acts involving religion are not wrong as long as they treat every religion equally."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Communalism",
+              "points": [
+                "The problem begins when religion is seen as the basis of the nation and expressed in politics in exclusive and partisan terms, with one religion pitted against another.",
+                "Communal politics holds that religion is the principal basis of social community and that followers of different religions cannot live as equal citizens in one nation; this belief is fundamentally flawed.",
+                "Communalism appears in everyday beliefs and stereotypes, in a quest for political dominance or a separate political unit, in political mobilisation on religious lines, and in communal violence, riots and massacre."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Secular state",
+              "points": [
+                "The makers of the Constitution chose a secular state: there is no official religion, unlike Buddhism in Sri Lanka, Islam in Pakistan or Christianity in England.",
+                "The Constitution gives all freedom to profess, practise and propagate any religion or none, and prohibits discrimination on grounds of religion.",
+                "It allows the state to intervene in religion to ensure equality within communities, for example by banning untouchability.",
+                "Secularism is one of the foundations of the country; communalism threatens the very idea of India and must be countered in everyday life and politics."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Caste and politics",
+          "points": [
+            "Caste and politics has both positive and negative aspects."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Caste inequalities",
+              "points": [
+                "Caste division is special to India: hereditary occupational division was sanctioned by rituals, with marriage and dining within the caste group.",
+                "The system excluded and discriminated against 'outcaste' groups through untouchability; Jotiba Phule, Gandhiji, B.R. Ambedkar and Periyar worked against caste inequality.",
+                "Economic development, urbanisation, education, occupational mobility and weakening of landlords have broken down old notions of caste hierarchy.",
+                "Yet most people still marry within caste, untouchability has not ended completely, and caste remains closely linked to economic status.",
+                "In 2011 Scheduled Castes were 16.6 per cent and Scheduled Tribes 8.6 per cent of the population; OBCs were estimated at around 41 per cent in 2004-05."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Caste in politics",
+              "points": [
+                "Casteism is rooted in the belief that caste is the sole basis of social community.",
+                "Parties consider caste composition when choosing candidates and forming governments, and appeal to caste sentiment.",
+                "Universal adult franchise compelled leaders to mobilise support and brought new consciousness to castes treated as inferior.",
+                "Elections are not only about caste: no constituency has a clear majority of one caste, no party wins all votes of a caste, and ruling parties and sitting MPs or MLAs frequently lose.",
+                "Voters' attachment to parties, economic interests and assessment of government performance often matter more."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Politics in caste",
+              "points": [
+                "Politics also influences caste: it is the caste that gets politicised.",
+                "Caste groups incorporate neighbouring castes or sub-castes, enter coalitions with other castes, and new groups like 'backward' and 'forward' castes emerge.",
+                "Caste politics has helped Dalits and OBCs gain better access to decision making.",
+                "Exclusive attention to caste can divert attention from poverty, development and corruption and lead to tensions, conflict and violence."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        { "term": "Sexual division of labour", "meaning": "A system in which all work inside the home is either done by the women of the family, or organised by them through domestic helpers." },
+        { "term": "Feminist", "meaning": "A woman or a man who believes in equal rights and opportunities for women and men." },
+        { "term": "Patriarchy", "meaning": "Literally, rule by father; a system that values men more and gives them power over women." },
+        { "term": "Family laws", "meaning": "Laws dealing with family matters such as marriage, divorce, adoption and inheritance; in India different family laws apply to followers of different religions." },
+        { "term": "Communal politics", "meaning": "Using religion in politics in exclusive and partisan terms, based on the idea that religion is the principal basis of social community." },
+        { "term": "Urbanisation", "meaning": "Shift of population from rural areas to urban areas." },
+        { "term": "Occupational mobility", "meaning": "Shift from one occupation to another, usually when a new generation takes up occupations other than those of their ancestors." },
+        { "term": "Caste hierarchy", "meaning": "A ladder-like formation in which all caste groups are placed from the 'highest' to the 'lowest' castes." },
+        { "term": "Child sex ratio", "meaning": "Number of girl children per thousand boys." },
+        { "term": "Scheduled Castes", "meaning": "Commonly known as Dalits; groups previously regarded as 'outcaste' in the Hindu social order and subjected to exclusion and untouchability." },
+        { "term": "Scheduled Tribes", "meaning": "Often referred to as Adivasis; communities that led a secluded life usually in hills and forests." }
+      ],
+      "keyResults": [
+        { "label": "Time Use Survey (1998-99)", "statement": "An average woman works a little over seven and a half hours a day and an average man six and a half hours." },
+        { "label": "Literacy", "statement": "54 per cent among women compared with 76 per cent among men." },
+        { "label": "Equal Remuneration Act, 1976", "statement": "Provides that equal wages should be paid for equal work." },
+        { "label": "Child sex ratio (Census 2011)", "statement": "Declined to 919, and below 850 or even 800 in some States." },
+        { "label": "Lok Sabha, 2019", "statement": "Women members touched 14.36 per cent of total strength for the first time; less than 5 per cent in state assemblies." },
+        { "label": "Local bodies", "statement": "One-third of seats reserved for women; more than 10 lakh elected women representatives." },
+        { "label": "Women's Reservation Act, 2023", "statement": "Nari Shakti Vandan Adhiniyam gives 33 per cent reservation for women in Lok Sabha, State Legislative Assemblies and the Delhi Assembly." },
+        { "label": "Religious communities (Census 2011)", "statement": "Hindu 79.8, Muslim 14.2, Christian 2.3, Sikh 1.7, Buddhist 0.7, Jain 0.4 per cent." },
+        { "label": "Sachar Committee estimate", "statement": "Proportion of Muslims expected to go up by about 3 to 4 per cent in the next 50 years." },
+        { "label": "SC and ST (2011)", "statement": "Scheduled Castes 16.6 per cent and Scheduled Tribes 8.6 per cent of the population." },
+        { "label": "OBC (NSS 2004-05)", "statement": "Around 41 per cent; SC, ST and OBC together about two-thirds of the population." },
+        { "label": "Below poverty line (1999-2000)", "statement": "Rural: Scheduled Tribes 45.8, Scheduled Castes 35.9, OBC 27.0, Hindu upper castes 11.7 per cent; all groups 27.0 rural and 23.4 urban." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 12 }
+      ],
+      "bookSummary": [],
+      "notes": "The book does not number its headings. Boxes on social and religious diversity and on caste inequality today are summarised in points and key results rather than listed as sections. The chapter has no end summary."
+    },
+    {
+      "bookChapter": 4,
+      "title": "Political Parties",
+      "pages": 17,
+      "author": null,
+      "form": null,
+      "overview": "The chapter takes a close look at the nature and working of political parties, especially in India. It asks why we need parties and how many parties are good for a democracy, introduces India's national and State parties, and examines the challenges parties face and the ways in which they can be reformed.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Why do we need political parties?",
+          "points": [
+            "Political parties are among the most visible institutions of democracy, but visibility does not mean popularity; people tend to blame parties for what is wrong."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Meaning",
+              "points": [
+                "A political party is a group of people who come together to contest elections and hold power in the government, agreeing on policies to promote the collective good.",
+                "Parties reflect fundamental political divisions and involve partisanship; a party is known by the part of society it stands for.",
+                "A party has three components: the leaders, the active members and the followers."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Functions",
+              "points": [
+                "Parties contest elections; in the USA members choose candidates, while in India top leaders choose them.",
+                "They put forward policies and programmes, reducing a multitude of opinions into a few basic positions.",
+                "They play a decisive role in making laws, and form and run governments by recruiting and training leaders.",
+                "Losing parties act as opposition, criticising the government and mobilising opposition.",
+                "Parties shape public opinion and provide people access to government machinery and welfare schemes."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Necessity",
+              "points": [
+                "Without parties every candidate would be independent, no one could promise major policy changes, and no one would be responsible for running the country.",
+                "Even in non-party panchayat elections villages split into factions that put up 'panels' of candidates.",
+                "The rise of parties is linked to representative democracy; parties are a necessary condition for a democracy."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "How many parties should we have?",
+          "points": [
+            "More than 750 parties are registered with the Election Commission of India, but only a handful are effective contenders.",
+            "In a one-party system, as in China, only one party is allowed to rule; this is not a democratic option.",
+            "In a two-party system, as in the USA and UK, power usually changes between two main parties.",
+            "In a multiparty system, as in India, more than two parties have a reasonable chance of power, often through coalitions, alliances or fronts such as the NDA, UPA and Left Front in 2004.",
+            "A party system is not chosen but evolves from a country's society, divisions, history and electoral system; no system is ideal for all countries."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "National parties",
+          "points": [
+            "Federal democracies have parties present in one federal unit and parties present in several or all units; country-wide parties are called national parties.",
+            "Every party must register with the Election Commission, which gives large, established 'recognised' parties a unique symbol and other facilities.",
+            "A State party must secure at least six per cent of votes in a State Assembly election and win at least two seats; a national party must secure at least six per cent in Lok Sabha or Assembly elections in four States and win at least four Lok Sabha seats.",
+            "There are six recognised national parties as per the Election Commission's 2023 notification: AAP, BSP, BJP, CPI(M), INC and NPP.",
+            "The book profiles each party's founding, ideology, support base and 2019 Lok Sabha performance."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "State parties",
+          "points": [
+            "Most other major parties are classified as State parties, commonly called regional parties, though they need not be regional in ideology.",
+            "Some, like the Samajwadi Party and Rashtriya Janata Dal, have national organisations; others, like Biju Janata Dal, Sikkim Democratic Front, Mizo National Front and Telangana Rashtra Samithi, are conscious of State identity.",
+            "Their number and strength expanded over three decades; no national party won a Lok Sabha majority on its own until 2014.",
+            "Since 1996 nearly every State party has been part of a national coalition government, strengthening federalism and democracy."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Challenges to political parties",
+          "points": [
+            "Lack of internal democracy: power is concentrated in a few top leaders, membership registers and internal elections are not maintained, and personal loyalty to the leader matters more than principles.",
+            "Dynastic succession: ordinary workers find it hard to rise, and top positions are often controlled by one family.",
+            "Growing role of money and muscle power: parties nominate wealthy candidates, donors influence policy, and criminals are sometimes supported.",
+            "Parties often do not offer a meaningful choice, as ideological differences have declined and leaders shift between parties."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "How can parties be reformed?",
+          "points": [
+            "The Constitution was amended so that MLAs and MPs who change parties lose their seats; this reduced defection but made dissent harder.",
+            "A Supreme Court order made it mandatory for candidates to file an affidavit on their property and pending criminal cases.",
+            "The Election Commission required parties to hold organisational elections and file income tax returns.",
+            "Suggested reforms include a law regulating internal party affairs, about one-third of tickets for women, and state funding of elections; over-regulation can be counter-productive.",
+            "Parties can also be reformed through public pressure via petitions, publicity and agitation, and by more citizens joining parties; the problem of bad politics can be solved by more and better politics."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        { "term": "Political party", "meaning": "A group of people who come together to contest elections and hold power in the government." },
+        { "term": "Partisan", "meaning": "A person strongly committed to a party, group or faction; partisanship is a tendency to take a side and inability to take a balanced view." },
+        { "term": "Ruling Party", "meaning": "Political party that runs government." },
+        { "term": "One-party system", "meaning": "A system in which only one party is allowed to control and run the government." },
+        { "term": "Two-party system", "meaning": "A party system in which power usually changes between two main parties." },
+        { "term": "Multiparty system", "meaning": "A system in which more than two parties have a reasonable chance of coming to power on their own or in alliance." },
+        { "term": "Alliance or front", "meaning": "When several parties in a multiparty system join hands to contest elections and win power." },
+        { "term": "Recognised political parties", "meaning": "Parties given a unique symbol and other special facilities by the Election Commission." },
+        { "term": "Defection", "meaning": "Changing party allegiance from the party on which a person got elected to a different party." },
+        { "term": "Affidavit", "meaning": "A signed document submitted to an officer, in which a person makes a sworn statement regarding her personal information." }
+      ],
+      "keyResults": [
+        { "label": "Registered parties", "statement": "More than 750 parties are registered with the Election Commission of India." },
+        { "label": "2004 alliances", "statement": "National Democratic Alliance, United Progressive Alliance and Left Front." },
+        { "label": "Recognition as State party", "statement": "At least six per cent of votes in a State Assembly election and at least two seats." },
+        { "label": "Recognition as national party", "statement": "At least six per cent of votes in Lok Sabha or Assembly elections in four States and at least four Lok Sabha seats." },
+        { "label": "Aam Aadmi Party (AAP)", "statement": "Formed 26 November 2012 after the 2011 anti-corruption movement; governs Punjab and Delhi; one Lok Sabha seat in 2019." },
+        { "label": "Bahujan Samaj Party (BSP)", "statement": "Formed in 1984 under Kanshi Ram; main base Uttar Pradesh; about 3.63 per cent votes and 10 seats in 2019." },
+        { "label": "Bharatiya Janata Party (BJP)", "statement": "Founded in 1980 reviving the Bharatiya Jana Sangh (1951); inspired by integral humanism and Antyodaya; largest party with 303 members in 2019; leads the NDA." },
+        { "label": "Communist Party of India - Marxist (CPI-M)", "statement": "Founded in 1964; believes in Marxism-Leninism; in power in West Bengal for 34 years; about 1.75 per cent votes and 3 seats in 2019." },
+        { "label": "Indian National Congress (INC)", "statement": "Founded in 1885; ruling party at the centre till 1977 and 1980-1989; led UPA 2004-2019; 19.5 per cent votes and 52 seats in 2019." },
+        { "label": "National People's Party (NPP)", "statement": "Formed July 2013 under P.A. Sangma; first North East party to be a national party; one Lok Sabha seat in 2019." },
+        { "label": "Since 1996", "statement": "Nearly every State party has been part of a national coalition government." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 11 }
+      ],
+      "bookSummary": [],
+      "notes": "The book does not number its headings. Page 11 (a map of State parties) is image-only and its content could not be read. The book lists six recognised national parties but the State parties section says 'Other than these seven parties'; both are recorded as printed. The chapter has no end summary."
+    },
+    {
+      "bookChapter": 5,
+      "title": "Outcomes of Democracy",
+      "pages": 12,
+      "author": null,
+      "form": null,
+      "overview": "The chapter asks what outcomes can reasonably be expected of democracy and whether democracies fulfil them in practice. After considering how to assess democracy's outcomes, it examines the record on accountable, responsive and legitimate government, economic growth and development, reduction of inequality and poverty, accommodation of social diversity, and the dignity and freedom of citizens.",
+      "sections": [
+        {
+          "number": null,
+          "title": "How do we assess democracy’s outcomes?",
+          "points": [
+            "Democracy was felt to be better because it promotes equality, enhances dignity, improves decision-making, provides a method to resolve conflicts and allows room to correct mistakes.",
+            "Democracy is seen as good in principle but felt to be not so good in practice.",
+            "Over a hundred countries practise some kind of democratic politics, but they differ greatly in social situations, economic achievements and cultures.",
+            "Democracy is just a form of government; it can only create conditions for achieving goals, which citizens must use."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Accountable, responsive and legitimate government",
+          "points": [
+            "The most basic outcome of democracy should be a government accountable to citizens and responsive to their needs.",
+            "Democratic decisions take time because of deliberation, but may be more acceptable and effective, so the cost of time is perhaps worth it.",
+            "Democracy ensures decisions follow norms and procedures, allowing transparency – the right and means to examine decision making.",
+            "Democracies have done well on regular free elections and open public debate but fall short on fair chances for all and sharing information; they are not impressive on responsiveness and freedom from corruption.",
+            "Democratic government is legitimate – people's own government – and South Asian surveys show overwhelming support for democracy."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Economic growth and development",
+          "points": [
+            "Between 1950 and 2000 dictatorships had a slightly higher rate of economic growth than democracies.",
+            "Economic development depends on several factors such as population size, global situation, cooperation from other countries and economic priorities.",
+            "The difference in growth rates between poor countries under dictatorship and democracy is negligible.",
+            "Democracy is not a guarantee of economic development but can be expected not to lag behind dictatorships, and it has other positive outcomes."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Reduction of inequality and poverty",
+          "points": [
+            "Democracies are based on political equality, but economic inequalities have grown, with a small number of ultra-rich taking a highly disproportionate and increasing share.",
+            "Those at the bottom sometimes cannot meet basic needs of food, clothing, house, education and health.",
+            "Democratically elected governments are not as keen to address poverty as expected, though the poor are a large proportion of voters.",
+            "In Bangladesh more than half the population lives in poverty, and several poor countries depend on rich countries for food."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Accommodation of social diversity",
+          "points": [
+            "Democracies develop procedures to conduct competition, reducing the chance of tensions becoming violent, as in Belgium.",
+            "No society can permanently resolve conflicts, but democracy is best suited to respect and negotiate differences, whereas non-democracies often suppress them.",
+            "Democracy is not simply rule by majority opinion: the majority must work with the minority, and majorities are not permanent.",
+            "Rule by majority must not become rule by a majority community of religion, race or language; every citizen must have a chance of being in the majority at some point."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Dignity and freedom of the citizens",
+          "points": [
+            "Democracy is much superior to other forms of government in promoting the dignity and freedom of the individual.",
+            "Long struggles by women have made respect and equal treatment of women accepted principles, making it easier to struggle against what is now legally and morally unacceptable.",
+            "Democracy in India has strengthened claims of disadvantaged castes for equal status and opportunity; remaining atrocities lack moral and legal foundations.",
+            "The examination of democracy never gets over; people's complaints are themselves a testimony to its success, transforming people from subjects into citizens."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        { "term": "Transparency", "meaning": "A citizen's right and means to examine whether a decision was taken through the correct procedures." },
+        { "term": "Legitimate government", "meaning": "A democratic government that is people's own government, even if slow, less efficient or not always responsive." },
+        { "term": "Accountable government", "meaning": "A government that follows procedures and answers to citizens, who have mechanisms to hold it accountable." }
+      ],
+      "keyResults": [
+        { "label": "Growth rates 1950-2000 (Table 1)", "statement": "All democratic regimes 3.95; all dictatorial regimes 4.42; poor countries under dictatorship 4.34; poor countries under democracy 4.28." },
+        { "label": "Income inequality (Table 2)", "statement": "Top 20 per cent share: South Africa 64.8, Brazil 63.0, Russia 53.7, USA 50.0, United Kingdom 45.0, Denmark 34.5, Hungary 34.4; bottom 20 per cent in South Africa 2.9 and Brazil 2.6." },
+        { "label": "Support for rule by elected leaders (South Asia)", "statement": "South Asia 94 per cent; Sri Lanka 98, Bangladesh 96, India 95, Nepal 94, Pakistan 81." },
+        { "label": "Suitability of democracy (South Asia)", "statement": "88 per cent in South Asia say democracy is suitable; Bangladesh 93, Sri Lanka 92, India 92, Pakistan 84, Nepal 79." },
+        { "label": "Democracy preferable", "statement": "Bangladesh 69, India 70, Nepal 62, Pakistan 37, Sri Lanka 71 per cent; preferred over dictatorship everywhere except Pakistan." },
+        { "label": "Efficacy of vote", "statement": "Those who say their vote makes a difference: South Asia 65, Bangladesh 66, India 67, Nepal 75, Pakistan 50, Sri Lanka 65 per cent." },
+        { "label": "Bangladesh", "statement": "More than half of its population lives in poverty." }
+      ],
+      "activities": [],
+      "exercises": [
+        { "name": "Exercises", "questions": 8 }
+      ],
+      "bookSummary": [],
+      "notes": "The book does not number its headings. Survey figures come from graphs whose extracted numbers are partly jumbled; only figures that could be matched to their labels are recorded. The chapter has no end summary."
+    }
+  ]
+}

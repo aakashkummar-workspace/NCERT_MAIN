@@ -1,0 +1,358 @@
+{
+  "board": "CBSE",
+  "grade": 10,
+  "subject": "English – Footprints without Feet",
+  "status": "DRAFT — for review by an English teacher before it is relied on",
+  "source": "Drafted against NCERT Class X English supplementary reader 'Footprints without Feet' (jefp1, 2025-26) and the 270 questions imported from C:/dev/sirah_project/NCERT/data.",
+  "notes": [
+    "A supplementary reader of stories with no language exercises, so each chapter has one reading concept rather than a reading concept and a grammar concept."
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "topics": [
+        {
+          "title": "Reading the story",
+          "outcomes": [
+            {
+              "code": "E10FP-01-1",
+              "statement": "Recalls the events of 'A Triumph of Surgery' — Tricki's illness, his stay at the surgery and his return home.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FP-01-2",
+              "statement": "Explains how Mrs Pumphrey's indulgence caused Tricki's illness and what the narrator's 'surgery' really was.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FP-01-3",
+              "statement": "Interprets words from the story's glossary, such as 'convalescing' and 'listless', in context.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'A Triumph of Surgery'",
+          "outcomes": [
+            "E10FP-01-1",
+            "E10FP-01-2",
+            "E10FP-01-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "topics": [
+        {
+          "title": "Reading the story",
+          "outcomes": [
+            {
+              "code": "E10FP-02-1",
+              "statement": "Recalls the events of 'The Thief's Story' — how Hari Singh met Anil, the theft and his return.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FP-02-2",
+              "statement": "Explains why Hari Singh returned the money, and how Anil's trust changed him.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FP-02-3",
+              "statement": "Interprets words from the story's glossary, such as 'unlined', in context.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'The Thief's Story'",
+          "outcomes": [
+            "E10FP-02-1",
+            "E10FP-02-2",
+            "E10FP-02-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "topics": [
+        {
+          "title": "Reading the story",
+          "outcomes": [
+            {
+              "code": "E10FP-03-1",
+              "statement": "Recalls the events of 'The Midnight Visitor' — Fowler's expectations, Max's arrival and Ausable's story about the balcony.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FP-03-2",
+              "statement": "Explains how Ausable used his quick thinking, and not a gun, to defeat Max.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FP-03-3",
+              "statement": "Interprets words from the story's glossary, such as 'prosaic', in context.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'The Midnight Visitor'",
+          "outcomes": [
+            "E10FP-03-1",
+            "E10FP-03-2",
+            "E10FP-03-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "topics": [
+        {
+          "title": "Reading the story",
+          "outcomes": [
+            {
+              "code": "E10FP-04-1",
+              "statement": "Recalls the events of 'A Question of Trust' — Horace Danby's plan, the robbery at Shotover Grange and the young lady.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FP-04-2",
+              "statement": "Explains the irony of Horace Danby, a thief who trusted others, being tricked by another thief.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'A Question of Trust'",
+          "outcomes": [
+            "E10FP-04-1",
+            "E10FP-04-2"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "topics": [
+        {
+          "title": "Reading the story",
+          "outcomes": [
+            {
+              "code": "E10FP-05-1",
+              "statement": "Recalls the events of 'Footprints without Feet' — Griffin's invisibility in London, his stay at Iping and his escape.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FP-05-2",
+              "statement": "Explains how Griffin misused his discovery, and why he ends as a lawless and lonely man.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'Footprints without Feet'",
+          "outcomes": [
+            "E10FP-05-1",
+            "E10FP-05-2"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "topics": [
+        {
+          "title": "Reading the story",
+          "outcomes": [
+            {
+              "code": "E10FP-06-1",
+              "statement": "Recalls the milestones in Richard Ebright's life, from collecting butterflies to his research at Harvard.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FP-06-2",
+              "statement": "Explains the qualities and influences — his mother, his teacher, his competitiveness — that made Ebright a scientist.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FP-06-3",
+              "statement": "Interprets words the chapter glosses, such as 'starling', in context.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'The Making of a Scientist'",
+          "outcomes": [
+            "E10FP-06-1",
+            "E10FP-06-2",
+            "E10FP-06-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "topics": [
+        {
+          "title": "Reading the story",
+          "outcomes": [
+            {
+              "code": "E10FP-07-1",
+              "statement": "Recalls the events of 'The Necklace' — the ball, the lost necklace and the years of hardship that followed.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FP-07-2",
+              "statement": "Explains how Matilda's pride and dissatisfaction led to her ruin, and the irony of the story's ending.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FP-07-3",
+              "statement": "Interprets words from the story's glossary, such as 'tureen', in context.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'The Necklace'",
+          "outcomes": [
+            "E10FP-07-1",
+            "E10FP-07-2",
+            "E10FP-07-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "topics": [
+        {
+          "title": "Reading the story",
+          "outcomes": [
+            {
+              "code": "E10FP-08-1",
+              "statement": "Recalls the events of 'Bholi' — her childhood, her schooling and the marriage she refused.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FP-08-2",
+              "statement": "Explains how education and her teacher's kindness gave Bholi the confidence to reject Bishamber.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FP-08-3",
+              "statement": "Interprets words from the story's glossary, such as 'ginning', in context.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'Bholi'",
+          "outcomes": [
+            "E10FP-08-1",
+            "E10FP-08-2",
+            "E10FP-08-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "topics": [
+        {
+          "title": "Reading the story",
+          "outcomes": [
+            {
+              "code": "E10FP-09-1",
+              "statement": "Recalls the plot and characters of the play 'The Book That Saved the Earth'.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FP-09-2",
+              "statement": "Explains how Think-Tank's misreading of a book of nursery rhymes saved the Earth, and what the play satirises.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'The Book That Saved the Earth'",
+          "outcomes": [
+            "E10FP-09-1",
+            "E10FP-09-2"
+          ]
+        }
+      ]
+    }
+  ],
+  "prerequisites": []
+}

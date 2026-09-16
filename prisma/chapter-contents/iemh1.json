@@ -1,0 +1,2173 @@
+{
+  "book": "iemh1",
+  "bookTitle": "Ganita Manjari (Grade 9, Part I)",
+  "class": 9,
+  "chapters": [
+    {
+      "bookChapter": 1,
+      "title": "Orienting Yourself: The Use of Coordinates",
+      "pages": 15,
+      "author": null,
+      "form": null,
+      "overview": "The chapter introduces the two-dimensional Cartesian coordinate system, tracing grid-based thinking from the Sindhu-Sarasvatī Civilisation through Indian, Arab and European mathematicians. Through the story of Shalini mapping her visually impaired brother Reiaan's room, it explains axes, the origin, quadrants and the coordinates of a point. It then derives the distance between two points using the Baudhāyana–Pythagoras theorem and observes that reflection in an axis preserves lengths.",
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Introduction",
+          "points": [
+            "A system of coordinates is a structured framework, like grid lines on a map, that uses numbers to describe exact locations of points or objects.",
+            "The first systematic use of grids was in the Sindhu-Sarasvatī Civilisation, whose streets ran North–South and East–West about 10 metres apart.",
+            "Baudhāyana used East–West and North–South lines for geometric constructions; Ujjayinī marked the central longitude meridian in the early Siddhāntas.",
+            "Āryabhaṭa replaced Greek chords with sines and mapped the sky using celestial coordinates; Brahmagupta formalised zero and negative numbers, without which the four-quadrant plane would be impossible.",
+            "Al-Bīrūnī used Indian trigonometric methods to find coordinates of cities; Omar Khayyām solved algebraic problems using coordinates in the plane.",
+            "Following Fermat, Descartes (1637 CE) formalised that any point in a plane can be defined by two numbers, its distances from two perpendicular axes."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "1.2",
+          "title": "Settling In",
+          "points": [
+            "Reiaan, who cannot see, has moved to a new city; his sister Shalini uses coordinate geometry to help him settle in.",
+            "She builds a rectangular grid with pins and threads showing the floor of his room at a scale of 1 cm : 1 foot.",
+            "Corners of objects are joined with thick wool so Reiaan can feel their positions (Fig. 1.1).",
+            "The map shows only the floor, so the position of the windows cannot be marked on it."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "1.3",
+          "title": "The 2-d Cartesian Coordinate System",
+          "points": [
+            "The number line is one-dimensional; the 2-D system uses two lines at right angles, the horizontal x-axis and the vertical y-axis.",
+            "The axes meet at the origin O (0, 0); distances to the right of or above O are positive, and to the left of or below O are negative.",
+            "A point (x, 0) lies on the x-axis and a point (0, y) lies on the y-axis; P = (x, y) may be written simply as P (x, y).",
+            "The plane of the axes is the Cartesian plane (coordinate plane, xy-plane); the axes divide it into four quadrants.",
+            "Quadrant I has both coordinates positive, II has negative x and positive y, III has both negative, IV has positive x and negative y.",
+            "x is the perpendicular distance of P from the y-axis and y is its perpendicular distance from the x-axis; exercises locate Reiaan's door, table, bathroom and dining room."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "1.4",
+          "title": "Distance Between Two Points in the 2-D Plane",
+          "points": [
+            "Distances along or parallel to an axis are easy; for a segment not parallel to either axis the Baudhāyana–Pythagoras theorem is used.",
+            "For A (3, 4) and D (7, 1), the shift along the x-axis is 4 and along the y-axis is 3, so AD = √(4² + 3²) = 5 units.",
+            "Similarly DM = √29 units and MA = √40 units for M (9, 6).",
+            "In general the distance between (x1, y1) and (x2, y2) is √((x2 – x1)² + (y2 – y1)²); signs of the differences do not matter.",
+            "Reflecting triangle ADM in the y-axis gives A' (–3, 4), D' (–7, 1), M' (–9, 6), and the side lengths stay the same."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "System of coordinates",
+          "meaning": "A structured framework (like the grid lines on a map or graph paper) that enables us to use numbers to describe the exact physical locations of points or objects."
+        },
+        {
+          "term": "x-axis",
+          "meaning": "The horizontal one of the two perpendicular lines of the 2-D coordinate system."
+        },
+        {
+          "term": "y-axis",
+          "meaning": "The vertical one of the two perpendicular lines of the 2-D coordinate system."
+        },
+        {
+          "term": "Origin",
+          "meaning": "The point of intersection of the x-axis and y-axis, O, with coordinates (0, 0)."
+        },
+        {
+          "term": "Cartesian plane",
+          "meaning": "The plane in which the axes are situated; also called the coordinate plane or the xy-plane."
+        },
+        {
+          "term": "Quadrants",
+          "meaning": "The four parts into which the axes divide the plane, numbered I to IV."
+        },
+        {
+          "term": "x-coordinate",
+          "meaning": "The perpendicular distance of a point from the y-axis, measured along the x-axis."
+        },
+        {
+          "term": "y-coordinate",
+          "meaning": "The perpendicular distance of a point from the x-axis, measured along the y-axis."
+        },
+        {
+          "term": "Celestial Coordinates",
+          "meaning": "Āryabhaṭa's mapping of the sky by measuring coordinate distances from the ecliptic (the path of the sun)."
+        },
+        {
+          "term": "Astrolabe",
+          "meaning": "A handheld device, perfected by Al-Bīrūnī, that allowed sailors to find their coordinates by looking at the stars."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Points on the axes",
+          "statement": "The coordinates of a point on the x-axis are of the form (x, 0), and those of points on the y-axis are of the form (0, y)."
+        },
+        {
+          "label": "Signs in quadrants",
+          "statement": "Coordinates are of the form (+, +) in the first quadrant, (–, +) in the second, (–, –) in the third and (+, –) in the fourth."
+        },
+        {
+          "label": "Order of coordinates",
+          "statement": "If x = y, then (x, y) = (y, x). If x ≠ y, then (x, y) ≠ (y, x)."
+        },
+        {
+          "label": "Distance parallel to the x-axis",
+          "statement": "The distance between (x1, y) and (x2, y) is |x2 – x1|."
+        },
+        {
+          "label": "Distance parallel to the y-axis",
+          "statement": "The distance between (x, y1) and (x, y2) is |y2 – y1|."
+        },
+        {
+          "label": "Distance formula",
+          "statement": "By the Baudhāyana–Pythagoras Theorem, the distance between (x1, y1) and (x2, y2) is √((x2 – x1)² + (y2 – y1)²)."
+        },
+        {
+          "label": "Reflection",
+          "statement": "Reflecting triangle ADM in the y-axis preserves the lengths of its sides."
+        },
+        {
+          "label": "Date: 1637 CE",
+          "statement": "René Descartes formalised that any point in a two-dimensional plane can be defined by two numbers, its distances from two perpendicular axes."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "Exercise Set 1.1",
+          "questions": 4
+        },
+        {
+          "name": "Exercise Set 1.2",
+          "questions": 4
+        },
+        {
+          "name": "End-of-Chapter Exercises",
+          "questions": 16
+        }
+      ],
+      "bookSummary": [
+        "To locate the position of an object or a point in a plane, we require two perpendicular lines — one horizontal and the other vertical.",
+        "The plane is called the Cartesian plane, the coordinate plane or the xy-plane, and the lines are called the coordinate axes.",
+        "The horizontal line is called the x-axis and the vertical line is called the y-axis.",
+        "The coordinate axes divide the plane into four parts called quadrants.",
+        "The point of intersection of the axes is called the origin.",
+        "The distance of a point from the y-axis is its x-coordinate and its distance from the x-axis is its y-coordinate; (x, y) are called the coordinates of the point.",
+        "The coordinates of a point on the x-axis are of the form (x, 0), and those of points on the y-axis are of the form (0, y).",
+        "The coordinates of the origin are (0, 0).",
+        "The coordinates of a point are of the form (+, +) in the first quadrant, (–, +) in the second, (–, –) in the third and (+, –) in the fourth.",
+        "If x = y, then (x, y) = (y, x). If x ≠ y, then (x, y) ≠ (y, x).",
+        "The distance between points (x1, y) and (x2, y) is the absolute value |x2 – x1| of the difference between x1 and x2.",
+        "The distance between points (x, y1) and (x, y2) is the absolute value |y2 – y1| of the difference between y1 and y2.",
+        "By the Baudhāyana–Pythagoras Theorem, the distance between points (x1, y1) and (x2, y2) is √((x2 – x1)² + (y2 – y1)²)."
+      ],
+      "notes": "Exercise Set 1.1 is a set of lettered parts (i)–(iv) on one figure rather than numbered questions; they are counted as 4."
+    },
+    {
+      "bookChapter": 2,
+      "title": "Introduction to Linear Polynomials",
+      "pages": 25,
+      "author": null,
+      "form": null,
+      "overview": "The chapter moves from algebraic expressions to one-variable polynomials and their degree, then concentrates on linear polynomials. It shows linear polynomials as input-output processes, uses them to model linear patterns, linear growth and linear decay, and finds linear relationships y = ax + b from two observations. Finally it plots such relationships as straight lines and interprets a as the slope and b as the y-intercept.",
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Introduction",
+          "points": [
+            "Examples of algebraic expressions: pens and pencils in boxes (4x + 5y + 3), the cost of fencing and sowing a garden (200l + 160w + 50lw), and the area of rectangles from a 20 cm wire (10x – x²).",
+            "An expression has terms, variables (the book's new word for letter-numbers), coefficients and a constant.",
+            "Algebraic expressions in one variable and its powers are one-variable (univariate) polynomials, or simply polynomials.",
+            "The highest power of the variable is the degree of the polynomial.",
+            "Polynomials of degree 3, 2, 1 and 0 are called cubic, quadratic, linear and constant polynomials."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "2.2",
+          "title": "Linear Polynomials",
+          "points": [
+            "The perimeter of a square of side x, 4x, and a chess club charge of ₹(200 + 50m) for m matches are linear polynomials.",
+            "A characteristic feature of linear polynomials is that the difference between successive values at integers is constant; such patterns are linear patterns.",
+            "Equating a linear polynomial to a constant gives a linear equation, e.g. x + (x + 10) = 64 gives the numbers 27 and 37.",
+            "A polynomial can be seen as an input-output process or function: input x, output 2x + 3.",
+            "2x + 3 is a linear function whereas 10x – x² is a quadratic function."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "2.3",
+          "title": "Exploring linear patterns",
+          "points": [
+            "In a growing pattern of square tiles each stage adds two tiles, so Stage n has 2n – 1 tiles, a linear polynomial.",
+            "The differences between consecutive terms 1, 3, 5, 7, 9 … are the constant 2, so the relationship is linear.",
+            "Bela's pocket money left on day n is ₹(100 – 5n), so ₹40 is left on the 12th day.",
+            "An auto-rickshaw fare of ₹25 for the first 2 km and ₹15 per km after gives 15n – 5 for n ≥ 2 km, and ₹145 for 10 km.",
+            "A linear pattern is a sequence of numbers where the difference between two consecutive terms is constant."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "2.4",
+          "title": "Linear growth and linear decay",
+          "points": [
+            "Linear expressions model situations of growth or decline.",
+            "The journey cost C(d) = 100 + 60d rises by ₹60 for each extra km, an example of linear growth.",
+            "The water height h(t) = 3 – 0.5t falls by 0.5 m each month, an example of linear decay.",
+            "Linear growth increases a quantity by a constant amount over equal intervals; linear decay decreases it by a constant amount over equal intervals."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "2.5",
+          "title": "Linear Relationships",
+          "points": [
+            "A linear relationship between two variables x and y can be expressed as y = ax + b; the tile pattern gives y = 2x – 1.",
+            "A telecom bill of ₹350 for 10 GB and ₹550 for 20 GB gives 350 = 10a + b and 550 = 20a + b.",
+            "Solving by substitution gives a = 20 and b = 150, so y = 20x + 150.",
+            "Exercises find similar relationships, including between degrees Celsius and Fahrenheit."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "2.6",
+          "title": "Visualising linear relationships",
+          "points": [
+            "To plot a linear equation, find any two points on the line, e.g. (0, 1) and (3, 7) for y = 2x + 1, join them and extend the line.",
+            "A point lies on a line if its coordinates satisfy the equation of the line.",
+            "Lines y = ax always pass through the origin; for a > 1 the line is steeper than y = x and for a < 1 less steep; a is the slope.",
+            "Linear growth is a straight line with positive slope and linear decay a straight line with negative slope; the slope equals the constant difference of the sequence.",
+            "Lines y = 2x – 1, y = 2x + 1, y = 2x + 5 with the same a but different b are parallel.",
+            "y = ax + b cuts the y-axis at (0, b); b is the y-intercept."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Variables",
+          "meaning": "The widely used alternate word for letter-numbers, such as x and y in 4x + 5y + 3."
+        },
+        {
+          "term": "Coefficient",
+          "meaning": "The number multiplying a variable in a term, e.g. 4 and 5 in 4x + 5y + 3."
+        },
+        {
+          "term": "Constant",
+          "meaning": "A term without a variable, e.g. 3 in 4x + 5y + 3."
+        },
+        {
+          "term": "Univariate polynomial",
+          "meaning": "An algebraic expression involving one variable and its powers; also called a one-variable polynomial or simply a polynomial."
+        },
+        {
+          "term": "Degree",
+          "meaning": "The highest power of the variable in a polynomial."
+        },
+        {
+          "term": "Cubic polynomial",
+          "meaning": "A polynomial of degree 3."
+        },
+        {
+          "term": "Quadratic polynomial",
+          "meaning": "A polynomial of degree 2."
+        },
+        {
+          "term": "Linear polynomial",
+          "meaning": "A polynomial of degree 1."
+        },
+        {
+          "term": "Constant polynomial",
+          "meaning": "A polynomial of degree 0, such as 8 = 8x⁰."
+        },
+        {
+          "term": "Linear equation",
+          "meaning": "What we get when a linear polynomial in one variable is equated to a constant."
+        },
+        {
+          "term": "Function",
+          "meaning": "An input-output process in which, for every value of x, there is a corresponding value of an expression such as 2x + 3."
+        },
+        {
+          "term": "Linear pattern",
+          "meaning": "A sequence of numbers where the difference between two consecutive terms is constant."
+        },
+        {
+          "term": "Linear growth",
+          "meaning": "A linear pattern where a quantity increases by a constant amount over equal intervals."
+        },
+        {
+          "term": "Linear decay",
+          "meaning": "A linear pattern where a quantity decreases by a constant amount over equal intervals."
+        },
+        {
+          "term": "Linear relationship",
+          "meaning": "A relationship between two variables x and y that can be expressed as y = ax + b."
+        },
+        {
+          "term": "Slope",
+          "meaning": "The number a in y = ax (or y = ax + b), which decides how steep the line is."
+        },
+        {
+          "term": "y-intercept",
+          "meaning": "The length b in y = ax + b; the line cuts the y-axis at (0, b)."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Constant differences",
+          "statement": "The difference between the successive values of a linear polynomial at integers is constant."
+        },
+        {
+          "label": "Tile pattern",
+          "statement": "The number of squares at Stage n of the growing tile pattern is 2n – 1."
+        },
+        {
+          "label": "Point on a line",
+          "statement": "If a point lies on a line, its coordinates must satisfy the equation of the line."
+        },
+        {
+          "label": "Lines through the origin",
+          "statement": "Straight lines of the form y = ax always pass through the origin; when a > 1 the line is steeper than y = x and when a < 1 it is less steep."
+        },
+        {
+          "label": "Growth and decay graphs",
+          "statement": "Linear growth is represented by a straight line with positive slope, while linear decay is represented by a straight line with negative slope."
+        },
+        {
+          "label": "y-intercept",
+          "statement": "Any straight line y = ax + b cuts the y-axis at the point (0, b)."
+        },
+        {
+          "label": "Slope and intercept",
+          "statement": "In y = ax + b, a represents the slope and b the y-intercept; changing a with b fixed changes the slope, and changing b with a fixed shifts the line parallel to itself."
+        },
+        {
+          "label": "Parallel lines",
+          "statement": "Lines with equal slopes but different y-intercepts are parallel to each other."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "Exercise Set 2.1",
+          "questions": 5
+        },
+        {
+          "name": "Exercise Set 2.2",
+          "questions": 7
+        },
+        {
+          "name": "Exercise Set 2.3",
+          "questions": 5
+        },
+        {
+          "name": "Exercise Set 2.4",
+          "questions": 4
+        },
+        {
+          "name": "Exercise Set 2.5",
+          "questions": 3
+        },
+        {
+          "name": "Exercise Set 2.6",
+          "questions": 1
+        },
+        {
+          "name": "End-of-Chapter Exercises",
+          "questions": 14
+        }
+      ],
+      "bookSummary": [
+        "An algebraic expression combines numbers, variables and operation symbols; in 2x² + 5xy – 3y², 2x², 5xy and –3y² are terms and 2, 5 and –3 are coefficients.",
+        "Univariate polynomials are algebraic expressions in one variable; the highest power of the variable is called its degree.",
+        "A polynomial of degree one is called a linear polynomial, e.g. 2x + 3 and 5 – 4y.",
+        "Linear growth refers to a pattern in which a quantity increases by a fixed amount over equal intervals; linear decay describes a pattern in which a quantity decreases by a fixed amount over equal intervals.",
+        "A linear pattern is a sequence of numbers where the difference between consecutive terms is constant.",
+        "A linear relationship between x and y is represented by a straight line y = ax + b; the slope is a and the constant b is the y-intercept, the distance from the origin where the line cuts the y-axis. When b = 0 the line y = ax passes through the origin.",
+        "Linear growth is represented by a straight line with positive slope and linear decay by a straight line with negative slope.",
+        "Parallel lines are of the form y = ax + b, where the slope a is fixed while b, the y-intercept, varies."
+      ],
+      "notes": null
+    },
+    {
+      "bookChapter": 3,
+      "title": "The World of Numbers",
+      "pages": 27,
+      "author": null,
+      "form": null,
+      "overview": "The chapter tells the story of how the number system grew to meet human needs: counting with natural numbers, the Indian concept of śhūnya becoming the number zero, Brahmagupta's integers and rules for signed numbers, and rational numbers with their arithmetic, number-line representation and density. It then proves √2 irrational, constructs irrational lengths, introduces π and Mādhava's series, and forms the real numbers. Decimal expansions are used to tell rational from irrational numbers, including converting repeating decimals to p/q and cyclic numbers.",
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "The Dawn of Mathematics: The Human Need to Count",
+          "points": [
+            "Mathematics began with the practical need to keep count, long before cities or laws.",
+            "Early herders used one-to-one correspondence, a pebble in a pot for each cow, which was the birth of the natural numbers."
+          ],
+          "subsections": [
+            {
+              "number": "3.1.1",
+              "title": "A History Written in Bone",
+              "points": [
+                "The earliest physical evidence of recording natural numbers is tally marks carved into bone in Africa.",
+                "The Lebombo Bone, about 35,000 years old, has 29 notches and may have been a lunar phase counter or menstrual calendar.",
+                "The Ishango bone (around 20,000 BCE) groups notches into 11, 13, 17 and 19, the primes between 10 and 20, and seems to show doubling."
+              ]
+            },
+            {
+              "number": "3.1.2",
+              "title": "The Indian Context: Trade and Astronomy",
+              "points": [
+                "Standardised weights and measures in Lothal and Harappa were crucial for trade with Mesopotamia.",
+                "The Vedas named all powers of 10 up to 10¹² (parārdha); in the Lalitavistara the Buddha describes names up to 10⁵³ (tallakṣhaṇa).",
+                "Powers of 10 used in the Ṛigveda set the stage for the place-value system and the concept of zero."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "3.2",
+          "title": "The Revolution of Śhūnya: When Nothing Became Something",
+          "points": [
+            "Babylonians and Mayans used placeholders but did not treat nothing as a number to calculate with.",
+            "In the work of Brahmagupta (628 CE) the void was formally transformed into a number, inspired by Indian philosophy."
+          ],
+          "subsections": [
+            {
+              "number": "3.2.1",
+              "title": "From Philosophy to Mathematics: The Concept of Śhūnyatā",
+              "points": [
+                "In the Upanishads and Buddhist literature śhūnyatā (emptiness) was the goal of yoga and meditation; Patanjali's Yoga Sutras also describe it.",
+                "Because Indian thinkers revered emptiness, they could welcome nothingness as a concept, which reached mathematics through Āryabhaṭa and Brahmagupta."
+              ]
+            },
+            {
+              "number": "3.2.2",
+              "title": "The Bakhśhālī Manuscript and Brahmagupta’s Rules",
+              "points": [
+                "The Bakhśhālī Manuscript, from the early centuries CE, uses a bold dot (bindu) for zero.",
+                "In the Brāhmasphuṭasiddhānta (628 CE) Brahmagupta defined zero as a – a and gave rules: a + 0 = a, a – 0 = a, a × 0 = 0."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "3.3",
+          "title": "Integers: Expanding the Horizon",
+          "points": [
+            "Brahmagupta asked what happens when a larger number is subtracted from a smaller one, grounding the answer in commerce.",
+            "Fortunes (dhana) are positive numbers and debts (ṛiṇa) are negative numbers.",
+            "Positive natural numbers, their negatives and zero form the integers, Z, from the German Zahlen."
+          ],
+          "subsections": [
+            {
+              "number": "3.3.1",
+              "title": "The Arithmetic of Integers",
+              "points": [
+                "A fortune plus a fortune is a fortune; a debt plus a debt is a debt.",
+                "A fortune minus zero is a fortune and a debt minus zero is a debt.",
+                "The product of a debt and a fortune is a debt; the product of two debts is a fortune.",
+                "Taking away four debts of ₹3 makes you ₹12 richer, explaining (–3) × (–4) = 12."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "3.4",
+          "title": "Filling the Spaces: Fractions and Rational Numbers",
+          "points": [
+            "Numbers representing parts of a whole are fractions; additive inverses of positive fractions are negative fractions.",
+            "All integers and fractions together form the rational numbers Q: numbers p/q with p, q integers and q ≠ 0.",
+            "Rational numbers include natural numbers, whole numbers and integers, and have many equivalent forms; p/q is usually taken in lowest (co-prime) form.",
+            "Brahmagupta's laws give equality (ad = bc), addition, subtraction, multiplication and division; addition and multiplication are commutative and distributive.",
+            "Rational numbers are closed under addition, subtraction and multiplication, and under division except by zero."
+          ],
+          "subsections": [
+            {
+              "number": "3.4.1",
+              "title": "Representation of Rational Numbers on the Number Line",
+              "points": [
+                "To show p/q, divide the unit interval into q equal parts and move p parts right of 0 if positive or left if negative.",
+                "Fractions greater than 1, such as 9/4 = 2¼, are located between the relevant integers.",
+                "The absolute value |x| of a rational number is its distance from 0, so |x| ≥ 0.",
+                "The distance between rational numbers a and b on the number line is |a – b|."
+              ]
+            },
+            {
+              "number": "3.4.2",
+              "title": "The Density of Rational Numbers",
+              "points": [
+                "Rational numbers are dense: between any two there is another, for example their average (a + b)/2.",
+                "So there are infinitely many rational numbers between any two points, though they do not fill the whole line."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "3.5",
+          "title": "Irrational Numbers",
+          "points": [
+            "Baudhāyana's Śhulbasūtra (around 800 BCE) met lengths that defied fractions; the Greeks met the same crisis later.",
+            "A unit square's diagonal has d² = 2, so d = √2, which cannot be written as p/q.",
+            "Numbers on the number line that cannot be expressed as a ratio of integers are irrational numbers."
+          ],
+          "subsections": [
+            {
+              "number": "3.5.1",
+              "title": "The Proof of Irrationality of √2",
+              "points": [
+                "The first proof that √2 is irrational is due to Hippasus of the Pythagorean school (c. 400 BCE).",
+                "It uses proof by contradiction: assume √2 = p/q in simplest form, so 2q² = p².",
+                "Then p is even (p = 2k), giving q² = 2k², so q is even too.",
+                "p and q sharing the factor 2 contradicts the simplest form, so √2 is irrational."
+              ]
+            },
+            {
+              "number": "3.5.2",
+              "title": "Construction of Length",
+              "points": [
+                "Mark OA = 1 unit on the number line, draw a perpendicular at A and mark AB = 1 unit; then OB = √2.",
+                "An arc with centre O and radius OB cuts the number line at P, which represents √2.",
+                "The method can be extended to construct lengths √n for positive integers n."
+              ]
+            },
+            {
+              "number": "3.5.3",
+              "title": "The Story of Pi (π) and Madhava’s Infinite Series",
+              "points": [
+                "π is the ratio of a circle's circumference to its diameter.",
+                "Āryabhaṭa (499 CE) gave 3927/1250 = 3.1416 but called it only an asanna (approximation).",
+                "π was formally proven irrational by Lambert in 1761.",
+                "In the 14th century Mādhava of Sangamagrama, founder of the Kerala School, gave an exact infinite series for π.",
+                "Adding infinitely many terms means finding the value the sums get closer and closer to; the number line contains irrationals as well as rationals."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "3.6",
+          "title": "Real Numbers: Decimals and Cyclic Patterns",
+          "points": [
+            "Rational and irrational numbers together make the continuous line of real numbers R.",
+            "The decimal expansion is the easiest way to distinguish a rational from an irrational number."
+          ],
+          "subsections": [
+            {
+              "number": "3.6.1",
+              "title": "Rational Decimals: Terminating and Repeating",
+              "points": [
+                "Dividing numerator by denominator either terminates (3/8 = 0.375) or repeats (5/11 = 0.4545…).",
+                "Decimals repeat because only finitely many remainders are possible, so one must recur.",
+                "For p/q in lowest terms, the decimal terminates exactly when the prime factors of q are only 2s and/or 5s.",
+                "Pure repeating decimals: let x be the decimal, multiply by 10ⁿ (n repeating digits), subtract and solve, e.g. 0.45 repeating = 5/11.",
+                "General repeating decimals: first multiply by 10ᵐ for the m non-repeating digits, then by 10ⁿ for the repeating block, subtract and solve."
+              ]
+            },
+            {
+              "number": "3.6.2",
+              "title": "The Magic of Cyclic Numbers",
+              "points": [
+                "1/7 = 0.142857 repeating, and 142857 is a cyclic number.",
+                "Multiplying 142857 by 1 to 6 gives the same digits shifted in a cycle."
+              ]
+            },
+            {
+              "number": "3.6.3",
+              "title": "Irrational Decimals: Chaos and Infinity",
+              "points": [
+                "Irrational numbers have decimal expansions that never end and never repeat, e.g. √2 = 1.41421… and π = 3.14159….",
+                "Decimal representations are not unique: any terminating decimal also has a form with repeating 9s, so 0.999… = 1."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "3.7",
+          "title": "Conclusion: The Never-Ending Journey",
+          "points": [
+            "The journey runs from the Ishango bone through śhūnya and Brahmagupta's negative numbers to dense rationals and irrationals.",
+            "Natural numbers lie in the integers, integers in the rationals; irrationals are separate; together rationals and irrationals form the real numbers.",
+            "No real number squared gives –1, so mathematicians invented imaginary numbers, denoted by i, used in electrical engineering, quantum mechanics and mobile phones."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "One-to-one correspondence",
+          "meaning": "Matching one object to another, such as one pebble for each cow, used by early humans to count without number words."
+        },
+        {
+          "term": "Natural Numbers",
+          "meaning": "The basic counting numbers {1, 2, 3, …}."
+        },
+        {
+          "term": "Śhūnya",
+          "meaning": "The word for zero."
+        },
+        {
+          "term": "Śhūnyatā",
+          "meaning": "Emptiness or zeroness; the state of perfect stillness sought in meditation, described in the Upanishads, Buddhist literature and the Yoga Sutras."
+        },
+        {
+          "term": "Bindu",
+          "meaning": "The bold dot used to represent zero in the Bakhśhālī Manuscript."
+        },
+        {
+          "term": "Dhana (fortune)",
+          "meaning": "Brahmagupta's term for positive numbers, representing wealth or assets."
+        },
+        {
+          "term": "Ṛiṇa (debt)",
+          "meaning": "Brahmagupta's term for negative numbers, representing debts."
+        },
+        {
+          "term": "Integers (Z)",
+          "meaning": "Positive natural numbers, their negative counterparts and zero; Z is from the German Zahlen, meaning numbers."
+        },
+        {
+          "term": "Fractions",
+          "meaning": "Numbers that represent parts of a whole."
+        },
+        {
+          "term": "Rational number (Q)",
+          "meaning": "Any number that can be expressed in the form p/q, where p and q are integers and q ≠ 0."
+        },
+        {
+          "term": "Equivalent rational numbers",
+          "meaning": "Different forms p/q of the same rational number, such as –1/3 = –2/6 = –3/9."
+        },
+        {
+          "term": "Absolute value",
+          "meaning": "|x|, the distance of a rational number x from 0 on the number line."
+        },
+        {
+          "term": "Dense",
+          "meaning": "The property that between any two rational numbers another rational number can always be found."
+        },
+        {
+          "term": "Irrational Numbers",
+          "meaning": "Numbers on the number line that cannot be expressed as a ratio of integers; their decimals never end and never repeat."
+        },
+        {
+          "term": "Proof by Contradiction",
+          "meaning": "Assuming the opposite of what we want to prove and showing that this assumption leads to a logical contradiction."
+        },
+        {
+          "term": "Asanna",
+          "meaning": "Āryabhaṭa's word for an approximation, used for his value 3.1416 of π."
+        },
+        {
+          "term": "Real Numbers (R)",
+          "meaning": "The rational and irrational numbers together, making up the entire continuous number line."
+        },
+        {
+          "term": "Pure repeating decimal",
+          "meaning": "A decimal in which a digit or sequence of digits begins repeating immediately after the decimal point."
+        },
+        {
+          "term": "General repeating decimal",
+          "meaning": "A decimal with some non-repeating digits just after the decimal point, followed by a repeating block."
+        },
+        {
+          "term": "Cyclic number",
+          "meaning": "A number such as 142857, the repeating block of 1/7, whose multiples by 1 to 6 are the same digits shifted in a cycle."
+        },
+        {
+          "term": "Imaginary Numbers",
+          "meaning": "A new dimension of numbers, denoted by i, invented to handle √–1, which has no place on the real number line."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Brahmagupta's rules for zero",
+          "statement": "a + 0 = a; a – 0 = a; a × 0 = 0; and zero is the result of subtracting a number from itself (a – a = 0)."
+        },
+        {
+          "label": "Brahmagupta's rules for integers",
+          "statement": "A fortune plus a fortune is a fortune; a debt plus a debt is a debt; a fortune or debt minus zero is unchanged; the product of a debt and a fortune is a debt; the product of two debts is a fortune."
+        },
+        {
+          "label": "Equality of rational numbers",
+          "statement": "Two rational numbers a/b and c/d are equal if ad = bc."
+        },
+        {
+          "label": "Addition and subtraction",
+          "statement": "a/b + c/b = (a + c)/b and a/b – c/b = (a – c)/b."
+        },
+        {
+          "label": "Distributive law",
+          "statement": "If p, q and r are rational numbers, then p(q + r) = pq + pr."
+        },
+        {
+          "label": "Closure",
+          "statement": "Rational numbers are closed under addition, subtraction and multiplication, and under division provided one does not divide by zero."
+        },
+        {
+          "label": "Density",
+          "statement": "The average (a + b)/2 of two rational numbers a and b is a rational number between them."
+        },
+        {
+          "label": "Distance on the number line",
+          "statement": "The distance between rational numbers a and b is |a – b|."
+        },
+        {
+          "label": "Theorem: √2 is irrational",
+          "statement": "√2 cannot be expressed as a fraction; proved by contradiction (first by Hippasus, c. 400 BCE)."
+        },
+        {
+          "label": "Terminating decimals",
+          "statement": "The decimal expansion of p/q (lowest terms) terminates precisely when the prime factors of q are only 2, only 5, or both 2 and 5."
+        },
+        {
+          "label": "Decimal signature",
+          "statement": "Rational numbers have terminating or repeating decimals; irrational numbers have decimals that never end and never repeat."
+        },
+        {
+          "label": "0.999… = 1",
+          "statement": "Any terminating decimal has an alternative form with repeating 9s, e.g. 1.000… = 0.999…."
+        },
+        {
+          "label": "Date: 628 CE",
+          "statement": "Brahmagupta's Brāhmasphuṭasiddhānta defines zero and lays down the laws of arithmetic with śhūnya."
+        },
+        {
+          "label": "Date: 499 CE",
+          "statement": "Āryabhaṭa gives π ≈ 3927/1250 = 3.1416 as an approximation."
+        },
+        {
+          "label": "Date: 1761",
+          "statement": "Lambert formally proves that π is irrational."
+        },
+        {
+          "label": "Mādhava's series",
+          "statement": "In the 14th century Mādhava of Sangamagrama expressed π exactly as an infinite series."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "Exercise Set 3.1",
+          "questions": 4
+        },
+        {
+          "name": "Exercise Set 3.2",
+          "questions": 4
+        },
+        {
+          "name": "Exercise Set 3.3",
+          "questions": 8
+        },
+        {
+          "name": "Exercise Set 3.4",
+          "questions": 6
+        },
+        {
+          "name": "Exercise Set 3.5",
+          "questions": 5
+        },
+        {
+          "name": "End-of-Chapter Exercises",
+          "questions": 16
+        }
+      ],
+      "bookSummary": [
+        "Natural Numbers are the counting numbers {1, 2, 3, …} that emerged at least tens of thousands of years ago due to humanity's need to count.",
+        "The concept of zero (śhūnya) was formalised in India by philosophers and brought into mathematics formally by Brahmagupta, who transformed śhūnyatā into a number on which arithmetic could be performed; he also introduced the negative numbers.",
+        "Integers (Z) extend the number line to include zero and the negative numbers, which Brahmagupta categorised as debts (ṛiṇa) in contrast with fortunes (dhana).",
+        "Brahmagupta's Laws provided the first rigorous framework for arithmetic with signed numbers, such as 'the product of two debts is a fortune', as well as the rules for zero.",
+        "Rational Numbers (Q) are numbers expressible as p/q with p, q integers and q ≠ 0; Brahmagupta gave the formal rules for their four operations.",
+        "Rational numbers are dense: a rational number always exists between any two other rational numbers.",
+        "Irrational Numbers like √2 and π cannot be written as fractions; the first proof of irrationality, of √2, was by Hippasus (c. 400 BCE) by contradiction, and Lambert proved π irrational in 1761.",
+        "Real Numbers (R) are the union of all rational and irrational numbers, forming a continuous, unbroken line.",
+        "Decimal expansions are a signature: rational numbers give terminating or repeating decimals, irrational numbers give non-repeating decimals that continue infinitely.",
+        "Cyclic numbers, such as 142857 from 1/7, reveal symmetrical internal patterns within the rational numbers.",
+        "Imaginary numbers are introduced as a final frontier to handle operations like √–1, which cannot be solved on the real number line."
+      ],
+      "notes": "Many fractions, surds and the Mādhava series formula were lost in extraction (only partial symbols survive), so exercise items in Exercise Set 3.3 and the series itself are not reproduced. The summary dates Brahmagupta to 629 CE while the body says 628 CE; the body date is used in keyResults. The heading of 3.5.1 is printed as \"The Proof of Irrationality of √2\", but the √2 was lost in extraction, so the title is recorded without it.",
+      "extractionGaps": [
+        "The Proof of Irrationality of √2"
+      ]
+    },
+    {
+      "bookChapter": 4,
+      "title": "Exploring Algebraic Identities",
+      "pages": 24,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explores algebraic identities, equations true for all values of their variables, starting from a pattern in consecutive squares. It visualises identities with squares, rectangles, cubes and algebra tiles, proves them with the distributive property, and uses them to square numbers, expand expressions and factorise quadratics by splitting the middle term. It then derives cubic identities, including x³ + y³ + z³ – 3xyz, and applies factorisation to simplify rational expressions and solve problems.",
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Introduction",
+          "points": [
+            "Algebraic identities are special rules that simplify calculations and help work with algebraic expressions.",
+            "For any three consecutive squares, adding the smallest and largest and subtracting twice the middle always seems to give 2, e.g. (25 + 49) – 2 × 36 = 2."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "4.2",
+          "title": "Visualising Identities",
+          "points": [
+            "A square of side (a + b) splits into squares a² and b² and two rectangles ab, showing (a + b)² = a² + 2ab + b².",
+            "The result is checked for negative and rational values and proved for all numbers with the distributive property.",
+            "An algebraic identity is true for all values of its variables, while an equation such as x² – 1 = 24 need not be.",
+            "(a + b)² ≠ a² + b²; the term 2ab decides which is larger.",
+            "The identity expands binomials like (5x + 2y)² and helps calculations like 43² = (40 + 3)² = 1849."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "4.3",
+          "title": "Factorisation of Algebraic Expressions Using Identities",
+          "points": [
+            "(a + b)² = a² + 2ab + b² gives factors: x² + 4x + 4 = (x + 2)² and 36x² + 12x + 1 = (6x + 1)².",
+            "A common factor may be taken out first: 50p² + 60pq + 18q² = 2(5p + 3q)².",
+            "Replacing b by –b gives (a – b)² = a² – 2ab + b², used for 29² = (30 – 1)² = 841.",
+            "With consecutive numbers n – 1, n, n + 1, (n – 1)² + (n + 1)² – 2n² = 2, proving the pattern from Example 1.",
+            "A square of side a split into parts (a – b) and b visualises (a – b)²."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "4.4",
+          "title": "More Identities",
+          "points": [
+            "Replacing b + c by d gives (a + b + c)² = a² + b² + c² + 2ab + 2bc + 2ca, shown with a square of side a + b + c.",
+            "It helps compute squares such as 119² = (100 + 10 + 9)² = 14161.",
+            "From Grade 8, a² – b² = (a + b)(a – b), rewritten as a² = (a + b)(a – b) + b².",
+            "Śhrīdharāchārya proposed this in 750 CE to compute squares quickly, e.g. 55² = 60 × 50 + 25 = 3025."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "4.5",
+          "title": "Factorisation Using Algebra Tiles",
+          "points": [
+            "A rectangle of sides x + 3 and x + 4 has area x² + 7x + 12, shown with one x²-tile, 7 x-tiles and 12 unit tiles.",
+            "Splitting 7x as 3x + 4x lets the tiles form a rectangle whose sides give the factors.",
+            "Tiles visualise both multiplying (x + 3)(x + 4) and factoring x² + 7x + 12.",
+            "Readers generalise to (x + a)(x + b) and (px + a)(qx + b) using tiles for (2x + 3)(3x + 1)."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "4.6",
+          "title": "Factorisation Without Using Algebra Tiles",
+          "points": [
+            "Compare x² + 7x + 12 with x² + (a + b)x + ab to get a + b = 7 and ab = 12, so a = 3, b = 4.",
+            "For x² + 11x + 30 search the factors of 30 for a pair summing to 11: 5 and 6.",
+            "For x² – 5x + 6, a + b = –5 and ab = 6 give a = –2 and b = –3."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "4.7",
+          "title": "Finding New Identities",
+          "points": [
+            "By the distributive property (a + b)³ = a³ + 3a²b + 3ab² + b³, visualised by splitting a cube of edge a + b into two cubes and six cuboids.",
+            "Replacing b with –b gives (a – b)³ = a³ – 3a²b + 3ab² – b³, with signs alternating.",
+            "These identify p³ + 6p²q + 12pq² + 8q³ as (p + 2q)³ and 8n³ – 60n²m + 150nm² – 125m³ as (2n – 5m)³.",
+            "(x – y)(x² + xy + y²) = x³ – y³; x – y is also a factor of x² – y² and x⁴ – y⁴.",
+            "(x + y + z)(x² + y² + z² – xy – xz – yz) = x³ + y³ + z³ – 3xyz, used to find a sum of cubes as 145."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "4.8",
+          "title": "Simplifying Rational Expressions",
+          "points": [
+            "Rational algebraic expressions are simplified by factorising numerator and denominator and cancelling common factors.",
+            "(x² – 7x + 12)/(5x² + 5x – 100) = (x – 3)(x – 4)/[5(x – 4)(x + 5)], and x – 4 cancels because it is not zero.",
+            "Saira's rectangle of area x² + 8x + 15 has sides x + 5 and x + 3.",
+            "A pool with breadth 4 m less than length and area 96 m² gives (x – 12)(x + 8) = 0; the negative root is rejected, so it is 12 m by 8 m."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Algebraic identity",
+          "meaning": "An equation that is true for all values of the variables occurring in it."
+        },
+        {
+          "term": "Equation",
+          "meaning": "A statement of equality that need not be true for all values, e.g. x² – 1 = 24 is true only for x = 5 or –5."
+        },
+        {
+          "term": "Algebra tiles",
+          "meaning": "x²-tiles, x-tiles and unit tiles arranged into rectangles to represent products and find factors."
+        },
+        {
+          "term": "Splitting the x term",
+          "meaning": "Writing the middle term of x² + (a + b)x + ab as ax + bx, where a + b and ab match the given coefficients, in order to factorise."
+        },
+        {
+          "term": "Rational expression",
+          "meaning": "A quotient of algebraic expressions, simplified by cancelling common factors that are not zero."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Identity",
+          "statement": "(x + y)² = x² + 2xy + y²"
+        },
+        {
+          "label": "Identity",
+          "statement": "(x – y)² = x² – 2xy + y²"
+        },
+        {
+          "label": "Identity",
+          "statement": "(x + y + z)² = x² + y² + z² + 2xy + 2yz + 2zx"
+        },
+        {
+          "label": "Identity",
+          "statement": "(x + y)(x – y) = x² – y²"
+        },
+        {
+          "label": "Identity",
+          "statement": "(x + a)(x + b) = x² + (a + b)x + ab"
+        },
+        {
+          "label": "Identity",
+          "statement": "(ax + b)(cx + d) = acx² + (ad + bc)x + bd"
+        },
+        {
+          "label": "Identity",
+          "statement": "x³ – y³ = (x – y)(x² + xy + y²)"
+        },
+        {
+          "label": "Identity",
+          "statement": "x³ + y³ = (x + y)(x² – xy + y²)"
+        },
+        {
+          "label": "Identity",
+          "statement": "(x + y)³ = x³ + 3x²y + 3xy² + y³"
+        },
+        {
+          "label": "Identity",
+          "statement": "(x – y)³ = x³ – 3x²y + 3xy² – y³"
+        },
+        {
+          "label": "Identity",
+          "statement": "x³ + y³ + z³ – 3xyz = (x + y + z)(x² + y² + z² – xy – xz – yz)"
+        },
+        {
+          "label": "Śhrīdharāchārya (750 CE)",
+          "statement": "a² = (a + b)(a – b) + b², proposed as a method to quickly compute squares of numbers."
+        },
+        {
+          "label": "Consecutive squares",
+          "statement": "Adding the smallest and largest of any three consecutive square numbers and subtracting twice the middle one always gives 2."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "Exercise Set 4.1",
+          "questions": 2
+        },
+        {
+          "name": "Exercise Set 4.2",
+          "questions": 2
+        },
+        {
+          "name": "Exercise Set 4.3",
+          "questions": 4
+        },
+        {
+          "name": "Exercise Set 4.4",
+          "questions": 3
+        },
+        {
+          "name": "Exercise Set 4.5",
+          "questions": 1
+        },
+        {
+          "name": "End-of-Chapter Exercises",
+          "questions": 13
+        }
+      ],
+      "bookSummary": [
+        "Identities are equations that are true for all values of the variables.",
+        "One of the ways to visualise identities is using geometrical models or algebra tiles.",
+        "Identities can also be used to factor algebraic expressions.",
+        "Factorisation of quadratic expressions may be visualised by means of algebra tiles.",
+        "Identities can also be used to simplify calculations such as squaring numbers or evaluating products of numbers.",
+        "Rational algebraic expressions may be simplified by factorisation and removing the common factors in the numerator and denominator, provided such a factor exists and it is not equal to zero.",
+        "Identities studied: (x + y)², (x – y)², (x + y + z)², (x + y)(x – y) = x² – y², (x + a)(x + b), (ax + b)(cx + d), x³ – y³, x³ + y³, (x + y)³, (x – y)³ and x³ + y³ + z³ – 3xyz = (x + y + z)(x² + y² + z² – xy – xz – yz)."
+      ],
+      "notes": "Several fractional expressions in the exercises and examples (rational expressions, fractional binomials) were lost in extraction; the (a – b)³ derivation is partly garbled but its result is stated in the chapter summary."
+    },
+    {
+      "bookChapter": 5,
+      "title": "I’m Up and Down, and Round and Round",
+      "pages": 26,
+      "author": null,
+      "form": null,
+      "overview": "The chapter studies the circle, starting from circular shapes in nature and cave paintings and defining a circle as a locus of points equidistant from a centre. It examines the circle's symmetries, circles through two and three points (the circumcircle), and properties of chords: equal chords and equal central angles, perpendiculars from the centre, and distance from the centre. It then proves that the angle an arc subtends at the centre is double that at the circle, and uses this to study concyclic points and cyclic quadrilaterals.",
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Definitions",
+          "points": [
+            "Circles appear in nature (raindrop ripples, plant stems, sunflowers, the moon and sun) and in cave paintings such as those of Gudahandi in Odisha.",
+            "A circle is the set (locus) of all points on a plane equidistant from a given point, its centre; that distance is the radius.",
+            "A line segment joining two points on the circle is a chord; the angle it makes at the centre is the angle subtended by the chord.",
+            "A chord passing through the centre is a diameter."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "5.2",
+          "title": "Symmetries of a Circle",
+          "points": [
+            "A circle has complete rotational symmetry: rotated by any angle it looks the same, like a turning wheel.",
+            "Folding a paper circle so its boundary overlaps gives a crease that is a diameter; all diameters are lines of reflection symmetry.",
+            "The perpendicular bisector of AB is the locus of points equidistant from A and B."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "5.3",
+          "title": "How Many Circles?",
+          "points": [
+            "Any point equidistant from A and B can be the centre of a circle through A and B, so infinitely many circles pass through two points, with centres on the perpendicular bisector of AB.",
+            "No circle passes through three collinear points.",
+            "Theorem 1: the perpendicular bisectors of AB and AC of non-collinear points meet at a unique point O, giving a unique circle through A, B and C.",
+            "O is the circumcentre and the circle is the circumcircle of triangle ABC, which is inscribed in the circle.",
+            "The circumcentre lies inside an acute-angled triangle, outside an obtuse-angled triangle, and at the midpoint of the hypotenuse of a right-angled triangle."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "5.4",
+          "title": "Chords and the Angles They Subtend",
+          "points": [
+            "A thread tied tight across a rotating wheel models a chord that moves to other chords of the same length.",
+            "Theorem 2: equal chords subtend equal angles at the centre, proved by SSS congruence of the triangles formed with the radii.",
+            "Theorem 3: chords subtending equal angles at the centre are equal, proved by SAS congruence."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "5.5",
+          "title": "Midpoints and Perpendicular Bisectors of Chords",
+          "points": [
+            "Theorem 4: the line joining the centre to the midpoint of a chord is perpendicular to the chord (SAS congruence and angles on a line summing to 180°).",
+            "Theorem 5 (the converse, from an exercise): the perpendicular from the centre to a chord bisects the chord."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "5.6",
+          "title": "Distance of Chords from the Centre",
+          "points": [
+            "A paper-folding activity shows a chord bisected by the fold from the centre, and suggests equal chords are equidistant from the centre.",
+            "Examples alone do not prove a statement true in general, so a reason is needed.",
+            "Theorem 6: equal chords are equidistant from the centre, explained both by SSS congruence and by RHS congruence.",
+            "Theorem 7: chords equidistant from the centre have equal length."
+          ],
+          "subsections": [
+            {
+              "number": "5.6.1",
+              "title": "Which of the two unequal chords is farther from the centre?",
+              "points": [
+                "An activity records chord lengths and their distances from the centre: the longer the chord, the closer it is to the centre.",
+                "Theorem 8: if AB > DE then the distance from the centre to AB is less, proved with the Baudhāyana–Pythagoras theorem.",
+                "The diameter, at distance zero, is the greatest chord; a chord pushed to the edge becomes a point at distance equal to the radius."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "5.7",
+          "title": "Angles Subtended by an Arc",
+          "points": [
+            "An arc is a connected portion of a circle defined by two end points; the bigger of the two arcs is the major arc and the smaller the minor arc.",
+            "The angle subtended by an arc at the centre is the angle swept moving from OA to OB along the arc; a minor arc subtends less than 180° and a major arc more."
+          ],
+          "subsections": [
+            {
+              "number": "5.7.1",
+              "title": "Angle subtended by an arc at a point on the circle outside the arc",
+              "points": [
+                "The angle ACB at any point C on the circle outside the arc does not depend on which point C is chosen.",
+                "Theorem 9: the angle subtended at the centre is double the angle at any point on the circle outside the arc, proved in two cases using isosceles triangles and the exterior angle theorem.",
+                "So angles subtended by the same arc at points on the circle are all equal, a fact that distinguishes the circle from other shapes.",
+                "Corollary: the angle subtended by a diameter at any point on the circle is 90°."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "5.8",
+          "title": "Concyclicity of Points",
+          "points": [
+            "Points on the same circle are called concyclic.",
+            "Theorem 10: if segment AB subtends equal angles at C and D on the same side of AB, then A, B, C, D are concyclic (proved by contradiction using exterior angles).",
+            "A quadrilateral (4-gon) with concyclic vertices is a cyclic quadrilateral.",
+            "Theorem 11: opposite angles of a cyclic quadrilateral sum to 180°, since together they are half the complete angle of 360° at the centre.",
+            "Theorem 12 (converse): if two opposite angles of a quadrilateral add up to 180°, its vertices are concyclic."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Circle",
+          "meaning": "The set of all points on the plane that are equidistant from a given point on that plane."
+        },
+        {
+          "term": "Locus",
+          "meaning": "The set of points that satisfy a given condition."
+        },
+        {
+          "term": "Centre",
+          "meaning": "The given point from which all points of the circle are equidistant."
+        },
+        {
+          "term": "Radius",
+          "meaning": "The distance from the centre to any point on the circle."
+        },
+        {
+          "term": "Chord",
+          "meaning": "The line segment joining two points on the circle."
+        },
+        {
+          "term": "Diameter",
+          "meaning": "A chord passing through the centre of a circle."
+        },
+        {
+          "term": "Rotational symmetry",
+          "meaning": "A circle rotated by any angle looks exactly the same."
+        },
+        {
+          "term": "Line of reflection symmetry",
+          "meaning": "A fold line along which the circle's boundaries overlap; every diameter is one."
+        },
+        {
+          "term": "Collinear",
+          "meaning": "Points lying on a straight line."
+        },
+        {
+          "term": "Circumcentre",
+          "meaning": "The centre O of the circle passing through the vertices of a triangle."
+        },
+        {
+          "term": "Circumcircle",
+          "meaning": "The circle passing through the vertices of a triangle; it circumscribes the triangle, and the triangle is inscribed in it."
+        },
+        {
+          "term": "Arc",
+          "meaning": "A connected portion of a circle defined by two end points and the curve connecting them along the circle."
+        },
+        {
+          "term": "Major arc and minor arc",
+          "meaning": "The bigger and smaller of the two arcs joining two points of a circle."
+        },
+        {
+          "term": "Corollary",
+          "meaning": "A fact that follows immediately from an already proved result."
+        },
+        {
+          "term": "Concyclic",
+          "meaning": "Points that lie on the same circle."
+        },
+        {
+          "term": "Cyclic quadrilateral",
+          "meaning": "A quadrilateral (4-gon) whose vertices are concyclic."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Circles through two points",
+          "statement": "The centres of all circles through A and B lie on the perpendicular bisector of AB."
+        },
+        {
+          "label": "Theorem 1",
+          "statement": "There is a unique circle passing through three non-collinear points."
+        },
+        {
+          "label": "Position of circumcentre",
+          "statement": "The circumcentre lies inside an acute-angled triangle, outside an obtuse-angled triangle, and at the midpoint of the hypotenuse of a right-angled triangle."
+        },
+        {
+          "label": "Theorem 2",
+          "statement": "Equal chords of a circle subtend equal angles at the centre of the circle."
+        },
+        {
+          "label": "Theorem 3",
+          "statement": "Chords of a circle that subtend equal angles at the centre are equal."
+        },
+        {
+          "label": "Theorem 4",
+          "statement": "The line joining the centre of a circle and the midpoint of a chord of the circle is perpendicular to the chord."
+        },
+        {
+          "label": "Theorem 5",
+          "statement": "The perpendicular from the centre of a circle to a chord of the circle bisects the chord."
+        },
+        {
+          "label": "Theorem 6",
+          "statement": "Chords of a circle having the same length are all at the same distance from the centre of the circle."
+        },
+        {
+          "label": "Theorem 7",
+          "statement": "Chords of a circle that are equidistant from the centre have equal length."
+        },
+        {
+          "label": "Theorem 8",
+          "statement": "Let AB and DE be two chords of a circle with centre C. Suppose AB > DE. Then the distance from C to AB is less than the distance from C to DE."
+        },
+        {
+          "label": "Theorem 9",
+          "statement": "The angle subtended by an arc at the centre of the circle is double the angle subtended by the arc at any point on the circle outside the arc."
+        },
+        {
+          "label": "Corollary",
+          "statement": "The angle subtended by a diameter at any point on the circle is 90°."
+        },
+        {
+          "label": "Theorem 10",
+          "statement": "If a line segment AB joining two points A, B subtends equal angles at two other points C, D that lie on the same side of AB, then the four points lie on a circle."
+        },
+        {
+          "label": "Theorem 11",
+          "statement": "The sum of two opposite angles of a cyclic quadrilateral is 180°."
+        },
+        {
+          "label": "Theorem 12",
+          "statement": "If two opposite angles of a quadrilateral add up to 180°, then the vertices of the quadrilateral lie on a circle, i.e., they are concyclic."
+        },
+        {
+          "label": "Chord length",
+          "statement": "If the perpendicular distance of a chord from the centre is d and the radius is r, the chord length is 2√(r² – d²) (Exercise Set 5.5)."
+        }
+      ],
+      "activities": [
+        "Activity: List some objects from nature that resemble a circle.",
+        "Activity: Take a paper circle. Fold the circle from the boundary, inwards.",
+        "Activity: Draw a circle. Draw chords of various lengths.",
+        "Activity: Draw a circle and a chord AB."
+      ],
+      "exercises": [
+        {
+          "name": "Exercise Set 5.1",
+          "questions": 4
+        },
+        {
+          "name": "Think, Draw and Infer",
+          "questions": 2
+        },
+        {
+          "name": "Exercise Set 5.2",
+          "questions": 2
+        },
+        {
+          "name": "Exercise Set 5.3",
+          "questions": 3
+        },
+        {
+          "name": "Exercise Set 5.4",
+          "questions": 3
+        },
+        {
+          "name": "Exercise Set 5.5",
+          "questions": 3
+        },
+        {
+          "name": "Exercise Set 5.6",
+          "questions": 3
+        },
+        {
+          "name": "End-of-Chapter Exercises",
+          "questions": 26
+        }
+      ],
+      "bookSummary": [
+        "A circle is the set of all points in a plane that lie at a given distance (the radius) from a fixed point called its centre.",
+        "A circle has reflection symmetry across any diameter.",
+        "A circle has rotational symmetry about its centre, through any angle.",
+        "Infinitely many circles can be drawn through two given points; their centres lie on the perpendicular bisector of the segment joining them.",
+        "Through any three points not on a straight line a unique circle can be drawn, the circumcircle; its centre, the circumcentre, lies at the intersection of the perpendicular bisectors of the segments joining the points.",
+        "Equal chords subtend equal angles at the centre; conversely, chords subtending equal angles at the centre are equal in length.",
+        "A line from the centre to the midpoint of a chord is perpendicular to that chord; conversely, a perpendicular from the centre to a chord bisects it.",
+        "Chords of equal length lie at equal distance from the centre; conversely, chords at the same distance from the centre are equal in length.",
+        "Given two unequal chords, the longer chord is closer to the centre.",
+        "The angle subtended by an arc at the centre of a circle is twice the angle it subtends at any point on the remaining part of the circle.",
+        "The angle subtended by a diameter at any point on the circle is 90°.",
+        "If a line segment between two points subtends equal angles at two other points on the same side of the segment, all four points lie on a single circle (they are concyclic).",
+        "A quadrilateral inscribed in a circle is called cyclic; the sum of its opposite angles is 180°, and conversely a quadrilateral whose opposite angles add up to 180° is cyclic."
+      ],
+      "notes": null
+    },
+    {
+      "bookChapter": 6,
+      "title": "Measuring Space: Perimeter and Area",
+      "pages": 37,
+      "author": null,
+      "form": null,
+      "overview": "Starting from the staggered starts of a 4 × 100 m relay, the chapter studies perimeter: the constant C/D ratio π, its history from Mesopotamia to Mādhava's exact series, its irrationality, and the lengths of circles and arcs applied to a 400 m track. It then revisits areas of rectangles, parallelograms and triangles, introduces Heron's formula and Brahmagupta's formula for a cyclic 4-gon (showing it generalises Heron's), and Baudhāyana's squaring of a rectangle. It ends with the area of a circle, from ancient estimates to Archimedes and Nīlakaṇṭha's visual argument, and the area of a sector.",
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Perimeter of a Shape",
+          "points": [
+            "The distance between starting points of adjacent lanes in a relay race is the stagger; working it out needs the length around a circle.",
+            "The perimeter of a shape is the total length around its border.",
+            "A square of side a has perimeter 4a, an equilateral triangle 3a, and a rectangle 2(a + b); the square is a special case of the rectangle.",
+            "The ratio of perimeter to side stays fixed (4:1 for squares, 3:1 for equilateral triangles) as the size changes."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "6.2",
+          "title": "Perimeter of a Circle — The C/D Ratio",
+          "points": [
+            "People realised long ago that the ratio of circumference to diameter does not change with the size of the circle.",
+            "A home measurement wraps thin thread 20 times around a cotton reel of diameter D and computes L/(20D)."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "C/D’s Adventurous Journey: From Ancient Approximations to the Exact Formula of Mādhava",
+              "points": [
+                "Mesopotamians (c. 1900 BCE) saw that a circle's perimeter exceeds its inscribed hexagon's and took π = 3 + 1/8 = 3.125.",
+                "Archimedes (by 250 BCE) trapped π between inscribed and circumscribed polygons, reaching 3 10/71 < π < 3 1/7 with 96-sided polygons; Ptolemy (c. 150 CE) gave about 3.14167.",
+                "Zu Chongzhi (480 CE), building on Liu Hui, used polygons of 24,576 sides to find 22/7 and 355/113, the most accurate value for over 800 years.",
+                "Āryabhaṭa (499 CE) gave 62832/20000 = 3.1416, calling it asanna (approximate); Brahmagupta (628 CE) used √10 ≈ 3.1622 for its elegance.",
+                "Mādhava of Sangamagrāma found the first exact formula, π/4 = 1 – 1/3 + 1/5 – 1/7 + …, birthing calculus and computing π to 11 decimal places.",
+                "Later advances came from Nīlakaṇṭha, Machin, Ramanujan and the Chudnovsky brothers; William Jones used the symbol π in 1706 and Euler popularised it."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "6.3",
+          "title": "π Is Irrational",
+          "points": [
+            "The digits of π go on forever with no pattern, unlike the repeating decimals of fractions.",
+            "π cannot be written as a ratio of two integers; Āryabhaṭa and Zu Chongzhi seem to have regarded it as irrational, and Lambert proved it in 1761.",
+            "There is no best fraction for π; π ≈ 22/7 but π ≠ 22/7, and 355/113 is much better.",
+            "Pi Day is 14 March and Pi Approximation Day is 22 July; 'How I wish I could recollect pi' encodes 3.141592."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "6.4",
+          "title": "Length of an Arc of a Circle",
+          "points": [
+            "The circumference of a circle is πd = 2πr.",
+            "By reflection or a half-turn, a semicircle has length πr; by quarter-turn symmetry, a quarter circle has length πr/2.",
+            "An arc subtending θ° at the centre has length 2πr × θ/360."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "A Closer Look at a 400 m Athletics Track",
+              "points": [
+                "A 400 m track has two 84.39 m straights and two semicircular ends with inner radius 36.5 m; each lane is 1.22 m wide.",
+                "Running 0.3 m from the inner border gives 168.78 m of straights plus a full circle of radius 36.8 m (231.22 m), totalling 400 m.",
+                "Runners in outer lanes run larger semicircles, so staggers compensate for the extra distance."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "6.5",
+          "title": "Problems, Puzzles, and Paradoxes on Perimeter",
+          "points": [
+            "Two circles of radius r through each other's centres form an equilateral triangle, so each hidden arc is one-third of a circle and the outline is two-thirds of each circumference.",
+            "A semicircle path from P to Q equals in length a path of three smaller semicircles on the same line, since a' = b' + c' + d'."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "6.6",
+          "title": "Area of a Rectangle",
+          "points": [
+            "Area is the amount of space occupied by a two-dimensional region, measured in unit squares (1 sq. unit).",
+            "A rectangle with sides a and b has area ab sq. units; a square has area a²."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "6.7",
+          "title": "Area of a Parallelogram",
+          "points": [
+            "A parallelogram can be cut and rearranged into a rectangle with the same base b and height h, so its area is bh.",
+            "For a 'thin' parallelogram the construction is repeated step by step using congruent triangles.",
+            "Knowing only the side lengths of a parallelogram does not fix its area, because the angle between sides can change."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "6.8",
+          "title": "Area of a Triangle",
+          "points": [
+            "Enclosing a triangle in a rectangle, or fitting two congruent copies into a parallelogram, gives area ½bh.",
+            "A median joins a vertex to the midpoint of the opposite side; the two triangles it creates have equal bases and heights.",
+            "Theorem: a median divides a triangle into two triangles with equal area, although they are generally not congruent.",
+            "Readers explore whether equal-area polygons can be cut and rearranged into each other, and which rectangles of perimeter 40 have the largest area."
+          ],
+          "subsections": [
+            {
+              "number": "6.8.1",
+              "title": "Heron’s formula",
+              "points": [
+                "Heron, who taught at the Museum in Alexandria, found that a triangle with sides a, b, c and semi-perimeter s has area √(s(s – a)(s – b)(s – c)).",
+                "It is checked against ½bh for an equilateral triangle (√3a²/4), an isosceles triangle and the 3-4-5 triangle (area 6).",
+                "The symbol ∴ means 'therefore'.",
+                "Two more area formulas use the circumcircle (radius R) and the incircle (radius r) of a triangle."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Brahmagupta’s Formula for the Area of a Cyclic 4-gon",
+              "points": [
+                "A 4-gon's area cannot be found from its side lengths alone: rhombi of side 3 can have areas 9, 8.01 or 5.41.",
+                "Extra information is needed, such as an angle, a diagonal, or a property like being cyclic.",
+                "In 628 CE Brahmagupta (598–668 CE) gave the area of a cyclic 4-gon with sides a, b, c, d as √((s – a)(s – b)(s – c)(s – d)).",
+                "It is verified for a rectangle (area ab) and an isosceles trapezium."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Special Cases and Generalisation in Mathematics",
+              "points": [
+                "A special case results from a general result by applying an extra condition; the general result is a generalisation of it.",
+                "The square formulas are special cases of the rectangle formulas with b = a.",
+                "For an isosceles right-angled triangle the Baudhāyana–Pythagoras theorem reduces to c = a√2."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Brahmagupta’s Formula Generalises Heron’s Formula",
+              "points": [
+                "A triangle can be regarded as a cyclic 4-gon whose fourth side d has zero length.",
+                "Putting d = 0 in Brahmagupta's formula gives exactly Heron's formula, so Heron's formula is a special case."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "6.9",
+          "title": "Squaring a Rectangle",
+          "points": [
+            "To square a shape meant to construct a square equal in area to it.",
+            "Baudhāyana's Śhulbasūtra (800 BCE) squares a rectangle with sides a > b: mark AE = AB, take midpoint F of ED, draw square AFGH, swing arc AG from H to cut BC at K, and draw square HPQS.",
+            "The construction is a geometric translation of ((a + b)/2)² – ((a – b)/2)² = ab, justified with the Baudhāyana–Pythagoras theorem."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "6.10",
+          "title": "Area of a Circle",
+          "points": [
+            "People needed circle areas for grain towers, gardens, buildings, city planning and tax.",
+            "For a given shape the ratio P² : A is fixed (16 : 1 for squares), so C² : A should be constant for circles.",
+            "The Babylonians found C² : A ≈ 12 : 1; the Egyptians (around 1500 BCE) used A ≈ (8d/9)², a formula also in the Baudhāyana Śhulbasūtra."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "The Familiar Formula in Use Today",
+              "points": [
+                "Around 250 BCE Archimedes showed the constant is exactly π, so A = πr², the area of a right triangle with legs the radius and the circumference.",
+                "His proof uses regular polygons, whose area is half the perimeter times the inradius, with more and more sides.",
+                "Nīlakaṇṭha Somayājī (c. 1500) gave a visual argument: slices rearranged into a near-parallelogram of base πr and height r."
+              ]
+            },
+            {
+              "number": "6.10.1",
+              "title": "Area of Sector of a Circle",
+              "points": [
+                "A sector is the region bounded by an arc and the two radii to its endpoints.",
+                "By symmetry a semicircular disc has area ½πr² and a quarter disc ¼πr².",
+                "A sector subtending θ° at the centre has area πr² × θ/360.",
+                "A segment is the region bounded by an arc and the chord joining its endpoints."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Stagger",
+          "meaning": "The distance between the starting points of adjacent lanes in a race."
+        },
+        {
+          "term": "Perimeter",
+          "meaning": "The total length around the border of a shape."
+        },
+        {
+          "term": "Circumference",
+          "meaning": "The perimeter of a circle."
+        },
+        {
+          "term": "π (C/D ratio)",
+          "meaning": "The constant ratio of the circumference of a circle to its diameter, the same for circles of all sizes."
+        },
+        {
+          "term": "Asanna",
+          "meaning": "Āryabhaṭa's description of his value 3.1416 as 'approaching' or 'approximate'."
+        },
+        {
+          "term": "Irrational",
+          "meaning": "A number that cannot be written as a ratio of two integers, such as π."
+        },
+        {
+          "term": "Area",
+          "meaning": "The amount of space occupied by a two-dimensional region in a plane, measured relative to a 1 × 1 unit square."
+        },
+        {
+          "term": "Median",
+          "meaning": "The line segment joining a vertex of a triangle to the midpoint of the opposite side."
+        },
+        {
+          "term": "Semi-perimeter",
+          "meaning": "Half the perimeter of a triangle or 4-gon, s."
+        },
+        {
+          "term": "Circumcircle",
+          "meaning": "The one circle that passes through the three vertices of a triangle."
+        },
+        {
+          "term": "Incircle",
+          "meaning": "The one circle that fits tightly in a triangle, touching its three sides."
+        },
+        {
+          "term": "Cyclic 4-gon",
+          "meaning": "A 4-gon whose vertices lie on a circle; all rectangles and isosceles trapezia are cyclic."
+        },
+        {
+          "term": "Special case",
+          "meaning": "A result obtained from a general result by applying some extra condition."
+        },
+        {
+          "term": "Generalisation",
+          "meaning": "The general result of which a special case is a particular instance."
+        },
+        {
+          "term": "Squaring a shape",
+          "meaning": "Constructing a square equal in area to the given shape."
+        },
+        {
+          "term": "Sector",
+          "meaning": "The region of a circle bounded by an arc and the two radii containing the endpoints of the arc."
+        },
+        {
+          "term": "Segment",
+          "meaning": "The region of a circle bounded by an arc and the chord joining the endpoints of the arc."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Circumference",
+          "statement": "C = πd = 2πr."
+        },
+        {
+          "label": "Arc length",
+          "statement": "An arc subtending θ° at the centre has length 2πr × θ/360."
+        },
+        {
+          "label": "Perimeter of a rectangle",
+          "statement": "2(a + b) units for sides a and b; a square of side a has perimeter 4a."
+        },
+        {
+          "label": "Area of a parallelogram",
+          "statement": "Area = base × height = bh."
+        },
+        {
+          "label": "Area of a triangle",
+          "statement": "Area = ½ × base × height."
+        },
+        {
+          "label": "Theorem (median)",
+          "statement": "A median of a triangle divides it into two triangles with equal area."
+        },
+        {
+          "label": "Heron's formula",
+          "statement": "For sides a, b, c and s = (a + b + c)/2, area = √(s(s – a)(s – b)(s – c))."
+        },
+        {
+          "label": "Brahmagupta's formula",
+          "statement": "For a cyclic 4-gon with sides a, b, c, d and s = (a + b + c + d)/2, area = √((s – a)(s – b)(s – c)(s – d)); with d = 0 it becomes Heron's formula."
+        },
+        {
+          "label": "Baudhāyana's squaring",
+          "statement": "A rectangle with sides a > b can be squared by construction, since ab = ((a + b)/2)² – ((a – b)/2)²."
+        },
+        {
+          "label": "Area of a circle",
+          "statement": "A = πr², equal to ½ × circumference × radius (Archimedes, c. 250 BCE)."
+        },
+        {
+          "label": "Area of a regular polygon",
+          "statement": "Area = ½ × perimeter × radius of the circle that fits tightly within the polygon."
+        },
+        {
+          "label": "Area of a sector",
+          "statement": "Area = πr² × θ/360, where θ is the central angle."
+        },
+        {
+          "label": "Mādhava's formula",
+          "statement": "π = 4(1 – 1/3 + 1/5 – 1/7 + …)."
+        },
+        {
+          "label": "Approximations of π",
+          "statement": "Mesopotamia 3.125; Archimedes 3 10/71 < π < 3 1/7; Zu Chongzhi 22/7 and 355/113; Āryabhaṭa 3.1416; Brahmagupta √10."
+        },
+        {
+          "label": "Date: 1761",
+          "statement": "Lambert showed that π is irrational."
+        },
+        {
+          "label": "Date: 1706",
+          "statement": "William Jones used the Greek symbol π for the C/D ratio, from perimetros."
+        },
+        {
+          "label": "400 m track",
+          "statement": "Two straights of 84.39 m and semicircles of inner radius 36.5 m give 400 m when run 0.3 m from the inner border; lanes are 1.22 m wide."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "Exercise Set 6.1",
+          "questions": 8
+        },
+        {
+          "name": "Exercise Set 6.2",
+          "questions": 11
+        },
+        {
+          "name": "Exercise Set 6.3",
+          "questions": 10
+        },
+        {
+          "name": "End-of-Chapter Exercises",
+          "questions": 27
+        }
+      ],
+      "bookSummary": [
+        "π is the constant circumference to diameter ratio for all circles, and is approximately equal to 22/7 or 3.14.",
+        "The circumference of a circle is given by C = 2πr, where r is the radius of the circle.",
+        "The arc length of a circle is given by l = 2πr × θ/360°, where θ is the central angle.",
+        "The area of a triangle is given by A = ½ base times height.",
+        "Heron's formula gives the area of a triangle in terms of its sides a, b, c: area = √(s(s – a)(s – b)(s – c)), where s is the semi-perimeter.",
+        "The area of a circle is given by A = πr².",
+        "Estimates of π: Archimedes 3 10/71 < π < 3 1/7; Zu Chongzhi π ≈ 355/113; Āryabhaṭa π ≈ 3.1416; Mādhava's exact formula π = 4(1 – 1/3 + 1/5 – 1/7 + …).",
+        "π is an irrational number.",
+        "The area of a sector of a circle is given by area = πr² × θ/360°, where θ is the central angle.",
+        "Brahmagupta's formula gives the area of a cyclic quadrilateral in terms of its sides a, b, c, d."
+      ],
+      "notes": "Many formulas (Heron, Brahmagupta, the circumradius/inradius area formulas, the Egyptian circle formula and Baudhāyana's justification) are partly lost in extraction; the circumradius and inradius formulas are not reproduced. Several End-of-Chapter Exercise numbers (16–17, 19–23) were lost with the figures; the last question is numbered 27."
+    },
+    {
+      "bookChapter": 7,
+      "title": "The Mathematics of Maybe: Introduction to Probability",
+      "pages": 19,
+      "author": null,
+      "form": null,
+      "overview": "The chapter introduces probability as a measurement of how likely an event is, beginning with randomness and the probability scale from 0 (impossible) to 1 (certain). It distinguishes experimental probability (relative frequency from trials or data) from theoretical probability (favourable over possible equally likely outcomes), applies statistical data and sampling, and explains the Law of Large Numbers and the Gambler's Fallacy. It then defines sample spaces and events and uses tree diagrams for multi-step experiments.",
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "What is Probability?",
+          "points": [
+            "Probability measures the likelihood of events, expressing how confident we are that an event will occur.",
+            "Rain today, winning a hockey match or being picked in a lucky draw are random events: the possible outcomes are known but not which will occur.",
+            "Predictions based on one's interpretation of evidence, such as weather conditions, are subjective probability.",
+            "The chapter aims to measure probability objectively."
+          ],
+          "subsections": [
+            {
+              "number": "7.1.1",
+              "title": "What is Randomness?",
+              "points": [
+                "Randomness is a situation, like tossing a coin or rolling a die, where you cannot predict exactly what will happen though you know the possible outcomes.",
+                "A random experiment can be repeated, and each time the result might be different and cannot be known in advance.",
+                "Probability is the area of mathematics that studies randomness; a coin gives heads with probability ½.",
+                "Rain is random because it depends sensitively on many atmospheric factors, but its likelihood can be estimated from data."
+              ]
+            },
+            {
+              "number": "7.1.2",
+              "title": "The Probability Scale",
+              "points": [
+                "Probability runs from 0 (impossible) to 1 (certain); 0.75 means a 75% chance and 0.5 an even chance.",
+                "In a deck of six cards, the chance of a purple card moves from impossible to certain as purple cards increase.",
+                "Examples: a number greater than 6 on a die is impossible, rolling a 3 less likely, heads an even chance, a card from 2 to 10 more likely, a red sweet from all-red sweets certain."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "7.2",
+          "title": "Measuring Probability Objectively",
+          "points": [
+            "Experimental probability uses evidence from experience: repeated experiments or past statistical data, giving a relative frequency.",
+            "Theoretical probability assumes all outcomes are equally likely and reasons about favourable versus possible outcomes."
+          ],
+          "subsections": [
+            {
+              "number": "7.2.1",
+              "title": "Experimental Probability: Performing Observations or Experiments",
+              "points": [
+                "A result of an experiment is an outcome; the set of all possible outcomes is the sample space, e.g. {H, T} or {1, 2, 3, 4, 5, 6}.",
+                "Experimental probability = number of times the event occurred ÷ total number of trials.",
+                "Rolling a 4 eight times in 50 rolls gives a relative frequency of 0.16.",
+                "Snakes and Ladders originates in the ancient Indian game Jñān-Chaupad̤, where ladders stood for virtues and snakes for vices."
+              ]
+            },
+            {
+              "number": "7.2.2",
+              "title": "Theoretical Probability",
+              "points": [
+                "Theoretical probability is what we expect in an ideal, perfectly fair situation, with no experiment needed; it is written P(Event).",
+                "P = number of favourable outcomes ÷ number of possible outcomes.",
+                "P(rolling a 4) = 1/6 ≈ 0.167, and P(picking B from PROBABILITY) = 2/11 ≈ 0.182."
+              ]
+            },
+            {
+              "number": "7.2.3",
+              "title": "Analysing Statistical Data Using Probability",
+              "points": [
+                "Statistical data is used in business, insurance and research.",
+                "If 20 of 50 students like mango, the probability that a random student likes mango is 0.4.",
+                "Applied to a school population of 1500, the sample suggests about 600 mangoes; larger, more representative samples give more confidence (sampling).",
+                "As trials increase, experimental probability tends towards theoretical probability: the Law of Large Numbers.",
+                "The Gambler's Fallacy is believing past results change the next outcome; a coin or die has no memory, each roll being independent.",
+                "A fair (unbiased) coin is symmetrical, and a random toss falls freely without interference."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "7.3",
+          "title": "Elements of Probability: Sample Spaces and Events",
+          "points": [
+            "Sample spaces and events are the basic elements used to describe probability questions."
+          ],
+          "subsections": [
+            {
+              "number": "7.3.1",
+              "title": "Sample Space",
+              "points": [
+                "The sample space S lists all possible outcomes; each is an element, none may be listed twice, and the number of elements is the sample size n(S).",
+                "Examples: {Rain, No Rain}, {Win, Lose, Draw}, {H, T}, {1, 2, 3, 4, 5, 6} and {HH, HT, TH, TT} for two coins.",
+                "The sample space must be detailed enough for the problem, e.g. {No Rain, Drizzle, Light Rain, Heavy Rain}."
+              ]
+            },
+            {
+              "number": "7.3.2",
+              "title": "Events",
+              "points": [
+                "An event is any single possible result or combination of results of a random action; it is a subset of the sample space.",
+                "For two coins, 'at least one head' is {HH, HT, TH}; for a die, 'greater than 4' is {5, 6}; for fruit, 'yellow' is {Banana}."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "7.4",
+          "title": "Tree diagrams",
+          "points": [
+            "A tree diagram is a visual representation listing all possible outcomes of a multi-step experiment, a series of independent trials.",
+            "Each path from start to end is one complete outcome, and branches can carry their probabilities.",
+            "Tossing a coin twice gives the sample space {HH, HT, TH, TT}, so P(HH) = 1/4 = 0.25."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Probability",
+          "meaning": "A measurement of the likelihood of events, expressing how confident we are that an event will occur; also the area of mathematics that studies randomness."
+        },
+        {
+          "term": "Random events",
+          "meaning": "Events whose possible outcomes are known but where we do not know in advance which will occur."
+        },
+        {
+          "term": "Subjective probability",
+          "meaning": "A likelihood given to an event based on a person's interpretation of evidence, such as present weather."
+        },
+        {
+          "term": "Randomness",
+          "meaning": "A situation or action where you cannot predict exactly what will happen, although all possible outcomes may be known."
+        },
+        {
+          "term": "Random experiment",
+          "meaning": "Something you can repeat, where each time the result might be different and cannot be known in advance."
+        },
+        {
+          "term": "Probability scale",
+          "meaning": "The scale from 0 (impossible) to 1 (certain) on which likelihood is measured."
+        },
+        {
+          "term": "Experimental probability",
+          "meaning": "Probability estimated as the relative frequency of an event from experiments or past data."
+        },
+        {
+          "term": "Theoretical probability",
+          "meaning": "Probability based on all possible outcomes being equally likely: favourable outcomes over possible outcomes."
+        },
+        {
+          "term": "Outcome",
+          "meaning": "A result of an experiment."
+        },
+        {
+          "term": "Sample space",
+          "meaning": "The set of all possible outcomes of an experiment, denoted S."
+        },
+        {
+          "term": "Sample size",
+          "meaning": "The number of elements in the sample space, n(S)."
+        },
+        {
+          "term": "Relative frequency",
+          "meaning": "The number of times an event occurred divided by the total number of trials."
+        },
+        {
+          "term": "Sampling",
+          "meaning": "Collecting evidence from a sample of a population, made more reliable by larger and more representative samples."
+        },
+        {
+          "term": "Law of Large Numbers",
+          "meaning": "As the number of trials increases, experimental probability tends to get closer to theoretical probability."
+        },
+        {
+          "term": "Gambler's Fallacy",
+          "meaning": "The mistaken belief that after many identical random results the opposite outcome becomes more likely."
+        },
+        {
+          "term": "Fair / unbiased",
+          "meaning": "A coin that is symmetrical, so there is no reason for it to land more often on one side."
+        },
+        {
+          "term": "Event",
+          "meaning": "Any one or a group of possible outcomes of a random experiment; a subset of the sample space."
+        },
+        {
+          "term": "Tree diagram",
+          "meaning": "A visual representation used to list all possible outcomes of a multi-step experiment."
+        },
+        {
+          "term": "Multi-step experiment",
+          "meaning": "An experiment involving a series of independent trials, such as tossing a coin two times."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Range of probability",
+          "statement": "The probability of an event E is P(E), where 0 ≤ P(E) ≤ 1; 0 means impossible and 1 means certain."
+        },
+        {
+          "label": "Experimental probability",
+          "statement": "Experimental Probability = Number of times the event occurred ÷ Total number of trials."
+        },
+        {
+          "label": "Theoretical probability",
+          "statement": "P(A) = Number of favourable outcomes ÷ Number of possible outcomes."
+        },
+        {
+          "label": "Law of Large Numbers",
+          "statement": "As the number of trials increases, the experimental probability tends to get closer to the theoretical probability."
+        },
+        {
+          "label": "Independence",
+          "statement": "Each roll of a die or toss of a coin is independent; past results do not change the probability of the next one."
+        },
+        {
+          "label": "Two coins",
+          "statement": "Tossing a coin twice has sample space {HH, HT, TH, TT}, and P(HH) = 1/4."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "Exercise Set 7.1",
+          "questions": 1
+        },
+        {
+          "name": "Exercise Set 7.2",
+          "questions": 6
+        },
+        {
+          "name": "Exercise Set 7.3",
+          "questions": 3
+        },
+        {
+          "name": "Exercise Set 7.4",
+          "questions": 2
+        },
+        {
+          "name": "End-of-Chapter Exercises",
+          "questions": 16
+        }
+      ],
+      "bookSummary": [
+        "Probability is a measurement of the likelihood of an event.",
+        "Probability is expressed on a scale from 0 (impossibility) to 1 (certainty); the probability of an event E is P(E), where 0 ≤ P(E) ≤ 1.",
+        "Experimental probability is determined by conducting an experiment: number of times the event occurred ÷ total number of trials.",
+        "Theoretical probability is based on all possible outcomes in a fair situation, each equally likely: P(A) = number of favourable outcomes ÷ number of possible outcomes.",
+        "A sample space is the list of all possible outcomes of a random experiment, represented as a set S = {outcome1, outcome2, …, outcomen}.",
+        "An event is any one or a group of possible outcomes from a random experiment.",
+        "Tree diagrams help us list and visualise all possible outcomes of a random experiment and calculate probabilities of related events."
+      ],
+      "notes": null
+    },
+    {
+      "bookChapter": 8,
+      "title": "Predicting What Comes Next: Exploring Sequences and Progressions",
+      "pages": 27,
+      "author": null,
+      "form": null,
+      "overview": "The chapter studies sequences as ordered lists of numbers, using t_n notation, and describes them by explicit rules (in terms of n) and recursive rules (in terms of earlier terms), including the Virahānka–Fibonacci sequence. It then develops arithmetic progressions with nth term a + (n – 1)d, derives the sum of the first n natural numbers, and introduces geometric progressions with nth term arⁿ⁻¹. Fractals such as the Sierpiński triangle, bouncing balls and graphs show how APs lie on straight lines while GPs do not.",
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Introduction to Sequences",
+          "points": [
+            "Sequences are patterns of numbers or objects arranged in a particular order; examples are natural, odd, triangular and square numbers.",
+            "A sequence is an ordered list of numbers, each a term; sequences may be finite (6, 12, 24, 48, 96) or infinite.",
+            "Each triangular number is the sum of the natural numbers up to that term, and each square number the sum of the odd numbers up to it.",
+            "The notation t1, t2, t3, … names terms by position; terms may be fractions, negative or any real number."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "8.2",
+          "title": "Explicit Rule for a Sequence",
+          "points": [
+            "An explicit formula uses the term's position number n to calculate its value, e.g. u_n = 2n – 1 for odd numbers.",
+            "It gives any term directly, without knowing earlier terms.",
+            "It checks whether a number is a term by solving for n, which must be a natural number: 137 is the 69th odd number, and 308 is the 62nd term of 5n – 2.",
+            "The primes show no simple rule for predicting the next terms."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "8.3",
+          "title": "Recursive Rule for a Sequence",
+          "points": [
+            "A recursive rule relates terms to previous terms, e.g. t1 = 1, t_n = t_(n–1) + 3 for 1, 4, 7, 10, 13, …; earlier terms must be known.",
+            "u1 = 1, u_n = 2u_(n–1) + 3 gives 1, 5, 13, 29; s1 = 3, s_n = s_(n–1)(s_(n–1) – 1) gives 3, 6, 30, 870."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Virahānka–Fibonacci sequence",
+              "points": [
+                "A recursive rule may use the previous two or more terms: V1 = 1, V2 = 2, V_n = V_(n–1) + V_(n–2) gives 1, 2, 3, 5, 8, 13, 21, 34, ….",
+                "Virahānka first wrote it down in his Vṛttajātisamuchaya (7th century CE) in the context of Prakrit meter and poetry.",
+                "It was further studied by Gopāla (c. 1135 CE) and Hemachandra (c. 1150 CE), and later by Fibonacci (c. 1200 CE)."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "8.4",
+          "title": "Arithmetic Progressions",
+          "points": [
+            "A growing pattern of squares adds 4 squares each stage, giving 1, 5, 9, 13, … with t_n = 1 + (n – 1) × 4 = 4n – 3.",
+            "Sequences in which the difference between consecutive terms is constant are arithmetic progressions (APs).",
+            "An AP is a, a + d, a + 2d, …, with first term a, common difference d (which may be negative) and t_n = a + (n – 1)d."
+          ],
+          "subsections": [
+            {
+              "number": "8.4.1",
+              "title": "Visualising an AP",
+              "points": [
+                "Plotting (stage, number of squares) for the pattern gives points (1, 1), (2, 5), (3, 9), … that lie on a straight line.",
+                "The recursive rule of an AP is t1 = a, t_n = t_(n–1) + d for n ≥ 2.",
+                "A taxi fare of ₹200 plus ₹40 per km gives the AP 240, 280, 320, … with nth term 200 + 40n."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "8.5",
+          "title": "Sum of the First n Natural Numbers",
+          "points": [
+            "Writing 1 + 2 + … + 10 forwards and backwards gives ten pairs of 11, so 2S = 110 and S = 55.",
+            "In general 2S = n(n + 1), so S_n = n(n + 1)/2; dots in a 7 × 6 array show the same pictorially.",
+            "The first known written mention is in Āryabhaṭa's Āryabhaṭīya, Chapter 2, Verse 19: the average of first and last terms times the number of terms.",
+            "Sums of consecutive numbers are differences of such sums: 25 + … + 58 = S58 – S24 = 1411.",
+            "The nth triangular number is n(n + 1)/2."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "8.6",
+          "title": "Geometric Progressions",
+          "points": [
+            "A pattern of green squares doubles each stage: 3, 6, 12, 24, … with t_n = 3 × 2ⁿ⁻¹ and t_n = 2t_(n–1).",
+            "The constant multiplier is the common ratio; a sequence with a common ratio is a geometric progression (GP).",
+            "A GP is a, ar, ar², …, arⁿ⁻¹, with nth term t_n = arⁿ⁻¹.",
+            "Examples test 1, 2, 4, 8, …; 1, 3, 9, 27, …; 1, –1, 1, –1, …; and 5, 15/4, 45/16, … (r = 3/4)."
+          ],
+          "subsections": [
+            {
+              "number": "8.6.1",
+              "title": "Fun with Fractals",
+              "points": [
+                "The Sierpiński triangle removes the central triangle formed by joining midpoints, again and again forever.",
+                "The number of black triangles is 1, 3, 9, 27, 81, 243, …, a GP with t_n = 3ⁿ at stage n.",
+                "The black area is multiplied by 3/4 at each stage, so it shrinks while the number of triangles grows rapidly.",
+                "Fractals repeat themselves at different scales and appear in trees, cauliflower, broccoli, snowflakes and coastlines; Wacław Sierpiński (1882–1969) was a Polish mathematician."
+              ]
+            },
+            {
+              "number": "8.6.2",
+              "title": "Visualising a GP",
+              "points": [
+                "Plotting (1, 3), (2, 6), (3, 12), (4, 24), (5, 48) gives points that do not lie on a straight line.",
+                "Graphs of the Sierpiński triangle show the number of triangles rising very quickly while the black area approaches 0.",
+                "A ball dropped from 24 feet rising to 3/4 of its height each bounce gives the GP 18, 13.5, 10.125, …; after the seventh bounce it stays below 1/6 of the starting height."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Sequence",
+          "meaning": "An ordered list of numbers where each number is a term of the sequence."
+        },
+        {
+          "term": "Term",
+          "meaning": "Each number in a sequence; t_n is the term in the nth position."
+        },
+        {
+          "term": "Finite and infinite sequences",
+          "meaning": "A finite sequence has a limited number of terms, such as 6, 12, 24, 48, 96; an infinite one continues indefinitely, shown by …."
+        },
+        {
+          "term": "Triangular numbers",
+          "meaning": "1, 3, 6, 10, 15, …, each the sum of the natural numbers up to that term."
+        },
+        {
+          "term": "Explicit formula",
+          "meaning": "A rule that uses the term's position number n to calculate its value."
+        },
+        {
+          "term": "Recursive rule (recursive formula)",
+          "meaning": "A way of describing a sequence by relating terms to previous terms."
+        },
+        {
+          "term": "Virahānka–Fibonacci sequence",
+          "meaning": "1, 2, 3, 5, 8, 13, …, where each term is the sum of the previous two."
+        },
+        {
+          "term": "Arithmetic progression (AP)",
+          "meaning": "A sequence in which the difference between consecutive terms is constant."
+        },
+        {
+          "term": "Common difference",
+          "meaning": "The fixed number d added to each term of an AP to get the next."
+        },
+        {
+          "term": "Geometric progression (GP)",
+          "meaning": "A sequence in which each term after the first is obtained by multiplying the previous term by a fixed number."
+        },
+        {
+          "term": "Common ratio",
+          "meaning": "The constant multiplier r of a GP, equal to the ratio of consecutive terms."
+        },
+        {
+          "term": "Sierpiński triangle",
+          "meaning": "A fractal made by repeatedly removing the central triangle formed by joining the midpoints of each black triangle."
+        },
+        {
+          "term": "Fractals",
+          "meaning": "Shapes or patterns that repeat themselves at different scales, so a zoomed-in part looks similar to the whole."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Odd numbers",
+          "statement": "The explicit rule for the nth odd number is u_n = 2n – 1."
+        },
+        {
+          "label": "nth term of an AP",
+          "statement": "t_n = a + (n – 1)d, where a is the first term and d the common difference; recursively t1 = a, t_n = t_(n–1) + d for n ≥ 2."
+        },
+        {
+          "label": "Sum of the first n natural numbers",
+          "statement": "1 + 2 + 3 + … + n = n(n + 1)/2."
+        },
+        {
+          "label": "nth triangular number",
+          "statement": "t_n = n(n + 1)/2."
+        },
+        {
+          "label": "nth term of a GP",
+          "statement": "t_n = arⁿ⁻¹, where a is the first term and r the common ratio."
+        },
+        {
+          "label": "Sierpiński triangle",
+          "statement": "At stage n there are 3ⁿ black triangles, and the black area is (3/4)ⁿ of the original."
+        },
+        {
+          "label": "Graphs",
+          "statement": "Points from an AP lie on a straight line; points from a GP do not."
+        },
+        {
+          "label": "Virahānka–Fibonacci rule",
+          "statement": "V1 = 1, V2 = 2, and V_n = V_(n–1) + V_(n–2) for n ≥ 3."
+        },
+        {
+          "label": "Date: 7th century CE",
+          "statement": "Virahānka first explicitly wrote down and studied the sequence in his Vṛttajātisamuchaya."
+        },
+        {
+          "label": "Āryabhaṭīya, Chapter 2, Verse 19",
+          "statement": "The first known written mention of the formula for the sum of the first n natural numbers."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "Exercise Set 8.1",
+          "questions": 6
+        },
+        {
+          "name": "Exercise Set 8.2",
+          "questions": 7
+        },
+        {
+          "name": "Exercise Set 8.3",
+          "questions": 7
+        },
+        {
+          "name": "End-of-Chapter Exercises",
+          "questions": 15
+        }
+      ],
+      "bookSummary": [
+        "A sequence is an ordered list of numbers. Each number in the list is called a term.",
+        "A general formula or rule for a sequence can be used to generate each term; an explicit formula uses the term's position number n to calculate its value.",
+        "A recursive formula is a rule that gives the value of a given term using the values of previous terms.",
+        "The triangular number sequence is 1, 3, 6, 10, 15, …; each term is the sum of the natural numbers up to its position, and the nth term n(n + 1)/2 is also the formula for the sum of the first n natural numbers.",
+        "An arithmetic progression (AP) is a list of numbers in which each term after the first is obtained by adding a fixed number d, the common difference, to the previous term.",
+        "The nth term of an AP is tn = a + (n – 1)d; its general form is a, a + d, a + 2d, a + 3d, …, a + (n – 1)d.",
+        "A geometric progression (GP) is a list of numbers in which each term after the first is obtained by multiplying the previous term by a fixed number r, the common ratio.",
+        "The nth term of a GP is tn = arⁿ⁻¹; its general form is a, ar, ar², ar³, …, arⁿ⁻¹.",
+        "Many attributes of fractals, such as the Sierpiński triangle and the Sierpiński square carpet, lead to geometric progressions."
+      ],
+      "notes": "Pages 24–27 are blank graph paper sheets with no chapter content. Some fractions (e.g. the Sierpiński area expressions and the first question of Exercise Set 8.3) were lost in extraction."
+    }
+  ]
+}

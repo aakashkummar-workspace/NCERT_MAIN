@@ -1,0 +1,1016 @@
+{
+  "board": "CBSE",
+  "grade": 10,
+  "subject": "Mathematics",
+  "status": "DRAFT — for review by a Mathematics teacher before it is relied on",
+  "source": "Drafted against the NCERT Class X Mathematics textbook (2025-26 rationalised reprint) and the 820 questions imported from C:/dev/sirah_project/NCERT/data. Topics follow the textbook's sections that remain in the rationalised syllabus; content CBSE removed in 2023 (Euclid's division lemma, cross-multiplication, completing the square, area of a triangle by coordinates, frustum, ogives) is deliberately absent.",
+  "notes": [
+    "Chapter 6 is skipped: it is the seeded worked example and already carries authored outcomes (SIM-1 to SIM-5) and two concepts. SIM-4 (ratio of areas of similar triangles) was removed from the rationalised syllabus; that is for a teacher to decide, not this draft.",
+    "The imported bank still contains questions on removed content — Chapter 11 has items explicitly labelled '[Out of syllabus ...]', and Chapter 8 has complementary-angle items. No outcome here covers them, on purpose: linking them would make removed content count towards a student's mastery."
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "topics": [
+        {
+          "title": "The Fundamental Theorem of Arithmetic",
+          "outcomes": [
+            {
+              "code": "M10-01-1",
+              "statement": "Writes a composite number as a product of its prime factors, and states that this factorisation is unique apart from the order of the factors.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "M10-01-2",
+              "statement": "Calculates the HCF and LCM of two or three numbers from their prime factorisations.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-01-3",
+              "statement": "Uses the relation HCF × LCM = product of two numbers to find an unknown HCF, LCM or number.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "M10-01-4",
+              "statement": "Solves word problems about events that recur together, or the largest equal division, by recognising them as LCM or HCF problems.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            }
+          ]
+        },
+        {
+          "title": "Revisiting irrational numbers",
+          "outcomes": [
+            {
+              "code": "M10-01-5",
+              "statement": "Proves that numbers such as √2, √3 and √5 are irrational, using proof by contradiction and the uniqueness of prime factorisation.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "M10-01-6",
+              "statement": "Classifies sums and products of rational and irrational numbers as rational or irrational, and justifies the classification.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Prime factorisation, HCF and LCM",
+          "outcomes": [
+            "M10-01-1",
+            "M10-01-2",
+            "M10-01-3",
+            "M10-01-4"
+          ]
+        },
+        {
+          "name": "Irrational numbers and proof by contradiction",
+          "outcomes": [
+            "M10-01-5",
+            "M10-01-6"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "topics": [
+        {
+          "title": "Geometrical meaning of the zeroes of a polynomial",
+          "outcomes": [
+            {
+              "code": "M10-02-1",
+              "statement": "Identifies the degree of a polynomial and whether it is linear, quadratic or cubic.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "M10-02-2",
+              "statement": "Interprets the zeroes of a polynomial as the x-coordinates where its graph meets the x-axis, and reads the number of zeroes from a graph.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "title": "Relationship between zeroes and coefficients",
+          "outcomes": [
+            {
+              "code": "M10-02-3",
+              "statement": "Uses factorisation to find the zeroes of a quadratic polynomial and verifies the relationship between the zeroes and the coefficients.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-02-4",
+              "statement": "Calculates the sum and product of the zeroes of a quadratic or cubic polynomial directly from its coefficients.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "M10-02-5",
+              "statement": "Evaluates symmetric expressions in the zeroes, such as α² + β² or 1/α + 1/β, without finding the zeroes themselves.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 2
+            },
+            {
+              "code": "M10-02-6",
+              "statement": "Constructs a quadratic polynomial when the sum and product of its zeroes are given, and finds an unknown coefficient from a known zero.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Zeroes of a polynomial",
+          "outcomes": [
+            "M10-02-1",
+            "M10-02-2",
+            "M10-02-3"
+          ]
+        },
+        {
+          "name": "Relationship between zeroes and coefficients",
+          "outcomes": [
+            "M10-02-4",
+            "M10-02-5",
+            "M10-02-6"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "topics": [
+        {
+          "title": "Graphical method of solution",
+          "outcomes": [
+            {
+              "code": "M10-03-1",
+              "statement": "Uses the ratios of coefficients to decide whether a pair of linear equations has a unique solution, no solution or infinitely many solutions.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 1
+            },
+            {
+              "code": "M10-03-2",
+              "statement": "Relates intersecting, parallel and coincident lines to consistent, inconsistent and dependent pairs of equations.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            },
+            {
+              "code": "M10-03-3",
+              "statement": "Calculates the value of an unknown constant for which a pair of linear equations has no solution or infinitely many solutions.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Algebraic methods of solution",
+          "outcomes": [
+            {
+              "code": "M10-03-4",
+              "statement": "Solves a pair of linear equations in two variables by the substitution method.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-03-5",
+              "statement": "Solves a pair of linear equations in two variables by the elimination method.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-03-6",
+              "statement": "Writes a pair of linear equations from a word problem about costs, ages, numbers or speeds, solves it and interprets the answer.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Consistency of a pair of linear equations",
+          "outcomes": [
+            "M10-03-1",
+            "M10-03-2",
+            "M10-03-3"
+          ]
+        },
+        {
+          "name": "Solving a pair of linear equations",
+          "outcomes": [
+            "M10-03-4",
+            "M10-03-5",
+            "M10-03-6"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "topics": [
+        {
+          "title": "Quadratic equations and their solution",
+          "outcomes": [
+            {
+              "code": "M10-04-1",
+              "statement": "Identifies whether a given equation is quadratic by reducing it to the standard form ax² + bx + c = 0.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            },
+            {
+              "code": "M10-04-2",
+              "statement": "Solves a quadratic equation by splitting the middle term and factorising.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-04-3",
+              "statement": "Solves a quadratic equation using the quadratic formula.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-04-4",
+              "statement": "Writes a quadratic equation for a situation involving areas, ages, numbers or speeds, solves it, and rejects a root that makes no sense in context.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            }
+          ]
+        },
+        {
+          "title": "Nature of roots",
+          "outcomes": [
+            {
+              "code": "M10-04-5",
+              "statement": "Calculates the discriminant b² − 4ac and uses it to state whether the roots are real and distinct, real and equal, or not real.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "M10-04-6",
+              "statement": "Calculates the value of an unknown constant for which a quadratic equation has equal roots.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-04-7",
+              "statement": "Uses the sum and product of the roots of a quadratic equation to find the other root or an unknown coefficient.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Solving quadratic equations",
+          "outcomes": [
+            "M10-04-1",
+            "M10-04-2",
+            "M10-04-3",
+            "M10-04-4"
+          ]
+        },
+        {
+          "name": "Nature of the roots of a quadratic",
+          "outcomes": [
+            "M10-04-5",
+            "M10-04-6",
+            "M10-04-7"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "topics": [
+        {
+          "title": "nth term of an AP",
+          "outcomes": [
+            {
+              "code": "M10-05-1",
+              "statement": "Identifies whether a list of numbers is an arithmetic progression and finds its first term and common difference.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            },
+            {
+              "code": "M10-05-2",
+              "statement": "Applies aₙ = a + (n − 1)d to find a given term, the position of a term, or the number of terms in an AP.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-05-3",
+              "statement": "Solves for the first term and common difference when two terms of an AP are known, including terms counted from the end.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 2
+            },
+            {
+              "code": "M10-05-4",
+              "statement": "Uses the condition 2b = a + c to find an unknown for which three quantities are consecutive terms of an AP.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "title": "Sum of the first n terms of an AP",
+          "outcomes": [
+            {
+              "code": "M10-05-5",
+              "statement": "Calculates the sum of the first n terms of an AP using Sₙ = n/2[2a + (n − 1)d] or Sₙ = n/2(a + l).",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-05-6",
+              "statement": "Calculates how many terms must be taken for a given sum, or recovers a term from an expression for Sₙ.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            },
+            {
+              "code": "M10-05-7",
+              "statement": "Solves word problems about savings, instalments, rows of objects or sums of multiples by modelling them as an AP.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "nth term of an arithmetic progression",
+          "outcomes": [
+            "M10-05-1",
+            "M10-05-2",
+            "M10-05-3",
+            "M10-05-4"
+          ]
+        },
+        {
+          "name": "Sum of an arithmetic progression",
+          "outcomes": [
+            "M10-05-5",
+            "M10-05-6",
+            "M10-05-7"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "topics": [
+        {
+          "title": "Distance formula",
+          "outcomes": [
+            {
+              "code": "M10-07-1",
+              "statement": "Calculates the distance between two points, and the distance of a point from the origin or from an axis.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "M10-07-2",
+              "statement": "Uses the distance formula to decide whether three points are collinear or form a particular triangle or quadrilateral.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            }
+          ]
+        },
+        {
+          "title": "Section formula",
+          "outcomes": [
+            {
+              "code": "M10-07-3",
+              "statement": "Calculates the coordinates of the mid-point of a line segment.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "M10-07-4",
+              "statement": "Applies the section formula to find the point dividing a segment internally in a given ratio, and finds the ratio in which a point divides a segment.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-07-5",
+              "statement": "Solves for an unknown coordinate when a mid-point or a point of division is known.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Distance between two points",
+          "outcomes": [
+            "M10-07-1",
+            "M10-07-2"
+          ]
+        },
+        {
+          "name": "Section and mid-point formula",
+          "outcomes": [
+            "M10-07-3",
+            "M10-07-4",
+            "M10-07-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "topics": [
+        {
+          "title": "Trigonometric ratios",
+          "outcomes": [
+            {
+              "code": "M10-08-1",
+              "statement": "Defines the six trigonometric ratios of an acute angle in a right triangle, and writes each as a ratio of named sides.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "M10-08-2",
+              "statement": "Calculates the remaining trigonometric ratios when one ratio of an acute angle is given, using Pythagoras' theorem.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Trigonometric ratios of specific angles",
+          "outcomes": [
+            {
+              "code": "M10-08-3",
+              "statement": "States the values of the trigonometric ratios of 0°, 30°, 45°, 60° and 90°.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "M10-08-4",
+              "statement": "Evaluates expressions built from the ratios of specific angles, and finds an angle from the value of a ratio.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Trigonometric identities",
+          "outcomes": [
+            {
+              "code": "M10-08-5",
+              "statement": "States the identities sin²A + cos²A = 1, 1 + tan²A = sec²A and 1 + cot²A = cosec²A.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "M10-08-6",
+              "statement": "Proves a trigonometric identity, or simplifies an expression, using the fundamental identities.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Trigonometric ratios of an acute angle",
+          "outcomes": [
+            "M10-08-1",
+            "M10-08-2",
+            "M10-08-3",
+            "M10-08-4"
+          ]
+        },
+        {
+          "name": "Trigonometric identities",
+          "outcomes": [
+            "M10-08-5",
+            "M10-08-6"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "topics": [
+        {
+          "title": "Heights and distances",
+          "outcomes": [
+            {
+              "code": "M10-09-1",
+              "statement": "Identifies the line of sight, the angle of elevation and the angle of depression in a described situation.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            },
+            {
+              "code": "M10-09-2",
+              "statement": "Draws the right triangle for a heights-and-distances situation and marks the known angle and side.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "M10-09-3",
+              "statement": "Calculates a height or a distance using one angle of elevation or depression.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-09-4",
+              "statement": "Solves problems that combine two angles of elevation or depression, such as two ships seen from a cliff or a flagstaff on a building.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Angles of elevation and depression",
+          "outcomes": [
+            "M10-09-1",
+            "M10-09-2"
+          ]
+        },
+        {
+          "name": "Heights and distances",
+          "outcomes": [
+            "M10-09-3",
+            "M10-09-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "topics": [
+        {
+          "title": "Tangent to a circle",
+          "outcomes": [
+            {
+              "code": "M10-10-1",
+              "statement": "Distinguishes a tangent from a secant, and states how many tangents can be drawn from a point inside, on or outside a circle.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            },
+            {
+              "code": "M10-10-2",
+              "statement": "Uses the theorem that a tangent is perpendicular to the radius through the point of contact to find a length or an angle.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Number of tangents from a point on a circle",
+          "outcomes": [
+            {
+              "code": "M10-10-3",
+              "statement": "Applies the theorem that the lengths of the two tangents from an external point are equal to find an unknown length.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-10-4",
+              "statement": "Calculates angles formed by two tangents from an external point, the radii to the points of contact and the centre.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 2
+            },
+            {
+              "code": "M10-10-5",
+              "statement": "Proves results about a quadrilateral whose sides touch a circle, such as AB + CD = AD + BC.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Tangent perpendicular to the radius",
+          "outcomes": [
+            "M10-10-1",
+            "M10-10-2"
+          ]
+        },
+        {
+          "name": "Tangents from an external point",
+          "outcomes": [
+            "M10-10-3",
+            "M10-10-4",
+            "M10-10-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "topics": [
+        {
+          "title": "Areas of sector and segment of a circle",
+          "outcomes": [
+            {
+              "code": "M10-11-1",
+              "statement": "Calculates the length of an arc of a sector from its radius and central angle.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "M10-11-2",
+              "statement": "Calculates the area and the perimeter of a sector, including a quadrant, from its radius and central angle.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-11-3",
+              "statement": "Calculates the central angle or the radius of a sector when its area or arc length is given.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 2
+            },
+            {
+              "code": "M10-11-4",
+              "statement": "Calculates the area of a minor or major segment by subtracting the area of the triangle from the area of the sector.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            },
+            {
+              "code": "M10-11-5",
+              "statement": "Solves applied problems such as the area swept by a clock hand or a wiper by modelling them as a sector.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Arc length and area of a sector",
+          "outcomes": [
+            "M10-11-1",
+            "M10-11-2",
+            "M10-11-3",
+            "M10-11-5"
+          ]
+        },
+        {
+          "name": "Area of a segment of a circle",
+          "outcomes": [
+            "M10-11-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "topics": [
+        {
+          "title": "Surface area of a combination of solids",
+          "outcomes": [
+            {
+              "code": "M10-12-1",
+              "statement": "Identifies the basic solids that make up an everyday object, such as a cone on a hemisphere or a cylinder with a conical top.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            },
+            {
+              "code": "M10-12-2",
+              "statement": "Calculates the total surface area of a combined solid by adding only the surfaces that remain exposed.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            }
+          ]
+        },
+        {
+          "title": "Volume of a combination of solids",
+          "outcomes": [
+            {
+              "code": "M10-12-3",
+              "statement": "Calculates the volume of a combined solid by adding or subtracting the volumes of its parts.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 3
+            },
+            {
+              "code": "M10-12-4",
+              "statement": "Solves problems about capacity and material, such as the air in a tent or the wood left after a cavity is hollowed out.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Surface area of combined solids",
+          "outcomes": [
+            "M10-12-1",
+            "M10-12-2"
+          ]
+        },
+        {
+          "name": "Volume of combined solids",
+          "outcomes": [
+            "M10-12-3",
+            "M10-12-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "topics": [
+        {
+          "title": "Mean of grouped data",
+          "outcomes": [
+            {
+              "code": "M10-13-1",
+              "statement": "Calculates the mean of grouped data by the direct method using class marks.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-13-2",
+              "statement": "Calculates the mean of grouped data by the assumed-mean and step-deviation methods, and explains why each gives the same answer.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 3
+            },
+            {
+              "code": "M10-13-3",
+              "statement": "Calculates a missing frequency when the mean of a distribution is given.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            }
+          ]
+        },
+        {
+          "title": "Mode and median of grouped data",
+          "outcomes": [
+            {
+              "code": "M10-13-4",
+              "statement": "Identifies the modal class and calculates the mode of grouped data using the mode formula.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-13-5",
+              "statement": "Identifies the median class from cumulative frequencies and calculates the median of grouped data.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 3
+            },
+            {
+              "code": "M10-13-6",
+              "statement": "Uses the empirical relationship 3 Median = Mode + 2 Mean to find one measure from the other two.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Mean of grouped data",
+          "outcomes": [
+            "M10-13-1",
+            "M10-13-2",
+            "M10-13-3"
+          ]
+        },
+        {
+          "name": "Median and mode of grouped data",
+          "outcomes": [
+            "M10-13-4",
+            "M10-13-5",
+            "M10-13-6"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "topics": [
+        {
+          "title": "Probability — a theoretical approach",
+          "outcomes": [
+            {
+              "code": "M10-14-1",
+              "statement": "States that the probability of an event lies between 0 and 1, and identifies impossible and sure events.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "M10-14-2",
+              "statement": "Applies P(not E) = 1 − P(E) to find the probability of the complement of an event.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "M10-14-3",
+              "statement": "Calculates the probability of an event with equally likely outcomes, such as drawing a card, a ball or a numbered ticket.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "M10-14-4",
+              "statement": "Lists the outcomes of an experiment with two dice or two coins and calculates the probability of a compound event from that list.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            },
+            {
+              "code": "M10-14-5",
+              "statement": "Uses a given probability to find an unknown number of items, such as the number of defective bulbs in a lot.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Probability of a simple event",
+          "outcomes": [
+            "M10-14-1",
+            "M10-14-2",
+            "M10-14-3",
+            "M10-14-5"
+          ]
+        },
+        {
+          "name": "Probability with two dice or coins",
+          "outcomes": [
+            "M10-14-4"
+          ]
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "concept": "Heights and distances",
+      "requires": "Trigonometric ratios of an acute angle"
+    },
+    {
+      "concept": "Heights and distances",
+      "requires": "Angles of elevation and depression"
+    },
+    {
+      "concept": "Trigonometric identities",
+      "requires": "Trigonometric ratios of an acute angle"
+    },
+    {
+      "concept": "Irrational numbers and proof by contradiction",
+      "requires": "Prime factorisation, HCF and LCM"
+    },
+    {
+      "concept": "Nature of the roots of a quadratic",
+      "requires": "Solving quadratic equations"
+    },
+    {
+      "concept": "Relationship between zeroes and coefficients",
+      "requires": "Zeroes of a polynomial"
+    },
+    {
+      "concept": "Sum of an arithmetic progression",
+      "requires": "nth term of an arithmetic progression"
+    },
+    {
+      "concept": "Tangents from an external point",
+      "requires": "Tangent perpendicular to the radius"
+    },
+    {
+      "concept": "Area of a segment of a circle",
+      "requires": "Arc length and area of a sector"
+    },
+    {
+      "concept": "Median and mode of grouped data",
+      "requires": "Mean of grouped data"
+    },
+    {
+      "concept": "Probability with two dice or coins",
+      "requires": "Probability of a simple event"
+    },
+    {
+      "concept": "Solving a pair of linear equations",
+      "requires": "Consistency of a pair of linear equations"
+    },
+    {
+      "concept": "Zeroes of a polynomial",
+      "requires": "Linear polynomials and their values",
+      "why": "You have already met polynomials in one variable and drawn their graphs. Class 10 only raises the degree.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    },
+    {
+      "concept": "Zeroes of a polynomial",
+      "requires": "Factorising quadratic expressions",
+      "why": "Finding the zeroes of a quadratic means factorising it, which is the algebra-tiles work from Class 9.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    },
+    {
+      "concept": "Consistency of a pair of linear equations",
+      "requires": "Plotting points on the coordinate plane",
+      "why": "The graphical method is plotting, so placing and reading points has to be automatic before the method is worth anything.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    },
+    {
+      "concept": "Solving quadratic equations",
+      "requires": "Zeroes of a polynomial",
+      "why": "A quadratic equation is a quadratic polynomial set equal to zero, so its roots are that polynomial's zeroes under another name.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    },
+    {
+      "concept": "Trigonometric ratios of an acute angle",
+      "requires": "Similarity of triangles",
+      "why": "Sin, cos and tan only exist because similar right triangles have identical side ratios.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    },
+    {
+      "concept": "Surface area of combined solids",
+      "requires": "Area and perimeter of plane figures",
+      "why": "Every surface-area formula here is a flat area wrapped around a solid, so the flat areas have to be solid first.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    }
+  ]
+}

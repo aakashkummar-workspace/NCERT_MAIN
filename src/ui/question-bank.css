@@ -1,0 +1,206 @@
+/* The question bank's Class → Subject → Chapter steps and the answer under
+   each question (/t/questions). Every class here is ui-qb-, checked against
+   the other stylesheets. */
+
+.ui-qb-trail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.ui-qb-trail ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.ui-qb-trail li + li::before {
+  content: "/";
+  margin-right: 4px;
+  color: var(--text-tertiary);
+}
+
+.ui-qb-trail a,
+.ui-qb-search-all {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--primary-600);
+  text-decoration: none;
+}
+
+.ui-qb-trail a:hover,
+.ui-qb-search-all:hover {
+  text-decoration: underline;
+}
+
+.ui-qb-trail [aria-current="page"] {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ui-qb-search-all {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ui-qb-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ui-qb-tiles[data-step="classes"] {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+}
+
+.ui-qb-tile {
+  display: grid;
+  gap: 4px;
+  height: 100%;
+  min-height: 44px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 120ms ease, background 120ms ease;
+}
+
+.ui-qb-tile:hover {
+  border-color: var(--primary-500);
+  background: var(--surface-raised);
+}
+
+.ui-qb-tile:focus-visible {
+  outline: 2px solid var(--primary-600);
+  outline-offset: 2px;
+}
+
+.ui-qb-tiles[data-step="classes"] .ui-qb-tile {
+  padding: 22px 22px;
+}
+
+.ui-qb-tile-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.ui-qb-tile-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.ui-qb-tiles[data-step="classes"] .ui-qb-tile-title {
+  font-size: 22px;
+}
+
+.ui-qb-tile-count {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-qb-tile[data-empty] .ui-qb-tile-title {
+  color: var(--text-secondary);
+}
+
+/* The answer under a question in the list. */
+.ui-qb-answer {
+  display: grid;
+  gap: 8px;
+  padding: 0 18px 16px;
+}
+
+.ui-qb-options {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ui-qb-options > li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.ui-qb-options > li[data-correct] {
+  border-color: var(--success-border);
+  background: var(--success-fill);
+}
+
+.ui-qb-option-key {
+  min-width: 18px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ui-qb-correct {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--success);
+}
+
+.ui-qb-answer-line,
+.ui-qb-explanation {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 92ch;
+}
+
+.ui-qb-explanation {
+  color: var(--text-secondary);
+}
+
+.ui-qb-answer-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  margin-right: 6px;
+}
+
+/* ---- Touch targets ----------------------------------------------------
+ *
+ * The same 44×44 rule ui.css applies to every other control drawn as text,
+ * stated HERE rather than added to that list — and the reason is the cascade,
+ * not taste. This stylesheet is imported after ui.css, so the 32px min-height
+ * above beats an equal-specificity rule there whatever the media query says.
+ * The version of this fix that lived in ui.css looked correct, changed
+ * nothing, and the browser suite failed identically.
+ *
+ * The text keeps its size; the HIT AREA grows. Width as well as height,
+ * because a target big enough in one direction is not a target.
+ */
+@media (max-width: 640px), (pointer: coarse) {
+  .ui-qb-trail a,
+  .ui-qb-search-all {
+    min-height: var(--tap-min);
+    min-width: var(--tap-min);
+  }
+}

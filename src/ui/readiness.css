@@ -1,0 +1,322 @@
+/* ==========================================================================
+   Exam readiness
+   ==========================================================================
+   Owned by the readiness slice, registered in src/app/layout.tsx so it does
+   not contend with another slice over a shared sheet. Every class here is
+   prefixed `.ui-readiness-`: one class name means one component, across files,
+   and `.ui-chapter-number` and `.ui-chapter-title` are already taken by the
+   platform curriculum console. `.ui-result-score` meant two different things
+   in two sheets once, and whichever loaded second won.
+
+   Tokens only, no literal colours, so both themes come out of globals.css
+   without a second palette to keep in step.
+
+   Two rules from the design notes govern most of the sizes below:
+
+     - `--text-tertiary` (--neutral-500) is documented as 14px-and-up only.
+       Anything smaller here uses `--text-secondary`, which is the size at
+       which tertiary is least readable on the shared Android handset most of
+       these students are holding.
+     - Colour is never the only encoding. Every band figure has its word
+       beside it, so the standing survives a colourblind reader, a bad
+       projector and a printout.
+   ---------------------------------------------------------------------- */
+
+.ui-readiness-heading {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 30px 0 10px;
+}
+
+/* --------------------------------------------------------- Coverage -- */
+
+/* First on the page in both states, refusal included. The denominator is the
+   context for every other number here, and a page that leads with performance
+   lets somebody read a year's confidence into two papers. */
+.ui-readiness-coverage {
+  margin-top: 8px;
+}
+
+.ui-readiness-figures {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  /* One column at 360px, three when there is room. minmax with a 0 floor
+     rather than a fixed one, so a long label cannot push the grid wider than
+     the viewport and start the page scrolling sideways. */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+}
+
+.ui-readiness-figure {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ui-readiness-count {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.15;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* The denominator, set smaller but on the same line and never in a colour
+   that reads as an aside. "6" and "6 of 51" are different claims and the
+   second one must not be able to fall off the end of the first. */
+.ui-readiness-of {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.ui-readiness-figure-label {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------- The refusal -- */
+
+/* A statement, not an error. Nothing has gone wrong when this shows — it is
+   the honest answer and the common one — so it gets the neutral surface and a
+   strong left rule rather than a danger tone. A red panel would tell a student
+   three weeks from their boards that something was broken. */
+.ui-readiness-refusal {
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--border-strong);
+  border-radius: var(--radius-card);
+}
+
+.ui-readiness-refusal-title {
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ui-readiness-refusal-body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  max-width: var(--reading-max);
+}
+
+.ui-readiness-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* -------------------------------------------------------- The standing -- */
+
+.ui-readiness-standing {
+  margin-top: 4px;
+}
+
+.ui-readiness-bands {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+}
+
+.ui-readiness-bands li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 14px 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.ui-readiness-band-count {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* The reserved mastery scale, used for nothing else. The word beside each
+   figure carries the same meaning, so none of these colours is ever alone. */
+.ui-readiness-bands li[data-band="SECURE"] .ui-readiness-band-count {
+  color: var(--mastery-secure);
+}
+.ui-readiness-bands li[data-band="DEVELOPING"] .ui-readiness-band-count {
+  color: var(--mastery-developing);
+}
+.ui-readiness-bands li[data-band="CRITICAL"] .ui-readiness-band-count {
+  color: var(--mastery-critical);
+}
+
+.ui-readiness-band-word {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.ui-readiness-summary {
+  margin: 14px 0 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-primary);
+  max-width: var(--reading-max);
+}
+
+/* What the picture does not cover, directly under the picture rather than at
+   the foot of the page where it would be read after the conclusion. */
+.ui-readiness-caveat {
+  margin: 10px 0 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: var(--reading-max);
+}
+
+/* --------------------------------------------------------- Named ideas -- */
+
+.ui-readiness-concepts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ui-readiness-concept {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+}
+
+/* "Holding up" is reassurance, not a worklist. Same row, quieter ground, so it
+   cannot compete with the ideas that actually need an evening. */
+.ui-readiness-concept[data-quiet] {
+  background: var(--surface-raised);
+}
+
+.ui-readiness-concept-body {
+  /* min-width: 0 lets a long concept name wrap instead of forcing the row
+     wider than a 360px screen and scrolling the page sideways. */
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ui-readiness-concept-name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.ui-readiness-concept-figure {
+  margin: 3px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* The action never wraps to its own line under the name. A row that wraps puts
+   the button under the wrong heading, which the student list learned the hard
+   way with a destructive control at 390px. */
+.ui-readiness-concept .ui-button {
+  flex: 0 0 auto;
+}
+
+/* ------------------------------------------------------------ Chapters -- */
+
+.ui-readiness-note {
+  margin: 0 0 12px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: var(--reading-max);
+}
+
+.ui-readiness-chapters {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  /* Forty chapters in one column is four screens of scrolling on a handset
+     and one screen on a laptop. Columns only when the width is really there. */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+}
+
+.ui-readiness-chapter {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+}
+
+.ui-readiness-chapter-number {
+  flex: 0 0 auto;
+  min-width: 22px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.ui-readiness-chapter-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+/* Only rendered when the student sits more than one subject, so a chapter
+   number means something on its own. */
+.ui-readiness-chapter-subject {
+  flex: 0 0 auto;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+/* ------------------------------------------------------------ Footnote -- */
+
+/* Why there is no single number. Last on the page, and deliberately a full
+   sentence rather than a hint: a student who came here for a percentage and
+   found none should be told it was a decision, and the next person asked to
+   "just add the percentage" should find the reason without opening core/. */
+.ui-readiness-footnote {
+  margin: 36px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: var(--reading-max);
+}

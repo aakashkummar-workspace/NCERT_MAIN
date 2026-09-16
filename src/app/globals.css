@@ -1,0 +1,412 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. The single source of truth for DESIGN_SYSTEM.md.
+ *
+ * Every value here is a token. If a screen needs a colour, size or radius that is
+ * not in this file, the answer is to add it here — not to write a literal in a
+ * component.
+ *
+ * Contrast ratios in the comments are measured against #FFFFFF (light) and
+ * #151922 (dark), not estimated. Do not change a colour without re-measuring.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* ---- Neutral ramp ---------------------------------------------------- */
+  --neutral-0: #ffffff;
+  --neutral-25: #fafbfc;
+  --neutral-50: #f5f7fa;
+  --neutral-100: #edf0f5;
+  --neutral-200: #dfe3eb;
+  --neutral-300: #c7cdd9;
+  --neutral-400: #9ba3b4; /* 2.53:1 — NON-TEXT ONLY. Borders, disabled glyphs. */
+  /* 4.92:1 on --surface-sunken, the DARKEST surface it is used on; 5.63:1
+     on white. The previous value was #6e7787, whose comment read "4.51:1"
+     — measured against pure white, which is a background this token is
+     never used on. On the real surfaces it sat at 4.21:1 (canvas) and
+     3.95:1 (sunken), and the first axe run found it under 86 nodes across
+     37 routes. A ratio is meaningless without the background it was
+     measured against; state both or state neither. */
+  --neutral-500: #5f6877; /* tertiary text */
+  --neutral-600: #545c6b; /* 6.73:1 — secondary text */
+  --neutral-800: #272c36;
+  --neutral-900: #151922; /* 17.59:1 — primary text */
+  --neutral-950: #0b0d12;
+
+  /* ---- Primary: Indigo ------------------------------------------------- */
+  --primary-50: #f1f2fd;
+  --primary-100: #e3e6fb;
+  --primary-200: #c8cdf6;
+  --primary-300: #a6aeef;
+  --primary-500: #5f6bda;
+  --primary-600: #4a56d2; /* 5.91:1 as text on white AND under white text */
+  --primary-700: #3b45ae; /* 7.93:1 under white text */
+  --primary-900: #2a3170;
+
+  /* ---- Semantic -------------------------------------------------------- */
+  --success: #0f7a4d; /* 5.37:1 */
+  --success-fill: #e8f5ee;
+  --success-border: #a8dcc0;
+  --warning: #9c5d00; /* 5.28:1 */
+  --warning-fill: #fdf3e3;
+  --warning-border: #f0ce95;
+  --danger: #c2352b; /* 5.47:1 */
+  --danger-fill: #fdecea;
+  --danger-border: #f3b6b0;
+  --info: #0b69b8; /* 5.63:1 */
+  --info-fill: #e8f2fb;
+  --info-border: #a9cdee;
+
+  /* ---- Mastery scale — RESERVED ----------------------------------------
+   * Nothing outside the mastery display may use these. The fifth band is a
+   * refusal, not a step on a gradient: "we don't know" and "they're failing"
+   * must never be confusable. */
+  --mastery-secure: #0f7a4d;
+  --mastery-developing: #4a56d2;
+  --mastery-fragile: #9c5d00;
+  --mastery-critical: #c2352b;
+  --mastery-unknown: #9ba3b4;
+
+  /* ---- Chart series — validated, do not re-order ------------------------
+   * Slots are assigned in fixed order and never cycled. Series cap of 3 for
+   * all-pairs forms (scatter, bubble, small multiples). Slot 4 sits at 2.32:1
+   * on white, so any chart using it ships direct labels or a table view. */
+  --series-1: #4a56d2;
+  --series-2: #e0662b;
+  --series-3: #0e9e86;
+  --series-4: #d9a100;
+  --series-5: #db6fa0;
+  --series-6: #167c3e;
+  --series-7: #7a4fd6;
+  --series-8: #d6453f;
+
+  /* ---- AI surface ------------------------------------------------------ */
+  --ai-surface: #f4f5fe;
+  --ai-border: #c8cdf6;
+
+  /* ---- Semantic roles (what components actually reference) -------------- */
+  --canvas: var(--neutral-50);
+  --surface: var(--neutral-0);
+  --surface-raised: var(--neutral-25);
+  --surface-sunken: var(--neutral-100);
+  --border: var(--neutral-200);
+  --border-strong: var(--neutral-300);
+  --text-primary: var(--neutral-900);
+  --text-secondary: var(--neutral-600);
+  --text-tertiary: var(--neutral-500);
+  --text-inverse: var(--neutral-0);
+  --accent: var(--primary-600);
+  --accent-hover: var(--primary-700);
+  --accent-wash: var(--primary-50);
+  --focus-ring: var(--primary-600);
+
+  /* ---- Radius: one per kind of thing ----------------------------------- */
+  --radius-sm: 6px;
+  --radius-control: 10px;
+  --radius-card: 16px;
+  --radius-modal: 18px;
+  --radius-full: 999px;
+
+  /* ---- Elevation: modern layered ambient shadows --------------------- */
+  --shadow-sm: 0 1px 3px rgb(16 20 30 / 0.06), 0 1px 2px rgb(16 20 30 / 0.04);
+  --shadow-md: 0 4px 16px rgb(16 20 30 / 0.08), 0 2px 6px rgb(16 20 30 / 0.04);
+  --shadow-lg: 0 16px 40px rgb(16 20 30 / 0.12), 0 4px 12px rgb(16 20 30 / 0.06);
+  --shadow-card: 0 1px 3px rgb(16 20 30 / 0.04), 0 6px 16px -4px rgb(16 20 30 / 0.03);
+
+  /* ---- Motion ---------------------------------------------------------- */
+  --motion-instant: 90ms;
+  --motion-fast: 150ms;
+  --motion-base: 220ms;
+  --motion-slow: 400ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  /* ---- Layout ---------------------------------------------------------- */
+  --tap-min: 44px;
+  --sidebar-w: 240px;
+  --tabbar-h: 56px;
+  --content-max: 1440px;
+  --reading-max: 720px;
+}
+
+/*
+ * Dark mode is SELECTED, not an inverted flip.
+ *
+ * Three viewer states: an explicit choice stamps data-theme on <html>; the
+ * default "system" setting stamps nothing, so only prefers-color-scheme
+ * separates light from dark there. The :not([data-theme="light"]) guard lets an
+ * explicit light choice beat a dark OS.
+ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --canvas: var(--neutral-950);
+    --surface: #151922;
+    --surface-raised: #1c2130;
+    --surface-sunken: #10141d;
+    --border: #2a3040;
+    --border-strong: #3a4256;
+    --text-primary: #edf0f5;
+    --text-secondary: #a3adbf;
+    --text-tertiary: #78829a;
+    --text-inverse: #0b0d12;
+    --accent: var(--primary-300);
+    --accent-hover: #c8cdf6;
+    --accent-wash: #1a1e30;
+    --focus-ring: var(--primary-300);
+
+    --success: #4abe86; /* 7.54:1 on #151922 */
+    --success-fill: #12241c;
+    --success-border: #2c5a44;
+    --warning: #e0a81a; /* 8.20:1 */
+    --warning-fill: #241d0e;
+    --warning-border: #5e4a13;
+    --danger: #f0796e; /* 6.42:1 */
+    --danger-fill: #26140f;
+    --danger-border: #6b332c;
+    --info: #5faeea; /* 7.31:1 */
+    --info-fill: #0f1e2c;
+    --info-border: #2b5478;
+
+    --mastery-secure: #4abe86;
+    --mastery-developing: #a6aeef;
+    --mastery-fragile: #e0a81a;
+    --mastery-critical: #f0796e;
+    --mastery-unknown: #78829a;
+
+    /* Stepped for the dark surface and re-validated as a set — not an
+     * automatic lightening of the light steps. */
+    --series-1: #7c86ee;
+    --series-2: #d2612c;
+    --series-3: #12977f;
+    --series-4: #be8a00;
+    --series-5: #d2698f;
+    --series-6: #0a8a42;
+    --series-7: #9b7be8;
+    --series-8: #e4645e;
+
+    --ai-surface: #1a1e30;
+    --ai-border: #333a55;
+
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+    --shadow-md: 0 4px 12px rgb(0 0 0 / 0.45);
+    --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.55);
+  }
+}
+
+/* The explicit toggle must win in both directions. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --canvas: var(--neutral-950);
+  --surface: #151922;
+  --surface-raised: #1c2130;
+  --surface-sunken: #10141d;
+  --border: #2a3040;
+  --border-strong: #3a4256;
+  --text-primary: #edf0f5;
+  --text-secondary: #a3adbf;
+  --text-tertiary: #78829a;
+  --text-inverse: #0b0d12;
+  --accent: var(--primary-300);
+  --accent-hover: #c8cdf6;
+  --accent-wash: #1a1e30;
+  --focus-ring: var(--primary-300);
+
+  --success: #4abe86;
+  --success-fill: #12241c;
+  --success-border: #2c5a44;
+  --warning: #e0a81a;
+  --warning-fill: #241d0e;
+  --warning-border: #5e4a13;
+  --danger: #f0796e;
+  --danger-fill: #26140f;
+  --danger-border: #6b332c;
+  --info: #5faeea;
+  --info-fill: #0f1e2c;
+  --info-border: #2b5478;
+
+  --mastery-secure: #4abe86;
+  --mastery-developing: #a6aeef;
+  --mastery-fragile: #e0a81a;
+  --mastery-critical: #f0796e;
+  --mastery-unknown: #78829a;
+
+  --series-1: #7c86ee;
+  --series-2: #d2612c;
+  --series-3: #12977f;
+  --series-4: #be8a00;
+  --series-5: #d2698f;
+  --series-6: #0a8a42;
+  --series-7: #9b7be8;
+  --series-8: #e4645e;
+
+  --ai-surface: #1a1e30;
+  --ai-border: #333a55;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.45);
+  --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.55);
+}
+
+/* Expose tokens to Tailwind v4 utilities: bg-surface, text-secondary, etc. */
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-tertiary: var(--text-tertiary);
+  --color-inverse: var(--text-inverse);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-wash: var(--accent-wash);
+
+  --color-success: var(--success);
+  --color-success-fill: var(--success-fill);
+  --color-success-border: var(--success-border);
+  --color-warning: var(--warning);
+  --color-warning-fill: var(--warning-fill);
+  --color-warning-border: var(--warning-border);
+  --color-danger: var(--danger);
+  --color-danger-fill: var(--danger-fill);
+  --color-danger-border: var(--danger-border);
+  --color-info: var(--info);
+  --color-info-fill: var(--info-fill);
+  --color-info-border: var(--info-border);
+
+  --color-ai-surface: var(--ai-surface);
+  --color-ai-border: var(--ai-border);
+
+  --radius-sm: var(--radius-sm);
+  --radius-control: var(--radius-control);
+  --radius-card: var(--radius-card);
+  --radius-modal: var(--radius-modal);
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ---- Base ------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  /* The page scrolls without drawing a bar. Wheel, touch, keyboard and the
+     scroll-into-view a form error relies on all still work; what is gone is
+     the 15px gutter the bar reserved on desktop. The bar is a position cue,
+     so this is a look chosen deliberately, not an accessibility saving. */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Focus is never removed. 2px ring at 2px offset, on every interactive
+ * element, in both themes. DESIGN_SYSTEM.md section 7.
+ */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* Digits align in columns; body prose keeps proportional figures. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Screen-reader-only, but focusable (skip links). */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.sr-only:focus-visible {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  width: auto;
+  height: auto;
+  clip-path: none;
+  padding: 10px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  box-shadow: var(--shadow-md);
+}
+
+@keyframes skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

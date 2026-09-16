@@ -1,0 +1,355 @@
+/* The syllabus index (/t/syllabus, /s/syllabus). Every class name here is
+   prefixed ui-syl-, checked against the other stylesheets. */
+
+.ui-syl {
+  display: grid;
+  gap: 28px;
+}
+
+.ui-syl-jump {
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface-raised);
+}
+
+.ui-syl-jump-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.ui-syl-jump-grade {
+  min-width: 64px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ui-syl-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.ui-syl-chip:hover {
+  border-color: var(--primary-500);
+  color: var(--primary-600);
+}
+
+.ui-syl-grade {
+  display: grid;
+  gap: 20px;
+}
+
+.ui-syl-grade-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border-strong);
+}
+
+.ui-syl-subject {
+  display: grid;
+  gap: 10px;
+  scroll-margin-top: 16px;
+}
+
+.ui-syl-subject-head {
+  display: grid;
+  gap: 2px;
+}
+
+.ui-syl-subject-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.ui-syl-subject-meta {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-syl-chapters {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ui-syl-chapter {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+}
+
+.ui-syl-chapter > summary {
+  display: grid;
+  grid-template-columns: 32px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 8px 12px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.ui-syl-chapter > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Hover is not an affordance on a phone: the caret is visible before a touch. */
+.ui-syl-chapter > summary::after {
+  content: "\203A";
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  font-size: 18px;
+  color: var(--text-tertiary);
+  transition: transform 120ms ease;
+}
+
+.ui-syl-chapter[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.ui-syl-chapter-number {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-50);
+  color: var(--primary-700);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ui-syl-chapter-title {
+  font-weight: 550;
+  min-width: 0;
+}
+
+.ui-syl-chapter-meta {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.ui-syl-chapter-body {
+  display: grid;
+  gap: 14px;
+  padding: 4px 14px 14px 54px;
+}
+
+.ui-syl-book {
+  display: grid;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-syl-book-source {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.ui-syl-book-overview {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 72ch;
+}
+
+.ui-syl-part-title {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.ui-syl-book-part {
+  display: grid;
+  gap: 6px;
+}
+
+.ui-syl-sections {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ui-syl-sections[data-level="2"] {
+  padding-left: 16px;
+  border-left: 2px solid var(--border);
+  gap: 8px;
+}
+
+.ui-syl-section-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ui-syl-points {
+  display: grid;
+  gap: 3px;
+  margin: 4px 0 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 72ch;
+}
+
+.ui-syl-defs {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+
+.ui-syl-defs > div {
+  display: grid;
+  grid-template-columns: minmax(120px, 30%) 1fr;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.ui-syl-defs dt {
+  font-weight: 600;
+}
+
+.ui-syl-defs dd {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.ui-syl-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ui-syl-tags > li {
+  padding: 2px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 12px;
+}
+
+.ui-syl-topic {
+  display: grid;
+  gap: 6px;
+}
+
+.ui-syl-topic-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ui-syl-outcomes {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ui-syl-outcomes > li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.ui-syl-outcome-code {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.ui-syl-draft {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .ui-syl-chapter-body {
+    padding-left: 14px;
+  }
+
+  .ui-syl-outcomes > li,
+  .ui-syl-defs > div {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media print {
+  .ui-sidebar,
+  .ui-topbar,
+  .ui-student-bar,
+  .ui-syl-jump {
+    display: none !important;
+  }
+
+  /* A closed <details> hides its body even in print; this opens every
+     chapter on paper so Save as PDF is the whole index. */
+  .ui-syl-chapter::details-content {
+    content-visibility: visible;
+    display: block;
+  }
+
+  .ui-syl-chapter-body {
+    display: grid !important;
+  }
+
+  .ui-syl-chapter > summary::after {
+    display: none;
+  }
+
+  .ui-syl-chapter,
+  .ui-syl-topic {
+    break-inside: avoid;
+  }
+
+  .ui-syl-grade {
+    break-before: page;
+  }
+
+  .ui-syl-grade:first-of-type {
+    break-before: auto;
+  }
+}

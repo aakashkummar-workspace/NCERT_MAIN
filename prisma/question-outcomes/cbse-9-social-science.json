@@ -1,0 +1,16 @@
+{
+  "draft": "prisma/curriculum-drafts/cbse-9-social-science.json",
+  "format": "One digit per question, in source-id order within the chapter. The digit is the outcome's position in the chapter (1-based, topics in order); 0 means the question tests no outcome in the draft and is left untagged on purpose.",
+  "chapters": {
+    "1": "1133322221 1133111322 2222222332",
+    "2": "1111112334 4444444411 1122344444",
+    "3": "1111111143 3444442123 3332334444",
+    "4": "4221111133 3333334342 2211111111",
+    "5": "1111132433 4332222343 1144444421",
+    "6": "1124333411 1224421243 3334442434",
+    "7": "1122143333 3444431122 2244443334",
+    "8": "1123134444 4111411221 1111111334",
+    "9": "1112211111 3344441211 1113333434"
+  },
+  "book": "iest1"
+}

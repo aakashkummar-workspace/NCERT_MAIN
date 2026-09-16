@@ -1,0 +1,1051 @@
+{
+  "board": "CBSE",
+  "grade": 10,
+  "subject": "Science",
+  "status": "DRAFT — for review by a Science teacher before it is relied on",
+  "source": "Drafted against the NCERT Class X Science textbook (jesc1, 2025-26 rationalised reprint) and the 410 questions imported from C:/dev/sirah_project/NCERT/data. Content CBSE removed in 2023 — Evolution in Heredity, electromagnetic induction and the electric generator in Magnetic Effects, sources of energy, and management of natural resources — is deliberately absent.",
+  "notes": [
+    "The imported bank still holds questions labelled '[Out of syllabus: Evolution ...]' in Chapter 8 and '[Out of syllabus: AC and DC generators ...]' in Chapter 12. No outcome here covers them, on purpose: linking them would make removed content count towards a student's mastery."
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "topics": [
+        {
+          "title": "Chemical equations",
+          "outcomes": [
+            {
+              "code": "S10-01-1",
+              "statement": "Writes a word equation and a skeletal chemical equation for a described reaction, including the state symbols (s), (l), (g) and (aq).",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "S10-01-2",
+              "statement": "Balances a chemical equation by the hit-and-trial method and explains why the law of conservation of mass requires it.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Types of chemical reactions",
+          "outcomes": [
+            {
+              "code": "S10-01-3",
+              "statement": "Classifies a given reaction as combination, decomposition, displacement or double displacement, and justifies the classification from the equation.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 1
+            },
+            {
+              "code": "S10-01-4",
+              "statement": "Distinguishes exothermic from endothermic reactions, and identifies thermal, electrolytic and photolytic decomposition in examples.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            },
+            {
+              "code": "S10-01-5",
+              "statement": "Identifies the substance oxidised and the substance reduced in a redox reaction, in terms of gain or loss of oxygen or hydrogen.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S10-01-6",
+              "statement": "Explains corrosion and rancidity as effects of oxidation in everyday life, and describes how each is prevented.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Writing and balancing chemical equations",
+          "outcomes": [
+            "S10-01-1",
+            "S10-01-2"
+          ]
+        },
+        {
+          "name": "Types of chemical reactions",
+          "outcomes": [
+            "S10-01-3",
+            "S10-01-4",
+            "S10-01-5",
+            "S10-01-6"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "topics": [
+        {
+          "title": "Chemical properties of acids and bases",
+          "outcomes": [
+            {
+              "code": "S10-02-1",
+              "statement": "Identifies acids and bases using indicators such as litmus, phenolphthalein, methyl orange and olfactory indicators.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "S10-02-2",
+              "statement": "Predicts the products when an acid reacts with a metal, a metal carbonate, a metal hydrogencarbonate or a metal oxide, and when a base reacts with an acid.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S10-02-3",
+              "statement": "Explains that acids produce H⁺(aq) ions and bases produce OH⁻(aq) ions in water, and why diluting an acid must be done by adding acid to water.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Strength of acids and bases, and salts",
+          "outcomes": [
+            {
+              "code": "S10-02-4",
+              "statement": "Interprets the pH scale to judge whether a solution is acidic, neutral or basic and how strong it is, and relates pH to digestion, tooth decay and soil.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S10-02-5",
+              "statement": "Describes the preparation and uses of sodium hydroxide by the chlor-alkali process, bleaching powder, baking soda, washing soda and plaster of Paris.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 3
+            },
+            {
+              "code": "S10-02-6",
+              "statement": "Explains water of crystallisation using copper sulphate and gypsum, and identifies which common salts contain it.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reactions of acids and bases",
+          "outcomes": [
+            "S10-02-1",
+            "S10-02-2",
+            "S10-02-3"
+          ]
+        },
+        {
+          "name": "pH and salts",
+          "outcomes": [
+            "S10-02-4",
+            "S10-02-5",
+            "S10-02-6"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "topics": [
+        {
+          "title": "Properties of metals and non-metals",
+          "outcomes": [
+            {
+              "code": "S10-03-1",
+              "statement": "Compares metals and non-metals by lustre, malleability, ductility, conductivity and sonority, and names the exceptions to each property.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            },
+            {
+              "code": "S10-03-2",
+              "statement": "Describes how metals react with oxygen, water and dilute acids, and identifies amphoteric oxides.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-03-3",
+              "statement": "Uses the reactivity series to predict whether one metal will displace another from a solution of its salt.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S10-03-4",
+              "statement": "Explains the formation of an ionic compound by transfer of electrons, and relates it to the properties of ionic compounds.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 3
+            }
+          ]
+        },
+        {
+          "title": "Occurrence and extraction of metals",
+          "outcomes": [
+            {
+              "code": "S10-03-5",
+              "statement": "Describes the steps in extracting a metal of low, medium or high reactivity, including roasting, calcination and reduction.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 3
+            },
+            {
+              "code": "S10-03-6",
+              "statement": "Explains electrolytic refining of a metal, identifying what happens at the anode and the cathode.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-03-7",
+              "statement": "Explains how corrosion of metals is prevented by painting, galvanising and alloying.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reactivity of metals and ionic compounds",
+          "outcomes": [
+            "S10-03-1",
+            "S10-03-2",
+            "S10-03-3",
+            "S10-03-4"
+          ]
+        },
+        {
+          "name": "Extraction and refining of metals",
+          "outcomes": [
+            "S10-03-5",
+            "S10-03-6",
+            "S10-03-7"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "topics": [
+        {
+          "title": "Bonding and versatility of carbon",
+          "outcomes": [
+            {
+              "code": "S10-04-1",
+              "statement": "Explains covalent bonding in carbon compounds, and draws electron-dot structures of molecules such as methane, ammonia and oxygen.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S10-04-2",
+              "statement": "Describes the allotropes of carbon — diamond, graphite and fullerene — and relates their structures to their properties.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            },
+            {
+              "code": "S10-04-3",
+              "statement": "Identifies saturated and unsaturated hydrocarbons, homologous series and structural isomers.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            },
+            {
+              "code": "S10-04-4",
+              "statement": "Names carbon compounds containing a functional group such as a halogen, alcohol, aldehyde, ketone or carboxylic acid.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Chemical properties and important carbon compounds",
+          "outcomes": [
+            {
+              "code": "S10-04-5",
+              "statement": "Describes combustion, oxidation, addition and substitution reactions of carbon compounds, with an example of each.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 3
+            },
+            {
+              "code": "S10-04-6",
+              "statement": "Describes the properties and reactions of ethanol and ethanoic acid, including esterification and saponification.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 3
+            },
+            {
+              "code": "S10-04-7",
+              "statement": "Explains how soap removes oil by forming micelles, and why soap works poorly in hard water where detergents do not.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Covalent bonding and structure of carbon compounds",
+          "outcomes": [
+            "S10-04-1",
+            "S10-04-2",
+            "S10-04-3",
+            "S10-04-4"
+          ]
+        },
+        {
+          "name": "Reactions of carbon compounds",
+          "outcomes": [
+            "S10-04-5",
+            "S10-04-6",
+            "S10-04-7"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "topics": [
+        {
+          "title": "Nutrition",
+          "outcomes": [
+            {
+              "code": "S10-05-1",
+              "statement": "Explains photosynthesis — the raw materials, the role of chlorophyll and stomata, and the products.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-05-2",
+              "statement": "Describes digestion in the human alimentary canal, naming the organs in order and the role of each digestive juice.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 3
+            }
+          ]
+        },
+        {
+          "title": "Respiration",
+          "outcomes": [
+            {
+              "code": "S10-05-3",
+              "statement": "Compares aerobic and anaerobic respiration, including the breakdown of glucose in yeast and in muscle cells.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            },
+            {
+              "code": "S10-05-4",
+              "statement": "Describes the human respiratory system and how exchange of gases takes place in the alveoli.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Transportation and excretion",
+          "outcomes": [
+            {
+              "code": "S10-05-5",
+              "statement": "Describes double circulation through the four-chambered heart and the roles of arteries, veins, capillaries and valves.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 3
+            },
+            {
+              "code": "S10-05-6",
+              "statement": "Explains transport of water through xylem and of food through phloem in plants, including transpiration.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-05-7",
+              "statement": "Describes how the nephron filters blood and forms urine, and names the path of urine out of the body.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Nutrition and respiration",
+          "outcomes": [
+            "S10-05-1",
+            "S10-05-2",
+            "S10-05-3",
+            "S10-05-4"
+          ]
+        },
+        {
+          "name": "Transportation and excretion",
+          "outcomes": [
+            "S10-05-5",
+            "S10-05-6",
+            "S10-05-7"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "topics": [
+        {
+          "title": "Nervous system",
+          "outcomes": [
+            {
+              "code": "S10-06-1",
+              "statement": "Describes the structure of a neuron and how a nerve impulse travels from dendrite to axon and across a synapse.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-06-2",
+              "statement": "Explains a reflex action by tracing its reflex arc, and distinguishes voluntary, involuntary and reflex actions.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-06-3",
+              "statement": "Identifies the parts of the human brain and the function of each, and how the brain and spinal cord are protected.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Coordination in plants and hormones in animals",
+          "outcomes": [
+            {
+              "code": "S10-06-4",
+              "statement": "Distinguishes the responses of plants to stimuli — phototropism, geotropism, hydrotropism and chemotropism — and immediate movements such as in the sensitive plant.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-06-5",
+              "statement": "Names the plant hormones auxin, gibberellin, cytokinin and abscisic acid, and states the effect of each.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "S10-06-6",
+              "statement": "Relates each human endocrine gland to the hormone it secretes and its function, and explains feedback control of hormone levels.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 3
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Nervous coordination",
+          "outcomes": [
+            "S10-06-1",
+            "S10-06-2",
+            "S10-06-3"
+          ]
+        },
+        {
+          "name": "Hormonal coordination in plants and animals",
+          "outcomes": [
+            "S10-06-4",
+            "S10-06-5",
+            "S10-06-6"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "topics": [
+        {
+          "title": "Modes of reproduction in single organisms",
+          "outcomes": [
+            {
+              "code": "S10-07-1",
+              "statement": "Explains why DNA copying during reproduction produces both similarity and variation, and why variation matters to a species.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-07-2",
+              "statement": "Describes asexual reproduction by fission, fragmentation, regeneration, budding, spore formation and vegetative propagation, with an example of each.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 3
+            }
+          ]
+        },
+        {
+          "title": "Sexual reproduction",
+          "outcomes": [
+            {
+              "code": "S10-07-3",
+              "statement": "Describes the parts of a flower and the sequence of pollination, fertilisation and seed formation.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 3
+            },
+            {
+              "code": "S10-07-4",
+              "statement": "Describes the human male and female reproductive systems and the path of sperm and ovum up to implantation.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 3
+            },
+            {
+              "code": "S10-07-5",
+              "statement": "Explains the changes at puberty, methods of contraception and how sexually transmitted diseases spread.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Asexual reproduction",
+          "outcomes": [
+            "S10-07-1",
+            "S10-07-2"
+          ]
+        },
+        {
+          "name": "Sexual reproduction in plants and humans",
+          "outcomes": [
+            "S10-07-3",
+            "S10-07-4",
+            "S10-07-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "topics": [
+        {
+          "title": "Heredity",
+          "outcomes": [
+            {
+              "code": "S10-08-1",
+              "statement": "Explains how variation accumulates across generations during reproduction.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            },
+            {
+              "code": "S10-08-2",
+              "statement": "Predicts the traits and ratios in the F1 and F2 generations of Mendel's monohybrid and dihybrid crosses.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            },
+            {
+              "code": "S10-08-3",
+              "statement": "Distinguishes dominant from recessive traits and genotype from phenotype, and explains how genes control a trait through proteins.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-08-4",
+              "statement": "Explains sex determination in humans, and why the father's chromosome decides the sex of the child.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Mendel's laws of inheritance",
+          "outcomes": [
+            "S10-08-1",
+            "S10-08-2",
+            "S10-08-3"
+          ]
+        },
+        {
+          "name": "Sex determination",
+          "outcomes": [
+            "S10-08-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "topics": [
+        {
+          "title": "Reflection by spherical mirrors",
+          "outcomes": [
+            {
+              "code": "S10-09-1",
+              "statement": "States the laws of reflection and describes the image formed by a plane mirror.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "S10-09-2",
+              "statement": "Draws ray diagrams for concave and convex mirrors and describes the position, nature and size of the image for each object position.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 3
+            },
+            {
+              "code": "S10-09-3",
+              "statement": "Applies the mirror formula and magnification with the New Cartesian sign convention to find an unknown distance or image size.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            }
+          ]
+        },
+        {
+          "title": "Refraction and lenses",
+          "outcomes": [
+            {
+              "code": "S10-09-4",
+              "statement": "Explains refraction through a rectangular glass slab and relates refractive index to the speed of light in two media.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-09-5",
+              "statement": "Draws ray diagrams for convex and concave lenses and describes the image for each object position.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 3
+            },
+            {
+              "code": "S10-09-6",
+              "statement": "Applies the lens formula, magnification and power of a lens in dioptres to solve numerical problems.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reflection and spherical mirrors",
+          "outcomes": [
+            "S10-09-1",
+            "S10-09-2",
+            "S10-09-3"
+          ]
+        },
+        {
+          "name": "Refraction and lenses",
+          "outcomes": [
+            "S10-09-4",
+            "S10-09-5",
+            "S10-09-6"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "topics": [
+        {
+          "title": "The human eye and its defects",
+          "outcomes": [
+            {
+              "code": "S10-10-1",
+              "statement": "Describes the parts of the human eye and explains accommodation and the least distance of distinct vision.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-10-2",
+              "statement": "Explains myopia, hypermetropia and presbyopia, and identifies the lens that corrects each.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 3
+            }
+          ]
+        },
+        {
+          "title": "Refraction through a prism and scattering",
+          "outcomes": [
+            {
+              "code": "S10-10-3",
+              "statement": "Explains dispersion of white light by a glass prism and the formation of a rainbow.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-10-4",
+              "statement": "Explains effects of atmospheric refraction such as twinkling stars and early sunrise.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-10-5",
+              "statement": "Explains scattering of light, the Tyndall effect, the blue colour of the sky and the reddening of the Sun at sunrise and sunset.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Defects of vision and their correction",
+          "outcomes": [
+            "S10-10-1",
+            "S10-10-2"
+          ]
+        },
+        {
+          "name": "Dispersion, atmospheric refraction and scattering",
+          "outcomes": [
+            "S10-10-3",
+            "S10-10-4",
+            "S10-10-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "topics": [
+        {
+          "title": "Current, potential difference and Ohm's law",
+          "outcomes": [
+            {
+              "code": "S10-11-1",
+              "statement": "Defines electric current, charge and potential difference with their SI units, and calculates charge or number of electrons from current and time.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S10-11-2",
+              "statement": "Applies Ohm's law to relate potential difference, current and resistance in a circuit.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S10-11-3",
+              "statement": "Explains how the resistance of a conductor depends on its length, area of cross-section and material, and uses resistivity in calculations.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Combinations of resistors and the heating effect",
+          "outcomes": [
+            {
+              "code": "S10-11-4",
+              "statement": "Calculates the equivalent resistance of resistors in series and in parallel, and the current and voltage in each.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            },
+            {
+              "code": "S10-11-5",
+              "statement": "Applies Joule's law of heating and describes practical uses of the heating effect of current.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S10-11-6",
+              "statement": "Calculates electric power and energy consumed in kilowatt-hours, and relates P = VI = I²R = V²/R.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 3
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Ohm's law and resistance",
+          "outcomes": [
+            "S10-11-1",
+            "S10-11-2",
+            "S10-11-3"
+          ]
+        },
+        {
+          "name": "Resistors in circuits and electric power",
+          "outcomes": [
+            "S10-11-4",
+            "S10-11-5",
+            "S10-11-6"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "topics": [
+        {
+          "title": "Magnetic field due to a current",
+          "outcomes": [
+            {
+              "code": "S10-12-1",
+              "statement": "Describes magnetic field lines and their properties, including what closely spaced lines indicate.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            },
+            {
+              "code": "S10-12-2",
+              "statement": "Describes the magnetic field around a straight conductor, a circular loop and a solenoid, and applies the right-hand thumb rule.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 3
+            },
+            {
+              "code": "S10-12-3",
+              "statement": "Explains how an electromagnet is made and how its strength can be increased.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "title": "Force on a conductor and domestic circuits",
+          "outcomes": [
+            {
+              "code": "S10-12-4",
+              "statement": "Applies Fleming's left-hand rule to find the direction of force on a current-carrying conductor in a magnetic field.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S10-12-5",
+              "statement": "Describes domestic electric circuits — live, neutral and earth wires, fuses, and separate 5 A and 15 A circuits — and why each safety feature is used.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Magnetic field of a current",
+          "outcomes": [
+            "S10-12-1",
+            "S10-12-2",
+            "S10-12-3"
+          ]
+        },
+        {
+          "name": "Force on a current and domestic circuits",
+          "outcomes": [
+            "S10-12-4",
+            "S10-12-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "topics": [
+        {
+          "title": "The ecosystem",
+          "outcomes": [
+            {
+              "code": "S10-13-1",
+              "statement": "Identifies the biotic and abiotic components of an ecosystem and classifies organisms as producers, consumers and decomposers.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            },
+            {
+              "code": "S10-13-2",
+              "statement": "Constructs food chains and food webs and identifies the trophic level of each organism.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S10-13-3",
+              "statement": "Applies the ten per cent law to calculate energy available at a trophic level, and explains biological magnification.",
+              "bloom": "APPLY",
+              "competency": "PROBLEM_SOLVING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "How our activities affect the environment",
+          "outcomes": [
+            {
+              "code": "S10-13-4",
+              "statement": "Explains how ozone forms in the upper atmosphere, why it matters, and how CFCs deplete it.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S10-13-5",
+              "statement": "Classifies waste as biodegradable or non-biodegradable and evaluates ways of managing garbage.",
+              "bloom": "EVALUATE",
+              "competency": "EVALUATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Food chains and energy flow",
+          "outcomes": [
+            "S10-13-1",
+            "S10-13-2",
+            "S10-13-3"
+          ]
+        },
+        {
+          "name": "Ozone depletion and waste management",
+          "outcomes": [
+            "S10-13-4",
+            "S10-13-5"
+          ]
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "concept": "Types of chemical reactions",
+      "requires": "Writing and balancing chemical equations"
+    },
+    {
+      "concept": "Reactions of acids and bases",
+      "requires": "Writing and balancing chemical equations"
+    },
+    {
+      "concept": "Reactivity of metals and ionic compounds",
+      "requires": "Types of chemical reactions"
+    },
+    {
+      "concept": "Reactions of carbon compounds",
+      "requires": "Covalent bonding and structure of carbon compounds"
+    },
+    {
+      "concept": "Transportation and excretion",
+      "requires": "Nutrition and respiration"
+    },
+    {
+      "concept": "Mendel's laws of inheritance",
+      "requires": "Sexual reproduction in plants and humans"
+    },
+    {
+      "concept": "Refraction and lenses",
+      "requires": "Reflection and spherical mirrors"
+    },
+    {
+      "concept": "Defects of vision and their correction",
+      "requires": "Refraction and lenses"
+    },
+    {
+      "concept": "Resistors in circuits and electric power",
+      "requires": "Ohm's law and resistance"
+    },
+    {
+      "concept": "Magnetic field of a current",
+      "requires": "Ohm's law and resistance"
+    },
+    {
+      "concept": "Force on a current and domestic circuits",
+      "requires": "Magnetic field of a current"
+    },
+    {
+      "concept": "Writing and balancing chemical equations",
+      "requires": "Atomic number, mass number and isotopes",
+      "why": "Valency decides every formula you will write this year, and valency comes from where the electrons sit.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    },
+    {
+      "concept": "pH and salts",
+      "requires": "Mixtures, solutions and concentration",
+      "why": "pH and dilution are statements about concentration, which is the Class 9 solutions chapter.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    },
+    {
+      "concept": "Reactivity of metals and ionic compounds",
+      "requires": "Chemical formulae and molecular mass",
+      "why": "Ionic bonding — a metal handing electrons to a non-metal — is the single idea that explains how metals behave.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    },
+    {
+      "concept": "Covalent bonding and structure of carbon compounds",
+      "requires": "Chemical formulae and molecular mass",
+      "why": "Every structure you draw this chapter is a covalent bond diagram, which Class 9 already taught.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    },
+    {
+      "concept": "Nutrition and respiration",
+      "requires": "Cell structure and organelles",
+      "why": "Nutrition, respiration and transport happen inside a cell before they happen inside you.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    },
+    {
+      "concept": "Nervous coordination",
+      "requires": "Animal tissues",
+      "why": "A reflex arc is nervous tissue wired to muscular tissue. Both were named and drawn in Class 9.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    },
+    {
+      "concept": "Resistors in circuits and electric power",
+      "requires": "Work, energy and power",
+      "why": "Electrical energy and power are the same work-and-power definitions from Class 9, with charge doing the moving.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    }
+  ]
+}

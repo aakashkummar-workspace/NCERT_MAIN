@@ -1,0 +1,301 @@
+{
+  "board": "CBSE",
+  "grade": 10,
+  "subject": "Social Science – Political Science",
+  "status": "DRAFT — for review by a Social Science teacher before it is relied on",
+  "source": "Drafted against NCERT Class X 'Democratic Politics' (jess4, 2025-26) and the 150 questions imported from C:/dev/sirah_project/NCERT/data.",
+  "notes": [],
+  "chapters": [
+    {
+      "number": 1,
+      "topics": [
+        {
+          "title": "Belgium and Sri Lanka",
+          "outcomes": [
+            {
+              "code": "P10-01-1",
+              "statement": "Compares how Belgium accommodated its linguistic diversity with how majoritarianism in Sri Lanka alienated the Tamils.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "P10-01-2",
+              "statement": "Describes the elements of the Belgian model of power sharing, including the community government and equal representation in Brussels.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Why and how power is shared",
+          "outcomes": [
+            {
+              "code": "P10-01-3",
+              "statement": "Explains the prudential and moral reasons for sharing power.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "P10-01-4",
+              "statement": "Classifies forms of power sharing as among organs of government, among levels of government, among social groups, or among parties and pressure groups.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Power sharing in Belgium and Sri Lanka",
+          "outcomes": [
+            "P10-01-1",
+            "P10-01-2"
+          ]
+        },
+        {
+          "name": "Forms of power sharing",
+          "outcomes": [
+            "P10-01-3",
+            "P10-01-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "topics": [
+        {
+          "title": "What makes India a federal country",
+          "outcomes": [
+            {
+              "code": "P10-02-1",
+              "statement": "Explains what federalism is, and distinguishes 'coming together' from 'holding together' federations.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "P10-02-2",
+              "statement": "Describes the three lists that divide power in India, and the special provisions for some States such as Article 371.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "How federalism is practised",
+          "outcomes": [
+            {
+              "code": "P10-02-3",
+              "statement": "Explains how linguistic States, the language policy and centre-state relations have strengthened federalism in India.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "P10-02-4",
+              "statement": "Describes decentralisation and the 1992 amendment that created panchayats and municipalities.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Features of federalism",
+          "outcomes": [
+            "P10-02-1",
+            "P10-02-2"
+          ]
+        },
+        {
+          "name": "Federalism in practice in India",
+          "outcomes": [
+            "P10-02-3",
+            "P10-02-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "topics": [
+        {
+          "title": "Gender and politics",
+          "outcomes": [
+            {
+              "code": "P10-03-1",
+              "statement": "Explains the sexual division of labour and why women remain under-represented in politics.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "P10-03-2",
+              "statement": "Describes measures for women's representation, including the Nari Shakti Vandan Adhiniyam of 2023.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Religion, caste and politics",
+          "outcomes": [
+            {
+              "code": "P10-03-3",
+              "statement": "Explains when religion in politics becomes communalism, and how the Constitution makes India secular.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "P10-03-4",
+              "statement": "Explains how caste shapes politics, and how politics in turn changes caste.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Gender and politics",
+          "outcomes": [
+            "P10-03-1",
+            "P10-03-2"
+          ]
+        },
+        {
+          "name": "Communalism, secularism and caste in politics",
+          "outcomes": [
+            "P10-03-3",
+            "P10-03-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "topics": [
+        {
+          "title": "Why we need parties",
+          "outcomes": [
+            {
+              "code": "P10-04-1",
+              "statement": "Explains what a political party is and the functions it performs in a democracy.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "P10-04-2",
+              "statement": "Compares one-party, two-party and multiparty systems, including the trade-offs of a multiparty system.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Parties in India and their challenges",
+          "outcomes": [
+            {
+              "code": "P10-04-3",
+              "statement": "Describes what a party must achieve to be recognised as a national or a state party, with examples of India's parties.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "P10-04-4",
+              "statement": "Explains the challenges political parties face and the ways they can be reformed.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Meaning and functions of political parties",
+          "outcomes": [
+            "P10-04-1",
+            "P10-04-2"
+          ]
+        },
+        {
+          "name": "National and state parties and their challenges",
+          "outcomes": [
+            "P10-04-3",
+            "P10-04-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "topics": [
+        {
+          "title": "Assessing democracy",
+          "outcomes": [
+            {
+              "code": "P10-05-1",
+              "statement": "Evaluates democracy as accountable, responsive and legitimate government.",
+              "bloom": "EVALUATE",
+              "competency": "EVALUATION",
+              "marks": 3
+            },
+            {
+              "code": "P10-05-2",
+              "statement": "Evaluates the economic outcomes of democracy, including growth and the reduction of inequality and poverty.",
+              "bloom": "EVALUATE",
+              "competency": "EVALUATION",
+              "marks": 3
+            },
+            {
+              "code": "P10-05-3",
+              "statement": "Explains how democracy accommodates social diversity and upholds the dignity and freedom of citizens.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Outcomes of democracy",
+          "outcomes": [
+            "P10-05-1",
+            "P10-05-2",
+            "P10-05-3"
+          ]
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "concept": "Federalism in practice in India",
+      "requires": "Features of federalism"
+    },
+    {
+      "concept": "Features of federalism",
+      "requires": "Forms of power sharing"
+    },
+    {
+      "concept": "National and state parties and their challenges",
+      "requires": "Meaning and functions of political parties"
+    }
+  ]
+}

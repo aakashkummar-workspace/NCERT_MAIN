@@ -1,0 +1,608 @@
+{
+  "board": "CBSE",
+  "grade": 10,
+  "subject": "English – First Flight",
+  "status": "DRAFT — for review by an English teacher before it is relied on",
+  "source": "Drafted against NCERT Class X English 'First Flight' (jeff1, 2025-26) and the 270 questions imported from C:/dev/sirah_project/NCERT/data. Each chapter pairs prose and poems with a language focus; the pieces and language points named are the ones those questions test.",
+  "notes": [
+    "Language concepts carry the book and chapter in their name, because a grammar point can recur in another chapter or book and concept names must be unique."
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E10FF-01-1",
+              "statement": "Recalls the events of 'A Letter to God' — the hailstorm, Lencho's letter, and the postmaster's reply.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-01-2",
+              "statement": "Explains the irony of Lencho's faith in God and his distrust of the post-office employees who helped him.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FF-01-3",
+              "statement": "Interprets the poems 'Dust of Snow' and 'Fire and Ice', including what fire and ice stand for.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E10FF-01-4",
+              "statement": "Identifies relative clauses and uses them to join two sentences.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-01-5",
+              "statement": "Explains the quality a metaphor transfers, such as in 'Lencho was an ox of a man'.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'A Letter to God', 'Dust of Snow' and 'Fire and Ice'",
+          "outcomes": [
+            "E10FF-01-1",
+            "E10FF-01-2",
+            "E10FF-01-3"
+          ]
+        },
+        {
+          "name": "Relative clauses and metaphors (First Flight 1)",
+          "outcomes": [
+            "E10FF-01-4",
+            "E10FF-01-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E10FF-02-1",
+              "statement": "Recalls the facts of Nelson Mandela's inauguration and of his account of apartheid in 'Long Walk to Freedom'.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-02-2",
+              "statement": "Explains what Mandela means by courage, by the twin obligations every man has, and by his move from personal to collective freedom.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FF-02-3",
+              "statement": "Compares the tiger in the cage with the tiger in the wild in the poem 'A Tiger in the Zoo'.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E10FF-02-4",
+              "statement": "Uses the definite article correctly with names, as the chapter explains.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-02-5",
+              "statement": "Interprets idiomatic expressions from the chapter, such as 'earning my keep'.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'Long Walk to Freedom' and 'A Tiger in the Zoo'",
+          "outcomes": [
+            "E10FF-02-1",
+            "E10FF-02-2",
+            "E10FF-02-3"
+          ]
+        },
+        {
+          "name": "The definite article with names and idioms (First Flight 2)",
+          "outcomes": [
+            "E10FF-02-4",
+            "E10FF-02-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E10FF-03-1",
+              "statement": "Recalls the events of 'His First Flight' and 'The Black Aeroplane'.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-03-2",
+              "statement": "Explains what the young seagull's first flight and the pilot's rescue in the storm reveal about fear, courage and trust.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FF-03-3",
+              "statement": "Interprets the humour of 'How to Tell Wild Animals' and the lesson of loss in 'The Ball Poem'.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E10FF-03-4",
+              "statement": "Explains the meaning of words from the stories, such as 'upbraiding', in context.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-03-5",
+              "statement": "Interprets words and phrases from the poems, such as 'novice' and 'nonplus', in context.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'Two Stories about Flying' and its poems",
+          "outcomes": [
+            "E10FF-03-1",
+            "E10FF-03-2",
+            "E10FF-03-3"
+          ]
+        },
+        {
+          "name": "Vocabulary in context (First Flight 3)",
+          "outcomes": [
+            "E10FF-03-4",
+            "E10FF-03-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E10FF-04-1",
+              "statement": "Recalls why Anne Frank kept a diary and what she wrote about her school, teachers and family.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-04-2",
+              "statement": "Explains how Anne used her essays to answer Mr Keesing's punishments, and what the diary shows about her loneliness.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FF-04-3",
+              "statement": "Interprets the poem 'Amanda!', including who speaks in the bracketed stanzas and what Amanda longs for.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E10FF-04-4",
+              "statement": "Explains compound words and contracted forms, including a contraction that can stand for two different full forms.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-04-5",
+              "statement": "Interprets phrasal verbs and idioms from the chapter, and names the word under which an idiom is found in a dictionary.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'From the Diary of Anne Frank' and 'Amanda!'",
+          "outcomes": [
+            "E10FF-04-1",
+            "E10FF-04-2",
+            "E10FF-04-3"
+          ]
+        },
+        {
+          "name": "Compound words, contractions, phrasal verbs and idioms (First Flight 4)",
+          "outcomes": [
+            "E10FF-04-4",
+            "E10FF-04-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E10FF-05-1",
+              "statement": "Recalls the details of the Goan baker, Coorg and the tea gardens of Assam in 'Glimpses of India'.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-05-2",
+              "statement": "Explains what each of the three glimpses shows about a region's culture, history and livelihood.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FF-05-3",
+              "statement": "Interprets the poem 'The Trees', including where the trees are at the start and what their movement suggests.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E10FF-05-4",
+              "statement": "Explains the meaning of words from the chapter, such as 'heralding', in context.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-05-5",
+              "statement": "Interprets information given in a fact file and relates it to the text.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'Glimpses of India' and 'The Trees'",
+          "outcomes": [
+            "E10FF-05-1",
+            "E10FF-05-2",
+            "E10FF-05-3"
+          ]
+        },
+        {
+          "name": "Vocabulary and fact files (First Flight 5)",
+          "outcomes": [
+            "E10FF-05-4",
+            "E10FF-05-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E10FF-06-1",
+              "statement": "Recalls the events of 'Mijbil the Otter' — how Maxwell got Mij, the flight to London, and Mij's habits.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-06-2",
+              "statement": "Explains the bond between Maxwell and Mij and what the otter's play reveals about its nature.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FF-06-3",
+              "statement": "Interprets the metaphor of the fog as a cat in the poem 'Fog'.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E10FF-06-4",
+              "statement": "Distinguishes 'would' from 'used to' when describing a repeated action in the past.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-06-5",
+              "statement": "Identifies noun modifiers and explains words from the chapter, such as 'thraldom', in context.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'Mijbil the Otter' and 'Fog'",
+          "outcomes": [
+            "E10FF-06-1",
+            "E10FF-06-2",
+            "E10FF-06-3"
+          ]
+        },
+        {
+          "name": "Repeated past actions and noun modifiers (First Flight 6)",
+          "outcomes": [
+            "E10FF-06-4",
+            "E10FF-06-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E10FF-07-1",
+              "statement": "Recalls the events of Valli's bus journey in 'Madam Rides the Bus'.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-07-2",
+              "statement": "Explains how Valli's journey, and the dead cow she sees on the way back, change her understanding of the world.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FF-07-3",
+              "statement": "Interprets the humour and characters of 'The Tale of Custard the Dragon'.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E10FF-07-4",
+              "statement": "Explains the meaning of adverbs describing manner, such as 'haughtily', in context.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-07-5",
+              "statement": "Interprets words from the chapter, such as 'drivel' and 'repulsive', in context.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'Madam Rides the Bus' and 'The Tale of Custard the Dragon'",
+          "outcomes": [
+            "E10FF-07-1",
+            "E10FF-07-2",
+            "E10FF-07-3"
+          ]
+        },
+        {
+          "name": "Vocabulary of manner and attitude (First Flight 7)",
+          "outcomes": [
+            "E10FF-07-4",
+            "E10FF-07-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E10FF-08-1",
+              "statement": "Recalls the story of Siddhartha's enlightenment and of Kisa Gotami's search for the mustard seed.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-08-2",
+              "statement": "Explains the lesson the Buddha teaches Kisa Gotami about death and grief.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E10FF-08-3",
+              "statement": "Interprets the poem 'For Anne Gregory', including what it says about beauty and love.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E10FF-08-4",
+              "statement": "Explains archaic forms such as 'thee' and 'thy' in the sermon.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-08-5",
+              "statement": "Interprets figurative phrases from the chapter, such as 'valley of desolation' and 'ramparts', in context.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'The Sermon at Benares' and 'For Anne Gregory'",
+          "outcomes": [
+            "E10FF-08-1",
+            "E10FF-08-2",
+            "E10FF-08-3"
+          ]
+        },
+        {
+          "name": "Archaic language and figurative phrases (First Flight 8)",
+          "outcomes": [
+            "E10FF-08-4",
+            "E10FF-08-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E10FF-09-1",
+              "statement": "Recalls the plot and characters of Chekhov's one-act play 'The Proposal'.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-09-2",
+              "statement": "Explains how the quarrels over the Oxen Meadows and the dogs create the comedy of 'The Proposal'.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E10FF-09-4",
+              "statement": "Converts direct speech from the play into reported speech.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E10FF-09-5",
+              "statement": "Explains why a play's characters speak and behave as they do, using the stage directions.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'The Proposal'",
+          "outcomes": [
+            "E10FF-09-1",
+            "E10FF-09-2"
+          ]
+        },
+        {
+          "name": "Reported speech (First Flight 9)",
+          "outcomes": [
+            "E10FF-09-4",
+            "E10FF-09-5"
+          ]
+        }
+      ]
+    }
+  ],
+  "prerequisites": []
+}

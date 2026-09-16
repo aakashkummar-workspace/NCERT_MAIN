@@ -1,0 +1,1873 @@
+{
+  "book": "jemh1",
+  "bookTitle": "Mathematics",
+  "class": 10,
+  "chapters": [
+    {
+      "bookChapter": 1,
+      "title": "Real Numbers",
+      "pages": 9,
+      "author": null,
+      "form": null,
+      "overview": "The chapter studies the Fundamental Theorem of Arithmetic, that every composite number factorises uniquely as a product of primes, and uses it to find HCF and LCM by the prime factorisation method. It then uses the theorem to prove that numbers such as √2, √3 and √5 are irrational, using proof by contradiction.",
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Introduction",
+          "points": [
+            "Continues the Class IX study of real numbers and irrational numbers.",
+            "Euclid's division algorithm concerns divisibility: a positive integer a divided by b leaves a remainder r smaller than b.",
+            "The Fundamental Theorem of Arithmetic concerns multiplication: every composite number is a product of primes in a unique way.",
+            "The theorem is used to prove irrationality of numbers like √2, √3, √5 and to study when decimal expansions of rational numbers terminate."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "1.2",
+          "title": "The Fundamental Theorem of Arithmetic",
+          "points": [
+            "Multiplying primes in all possible ways gives infinitely many numbers; there are infinitely many primes.",
+            "A factor tree factorises 32760 as 2³ × 3² × 5 × 7 × 13, leading to the conjecture that every composite number is a product of powers of primes.",
+            "States Theorem 1.1: prime factorisation is unique apart from the order of the factors; with primes in ascending order the factorisation is unique.",
+            "Example: 4ⁿ can never end in zero because its only prime factor is 2, not 5.",
+            "HCF is the product of the smallest power of each common prime factor; LCM is the product of the greatest power of each prime factor involved.",
+            "For two positive integers, HCF(a, b) × LCM(a, b) = a × b, but this does not hold for three numbers."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "1.3",
+          "title": "Revisiting Irrational Numbers",
+          "points": [
+            "A number s is irrational if it cannot be written as p/q with p, q integers and q ≠ 0.",
+            "Theorem 1.2 (if a prime p divides a², then p divides a) is proved using the Fundamental Theorem of Arithmetic.",
+            "√2 is proved irrational by proof by contradiction: assuming √2 = a/b with a, b coprime leads to 2 being a common factor.",
+            "Example 5 proves √3 irrational in the same way.",
+            "The sum or difference of a rational and an irrational number is irrational, and the product and quotient of a non-zero rational and an irrational number is irrational; examples prove 5 – √3 and 3√2 irrational."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "1.4",
+          "title": "Summary",
+          "points": [
+            "Restates the Fundamental Theorem of Arithmetic.",
+            "Restates that if a prime p divides a², then p divides a.",
+            "Recalls the proofs that √2 and √3 are irrational.",
+            "A note to the reader gives formulas relating LCM and HCF of three numbers p, q, r."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Fundamental Theorem of Arithmetic",
+          "meaning": "Every composite number can be expressed as a product of primes, and this factorisation is unique apart from the order of the prime factors."
+        },
+        {
+          "term": "Prime factorisation method",
+          "meaning": "Finding the HCF and LCM of positive integers from their prime factorisations."
+        },
+        {
+          "term": "Irrational number",
+          "meaning": "A number s that cannot be written in the form p/q, where p and q are integers and q ≠ 0."
+        },
+        {
+          "term": "Proof by contradiction",
+          "meaning": "A proof technique that assumes the contrary of the statement and shows this leads to a contradiction."
+        },
+        {
+          "term": "Coprime",
+          "meaning": "Integers that have no common factor other than 1."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Theorem 1.1 (Fundamental Theorem of Arithmetic)",
+          "statement": "Every composite number can be expressed (factorised) as a product of primes, and this factorisation is unique, apart from the order in which the prime factors occur."
+        },
+        {
+          "label": "Theorem 1.2",
+          "statement": "Let p be a prime number. If p divides a², then p divides a, where a is a positive integer."
+        },
+        {
+          "label": "Theorem 1.3",
+          "statement": "√2 is irrational."
+        },
+        {
+          "label": "HCF by prime factorisation",
+          "statement": "HCF = product of the smallest power of each common prime factor in the numbers."
+        },
+        {
+          "label": "LCM by prime factorisation",
+          "statement": "LCM = product of the greatest power of each prime factor involved in the numbers."
+        },
+        {
+          "label": "HCF–LCM relation",
+          "statement": "For any two positive integers a and b, HCF(a, b) × LCM(a, b) = a × b; this does not hold for three numbers."
+        },
+        {
+          "label": "Rational and irrational numbers",
+          "statement": "The sum or difference of a rational and an irrational number is irrational, and the product and quotient of a non-zero rational and irrational number is irrational."
+        },
+        {
+          "label": "Note to the reader",
+          "statement": "LCM(p, q, r) = p·q·r·HCF(p, q, r) / [HCF(p, q)·HCF(q, r)·HCF(p, r)] and HCF(p, q, r) = p·q·r·LCM(p, q, r) / [LCM(p, q)·LCM(q, r)·LCM(p, r)]."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "EXERCISE 1.1",
+          "questions": 7
+        },
+        {
+          "name": "EXERCISE 1.2",
+          "questions": 3
+        }
+      ],
+      "bookSummary": [
+        "The Fundamental Theorem of Arithmetic: every composite number can be expressed (factorised) as a product of primes, and this factorisation is unique, apart from the order in which the prime factors occur.",
+        "If p is a prime and p divides a², then p divides a, where a is a positive integer.",
+        "To prove that √2, √3 are irrationals."
+      ],
+      "notes": "The extracted text loses square-root signs and superscripts; mathematical expressions were read from context."
+    },
+    {
+      "bookChapter": 2,
+      "title": "Polynomials",
+      "pages": 14,
+      "author": null,
+      "form": null,
+      "overview": "The chapter recalls polynomials, their degrees, values and zeroes, and shows geometrically that the zeroes of a polynomial are the x-coordinates of the points where its graph meets the x-axis. It then establishes the relationships between the zeroes and the coefficients of quadratic and cubic polynomials, and uses them to find a quadratic polynomial from the sum and product of its zeroes.",
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Introduction",
+          "points": [
+            "The highest power of x in p(x) is the degree of the polynomial; expressions like 1/x or √x are not polynomials.",
+            "Polynomials of degree 1, 2 and 3 are linear, quadratic and cubic; 'quadratic' comes from 'quadrate', meaning square.",
+            "A quadratic polynomial in x has the form ax² + bx + c and a cubic has the form ax³ + bx² + cx + d, with a ≠ 0.",
+            "p(k) is the value of p(x) at x = k; k is a zero of p(x) if p(k) = 0.",
+            "The zero of the linear polynomial ax + b is –b/a = –(constant term)/(coefficient of x)."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "2.2",
+          "title": "Geometrical Meaning of the Zeroes of a Polynomial",
+          "points": [
+            "The graph of y = ax + b is a straight line meeting the x-axis at exactly one point (–b/a, 0), so a linear polynomial has exactly one zero.",
+            "The graph of y = ax² + bx + c is a parabola opening upwards if a > 0 or downwards if a < 0; its zeroes are the x-coordinates where the parabola meets the x-axis.",
+            "Three cases: the graph cuts the x-axis at two distinct points, at exactly one point (two coincident points), or not at all; so a quadratic has at most two zeroes.",
+            "The graph of y = x³ – 4x meets the x-axis at –2, 0 and 2; a cubic polynomial has at most three zeroes.",
+            "In general a polynomial of degree n has at most n zeroes."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "2.3",
+          "title": "Relationship between Zeroes and Coefficients of a Polynomial",
+          "points": [
+            "Factorising 2x² – 8x + 6 and 3x² + 5x – 2 by splitting the middle term shows the sum and product of zeroes are related to the coefficients.",
+            "If α and β are zeroes of ax² + bx + c, then α + β = –b/a and αβ = c/a.",
+            "Examples verify the relationship for x² + 7x + 10 and x² – 3.",
+            "A quadratic polynomial with sum of zeroes –3 and product 2 is x² + 3x + 2, or any k(x² + 3x + 2).",
+            "For a cubic ax³ + bx² + cx + d with zeroes α, β, γ: α + β + γ = –b/a, αβ + βγ + γα = c/a, αβγ = –d/a."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "2.4",
+          "title": "Summary",
+          "points": [
+            "Lists the chapter's main points on types of polynomials, geometric meaning of zeroes and the zero–coefficient relationships."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Degree of a polynomial",
+          "meaning": "The highest power of x in a polynomial p(x)."
+        },
+        {
+          "term": "Linear polynomial",
+          "meaning": "A polynomial of degree 1."
+        },
+        {
+          "term": "Quadratic polynomial",
+          "meaning": "A polynomial of degree 2, of the form ax² + bx + c with a ≠ 0; the name comes from 'quadrate', meaning square."
+        },
+        {
+          "term": "Cubic polynomial",
+          "meaning": "A polynomial of degree 3, of the general form ax³ + bx² + cx + d with a ≠ 0."
+        },
+        {
+          "term": "Value of a polynomial",
+          "meaning": "The value obtained by replacing x by k in p(x), denoted p(k)."
+        },
+        {
+          "term": "Zero of a polynomial",
+          "meaning": "A real number k such that p(k) = 0."
+        },
+        {
+          "term": "Parabola",
+          "meaning": "The curve that is the graph of y = ax² + bx + c, opening upwards or downwards depending on whether a > 0 or a < 0."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Zero of a linear polynomial",
+          "statement": "The zero of ax + b is –b/a = –(Constant term)/(Coefficient of x)."
+        },
+        {
+          "label": "Geometrical meaning of zeroes",
+          "statement": "The zeroes of a polynomial p(x) are precisely the x-coordinates of the points where the graph of y = p(x) intersects the x-axis."
+        },
+        {
+          "label": "Number of zeroes",
+          "statement": "A polynomial p(x) of degree n has at most n zeroes; a quadratic has at most 2 and a cubic at most 3."
+        },
+        {
+          "label": "Quadratic zeroes and coefficients",
+          "statement": "If α and β are the zeroes of ax² + bx + c, then α + β = –b/a and αβ = c/a."
+        },
+        {
+          "label": "Cubic zeroes and coefficients",
+          "statement": "If α, β, γ are the zeroes of ax³ + bx² + cx + d, then α + β + γ = –b/a, αβ + βγ + γα = c/a and αβγ = –d/a."
+        },
+        {
+          "label": "Quadratic from sum and product of zeroes",
+          "statement": "Any quadratic polynomial whose zeroes have sum –3 and product 2 is of the form k(x² + 3x + 2), where k is real."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "EXERCISE 2.1",
+          "questions": 1
+        },
+        {
+          "name": "EXERCISE 2.2",
+          "questions": 2
+        }
+      ],
+      "bookSummary": [
+        "Polynomials of degrees 1, 2 and 3 are called linear, quadratic and cubic polynomials respectively.",
+        "A quadratic polynomial in x with real coefficients is of the form ax² + bx + c, where a, b, c are real numbers with a ≠ 0.",
+        "The zeroes of a polynomial p(x) are precisely the x-coordinates of the points where the graph of y = p(x) intersects the x-axis.",
+        "A quadratic polynomial can have at most 2 zeroes and a cubic polynomial can have at most 3 zeroes.",
+        "If α and β are the zeroes of the quadratic polynomial ax² + bx + c, then α + β = –b/a, αβ = c/a.",
+        "If α, β, γ are the zeroes of the cubic polynomial ax³ + bx² + cx + d, then α + β + γ = –b/a, αβ + βγ + γα = c/a, and αβγ = –d/a."
+      ],
+      "notes": "Greek letters, fractions and superscripts are lost in the extracted text; formulas were reconstructed from the surrounding worked examples. The book notes that plotting graphs of quadratic or cubic polynomials is not to be evaluated."
+    },
+    {
+      "bookChapter": 3,
+      "title": "Pair of Linear Equations in Two Variables",
+      "pages": 14,
+      "author": null,
+      "form": null,
+      "overview": "The chapter represents everyday situations as a pair of linear equations in two variables and solves them graphically, classifying pairs as consistent, inconsistent or dependent by whether their lines intersect, are parallel or coincide. It relates these cases to the ratios of the coefficients and then solves pairs algebraically by the substitution and elimination methods.",
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Introduction",
+          "points": [
+            "Akhila at a fair spends ₹20 on Giant Wheel rides (₹3 each) and Hoopla games (₹4 each), playing Hoopla half as many times as she rides.",
+            "The situation is represented by the pair y = x/2 and 3x + 4y = 20, and the chapter studies ways to solve such pairs."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "3.2",
+          "title": "Graphical Method of Solution of a Pair of Linear Equations",
+          "points": [
+            "A pair with no solution is inconsistent; a pair with a solution is consistent; an equivalent pair with infinitely many common solutions is dependent, and a dependent pair is always consistent.",
+            "Lines intersecting in one point give a unique solution, parallel lines give no solution, coincident lines give infinitely many solutions.",
+            "Comparing a1/a2, b1/b2 and c1/c2 (Table 3.1) tells whether the lines intersect, coincide or are parallel, and the converse is also true.",
+            "Examples check consistency graphically (x + 3y = 6, 2x – 3y = 12 meet at (6, 0)) and solve Champa's pants-and-skirts problem graphically."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "3.3",
+          "title": "Algebraic Methods of Solving a Pair of Linear Equations",
+          "points": [
+            "The graphical method is inconvenient when the solution has non-integral coordinates, since such coordinates are easily misread.",
+            "Two algebraic methods are discussed: substitution and elimination."
+          ],
+          "subsections": [
+            {
+              "number": "3.3.1",
+              "title": "Substitution Method",
+              "points": [
+                "Step 1: express one variable in terms of the other from one equation.",
+                "Step 2: substitute it in the other equation to get an equation in one variable; a true statement with no variable means infinitely many solutions, a false one means the pair is inconsistent.",
+                "Step 3: substitute back to find the other variable.",
+                "Examples include Aftab's and his daughter's ages (42 and 12), pencils and erasers with infinitely many solutions, and two rails that never cross."
+              ]
+            },
+            {
+              "number": "3.3.2",
+              "title": "Elimination Method",
+              "points": [
+                "Multiply the equations by suitable non-zero constants to make the coefficients of one variable numerically equal.",
+                "Add or subtract to eliminate that variable; a true statement with no variable means infinitely many solutions, a false statement means no solution.",
+                "Solve the resulting one-variable equation and substitute in either original equation.",
+                "Examples find monthly incomes in ratio 9 : 7 (₹18,000 and ₹14,000), show 2x + 3y = 8 and 4x + 6y = 7 have no solution, and find the two-digit numbers 42 and 24."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "3.4",
+          "title": "Summary",
+          "points": [
+            "Summarises the graphical and algebraic methods and the coefficient-ratio conditions for consistency."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Inconsistent pair of linear equations",
+          "meaning": "A pair of linear equations which has no solution."
+        },
+        {
+          "term": "Consistent pair of linear equations",
+          "meaning": "A pair of linear equations in two variables which has a solution."
+        },
+        {
+          "term": "Dependent pair of linear equations",
+          "meaning": "A pair of equivalent linear equations, which has infinitely many distinct common solutions; it is always consistent."
+        },
+        {
+          "term": "Substitution method",
+          "meaning": "Solving a pair by expressing one variable in terms of the other and substituting it into the other equation."
+        },
+        {
+          "term": "Elimination method",
+          "meaning": "Solving a pair by eliminating one variable first to get a linear equation in one variable."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Intersecting lines",
+          "statement": "If a1/a2 ≠ b1/b2, the lines a1x + b1y + c1 = 0 and a2x + b2y + c2 = 0 intersect and the pair has exactly one (unique) solution; the pair is consistent."
+        },
+        {
+          "label": "Coincident lines",
+          "statement": "If a1/a2 = b1/b2 = c1/c2, the lines coincide and the pair has infinitely many solutions; it is dependent and consistent."
+        },
+        {
+          "label": "Parallel lines",
+          "statement": "If a1/a2 = b1/b2 ≠ c1/c2, the lines are parallel and the pair has no solution; it is inconsistent."
+        },
+        {
+          "label": "Converse",
+          "statement": "The converse of these ratio conditions is also true for any pair of lines."
+        },
+        {
+          "label": "Statement with no variable",
+          "statement": "If solving yields a true statement involving no variable the pair has infinitely many solutions; a false statement means no solution."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "EXERCISE 3.1",
+          "questions": 7
+        },
+        {
+          "name": "EXERCISE 3.2",
+          "questions": 3
+        },
+        {
+          "name": "EXERCISE 3.3",
+          "questions": 2
+        }
+      ],
+      "bookSummary": [
+        "A pair of linear equations in two variables can be represented, and solved, by the graphical method and the algebraic method.",
+        "Graphical method: the graph of a pair is two lines. If the lines intersect at a point, that point gives the unique solution and the pair is consistent; if they coincide there are infinitely many solutions and the pair is dependent (consistent); if they are parallel there is no solution and the pair is inconsistent.",
+        "Algebraic methods: substitution method and elimination method.",
+        "For a1x + b1y + c1 = 0 and a2x + b2y + c2 = 0: if a1/a2 ≠ b1/b2 the pair is consistent; if a1/a2 = b1/b2 ≠ c1/c2 it is inconsistent; if a1/a2 = b1/b2 = c1/c2 it is dependent and consistent.",
+        "Several situations represented by two equations that are not linear to start with can be altered so that they reduce to a pair of linear equations."
+      ],
+      "notes": "Fractions and the ratio symbols in Table 3.1 and the summary are garbled in the extraction and were reconstructed from the surrounding text."
+    },
+    {
+      "bookChapter": 4,
+      "title": "Quadratic Equations",
+      "pages": 11,
+      "author": null,
+      "form": null,
+      "overview": "The chapter introduces quadratic equations ax² + bx + c = 0 and how they arise from real-life situations, with a brief history of their solution. It finds roots by factorisation, and uses the quadratic formula and the discriminant b² – 4ac to decide whether a quadratic equation has two distinct, two equal or no real roots.",
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Introduction",
+          "points": [
+            "Equating a quadratic polynomial to zero gives a quadratic equation.",
+            "A prayer hall of carpet area 300 m² with length one more than twice the breadth gives 2x² + x – 300 = 0.",
+            "History: Babylonians, Euclid's geometrical approach, Brahmagupta's formula for ax² + bx = c, Sridharacharya's quadratic formula by completing the square, Al-Khwarizmi, and Abraham bar Hiyya Ha-Nasi's 'Liber embadorum' (C.E. 1145)."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "4.2",
+          "title": "Quadratic Equations",
+          "points": [
+            "A quadratic equation in x is of the form ax² + bx + c = 0 with a, b, c real and a ≠ 0; any p(x) = 0 with p of degree 2 is quadratic.",
+            "Writing terms in descending order of degree gives the standard form ax² + bx + c = 0.",
+            "Situations such as John and Jivanti's marbles and a cottage industry's toys are represented as quadratic equations.",
+            "An equation must often be simplified before deciding whether it is quadratic: one that looks quadratic may not be, and one that looks cubic may be."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "4.3",
+          "title": "Solution of a Quadratic Equation by Factorisation",
+          "points": [
+            "A real number α is a root of ax² + bx + c = 0 if aα² + bα + c = 0; the roots of the equation are the zeroes of the polynomial.",
+            "A quadratic equation has at most two roots.",
+            "Roots are found by splitting the middle term, factorising into two linear factors and equating each factor to zero.",
+            "A repeated factor gives a repeated root, as for 3x² – 2√6x + 2 = 0 with roots √(2/3), √(2/3).",
+            "The prayer hall has breadth 12 m and length 25 m, since a negative breadth is rejected."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "4.4",
+          "title": "Nature of Roots",
+          "points": [
+            "The roots of ax² + bx + c = 0 are x = (–b ± √(b² – 4ac))/2a.",
+            "b² – 4ac is called the discriminant, as it determines whether real roots exist.",
+            "b² – 4ac > 0 gives two distinct real roots; = 0 gives two equal real roots –b/2a; < 0 gives no real roots.",
+            "Example: a pole on the boundary of a circular park of diameter 13 m whose distances from two opposite gates differ by 7 m can be erected 5 m from gate B and 12 m from gate A."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "4.5",
+          "title": "Summary",
+          "points": [
+            "Restates the definition of a quadratic equation, its roots, factorisation, the quadratic formula and the nature of roots."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Quadratic equation",
+          "meaning": "An equation of the form ax² + bx + c = 0, where a, b, c are real numbers and a ≠ 0."
+        },
+        {
+          "term": "Standard form of a quadratic equation",
+          "meaning": "ax² + bx + c = 0, a ≠ 0, obtained by writing the terms of p(x) in descending order of their degrees."
+        },
+        {
+          "term": "Root of a quadratic equation",
+          "meaning": "A real number α such that aα² + bα + c = 0; x = α is also called a solution, and α satisfies the equation."
+        },
+        {
+          "term": "Discriminant",
+          "meaning": "b² – 4ac, which determines whether the quadratic equation ax² + bx + c = 0 has real roots or not."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Roots and zeroes",
+          "statement": "The zeroes of the quadratic polynomial ax² + bx + c and the roots of the quadratic equation ax² + bx + c = 0 are the same; any quadratic equation can have at most two roots."
+        },
+        {
+          "label": "Quadratic formula",
+          "statement": "The roots of ax² + bx + c = 0 are given by x = (–b ± √(b² – 4ac))/2a, provided b² – 4ac ≥ 0."
+        },
+        {
+          "label": "Nature of roots",
+          "statement": "A quadratic equation ax² + bx + c = 0 has (i) two distinct real roots if b² – 4ac > 0, (ii) two equal real roots if b² – 4ac = 0, (iii) no real roots if b² – 4ac < 0."
+        },
+        {
+          "label": "Equal roots",
+          "statement": "If b² – 4ac = 0, both roots of ax² + bx + c = 0 are –b/2a."
+        },
+        {
+          "label": "Brahmagupta (C.E. 598–665)",
+          "statement": "Gave an explicit formula to solve a quadratic equation of the form ax² + bx = c."
+        },
+        {
+          "label": "Sridharacharya (C.E. 1025)",
+          "statement": "Derived the formula now known as the quadratic formula, by the method of completing the square (as quoted by Bhaskara II)."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "EXERCISE 4.1",
+          "questions": 2
+        },
+        {
+          "name": "EXERCISE 4.2",
+          "questions": 6
+        },
+        {
+          "name": "EXERCISE 4.3",
+          "questions": 5
+        }
+      ],
+      "bookSummary": [
+        "A quadratic equation in the variable x is of the form ax² + bx + c = 0, where a, b, c are real numbers and a ≠ 0.",
+        "A real number α is said to be a root of the quadratic equation ax² + bx + c = 0 if aα² + bα + c = 0. The zeroes of the quadratic polynomial ax² + bx + c and the roots of the quadratic equation ax² + bx + c = 0 are the same.",
+        "If we can factorise ax² + bx + c, a ≠ 0, into a product of two linear factors, then the roots of the quadratic equation ax² + bx + c = 0 can be found by equating each factor to zero.",
+        "Quadratic formula: the roots of ax² + bx + c = 0 are given by (–b ± √(b² – 4ac))/2a, provided b² – 4ac ≥ 0.",
+        "A quadratic equation ax² + bx + c = 0 has (i) two distinct real roots if b² – 4ac > 0, (ii) two equal roots (i.e., coincident roots) if b² – 4ac = 0, and (iii) no real roots if b² – 4ac < 0."
+      ],
+      "notes": "Page 11 is a blank 'NOTE' page. Radicals and fractions are garbled in the extraction and were read from context."
+    },
+    {
+      "bookChapter": 5,
+      "title": "Arithmetic Progressions",
+      "pages": 24,
+      "author": null,
+      "form": null,
+      "overview": "The chapter studies patterns in which each term is obtained by adding a fixed number to the preceding term, called arithmetic progressions. It derives the nth term a + (n – 1)d and the sum of the first n terms, n/2[2a + (n – 1)d] or n/2(a + l), and applies them to daily-life problems such as salaries, savings, interest and production.",
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Introduction",
+          "points": [
+            "Many things in nature and daily life follow patterns, such as sunflower petals, honeycombs and pine cones.",
+            "Examples: Reena's salary rising by ₹500 a year, ladder rungs decreasing by 2 cm, a savings scheme multiplying by 5/4, numbers of unit squares 1², 2², 3², Shakila's money box, and pairs of rabbits 1, 1, 2, 3, 5, 8.",
+            "In some patterns terms are obtained by adding a fixed number, in others by multiplying; the chapter studies the adding pattern, its nth term and the sum of n terms."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "5.2",
+          "title": "Arithmetic Progressions",
+          "points": [
+            "Each number in a list is a term; a list in which each term except the first is obtained by adding a fixed number to the preceding term is an arithmetic progression (AP).",
+            "The fixed number is the common difference d, which can be positive, negative or zero.",
+            "The general form of an AP is a, a + d, a + 2d, a + 3d, ...; both a and d are needed to know an AP.",
+            "An AP with finitely many terms is a finite AP and has a last term; otherwise it is an infinite AP with no last term.",
+            "A list is an AP if a(k+1) – a(k) is the same for all k; d is found by subtracting the kth term from the (k + 1)th term even if the latter is smaller."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "5.3",
+          "title": "nth Term of an AP",
+          "points": [
+            "Reena's salary in the 15th year is 8000 + (15 – 1) × 500 = ₹15000, i.e. first salary + (n – 1) × annual increment.",
+            "The nth term (general term) of an AP is an = a + (n – 1)d; the last term am of an AP with m terms is sometimes denoted l.",
+            "Examples find a given term, which term equals a value, an AP from two terms, whether 301 is a term, and that there are 30 two-digit numbers divisible by 3.",
+            "The 11th term from the last can be found by counting terms or by reversing the AP.",
+            "Simple interest on ₹1000 at 8% forms an AP 80, 160, 240, ..., giving ₹2400 after 30 years."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "5.4",
+          "title": "Sum of First n Terms of an AP",
+          "points": [
+            "Gauss, at ten, summed 1 to 100 as 5050 by writing the sum forwards and backwards and adding.",
+            "The same technique gives S = n/2[2a + (n – 1)d], also S = n/2(a + an) and S = n/2(a + l), the last useful when first and last terms are known.",
+            "Shakila's daughter has ₹12600 by her 21st birthday.",
+            "Knowing any three of S, a, d and n gives the fourth; an = Sn – Sn–1.",
+            "Two values of n can give the same sum when a is positive and d negative, as terms cancel; the sum of the first n positive integers is n(n + 1)/2.",
+            "Example: TV production of 600 sets in year 3 and 700 in year 7 gives 550 in year 1, 775 in year 10 and 4375 in the first 7 years."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "5.5",
+          "title": "Summary",
+          "points": [
+            "Restates the definition and general form of an AP, the test for an AP, the nth term and the two sum formulas.",
+            "A note to the reader defines the arithmetic mean of a and c."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Term",
+          "meaning": "Each of the numbers in a list."
+        },
+        {
+          "term": "Arithmetic progression (AP)",
+          "meaning": "A list of numbers in which each term is obtained by adding a fixed number to the preceding term except the first term."
+        },
+        {
+          "term": "Common difference",
+          "meaning": "The fixed number d added to each term of an AP to get the next; it can be positive, negative or zero."
+        },
+        {
+          "term": "General form of an AP",
+          "meaning": "a, a + d, a + 2d, a + 3d, ..., where a is the first term and d the common difference."
+        },
+        {
+          "term": "Finite AP",
+          "meaning": "An AP with only a finite number of terms; it has a last term."
+        },
+        {
+          "term": "Infinite AP",
+          "meaning": "An AP that is not finite; it does not have a last term."
+        },
+        {
+          "term": "General term",
+          "meaning": "The nth term an of an AP."
+        },
+        {
+          "term": "Arithmetic mean",
+          "meaning": "If a, b, c are in AP, b = (a + c)/2 is called the arithmetic mean of a and c."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Common difference",
+          "statement": "For an AP a1, a2, ..., an: d = a(k+1) – a(k), where a(k+1) and a(k) are the (k + 1)th and kth terms."
+        },
+        {
+          "label": "nth term of an AP",
+          "statement": "The nth term an of the AP with first term a and common difference d is given by an = a + (n – 1)d."
+        },
+        {
+          "label": "Sum of first n terms",
+          "statement": "S = n/2 [2a + (n – 1)d]."
+        },
+        {
+          "label": "Sum with last term",
+          "statement": "S = n/2 (a + l), where l is the last term (the nth term) of the AP."
+        },
+        {
+          "label": "nth term from sums",
+          "statement": "The nth term of an AP is the difference of the sum to first n terms and the sum to first (n – 1) terms: an = Sn – Sn–1."
+        },
+        {
+          "label": "Sum of first n positive integers",
+          "statement": "Sn = n(n + 1)/2."
+        },
+        {
+          "label": "Simple interest",
+          "statement": "Simple Interest = (P × R × T)/100."
+        },
+        {
+          "label": "Arithmetic mean",
+          "statement": "If a, b, c are in AP, then b = (a + c)/2."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "EXERCISE 5.1",
+          "questions": 4
+        },
+        {
+          "name": "EXERCISE 5.2",
+          "questions": 20
+        },
+        {
+          "name": "EXERCISE 5.3",
+          "questions": 20
+        },
+        {
+          "name": "EXERCISE 5.4 (Optional)",
+          "questions": 5
+        }
+      ],
+      "bookSummary": [
+        "An arithmetic progression (AP) is a list of numbers in which each term is obtained by adding a fixed number d to the preceding term, except the first term. The fixed number d is called the common difference. The general form of an AP is a, a + d, a + 2d, a + 3d, ...",
+        "A given list of numbers a1, a2, a3, ... is an AP if the differences a2 – a1, a3 – a2, a4 – a3, ... give the same value, i.e., if a(k+1) – a(k) is the same for different values of k.",
+        "In an AP with first term a and common difference d, the nth term (or the general term) is given by an = a + (n – 1)d.",
+        "The sum of the first n terms of an AP is given by S = n/2 [2a + (n – 1)d].",
+        "If l is the last term of the finite AP, say the nth term, then the sum of all terms of the AP is given by S = n/2 (a + l)."
+      ],
+      "notes": "Exercise 5.4 is marked optional and not from the examination point of view. Fractions in the formulas are garbled in the extraction and were reconstructed from the worked examples."
+    },
+    {
+      "bookChapter": 6,
+      "title": "Triangles",
+      "pages": 26,
+      "author": null,
+      "form": null,
+      "overview": "The chapter studies similar figures, which have the same shape but not necessarily the same size, and the conditions for two polygons to be similar. It proves the Basic Proportionality (Thales) Theorem and its converse, and establishes the AAA/AA, SSS and SAS criteria for similarity of triangles, applying them to problems such as finding the length of a shadow.",
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Introduction",
+          "points": [
+            "Congruent figures have the same shape and size; similar figures have the same shape but not necessarily the same size.",
+            "The chapter discusses similarity of triangles and uses it to prove Pythagoras Theorem.",
+            "Heights of mountains and distances such as to the moon are found by indirect measurement based on similarity of figures."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "6.2",
+          "title": "Similar Figures",
+          "points": [
+            "All circles are similar, all squares are similar and all equilateral triangles are similar; congruent figures are similar but similar figures need not be congruent.",
+            "Photographs of different sizes from the same negative are similar: every line segment is enlarged in the same ratio and angles are unchanged.",
+            "Two polygons with the same number of sides are similar if corresponding angles are equal and corresponding sides are in the same ratio; this ratio is the scale factor (Representative Fraction).",
+            "Activity 1 shows a cardboard quadrilateral's shadow from a bulb is an enlargement similar to it.",
+            "A square and a rectangle (equal angles only) or a square and a rhombus (proportional sides only) are not similar, so neither condition alone is sufficient for polygons."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "6.3",
+          "title": "Similarity of Triangles",
+          "points": [
+            "Two triangles are similar if corresponding angles are equal and corresponding sides are in the same ratio.",
+            "Triangles with equal corresponding angles are equiangular; Thales (640–546 B.C.) stated that the ratio of corresponding sides of equiangular triangles is always the same.",
+            "Activity 2 leads to Theorem 6.1 (Basic Proportionality Theorem), proved using areas of triangles on the same base between the same parallels.",
+            "Activity 3 leads to its converse, Theorem 6.2.",
+            "Examples show AD/AB = AE/AC, a proportion in a trapezium, and that a triangle is isosceles."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "6.4",
+          "title": "Criteria for Similarity of Triangles",
+          "points": [
+            "Similarity is written △ABC ~ △DEF using the correct correspondence of vertices; '~' stands for 'is similar to'.",
+            "Activity 4 leads to Theorem 6.3, the AAA criterion; since two equal angles force the third, it can be stated as the AA criterion.",
+            "Activity 5 leads to Theorem 6.4, the SSS similarity criterion; for triangles one condition of similarity implies the other.",
+            "Activity 6 leads to Theorem 6.5, the SAS similarity criterion.",
+            "Examples include △POQ ~ △SOR for PQ || RS, finding an angle by SSS similarity, a girl's shadow of 1.6 m from a 3.6 m lamp-post, and proportional medians of similar triangles."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "6.5",
+          "title": "Summary",
+          "points": [
+            "Restates the definitions of similar figures and polygons, the Basic Proportionality Theorem and its converse, and the AAA, AA, SSS and SAS criteria.",
+            "A note to the reader states the RHS similarity criterion for right triangles."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Congruent figures",
+          "meaning": "Figures that have the same shape and the same size."
+        },
+        {
+          "term": "Similar figures",
+          "meaning": "Two figures having the same shape but not necessarily the same size."
+        },
+        {
+          "term": "Scale factor (Representative Fraction)",
+          "meaning": "The same ratio of the corresponding sides of similar polygons."
+        },
+        {
+          "term": "Equiangular triangles",
+          "meaning": "Triangles whose corresponding angles are equal."
+        },
+        {
+          "term": "Basic Proportionality Theorem (Thales Theorem)",
+          "meaning": "The theorem that a line parallel to one side of a triangle divides the other two sides in the same ratio."
+        },
+        {
+          "term": "~",
+          "meaning": "The symbol for 'is similar to', as in △ABC ~ △DEF."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Similar polygons",
+          "statement": "Two polygons of the same number of sides are similar, if (i) their corresponding angles are equal and (ii) their corresponding sides are in the same ratio (or proportion)."
+        },
+        {
+          "label": "Thales",
+          "statement": "The ratio of any two corresponding sides in two equiangular triangles is always the same."
+        },
+        {
+          "label": "Theorem 6.1 (Basic Proportionality Theorem)",
+          "statement": "If a line is drawn parallel to one side of a triangle to intersect the other two sides in distinct points, the other two sides are divided in the same ratio."
+        },
+        {
+          "label": "Theorem 6.2",
+          "statement": "If a line divides any two sides of a triangle in the same ratio, then the line is parallel to the third side."
+        },
+        {
+          "label": "Theorem 6.3 (AAA similarity criterion)",
+          "statement": "If in two triangles, corresponding angles are equal, then their corresponding sides are in the same ratio (or proportion) and hence the two triangles are similar."
+        },
+        {
+          "label": "AA similarity criterion",
+          "statement": "If two angles of one triangle are respectively equal to two angles of another triangle, then the two triangles are similar."
+        },
+        {
+          "label": "Theorem 6.4 (SSS similarity criterion)",
+          "statement": "If in two triangles, sides of one triangle are proportional to the sides of the other triangle, then their corresponding angles are equal and hence the two triangles are similar."
+        },
+        {
+          "label": "Theorem 6.5 (SAS similarity criterion)",
+          "statement": "If one angle of a triangle is equal to one angle of the other triangle and the sides including these angles are proportional, then the two triangles are similar."
+        },
+        {
+          "label": "RHS Similarity Criterion",
+          "statement": "If in two right triangles, hypotenuse and one side of one triangle are proportional to the hypotenuse and one side of the other triangle, then the two triangles are similar."
+        },
+        {
+          "label": "Transitivity",
+          "statement": "If one polygon is similar to a second and the second is similar to a third, then the first polygon is similar to the third."
+        }
+      ],
+      "activities": [
+        "Activity 1",
+        "Activity 2",
+        "Activity 3",
+        "Activity 4",
+        "Activity 5",
+        "Activity 6"
+      ],
+      "exercises": [
+        {
+          "name": "EXERCISE 6.1",
+          "questions": 3
+        },
+        {
+          "name": "EXERCISE 6.2",
+          "questions": 10
+        },
+        {
+          "name": "EXERCISE 6.3",
+          "questions": 16
+        }
+      ],
+      "bookSummary": [
+        "Two figures having the same shape but not necessarily the same size are called similar figures.",
+        "All the congruent figures are similar but the converse is not true.",
+        "Two polygons of the same number of sides are similar, if (i) their corresponding angles are equal and (ii) their corresponding sides are in the same ratio (i.e., proportion).",
+        "If a line is drawn parallel to one side of a triangle to intersect the other two sides in distinct points, then the other two sides are divided in the same ratio.",
+        "If a line divides any two sides of a triangle in the same ratio, then the line is parallel to the third side.",
+        "If in two triangles, corresponding angles are equal, then their corresponding sides are in the same ratio and hence the two triangles are similar (AAA similarity criterion).",
+        "If in two triangles, two angles of one triangle are respectively equal to the two angles of the other triangle, then the two triangles are similar (AA similarity criterion).",
+        "If in two triangles, corresponding sides are in the same ratio, then their corresponding angles are equal and hence the triangles are similar (SSS similarity criterion).",
+        "If one angle of a triangle is equal to one angle of another triangle and the sides including these angles are in the same ratio (proportional), then the triangles are similar (SAS similarity criterion)."
+      ],
+      "notes": "Angle and triangle symbols and primes on vertex names (A′, B′ ...) are lost in the extraction and were read from context. The introduction mentions a proof of Pythagoras Theorem, but no such section appears in this chapter's text."
+    },
+    {
+      "bookChapter": 7,
+      "title": "Coordinate Geometry",
+      "pages": 14,
+      "author": null,
+      "form": null,
+      "overview": "Coordinate geometry is presented as an algebraic tool for studying the geometry of figures. The chapter derives the distance formula from Pythagoras theorem and uses it to test for triangles, squares, collinearity and equidistant points, then derives the section formula for the point dividing a line segment internally in a given ratio, with the mid-point formula as a special case.",
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Introduction",
+          "points": [
+            "The x-coordinate (abscissa) is a point's distance from the y-axis and the y-coordinate (ordinate) its distance from the x-axis; points on the axes have the form (x, 0) and (0, y).",
+            "A plotting 'play' joins given points to form a picture.",
+            "Coordinate geometry helps study geometry using algebra and understand algebra with geometry, and is used in physics, engineering, navigation, seismology and art.",
+            "The chapter covers the distance between two points and the point dividing a segment in a given ratio."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "7.2",
+          "title": "Distance Formula",
+          "points": [
+            "A town B located 36 km east and 15 km north of town A motivates finding distances without measuring, using Pythagoras Theorem.",
+            "Distances between points on the same axis are differences of coordinates; for other points a right triangle is drawn.",
+            "The distance between P(x1, y1) and Q(x2, y2) is PQ = √[(x2 – x1)² + (y2 – y1)²], taking only the positive root; the distance from the origin is √(x² + y²).",
+            "Examples show three points form a right triangle, four points form a square, three students are seated in a line (collinear), and find points equidistant from two given points.",
+            "The points equidistant from A and B lie on the perpendicular bisector of AB."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "7.3",
+          "title": "Section Formula",
+          "points": [
+            "A relay tower P dividing AB in ratio 1 : 2 is located at (12, 5) using AA similarity.",
+            "The point dividing A(x1, y1) and B(x2, y2) internally in ratio m1 : m2 is ((m1x2 + m2x1)/(m1 + m2), (m1y2 + m2y1)/(m1 + m2)), known as the section formula.",
+            "For ratio k : 1 the point is ((kx2 + x1)/(k + 1), (ky2 + y1)/(k + 1)).",
+            "The mid-point divides a segment in ratio 1 : 1 and is ((x1 + x2)/2, (y1 + y2)/2).",
+            "Examples find a dividing point, the ratio in which a point or the y-axis divides a segment, points of trisection, and a vertex of a parallelogram using bisecting diagonals."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "7.4",
+          "title": "Summary",
+          "points": [
+            "Restates the distance formula, distance from the origin, section formula and mid-point formula.",
+            "A note to the reader explains that a point on line AB outside segment AB divides it externally, studied in higher classes."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "x-coordinate (abscissa)",
+          "meaning": "The distance of a point from the y-axis."
+        },
+        {
+          "term": "y-coordinate (ordinate)",
+          "meaning": "The distance of a point from the x-axis."
+        },
+        {
+          "term": "Distance formula",
+          "meaning": "PQ = √[(x2 – x1)² + (y2 – y1)²] for the distance between P(x1, y1) and Q(x2, y2)."
+        },
+        {
+          "term": "Section formula",
+          "meaning": "The formula for the coordinates of the point dividing the line segment joining two points internally in a given ratio."
+        },
+        {
+          "term": "Points of trisection",
+          "meaning": "Points dividing a line segment in three equal parts."
+        },
+        {
+          "term": "Collinear",
+          "meaning": "Points lying on one line, as when AB + BC = AC."
+        },
+        {
+          "term": "Divides externally",
+          "meaning": "When P lies on line AB outside the segment AB with PA : PB = m1 : m2."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Distance formula",
+          "statement": "The distance between P(x1, y1) and Q(x2, y2) is PQ = √[(x2 – x1)² + (y2 – y1)²]."
+        },
+        {
+          "label": "Distance from origin",
+          "statement": "The distance of a point P(x, y) from the origin O(0, 0) is OP = √(x² + y²)."
+        },
+        {
+          "label": "Section formula",
+          "statement": "The coordinates of P(x, y) dividing the segment joining A(x1, y1) and B(x2, y2) internally in the ratio m1 : m2 are ((m1x2 + m2x1)/(m1 + m2), (m1y2 + m2y1)/(m1 + m2))."
+        },
+        {
+          "label": "Ratio k : 1",
+          "statement": "If P divides AB in the ratio k : 1, its coordinates are ((kx2 + x1)/(k + 1), (ky2 + y1)/(k + 1))."
+        },
+        {
+          "label": "Mid-point formula",
+          "statement": "The mid-point of the segment joining P(x1, y1) and Q(x2, y2) is ((x1 + x2)/2, (y1 + y2)/2)."
+        },
+        {
+          "label": "Equidistant points",
+          "statement": "A point equidistant from A and B lies on the perpendicular bisector of AB."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "EXERCISE 7.1",
+          "questions": 10
+        },
+        {
+          "name": "EXERCISE 7.2",
+          "questions": 10
+        }
+      ],
+      "bookSummary": [
+        "The distance between P(x1, y1) and Q(x2, y2) is √[(x2 – x1)² + (y2 – y1)²].",
+        "The distance of a point P(x, y) from the origin is √(x² + y²).",
+        "The coordinates of the point P(x, y) which divides the line segment joining the points A(x1, y1) and B(x2, y2) internally in the ratio m1 : m2 are ((m1x2 + m2x1)/(m1 + m2), (m1y2 + m2y1)/(m1 + m2)).",
+        "The mid-point of the line segment joining the points P(x1, y1) and Q(x2, y2) is ((x1 + x2)/2, (y1 + y2)/2)."
+      ],
+      "notes": "Radicals, subscripts and fractions in the formulas are garbled in the extraction and were reconstructed from the derivations and examples."
+    },
+    {
+      "bookChapter": 8,
+      "title": "Introduction to Trigonometry",
+      "pages": 20,
+      "author": null,
+      "form": null,
+      "overview": "Trigonometry is introduced as the study of relationships between the sides and angles of a triangle. The chapter defines the six trigonometric ratios of an acute angle in a right triangle, shows they depend only on the angle, computes their values for 0°, 30°, 45°, 60° and 90°, and proves the trigonometric identities cos²A + sin²A = 1, 1 + tan²A = sec²A and cot²A + 1 = cosec²A.",
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Introduction",
+          "points": [
+            "Right triangles can be imagined in situations such as finding the height of Qutub Minar, the width of a river, or the altitude of a hot air balloon.",
+            "'Trigonometry' comes from the Greek 'tri' (three), 'gon' (sides) and 'metron' (measure); it studies relationships between sides and angles of a triangle.",
+            "The earliest known work on trigonometry was recorded in Egypt and Babylon, and early astronomers used it to find distances of stars and planets.",
+            "The chapter restricts itself to acute angles, and defines ratios for 0° and 90° as well as trigonometric identities."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "8.2",
+          "title": "Trigonometric Ratios",
+          "points": [
+            "In right triangle ABC, BC is the side opposite to angle A, AB the side adjacent to angle A, and AC the hypotenuse.",
+            "sin A = opposite/hypotenuse, cos A = adjacent/hypotenuse, tan A = opposite/adjacent; cosec A, sec A and cot A are their reciprocals; tan A = sin A/cos A and cot A = cos A/sin A.",
+            "History: Aryabhata's ardha-jya (A.D. 500) became jya, jiva, then sinus in Latin; Edmund Gunter first used 'sin', and Sir Jonas Moore first used 'cos' in 1674; Aryabhata called cosine kotijya.",
+            "sin A is an abbreviation, not a product of 'sin' and A; sin²A means (sin A)², while sin⁻¹A has a different meaning.",
+            "By similar triangles the trigonometric ratios of an angle do not vary with the lengths of the sides if the angle is the same.",
+            "Knowing one ratio, the others are found using Pythagoras theorem; sin A and cos A are always less than or equal to 1."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "8.3",
+          "title": "Trigonometric Ratios of Some Specific Angles",
+          "points": [
+            "Values of the trigonometric ratios are found for 0°, 30°, 45°, 60° and 90° and collected in Table 8.1.",
+            "As A increases from 0° to 90°, sin A increases from 0 to 1 and cos A decreases from 1 to 0.",
+            "If one side and any other part of a right triangle are known, the remaining sides and angles can be determined."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Trigonometric Ratios of 45°",
+              "points": [
+                "In a right triangle with a 45° angle, the two legs are equal (a) and the hypotenuse is √2a.",
+                "sin 45° = cos 45° = 1/√2, tan 45° = 1, cosec 45° = sec 45° = √2, cot 45° = 1."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Trigonometric Ratios of 30° and 60°",
+              "points": [
+                "An altitude AD of an equilateral triangle of side 2a gives a right triangle with sides a, √3a and 2a.",
+                "sin 30° = 1/2, cos 30° = √3/2, tan 30° = 1/√3; sin 60° = √3/2, cos 60° = 1/2, tan 60° = √3."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Trigonometric Ratios of 0° and 90°",
+              "points": [
+                "As A approaches 0°, BC approaches 0, so sin 0° = 0 and cos 0° = 1 are defined; tan 0° = 0, sec 0° = 1, and cot 0° and cosec 0° are not defined.",
+                "As A approaches 90°, sin 90° = 1 and cos 90° = 0 are defined."
+              ]
+            }
+          ]
+        },
+        {
+          "number": "8.4",
+          "title": "Trigonometric Identities",
+          "points": [
+            "An equation involving trigonometric ratios is a trigonometric identity if it is true for all values of the angle(s) involved.",
+            "Dividing AB² + BC² = AC² by AC² gives cos²A + sin²A = 1 for 0° ≤ A ≤ 90°.",
+            "Dividing by AB² gives 1 + tan²A = sec²A for 0° ≤ A < 90°; dividing by BC² gives cot²A + 1 = cosec²A for 0° < A ≤ 90°.",
+            "These identities express each ratio in terms of the others; examples express cos A, tan A and sec A in terms of sin A and prove further identities."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "8.5",
+          "title": "Summary",
+          "points": [
+            "Restates the definitions and relations of the trigonometric ratios, values for specific angles, bounds, and the three identities."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Trigonometry",
+          "meaning": "The study of relationships between the sides and angles of a triangle; from Greek 'tri' (three), 'gon' (sides) and 'metron' (measure)."
+        },
+        {
+          "term": "Trigonometric ratios",
+          "meaning": "Ratios of the sides of a right triangle with respect to its acute angles."
+        },
+        {
+          "term": "Side opposite to angle A",
+          "meaning": "The side that faces angle A (BC in right triangle ABC)."
+        },
+        {
+          "term": "Side adjacent to angle A",
+          "meaning": "The side, other than the hypotenuse, that is a part of angle A (AB in right triangle ABC)."
+        },
+        {
+          "term": "sine, cosine, tangent",
+          "meaning": "sin A = side opposite/hypotenuse, cos A = side adjacent/hypotenuse, tan A = side opposite/side adjacent."
+        },
+        {
+          "term": "cosecant, secant, cotangent",
+          "meaning": "cosec A = 1/sin A, sec A = 1/cos A, cot A = 1/tan A."
+        },
+        {
+          "term": "Identity",
+          "meaning": "An equation that is true for all values of the variables involved."
+        },
+        {
+          "term": "Trigonometric identity",
+          "meaning": "An equation involving trigonometric ratios of an angle that is true for all values of the angle(s) involved."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Quotient relations",
+          "statement": "tan A = sin A/cos A and cot A = cos A/sin A."
+        },
+        {
+          "label": "Invariance of ratios",
+          "statement": "The values of the trigonometric ratios of an angle do not vary with the lengths of the sides of the triangle, if the angle remains the same."
+        },
+        {
+          "label": "Ratios of 0°",
+          "statement": "sin 0° = 0, cos 0° = 1, tan 0° = 0, sec 0° = 1; cosec 0° and cot 0° are not defined."
+        },
+        {
+          "label": "Ratios of 30°",
+          "statement": "sin 30° = 1/2, cos 30° = √3/2, tan 30° = 1/√3, cosec 30° = 2, sec 30° = 2/√3, cot 30° = √3."
+        },
+        {
+          "label": "Ratios of 45°",
+          "statement": "sin 45° = 1/√2, cos 45° = 1/√2, tan 45° = 1, cosec 45° = √2, sec 45° = √2, cot 45° = 1."
+        },
+        {
+          "label": "Ratios of 60°",
+          "statement": "sin 60° = √3/2, cos 60° = 1/2, tan 60° = √3, cosec 60° = 2/√3, sec 60° = 2, cot 60° = 1/√3."
+        },
+        {
+          "label": "Ratios of 90°",
+          "statement": "sin 90° = 1, cos 90° = 0, cosec 90° = 1, cot 90° = 0; tan 90° and sec 90° are not defined."
+        },
+        {
+          "label": "Bounds",
+          "statement": "The value of sin A or cos A never exceeds 1, whereas sec A (0° ≤ A < 90°) or cosec A (0° < A ≤ 90°) is always greater than or equal to 1."
+        },
+        {
+          "label": "Identity 1",
+          "statement": "cos²A + sin²A = 1, for 0° ≤ A ≤ 90°."
+        },
+        {
+          "label": "Identity 2",
+          "statement": "1 + tan²A = sec²A, for 0° ≤ A < 90°."
+        },
+        {
+          "label": "Identity 3",
+          "statement": "cot²A + 1 = cosec²A, for 0° < A ≤ 90°."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "EXERCISE 8.1",
+          "questions": 11
+        },
+        {
+          "name": "EXERCISE 8.2",
+          "questions": 4
+        },
+        {
+          "name": "EXERCISE 8.3",
+          "questions": 4
+        }
+      ],
+      "bookSummary": [
+        "In a right triangle ABC, right-angled at B, sin A = side opposite to angle A / hypotenuse, cos A = side adjacent to angle A / hypotenuse, tan A = side opposite to angle A / side adjacent to angle A.",
+        "cosec A = 1/sin A; sec A = 1/cos A; tan A = 1/cot A, tan A = sin A/cos A.",
+        "If one of the trigonometric ratios of an acute angle is known, the remaining trigonometric ratios of the angle can be easily determined.",
+        "The values of trigonometric ratios for angles 0°, 30°, 45°, 60° and 90°.",
+        "The value of sin A or cos A never exceeds 1, whereas the value of sec A (0° ≤ A < 90°) or cosec A (0° < A ≤ 90°) is always greater than or equal to 1.",
+        "sin²A + cos²A = 1, sec²A – tan²A = 1 for 0° ≤ A < 90°, cosec²A = 1 + cot²A for 0° < A ≤ 90°."
+      ],
+      "notes": "The chapter opens with a quotation from J.F. Herbart (1890). Table 8.1 and the fractions and radicals throughout are garbled in the extraction; values were reconstructed from the derivations in the text. The summary's second point is partly garbled."
+    },
+    {
+      "bookChapter": 9,
+      "title": "Some Applications of Trigonometry",
+      "pages": 11,
+      "author": null,
+      "form": null,
+      "overview": "The chapter shows how trigonometric ratios are used to find heights and distances without measuring them directly. It defines the line of sight, the angle of elevation and the angle of depression, and works through problems on towers, ladders, chimneys, flagstaffs, shadows, buildings and the width of a river.",
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Heights and Distances",
+          "points": [
+            "The line of sight is the line from the observer's eye to the point viewed.",
+            "The angle of elevation is the angle between the line of sight and the horizontal when the point is above the horizontal level (raising the head).",
+            "The angle of depression is the angle between the line of sight and the horizontal when the point is below the horizontal level (lowering the head).",
+            "To find the height of a minar one needs the distance from its foot, the angle of elevation and the observer's height, and uses tan A or cot A.",
+            "Examples: a tower of height 15√3 m; a ladder of 4.28 m placed 2.14 m from a pole; a chimney 30 m high; a flagstaff of 7.32 m; a tower of 20√3 m from shadows at 30° and 60°; a multi-storeyed building of 4(3 + √3) m; and a river 3(√3 + 1) m wide."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "9.2",
+          "title": "Summary",
+          "points": [
+            "Restates the definitions of line of sight, angle of elevation and angle of depression.",
+            "Heights, lengths and distances between distant objects can be determined with trigonometric ratios."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Line of sight",
+          "meaning": "The line drawn from the eye of an observer to the point in the object viewed by the observer."
+        },
+        {
+          "term": "Angle of elevation",
+          "meaning": "The angle formed by the line of sight with the horizontal when the point being viewed is above the horizontal level, i.e., when we raise our head to look at the object."
+        },
+        {
+          "term": "Angle of depression",
+          "meaning": "The angle formed by the line of sight with the horizontal when the point being viewed is below the horizontal level, i.e., when we lower our head to look at the point."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Heights and distances",
+          "statement": "The height or length of an object or the distance between two distant objects can be determined with the help of trigonometric ratios."
+        },
+        {
+          "label": "Height of a minar",
+          "statement": "Height CD = BC + AE, where BC is found from tan A = BC/AB (or cot A = AB/BC) and AE is the observer's height."
+        },
+        {
+          "label": "Alternate angles",
+          "statement": "The angle of depression from a point equals the angle of elevation of that point from the object, since they are alternate angles between parallel horizontal lines."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "EXERCISE 9.1",
+          "questions": 15
+        }
+      ],
+      "bookSummary": [
+        "The line of sight is the line drawn from the eye of an observer to the point in the object viewed by the observer.",
+        "The angle of elevation of an object viewed is the angle formed by the line of sight with the horizontal when it is above the horizontal level, i.e., the case when we raise our head to look at the object.",
+        "The angle of depression of an object viewed is the angle formed by the line of sight with the horizontal when it is below the horizontal level, i.e., the case when we lower our head to look at the object.",
+        "The height or length of an object or the distance between two distant objects can be determined with the help of trigonometric ratios."
+      ],
+      "notes": "Radicals in the worked answers are garbled in the extraction and were reconstructed from the working."
+    },
+    {
+      "bookChapter": 10,
+      "title": "Circles",
+      "pages": 10,
+      "author": null,
+      "form": null,
+      "overview": "The chapter considers the positions of a line relative to a circle and studies tangents: their existence, that there is exactly one tangent at a point on a circle, and that there are none from a point inside and exactly two from a point outside. It proves that the tangent is perpendicular to the radius through the point of contact and that the two tangents from an external point are equal in length.",
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Introduction",
+          "points": [
+            "A circle is the collection of all points in a plane at a constant distance (radius) from a fixed point (centre).",
+            "A line and a circle may have no common point (non-intersecting line), two common points (secant) or exactly one common point (tangent).",
+            "The rope on either side of a pulley over a well is like a tangent to the circle representing the pulley."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "10.2",
+          "title": "Tangent to a Circle",
+          "points": [
+            "A tangent to a circle is a line that intersects the circle at only one point; the word comes from Latin 'tangere' (to touch), introduced by Thomas Fineke in 1583.",
+            "Activity 1 with a rotating wire shows there is only one tangent at a point of the circle, and that a tangent is a special case of a secant when the end points of its chord coincide.",
+            "Activity 2 shows there cannot be more than two tangents parallel to a given secant.",
+            "The common point is the point of contact; a wheel moves along a line tangent to it, with the radius at the contact point at right angles to the ground.",
+            "Theorem 10.1 is proved by showing OP is the shortest distance from O to the tangent; the line containing that radius is called the normal."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "10.3",
+          "title": "Number of Tangents from a Point on a Circle",
+          "points": [
+            "Activity 3 shows there is no tangent through a point inside a circle, exactly one through a point on it, and exactly two through a point outside it.",
+            "The length of the tangent from an external point P is the length of the segment from P to the point of contact.",
+            "Theorem 10.2 proves the two tangent lengths from an external point are equal, using RHS congruence (or Pythagoras Theorem); the centre lies on the bisector of the angle between the tangents.",
+            "Examples: the chord of the larger of two concentric circles touching the smaller is bisected at the point of contact; ∠PTQ = 2∠OPQ; and the tangent length TP = 20/3 cm for a chord of 8 cm in a circle of radius 5 cm."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "10.4",
+          "title": "Summary",
+          "points": [
+            "Restates the meaning of a tangent and the two theorems on tangents."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Circle",
+          "meaning": "A collection of all points in a plane which are at a constant distance (radius) from a fixed point (centre)."
+        },
+        {
+          "term": "Non-intersecting line",
+          "meaning": "A line that has no common point with the circle."
+        },
+        {
+          "term": "Secant",
+          "meaning": "A line that has two common points with a circle."
+        },
+        {
+          "term": "Tangent",
+          "meaning": "A line that intersects the circle at only one point; from the Latin 'tangere', to touch."
+        },
+        {
+          "term": "Point of contact",
+          "meaning": "The common point of the tangent and the circle; the tangent is said to touch the circle there."
+        },
+        {
+          "term": "Normal",
+          "meaning": "The line containing the radius through the point of contact."
+        },
+        {
+          "term": "Length of the tangent",
+          "meaning": "The length of the segment of the tangent from the external point P to the point of contact with the circle."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Tangent as limiting secant",
+          "statement": "The tangent to a circle is a special case of the secant, when the two end points of its corresponding chord coincide."
+        },
+        {
+          "label": "Theorem 10.1",
+          "statement": "The tangent at any point of a circle is perpendicular to the radius through the point of contact."
+        },
+        {
+          "label": "Uniqueness of tangent",
+          "statement": "At any point on a circle there can be one and only one tangent."
+        },
+        {
+          "label": "Number of tangents from a point",
+          "statement": "There is no tangent through a point inside a circle, one and only one through a point on the circle, and exactly two through a point outside the circle."
+        },
+        {
+          "label": "Theorem 10.2",
+          "statement": "The lengths of tangents drawn from an external point to a circle are equal."
+        },
+        {
+          "label": "Angle bisector",
+          "statement": "The centre lies on the bisector of the angle between the two tangents from an external point."
+        }
+      ],
+      "activities": [
+        "Activity 1",
+        "Activity 2",
+        "Activity 3"
+      ],
+      "exercises": [
+        {
+          "name": "EXERCISE 10.1",
+          "questions": 4
+        },
+        {
+          "name": "EXERCISE 10.2",
+          "questions": 13
+        }
+      ],
+      "bookSummary": [
+        "The meaning of a tangent to a circle.",
+        "The tangent to a circle is perpendicular to the radius through the point of contact.",
+        "The lengths of the two tangents from an external point to a circle are equal."
+      ],
+      "notes": null
+    },
+    {
+      "bookChapter": 11,
+      "title": "Areas Related to Circles",
+      "pages": 7,
+      "author": null,
+      "form": null,
+      "overview": "The chapter recalls sectors and segments of a circle, distinguishing minor and major ones, and uses the unitary method to derive the area of a sector and the length of its arc for an angle θ. The area of a segment is found as the area of the sector minus the area of the corresponding triangle, with worked examples and practical problems.",
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Areas of Sector and Segment of a Circle",
+          "points": [
+            "A sector is the part of the circular region enclosed by two radii and the corresponding arc; a segment is the part enclosed between a chord and the corresponding arc.",
+            "Each has a minor and a major part; the angle of the major sector is 360° – ∠AOB; 'sector' and 'segment' mean the minor ones unless stated otherwise.",
+            "Treating the circle as a sector of angle 360° and using the unitary method, the area of a sector of angle θ is (θ/360) × πr² and the length of its arc is (θ/360) × 2πr.",
+            "Area of segment APB = area of sector OAPB – area of △OAB; major sector and major segment areas are πr² minus the minor ones.",
+            "Examples find a sector of radius 4 cm and angle 30° (4.19 cm², major sector 46.1 cm²) and a segment with radius 21 cm and angle 120°, using trigonometry for the triangle."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "11.2",
+          "title": "Summary",
+          "points": [
+            "Restates the formulas for arc length, sector area and segment area."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Sector",
+          "meaning": "The portion of the circular region enclosed by two radii and the corresponding arc."
+        },
+        {
+          "term": "Segment",
+          "meaning": "The portion of the circular region enclosed between a chord and the corresponding arc."
+        },
+        {
+          "term": "Angle of the sector",
+          "meaning": "The angle ∠AOB between the two radii bounding the sector."
+        },
+        {
+          "term": "Minor and major sector",
+          "meaning": "The smaller sector OAPB and the larger sector OAQB, whose angle is 360° – ∠AOB."
+        },
+        {
+          "term": "Minor and major segment",
+          "meaning": "The smaller segment APB and the larger segment AQB formed by the same chord AB."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Area of a sector",
+          "statement": "Area of the sector of angle θ = (θ/360) × πr², where r is the radius of the circle and θ the angle of the sector in degrees."
+        },
+        {
+          "label": "Length of an arc",
+          "statement": "Length of an arc of a sector of angle θ = (θ/360) × 2πr."
+        },
+        {
+          "label": "Area of a segment",
+          "statement": "Area of the segment APB = Area of the sector OAPB – Area of △OAB = (θ/360) × πr² – area of △OAB."
+        },
+        {
+          "label": "Major sector and segment",
+          "statement": "Area of the major sector OAQB = πr² – Area of the minor sector OAPB, and Area of major segment AQB = πr² – Area of the minor segment APB."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "EXERCISE 11.1",
+          "questions": 14
+        }
+      ],
+      "bookSummary": [
+        "Length of an arc of a sector of a circle with radius r and angle with degree measure θ is (θ/360) × 2πr.",
+        "Area of a sector of a circle with radius r and angle with degree measure θ is (θ/360) × πr².",
+        "Area of segment of a circle = Area of the corresponding sector – Area of the corresponding triangle."
+      ],
+      "notes": "The symbols π and θ are garbled in the extraction ('p', 'q') and were read from context."
+    },
+    {
+      "bookChapter": 12,
+      "title": "Surface Areas and Volumes",
+      "pages": 10,
+      "author": null,
+      "form": null,
+      "overview": "The chapter finds the surface areas and volumes of solids made by combining two of the basic solids: cuboid, cone, cylinder, sphere and hemisphere. It shows that the surface area of a combination is the sum of the visible surfaces of the parts, not of their total surface areas, whereas the volume is the sum of the volumes of the constituents.",
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Introduction",
+          "points": [
+            "Class IX covered surface areas and volumes of cuboids, cones, cylinders and spheres.",
+            "Many everyday solids combine basic solids: a truck's container is a cylinder with two hemispherical ends, and a test tube is a cylinder and a hemisphere.",
+            "The chapter shows how to find surface areas and volumes of such objects."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "12.2",
+          "title": "Surface Area of a Combination of Solids",
+          "points": [
+            "A new problem is broken into smaller problems solved earlier.",
+            "TSA of a cylinder with two hemispherical ends = CSA of one hemisphere + CSA of cylinder + CSA of other hemisphere (TSA: Total Surface Area; CSA: Curved Surface Area).",
+            "A toy made of a cone and a hemisphere has total surface area = CSA of hemisphere + CSA of cone; it is not the sum of their total surface areas.",
+            "Examples: Rasheed's top (39.6 cm²), a cube with a hemisphere on top (163.86 cm²), a toy rocket painted in two colours, and Mayank's bird-bath (3.3 m²)."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "12.3",
+          "title": "Volume of a Combination of Solids",
+          "points": [
+            "Unlike surface area, part of which disappears on joining, the volume of a combined solid is the sum of the volumes of its constituents.",
+            "Shanta's shed (a cuboid surmounted by a half cylinder) holds 1128.75 m³, leaving 827.15 m³ of air after machinery and workers.",
+            "A juice glass with a hemispherical raised bottom has apparent capacity 196.25 cm³ but actual capacity 163.54 cm³.",
+            "A toy of a hemisphere and cone has volume 25.12 cm³, and a circumscribing cylinder exceeds it by 25.12 cm³."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "12.4",
+          "title": "Summary",
+          "points": [
+            "Restates that the chapter covers surface areas and volumes of objects combining two basic solids."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "TSA",
+          "meaning": "Total Surface Area."
+        },
+        {
+          "term": "CSA",
+          "meaning": "Curved Surface Area."
+        },
+        {
+          "term": "Apparent capacity",
+          "meaning": "The capacity of a glass computed as a full cylinder, ignoring the raised hemispherical portion at its base."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Surface area of a combination",
+          "statement": "The total surface area of a solid formed by joining basic solids is the sum of the curved surface areas of the parts that remain visible, e.g. TSA of a cylinder with hemispherical ends = CSA of one hemisphere + CSA of cylinder + CSA of other hemisphere."
+        },
+        {
+          "label": "Cone on hemisphere",
+          "statement": "Total surface area of the toy = CSA of hemisphere + CSA of cone."
+        },
+        {
+          "label": "Volume of a combination",
+          "statement": "The volume of the solid formed by joining two basic solids is the sum of the volumes of the constituents."
+        },
+        {
+          "label": "Formulas used",
+          "statement": "CSA of hemisphere = 2πr², CSA of cone = πrl with l = √(r² + h²), CSA of cylinder = 2πrh, TSA of cube = 6 × (edge)², volume of cylinder = πr²h, volume of hemisphere = (2/3)πr³, volume of cone = (1/3)πr²h."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "EXERCISE 12.1",
+          "questions": 9
+        },
+        {
+          "name": "EXERCISE 12.2",
+          "questions": 8
+        }
+      ],
+      "bookSummary": [
+        "To determine the surface area of an object formed by combining any two of the basic solids, namely, cuboid, cone, cylinder, sphere and hemisphere.",
+        "To find the volume of objects formed by combining any two of a cuboid, cone, cylinder, sphere and hemisphere."
+      ],
+      "notes": "The number of the first question of Exercise 12.2 is lost in the extraction; it has 8 questions. Symbols π and primes are garbled and were read from context."
+    },
+    {
+      "bookChapter": 13,
+      "title": "Statistics",
+      "pages": 31,
+      "author": null,
+      "form": null,
+      "overview": "The chapter extends the measures of central tendency — mean, mode and median — from ungrouped to grouped data. It finds the mean by the direct, assumed mean and step-deviation methods, the mode through the modal class, and the median through cumulative frequency distributions and the median class, and discusses which measure suits which situation.",
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Introduction",
+          "points": [
+            "Class IX covered grouped and ungrouped frequency distributions, bar graphs, histograms, frequency polygons, and mean, median and mode of ungrouped data.",
+            "This chapter extends mean, median and mode to grouped data and discusses cumulative frequency and cumulative frequency distributions."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "13.2",
+          "title": "Mean of Grouped Data",
+          "points": [
+            "The mean of observations x1, ..., xn with frequencies f1, ..., fn is Σfixi / Σfi, where Σ (capital sigma) means summation.",
+            "For grouped data each class is represented by its class mark (mid-point), (upper limit + lower limit)/2, assuming frequencies are centred at mid-points; an observation on an upper class limit goes to the next class.",
+            "Direct Method: x̄ = Σfixi/Σfi; the grouped mean (62) is approximate while the ungrouped mean (59.3) is exact.",
+            "Assumed Mean Method: choose a, find di = xi – a, and x̄ = a + Σfidi/Σfi; the mean does not depend on the choice of a (Activity 1).",
+            "Step-deviation method: ui = (xi – a)/h, x̄ = a + h × Σfiui/Σfi; convenient when all di have a common factor, and usable with unequal class sizes.",
+            "All three methods give the same mean; examples find the mean percentage of female teachers (39.71) and mean wickets taken by bowlers (152.89); Activity 2 has groups collect data and find its mean."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "13.3",
+          "title": "Mode of Grouped Data",
+          "points": [
+            "The mode is the value with the maximum frequency; data with more than one such value is multimodal, but only single-mode problems are considered.",
+            "In grouped data the class with the maximum frequency is the modal class, and Mode = l + [(f1 – f0)/(2f1 – f0 – f2)] × h.",
+            "Examples: the modal family size is 3.286; the modal marks 52 are compared with the mean marks 62.",
+            "Whether the mean or the mode is needed depends on the situation; Activity 3 asks groups to find and interpret the mode of their data."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "13.4",
+          "title": "Median of Grouped Data",
+          "points": [
+            "The median is the middle-most observation: the (n + 1)/2th observation if n is odd, and the average of the n/2th and (n/2 + 1)th observations if n is even.",
+            "A cumulative frequency column gives a cumulative frequency table; the median marks 28.5 means about 50% scored less and 50% more.",
+            "Cumulative frequency distributions can be of the less than type (using upper class limits) or the more than type (using lower class limits).",
+            "The median class is the class whose cumulative frequency is greater than and nearest to n/2, and Median = l + [(n/2 – cf)/f] × h.",
+            "Examples find a median of 66.4 marks, a median height of 149.03 cm from a less-than distribution, and missing frequencies given the median.",
+            "The mean uses all observations and allows comparison but is affected by extreme values; the median suits a 'typical' observation; the mode suits the most frequent value; empirically 3 Median = Mode + 2 Mean."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "13.5",
+          "title": "Summary",
+          "points": [
+            "Restates the three methods for the mean, the mode formula, cumulative frequency and the median formula.",
+            "A note to the reader says class intervals must be continuous before applying the mode and median formulae or constructing an ogive."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Measures of central tendency",
+          "meaning": "Numerical representatives of data, namely mean, median and mode."
+        },
+        {
+          "term": "Mean",
+          "meaning": "The sum of the values of all the observations divided by the total number of observations."
+        },
+        {
+          "term": "Class mark",
+          "meaning": "The mid-point of a class, found as the average of its upper and lower class limits."
+        },
+        {
+          "term": "Assumed mean",
+          "meaning": "One of the xi's chosen as 'a' to reduce calculation, preferably one in the centre."
+        },
+        {
+          "term": "Deviation",
+          "meaning": "di = xi – a, the difference between a and each xi."
+        },
+        {
+          "term": "Mode",
+          "meaning": "The value among the observations which occurs most often, i.e., the value with the maximum frequency."
+        },
+        {
+          "term": "Multimodal",
+          "meaning": "Data in which more than one value has the same maximum frequency."
+        },
+        {
+          "term": "Modal class",
+          "meaning": "In grouped data, the class with the maximum frequency."
+        },
+        {
+          "term": "Median",
+          "meaning": "A measure of central tendency which gives the value of the middle-most observation in the data."
+        },
+        {
+          "term": "Cumulative frequency",
+          "meaning": "The frequency obtained by adding the frequencies of all the classes preceding the given class."
+        },
+        {
+          "term": "Cumulative frequency distribution of the less than type",
+          "meaning": "A distribution giving the number of observations less than each upper class limit."
+        },
+        {
+          "term": "Cumulative frequency distribution of the more than type",
+          "meaning": "A distribution giving the number of observations more than or equal to each lower class limit."
+        },
+        {
+          "term": "Median class",
+          "meaning": "The class whose cumulative frequency is greater than (and nearest to) n/2."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Mean of frequency data",
+          "statement": "x̄ = Σfixi / Σfi."
+        },
+        {
+          "label": "Class mark",
+          "statement": "Class mark = (Upper class limit + Lower class limit)/2."
+        },
+        {
+          "label": "Direct method",
+          "statement": "x̄ = Σfixi / Σfi, with xi the class marks."
+        },
+        {
+          "label": "Assumed mean method",
+          "statement": "x̄ = a + Σfidi / Σfi, where di = xi – a."
+        },
+        {
+          "label": "Step-deviation method",
+          "statement": "x̄ = a + h × (Σfiui / Σfi), where ui = (xi – a)/h."
+        },
+        {
+          "label": "Mode of grouped data",
+          "statement": "Mode = l + [(f1 – f0)/(2f1 – f0 – f2)] × h, where l = lower limit of the modal class, h = class size, f1 = frequency of the modal class, f0 = frequency of the preceding class, f2 = frequency of the succeeding class."
+        },
+        {
+          "label": "Median of ungrouped data",
+          "statement": "If n is odd the median is the ((n + 1)/2)th observation; if n is even it is the average of the (n/2)th and (n/2 + 1)th observations."
+        },
+        {
+          "label": "Median of grouped data",
+          "statement": "Median = l + [(n/2 – cf)/f] × h, where l = lower limit of median class, n = number of observations, cf = cumulative frequency of class preceding the median class, f = frequency of median class, h = class size."
+        },
+        {
+          "label": "Empirical relationship",
+          "statement": "3 Median = Mode + 2 Mean."
+        }
+      ],
+      "activities": [
+        "Activity 1",
+        "Activity 2",
+        "Activity 3"
+      ],
+      "exercises": [
+        {
+          "name": "EXERCISE 13.1",
+          "questions": 9
+        },
+        {
+          "name": "EXERCISE 13.2",
+          "questions": 6
+        },
+        {
+          "name": "EXERCISE 13.3",
+          "questions": 7
+        }
+      ],
+      "bookSummary": [
+        "The mean for grouped data can be found by (i) the direct method: x̄ = Σfixi/Σfi, (ii) the assumed mean method: x̄ = a + Σfidi/Σfi, (iii) the step deviation method: x̄ = a + (Σfiui/Σfi) × h, with the assumption that the frequency of a class is centred at its mid-point, called its class mark.",
+        "The mode for grouped data can be found by using the formula Mode = l + [(f1 – f0)/(2f1 – f0 – f2)] × h, where symbols have their usual meanings.",
+        "The cumulative frequency of a class is the frequency obtained by adding the frequencies of all the classes preceding the given class.",
+        "The median for grouped data is formed by using the formula Median = l + [(n/2 – cf)/f] × h, where symbols have their usual meanings."
+      ],
+      "notes": "The introduction and the note to the reader mention cumulative frequency curves (ogives), but this edition's chapter text has no section on drawing them. Formula fractions are garbled in the extraction and were reconstructed from the worked examples."
+    },
+    {
+      "bookChapter": 14,
+      "title": "Probability",
+      "pages": 16,
+      "author": null,
+      "form": null,
+      "overview": "The chapter introduces the theoretical (classical) probability of an event, defined as the number of favourable outcomes divided by the number of all possible outcomes, assuming equally likely outcomes. It covers elementary, complementary, impossible and sure events, shows that probability lies between 0 and 1, and applies these ideas to coins, dice, cards, marbles and, informally, to lengths and areas.",
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "Probability — A Theoretical Approach",
+          "points": [
+            "A fair (unbiased) coin tossed at random has equally likely outcomes head and tail; a fair die has equally likely outcomes 1 to 6.",
+            "Not all experiments have equally likely outcomes (4 red balls and 1 blue ball), but the chapter assumes they do.",
+            "Experimental (empirical) probability needs many repetitions, which may be expensive or unfeasible, e.g. satellite launches or earthquakes; assumptions allow exact theoretical probability.",
+            "Theoretical (classical) probability P(E) = favourable outcomes / all possible outcomes, a definition given by Pierre Simon Laplace in 1795; J. Cardan's The Book on Games of Chance (16th century) began the subject.",
+            "An elementary event has one outcome, and the probabilities of all elementary events sum to 1; P(not E) = 1 – P(E) for complementary events.",
+            "An impossible event has probability 0, a sure (certain) event has probability 1, and 0 ≤ P(E) ≤ 1; a deck of 52 cards has 4 suits of 13, with kings, queens and jacks as face cards.",
+            "Examples cover coins, balls, dice, cards, a tennis match, birthdays, marbles, two coins, shirts and two dice (36 outcomes); probability over lengths and areas (musical chairs, a helicopter crash in a lake) is not from the examination point of view."
+          ],
+          "subsections": []
+        },
+        {
+          "number": "14.2",
+          "title": "Summary",
+          "points": [
+            "Restates the definition of theoretical probability, sure and impossible events, the range of P(E), elementary events and complementary events.",
+            "A note to the reader contrasts experimental and theoretical probability, which become nearly the same as the number of trials increases."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Unbiased (fair) coin",
+          "meaning": "A coin that is symmetrical, so there is no reason for it to come down more often on one side than the other."
+        },
+        {
+          "term": "Random toss",
+          "meaning": "The coin is allowed to fall freely without any bias or interference."
+        },
+        {
+          "term": "Equally likely outcomes",
+          "meaning": "Outcomes each of which is as likely to occur as the other."
+        },
+        {
+          "term": "Experimental or empirical probability",
+          "meaning": "P(E) = Number of trials in which the event happened / Total number of trials."
+        },
+        {
+          "term": "Theoretical (classical) probability",
+          "meaning": "P(E) = Number of outcomes favourable to E / Number of all possible outcomes of the experiment, assuming equally likely outcomes."
+        },
+        {
+          "term": "Elementary event",
+          "meaning": "An event having only one outcome of the experiment."
+        },
+        {
+          "term": "Complement of an event",
+          "meaning": "The event Ē, representing 'not E'; E and Ē are complementary events."
+        },
+        {
+          "term": "Impossible event",
+          "meaning": "An event which is impossible to occur; its probability is 0."
+        },
+        {
+          "term": "Sure event (certain event)",
+          "meaning": "An event which is sure to occur; its probability is 1."
+        },
+        {
+          "term": "Face cards",
+          "meaning": "Kings, queens and jacks in a deck of playing cards."
+        },
+        {
+          "term": "At random",
+          "meaning": "A short way of saying that all outcomes are equally likely."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Theoretical probability",
+          "statement": "P(E) = Number of outcomes favourable to E / Number of all possible outcomes of the experiment, where the outcomes are equally likely."
+        },
+        {
+          "label": "Laplace, 1795",
+          "statement": "The definition of (theoretical) probability was given by Pierre Simon Laplace in 1795."
+        },
+        {
+          "label": "Sum of elementary events",
+          "statement": "The sum of the probabilities of all the elementary events of an experiment is 1."
+        },
+        {
+          "label": "Complementary events",
+          "statement": "For any event E, P(Ē) = 1 – P(E), i.e., P(E) + P(Ē) = 1."
+        },
+        {
+          "label": "Impossible and sure events",
+          "statement": "The probability of an impossible event is 0 and of a sure (certain) event is 1."
+        },
+        {
+          "label": "Range of probability",
+          "statement": "0 ≤ P(E) ≤ 1."
+        },
+        {
+          "label": "Geometric probability",
+          "statement": "P(E) = Distance (or area) favourable to the event E / Total distance (or area) in which outcomes can lie (not from the examination point of view)."
+        },
+        {
+          "label": "History",
+          "statement": "J. Cardan wrote the first book on probability, The Book on Games of Chance, in the 16th century; Laplace's Théorie Analytique des Probabilités (1812) is considered the greatest contribution by a single person to the theory."
+        }
+      ],
+      "activities": [],
+      "exercises": [
+        {
+          "name": "EXERCISE 14.1",
+          "questions": 25
+        }
+      ],
+      "bookSummary": [
+        "The theoretical (classical) probability of an event E, written as P(E), is defined as P(E) = Number of outcomes favourable to E / Number of all possible outcomes of the experiment, where we assume that the outcomes of the experiment are equally likely.",
+        "The probability of a sure event (or certain event) is 1.",
+        "The probability of an impossible event is 0.",
+        "The probability of an event E is a number P(E) such that 0 ≤ P(E) ≤ 1.",
+        "An event having only one outcome is called an elementary event. The sum of the probabilities of all the elementary events of an experiment is 1.",
+        "For any event E, P(E) + P(Ē) = 1, where Ē stands for 'not E'. E and Ē are called complementary events."
+      ],
+      "notes": "The chapter opens with a quotation from R.S. Woodward. The bar over E and the inequality symbols are lost in the extraction. Question 25 of Exercise 14.1 is printed after the note to the reader on the last page."
+    }
+  ]
+}

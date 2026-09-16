@@ -1,0 +1,43 @@
+# Sahayak on the shared Hostinger VPS, behind its existing Traefik.
+#
+#   /opt/ncert/docker-compose.yml   (this file)
+#   /opt/ncert/.env                 (secrets; chmod 600; never in git)
+#
+# Traefik already owns :80/:443 for every site on this server and discovers
+# containers by label on the `root_default` network, issuing certificates with
+# the `mytlschallenge` resolver. This app joins that network and publishes no
+# port of its own, so it cannot collide with anything else on the host.
+#
+# DNS for ncert.sirahagents.com must point at the server BEFORE this starts:
+# the TLS challenge runs as soon as the router appears, and failed challenges
+# count against Let's Encrypt's rate limit.
+
+services:
+  app:
+    image: sahayak:latest
+    container_name: ncert-app
+    restart: unless-stopped
+    env_file: /opt/ncert/.env
+    # One CPU and 3.8 GB shared with four other apps: a cap, so a bad day here
+    # is not a bad day for them.
+    mem_limit: 1g
+    cpus: "0.9"
+    networks:
+      - root_default
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=root_default
+      - traefik.http.routers.ncert.rule=Host(`ncert.sirahagents.com`)
+      - traefik.http.routers.ncert.entrypoints=web,websecure
+      - traefik.http.routers.ncert.tls=true
+      - traefik.http.routers.ncert.tls.certresolver=mytlschallenge
+      - traefik.http.services.ncert.loadbalancer.server.port=3000
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  root_default:
+    external: true

@@ -1,0 +1,583 @@
+{
+  "board": "CBSE",
+  "grade": 9,
+  "subject": "Social Science",
+  "status": "DRAFT — for review by a Social Science teacher before it is relied on",
+  "source": "Drafted against NCERT Class IX Social Science 'Understanding Society: India and Beyond' Part 1 (iest1) and the 270 questions imported from C:/dev/sirah_project/NCERT/data. The book is a single integrated volume, so it stays one subject.",
+  "notes": [
+    "Prerequisites link several of these concepts to the Class 10 Social Science concepts they prepare for."
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "topics": [
+        {
+          "title": "Social Science and its disciplines",
+          "outcomes": [
+            {
+              "code": "SS9-01-1",
+              "statement": "Explains what Social Science studies, and why a problem such as a drought needs the perspectives of several disciplines.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-01-2",
+              "statement": "Identifies the sources and tools of history, geography, political science and economics, such as inscriptions, archaeological remains and maps.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-01-3",
+              "statement": "Explains Indian ideas the chapter uses, such as vasudhaiva kutumbakam and the five Panchamahabhutas, and how politics was once linked to ethics and duty.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "The disciplines of Social Science",
+          "outcomes": [
+            "SS9-01-1",
+            "SS9-01-2",
+            "SS9-01-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "topics": [
+        {
+          "title": "Plate tectonics",
+          "outcomes": [
+            {
+              "code": "SS9-02-1",
+              "statement": "Describes the theory of plate tectonics, the three types of plate boundary, and how the Himalaya formed.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-02-2",
+              "statement": "Explains why earthquakes and volcanoes cluster along plate boundaries such as the Pacific Ring of Fire.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Weathering and agents of gradation",
+          "outcomes": [
+            {
+              "code": "SS9-02-3",
+              "statement": "Distinguishes physical, chemical and biological weathering.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-02-4",
+              "statement": "Describes the landforms made by rivers, glaciers, wind and waves, such as deltas and moraines.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Plate tectonics and landforms",
+          "outcomes": [
+            "SS9-02-1",
+            "SS9-02-2"
+          ]
+        },
+        {
+          "name": "Weathering and erosion",
+          "outcomes": [
+            "SS9-02-3",
+            "SS9-02-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "topics": [
+        {
+          "title": "Composition and structure of the atmosphere",
+          "outcomes": [
+            {
+              "code": "SS9-03-1",
+              "statement": "Describes the composition of the atmosphere and its layers, including why aircraft fly in the stratosphere.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-03-2",
+              "statement": "Explains atmospheric pressure, and why we do not feel its weight.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Weather, climate and the monsoon",
+          "outcomes": [
+            {
+              "code": "SS9-03-3",
+              "statement": "Explains how winds such as land and sea breezes and the westerlies arise, and defines precipitation and its forms.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-03-4",
+              "statement": "Describes India's monsoon and seasons, and distinguishes natural from human causes of floods.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Structure of the atmosphere",
+          "outcomes": [
+            "SS9-03-1",
+            "SS9-03-2"
+          ]
+        },
+        {
+          "name": "Winds, precipitation and India's monsoon",
+          "outcomes": [
+            "SS9-03-3",
+            "SS9-03-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "topics": [
+        {
+          "title": "Early humans",
+          "outcomes": [
+            {
+              "code": "SS9-04-1",
+              "statement": "Describes the Palaeolithic and Neolithic ages, including early sites in India such as Attirampakkam and the changes the Neolithic revolution brought.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-04-2",
+              "statement": "Distinguishes Homo sapiens from earlier human ancestors.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "The earliest civilisations",
+          "outcomes": [
+            {
+              "code": "SS9-04-3",
+              "statement": "Relates the four earliest civilisations to their river systems and their chief achievements, such as the Mesopotamian number system.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-04-4",
+              "statement": "Explains why early civilisations arose in river plains, and why some early scripts remain undeciphered.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Early human history",
+          "outcomes": [
+            "SS9-04-1",
+            "SS9-04-2"
+          ]
+        },
+        {
+          "name": "The earliest river-valley civilisations",
+          "outcomes": [
+            "SS9-04-3",
+            "SS9-04-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "topics": [
+        {
+          "title": "Vedic and janapada polity",
+          "outcomes": [
+            {
+              "code": "SS9-05-1",
+              "statement": "Describes the Vedas, the assemblies of the Vedic period such as the sabha and samiti, and the rise of janapadas.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-05-2",
+              "statement": "Explains the ashramas and the Saptanga theory of the state described by Kautilya.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "States and society up to 1000 CE",
+          "outcomes": [
+            {
+              "code": "SS9-05-3",
+              "statement": "Describes the administration of the Mauryan and Gupta states and the tripartite struggle for Kannauj.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-05-4",
+              "statement": "Interprets inscriptions as evidence about guilds, trade and women in authority, such as the Nashik cave and Mandsaur inscriptions.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Vedic polity and the janapadas",
+          "outcomes": [
+            "SS9-05-1",
+            "SS9-05-2"
+          ]
+        },
+        {
+          "name": "States, guilds and society to 1000 CE",
+          "outcomes": [
+            "SS9-05-3",
+            "SS9-05-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "topics": [
+        {
+          "title": "Democratic traditions and the Constitution",
+          "outcomes": [
+            {
+              "code": "SS9-06-1",
+              "statement": "Describes democratic traditions in India from early times, and the adoption and commencement of the Constitution.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-06-2",
+              "statement": "Explains popular sovereignty, universal adult franchise and how Indian women gained the vote compared with Britain and the United States.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Rights, rule of law and checks and balances",
+          "outcomes": [
+            {
+              "code": "SS9-06-3",
+              "statement": "Relates the Fundamental Rights, including the Right to Education, to their Articles.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-06-4",
+              "statement": "Explains the rule of law, checks and balances among the organs of government, and how the Constitution is amended.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Democracy and the Indian Constitution",
+          "outcomes": [
+            "SS9-06-1",
+            "SS9-06-2"
+          ]
+        },
+        {
+          "name": "Fundamental rights and the rule of law",
+          "outcomes": [
+            "SS9-06-3",
+            "SS9-06-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "topics": [
+        {
+          "title": "Electoral systems",
+          "outcomes": [
+            {
+              "code": "SS9-07-1",
+              "statement": "Explains why elections matter and distinguishes direct from indirect election.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-07-2",
+              "statement": "Compares the first-past-the-post, majority and proportional systems, including the single transferable vote.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Elections in India",
+          "outcomes": [
+            {
+              "code": "SS9-07-3",
+              "statement": "Describes the Election Commission of India, delimitation, and the recognition of national and state parties.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-07-4",
+              "statement": "Identifies corrupt electoral practices under the Representation of the People Act, and measures such as the postal ballot system for service voters.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Electoral systems",
+          "outcomes": [
+            "SS9-07-1",
+            "SS9-07-2"
+          ]
+        },
+        {
+          "name": "The conduct of elections in India",
+          "outcomes": [
+            "SS9-07-3",
+            "SS9-07-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "topics": [
+        {
+          "title": "Scarcity and choice",
+          "outcomes": [
+            {
+              "code": "SS9-08-1",
+              "statement": "Explains scarcity, resources and opportunity cost, and the three central questions of economics.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-08-2",
+              "statement": "Interprets a production possibility frontier to show the trade-off between two goods.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Economic systems",
+          "outcomes": [
+            {
+              "code": "SS9-08-3",
+              "statement": "Identifies the factors of production, and classifies activities as labour-intensive or capital-intensive.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-08-4",
+              "statement": "Distinguishes market, planned and mixed economies, and describes India's economy after the reforms of 1991.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Scarcity, choice and opportunity cost",
+          "outcomes": [
+            "SS9-08-1",
+            "SS9-08-2"
+          ]
+        },
+        {
+          "name": "Factors of production and economic systems",
+          "outcomes": [
+            "SS9-08-3",
+            "SS9-08-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "topics": [
+        {
+          "title": "Demand and supply",
+          "outcomes": [
+            {
+              "code": "SS9-09-1",
+              "statement": "Explains demand and supply, and predicts how income, the price of related goods, expectations and technology shift them.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-09-2",
+              "statement": "Distinguishes substitute goods from complementary goods, with examples such as tea and coffee or cars and petrol.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Market price and government intervention",
+          "outcomes": [
+            {
+              "code": "SS9-09-3",
+              "statement": "Explains how market price is set, and why sellers may hold back supply.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "SS9-09-4",
+              "statement": "Distinguishes a price ceiling from a price floor, and explains why public goods are provided by the government.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Demand and supply",
+          "outcomes": [
+            "SS9-09-1",
+            "SS9-09-2"
+          ]
+        },
+        {
+          "name": "Market price and government intervention",
+          "outcomes": [
+            "SS9-09-3",
+            "SS9-09-4"
+          ]
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "concept": "Weathering and erosion",
+      "requires": "Plate tectonics and landforms"
+    },
+    {
+      "concept": "Winds, precipitation and India's monsoon",
+      "requires": "Structure of the atmosphere"
+    },
+    {
+      "concept": "The earliest river-valley civilisations",
+      "requires": "Early human history"
+    },
+    {
+      "concept": "States, guilds and society to 1000 CE",
+      "requires": "Vedic polity and the janapadas"
+    },
+    {
+      "concept": "Fundamental rights and the rule of law",
+      "requires": "Democracy and the Indian Constitution"
+    },
+    {
+      "concept": "The conduct of elections in India",
+      "requires": "Electoral systems"
+    },
+    {
+      "concept": "Market price and government intervention",
+      "requires": "Demand and supply"
+    },
+    {
+      "concept": "Factors of production and economic systems",
+      "requires": "Scarcity, choice and opportunity cost"
+    },
+    {
+      "concept": "Soils of India and soil conservation",
+      "requires": "Weathering and erosion"
+    },
+    {
+      "concept": "Multipurpose projects and rainwater harvesting",
+      "requires": "Winds, precipitation and India's monsoon"
+    },
+    {
+      "concept": "Features of federalism",
+      "requires": "Democracy and the Indian Constitution"
+    },
+    {
+      "concept": "National and state parties and their challenges",
+      "requires": "The conduct of elections in India"
+    },
+    {
+      "concept": "Primary, secondary and tertiary sectors",
+      "requires": "Factors of production and economic systems"
+    },
+    {
+      "concept": "Goals and meaning of development",
+      "requires": "Scarcity, choice and opportunity cost"
+    }
+  ]
+}

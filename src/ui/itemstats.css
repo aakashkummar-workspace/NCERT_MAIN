@@ -1,0 +1,260 @@
+/* ==========================================================================
+   Item statistics — how a question actually behaved, beside how it was declared
+   ==========================================================================
+   One panel, on one screen: the question detail page. Tokens only, so both
+   themes come out of globals.css with no second palette to keep in step.
+
+   Every class name here is prefixed `ui-is-` rather than `ui-item-`, because
+   results.css already owns `.ui-item*` for the per-paper item analysis and two
+   components sharing a class name across two stylesheets is a collision
+   waiting for whichever one loads second — the `.ui-result-score` lesson.
+   ---------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------- Refusal -- */
+
+.ui-is-refusal {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+.ui-is-refusal strong {
+  font-size: 20px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 14px and up, deliberately. --text-tertiary is documented as failing text
+   contrast below that size on this product's surfaces, and the blurb here is
+   the sentence that explains the refusal — the one thing on the panel that
+   must be readable when there is nothing else to read. */
+.ui-is-blurb {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: var(--reading-max);
+}
+
+.ui-is-notes {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  max-width: var(--reading-max);
+}
+
+.ui-is-notes li {
+  padding-left: 14px;
+  position: relative;
+}
+
+.ui-is-notes li::before {
+  content: "·";
+  position: absolute;
+  left: 2px;
+  color: var(--text-tertiary);
+}
+
+/* ------------------------------------------------------------- Figures -- */
+
+/* auto-fit rather than three fixed columns: at 360px these stack, and at a
+   teacher's laptop width they sit in a row without a breakpoint to maintain. */
+.ui-is-figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.ui-is-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px;
+  background: var(--surface-sunken);
+  border-radius: var(--radius-card);
+}
+
+.ui-is-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.ui-is-value {
+  font-size: 26px;
+  font-weight: 650;
+  line-height: 1.15;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* An em dash, never a zero. "No figure" and "zero" mean opposite things. */
+.ui-is-value[data-empty] {
+  color: var(--text-secondary);
+}
+
+.ui-is-context {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.ui-is-band {
+  margin: 12px 0 0;
+}
+
+/* ---------------------------------------------------- Declared vs observed -- */
+
+/* The two sit side by side and neither is styled as the winner. Nothing in
+   this product writes the observed difficulty back over the declared one —
+   difficulty weights every piece of evidence inside the mastery estimator —
+   so the panel must not look like a correction either. */
+.ui-is-difficulty {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+}
+
+.ui-is-difficulty[data-disagrees] {
+  border-color: var(--warning-border);
+  background: var(--warning-fill);
+}
+
+.ui-is-difficulty > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ui-is-difficulty-value {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ui-is-versus {
+  color: var(--text-tertiary);
+  font-size: 18px;
+}
+
+/* ------------------------------------------------------------- Options -- */
+
+.ui-is-options {
+  margin-top: 20px;
+}
+
+.ui-is-options ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.ui-is-options li {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 90px auto;
+  align-items: center;
+  gap: 10px;
+  min-height: var(--tap-min);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.ui-is-options li:last-child {
+  border-bottom: 0;
+}
+
+.ui-is-option-key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-strong);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+li[data-correct] .ui-is-option-key {
+  border-color: var(--success-border);
+  background: var(--success-fill);
+  color: var(--success);
+}
+
+.ui-is-option-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--text-primary);
+}
+
+/* Colour is never the only encoding: the count and the ↑/↓ split are the
+   real data, and the bar is a second reading of it. It survives a bad
+   projector, a black-and-white printout and a colourblind reader because
+   there is a number beside it either way. */
+.ui-is-bar {
+  display: block;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--surface-sunken);
+  overflow: hidden;
+}
+
+.ui-is-bar > span {
+  display: block;
+  height: 100%;
+  background: var(--neutral-400);
+  border-radius: var(--radius-full);
+}
+
+li[data-correct] .ui-is-bar > span {
+  background: var(--success);
+}
+
+li[data-dead] .ui-is-option-text {
+  color: var(--text-secondary);
+}
+
+.ui-is-option-count {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--text-primary);
+}
+
+.ui-is-option-split {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* At 360px the bar is the first thing to lose: the option text, the count and
+   the strong/weak split all carry information the bar only restates. */
+@media (max-width: 560px) {
+  .ui-is-options li {
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+  }
+
+  .ui-is-bar {
+    display: none;
+  }
+}

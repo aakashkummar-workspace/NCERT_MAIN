@@ -1,0 +1,2598 @@
+/* ==========================================================================
+   Student surfaces
+   ==========================================================================
+   Split out of ui.css because it is a different product surface, not a
+   different theme: the teacher is at a desk, the student is on a shared
+   Android handset on a school network. Every rule below assumes that before
+   it assumes anything else.
+
+   Tokens only — no literal colours — so both themes come out of globals.css
+   without a second palette to keep in step.
+   ---------------------------------------------------------------------- */
+
+.ui-student {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--canvas);
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-student-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-student-bar .ui-brand {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ui-student-bar-end {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ui-student-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: var(--radius-control);
+  transition: color var(--motion-instant) var(--ease), background-color var(--motion-instant) var(--ease);
+}
+.ui-student-link:hover {
+  color: var(--text-primary);
+  background: var(--surface-sunken);
+}
+
+/* Scoped to the bar. Bare, this rule and the hide below also matched the
+   teacher roster's `.ui-student-name` in ui.css — so on a phone a teacher's
+   class list showed every roll number and phone and not one student's name. */
+.ui-student-bar .ui-student-name {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.ui-student-main {
+  flex: 1;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 20px 64px;
+}
+
+/* A plain button that reads as a link — for actions that are textual
+   ("Change", "Sign out") and would shout as a filled control. */
+.ui-link-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ui-link-button:hover {
+  color: var(--accent-hover);
+}
+
+.ui-section-heading {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin: 34px 0 4px;
+}
+
+/* ------------------------------------------------------------- Sign in -- */
+
+.ui-otp-sent {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.ui-otp-input {
+  font-size: 24px;
+  letter-spacing: 0.32em;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------ My tests -- */
+
+.ui-tests {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ui-test {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ui-test-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ui-test-title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.ui-test-sub {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 3px 0 0;
+}
+
+/* Four facts in one row: the numbers a student checks before deciding whether
+   they have time to start right now. */
+.ui-test-facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 0;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-test-facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ui-test-facts dt {
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.ui-test-facts dd {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.ui-test-window {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.ui-test-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.ui-test-pending {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .ui-student-main {
+    padding: 20px 16px 56px;
+  }
+  /* The student's own name is the first thing to go on a narrow bar. They know
+     who they are; what they cannot do without is the way to the other page and
+     the way out. Everything here wrapped to two lines each before this. */
+  .ui-student-bar .ui-student-name {
+    display: none;
+  }
+  /* Wraps, so the links drop under the brand instead of off the edge. With
+     Practice and Progress added, the row reached 409px at 360px once every
+     link grew to a 44px target, and the page scrolled sideways. */
+  .ui-student-bar {
+    padding: 10px 16px;
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+  .ui-student-bar-end {
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
+  .ui-test-facts {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 12px;
+  }
+  /* Full width, so the action is a thumb-sized target across the bottom of
+     the card rather than a small button floating beside it. */
+  .ui-test-actions > * {
+    flex: 1 1 100%;
+  }
+}
+
+/* ----------------------------------------------------------- The player -- */
+
+.ui-player {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--canvas);
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-player-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-player-title {
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The clock is the largest thing on the bar, because it is what a student
+   looks up for. It turns colour once, under five minutes — a red that has
+   been red the whole time carries no information. */
+.ui-player-clock {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ui-player-clock[data-urgent] {
+  color: var(--danger);
+}
+
+.ui-player-state {
+  justify-self: end;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ui-player-saved {
+  color: var(--text-tertiary);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ui-player-saving {
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ui-player-offline {
+  color: var(--warning);
+  background: var(--warning-fill);
+  border: 1px solid var(--warning-border);
+  border-radius: var(--radius-full);
+  padding: 3px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ui-player-error {
+  margin: 0;
+  padding: 10px 20px;
+  background: var(--danger-fill);
+  border-bottom: 1px solid var(--danger-border);
+  color: var(--danger);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.ui-player-body {
+  flex: 1;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 24px;
+  align-items: start;
+}
+
+.ui-player-question {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ui-player-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  font-weight: 600;
+}
+
+/* 17px, not 14px: this is the one block of text on the product that gets read
+   for three hours without a break. */
+.ui-player-stem {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.ui-player-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.ui-player-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: var(--tap-min);
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  font-size: 15px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition:
+    border-color var(--motion-fast) ease,
+    background var(--motion-fast) ease;
+}
+
+.ui-player-option:hover {
+  border-color: var(--border-strong);
+}
+
+/* Chosen is carried by the border, the fill AND the filled key chip — never
+   by colour alone, so it survives a colourblind reader and a bad screen. */
+.ui-player-option[data-chosen] {
+  border-color: var(--accent);
+  background: var(--accent-wash);
+}
+
+.ui-player-option input {
+  margin-top: 3px;
+  accent-color: var(--accent);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.ui-player-option-key {
+  font-weight: 700;
+  font-size: 13px;
+  min-width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunken);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.ui-player-option[data-chosen] .ui-player-option-key {
+  background: var(--accent);
+  color: var(--text-inverse);
+}
+
+/* 16px minimum on a text control: anything smaller and iOS Safari zooms the
+   page on focus, which throws away the student's place in a long paper. */
+.ui-player-input {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.ui-player-nav {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.ui-player-side {
+  position: sticky;
+  top: 76px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ui-navigator {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-navigator-item {
+  width: 100%;
+  aspect-ratio: 1;
+  min-height: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background var(--motion-fast) ease;
+}
+
+.ui-navigator-item[data-state="answered"] {
+  background: var(--success-fill);
+  border-color: var(--success-border);
+  color: var(--success);
+}
+
+.ui-navigator-item[data-state="review"] {
+  background: var(--warning-fill);
+  border-color: var(--warning-border);
+  color: var(--warning);
+}
+
+.ui-navigator-item[data-state="current"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--text-inverse);
+}
+
+.ui-player-progress {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .ui-player-body {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 16px 16px 32px;
+  }
+  /* The navigator moves below the question on a phone. It is a way to jump
+     around, not the first thing to read — the question is. */
+  .ui-player-side {
+    position: static;
+    order: 2;
+  }
+  .ui-player-question {
+    padding: 18px 16px;
+  }
+  .ui-player-title {
+    display: none;
+  }
+  .ui-player-bar {
+    grid-template-columns: auto 1fr;
+  }
+  .ui-player-clock {
+    justify-self: start;
+  }
+  .ui-player-nav {
+    flex-wrap: wrap;
+  }
+  .ui-player-nav > * {
+    flex: 1 1 30%;
+  }
+  /* Previous and Next stay side by side; "Mark for review" drops to its own
+     row underneath. Navigation is one decision and marking is another. */
+  .ui-player-nav > *:nth-child(2) {
+    order: 3;
+    flex-basis: 100%;
+  }
+}
+
+/* ----------------------------------------------------------- The result -- */
+
+.ui-result-score {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.ui-result-headline {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.ui-result-number {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.ui-result-outof {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.ui-result-percent {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.ui-breakdown {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.ui-breakdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.ui-breakdown-item:last-child {
+  border-bottom: 0;
+}
+
+/* A glyph as well as a colour, so right and wrong survive a colourblind
+   reader and a printed page. */
+.ui-breakdown-mark {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.ui-breakdown-mark[data-state="correct"] {
+  background: var(--success-fill);
+  color: var(--success);
+}
+
+.ui-breakdown-mark[data-state="wrong"] {
+  background: var(--danger-fill);
+  color: var(--danger);
+}
+
+.ui-breakdown-mark[data-state="pending"] {
+  background: var(--warning-fill);
+  color: var(--warning);
+}
+
+/* A question left blank is settled, not waiting. It reads as quiet rather than
+   as an outstanding action. */
+.ui-breakdown-mark[data-state="blank"] {
+  background: var(--surface-sunken);
+  color: var(--text-tertiary);
+}
+
+.ui-breakdown-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ui-breakdown-position {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+}
+
+.ui-breakdown-stem {
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ui-breakdown-score {
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ------------------------------------------------------ Submit confirm -- */
+
+/* Submitting is the one irreversible action a student has, so it gets a real
+   dialog rather than window.confirm(): the native one cannot say how many
+   questions are still blank, and cannot be read in the product's own voice. */
+.ui-confirm-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(11 13 18 / 0.55);
+}
+
+.ui-confirm {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-modal);
+  box-shadow: var(--shadow-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-confirm-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ui-confirm-body {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.ui-confirm-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+
+@media (max-width: 640px) {
+  .ui-confirm-actions {
+    flex-direction: column-reverse;
+  }
+  .ui-confirm-actions > * {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------- Join a class -- */
+
+.ui-join {
+  margin-bottom: 16px;
+}
+
+.ui-join[data-open] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-join-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.ui-join-form .ui-field {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Wide letter-spacing and a monospace-ish feel: a code is read aloud one
+   character at a time, and it should be checkable one character at a time. */
+.ui-join-code {
+  font-size: 20px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .ui-join-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ========================================================= Mistake Bank -- */
+
+/* The nudge on Home. Not a tab: five is the limit, and a permanent tab named
+   after your own failures is one you learn to skip. */
+.ui-mistake-nudge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: border-color var(--motion-instant) var(--ease);
+}
+
+.ui-mistake-nudge:hover {
+  border-color: var(--border-strong);
+}
+
+.ui-mistake-nudge-count {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  border-radius: var(--radius-control);
+  background: var(--warning-fill);
+  color: var(--warning);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ui-mistake-nudge-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ui-mistake-nudge-body strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.ui-mistake-nudge-body span {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-mistake-progress {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--success-fill);
+  color: var(--text-primary);
+}
+
+.ui-mistakes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ui-mistake a {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--text-primary);
+  text-decoration: none;
+  /* A state stripe, so the shape of the list reads before any of it does.
+     Colour is never alone — the badge says the same thing in words. */
+  border-left: 4px solid var(--border-strong);
+}
+
+.ui-mistake[data-status="UNRESOLVED"] a {
+  border-left-color: var(--warning);
+}
+.ui-mistake[data-status="RETRIED"] a {
+  border-left-color: var(--primary-500);
+}
+.ui-mistake[data-status="RESOLVED"] a {
+  border-left-color: var(--success);
+}
+
+.ui-mistake a:hover {
+  border-color: var(--border-strong);
+}
+
+.ui-mistake-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* The badges hold their row rather than squeezing the stem to one word at a
+   time. Below 480px they drop under it instead. */
+.ui-mistake-head .ui-mistake-stem {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media (max-width: 480px) {
+  .ui-mistake-head {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .ui-mistake-tags {
+    justify-content: flex-start;
+  }
+}
+
+.ui-mistake-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+}
+
+/* The question is the heading. Two lines of it: enough to recognise which one
+   this is, not so much that the list becomes a paper. */
+.ui-mistake-stem {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ui-mistake-meta {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.ui-mistake-detail {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-mistake-detail[data-revealed="true"] {
+  background: var(--surface-raised);
+}
+
+.ui-mistake-detail-tags {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ui-mistake-detail-marks {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-mistake-detail-stem {
+  font-size: 17px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.ui-mistake-detail-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ui-mistake-detail-options li {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.ui-mistake-detail-key {
+  flex: 0 0 auto;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ui-mistake-detail-given,
+.ui-retry-answer {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ui-mistake-detail-label,
+.ui-retry-answer-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+/* The line the whole feature exists for. "You got this wrong" is a fact they
+   already had; this is the part that changes what they do tonight. */
+.ui-mistake-detail-reason {
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: var(--radius-control);
+  background: var(--accent-wash);
+}
+
+.ui-mistake-detail-advice {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.ui-mistake-detail-explanation {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ------------------------------------------------------------- The retry -- */
+
+.ui-retry {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ui-retry[data-outcome="correct"] {
+  background: var(--success-fill);
+  border-color: var(--success-border);
+}
+
+/* Amber, never red. Getting it wrong a second time is information, and a red
+   panel tells a student who is already behind that they have failed again. */
+.ui-retry[data-outcome="wrong"] {
+  background: var(--warning-fill);
+  border-color: var(--warning-border);
+}
+
+.ui-retry-prompt {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ui-retry-verdict {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ui-retry-message,
+.ui-retry-explanation {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ui-retry-error {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--danger-fill);
+}
+
+.ui-retry-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* A 52px row: this is a phone, and a student picking an option under a hover
+   affordance they cannot use would be picking blind. */
+.ui-retry-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 52px;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.45;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.ui-retry-option[data-chosen] {
+  border-color: var(--primary-600);
+  background: var(--accent-wash);
+}
+
+.ui-retry-option-key {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--surface-sunken);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ui-retry-option[data-chosen] .ui-retry-option-key {
+  background: var(--primary-600);
+  color: #ffffff;
+}
+
+.ui-retry-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.ui-retry-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .ui-retry-actions .ui-button {
+    width: 100%;
+  }
+}
+
+/* ============================================================== Practice -- */
+
+.ui-practice-resume {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.ui-practice-resume a {
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid var(--primary-200);
+  border-radius: var(--radius-card);
+  background: var(--accent-wash);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.ui-practice-resume a > span {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.ui-practice-sets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-practice-set {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  /* A reason stripe. Colour never alone — the sentence says the same thing. */
+  border-left: 4px solid var(--border-strong);
+}
+
+.ui-practice-set[data-reason="mistakes"] {
+  border-left-color: var(--warning);
+}
+.ui-practice-set[data-reason="weakest"] {
+  border-left-color: var(--danger);
+}
+.ui-practice-set[data-reason="fragile"] {
+  border-left-color: var(--warning);
+}
+.ui-practice-set[data-reason="going-stale"] {
+  border-left-color: var(--primary-300);
+}
+.ui-practice-set[data-reason="keep-sharp"] {
+  border-left-color: var(--success);
+}
+
+.ui-practice-set-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.ui-practice-set-title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.ui-practice-set-why {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.ui-practice-set-meta {
+  font-size: 12px;
+  margin: 0;
+  color: var(--text-tertiary);
+}
+
+.ui-practice-set-action {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ui-practice-error {
+  font-size: 13px;
+  line-height: 1.45;
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: var(--radius-control);
+  background: var(--danger-fill);
+  color: var(--text-primary);
+}
+
+.ui-practice-history {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ui-practice-history a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* The nudge on Home, alongside the mistake one. */
+.ui-practice-nudge .ui-mistake-nudge-count {
+  background: var(--accent-wash);
+  color: var(--primary-700);
+}
+
+/* --------------------------------------------------------- The runner -- */
+
+.ui-runner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ui-runner-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* A bar, not a clock: how much is left is the only thing about time that
+   belongs on an untimed screen. */
+.ui-runner-bar {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--surface-sunken);
+  overflow: hidden;
+}
+
+.ui-runner-bar > span {
+  display: block;
+  height: 100%;
+  background: var(--primary-500);
+  transition: width var(--motion-quick, 160ms) var(--ease);
+}
+
+.ui-runner-stem {
+  font-size: 18px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.ui-runner-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 52px, because this is a phone. */
+.ui-runner-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 52px;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.45;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.ui-runner-option[data-chosen] {
+  border-color: var(--primary-600);
+  background: var(--accent-wash);
+}
+
+.ui-runner-option:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.ui-runner-option-key {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--surface-sunken);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ui-runner-option[data-chosen] .ui-runner-option-key {
+  background: var(--primary-600);
+  color: #ffffff;
+}
+
+.ui-runner-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.ui-runner-verdict {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 18px;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+}
+
+.ui-runner-verdict[data-outcome="correct"] {
+  background: var(--success-fill);
+  border-color: var(--success-border);
+}
+
+/* Amber, never red. Getting one wrong in practice is the expected outcome of
+   practising, and a red panel every other question teaches a student that the
+   screen thinks they are failing. */
+.ui-runner-verdict[data-outcome="wrong"] {
+  background: var(--warning-fill);
+  border-color: var(--warning-border);
+}
+
+.ui-runner-verdict-head {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ui-runner-answer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ui-runner-answer-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.ui-runner-explanation {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ui-runner-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .ui-practice-set {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ui-practice-set-action .ui-button {
+    width: 100%;
+  }
+  .ui-runner-actions {
+    flex-direction: column-reverse;
+  }
+  .ui-runner-actions .ui-button {
+    width: 100%;
+  }
+}
+
+/* After answering, the option itself carries the verdict. Leaving the tapped
+   one in the accent colour reads as approval directly above "not this time" —
+   which a screenshot caught. Colour is never alone: each carries a word. */
+.ui-runner-option[data-mark="correct"] {
+  border-color: var(--success);
+  background: var(--success-fill);
+}
+
+.ui-runner-option[data-mark="correct"] .ui-runner-option-key {
+  background: var(--success);
+  color: #ffffff;
+}
+
+.ui-runner-option[data-mark="wrong"] {
+  border-color: var(--warning);
+  background: var(--warning-fill);
+}
+
+.ui-runner-option[data-mark="wrong"] .ui-runner-option-key {
+  background: var(--warning);
+  color: #ffffff;
+}
+
+.ui-runner-option-tag {
+  margin-left: auto;
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* A marked option is not interactive, but it must stay legible — the default
+   disabled dimming would wash the verdict out. */
+.ui-runner-option[data-mark]:disabled {
+  opacity: 1;
+}
+
+/* ======================================================== Parent portal -- */
+
+.ui-child-switcher {
+  display: flex;
+  gap: 4px;
+  padding: 3px;
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+}
+
+.ui-child-switcher a {
+  padding: 5px 12px;
+  border-radius: calc(var(--radius-control) - 3px);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.ui-child-switcher a[data-current] {
+  background: var(--surface);
+  color: var(--text-primary);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.06);
+}
+
+.ui-parent-summary {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  padding: 16px 18px;
+  border-radius: var(--radius-card);
+  background: var(--accent-wash);
+  color: var(--text-primary);
+}
+
+/* The refusal reads as a statement about the evidence, not about the child, so
+   it is quiet rather than alarming. */
+.ui-parent-summary[data-tone="quiet"] {
+  background: var(--surface-sunken);
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.ui-parent-section {
+  margin-bottom: 24px;
+}
+
+.ui-parent-concepts {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-parent-concepts li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+}
+
+.ui-parent-concept-name {
+  font-size: 15px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.ui-parent-sittings {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-parent-sittings li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+}
+
+.ui-parent-sittings li > span:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ui-parent-sitting-title {
+  font-size: 15px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.ui-parent-sitting-meta {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.ui-parent-sitting-score {
+  flex: 0 0 auto;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------- Accepting an invitation -- */
+
+/* Rendered outside every shell: the person opening it has no account. */
+.ui-accept-page {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: var(--surface-sunken);
+}
+
+.ui-accept-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.ui-accept-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin: 0 0 6px;
+}
+
+.ui-accept-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 10px;
+  text-wrap: balance;
+}
+
+.ui-accept-body {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+  color: var(--text-secondary);
+}
+
+/* What consent is FOR, before it is given. A tick and a cross, because a list
+   of five lines where two are grants and three are limits has to distinguish
+   them at a glance — and the words say which either way. */
+.ui-accept-scope {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-accept-scope li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.ui-accept-scope li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 600;
+  color: var(--text-tertiary);
+}
+
+.ui-accept-scope li[data-yes]::before {
+  content: "✓";
+  color: var(--success);
+}
+
+.ui-accept-scope li[data-yes] {
+  color: var(--text-primary);
+}
+
+.ui-accept {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ui-accept-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.ui-accept-hint {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-tertiary);
+}
+
+/* A code is read aloud one character at a time, and checked the same way. */
+.ui-accept-code {
+  font-size: 22px;
+  letter-spacing: 0.28em;
+  text-align: center;
+}
+
+.ui-accept-error {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--danger-fill);
+  color: var(--text-primary);
+}
+
+.ui-accept-foot {
+  font-size: 12px;
+  line-height: 1.55;
+  margin: 20px 0 0;
+  color: var(--text-tertiary);
+}
+
+/* ================================================================== Help -- */
+
+/* The tutor panel, on a mistake and inside a practice set.
+ *
+ * Deliberately quieter than the retry panel it sits under. Help is the second
+ * thing on the page, never the first — a student who meets a prominent "get
+ * help" control before they have tried the question will press it, and the
+ * whole value of both features is in the attempt that comes first. */
+.ui-help {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface-sunken);
+}
+
+.ui-help-note {
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.ui-help-turn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+/* Secondary, not tertiary. The original reason was that --neutral-500 was
+   documented as 14px-and-up only; that rule is gone, because it was a
+   mitigation for the old #6e7787 and the token has since been darkened to
+   #5f6877 (4.92:1 on the darkest surface it is used on — AA at any size).
+   Secondary stays anyway on its own merits: this is a 12px uppercase label,
+   which is the hardest thing on the page to read, on the device most of these
+   students are holding. */
+.ui-help-turn-head {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.ui-help-turn-body {
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.ui-help-error {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-control);
+  background: var(--warning-fill);
+  color: var(--text-primary);
+}
+
+.ui-help-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* This line is what the button is promising to do. Same size rule, and it
+   also has a job: a student deciding whether to spend a rung has to be able
+   to read what the rung is. */
+.ui-help-blurb {
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* The button goes full width and the blurb drops under it, rather than the two
+   sharing a cramped row on a 390px screen. */
+@media (max-width: 640px) {
+  .ui-help-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ui-help-actions .ui-button {
+    width: 100%;
+  }
+}
+
+/* ================================================================== Plan -- */
+
+/* The study plan. An ordered list where the order carries information — the
+ * second item is second because the first matters more, so the rank is drawn
+ * rather than left to a browser's default marker. */
+.ui-plan {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  counter-reset: none;
+}
+
+/* Top-aligned, not centred. On a three-line item a centred rank floats beside
+   the middle of the prose and stops reading as the number OF that item — which
+   on the one list in the product where order carries information is the whole
+   point of drawing it. */
+.ui-plan-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 16px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+/* A deadline is somebody else's decision about this student's week. It gets
+   the accent edge; everything below it is a suggestion and does not. */
+.ui-plan-item[data-deadline] {
+  border-left: 3px solid var(--primary-600);
+}
+
+.ui-plan-rank {
+  flex: 0 0 auto;
+  /* Optically level with the title rather than with the small label above it. */
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--surface-sunken);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ui-plan-item[data-deadline] .ui-plan-rank {
+  background: var(--primary-600);
+  color: #ffffff;
+}
+
+.ui-plan-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.ui-plan-kind {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.ui-plan-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.ui-plan-why {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* At 390px the three columns become two rows: rank and heading, then the
+   action full width. A row that wraps puts the button under the wrong item,
+   which on a list of instructions is the whole failure. */
+@media (max-width: 640px) {
+  .ui-plan-item {
+    grid-template-columns: auto 1fr;
+    row-gap: 12px;
+  }
+
+  .ui-plan-item .ui-button {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .ui-plan-rank {
+    margin-top: 14px;
+  }
+}
+
+/* Hoisted by the study plan, and said so — otherwise a card that jumped to the
+   top looks like the ordering is broken. */
+.ui-practice-set-flag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  color: var(--primary-600);
+}
+
+/* The way through to the full plan from Home. Deliberately a text link, not a
+   second card: Home already carries one prompt and the test list, and a third
+   block competing for the same tap is what this replaced. */
+.ui-plan-link {
+  margin: -4px 0 0;
+  font-size: 14px;
+}
+
+.ui-plan-link a {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Student dashboard
+   ==========================================================================
+   Home, at a glance. `ui-sd-*` throughout, so nothing here can collide with
+   the teacher's `.ui-result-*` / `.ui-student-*` names in the other sheets —
+   a name meaning two components in two stylesheets has already cost one
+   screen its layout.
+
+   Two layouts from one DOM:
+
+   - On a desk, a main column (tests, latest result, up next, finished) and a
+     side column of small cards.
+   - On a phone, the column wrappers are `display: contents`, every card
+     becomes an item of one grid, and `order` puts them in PRIORITY order
+     rather than DOM order. A side column that simply followed the main one
+     would put announcements beneath every finished paper of the year.
+
+   A card with nothing to say (`data-quiet`) sinks below the ones that do on a
+   phone, keeping its place among the other quiet ones. "No new feedback" is
+   true and worth saying; it is not worth the second screenful.
+   ---------------------------------------------------------------------- */
+
+.ui-student-main[data-width="wide"] {
+  max-width: 1160px;
+}
+
+.ui-sd {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.ui-sd-main,
+.ui-sd-side {
+  display: contents;
+}
+
+.ui-sd [data-sd="tests"] { order: 1; }
+.ui-sd [data-sd="feedback"] { order: 2; }
+.ui-sd [data-sd="result"] { order: 3; }
+.ui-sd [data-sd="plan"] { order: 4; }
+.ui-sd [data-sd="fix"] { order: 5; }
+.ui-sd [data-sd="announcements"] { order: 6; }
+.ui-sd [data-sd="concepts"] { order: 7; }
+.ui-sd [data-sd="readiness"] { order: 8; }
+.ui-sd [data-sd="effort"] { order: 9; }
+.ui-sd [data-sd="saved"] { order: 10; }
+.ui-sd [data-sd="finished"] { order: 11; }
+.ui-sd [data-sd="viewers"] { order: 12; }
+.ui-sd [data-sd][data-quiet] { order: 20; }
+
+@media (min-width: 960px) {
+  .ui-sd {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+    align-items: start;
+    gap: 24px;
+  }
+
+  .ui-sd-main,
+  .ui-sd-side {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+  }
+
+  /* Back to DOM order inside each column. */
+  .ui-sd [data-sd],
+  .ui-sd [data-sd][data-quiet] {
+    order: 0;
+  }
+}
+
+/* The existing heading carries a 34px top margin for a page of stacked
+   sections; inside a grid with its own gap that doubles the space. */
+.ui-sd-heading {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.ui-sd-none-open {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 16px 18px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-card);
+}
+
+/* --- The card ---------------------------------------------------------- */
+
+.ui-sd-card {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.ui-sd-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+}
+
+.ui-sd-card-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  color: var(--text-primary);
+}
+
+.ui-sd-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+}
+.ui-sd-link:hover {
+  color: var(--accent-hover);
+}
+
+.ui-sd-line {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+.ui-sd-line:empty {
+  display: none;
+}
+
+.ui-sd-fine {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.ui-sd-count {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ui-sd-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: 2px;
+}
+
+.ui-sd-failed {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.ui-sd-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.ui-sd-empty-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ui-sd-empty-body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* --- Latest result ----------------------------------------------------- */
+
+.ui-sd-result-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.ui-sd-result-marks {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+
+.ui-sd-result-score {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.ui-sd-result-outof {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ui-sd-result-sofar,
+.ui-sd-result-unmarked {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* --- Up next ----------------------------------------------------------- */
+
+.ui-sd-plan {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-sd-plan-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+}
+.ui-sd-plan-item:first-child {
+  border-top: 0;
+  padding-top: 2px;
+}
+
+/* Top-aligned, for the reason the plan page's rank is: centred, it floats
+   beside the middle of a three-line item and stops reading as its number. */
+.ui-sd-plan-rank {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-wash);
+  border: 1px solid var(--primary-200);
+}
+
+.ui-sd-plan-body {
+  min-width: 0;
+}
+
+.ui-sd-plan-title {
+  margin: 2px 0 2px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.ui-sd-plan-why {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* --- My concepts ------------------------------------------------------- */
+
+.ui-sd-subjects {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-sd-subject {
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ui-sd-subject:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.ui-sd-subject-name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ui-sd-bands {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 12px;
+}
+
+.ui-sd-band {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  min-width: 0;
+}
+
+/* The swatch is the mastery scale's colour, and it is never alone: the count
+   and the band's words sit beside it. */
+.ui-sd-band-swatch {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--mastery-unknown);
+}
+.ui-sd-band[data-band="secure"] .ui-sd-band-swatch { background: var(--mastery-secure); }
+.ui-sd-band[data-band="developing"] .ui-sd-band-swatch { background: var(--mastery-developing); }
+.ui-sd-band[data-band="fragile"] .ui-sd-band-swatch { background: var(--mastery-fragile); }
+
+.ui-sd-band-count {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.ui-sd-band-label {
+  overflow-wrap: anywhere;
+}
+
+.ui-sd-weakest {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+.ui-sd-weakest strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* --- Feedback, announcements ------------------------------------------ */
+
+.ui-sd-feedback-new {
+  margin: 0;
+}
+.ui-sd-feedback-new .ui-badge {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.ui-sd-quote {
+  margin: 0;
+  padding: 8px 12px;
+  border-left: 3px solid var(--primary-300);
+  background: var(--surface-sunken);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+  /* A long comment is a snippet here; the whole of it is on the result. */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ui-sd-notes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ui-sd-note {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ui-sd-note-meta {
+  margin: 0;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ui-sd-note-body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+
+/* --- Effort ------------------------------------------------------------ */
+
+.ui-sd-window {
+  margin: -4px 0 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-sd-effort {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.ui-sd-effort div {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ui-sd-effort dt {
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.ui-sd-effort dd {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* --- Saved ------------------------------------------------------------- */
+
+.ui-sd-stems {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Clamped by CSS, never cut in the data: the whole stem stays in the page for
+   a screen reader and for find-in-page. */
+.ui-sd-stem {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--text-primary);
+  padding-left: 10px;
+  border-left: 2px solid var(--border-strong);
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- Who can see my progress ------------------------------------------- */
+
+.ui-sd-viewers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-sd-viewer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 10px;
+}
+
+.ui-sd-viewer-who {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ui-sd-viewer-status {
+  margin: 0;
+}
+.ui-sd-viewer-status .ui-badge {
+  white-space: normal;
+}
+
+/* --- The language switch, in the student bar ---------------------------- */
+
+.ui-sd-lang {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+}
+
+.ui-sd-lang-buttons {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  overflow: hidden;
+}
+
+.ui-sd-lang-button {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+.ui-sd-lang-button + .ui-sd-lang-button {
+  border-left: 1px solid var(--border);
+}
+.ui-sd-lang-button:hover {
+  color: var(--text-primary);
+  background: var(--surface-sunken);
+}
+/* Pressed is said three ways: aria-pressed, weight, and the fill. */
+.ui-sd-lang-button[aria-pressed="true"] {
+  background: var(--accent-wash);
+  color: var(--accent);
+  font-weight: 700;
+}
+.ui-sd-lang-button[aria-busy="true"] {
+  cursor: progress;
+}
+
+.ui-sd-lang-hint {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* --- Save for later, in the result review ------------------------------ */
+
+.ui-sd-review-save {
+  margin-top: 12px;
+}
+
+/* --- Touch ------------------------------------------------------------- */
+
+@media (max-width: 640px), (pointer: coarse) {
+  .ui-sd-link,
+  .ui-sd-lang-button {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap-min);
+    min-width: var(--tap-min);
+    justify-content: center;
+  }
+
+  /* The plan's button drops under its item rather than squeezing the
+     sentence: a row that wraps must not put the action under the wrong
+     instruction. */
+  .ui-sd-plan-item {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .ui-sd-plan-item .ui-button {
+    grid-column: 2 / -1;
+    justify-self: start;
+  }
+
+  .ui-sd-effort dd {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* The switch and its hint take the last line of a narrow bar, after the
+     links, the theme and Sign out — otherwise it splits them across two rows
+     and "Sign out" ends up alone under the language. */
+  .ui-sd-lang {
+    order: 10;
+    flex-basis: 100%;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,834 @@
+{
+  "board": "CBSE",
+  "grade": 9,
+  "subject": "Science",
+  "status": "DRAFT — for review by a Science teacher before it is relied on",
+  "source": "Drafted against NCERT Class IX Science 'Exploration' Part 1 (iesc1) and the 398 questions imported from C:/dev/sirah_project/NCERT/data. Many of those questions are older NCERT and exemplar items mapped into the new book's chapters; the outcomes cover what they test.",
+  "notes": [
+    "Chapter 9 holds questions labelled '[Out of syllabus: the mole concept ...]' and '[Out of syllabus: states of matter ...]'. No outcome covers them, on purpose.",
+    "Prerequisites link several of these concepts to the Class 10 concepts they prepare for."
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "topics": [
+        {
+          "title": "How science works",
+          "outcomes": [
+            {
+              "code": "S9-01-1",
+              "statement": "Explains what a scientific theory and a model are, and why a prediction that fails an observation changes a theory.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-01-2",
+              "statement": "Explains why measurements rest on agreed international standards and SI units.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-01-3",
+              "statement": "Estimates quantities from everyday observations, such as the volume of air breathed in a day, and judges how reliable a prediction is.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "The nature of scientific inquiry",
+          "outcomes": [
+            "S9-01-1",
+            "S9-01-2",
+            "S9-01-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "topics": [
+        {
+          "title": "Structure of the cell",
+          "outcomes": [
+            {
+              "code": "S9-02-1",
+              "statement": "Recalls who discovered cells and who proposed the cell theory, and the units used to measure cells.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "S9-02-2",
+              "statement": "Describes the functions of the cell membrane, cell wall, nucleus, chromosomes, mitochondria, plastids, vacuoles and other organelles.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-02-3",
+              "statement": "Distinguishes prokaryotic from eukaryotic cells and plant from animal cells.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Transport across the cell",
+          "outcomes": [
+            {
+              "code": "S9-02-4",
+              "statement": "Explains diffusion and osmosis, and predicts what happens to a cell in hypotonic, isotonic and hypertonic solutions.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-02-5",
+              "statement": "Describes how an organism such as Amoeba takes in food by endocytosis.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Cell structure and organelles",
+          "outcomes": [
+            "S9-02-1",
+            "S9-02-2",
+            "S9-02-3"
+          ]
+        },
+        {
+          "name": "Diffusion, osmosis and endocytosis",
+          "outcomes": [
+            "S9-02-4",
+            "S9-02-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "topics": [
+        {
+          "title": "Plant tissues",
+          "outcomes": [
+            {
+              "code": "S9-03-1",
+              "statement": "Distinguishes apical, lateral and intercalary meristems, and explains which one increases the girth of a stem.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-03-2",
+              "statement": "Describes the permanent plant tissues — parenchyma, collenchyma, sclerenchyma, xylem and phloem — and their functions.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Animal tissues",
+          "outcomes": [
+            {
+              "code": "S9-03-3",
+              "statement": "Describes epithelial, connective, muscular and nervous tissues and where each is found.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-03-4",
+              "statement": "Distinguishes striated, smooth and cardiac muscle, and ligaments from tendons.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Plant tissues",
+          "outcomes": [
+            "S9-03-1",
+            "S9-03-2"
+          ]
+        },
+        {
+          "name": "Animal tissues",
+          "outcomes": [
+            "S9-03-3",
+            "S9-03-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "topics": [
+        {
+          "title": "Describing motion",
+          "outcomes": [
+            {
+              "code": "S9-04-1",
+              "statement": "Distinguishes distance from displacement and speed from velocity, including for motion along a circular path.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-04-2",
+              "statement": "Calculates average speed and average velocity from distance, displacement and time.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Acceleration and graphs of motion",
+          "outcomes": [
+            {
+              "code": "S9-04-3",
+              "statement": "Calculates acceleration and uses the equations of uniformly accelerated motion to find velocity, time or displacement.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S9-04-4",
+              "statement": "Interprets distance–time and velocity–time graphs, including what the slope and the area under a velocity–time graph represent.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Distance, displacement, speed and velocity",
+          "outcomes": [
+            "S9-04-1",
+            "S9-04-2"
+          ]
+        },
+        {
+          "name": "Acceleration and equations of motion",
+          "outcomes": [
+            "S9-04-3",
+            "S9-04-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "topics": [
+        {
+          "title": "Mixtures and solutions",
+          "outcomes": [
+            {
+              "code": "S9-05-1",
+              "statement": "Distinguishes pure substances from mixtures, physical from chemical changes, and homogeneous from heterogeneous mixtures.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-05-2",
+              "statement": "Distinguishes solutions, suspensions and colloids, including by the Tyndall effect.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-05-3",
+              "statement": "Calculates the concentration of a solution as mass by mass or mass by volume percentage.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Separating mixtures",
+          "outcomes": [
+            {
+              "code": "S9-05-4",
+              "statement": "Selects a suitable method — evaporation, filtration, crystallisation, distillation, sublimation, chromatography or centrifugation — to separate a given mixture, and explains why it works.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Mixtures, solutions and concentration",
+          "outcomes": [
+            "S9-05-1",
+            "S9-05-2",
+            "S9-05-3"
+          ]
+        },
+        {
+          "name": "Methods of separating mixtures",
+          "outcomes": [
+            "S9-05-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "topics": [
+        {
+          "title": "Force and Newton's laws",
+          "outcomes": [
+            {
+              "code": "S9-06-1",
+              "statement": "Explains inertia and Newton's first law using everyday examples such as passengers in a braking vehicle.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-06-2",
+              "statement": "Applies Newton's second law, F = ma, to relate force, mass and acceleration.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S9-06-3",
+              "statement": "Explains everyday events — catching a ball, a coconut cracking on a floor — in terms of how force depends on the time over which momentum changes.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Friction and gravitational force",
+          "outcomes": [
+            {
+              "code": "S9-06-4",
+              "statement": "Explains static and sliding friction, and when an object at rest begins to move.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-06-5",
+              "statement": "Calculates the gravitational force on an object using its mass and the acceleration due to gravity.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Newton's laws of motion",
+          "outcomes": [
+            "S9-06-1",
+            "S9-06-2",
+            "S9-06-3"
+          ]
+        },
+        {
+          "name": "Friction and the force of gravity",
+          "outcomes": [
+            "S9-06-4",
+            "S9-06-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "topics": [
+        {
+          "title": "Work and energy",
+          "outcomes": [
+            {
+              "code": "S9-07-1",
+              "statement": "Calculates the work done by a constant force, and explains when work is positive, negative or zero.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S9-07-2",
+              "statement": "Calculates kinetic and potential energy, and applies conservation of mechanical energy to a falling body.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S9-07-3",
+              "statement": "Calculates average power from work done and time taken.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Simple machines",
+          "outcomes": [
+            {
+              "code": "S9-07-4",
+              "statement": "Explains how simple machines such as levers make a task easier, in terms of force and distance.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Work, energy and power",
+          "outcomes": [
+            "S9-07-1",
+            "S9-07-2",
+            "S9-07-3"
+          ]
+        },
+        {
+          "name": "Simple machines",
+          "outcomes": [
+            "S9-07-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "topics": [
+        {
+          "title": "Models of the atom",
+          "outcomes": [
+            {
+              "code": "S9-08-1",
+              "statement": "Arranges the atomic models of Dalton, Thomson, Rutherford and Bohr in historical order, and describes what each changed.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S9-08-2",
+              "statement": "Explains what Rutherford's alpha-particle scattering experiment showed and the main limitation of his model.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Inside the atom",
+          "outcomes": [
+            {
+              "code": "S9-08-3",
+              "statement": "Relates atomic number and mass number to the numbers of protons, neutrons and electrons.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-08-4",
+              "statement": "Distinguishes isotopes from isobars, and describes uses of isotopes.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Development of atomic models",
+          "outcomes": [
+            "S9-08-1",
+            "S9-08-2"
+          ]
+        },
+        {
+          "name": "Atomic number, mass number and isotopes",
+          "outcomes": [
+            "S9-08-3",
+            "S9-08-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "topics": [
+        {
+          "title": "Laws of chemical combination and symbols",
+          "outcomes": [
+            {
+              "code": "S9-09-1",
+              "statement": "States the laws of conservation of mass and constant proportions, and applies the second to a mass ratio.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "S9-09-2",
+              "statement": "Describes Dalton's postulates of atomic theory, and writes the chemical symbols of common elements.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Formulae and molecular mass",
+          "outcomes": [
+            {
+              "code": "S9-09-3",
+              "statement": "Writes the chemical formula of a compound from the valencies or ionic charges of its elements.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S9-09-4",
+              "statement": "Calculates the molecular mass of a compound from atomic masses.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Laws of chemical combination",
+          "outcomes": [
+            "S9-09-1",
+            "S9-09-2"
+          ]
+        },
+        {
+          "name": "Chemical formulae and molecular mass",
+          "outcomes": [
+            "S9-09-3",
+            "S9-09-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "topics": [
+        {
+          "title": "Characteristics of sound",
+          "outcomes": [
+            {
+              "code": "S9-10-1",
+              "statement": "Explains that sound needs a medium and travels as a longitudinal wave.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-10-2",
+              "statement": "Relates frequency, time period, wavelength and speed of a sound wave, and uses v = fλ in calculations.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-10-3",
+              "statement": "Relates amplitude and frequency to loudness and pitch, and names the ranges of infrasound and ultrasound.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Applications of sound",
+          "outcomes": [
+            {
+              "code": "S9-10-4",
+              "statement": "Calculates distances from the time delay of an echo or of thunder after lightning, and describes uses of ultrasound.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Sound waves and their characteristics",
+          "outcomes": [
+            "S9-10-1",
+            "S9-10-2",
+            "S9-10-3"
+          ]
+        },
+        {
+          "name": "Echo and uses of sound",
+          "outcomes": [
+            "S9-10-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "topics": [
+        {
+          "title": "Cell division and asexual reproduction",
+          "outcomes": [
+            {
+              "code": "S9-11-1",
+              "statement": "Distinguishes mitosis from meiosis, and explains why gametes must be formed by meiosis.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-11-2",
+              "statement": "Explains why asexual reproduction produces offspring genetically identical to the parent.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Sexual reproduction",
+          "outcomes": [
+            {
+              "code": "S9-11-3",
+              "statement": "Describes the male and female parts of a flower, and the features of wind- and insect-pollinated flowers.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-11-4",
+              "statement": "Describes human reproductive organs, the menstrual cycle and the development of the embryo and foetus.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Cell division and asexual reproduction",
+          "outcomes": [
+            "S9-11-1",
+            "S9-11-2"
+          ]
+        },
+        {
+          "name": "Reproductive organs and human development",
+          "outcomes": [
+            "S9-11-3",
+            "S9-11-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "topics": [
+        {
+          "title": "Basis of classification",
+          "outcomes": [
+            {
+              "code": "S9-12-1",
+              "statement": "Arranges the taxonomic hierarchy from kingdom to species, and explains the characters classification is based on.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            },
+            {
+              "code": "S9-12-2",
+              "statement": "Classifies organisms into the five kingdoms, distinguishing prokaryotes from eukaryotes.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Plant and animal diversity",
+          "outcomes": [
+            {
+              "code": "S9-12-3",
+              "statement": "Classifies plants into their major groups, distinguishing those that produce seeds.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-12-4",
+              "statement": "Classifies animals into their phyla and vertebrate classes by distinguishing features, such as an open circulatory system or a cartilaginous skeleton.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Hierarchy and basis of classification",
+          "outcomes": [
+            "S9-12-1",
+            "S9-12-2"
+          ]
+        },
+        {
+          "name": "Diversity of plants and animals",
+          "outcomes": [
+            "S9-12-3",
+            "S9-12-4"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "topics": [
+        {
+          "title": "Biogeochemical cycles",
+          "outcomes": [
+            {
+              "code": "S9-13-1",
+              "statement": "Describes the water, carbon, nitrogen and oxygen cycles, including how nitrogen is fixed and how oxygen returns to the atmosphere.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Air, water, soil and energy",
+          "outcomes": [
+            {
+              "code": "S9-13-2",
+              "statement": "Explains the greenhouse effect and the role of greenhouse gases and ozone.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            },
+            {
+              "code": "S9-13-3",
+              "statement": "Explains the causes of water pollution and soil erosion, and how soil erosion is prevented.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 2
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Cycles of matter on Earth",
+          "outcomes": [
+            "S9-13-1"
+          ]
+        },
+        {
+          "name": "Environmental problems and the Earth system",
+          "outcomes": [
+            "S9-13-2",
+            "S9-13-3"
+          ]
+        }
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "concept": "Diffusion, osmosis and endocytosis",
+      "requires": "Cell structure and organelles"
+    },
+    {
+      "concept": "Animal tissues",
+      "requires": "Cell structure and organelles"
+    },
+    {
+      "concept": "Acceleration and equations of motion",
+      "requires": "Distance, displacement, speed and velocity"
+    },
+    {
+      "concept": "Newton's laws of motion",
+      "requires": "Acceleration and equations of motion"
+    },
+    {
+      "concept": "Work, energy and power",
+      "requires": "Newton's laws of motion"
+    },
+    {
+      "concept": "Atomic number, mass number and isotopes",
+      "requires": "Development of atomic models"
+    },
+    {
+      "concept": "Chemical formulae and molecular mass",
+      "requires": "Laws of chemical combination"
+    },
+    {
+      "concept": "Diversity of plants and animals",
+      "requires": "Hierarchy and basis of classification"
+    },
+    {
+      "concept": "Writing and balancing chemical equations",
+      "requires": "Chemical formulae and molecular mass"
+    },
+    {
+      "concept": "Covalent bonding and structure of carbon compounds",
+      "requires": "Atomic number, mass number and isotopes"
+    },
+    {
+      "concept": "Asexual reproduction",
+      "requires": "Cell division and asexual reproduction"
+    },
+    {
+      "concept": "Sexual reproduction in plants and humans",
+      "requires": "Reproductive organs and human development"
+    },
+    {
+      "concept": "Transportation and excretion",
+      "requires": "Plant tissues"
+    },
+    {
+      "concept": "Food chains and energy flow",
+      "requires": "Cycles of matter on Earth"
+    },
+    {
+      "concept": "Chemical formulae and molecular mass",
+      "requires": "Atomic number, mass number and isotopes",
+      "why": "Bonding and formulae are decided by the outer shell, so the structure of the atom has to be settled first.",
+      "source": "NCERT project data/prerequisites.json (hand-authored chapter bridges)"
+    }
+  ]
+}

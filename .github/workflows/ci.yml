@@ -1,0 +1,109 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# The RLS audit runs last and loudest. Every other stage can fail for ordinary
+# reasons; that one failing means a table could leak across tenants.
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: sahayak
+        ports:
+          - 5434:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d sahayak"
+          --health-interval 3s
+          --health-timeout 3s
+          --health-retries 20
+
+    env:
+      # The app and the tests connect as sahayak_app: no superuser, no
+      # BYPASSRLS. A superuser bypasses row-level security unconditionally, and
+      # a tenancy suite run as one passes while proving nothing.
+      DATABASE_URL: postgresql://sahayak_app:ci_password@localhost:5434/sahayak?schema=public
+      DIRECT_URL: postgresql://postgres:postgres@localhost:5434/sahayak?schema=public
+      APP_DB_PASSWORD: ci_password
+      # The curriculum-authoring role. Its own connection, so a teacher-facing
+      # route physically cannot write the shared curriculum.
+      PLATFORM_DATABASE_URL: postgresql://sahayak_platform:ci_platform_password@localhost:5434/sahayak?schema=public
+      PLATFORM_DB_PASSWORD: ci_platform_password
+      SESSION_SECRET: ci-session-secret-not-used-outside-ci-0000
+      # Without this the scheduled-sweep route refuses everything, and the
+      # smoke check that proves the scheduler can run it would be skipped.
+      CRON_SECRET: ci-cron-secret-not-used-outside-ci-0000
+      # Deliberately unset. CI runs the whole AI layer against the mock
+      # provider: every guard, every ledger write and every refusal path is
+      # exercised, and not one request leaves the building.
+      ANTHROPIC_API_KEY: ""
+      APP_URL: http://localhost:3210
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Encoding
+        run: npm run check:encoding
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Migrate
+        run: npx prisma migrate deploy
+
+      - name: Apply RLS policies
+        run: npm run db:rls
+
+      - name: Seed the curriculum
+        run: npm run db:seed
+
+      - name: Integration tests
+        run: npm run test:integration
+
+      - name: Build
+        run: npm run build
+
+      # All seven suites, not a sample. These are the only checks that exercise
+      # cookies, route guards and the rendered pages together — the layer where
+      # a unit test cannot see the bug.
+      - name: Smoke the running build
+        run: |
+          npm start &
+          npx wait-on http://localhost:3210/signin/ --timeout 60000
+          npm run smoke
+
+      # What only a browser can prove: work surviving a refresh or a dropped
+      # connection, keyboard operation, axe violations, and layout at 360px.
+      # Deliberately NOT a second smoke suite — the HTTP checks above already
+      # cover status codes and payloads, and re-proving them in a browser would
+      # double the runtime for nothing.
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: End-to-end and accessibility
+        run: npm run test:e2e
+
+      # Last, and the one that must never be made non-blocking.
+      - name: RLS audit
+        run: npm run audit:rls

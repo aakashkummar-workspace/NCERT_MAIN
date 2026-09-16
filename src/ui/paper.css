@@ -1,0 +1,318 @@
+/*
+ * A printed question paper.
+ *
+ * The screen view is a preview of the page, so it is measured in the same
+ * units the printer uses and kept to A4's text width. The `@media print`
+ * block is the feature, not polish: this document exists to come out of a
+ * photocopier at a school with one working printer.
+ *
+ * Class names are `ui-paper-*`; grep the other stylesheets before adding one.
+ */
+
+.ui-paper {
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 28px 32px;
+  max-width: 190mm;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* ---- Header ----------------------------------------------------------- */
+
+.ui-paper-head {
+  text-align: center;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--text-primary);
+}
+.ui-paper-school {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.ui-paper-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.ui-paper-school-name {
+  font-size: 17px;
+  font-weight: 700;
+}
+.ui-paper-title {
+  margin: 8px 0 2px;
+  font-size: 19px;
+  font-weight: 700;
+}
+.ui-paper-meta {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.ui-paper-figures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.ui-paper-warning {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: var(--danger);
+}
+
+.ui-paper-fields {
+  display: flex;
+  gap: 20px;
+  margin: 18px 0 16px;
+  font-size: 13px;
+}
+/* A ruled blank after each label, so the sheet can be filled in by hand. */
+.ui-paper-fields span {
+  flex: 1;
+  border-bottom: 1px solid var(--border-strong);
+  padding-bottom: 2px;
+  white-space: nowrap;
+}
+
+.ui-paper-instructions {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-bottom: 20px;
+}
+.ui-paper-instructions h2 {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.ui-paper-instructions ol {
+  margin: 0;
+  padding-left: 20px;
+  /* Tailwind's preflight strips every marker, so a numbered list has to ask
+     for its numbers back — and instructions without them read as a paragraph
+     somebody broke into lines. A print screenshot caught it. */
+  list-style: decimal;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ---- Questions -------------------------------------------------------- */
+
+.ui-paper-questions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+.ui-paper-question {
+  /* A question split across two pages is a question somebody misreads. */
+  break-inside: avoid;
+}
+.ui-paper-question-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: start;
+}
+.ui-paper-number {
+  font-weight: 700;
+}
+.ui-paper-stem {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.ui-paper-marks {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ui-paper-options {
+  list-style: none;
+  margin: 6px 0 0 28px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 18px;
+  font-size: 13.5px;
+}
+.ui-paper-options li {
+  display: flex;
+  gap: 6px;
+}
+.ui-paper-option-key {
+  font-weight: 600;
+}
+.ui-paper-truefalse {
+  margin: 6px 0 0 28px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.ui-paper-answer-space {
+  display: grid;
+  gap: 14px;
+  margin: 12px 0 0 28px;
+}
+.ui-paper-rule {
+  display: block;
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-paper-foot {
+  margin-top: 26px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+/* ---- The answer key --------------------------------------------------- */
+
+.ui-paper-key-banner {
+  margin: 16px 0 20px;
+  padding: 8px 12px;
+  border: 2px solid var(--danger);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+.ui-paper-key {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 2px 12px;
+  margin: 8px 0 0 28px;
+  font-size: 13px;
+}
+.ui-paper-key dt {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.ui-paper-key dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.ui-paper-key-none {
+  color: var(--text-secondary);
+}
+.ui-paper-rubric {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+.ui-paper-rubric li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 320px;
+  border-bottom: 1px dotted var(--border-strong);
+}
+
+/* ---- Actions on screen ------------------------------------------------ */
+
+.ui-paper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.ui-paper-note {
+  margin: 0 0 18px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  max-width: 70ch;
+}
+
+/* ================================================================ Print --
+
+   Same approach as report.css, and the same lesson behind it: the hide list
+   names the REAL classes in the shells, checked rather than guessed, or the
+   navigation rail prints down the side of the paper. */
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  body {
+    background: #ffffff !important;
+  }
+
+  .ui-sidebar,
+  .ui-topbar,
+  .ui-paper-actions,
+  .ui-paper-note,
+  .ui-page-header {
+    display: none !important;
+  }
+
+  .ui-shell,
+  .ui-main {
+    display: block !important;
+  }
+
+  .ui-content,
+  .ui-main {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    width: auto !important;
+  }
+
+  .ui-paper {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: #ffffff;
+    color: #000000;
+    font-size: 11.5pt;
+  }
+
+  /* Ink, not colour: a school printer is black and white, and a rule that
+     survives it is worth more than a fill that does not. */
+  .ui-paper-head {
+    border-bottom-color: #000000;
+  }
+  .ui-paper-meta,
+  .ui-paper-marks,
+  .ui-paper-instructions ol,
+  .ui-paper-foot,
+  .ui-paper-key dt,
+  .ui-paper-key-none {
+    color: #333333;
+  }
+  .ui-paper-fields span,
+  .ui-paper-rule,
+  .ui-paper-instructions,
+  .ui-paper-foot {
+    border-color: #999999;
+  }
+  .ui-paper-warning,
+  .ui-paper-key-banner {
+    color: #000000;
+    border-color: #000000;
+  }
+
+  /* The heading block repeats on every sheet of a multi-page paper, so a page
+     that is separated from page one still says which paper it belongs to. */
+  .ui-paper-head {
+    break-after: avoid;
+  }
+  .ui-paper-questions {
+    gap: 16pt;
+  }
+}

@@ -1,0 +1,550 @@
+{
+  "board": "CBSE",
+  "grade": 9,
+  "subject": "English",
+  "status": "DRAFT — for review by an English teacher before it is relied on",
+  "source": "Drafted against NCERT Class IX English 'Kaveri' (iebe1) and the 240 questions imported from C:/dev/sirah_project/NCERT/data. Each chapter pairs a prose text and a poem with a language focus; the texts and language points named here are the ones those questions actually test.",
+  "notes": [
+    "The NCERT data's syllabus.json notes that the books CBSE prescribes for Class 9 English may not be the ones in the manifest. These outcomes follow Kaveri because the imported questions do.",
+    "Language concepts carry the book and chapter in their name, because a grammar point can recur in another chapter or book and concept names must be unique."
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E9-01-1",
+              "statement": "Recalls the events of 'How I Taught My Grandmother to Read' — the serial Kashi Yatre, the grandmother's dependence on others, and how she learned to read.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E9-01-2",
+              "statement": "Explains the grandmother's motives and feelings, including why she touched her granddaughter's feet and what her girlhood had denied her.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E9-01-3",
+              "statement": "Interprets the poem 'Bharat Our Land', including its refrain and phrases such as 'of hoary antiquity'.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E9-01-4",
+              "statement": "Explains the meaning of binomial expressions such as 'sink or swim' as used in the lesson.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9-01-5",
+              "statement": "Interprets words and phrases the lesson glosses, such as 'taken aback', from their context.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'How I Taught My Grandmother to Read' and 'Bharat Our Land'",
+          "outcomes": [
+            "E9-01-1",
+            "E9-01-2",
+            "E9-01-3"
+          ]
+        },
+        {
+          "name": "Binomials and vocabulary in context (Kaveri 1)",
+          "outcomes": [
+            "E9-01-4",
+            "E9-01-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E9-02-1",
+              "statement": "Recalls the events of 'The Pot Maker' — Sentila's wish to make pots, her mother Arenla's refusal, and the lessons that followed.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E9-02-2",
+              "statement": "Explains the tension between tradition, family expectation and personal calling in 'The Pot Maker', and how the elders and villagers viewed the craft.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E9-02-3",
+              "statement": "Interprets the poem 'Gifts of Grace: Honouring Our Vocations' and what it says about the dignity of every kind of work.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E9-02-4",
+              "statement": "Explains the meaning of words from the story, such as 'malleable', in context.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9-02-5",
+              "statement": "Interprets phrases the lesson glosses, such as 'followed suit', and uses them correctly in a sentence.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'The Pot Maker' and 'Gifts of Grace'",
+          "outcomes": [
+            "E9-02-1",
+            "E9-02-2",
+            "E9-02-3"
+          ]
+        },
+        {
+          "name": "Vocabulary of craft and phrasal expressions (Kaveri 2)",
+          "outcomes": [
+            "E9-02-4",
+            "E9-02-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E9-03-1",
+              "statement": "Describes the hand fans of different regions of India in 'Winds of Change' — their materials, forms and cultural uses.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E9-03-2",
+              "statement": "Explains how the pankha changed over time and what the chapter proposes for preserving the craft.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E9-03-3",
+              "statement": "Identifies the imagery and figures of speech in the poem 'Canvas of Soil', such as 'brushstrokes of seeds'.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E9-03-4",
+              "statement": "Identifies correct collocations and explains what a collocation is.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9-03-5",
+              "statement": "Applies the rule of fixed order in paired expressions joined by 'and', such as 'bread and butter'.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'Winds of Change' and 'Canvas of Soil'",
+          "outcomes": [
+            "E9-03-1",
+            "E9-03-2",
+            "E9-03-3"
+          ]
+        },
+        {
+          "name": "Collocations and fixed word order (Kaveri 3)",
+          "outcomes": [
+            "E9-03-4",
+            "E9-03-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E9-04-1",
+              "statement": "Recalls the events of 'Vitamin-M' — Grandpa's outings, Ravi's suspicion and what he discovered.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E9-04-2",
+              "statement": "Explains the irony in 'Vitamin-M', the relationship between Ravi, his mother and Grandpa, and what Vitamin-M stands for.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E9-04-3",
+              "statement": "Interprets the poem 'I Cannot Remember My Mother', including its sensory images and what happens in each stanza.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E9-04-4",
+              "statement": "Identifies prepositions and explains their use, as the chapter defines them.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9-04-5",
+              "statement": "Identifies synonyms in context and explains symbolism as a literary device.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'Vitamin-M' and 'I Cannot Remember My Mother'",
+          "outcomes": [
+            "E9-04-1",
+            "E9-04-2",
+            "E9-04-3"
+          ]
+        },
+        {
+          "name": "Prepositions, synonyms and symbolism (Kaveri 4)",
+          "outcomes": [
+            "E9-04-4",
+            "E9-04-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E9-05-1",
+              "statement": "Recalls the facts of 'The World of Limitless Possibilities' — the Paralympic Games, India's debut, and Dr. Deepa Malik's diagnosis and achievements.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E9-05-2",
+              "statement": "Explains the challenges Dr. Malik describes, the choices she made and her advice, using evidence from the interview.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E9-05-3",
+              "statement": "Interprets the poem 'Nine Gold Medals', including what happens in the race and what it says about compassion over winning.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E9-05-4",
+              "statement": "Explains what a modal such as 'could' expresses in a given sentence.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9-05-5",
+              "statement": "Interprets idioms from the chapter, such as 'in hindsight' and 'a new lease of life'.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'The World of Limitless Possibilities' and 'Nine Gold Medals'",
+          "outcomes": [
+            "E9-05-1",
+            "E9-05-2",
+            "E9-05-3"
+          ]
+        },
+        {
+          "name": "Modals and idiomatic expressions (Kaveri 5)",
+          "outcomes": [
+            "E9-05-4",
+            "E9-05-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E9-06-1",
+              "statement": "Recalls the plot of the play 'Twin Melodies' — the fusion group, Shruti's fear of her father, and how Nabin changed his mind.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E9-06-2",
+              "statement": "Explains the conflict between classical tradition and fusion music in 'Twin Melodies' and how it is resolved.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E9-06-3",
+              "statement": "Identifies the metaphors the poet uses for music in 'A Friend Found in Music' and interprets them.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E9-06-4",
+              "statement": "Explains the purpose of stage directions, an aside and an ellipsis in a play script.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9-06-5",
+              "statement": "Interprets words and phrases the play glosses, such as 'crescendo' and 'worked his fingers to the bone'.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'Twin Melodies' and 'A Friend Found in Music'",
+          "outcomes": [
+            "E9-06-1",
+            "E9-06-2",
+            "E9-06-3"
+          ]
+        },
+        {
+          "name": "Conventions of a play script (Kaveri 6)",
+          "outcomes": [
+            "E9-06-4",
+            "E9-06-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E9-07-1",
+              "statement": "Describes Khetaram's work as a Gramin Dak Sewak in 'Carrier of Words' — his route, the regulations he works under and the hardships of the desert.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E9-07-2",
+              "statement": "Explains why the rural postal service matters to the people Khetaram serves and to Khetaram himself, using evidence from the chapter.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E9-07-3",
+              "statement": "Interprets the poem 'Words', including its claim about what a few true words can do.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E9-07-4",
+              "statement": "Identifies sentences in the passive voice and distinguishes them from the active voice.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9-07-5",
+              "statement": "Identifies hyperbole in lines from the chapter and explains its effect.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'Carrier of Words' and 'Words'",
+          "outcomes": [
+            "E9-07-1",
+            "E9-07-2",
+            "E9-07-3"
+          ]
+        },
+        {
+          "name": "Passive voice and hyperbole (Kaveri 7)",
+          "outcomes": [
+            "E9-07-4",
+            "E9-07-5"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "topics": [
+        {
+          "title": "Reading and interpreting the texts",
+          "outcomes": [
+            {
+              "code": "E9-08-1",
+              "statement": "Recalls who wrote the letter 'Follow That Dream', and the steps and examples the mother gives for pursuing a dream.",
+              "bloom": "REMEMBER",
+              "competency": "KNOWLEDGE",
+              "marks": 1
+            },
+            {
+              "code": "E9-08-2",
+              "statement": "Explains the mother's argument about what separates greatness from the ordinary, and about dreams that come later in life.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "E9-08-3",
+              "statement": "Interprets the poem 'Believe in Yourself', including phrases such as 'status quo' and how the poem ends.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "title": "Vocabulary and structures in context",
+          "outcomes": [
+            {
+              "code": "E9-08-4",
+              "statement": "Explains how compound words such as 'dreamscape' are formed and what their parts mean.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9-08-5",
+              "statement": "Identifies the first conditional and interprets idioms such as 'wishful thinking'.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading 'Follow That Dream' and 'Believe in Yourself'",
+          "outcomes": [
+            "E9-08-1",
+            "E9-08-2",
+            "E9-08-3"
+          ]
+        },
+        {
+          "name": "Compound words and the first conditional (Kaveri 8)",
+          "outcomes": [
+            "E9-08-4",
+            "E9-08-5"
+          ]
+        }
+      ]
+    }
+  ],
+  "prerequisites": []
+}

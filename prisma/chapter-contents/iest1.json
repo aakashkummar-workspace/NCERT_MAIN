@@ -1,0 +1,2511 @@
+{
+  "book": "iest1",
+  "bookTitle": "Understanding Society: India and Beyond, Grade 9 – Part 1",
+  "class": 9,
+  "chapters": [
+    {
+      "bookChapter": 1,
+      "title": "Understanding Social Science",
+      "pages": 12,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explains what Social Science is: the systematic study of human society that asks not only what happened and where, but why and how aspects of life are interconnected. It traces the spirit of inquiry in India's knowledge traditions, introduces the four disciplines studied in Grades 9-10 (Geography, History, Political Science and Economics), and explains why Social Science matters for citizens now and in the future.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Social Science in Everyday Life",
+          "points": [
+            "Even simple daily activities, such as eating food, travelling on roads, going to school and using electricity, rely on systems of governance, economic production, social cooperation and the natural environment.",
+            "Questions such as why some people live in crowded cities, why regions depend on farming or industry, or why some regions are prone to floods show that society does not function by chance.",
+            "Society is shaped by history, geography, institutions, resources and human choices; Social Science explores these through observation, evidence and logical reasoning.",
+            "Observing changes in one's locality helps one see society as one connected story rather than separate pieces."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Understanding Society through Time and Traditions",
+          "points": [
+            "Society has changed greatly over thousands of years: early communities depended on nature, then people learnt to grow crops, domesticate animals, build settlements and organise governance; villages grew into towns and cities.",
+            "India's knowledge traditions valued discussion, questioning and logical reasoning, exploring knowledge through observation, reflection and dialogue.",
+            "The Pañchamahābhūtas describe the natural world as an interconnected system in which human life is embedded; vasudhaiva kuṭumbakam expresses the interconnectedness of human societies.",
+            "The Arthaśhāstra, attributed to Kauṭilya about 2,300 years ago, examined administration, economic management, taxation and duties of rulers.",
+            "Social scientists observe people's lives, conduct interviews and surveys, examine documents and compare times and places to build evidence-based explanations of continuity and change."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Social Science as a Study of Disciplines",
+          "points": [
+            "No single field can explain society; a drought, for example, affects the environment, economy, politics, society and culture.",
+            "Social Science is a group of related disciplines; Grades 9-10 draw mainly on Geography, History, Political Science and Economics.",
+            "Sociology, Philosophy, Anthropology and Psychology also belong to the broader Social Science family.",
+            "Each discipline asks different questions, but together they give a holistic understanding of society."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Geography",
+              "points": [
+                "Geography studies the location and distribution of places, objects, materials and people, and the relationships between societies and their surroundings.",
+                "It integrates spatial perspectives (location and its significance) with temporal perspectives (change over time) and draws on natural and social sciences.",
+                "It helps answer questions such as how the Indian peninsula's long coastline facilitated contact with Africa, Europe and Southeast Asia.",
+                "Its tools include maps, globes, atlases, GIS and infographics; NCERT's School Bhuvan portal can be used to map one's own village or city.",
+                "Over two years students will study landforms, atmosphere and climate, oceans, biomes, biosphere reserves and geospatial technologies."
+              ]
+            },
+            {
+              "number": null,
+              "title": "History",
+              "points": [
+                "History is the study of the human past, through which societies understand people's experiences, values and changes over time.",
+                "The itihāsa-purāṇa tradition is one of the oldest traditions of preserving cultural memory in Bharat, sharing historical information and cultural meaning through stories.",
+                "Modern historiography relies on empirical evidence and tools such as human genetics, carbon-14 dating and archaeology.",
+                "Sources include literary traditions (travelogues, memoirs, genealogical records, folklore, revenue documents) and archaeological sources (monuments, excavated sites, artefacts, art).",
+                "Sources are illustrated as literary, archaeological, epigraphic and numismatic sources, e.g. the Sāmaveda manuscript, a Brahmi inscription of the Gupta period and a coin of Samudragupta."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Political Science",
+              "points": [
+                "Political Science is the study of governance: how and why power is distributed, decisions are made and policies implemented, including constitutions, governments and State institutions.",
+                "It also studies social movements, nation building, foreign policy and how power is exercised in everyday life; the Panchayati Raj system embodies grassroots democracy.",
+                "In India, politics was linked with dharma, artha and rājadharma; texts such as the Vedas, Upaniṣads, Purāṇas, Mahābhārata and Śhukranīti discuss governance.",
+                "The Arthaśhāstra stands out as a foundational text on politics and administration; power was viewed as a responsibility rather than a privilege.",
+                "Students will study democracy, elections, authority, civil society, governance and public policy, and national security."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Economics",
+              "points": [
+                "Economics studies how individuals and societies use limited resources to meet needs, and how goods and services are produced, exchanged and distributed.",
+                "It explores decision-making by consumers, producers and governments, and is about well-being, equity and justice, not only numbers.",
+                "India was for centuries a leading economy; colonial rule caused poverty, famines and decline of traditional industries, and after independence India rebuilt its economy.",
+                "Economic development and sustainable growth remain central national goals.",
+                "Students will study the Indian economy, markets and prices, financial management, GDP, international trade and the Union Budget."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Why Should We Study Social Science?",
+          "points": [
+            "Social Science helps us understand how systems such as housing, water, roads, schools and markets developed and affect different groups.",
+            "It explains differences in language, customs and occupations as outcomes of geographical, historical, cultural and economic factors, building respect and recognising India's underlying unity.",
+            "Understanding how governments function prepares citizens to participate responsibly in civic life.",
+            "It develops the habit of asking informed questions about shared challenges, and connects the past, present and future."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "The Future of Social Science",
+          "points": [
+            "New technologies, expanding cities, environmental concerns, migration and global connections are reshaping how people live.",
+            "Social Science will help address climate change, sustainable development, social harmony and equitable use of resources, and guide responsible use of technology.",
+            "It prepares students to take part in shaping the world as informed citizens."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Secondary-Stage Social Science: Your Two-Year Learning Journey (Grades 9–10)",
+              "points": [
+                "Students will examine historical events, geographical features, political systems and economies, and contemporary challenges.",
+                "The Grade 9 textbook gives a balanced introduction to Geography, History, Political Science and Economics.",
+                "Social Science is not about memorising dates, maps or definitions but about understanding people, places, society, culture and power."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Social Science",
+          "meaning": "The systematic study of human society, explaining why events occur, how people live together, how environments, governments and economies work."
+        },
+        {
+          "term": "Pañchamahābhūtas",
+          "meaning": "The five great elements from Indian philosophical traditions (earth, water, fire, air and space), an early attempt to understand nature as an interconnected system."
+        },
+        {
+          "term": "Vasudhaiva kuṭumbakam",
+          "meaning": "'The world is one family', expressing the interconnectedness of human societies."
+        },
+        {
+          "term": "Geography",
+          "meaning": "Studies the Earth, its environments and the relationships between people and their surroundings."
+        },
+        {
+          "term": "History",
+          "meaning": "Examines the human past and how societies change over time."
+        },
+        {
+          "term": "Political Science",
+          "meaning": "Analyses systems of governance, power, and the rights and responsibilities of citizens."
+        },
+        {
+          "term": "Economics",
+          "meaning": "Explores how societies produce, distribute and utilise resources to meet their needs."
+        },
+        {
+          "term": "Empirical evidence",
+          "meaning": "Information collected by actual observation or experimentation."
+        },
+        {
+          "term": "Genealogical records",
+          "meaning": "Documents tracing family lineage and ancestry by recording relationships between generations and events such as births, marriages and deaths."
+        },
+        {
+          "term": "Archaeological sources",
+          "meaning": "Material remains used to study the past, such as monuments, structures, excavated sites, artefacts and art."
+        },
+        {
+          "term": "Epigraphic source",
+          "meaning": "Texts, decrees or records inscribed on durable materials such as stone, metal plates or rock surfaces."
+        },
+        {
+          "term": "Numismatic source",
+          "meaning": "Coins, currency or medals, which help historians study economy, chronology, rulers, trade and culture."
+        },
+        {
+          "term": "Itihāsa-purāṇa tradition",
+          "meaning": "One of the oldest traditions of preserving cultural memory in Bharat, sharing history and cultural meaning through stories."
+        },
+        {
+          "term": "Rājadharma",
+          "meaning": "The duties of the ruler."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Text",
+          "statement": "The Arthaśhāstra, attributed to Kauṭilya, was composed about 2,300 years ago and examined administration, economic management, taxation and duties of rulers."
+        },
+        {
+          "label": "Example",
+          "statement": "A drought affects crops (environment), farmers' incomes (economy), relief measures (politics), migration (society) and traditional coping (culture)."
+        },
+        {
+          "label": "Figure",
+          "statement": "Sources shown: Sāmaveda manuscript (National Museum, New Delhi), palm-leaf manuscript of the Tirukkuṟaḷ, terracotta figurine from the Sindhu-Sarasvatī Civilisation, 12th-century Viṣhṇu sculpture, Brahmi inscription of the Gupta period, Kannada inscription of Krishnadeva Raya at Hampi, coin of Samudragupta (4th century CE) and Mughal coin of Jahangir."
+        },
+        {
+          "label": "Institution",
+          "statement": "The Panchayati Raj system embodies grassroots democracy and local self-governance at the village level."
+        }
+      ],
+      "activities": [
+        "LET’S ANALYSE",
+        "LET’S EXPLORE"
+      ],
+      "exercises": [],
+      "bookSummary": [],
+      "notes": "The chapter has no end-of-chapter exercises or summary."
+    },
+    {
+      "bookChapter": 2,
+      "title": "Shaping of the Earth’s Surface",
+      "pages": 26,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explains how internal and external forces constantly transform the Earth's surface. It introduces the Earth's layers and the theory of plate tectonics, the processes of weathering and erosion, and the landforms made by the agents of gradation (running water, waves and currents, glaciers, wind and underground water). It links landforms to human life and to disasters such as landslides, avalanches, GLOFs and dust storms.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Plate Tectonics",
+          "points": [
+            "Plate tectonics, a theory given by W.J. Morgan, explains that the Earth's outermost layer is broken into large and small tectonic plates that move slowly over the semi-molten layer beneath.",
+            "The Earth has three main layers: crust, mantle and core; the crust and upper mantle form the lithosphere, below which lies the semi-molten asthenosphere that allows plates to move.",
+            "Plates move a few centimetres a year and are continental, oceanic or mixed; major plates include the Pacific, Eurasian, African, North American, South American, Indo-Australian and Antarctic Plates.",
+            "Plate movement is caused by convection currents in the mantle: heat from the core makes molten material rise while cooler material sinks.",
+            "Plate boundaries are convergent (plates move towards each other, forming fold mountains like the Himalaya or causing subduction), divergent (plates move apart, forming mid-ocean ridges like the Mid-Atlantic Ridge) and transform (plates slide past, e.g. the San Andreas Fault).",
+            "Most earthquakes and volcanoes occur along plate boundaries, especially around the Pacific Ocean, the Ring of Fire; the theory helps identify earthquake- and volcano-prone regions."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Process of Weathering and Erosion",
+          "points": [
+            "Weathering and erosion continuously break down and reshape the Earth's surface, wearing down mountains, carving valleys, forming plains and creating caves, cliffs and deltas."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Weathering",
+              "points": [
+                "Weathering is the breaking down of rocks into smaller pieces without movement of the broken material.",
+                "Physical weathering is caused by temperature changes, frost or wind; chemical weathering by reactions with water, air or acids; biological weathering by plants, animals or micro-organisms, e.g. roots splitting rocks.",
+                "Weathering shapes the Earth's surface and forms soil."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Erosion",
+              "points": [
+                "Erosion is the wearing away and carrying of soil, rocks and surface materials by water, wind, ice or waves; unlike weathering it involves movement.",
+                "Types include water erosion, wind erosion, glacial erosion and coastal erosion.",
+                "Erosion removes fertile topsoil for farmers, washes away land, houses and roads near rivers and coasts, destabilises land in construction and mining, and harms tourism and fishing.",
+                "The Sindhu-Sarasvatī civilisation used contouring, bunding, terracing, dams and canals; the Zabo system in Nagaland uses earthen bunds on hillslopes for soil and water conservation."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Agents of Gradation",
+          "points": [
+            "Agents of gradation are natural forces that wear down, transport and deposit materials, levelling the Earth's surface over time.",
+            "The main agents are running water, glaciers, wind, waves and groundwater; together they lower high areas and fill up low areas.",
+            "Landforms shaped human history: river plains such as the Ganga, Nile and Indus gave rise to agricultural societies, the Himalayas shielded India, and deserts such as the Thar encouraged trade routes."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Running Water",
+              "points": [
+                "Rivers shape land by erosion, transportation and deposition: V-shaped valleys, waterfalls and rapids in the upper course; meanders, oxbow lakes and floodplains in the middle course; deltas, levees and alluvial fans in the lower course.",
+                "A waterfall forms where hard rocks resist erosion and softer rocks below are worn away; waterfalls support tourism and hydroelectric power.",
+                "A meander is a winding bend formed by lateral erosion of outer banks and deposition on inner banks; its fertile soil supports farming, and the Grand Anicut (Kallanai) in Tamil Nadu shows river use for irrigation.",
+                "A delta is a fan-shaped or triangular landform at a river's mouth made of deposited sediment; deltas are fertile for rice and jute and support fishing but are flood-prone. The Sundarbans delta is an example."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Waves and Currents",
+              "points": [
+                "Waves and currents reshape the coastal zone, creating beaches, sand bars, sea cliffs, sea caves, arches and stacks.",
+                "A beach is made of sand, pebbles or rocks deposited by waves; beaches support tourism and fishing and act as natural barriers against strong waves.",
+                "Coastal erosion forms cliffs, wave-cut platforms, caves, arches (when caves on opposite sides of a headland meet) and stacks (pillars left after arches collapse)."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Glaciers",
+              "points": [
+                "Glacial erosion forms U-shaped valleys, cirques, aretes, hanging valleys and fjords.",
+                "These support trekking, skiing and mountaineering; fjords are used for harbours and fishing; glaciers are crucial sources of fresh water.",
+                "Moraines are deposits of till left by glaciers: lateral, terminal and medial moraines; they create fertile soil and natural dams and lakes."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Wind",
+              "points": [
+                "Wind erosion creates yardangs, ventifacts, deflation hollows or blowouts, and desert pavements.",
+                "Dunes are hills or ridges of sand formed by wind: barchan, longitudinal, star and parabolic dunes.",
+                "Dunes act as natural barriers against desertification and sea winds and provide tourism; their sand is sometimes used for construction."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Underground Water",
+              "points": [
+                "In limestone or soluble rock areas, underground water creates Karst topography through chemical weathering and erosion.",
+                "Landforms include caves, stalactites, stalagmites, sinkholes or dolines, and underground rivers.",
+                "They provide fresh water, tourism and sometimes cultural or religious significance."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Landforms and Disasters",
+          "points": [
+            "Several disasters are associated with different landforms; four are presented, each with space for prone areas, mitigation measures and recent examples."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Landslides",
+              "points": [
+                "Heavy continuous rainfall increases the weight of soil and rocks and reduces friction; earthquakes, volcanic eruptions, steep slopes and loose rocks add to the risk.",
+                "Deforestation, mining, road construction, unplanned hillside construction, poor drainage and improper land use also cause landslides."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Avalanches",
+              "points": [
+                "Avalanches result from sudden instability of snow on steep slopes after heavy snowfall, especially on weak layers.",
+                "Temperature rise, strong winds, earthquakes and human activities such as skiing, trekking or construction can trigger them."
+              ]
+            },
+            {
+              "number": null,
+              "title": "GLOFs",
+              "points": [
+                "Glacial Lake Outburst Floods are the sudden release of water from glacial lakes.",
+                "Rapid glacier melting enlarges lakes and pressures their ice or moraine dams; heavy rainfall, earthquakes, avalanches or landslides may cause the dam to collapse, flooding downstream areas."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Dust Storms",
+              "points": [
+                "Strong winds lift loose, dry soil and sand; drought and low rainfall dry out the soil.",
+                "They are common in desert and semi-arid regions; sparse vegetation from deforestation, overgrazing or poor farming, and climate change increase their frequency."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Landform",
+          "meaning": "A natural feature on the Earth's surface formed by weathering, erosion, deposition and crust movement, e.g. mountains, valleys, plateaus, plains, deserts."
+        },
+        {
+          "term": "Plate tectonics",
+          "meaning": "Theory that the Earth's outermost layer is broken into tectonic plates that move slowly over the semi-molten layer beneath."
+        },
+        {
+          "term": "Lithosphere",
+          "meaning": "The rigid outer layer of the Earth including the crust and upper mantle."
+        },
+        {
+          "term": "Asthenosphere",
+          "meaning": "A hot, mobile, semi-molten layer beneath the lithosphere that allows plates to move."
+        },
+        {
+          "term": "Crust",
+          "meaning": "The outermost layer; 30-40 km thick under continents and 5-7 km under oceans."
+        },
+        {
+          "term": "Mantle",
+          "meaning": "The mostly solid layer between the crust and the outer core."
+        },
+        {
+          "term": "Outer core",
+          "meaning": "A fluid layer mainly of iron and nickel."
+        },
+        {
+          "term": "Inner core",
+          "meaning": "A solid, hot spinning metal ball, the densest part of the Earth."
+        },
+        {
+          "term": "Convection currents",
+          "meaning": "Continuous rising of heated molten material and sinking of cooler material in the mantle, which push and pull plates."
+        },
+        {
+          "term": "Plate boundaries",
+          "meaning": "Edges where plates meet: convergent, divergent and transform."
+        },
+        {
+          "term": "Ring of Fire",
+          "meaning": "The area around the Pacific Ocean where most earthquakes and volcanoes occur."
+        },
+        {
+          "term": "Weathering",
+          "meaning": "Breaking down of rocks into smaller pieces without movement of the material."
+        },
+        {
+          "term": "Erosion",
+          "meaning": "Wearing away and carrying of surface material by water, wind, ice or waves."
+        },
+        {
+          "term": "Agents of gradation",
+          "meaning": "Natural forces that wear down, transport and deposit materials, levelling the surface."
+        },
+        {
+          "term": "Contouring",
+          "meaning": "Digging continuous contour trenches along a hillside's contour lines to slow and infiltrate rainwater and prevent erosion."
+        },
+        {
+          "term": "Bunding",
+          "meaning": "Earthen embankments along contour lines to slow run-off, reduce erosion and increase infiltration."
+        },
+        {
+          "term": "Terracing",
+          "meaning": "Creating level or gently sloping steps on a hillside to prevent soil erosion."
+        },
+        {
+          "term": "Meander",
+          "meaning": "A winding bend in the middle or lower course of a river formed by lateral erosion and deposition."
+        },
+        {
+          "term": "Delta",
+          "meaning": "A fan-shaped or triangular landform formed by sediment deposited at a river's mouth."
+        },
+        {
+          "term": "Moraines",
+          "meaning": "Landforms created by deposition of rocks, soil and debris (till) left by glaciers."
+        },
+        {
+          "term": "Dunes",
+          "meaning": "Hills or ridges of sand formed by wind in deserts or along sandy coasts."
+        },
+        {
+          "term": "Karst topography",
+          "meaning": "Landforms created by underground water in limestone or soluble rocks."
+        },
+        {
+          "term": "GLOFs",
+          "meaning": "Glacial Lake Outburst Floods: sudden release of large volumes of water from glacial lakes."
+        },
+        {
+          "term": "Bhūkampa",
+          "meaning": "The early term for earthquakes, meaning the shaking of the Earth."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Figure",
+          "statement": "Approximate thicknesses: lithosphere 100 km, asthenosphere 200 km, mantle 2900 km, outer core 2200 km, inner core 1250 km; radius 6375 km."
+        },
+        {
+          "label": "Example",
+          "statement": "Collision of continental plates forms fold mountains such as the Himalaya; the Mid-Atlantic Ridge is a divergent boundary; the San Andreas Fault is a transform boundary."
+        },
+        {
+          "label": "Event: 2001",
+          "statement": "A major earthquake in Gujarat caused extensive damage."
+        },
+        {
+          "label": "Event: February 2021",
+          "statement": "A devastating flood struck Chamoli district in Uttarakhand, killing people and livestock and damaging buildings, roads, bridges and hydel projects."
+        },
+        {
+          "label": "Text",
+          "statement": "In the Bṛihatsaṁhitā, Varāhamihira attributed earthquakes to four elemental forces: Vāyu, Agni, Indra and Varuṇa."
+        },
+        {
+          "label": "Place",
+          "statement": "India's only mud volcano is at Baratang Island in the Andaman and Nicobar Islands."
+        },
+        {
+          "label": "Practice",
+          "statement": "The Zabo system in Nagaland uses earthen bunds on hillslopes; check dams reduce water velocity and prevent soil erosion."
+        },
+        {
+          "label": "Example",
+          "statement": "The Grand Anicut (Kallanai) in Tamil Nadu is an example of use of rivers for irrigation."
+        }
+      ],
+      "activities": [
+        "LET’S MAP",
+        "LET’S EXPLORE",
+        "THINK ABOUT IT"
+      ],
+      "exercises": [
+        {
+          "name": "Questions and activities",
+          "questions": 15
+        }
+      ],
+      "bookSummary": [
+        "The Earth is made up of layers, namely, the crust, mantle and core.",
+        "Interior forces of the Earth (earthquakes, volcanoes, folding and faulting) are responsible for the movement of the crust.",
+        "External forces like weathering and erosion carve smaller landforms over the Earth's surface which affect human life in multiple ways.",
+        "The surface of the Earth is carved by agents of gradation like running water, waves and tides, glaciers, wind and underground water.",
+        "Disasters like landslides, avalanches, glacial lake outflows and sandstorms are associated with specific landforms."
+      ],
+      "notes": null
+    },
+    {
+      "bookChapter": 3,
+      "title": "Atmosphere and Climate",
+      "pages": 22,
+      "author": null,
+      "form": null,
+      "overview": "The chapter describes the atmosphere as a blanket of gases held by gravity, its composition and its five layers. It distinguishes weather from climate, explains the elements of weather and climate, the seasons of India and the mechanism of the monsoon. It closes with climate change, a carbon footprint activity and a case study of the 2025 Punjab floods.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Composition and Structure of the Atmosphere",
+          "points": [
+            "The atmosphere is a blanket of air held around the Earth by gravity; it shields us from harmful radiation including ultraviolet rays and regulates the Earth's temperature."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Composition of the Atmosphere",
+              "points": [
+                "Nitrogen (78%) and oxygen are the two primary gases; argon is 0.93% and carbon dioxide 0.04%.",
+                "Other gases such as helium, neon, krypton, xenon, ozone and hydrogen are present in lesser quantities, along with water vapour and dust particles.",
+                "Water vapour generally ranges from 0.1 to 0.4 per cent and plays a role in cloud formation and precipitation; composition varies with altitude."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Structure of the Atmosphere",
+              "points": [
+                "Layers are defined by changes in temperature and density with altitude; air density is highest near the surface.",
+                "Troposphere: average height about 12 km, temperature falls with altitude, contains the air we breathe and nearly all weather; separated by the tropopause.",
+                "Stratosphere: up to 50 km, free of clouds and ideal for aeroplanes, contains the ozone layer; bounded by the stratopause.",
+                "Mesosphere: up to 80 km, temperature decreases with altitude, most meteorites burn up here.",
+                "Thermosphere: 80 to 700 km, temperature rises rapidly, reflects radio waves, includes the ionosphere and auroras.",
+                "Exosphere: uppermost layer with very thin air, from which helium and hydrogen float into space."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Weather and Climate",
+          "points": [
+            "Weather refers to the hour-to-hour and day-to-day conditions of the atmosphere.",
+            "Climate is the sum total of weather conditions and variations over a large area for an extended period, usually thirty years or more.",
+            "Based on generalised monthly atmospheric conditions, the year is divided into seasons."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Elements of Weather and Climate",
+              "points": [
+                "Major elements are temperature, precipitation, humidity, wind and atmospheric pressure.",
+                "Temperature depends on insolation, which decreases from the equator towards the poles.",
+                "Humidity is the presence of water vapour in air; warmer air can hold more water vapour.",
+                "Precipitation (drizzle, rain, snow, sleet, hail) occurs when saturated air condenses; it is affected by prevailing winds, mountains and seasons.",
+                "Air pressure is highest at sea level and decreases with altitude; warm rising air creates low pressure (cloudy, wet), cold sinking air creates high pressure (clear, sunny).",
+                "Wind is the movement of air from high-pressure to low-pressure areas; winds are named after the direction they blow from; land and sea breezes moderate coastal climates."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Seasons in India",
+          "points": [
+            "India's climate is broadly tropical monsoon; the IMD recognises four seasons.",
+            "Winter lasts from December to early April; December and January are coldest, about 10-15°C in the north-west and 20-25°C in the south-east.",
+            "Summer or pre-monsoon spans April to June (up to July in north-western India); inland temperatures average 32-40°C.",
+            "Monsoon or rainy (advancing monsoon) spans June to September, dominated by the south-west summer monsoon.",
+            "Post-monsoon (retreating monsoon) lasts October to December; the Himalayan states also have autumn and spring.",
+            "Traditionally India has six seasons (Vasanta, Grīṣhma, Varṣhā, Śharad, Hemanta, Śhiśhira), each about two months long."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Monsoon",
+              "points": [
+                "Arab traders named the seasonal reversal of winds 'monsoon', from the Arabic word mausim, meaning season.",
+                "The south-west (summer) monsoon blows from sea to land between June and September, caused by unequal heating: land heats faster, creating low pressure over the subcontinent; it brings most of India's rainfall.",
+                "The north-east (winter) monsoon occurs from October to February; cold dry winds blow from land to sea, but pick up moisture over the Bay of Bengal and bring rain to Tamil Nadu, Andhra Pradesh and parts of Karnataka.",
+                "Monsoon drives agriculture, water supply, transport, festivals and employment; excessive rainfall causes floods and weak monsoons cause droughts.",
+                "Kṛiṣhiparāśhara and the Bṛihatsaṁhitā describe traditional rainfall prediction; the National Monsoon Mission and Mission Mausam aim to improve forecasting."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Climate Change",
+          "points": [
+            "Climate change refers to long-term changes in weather patterns caused mainly by human activities such as burning fossil fuels, deforestation and industrial pollution.",
+            "Greenhouse gases such as carbon dioxide, methane, nitrous oxide and water vapour trap heat and raise global temperatures.",
+            "Effects include more frequent floods and droughts, melting glaciers, rising sea levels and biodiversity loss, affecting health, agriculture and livelihoods, including women and children.",
+            "Tackling it needs reducing carbon footprints, renewable energy, protecting forests and sustainable lifestyles; the 'My Carbon Footprint' activity scores daily habits in transport, electricity, water and plastics."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Punjab Floods 2025: A Case Study",
+          "points": [
+            "In 2025 Punjab experienced severe floods from heavy monsoon rains and swelling of the Satluj, Beas and Ravi, damaging villages, fields, houses, roads and bridges."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Causes",
+              "points": [
+                "Natural causes: very heavy monsoon rains intensified by western disturbances, rain also in Himachal Pradesh and Jammu & Kashmir, and rivers (Satluj, Beas, Ravi, Ghaggar) already running high.",
+                "Human-made causes: weak and old embankments (dhūsī bāndh), houses and farms built too close to rivers, silt reducing river and dam capacity, and late or unclear flood warnings."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Effects of the Floods in Punjab",
+              "points": [
+                "Many lives were lost and thousands moved to relief camps.",
+                "Farmland was submerged and crops such as paddy were damaged; poultry and dairy farms were destroyed and animals died.",
+                "Roads, bridges, border fences and public buildings were damaged; standing water spread waterborne diseases."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Classroom Discussion",
+              "points": [
+                "Students discuss natural versus human causes, whether better planning could have reduced damage, NDMA flood guidelines and the role of youth in disaster preparedness."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Atmosphere",
+          "meaning": "A blanket of air surrounding the Earth, held by gravity, a mixture of gases vital for life."
+        },
+        {
+          "term": "Gravity",
+          "meaning": "A fundamental physical force of attraction between objects that have mass or energy; Earth's gravity is the attraction its mass exerts on objects on or near its surface."
+        },
+        {
+          "term": "Altitude",
+          "meaning": "The height of a location above mean sea level, usually in metres or feet; mean sea level is zero."
+        },
+        {
+          "term": "Aurora",
+          "meaning": "Colourful light near the poles produced when solar wind particles interact with atmospheric gases; Aurora Borealis in the north and Aurora Australis in the south."
+        },
+        {
+          "term": "Weather",
+          "meaning": "The hour-to-hour and day-to-day conditions of the atmosphere."
+        },
+        {
+          "term": "Climate",
+          "meaning": "The sum total of weather conditions and variations over a large area for usually thirty years or more."
+        },
+        {
+          "term": "Insolation",
+          "meaning": "The incoming solar energy from the Sun that is intercepted by the Earth."
+        },
+        {
+          "term": "Humidity",
+          "meaning": "The presence of water vapour in the air, creating moisture."
+        },
+        {
+          "term": "Precipitation",
+          "meaning": "Condensed water vapour falling to Earth due to gravity: drizzle, rain, snow, sleet and hail."
+        },
+        {
+          "term": "Air pressure",
+          "meaning": "The pressure exerted by the weight of air on the Earth's surface."
+        },
+        {
+          "term": "Wind",
+          "meaning": "The movement of air from a high-pressure area to a low-pressure area."
+        },
+        {
+          "term": "Land breeze",
+          "meaning": "A local wind blowing from land to sea at night because land cools faster than sea."
+        },
+        {
+          "term": "Sea breeze",
+          "meaning": "A local wind blowing from sea to land during the day when land becomes warmer than the sea."
+        },
+        {
+          "term": "Monsoon",
+          "meaning": "The seasonal reversal in wind direction during a year."
+        },
+        {
+          "term": "Lunar mansions (nakṣhatras)",
+          "meaning": "Division of the sky into 27 equal parts along the Moon's path; the Moon moves through one each day."
+        },
+        {
+          "term": "Climate change",
+          "meaning": "Long-term changes in weather patterns caused mainly by human activities."
+        },
+        {
+          "term": "Carbon footprint",
+          "meaning": "The total amount of greenhouse gases released by human activities such as energy use, transportation or production of goods and services."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Figure",
+          "statement": "Atmosphere: nitrogen 78%, argon 0.93%, carbon dioxide 0.04%, others 0.03%, rest oxygen."
+        },
+        {
+          "label": "Fact",
+          "statement": "Temperature decreases with altitude only in the troposphere and mesosphere."
+        },
+        {
+          "label": "Table 3.1",
+          "statement": "Wind speeds: calm 0-1 km/hr, light breeze 6-11, strong breeze 39-49, storm 103-117 km/hr with widespread damage."
+        },
+        {
+          "label": "Table 3.2",
+          "statement": "Traditional seasons: Vasanta (March-April), Grīṣhma (May-June), Varṣhā (July-August), Śharad (September-October), Hemanta (November-December), Śhiśhira (January-February)."
+        },
+        {
+          "label": "Text",
+          "statement": "Kauṭilya's Arthaśhāstra records scientific rainfall measurements used for revenue and relief."
+        },
+        {
+          "label": "Date: 5th century CE",
+          "statement": "Kālidāsa's Meghadūtam mentions the date of monsoon onset over central India and traces the path of monsoon clouds."
+        },
+        {
+          "label": "Figure",
+          "statement": "Normal dates of advancing south-west monsoon range from 22 May to 8 July; retreating monsoon from 17 September to 15 October (Figs 3.10, 3.11)."
+        },
+        {
+          "label": "Event: 2025",
+          "statement": "Punjab floods caused by heavy monsoon rains, western disturbances and swollen Satluj, Beas and Ravi."
+        },
+        {
+          "label": "Programme",
+          "statement": "Mission Mausam aims to make India 'Weather Ready' and 'Climate Smart'; the National Monsoon Mission aims to enhance monsoon predictions."
+        }
+      ],
+      "activities": [
+        "THINK ABOUT IT",
+        "LET’S RECALL",
+        "LET’S EXPLORE",
+        "LET’S ANALYSE",
+        "My Carbon Footprint"
+      ],
+      "exercises": [
+        {
+          "name": "Questions and activities",
+          "questions": 8
+        }
+      ],
+      "bookSummary": [
+        "The Earth's atmosphere is made up of different gases, mainly nitrogen and oxygen, with small amounts of other gases, water vapour and dust, which support life and help form clouds and rainfall.",
+        "The atmosphere has layers, namely the Troposphere, Stratosphere, Mesosphere, Thermosphere and Exosphere, divided by changes in temperature and air density with height.",
+        "Weather refers to the daily atmospheric conditions, while climate is the average weather of a place over a long period of time.",
+        "India has a tropical monsoon climate, and the IMD divides the year into four main seasons: Winter, Summer, Monsoon and Post-monsoon.",
+        "Climate change is the long-term change in weather caused mainly by human activities like burning fuels and cutting trees, leading to global warming and extreme weather.",
+        "We can reduce our carbon footprint by saving energy, using renewable sources, planting trees and living in more eco-friendly ways."
+      ],
+      "notes": "Page 22 is a blank Notes page. Some rainfall figures in Table 3.3 are incomplete in the extracted text."
+    },
+    {
+      "bookChapter": 4,
+      "title": "Early Humans and Beginning of Civilisation",
+      "pages": 34,
+      "author": null,
+      "form": null,
+      "overview": "The chapter traces human history from our earliest ancestors to the Bronze Age civilisations. It explains how the period before writing is known through archaeology, how humans evolved in Africa and dispersed, and how Palaeolithic and Mesolithic hunter-gatherers gave way to Neolithic farmers, including at Mehrgarh. It then describes the emergence of the Sindhu-Sarasvatī civilisation and the contemporary Mesopotamian, Egyptian and Chinese civilisations that grew in river plains.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Why Should We Study Early Human History?",
+          "points": [
+            "The Harappan script (Sindhu lipi) is one of the earliest writing systems but is undeciphered; Sumerian cuneiform and Egyptian hieroglyphs have been deciphered and mark the start of the historical period about 5000 years ago.",
+            "Brahmi script was used from about 400 BCE in southern India and the Ganga Valley and was formalised by Emperor Aśhoka in the 3rd century BCE.",
+            "More than 99 per cent of human history falls before writing, when artefacts are the main source and dating is approximate; the last 5000 years are known from both material remains and written documents.",
+            "Studying early human history helps us understand biological evolution (from australopithecines to Homo sapiens) and cultural evolution during the Quaternary Period (the last 26 lakh years).",
+            "Human ways of life changed from hunting and gathering to agriculture; surplus food laid the foundation for civilisation.",
+            "Earliest ancestors evolved in Africa; Homo erectus was the first hominin to leave Africa around 2 million years ago, and Homo sapiens, who evolved about 300,000 years ago, left around 125,000 years ago."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Who Were Our Human Ancestors?",
+          "points": [
+            "The earliest settlements were in Africa, Asia and Europe, the 'Old World'; around 3.3 million years ago an ancestor made the earliest stone tools.",
+            "Tools are called extra-corporal limbs; discarded tools and fossils are major evidence for archaeologists, who also experiment by making similar tools.",
+            "Homo habilis lived in the Olduvai Gorge in Tanzania and Kenya; Homo erectus invented handaxes and cleavers; Homo neanderthalensis lived in Europe and Southwest Asia till about 40000 years ago; Homo sapiens developed complex technologies.",
+            "Early human history is divided into Palaeolithic, Mesolithic, Neolithic, Chalcolithic, Bronze Age and Iron Age based on technological progress."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Palaeolithic Hunter–Gatherers",
+              "points": [
+                "Palaeolithic means Old Stone Age (palaeo 'old', lithic 'stone'); the oldest settlement in the subcontinent dates to about 2 million years ago.",
+                "Attirampakkam (Tamil Nadu) is dated to 1.5-1.7 million years ago and Isampur (Karnataka) to 1.2 million years ago, with handaxes, cleavers, scrapers and choppers.",
+                "Later, smaller tools such as scrapers, borers and points improved hunting with projectiles.",
+                "Humans then invented the bow and arrow and blade and microblade tools, developed symbolic communication, painted caves, and made the first beads; burins engraved bones and ostrich eggs.",
+                "Homo sapiens spread across the world, including Australia and the Americas, between 50000 and 12000 years ago."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Mesolithic Hunter–Gatherers",
+              "points": [
+                "Around 12000 years ago the climate became warmer and forests and grasslands expanded, offering small game, fish and wild grains.",
+                "The world saw the first population explosion in human history; microlithic tools helped gather aquatic food, and fishing was the mainstay.",
+                "Art flourished and caves and rock shelters were occupied; Bhimbetka in Madhya Pradesh has hundreds of painted rock shelters."
+              ]
+            },
+            {
+              "number": null,
+              "title": "The Neolithic Revolution",
+              "points": [
+                "Familiarity with seasons and food resources led to a gradual transition to food production, the Neolithic revolution.",
+                "Its hallmark was domestication of selected animals and plants and development of new breeds.",
+                "Neolithic farmers made tools for food production and processing, earthenware pottery, and the first village settlements, laying foundations for the urban revolution.",
+                "The transition happened at different times in different regions (Fig. 4.14)."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Neolithic Period in Indian Subcontinent",
+              "points": [
+                "Mehrgarh on the Bolan River (present-day Pakistan) is the oldest Neolithic site and earliest agricultural village, about 7000 BCE.",
+                "Its people built sun-dried brick houses and granaries, buried their dead, made ornaments of lapis lazuli, carnelian and shell, grew wheat and barley and raised sheep, goats and zebu cattle.",
+                "They made copper objects and became Chalcolithic by about 4000 BCE, laying the basis for the Bronze Age Sindhu-Sarasvatī civilisation around 3500 BCE.",
+                "By 2500 BCE most of the subcontinent was occupied by Neolithic agricultural communities herding cattle, sheep and goats and growing cereals, millets and pulses."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Sindhu–Sarasvatī Civilisation",
+          "points": [
+            "Copper tools in the fertile plains of the Indus and Ghaggar-Sarasvatī basins raised productivity and prosperity; the civilisation emerged by 2600 BCE.",
+            "Regional pottery and craft styles from 4000 BCE became standard features by about 2500 BCE; at Bhirrana and Kunal the Pre-Harappan phase may date to 7000-5500 BCE.",
+            "The Early Harappan stage shows continuity in pottery, beads, shell bangles, terracotta and copper working; perimeter walls, seals and script probably began then.",
+            "Early Harappans ploughed fields at Kalibangan with criss-cross furrows indicating double cropping like Rabi and Kharif.",
+            "Harappans used standard weights in a binary system (1, 2, 4, 8, 16) for small units and multiples of ten for larger ones."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Bronze Age Civilisations Outside India",
+          "points": [
+            "Four early civilisations emerged in river plains: Harappan (Sindhu and Sarasvatī), Mesopotamian (Euphrates and Tigris), Egyptian (Nile) and Chinese (Huang He).",
+            "Proximity facilitated strong contacts and trade between Mesopotamia and the Harappans; there is little tangible evidence of direct Harappan contact with Egypt and China.",
+            "These civilisations emerged independently, developed urban cities, social and administrative systems and writing, and many cultural ethos have roots in them."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Mesopotamian Civilisation",
+              "points": [
+                "Mesopotamia ('land in between') is the land drained by the Euphrates and Tigris, mainly modern Iraq and Kuwait; the Zagros and Taurus foothills form the 'fertile crescent'.",
+                "The earliest city-based civilisation emerged here; copper arrived around 4500 BCE, and four city-based civilisations flourished: Sumerian, Akkadian, Assyrian and Babylonian.",
+                "The Sumerians built dams and canals, used mud and burnt bricks, built ziggurat temples around which cities grew, and started cuneiform writing around 3200 BCE; they invented the wheeled cart and sailboat and a number system based on 60.",
+                "The Akkadians rose in 2334 BCE and established the world's first dynastic empire; Sargon's tablets mention trade with Dilmun (Bahrain), Magan (Oman) and Meluhha (the Sindhu-Sarasvatī civilisation).",
+                "The Assyrians of Assur supplanted the Akkadians around 2154 BCE and lasted till early 1700 BCE.",
+                "Babylonia rose from 1900 BCE; Hammurabi (1792 BCE) compiled the Code of Hammurabi; Babylon declined by 1400 BCE due to Hittite attacks, environmental degradation and internal problems."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Egyptian Civilisation",
+              "points": [
+                "Egypt was known to Greeks and Romans; Herodotus wrote about it in the 5th century BCE, and history is also reconstructed from papyrus records.",
+                "The Rosetta Stone, found by Pierre Bouchard in 1799, allowed Jean-François Champollion to decipher the script in 1822.",
+                "The Egyptian calendar had three seasons of four months and a 365-day year based on the rising of Sirius.",
+                "City-states emerged around 3000 BCE; annual Nile floods left rich black mud, and Egyptians called their land Kemet; digging ditches and dams required collective effort and led to local government.",
+                "Pharaohs were buried under mastabas that developed into pyramids such as the step pyramid at Saqqara, because of belief in the ka and mummification.",
+                "Society was a hierarchy from Pharaoh to serfs and slaves; Egyptians enjoyed leisure and festivals such as the Sed festival, and women could own property and run businesses."
+              ]
+            },
+            {
+              "number": null,
+              "title": "The Chinese Civilisation",
+              "points": [
+                "It flourished along the Huang He (Yellow River) and Yangtze, centres of Neolithic cultures from around 7000 BCE; bronze metallurgy came around 2000 BCE and urban centres around 1600 BCE.",
+                "Bronze Age dynasties were the Shang (1600-1046 BCE) and Zhou (1046-256 BCE); iron became popular by 600 BCE; the name China probably comes from the Qin dynasty (221-206 BCE); the Han dynasty lasted 206 BCE-220 CE.",
+                "The earliest sources are oracle bones, heated until they cracked to foretell the future; the Chinese script is logographic.",
+                "Jade objects, marble carvings and bronze weapons and ritual vessels were made; the Great Wall was built from 680 BCE onwards and repaired till the 17th century CE.",
+                "Silk became a major trade item under the Han dynasty, giving the Silk Route its name; by 1500 BCE society was highly stratified.",
+                "China introduced paper currency and civil services through public examination; a money economy developed by the 5th century BCE."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Biological evolution",
+          "meaning": "Gradual physical and genetic changes through which early ancestors (australopithecines) evolved into modern humans, Homo sapiens."
+        },
+        {
+          "term": "Cultural evolution",
+          "meaning": "How humans adapted to their surroundings during the Quaternary Period by developing tools, techniques and technology."
+        },
+        {
+          "term": "Australopithecines",
+          "meaning": "Early ancestors; australis means southern and pithecus means primates."
+        },
+        {
+          "term": "Hominin",
+          "meaning": "A group that includes modern humans and our early human-like ancestors."
+        },
+        {
+          "term": "Homo erectus",
+          "meaning": "An upright or bipedal human ancestor."
+        },
+        {
+          "term": "Old World",
+          "meaning": "Geographical area of the oldest human settlements of the earliest palaeolithic period."
+        },
+        {
+          "term": "Fossil",
+          "meaning": "Preserved remains, traces or impressions of plants, animals or humans from the distant past that turn to stone over long periods."
+        },
+        {
+          "term": "Artefacts",
+          "meaning": "Tools, implements and other material objects made by humans."
+        },
+        {
+          "term": "Palaeolithic",
+          "meaning": "Old Stone Age; hunting-gathering lifestyle with simple stone tools."
+        },
+        {
+          "term": "Mesolithic",
+          "meaning": "Transitional phase using microlithic (tiny stone) tools between hunting-gathering and agriculture."
+        },
+        {
+          "term": "Neolithic revolution",
+          "meaning": "Gradual transition to a food-producing way of life marked by domestication of animals and plants."
+        },
+        {
+          "term": "Chalcolithic",
+          "meaning": "Copper and Stone Age: use of copper along with stone tools and early metallurgy."
+        },
+        {
+          "term": "Bronze Age",
+          "meaning": "Development of bronze metallurgy (mixing copper and tin), expansion of trade, towns and early civilisations."
+        },
+        {
+          "term": "Iron Age",
+          "meaning": "Widespread use of iron metallurgy, stronger tools and weapons."
+        },
+        {
+          "term": "City-State",
+          "meaning": "A sovereign state centred around a city that rules the surrounding territories."
+        },
+        {
+          "term": "Ziggurat",
+          "meaning": "A tower-like stepped pyramid-shaped temple with the main temple at the top; it also served as the city's treasury."
+        },
+        {
+          "term": "Cuneiform",
+          "meaning": "One of the earliest writing systems, by the Sumerians, made by pressing a wedge-shaped stylus into clay; from Latin cuneus, 'wedge'."
+        },
+        {
+          "term": "Gabarbands",
+          "meaning": "Check dams built by Early Harappans across small streams to enhance irrigation."
+        },
+        {
+          "term": "Hittites",
+          "meaning": "Indo-European people who established a powerful empire in Anatolia around the second millennium BCE."
+        },
+        {
+          "term": "Papyrus",
+          "meaning": "Writing sheets made by cutting, criss-crossing, pressing, drying and polishing strips of the papyrus plant."
+        },
+        {
+          "term": "Kemet",
+          "meaning": "The Egyptians' name for their land, meaning 'the black', from the black river valley soil."
+        },
+        {
+          "term": "Mastaba",
+          "meaning": "A rectangular structure placed over a pharaoh's burial chamber; stacked mastabas formed pyramids."
+        },
+        {
+          "term": "Mummification",
+          "meaning": "Removing internal organs except the heart, drying the body with natron, oiling and wrapping it in linen and burying it with rituals."
+        },
+        {
+          "term": "Oracles",
+          "meaning": "Symbols on animal bones and tortoise shells heated until cracked, used to foretell the future in early China."
+        },
+        {
+          "term": "Logographic script",
+          "meaning": "Script whose characters represent whole words or morphemes rather than sounds."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Date: about 3.3 million years ago",
+          "statement": "An ancestor made the earliest stone tools."
+        },
+        {
+          "label": "Date: about 2 million years ago",
+          "statement": "Homo erectus moved out of Africa; the oldest human settlement in the Indian subcontinent dates to this time."
+        },
+        {
+          "label": "Date: about 300,000 years ago",
+          "statement": "Homo sapiens evolved in Africa; another major wave out of Africa took place about 125,000 years ago."
+        },
+        {
+          "label": "Site",
+          "statement": "Attirampakkam (Tamil Nadu) 1.5-1.7 million years ago; Isampur (Karnataka) 1.2 million years ago."
+        },
+        {
+          "label": "Date: about 12000 years ago",
+          "statement": "Climate became warmer, leading to the Mesolithic and the first population explosion."
+        },
+        {
+          "label": "Site: 7000 BCE",
+          "statement": "Mehrgarh, the oldest Neolithic site and earliest agricultural village in the subcontinent."
+        },
+        {
+          "label": "Timeline",
+          "statement": "Harappan civilisation: Early Harappan from 3300 BCE, Mature Harappan 2600-1900 BCE, Late Harappan 1900-1300 BCE."
+        },
+        {
+          "label": "Date: 3200 BCE",
+          "statement": "Sumerians began cuneiform writing; by 3000 BCE it was used all over Mesopotamia."
+        },
+        {
+          "label": "Date: 2334 BCE",
+          "statement": "Akkad overshadowed Sumer; Akkadian power lost to Assur around 2154 BCE."
+        },
+        {
+          "label": "Date: 1792 BCE",
+          "statement": "Hammurabi ascended in Babylon and compiled the Code of Hammurabi."
+        },
+        {
+          "label": "Date: 1799 / 1822",
+          "statement": "The Rosetta Stone was found in 1799; Champollion deciphered the Egyptian script in 1822."
+        },
+        {
+          "label": "Timeline",
+          "statement": "Egypt: Old Kingdom 2686-2181 BCE, Middle Kingdom 2030-1650 BCE, New Kingdom 1570-1069 BCE."
+        },
+        {
+          "label": "Timeline",
+          "statement": "China: Shang dynasty 1600-1046 BCE, Zhou 1046-256 BCE, Qin 221-206 BCE, Han 206 BCE-220 CE."
+        },
+        {
+          "label": "Person",
+          "statement": "Cleopatra (69-30 BCE) became queen at eighteen."
+        },
+        {
+          "label": "Site",
+          "statement": "Dholavira's water harvesting system and Lothal's burnt-brick dockyard show Harappan water management skills."
+        }
+      ],
+      "activities": [
+        "LET’S EXPLORE",
+        "THINK ABOUT IT",
+        "LET US RECALL",
+        "LET’S MAP",
+        "LET’S RECALL"
+      ],
+      "exercises": [
+        {
+          "name": "Questions and activities",
+          "questions": 13
+        }
+      ],
+      "bookSummary": [
+        "Early human history is the long period before writing, studied mainly through archaeological evidence such as tools, fossils and cave art.",
+        "Early humans evolved in Africa and gradually migrated to different parts of the world.",
+        "In the Palaeolithic period humans were hunter-gatherers using stone tools like handaxes, cleavers and scrapers, living in caves or open camps.",
+        "In the Mesolithic period humans developed microlithic tools and occupied temporary settlements near rivers and lakes.",
+        "The Neolithic period marked a shift to agriculture and animal domestication, leading to permanent villages, pottery and weaving.",
+        "The Chalcolithic period saw copper used with stone tools and the growth of early farming communities.",
+        "These developments led to Bronze Age civilisations with urban centres, trade, writing, administration and social organisation.",
+        "Major early civilisations such as Sindhu-Sarasvatī, Mesopotamia, Egypt and China developed independently in fertile river valleys and contributed to agriculture, writing, architecture, administration and culture."
+      ],
+      "notes": null
+    },
+    {
+      "bookChapter": 5,
+      "title": "State and Society up to 1000 CE",
+      "pages": 42,
+      "author": null,
+      "form": null,
+      "overview": "The chapter studies state and society in the Indian subcontinent up to the end of the first millennium CE, using literary sources beginning with the Ṛigveda alongside archaeology. It traces political organisation from kin-based janas through janapadas and mahājanapadas to empires such as the Mauryas, Guptas and Cholas, and examines ideals of kingship, administration and ethics (dharma, chakravarti samrāṭ). It also covers social structures (varṇa, jāti, family, women, religion, education) and the economy of agriculture, irrigation, trade and guilds.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Understanding Early Indian State and Society",
+          "points": [
+            "When large groups live together, rules and shared norms evolve to maintain order, forming systems that organise people.",
+            "A society is a system of social relationships among individuals sharing a territory, culture and sense of belonging, regulated mainly by customs rather than formal laws.",
+            "A State is an organised political system based on rules and laws, with defined rights and duties of rulers and subjects and institutions for enforcing law and order."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "The Beginnings…",
+              "points": [
+                "The Vedas are the earliest known corpus of Indian literature and existed orally for centuries before being written down.",
+                "The date of the Ṛigveda is debated, with estimates from the fifth to the second millennium BCE; it was composed in the northwest where the Sindhu-Sarasvatī civilisation flourished, and both knew copper."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "State and Administration",
+          "points": [
+            "The chapter examines political institutions and administration from the Vedic period to regional empires."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "The Vedic Period",
+              "points": [
+                "The four Vedas are the Ṛigveda (1,028 hymns), Sāmaveda (hymns arranged for musical recitation, foundation of the seven svaras), Yajurveda (performative aspects of yajñas) and Atharvaveda (hymns to ward off evil and treat ailments).",
+                "Each Veda has four parts: samhitā, brāhmaṇa, āraṇyaka and upaniṣhad.",
+                "The earliest sections of the Ṛigveda were composed in the Sapta-Sindhu region; Vedic texts are regarded as foundational to Indian culture."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Political Institutions in the Vedic Period",
+          "points": [
+            "Early Vedic society was organised into janas (clans) bound by kinship; the Ṛigveda mentions about thirty, five of which formed the pañchajana.",
+            "The name 'Bharata' first appears in the Ṛigveda for the Bharata jana.",
+            "The rājā was a clan chief who led in war and protected members; there were three assemblies: the sabhā (smaller, judicial, select elites), the samiti (larger, policy decisions, broader population) and the vidhata (popular gathering for discussions on warfare and politics).",
+            "In the first millennium BCE the Ganga region shows iron implements, more grain varieties, PGW pottery and later NBPW."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Early Kingdoms and Republics",
+              "points": [
+                "Vedic political organisation evolved into territorial janapadas between about 1000 BCE and 600 BCE, a shift from kinship to territorial identity.",
+                "From about 600 BCE to 300 CE mahājanapadas arose; sources speak of sixteen, among which Magadha in Bihar became the most powerful and led to the Mauryan Empire.",
+                "The later Vedic centre shifted to the Ganga plains; northern India had monarchical states (rājyas) and republican states (gaṇas or saṁghas).",
+                "In the Deccan the Satavāhana Empire lasted nearly 500 years; further south were the Cholas, Pandyas, Keralaputras (Cheras) and Satiyaputras, mentioned in Aśhokan inscriptions.",
+                "Sangam literature (300 BCE-300 CE) describes the three crowned kings of Tamilakam with emblems of tiger (Cholas), bow (Cheras) and fish (Pandyas)."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Duties and Ideals of the King",
+          "points": [
+            "From the 6th century BCE rulers took titles such as rājā, mahārāja or samrāṭ.",
+            "The Arthaśhāstra says officers follow an energetic king; the Yajurveda coronation oath asks the king to judge strong and weak impartially and protect the country.",
+            "The Śhānti Parva of the Mahābhārata guides kings on ethics and justice; the king protected subjects and administered justice, and kings were sometimes elected or expelled.",
+            "Pan-Indian geopolitical awareness appears in terms such as Jambudvīpa, Bhāratavarṣha, Aśhvamedha and Rājasūya yajña, Prithivi and chakravarti kśhetra; the Arthaśhāstra defines prithivi as the area between the Himalayas and the sea.",
+            "This ideal continued: Chera king Nedunjeral Adan is said to have extended conquests to the Himalayas, and Chola Rajendra I took the title Gangaikonda in the 11th century CE."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Council of Ministers",
+          "points": [
+            "Kauṭilya saw the state as an organic whole of seven constituents (Saptāṁga): king (swāmi), ministers (amātya), territory and population (janapada), forts (durga), treasury (koṣha), army (daṇḍa) and allies (mitra).",
+            "The Arthaśhāstra says 'one wheel does not move the carriage': governance needs cooperation.",
+            "The council of ministers (mantri-pariṣhad) advised the king and included the treasurer, chief collector, chief legal advisor and commander-in-chief; an Aśhokan inscription shows it could decide in the emperor's absence.",
+            "The Junagadh Rock Inscription near Girnar bears records of Aśhoka, Rudradaman I and Skandagupta, spanning about 700 years."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "How Were Empires Administered?",
+          "points": [
+            "Kingdoms were divided into provinces, divisions and districts; the Satavāhana empire had āḥāras with amātyas, villages led by grāmikas, and district governors (pradeśhikas) who consulted bankers, caravan leaders, artisans and scribes.",
+            "Between about 300 CE and 800 CE power was decentralised: provinces were bhuktis (north) or manḍalas (south), divisions viṣhaya/bhoga or koṭṭams/valanāḍu, districts adhiṣhṭhāna/paṭṭana or nāḍu, and village groups vithis or paṭṭalā/kūṛram.",
+            "The Guptas retained earlier administration, introduced the sāndhivigrahika (minister of peace and war) and kumārāmātyas; the Damodarpur copper plates list a five-member district office.",
+            "The Pallavas combined central monarchy with local governance and made tax-free Brahmadeya land grants; village assemblies had committees called variyams. The Chālukyas of Badami granted agrahārams.",
+            "The Gurjara-Pratihāras, Pālas and Rāṣhṭrakūṭas fought the tri-partite struggle for Kannauj; the imperial Cholas divided their empire into manḍalams, valanāḍus, nāḍus and urs, with self-reliant village assemblies.",
+            "The Uttaramerur inscription of Parantaka I describes the Kudavolai (ballot pot) system of village elections."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Ethics: The Foundation of Law and Life",
+          "points": [
+            "Early texts such as the Vedas and epics discuss reality, right conduct and the nature of the universe; the Bhagavad Gītā emphasises knowledge, faith, action and virtue.",
+            "Samatva, the principle of sameness, holds all bodies are of the same matter and all consciousness is one; the epics critique discrimination and value working for the welfare of all beings.",
+            "Ṛita is the all-pervading cosmic order of harmony and balance in nature and society.",
+            "Dharma means duty, obligation, righteousness and moral conduct, not religion; dhamma is its Pāli equivalent.",
+            "Aśhoka's edicts promoted dhamma; the Uttaramerur inscription required candidates with honest earnings; Kāmandaka's Nītisāra and Bāṇabhaṭṭa's Kādambarī reflect on kingship and ethics."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Social Structures and Everyday Life",
+          "points": [
+            "Social identity, family life, the role of women, religious life, education and literary heritage are examined through representative sources."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Varṇa and Jāti",
+              "points": [
+                "Early Vedic texts do not show fixed status by birth; identity was shaped by ethnicity, region, village, gotra, language and especially occupation, and occupations were flexible (Ṛigveda 9.112.3).",
+                "The earliest reference to four varṇas is in the Puruṣhasūkta in Book 10 of the Ṛigveda; brāhmaṇas, kṣhatriyas, vaiśhyas and śhūdras came to be associated with specific roles.",
+                "Varṇa was functional, valuing knowledge above power and wealth; the Sutta Nipāta says one is a brāhmaṇa by deeds, not birth; flexibility gradually reduced.",
+                "Jāti emerged from intermarriage, endogamous migrating communities and territorial differences; varṇas were fixed at four but jātis kept growing."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Social Mobility",
+              "points": [
+                "Rulers came from diverse backgrounds, including the Nandas, Mauryas, Śhuṅgas, Satavāhanas, Vākāṭakas, Guptas and Puṣhyabhūtis.",
+                "The Mandsaur Stone Inscription (473 CE) records a silk weavers' guild that migrated from Lata to Dashapura and was proficient in archery and astrology too; Karitalai copper plates record brāhmaṇas as land managers.",
+                "The Tolkappiyam mentions Arasar, Vanigar, Velar and Antanar, with a fluid occupation-based classification; the Pattinappalai describes a trade-oriented society."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Family and Society",
+              "points": [
+                "The kula (family) was the smallest unit, linked through the grāma, viśha (headed by a viśhapati) and jana under the rājā.",
+                "Gotra was a patrilineal lineage traced to a Vedic sage and regulated marriage.",
+                "Life was divided into four āśhramas (brahmacharya, gṛihastha, vānaprastha, saṁnyāsa) with the ṣhoḍaśha saṁskāras as rites of passage.",
+                "The four puruṣhārthas were dharma, artha, kāma and mokṣha; artha is desirable when guided by dharma."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Role of Women",
+              "points": [
+                "In the Vedic period women participated in learning and rituals, chariot races and the sabhā; hymns are attributed to Apālā, Viśhvavārā, Ghoṣhā and Lopāmudrā.",
+                "Manu-smṛiti 3.56 says where women are honoured the gods rejoice; women's position later fluctuated and declined.",
+                "Prabhāvatī Gupta ruled as regent in the Vākāṭaka kingdom; women appear as donors in votive inscriptions.",
+                "Sangam literature shows women in farming, fishing, salt production and poetry (Avvaiyar, Vennikuyattiyar); Chola queen Sembiyan Mahādevī supported temple building."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Religious Life and the Emergence of Bhakti",
+              "points": [
+                "The Vedic pantheon was not rigidly hierarchical; deities linked to elements of nature were invoked through yajñas, and practices like sun worship at Chhath and Makar Sankranti continue.",
+                "Renunciants (parivrājaka, bhikṣhu, śhramaṇa) emerged around the mid-first millennium BCE, though renunciation was already present in the Vedic āśhramas.",
+                "Worship evolved towards personal deities such as Viṣhṇu, Śhiva and Śhakti; Bhakti offered a direct connection to god accessible to all.",
+                "Organised Bhakti gained prominence in the 6th century Tamil region through the twelve Āḻvārs (Viṣhṇu) and sixty-three Nāyanmārs (Śhiva)."
+              ]
+            },
+            {
+              "number": null,
+              "title": "The Quest for Knowledge",
+              "points": [
+                "Education was holistic, cultivating truth, patience, humility, self-control and reverence for all beings, and training pupils to live by dharma.",
+                "Students studied the Vedas, grammar, logic, philosophy, mathematics, medicine and astronomy, as well as arts, martial arts, yoga and meditation.",
+                "The guru-śhiṣhya paramparā was sacred; the gurukula was centred in the teacher's home.",
+                "Centres of higher learning such as Takṣhaśhilā, Nālandā, Vikramśhilā and Vallabhī attracted students from India and abroad."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Literary Heritage of Early India",
+          "points": [
+            "India produced diverse literature on philosophy, grammar, medicine, astronomy, mathematics, agriculture and architecture that persisted despite political change.",
+            "Examples: Kālidāsa's Raghuvaṃśha and Kumārasambhava; Tirukkural, Silappadikāram, Maṇimēkalai and Sangam texts; Pāṇini's Aṣhṭādhyāyī, Piṅgala's Chhandaśhāstra, Patañjali's Mahābhāṣhya; Smṛiti texts; and Charakasamhitā and Suśhrutasamhitā on medicine."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Economy",
+          "points": [
+            "Agriculture, supported by irrigation, was the backbone of the economy, while trade, ports and guilds drove commerce and crafts."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Agriculture and Land Revenue",
+              "points": [
+                "The Mauryan state regulated economic activity; the basic land tax was generally one-sixth of produce, and land was classified for revenue assessment.",
+                "Crops included rice, pulses, wheat, linseed, mustard, saffron, sugarcane, vegetables and fruits.",
+                "The Milindapañho describes eight stages of agricultural operations; the Deccan's black soil suited cotton; the Amarakoṣha has a chapter on crops and manure.",
+                "Sangam texts describe the Chera region's jackfruit, pepper and turmeric, and cultivation of ragi and sugarcane."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Irrigation",
+              "points": [
+                "Reservoirs, canals and dams were important; Rudradaman I's Junagadh inscription records that Puṣhyagupta, Chandragupta Maurya's governor, built a dam on Sudarshana Lake.",
+                "The Cholas built canals, lakes and tanks; Karikala Chola's Grand Anicut (Kallanai) remains in use today."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Trade: Trade Routes and Ports",
+              "points": [
+                "The Arthaśhāstra notes Magadha traded textiles, gems, coral, pearls, metals and minerals; salt production was regulated, and the state protected routes and consumers.",
+                "By around the 6th century BCE the land routes Dakṣhiṇāpatha and Uttarāpatha linked the subcontinent and connected inland regions with ports.",
+                "Ports such as Muziris, Kāveripaṭṭinam, Arikameḍu and Masulipaṭnam grew; trade with Rome expanded by the early centuries CE.",
+                "The Silappadikāram mentions routes linking Kanchipuram to Poompuhar and to Kanyakumari."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Guilds",
+              "points": [
+                "Guilds (śhreṇīs) were associations of people in the same profession that expanded trade after the mahājanapadas; silver punch-marked coins came into circulation.",
+                "The Jātakas refer to eighteen types of guilds; guilds regulated quality and prices, had guild courts and acted as banks, financiers and trustees.",
+                "The Nāśhik cave inscription of Uśhavadāta records money deposited with guilds at fixed interest to maintain Buddhist monasteries.",
+                "Textile centres included Mathurā, Kāśhī and Kāmarūpa; the ivory workers' guild of Vidiśhā carved the Sanchi stupa gateway."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Society",
+          "meaning": "A system of social relationships among individuals sharing a common territory, culture and sense of belonging, regulated mainly by customs and practices."
+        },
+        {
+          "term": "State",
+          "meaning": "An organised political system based on rules and laws with defined rights and duties of rulers and subjects and institutions to enforce law and order."
+        },
+        {
+          "term": "Jana",
+          "meaning": "A clan: a group of people bound by kinship ties."
+        },
+        {
+          "term": "Pañchajana",
+          "meaning": "'Five peoples': the Yadu, Turvaśha, Puru, Anu and Druhyu janas."
+        },
+        {
+          "term": "Sabhā",
+          "meaning": "A smaller Vedic assembly of select elites with a primarily judicial function."
+        },
+        {
+          "term": "Samiti",
+          "meaning": "A larger Vedic assembly representing the broader population, focused on policy and political affairs."
+        },
+        {
+          "term": "Vidhata",
+          "meaning": "A popular gathering of the jana, a forum for discussions on warfare and political matters."
+        },
+        {
+          "term": "Janapada",
+          "meaning": "Territorial entity; literally where a people (jana) first set its feet."
+        },
+        {
+          "term": "Mahājanapadas",
+          "meaning": "Bigger political units than janapadas that arose from about 600 BCE."
+        },
+        {
+          "term": "Gaṇas or saṁghas",
+          "meaning": "Republican states."
+        },
+        {
+          "term": "Chakravarti kśhetra",
+          "meaning": "The domain of a universal paramount ruler, equated with prithivi, the area between the Himalayas and the sea."
+        },
+        {
+          "term": "Saptāṁga",
+          "meaning": "Kauṭilya's seven constituents of the state: king, ministers, territory, forts, treasury, army and allies."
+        },
+        {
+          "term": "Mantri-pariṣhad",
+          "meaning": "Council of ministers that advised and supported the king."
+        },
+        {
+          "term": "Brahmadeya",
+          "meaning": "Tax-free land grants to villages under the Pallavas."
+        },
+        {
+          "term": "Variyams",
+          "meaning": "Committees of village assemblies managing tasks like irrigation, gardens, temples, justice and taxes."
+        },
+        {
+          "term": "Kudavolai",
+          "meaning": "The 'ballot pot' system of village elections described in the Uttaramerur inscription."
+        },
+        {
+          "term": "Samatva",
+          "meaning": "Principle of sameness: all bodies are of the same matter and all consciousness is one supreme consciousness."
+        },
+        {
+          "term": "Ṛita",
+          "meaning": "The all-pervading cosmic order representing harmony and balance in nature and society."
+        },
+        {
+          "term": "Dharma",
+          "meaning": "Duty, obligation, righteousness and moral conduct, not religion; from the root dhri, 'that which upholds beings'."
+        },
+        {
+          "term": "Jāti",
+          "meaning": "A social structure that emerged from intermarriage, endogamy and territorial differences; unlike varṇa, unlimited in number."
+        },
+        {
+          "term": "Endogamy",
+          "meaning": "The practice of marrying within one's own social group, community, clan or tribe."
+        },
+        {
+          "term": "Gotra",
+          "meaning": "A patrilineal lineage or clan traced to a common ancestor, traditionally a Vedic sage."
+        },
+        {
+          "term": "Patrilineal",
+          "meaning": "A system in which family identity and inheritance pass strictly through the male line."
+        },
+        {
+          "term": "Āśhramas",
+          "meaning": "Four stages of life: brahmacharya, gṛihastha, vānaprastha and saṁnyāsa."
+        },
+        {
+          "term": "Puruṣhārthas",
+          "meaning": "Four goals of life: dharma, artha, kāma and mokṣha."
+        },
+        {
+          "term": "Votive inscription",
+          "meaning": "Text engraved on stone or metal dedicating a gift, sculpture or structure to a deity or sacred place."
+        },
+        {
+          "term": "Bhakti",
+          "meaning": "A devotional path offering direct connection with god without elaborate rituals, accessible to all."
+        },
+        {
+          "term": "Guilds (śhreṇīs)",
+          "meaning": "Associations of people engaged in the same profession, craft or occupation."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Date: 321 BCE",
+          "statement": "Foundation of the Mauryan Empire by Chandragupta Maurya."
+        },
+        {
+          "label": "Date: 272-232 BCE",
+          "statement": "Aśhoka's reign and philosophy of Dhamma."
+        },
+        {
+          "label": "Date: 300 BCE-300 CE",
+          "statement": "Early kingdoms of Tamilakam and composition of Sangam literature."
+        },
+        {
+          "label": "Date: 185 BCE",
+          "statement": "Foundation of the Śhunga empire by Puṣhyamitra Śhunga."
+        },
+        {
+          "label": "Date: 78 CE",
+          "statement": "Saka Era begins."
+        },
+        {
+          "label": "Date: 320-550 CE",
+          "statement": "Gupta rule."
+        },
+        {
+          "label": "Date: 427 CE / 480 CE",
+          "statement": "Nalanda university established in 427 CE; Vallabhī university in 480 CE."
+        },
+        {
+          "label": "Date: 543 CE",
+          "statement": "Foundation of the Chālukyan dynasty by Pulakeśhin I."
+        },
+        {
+          "label": "Date: 629-645 CE",
+          "statement": "Xuanzang's visit."
+        },
+        {
+          "label": "Date: 712 CE",
+          "statement": "Arab conquest of Sindh."
+        },
+        {
+          "label": "Date: 985-1014 CE",
+          "statement": "Rājarāja I's reign; Brihadeeshwara Temple, Thanjavur."
+        },
+        {
+          "label": "Inscription",
+          "statement": "Junagadh Rock Inscription preserves records of Aśhoka, Rudradaman I (c. 150 CE) and Skandagupta (5th century CE), spanning about 700 years."
+        },
+        {
+          "label": "Inscription: 473 CE",
+          "statement": "Mandsaur Stone Inscription records a silk weavers' guild migrating from Lata in Gujarat to Dashapura in Madhya Pradesh."
+        },
+        {
+          "label": "Fact",
+          "statement": "The basic Mauryan land tax was generally one-sixth of the produce."
+        },
+        {
+          "label": "Inscription: 2nd century CE",
+          "statement": "Nāśhik cave inscription records Uśhavadāta's endowment of 3000 kāhāpaṇas invested in weavers' guilds at Govadhana at fixed interest."
+        }
+      ],
+      "activities": [
+        "LET’S EXPLORE",
+        "LET’S RECALL",
+        "THINK ABOUT IT",
+        "LET’S ANALYSE"
+      ],
+      "exercises": [
+        {
+          "name": "Questions and activities",
+          "questions": 14
+        }
+      ],
+      "bookSummary": [
+        "Indian civilisation demonstrates a remarkable continuity in its cultural, social and political traditions.",
+        "The structures of social, cultural and political life in India evolved from the Vedic period and took various forms across space and time.",
+        "The rise of powerful states such as Magadha and empires like the Mauryas and Guptas led to structured systems of administration, taxation, military organisation and governance.",
+        "Political organisation evolved from clans (janas) led by a rājā to kingdoms and republics (gaṇas or saṁghas) and later to empires such as the Mauryas, Guptas and Cholas; the economy was based on agriculture supported by irrigation, while trade networks, ports and guilds drove commerce and crafts.",
+        "Despite political changes, knowledge traditions, trade networks, cultural and devotional practices such as Bhakti continued to flourish across regions."
+      ],
+      "notes": "Page 42 is a blank Notes page. Running timelines at the foot of pages are interleaved with body text in the extraction."
+    },
+    {
+      "bookChapter": 6,
+      "title": "Democracy",
+      "pages": 24,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explains democracy as government in which power lies with citizens and traces democratic traditions in India from Vedic assemblies and the Bauddha Saṁghas to the Constitution. It sets out the principles of democracy upheld by the Indian Constitution, the types of democracy practised around the world, and how India's living democracy works at scale and at the grassroots. It closes with challenges to Indian democracy, including the Emergency of 1975-77, and the role of young citizens.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Tracing Democratic Traditions from Early Times",
+          "points": [
+            "India is the world's largest democracy with over 140 crore people and over 96.8 crore voters (2024); the Constitution was adopted on 26 November 1949 and came into force on 26 January 1950.",
+            "Vedic assemblies (Sabha, Samiti, Vidhata) and the early republics (gaṇas or saṁghas) show kings worked in consultation; the Aikyamatya Sūktam of the Ṛigveda stresses collective thinking and unity of purpose.",
+            "The Bauddha Saṁghas encouraged debate and chose leaders and decisions through voting.",
+            "Foreign invasions and British colonial rule limited people's participation, but the independence struggle revived democratic ideas.",
+            "The Constituent Assembly, formed in 1946, took 2 years, 11 months and 18 days to draft the world's longest written Constitution, which can be amended under Article 368."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Principles of Democracy",
+          "points": [
+            "A thriving democracy rests on non-negotiable principles upheld through provisions of the Indian Constitution.",
+            "Different democratic processes are supported by institutions such as the legislature, Election Commission, courts, media and civil society, CAG, CIC, Lokpal, CVC and local bodies."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Popular Sovereignty",
+              "points": [
+                "The ultimate source of power lies with the people and the state derives its authority from them.",
+                "Every citizen aged 18 and above has the right to vote by secret ballot: Universal Adult Franchise."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Rule of Law",
+              "points": [
+                "It ensures equality before the law and equal protection of the law; no one is above the law.",
+                "Disputes are resolved in courts through procedure established by law, preventing misuse of power and promoting justice and accountability."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Fundamental Rights",
+              "points": [
+                "Six Fundamental Rights: Equality (Articles 14-18), Freedom (19-22), Against Exploitation (23-24), Freedom of Religion (25-28), Cultural and Educational Rights (29-30) and Constitutional Remedies (Article 32).",
+                "Citizens can seek remedies under Articles 32 and 226; rights are enforceable, subject to reasonable restrictions.",
+                "The Right to Education (Article 21A) was added in 2009 for children aged 6 to 14."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Separation of Powers",
+              "points": [
+                "The legislature makes laws, the executive implements them and the judiciary interprets them, maintaining checks and balances.",
+                "The judiciary can review constitutional amendments and declare inconsistent laws unconstitutional; it is impartial and independent and has used Public Interest Litigation to widen access to justice."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Accountability and Transparency",
+              "points": [
+                "Democratic governments are accountable through elections, public debate and civil society.",
+                "The Right to Information Act, 2005 lets citizens seek information from government agencies; Question Hour and auditing of accounts also ensure accountability."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Multi-Party System",
+              "points": [
+                "Several parties contest elections, representing diverse interests; the party or coalition with more than 50 per cent of seats forms the government and the largest opposing group becomes the opposition.",
+                "Parties function under the Representation of the People Act, 1951."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Safeguarding the Rights of Vulnerable Groups",
+              "points": [
+                "Government must protect all communities and distribute resources equitably to vulnerable sections.",
+                "Article 46 directs the State to promote the educational and economic interests of weaker sections, especially Scheduled Castes and Scheduled Tribes."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Role of Media in Democracy",
+              "points": [
+                "Media keeps people informed and serves as the voice of the masses through newspapers, news channels and social media.",
+                "It is often called the 'fourth pillar of democracy'."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Types of Democracy",
+          "points": [
+            "Representative (indirect) democracy: people elect representatives who govern, e.g. India; it can be presidential (executive independent of legislature, e.g. USA) or parliamentary (executive part of and accountable to legislature, e.g. India and Canada).",
+            "Direct democracy: citizens directly participate in most decisions, difficult in large countries, e.g. Switzerland.",
+            "Democracy has no single model; a 'Youth for Democracy' example of four school councils shows how systems differ in sharing power and checks and balances.",
+            "A comparison table shows India, Canada, the United Kingdom (constitutional monarchy, unwritten constitution), Switzerland and the USA."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Democracy in Practice: India’s Living Democracy",
+          "points": [
+            "In 2024 India had over 96.8 crore registered voters; an MP represents about 25 lakh people (2019); elections are held in 22 scheduled languages with symbols; over one million polling stations; over 2,800 registered parties.",
+            "Indian democracy is 'living' because of its diversity and citizens' active engagement; participatory democracy involves local councils, public consultations and community initiatives.",
+            "The three-tier system of Union, State and Local governments is complemented by Autonomous District Councils in north-eastern regions and the PESA Act, 1996, which empowers the Gram Sabha in tribal areas.",
+            "Civil society, cooperatives and trade unions also use democratic decision-making; the RTI Act, 2005 was shaped through parliamentary debate and consultation."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Case Study: Democracy at the Grassroots in India",
+              "points": [
+                "Jethipura Gram Panchayat (Sabarkantha, Gujarat) won the Nanaji Deshmukh Rashtriya Gaurav Gram Sabha Puraskar in 2019 for effective Gram Sabhas, Special Gram Sabhas, Mahila Sabhas and participation of marginalised sections.",
+                "South Manubankul Gram Panchayat in Tripura was recognised as a 'women-friendly panchayat' for women's participation, health, sanitation and livelihood facilities.",
+                "Such cases show democracy is not limited to voting in elections."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Women and the Right to Vote: The Indian Experience",
+              "points": [
+                "Women in Britain received full voting rights in 1928 and in the USA in 1920 after long struggles.",
+                "In India Universal Adult Franchise was extended to all men and women when the Constitution came into force in 1950, though social prejudices still limit women's representation."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Women’s Reservation in Local Bodies",
+              "points": [
+                "Article 243(d) provides not less than one-third reservation for women in every Panchayat; 21 States and 2 Union Territories provide 50%.",
+                "Article 243(t) provides not less than one-third reservation in every Municipality; as of 2023, 17 States and 1 Union Territory give 50% in Urban Local Bodies."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Challenges to Democratic Practices in India",
+          "points": [
+            "Democracy needs constant care and responsible citizens; damaging public property, spreading misinformation and indifference weaken it.",
+            "Challenges include illiteracy, misinformation and fake news on social media, inequality, poverty, regionalism, gender inequality, social discrimination and gaps in implementing laws."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Emergency",
+              "points": [
+                "In June 1975 a National Emergency was imposed on grounds of internal disturbance amid unemployment, inflation and protests against Indira Gandhi's government.",
+                "Most Fundamental Rights were suspended, the press was censored and leaders and activists were arrested; Jayaprakash Narayan (Lok Nayak) led mass movements.",
+                "The Emergency was lifted in 1977; elections defeated the ruling government, showing the resilience of Indian democracy."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Democracy and You",
+              "points": [
+                "Being well informed through news and responsible internet use is a vital responsibility of young citizens.",
+                "Programmes such as NSS, NCC and Bharat Scouts & Guides instil civic responsibility; youth can be media literate, understand the Constitution and follow fundamental duties."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Democracy",
+          "meaning": "A form of government in which power and authority lie with citizens, who elect representatives through free and fair elections."
+        },
+        {
+          "term": "Popular sovereignty",
+          "meaning": "The idea that the state derives its authority from the people."
+        },
+        {
+          "term": "Universal Adult Franchise",
+          "meaning": "The right of every citizen aged 18 and above to vote through a secret ballot."
+        },
+        {
+          "term": "Rule of Law",
+          "meaning": "Principle ensuring equality before the law and equal protection of law, with no one above the law."
+        },
+        {
+          "term": "Equality before law",
+          "meaning": "Every individual irrespective of status, identity or rank is treated equally by the law."
+        },
+        {
+          "term": "Equal protection of law",
+          "meaning": "All persons in similar circumstances are treated equally by law without arbitrary discrimination."
+        },
+        {
+          "term": "Procedure established by law",
+          "meaning": "Strict adherence to duly enacted valid laws, enshrined in Article 21."
+        },
+        {
+          "term": "Separation of powers",
+          "meaning": "Division of responsibilities among legislature, executive and judiciary to prevent concentration of power."
+        },
+        {
+          "term": "Public Interest Litigation",
+          "meaning": "Legal action initiated in a court for the enforcement of public interest."
+        },
+        {
+          "term": "Civil Society",
+          "meaning": "Voluntary groups, NGOs and community associations functioning interdependently within society."
+        },
+        {
+          "term": "Question Hour",
+          "meaning": "The first hour of a parliamentary session when members ask questions to the government."
+        },
+        {
+          "term": "Federalism",
+          "meaning": "Sharing of power between union and state governments through the union, state and concurrent lists, with residual power with the union."
+        },
+        {
+          "term": "Sovereignty",
+          "meaning": "From Latin superanus, 'supreme': the supreme, final and independent legal authority of a State over its territory and citizens."
+        },
+        {
+          "term": "Representative democracy",
+          "meaning": "Indirect democracy in which people elect representatives and do not directly govern."
+        },
+        {
+          "term": "Direct democracy",
+          "meaning": "Citizens directly participate in most decision-making processes."
+        },
+        {
+          "term": "Participatory democracy",
+          "meaning": "Greater citizen involvement in shaping policy through local councils, consultations and community initiatives."
+        },
+        {
+          "term": "Quorum",
+          "meaning": "The minimum number of members present to make an assembly's proceedings valid."
+        },
+        {
+          "term": "Cooperatives",
+          "meaning": "Groups of people working together for common benefit who share profits and responsibilities equally."
+        },
+        {
+          "term": "Legislation",
+          "meaning": "Laws made by the government to maintain order and regulate society."
+        },
+        {
+          "term": "Emergency",
+          "meaning": "Articles 352, 356 and 360 provide for National Emergency, President's Rule and Financial Emergency."
+        },
+        {
+          "term": "Civic responsibility",
+          "meaning": "Respecting others' rights, using social media responsibly, abiding by laws, appreciating diversity and strengthening unity."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Figure: 2024",
+          "statement": "India had over 96.8 crore registered voters and a population of over 140 crore."
+        },
+        {
+          "label": "Date: 26 November 1949 / 26 January 1950",
+          "statement": "The Constitution was adopted and came into force."
+        },
+        {
+          "label": "Date: 1946",
+          "statement": "The Constituent Assembly was formed; it took 2 years, 11 months and 18 days to draft the Constitution."
+        },
+        {
+          "label": "Figure",
+          "statement": "An MP represents about 25 lakh people (2019); over one million polling stations; over 2,800 registered parties; elections in 22 scheduled languages."
+        },
+        {
+          "label": "Law",
+          "statement": "Representation of the People Act, 1951; RTI Act, 2005; PESA Act, 1996; Right to Education (Article 21A) added in 2009."
+        },
+        {
+          "label": "Date: 1920 / 1928",
+          "statement": "Women got the vote in the USA in 1920 and full voting rights in Britain in 1928."
+        },
+        {
+          "label": "Event: 1975-77",
+          "statement": "National Emergency imposed in June 1975 and lifted in 1977, followed by the defeat of the ruling government."
+        },
+        {
+          "label": "Award: 2019",
+          "statement": "Jethipura Gram Panchayat, Gujarat received the Nanaji Deshmukh Rashtriya Gaurav Gram Sabha Puraskar."
+        }
+      ],
+      "activities": [
+        "LET’S RECALL",
+        "THINK ABOUT IT",
+        "LET’S EXPLORE",
+        "THINK, DISCUSS, ACT"
+      ],
+      "exercises": [
+        {
+          "name": "Questions and activities",
+          "questions": 12
+        }
+      ],
+      "bookSummary": [
+        "Democracy is a system of self-governance involving institutions, rules and practices that enable participation at local, state and national levels; it is not limited to elections.",
+        "Democratic processes are guided by transparency, participation, inclusion, fairness, equality, accountability and respect for diverse opinions.",
+        "Democratic ideas in India have deep roots in traditions such as the Sabhā and Samiti of Vedic texts, which with later global developments shaped the modern system.",
+        "India's democracy is based on its Constitution, providing popular sovereignty, universal adult franchise, fundamental rights and duties, rule of law and separation of powers.",
+        "India is the world's largest democracy because of the scale of citizen participation, though challenges remain in deeper inclusion and representation.",
+        "Democracies across the world follow different systems but share common values and principles.",
+        "Citizens contribute through civic awareness, responsible media use, community participation and respect for democratic values."
+      ],
+      "notes": "Page 24 is a blank Notes page."
+    },
+    {
+      "bookChapter": 7,
+      "title": "Elections",
+      "pages": 22,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explains why regular, periodic elections are at the core of democracy and how India's election machinery works. It describes the electoral systems used in India, the laws governing elections, the Delimitation Commission, the functions of the Election Commission of India and the role of political parties. It ends with the challenges to free and fair elections and how they are addressed.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Why do Elections Matter?",
+          "points": [
+            "Regular and periodic elections lie at the core of democracy; representatives are chosen through direct or indirect elections.",
+            "Members of the Lok Sabha, Vidhan Sabha and local bodies are directly elected every five years; the President, Vice President and Rajya Sabha members are elected indirectly.",
+            "A government cannot continue beyond its term without a fresh mandate, and choice needs more than one party; elected representatives are accountable to the people.",
+            "Elections ensure equality, representation, accountability and legitimacy.",
+            "Psephology is the scientific study of elections, from the Greek psēphos, 'pebble', since pebbles were used for voting in ancient Greece."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Inside India’s Election Machinery",
+          "points": [
+            "Free, fair and transparent elections in a vast country need laws, coordinated systems at national, state and local levels, and a robust machinery.",
+            "Stakeholders include the Election Commission of India, political parties, civil society, media and voters, whose roles are set by the Constitution and parliamentary laws."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "The Electoral System",
+              "points": [
+                "The framers chose the plurality or 'First-Past-The-Post' (FPTP) system for the Lok Sabha and Vidhan Sabha; the Rajya Sabha, President and Vice President are elected by proportional representation.",
+                "Under FPTP the candidate with the most votes wins even with less than 50%; under a majority system a candidate needs over 50%, with a second round if needed; under PR seats are allotted in proportion to party votes.",
+                "Six states (Andhra Pradesh, Bihar, Karnataka, Maharashtra, Telangana, Uttar Pradesh) have bicameral legislatures with a Vidhan Parishad elected by Vidhan Sabha members, local bodies, graduates and teachers, plus Governor's nominees.",
+                "Vidhan Parishad elections use proportional representation by single transferable vote, where candidates reaching the quota are elected and the lowest candidate's votes are transferred."
+              ]
+            },
+            {
+              "number": null,
+              "title": "The Laws",
+              "points": [
+                "The Representation of the People Act, 1950 deals with allocation of seats, delimitation, electoral rolls and the right of every citizen above 18 to vote.",
+                "The Representation of the People Act, 1951 deals with nomination, campaigns, voting procedures and post-election disputes; there is also the Presidential and Vice-Presidential Elections Act, 1952.",
+                "RPA 1951 lists corrupt practices such as bribing voters, appealing to vote on grounds of religion, caste, race, community or language, and taking help from government personnel."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Delimitation Commission",
+              "points": [
+                "Constituency boundaries change with population shifts so that the ratio of seats to population is as equal as possible.",
+                "Delimitation determines the number of seats and territorial boundaries in each state for Lok Sabha and Vidhan Sabha elections.",
+                "Article 82 mandates a Delimitation Commission; India has had four, in 1952, 1963, 1973 and 2002."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Election Commission of India (ECI)",
+              "points": [
+                "The ECI, an autonomous permanent constitutional body established on 25 January 1950 under Articles 324 to 329, superintends, directs and controls elections.",
+                "At state level the Chief Electoral Officer supervises; District Magistrates and others serve as District Election Officers, Returning Officers and Electoral Registration Officers.",
+                "The ECI prepares electoral rolls and conducts Special Intensive Revision (SIR) to add eligible voters and delete ineligible entries, after hearing claims and objections.",
+                "It decides the election schedule considering weather, agricultural cycles, examinations and festivals; it registers parties, allots symbols and acts as a quasi-judicial body on disputes.",
+                "Inclusive initiatives include EVMs with Braille, voting from home for citizens above 85 and PwDs with 40% benchmark disability (nationwide in 2024), and apps such as ETPBS, Voter Helpline, cVIGIL, Saksham, Suvidha, Sugam and ERONET.",
+                "25 January is National Voters' Day; the International Election Visitors' Programme links the ECI with 28 EMBs and three international organisations."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Political Parties",
+              "points": [
+                "Voters learn about candidates, policies and positions mainly through political parties, which organise public opinion, campaign on issues and offer meaningful choices.",
+                "India has a multi-party system reflecting its diversity; leaving the party on whose ticket one was elected is defection.",
+                "The Anti-Defection Law (52nd Constitutional Amendment Act, 1985) lets a member be disqualified for giving up party membership or defying the whip; the Speaker or Chairman decides.",
+                "The ECI recognises national and state parties by criteria such as vote share and seats won; others are Registered Unrecognised Political Parties (RUPP).",
+                "1967 ended single-party dominance; the Janata Party formed the first national coalition government in 1977; NDA and UPA (later INDIA) have been major alliances since the late 1990s."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Challenges to Free and Fair Elections",
+          "points": [
+            "Conducting elections for over 96.8 crore voters (2024) across diverse regions is a challenging task.",
+            "Challenges include misinformation, fake news and intimidation.",
+            "The ECI addresses them through RPA 1950 and 1951, the Model Code of Conduct, EVMs, VVPAT and voter awareness campaigns; vigilance and citizen participation make democracy more robust."
+          ],
+          "subsections": []
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Direct elections",
+          "meaning": "Elections in which citizens vote directly to choose their representatives or leaders."
+        },
+        {
+          "term": "Indirect elections",
+          "meaning": "Elections in which citizens vote for representatives who then elect the leaders."
+        },
+        {
+          "term": "Psephology",
+          "meaning": "The scientific study of elections, from Greek psēphos ('pebble') and logy ('systematic study')."
+        },
+        {
+          "term": "First-Past-The-Post (FPTP)",
+          "meaning": "Plurality system in which the candidate with the most votes in a constituency wins, even with less than 50% of votes."
+        },
+        {
+          "term": "Majority system",
+          "meaning": "A candidate must receive more than 50% of votes; otherwise the top two compete in a second round."
+        },
+        {
+          "term": "Proportional representation",
+          "meaning": "Voters vote for a party and seats are allotted in proportion to the total votes each party receives."
+        },
+        {
+          "term": "Single transferable vote",
+          "meaning": "Voters mark preferences; candidates reaching the quota are elected and the lowest candidate's votes are transferred by next preference."
+        },
+        {
+          "term": "Bicameral legislature",
+          "meaning": "A legislature with two houses, the Vidhan Parishad (upper) and Vidhan Sabha (lower)."
+        },
+        {
+          "term": "Delimitation",
+          "meaning": "Determining the number of seats and fixing territorial boundaries of constituencies in each state for Lok Sabha and Vidhan Sabha elections."
+        },
+        {
+          "term": "Special Intensive Revision (SIR)",
+          "meaning": "ECI exercise of updating, verifying and correcting electoral rolls so no eligible citizen is left out and no ineligible person included."
+        },
+        {
+          "term": "ETPBS",
+          "meaning": "Electronically Transmitted Postal Ballot System, letting service voters cast votes on electronically received postal ballots outside their constituency."
+        },
+        {
+          "term": "Independent candidates",
+          "meaning": "Candidates not affiliated to any political party."
+        },
+        {
+          "term": "Defection",
+          "meaning": "Abandoning or switching from the party under whose banner a candidate was elected, or acting independently of party decisions."
+        },
+        {
+          "term": "Registered Unrecognised Political Parties (RUPP)",
+          "meaning": "Parties that have not secured enough votes for recognition or have never contested elections since registration."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Date: 25 January 1950",
+          "statement": "The Election Commission of India was established; 25 January is celebrated as National Voters' Day."
+        },
+        {
+          "label": "Law",
+          "statement": "Representation of the People Acts 1950 and 1951; Presidential and Vice-Presidential Elections Act, 1952."
+        },
+        {
+          "label": "Dates",
+          "statement": "Delimitation Commissions were set up in 1952, 1963, 1973 and 2002 under Article 82."
+        },
+        {
+          "label": "Date: 1985",
+          "statement": "Anti-Defection Law passed through the 52nd Constitutional Amendment Act."
+        },
+        {
+          "label": "Event: 2024",
+          "statement": "Voting from home for senior citizens above 85 and PwDs with 40% benchmark disability was extended across India for the first time in the General Elections."
+        },
+        {
+          "label": "Event: 1967 / 1977",
+          "statement": "1967 ended single-party dominated elections; in 1977 the Janata Party formed the first national coalition government."
+        },
+        {
+          "label": "Criteria",
+          "statement": "A national party needs e.g. 6% of valid votes in four or more states plus four Lok Sabha seats, or 2% of Lok Sabha seats from at least three states, or state party recognition in four states."
+        },
+        {
+          "label": "Figure",
+          "statement": "India had over 96.8 crore eligible voters in 2024."
+        }
+      ],
+      "activities": [
+        "LET’S EXPLORE",
+        "LET’S RECALL",
+        "THINK ABOUT IT",
+        "LET'S MAP",
+        "LET’S ANALYSE"
+      ],
+      "exercises": [
+        {
+          "name": "Questions and activities",
+          "questions": 14
+        }
+      ],
+      "bookSummary": [
+        "Casting a vote is a constitutional right as well as a duty of every citizen.",
+        "Elections are the soul of democracy as they give every citizen an equal voice in forming a government.",
+        "Laws such as the Representation of the People Acts of 1950 and 1951, and bodies like the Delimitation Commission and the ECI, ensure elections remain free, fair and transparent.",
+        "Political parties present diverse viewpoints on programmes and policies, helping voters make informed choices.",
+        "Despite numerous challenges, the ECI tries to ensure that elections at multiple levels are carried out impartially."
+      ],
+      "notes": null
+    },
+    {
+      "bookChapter": 8,
+      "title": "Building Blocks in Economics: The Problem of Choice",
+      "pages": 12,
+      "author": null,
+      "form": null,
+      "overview": "The chapter introduces economics as the study of how choices are made with limited resources to satisfy unlimited wants. It distinguishes needs from wants, explains scarcity, opportunity cost and the Production Possibility Curve, and describes what economists do. It sets out the three key economic questions and how planned, market and mixed economic systems answer them, including India's shift after 1991.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Choices and Limited Resources",
+          "points": [
+            "Individuals, enterprises and governments constantly make economic choices, such as spending pocket money or whether to build highways or hospitals.",
+            "Needs are essentials like food, water and shelter; wants are things like gadgets and vacations, and human wants are unlimited and keep changing.",
+            "Natural and human-made resources (land, labour, capital, technology) are limited and have alternative uses, such as the many uses of steel.",
+            "When one alternative is chosen, the value of what is given up is the opportunity cost.",
+            "A farmer choosing between barley and wheat illustrates the Production Possibility Curve: producing more barley means sacrificing wheat, and points on the curve show maximum output with efficient use of resources."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "What does Economics Deal with?",
+          "points": [
+            "Economics comes from the Greek oikonomia (oikos 'household' and nemein 'management'), meaning household management.",
+            "It deals with how choices are made by optimising the use of limited resources to satisfy needs and wants, and how consumers, producers, governments and financial institutions interact.",
+            "Good decisions rely on data and analysis: families budget for essentials, non-essentials and savings; governments plan spending from tax revenue; enterprises study market trends.",
+            "Economists work in policy-making, finance, research and education, and business consulting, using data such as economic surveys and company financial statements.",
+            "The Economic Survey of India, prepared by the Ministry of Finance and presented in Parliament before the Union Budget, reviews the economy's performance and guides the Budget."
+          ],
+          "subsections": []
+        },
+        {
+          "number": null,
+          "title": "Key Questions in Economics",
+          "points": [
+            "The mismatch between unlimited wants and limited resources creates scarcity and choices, giving rise to three key questions: what to produce, how to produce and for whom to produce."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "What to Produce and for Whom?",
+              "points": [
+                "This concerns which goods and services, and in what quantities, to produce; e.g. water-intensive sugarcane and paddy versus drought-resistant millets and pulses, a trade-off between short-term gains and long-term sustainability.",
+                "'For whom to produce' concerns who benefits; producers choose which consumers to serve based on needs, income and tastes.",
+                "Different shoes (school, office-wear, sports, casual) are made for different groups, which also affects materials used."
+              ]
+            },
+            {
+              "number": null,
+              "title": "How to Produce?",
+              "points": [
+                "This concerns methods, resources and technologies, i.e. the mix of land, labour, capital and technology.",
+                "Production can be labour-intensive (agriculture, handicrafts) or capital-intensive (steel, automobiles).",
+                "The choice depends on cost of capital, technology, the nature of the product, availability and cost of factors, and laws and regulations, as in a garment manufacturer's decision."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Economic Systems and How Choices are Made",
+          "points": [
+            "The economic system defines the mechanisms for production, consumption and distribution of goods, services and resources, and who controls these decisions.",
+            "There are three kinds: planned, market and mixed."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Planned Economy",
+              "points": [
+                "A central planning authority decides what, how much, how and for whom to produce and at what prices; the government owns most resources.",
+                "Enterprises follow targets and strict permits, which restricts competition and reduces motivation to improve quality or innovate.",
+                "Examples: the former Soviet Union, North Korea and Cuba."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Market Economy",
+              "points": [
+                "Production questions are answered mainly by demand and supply with little government intervention; the government acts like a referee ensuring safety and law and order.",
+                "Resources are largely owned by individuals and private companies; competition encourages quality, lower prices and innovation.",
+                "Examples: the USA, Japan and Hong Kong, though governments still play an important role."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Mixed Economy",
+              "points": [
+                "A mixed economy combines features of market and planned economies; private enterprises and the government both play important roles, including large public sector companies.",
+                "Examples include India (post-1991), China (post-1978), Germany and Sweden; most economies are mixed.",
+                "After Independence India followed a state-led approach with licences and a dominant public sector; the 1991 reforms reduced regulation, encouraged private enterprise and opened the economy, while retaining a role for government."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Market",
+          "meaning": "A place, physical or virtual, where buying and selling of products and services takes place."
+        },
+        {
+          "term": "Needs",
+          "meaning": "Essentials such as food, water and shelter."
+        },
+        {
+          "term": "Wants",
+          "meaning": "Preferences beyond essentials, like gadgets, vacations or luxury items; unlimited and changing."
+        },
+        {
+          "term": "Resources",
+          "meaning": "Factors used for production of goods and services, natural (water, coal) or human-made (capital, technology)."
+        },
+        {
+          "term": "Opportunity cost",
+          "meaning": "The value of what is given up when one alternative is chosen."
+        },
+        {
+          "term": "Production Possibility Curve (PPC)",
+          "meaning": "The curve showing different combinations of goods that can be produced using all available resources."
+        },
+        {
+          "term": "Economics",
+          "meaning": "From Greek oikonomia, household management; the discipline of how choices are made by optimising limited resources to satisfy needs and wants."
+        },
+        {
+          "term": "Economy",
+          "meaning": "The state of a country or region in terms of production, consumption and flow of money; a system of production, distribution, trade and consumption within an area."
+        },
+        {
+          "term": "Surveys",
+          "meaning": "A systematic method of collecting and analysing data on economic conditions and behaviours of populations."
+        },
+        {
+          "term": "Data",
+          "meaning": "Facts and statistics collected together for reference or analysis."
+        },
+        {
+          "term": "Economic entities",
+          "meaning": "Participants in economic activity, such as producers, consumers, government and enterprises."
+        },
+        {
+          "term": "Policy",
+          "meaning": "A course or principle of action adopted or proposed by organisations or individuals."
+        },
+        {
+          "term": "Labour-intensive production",
+          "meaning": "Using more workers and less machinery."
+        },
+        {
+          "term": "Capital-intensive production",
+          "meaning": "Using more machines and technology and fewer workers."
+        },
+        {
+          "term": "Economic system",
+          "meaning": "The system defining mechanisms for production, consumption and distribution of goods, services and resources."
+        },
+        {
+          "term": "Planned economy",
+          "meaning": "An economic system in which resource allocation and prices are determined by the government."
+        },
+        {
+          "term": "Market economy",
+          "meaning": "An economic system in which resource allocation and prices are determined primarily by market forces, with government providing public goods and infrastructure."
+        },
+        {
+          "term": "Mixed economy",
+          "meaning": "A system in which the government and a regulated private sector coexist and compete in the market."
+        },
+        {
+          "term": "Public goods",
+          "meaning": "Goods and services available to all without exclusion, e.g. parks, roads, police, street lights and basic education."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Example",
+          "statement": "Growing more barley on limited land requires sacrificing some wheat; this sacrifice is the opportunity cost of barley."
+        },
+        {
+          "label": "Document",
+          "statement": "The Economic Survey of India is prepared annually by the Ministry of Finance and presented in Parliament before the Union Budget."
+        },
+        {
+          "label": "Date: 1991",
+          "statement": "Facing serious economic difficulties, India introduced major reforms that shifted it towards a more market-oriented system."
+        },
+        {
+          "label": "Examples",
+          "statement": "Planned: former Soviet Union, North Korea, Cuba. Market: USA, Japan, Hong Kong. Mixed: India (post-1991), China (post-1978), Germany, Sweden."
+        }
+      ],
+      "activities": [
+        "LET’S EXPLORE",
+        "THINK ABOUT IT"
+      ],
+      "exercises": [
+        {
+          "name": "Questions and activities",
+          "questions": 10
+        }
+      ],
+      "bookSummary": [
+        "Economics deals with how individuals and societies make choices to use limited resources to satisfy unlimited wants; every choice involves an opportunity cost.",
+        "Every economy faces three central questions: what to produce, how to produce and for whom to produce.",
+        "Market economies rely on private decisions and demand and supply, planned economies depend on government control, and mixed economies combine both."
+      ],
+      "notes": "The barley and wheat combination table values did not survive extraction."
+    },
+    {
+      "bookChapter": 9,
+      "title": "The Price Puzzle: What Drives the Market",
+      "pages": 26,
+      "author": null,
+      "form": null,
+      "overview": "The chapter explains how prices of goods and services are determined by demand and supply. It sets out the law of demand and the law of supply, individual and market schedules and curves, and the other factors that shift demand and supply. It explains market equilibrium and why real markets are dynamic, and discusses why and how the government intervenes in the market and the limits of such intervention.",
+      "sections": [
+        {
+          "number": null,
+          "title": "Demand",
+          "points": [
+            "Demand is the quantity of a product people are willing and able to buy at a particular price; it is willingness backed by purchasing power.",
+            "The Law of Demand states the inverse relationship between price and quantity demanded.",
+            "Srivalli buys 1 kg of mangoes at ₹150, 2 kg at ₹100 and 3 kg at ₹50: her individual demand schedule, which graphed gives a downward-sloping demand curve.",
+            "Market demand is the sum of all individual demands; with Alex and Israt it is 6, 12 and 18 kg at ₹150, ₹100 and ₹50, and the market demand curve is flatter than the individual curve."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Other Determinants of Demand",
+              "points": [
+                "Price of related goods: a rise in the price of a substitute (tea and coffee) raises demand for the other; complementary goods (printers and cartridges, cars and petrol) are demanded together.",
+                "Income of the consumer: higher household income generally raises quantity demanded even at the same prices.",
+                "Taste and preference of the buyer, and the size and composition of the population, shape demand; diminishing marginal utility reduces willingness to pay as more is consumed.",
+                "Seasonality: demand changes with weather, festivals and cultural habits, such as books at the start of the session or sweaters in winter.",
+                "Future price expectations: expecting a fall, consumers postpone purchases; expecting a rise, they buy now."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Supply",
+          "points": [
+            "Supply is the quantity sellers are willing and able to offer at a particular price.",
+            "The law of supply: as price rises, quantity supplied rises, because higher prices increase profitability and attract new firms.",
+            "Seller A supplies 1 kg at ₹50, 2 kg at ₹100 and 3 kg at ₹150, giving an upward-sloping supply curve; market supply is the sum of all individual supplies.",
+            "When supply is less than demand, prices rise; when supply exceeds demand, prices fall, as with mangoes early and mid-season."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Other Determinants of Supply",
+              "points": [
+                "Price of related goods: a farmer grows more chickpeas if chickpea prices are high and wheat prices low.",
+                "Number of sellers in the market: more sellers raise supply and lower prices; fewer sellers do the opposite.",
+                "Technology: improvements such as drip irrigation, weather sensors and cold storage reduce costs and raise supply.",
+                "Future expectations: producers expecting a demand boom produce more; wholesalers may hold back potatoes to sell later at higher prices."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Market Equilibrium",
+          "points": [
+            "Prices are determined by the interaction of demand and supply; at a lower price there is excess demand and at a higher price excess supply.",
+            "Market equilibrium is where quantity demanded equals quantity supplied, so the market is cleared with no shortage or surplus.",
+            "In the mango example the equilibrium price is ₹100 and equilibrium quantity 12 kg, where the demand and supply curves intersect at point E."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Does Market Equilibrium Exist in the Real World?",
+              "points": [
+                "Real markets are dynamic: technology, wages, interest rates, wars, pandemics, weather and disasters keep shifting demand and supply, so equilibrium keeps moving.",
+                "During COVID-19 in 2020 demand for face masks surged and prices rose; as suppliers adjusted and the pandemic ended, prices fell back.",
+                "Hotel tariffs show dynamic pricing: a Goa hotel room may cost ₹1,500 off-season, ₹8,000 on a December weekend and ₹25,000 on New Year's Eve, changing with bookings, competitors, events and weather.",
+                "Choices such as fast fashion, overfishing and groundwater overuse can harm future supply, raising questions of long-term sustainability."
+              ]
+            }
+          ]
+        },
+        {
+          "number": null,
+          "title": "Role of Government in the Economy",
+          "points": [
+            "India is the fourth-largest economy in the world, a market-based regulated economy where prices depend on demand and supply.",
+            "Markets allocate by ability to pay and do not always work fairly, so the government acts to ensure fairness and the welfare of vulnerable groups."
+          ],
+          "subsections": [
+            {
+              "number": null,
+              "title": "Regulation of Unfair Practices",
+              "points": [
+                "The government sets maximum prices (price ceiling) for essentials such as medicines and minimum wages (price floor).",
+                "It regulates monopolies, which may charge higher prices, restrict supply and lower quality.",
+                "Regulators such as the RBI, Central Consumer Protection Authority, TRAI and SEBI ensure transparency.",
+                "During COVID-19 sanitisers were declared essential commodities under the Essential Commodities Act, 1955, with maximum retail price capped at ₹100 for 200 ml, to counter hoarding and black-marketing."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Provision of Public Goods",
+              "points": [
+                "Public goods such as roads, bridges, parks, street lighting, national defence, sanitation and drainage are provided by the government for all citizens.",
+                "Private companies usually do not provide them because they generate no direct profit.",
+                "The neighbourhood park example shows that people who can use a good without paying may not contribute, so government provision or funding is needed."
+              ]
+            },
+            {
+              "number": null,
+              "title": "Limitations of Government Intervention",
+              "points": [
+                "Price distortions and reduced producer incentives: fixing wheat at ₹20 per kg when the market price is ₹30 may reduce production and cause shortages.",
+                "Compliance burdens: licences, permits and procedures can hurt small enterprises and ease of doing business, as for a small restaurant needing many permissions.",
+                "Discourages innovation and entrepreneurship: heavy regulation and price controls reduce incentives to invest in better seeds, irrigation or technology."
+              ]
+            }
+          ]
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Demand",
+          "meaning": "The quantity of a product people are willing and able to buy at a particular price, depending on needs, preferences, season, trend and income."
+        },
+        {
+          "term": "Purchasing power",
+          "meaning": "A measure of how much one unit of a particular currency can buy at a particular time."
+        },
+        {
+          "term": "Law of Demand",
+          "meaning": "The inverse relationship between the price of a product and its quantity demanded."
+        },
+        {
+          "term": "Individual demand",
+          "meaning": "The quantity an individual consumer wants to buy at different prices, other factors constant."
+        },
+        {
+          "term": "Demand schedule / demand curve",
+          "meaning": "A table of quantities demanded at different prices; its graphical representation is the demand curve."
+        },
+        {
+          "term": "Market demand",
+          "meaning": "The total quantity demanded by all potential buyers at different prices; the sum of individual demands."
+        },
+        {
+          "term": "Related goods",
+          "meaning": "Products whose demand is interconnected, so a change in price or availability of one affects demand for the other."
+        },
+        {
+          "term": "Substitute goods",
+          "meaning": "Goods that can replace each other, like tea and coffee."
+        },
+        {
+          "term": "Complementary goods",
+          "meaning": "Goods generally used together, like smartphones and earphones or cars and petrol."
+        },
+        {
+          "term": "Diminishing marginal utility",
+          "meaning": "The additional utility from a product declines as more of it is consumed."
+        },
+        {
+          "term": "Supply",
+          "meaning": "The quantity of a product that sellers are willing and able to offer at a particular price."
+        },
+        {
+          "term": "Law of supply",
+          "meaning": "As price increases, quantity supplied increases, and as price decreases, it falls."
+        },
+        {
+          "term": "Market supply",
+          "meaning": "The sum of all individual supplies."
+        },
+        {
+          "term": "Market equilibrium",
+          "meaning": "The point where supply equals demand, with no surplus or shortage, and prices tend to remain stable unless external factors change."
+        },
+        {
+          "term": "Revenue",
+          "meaning": "Total money a business earns from sales or operating activities before expenses are deducted."
+        },
+        {
+          "term": "Price ceiling",
+          "meaning": "An imposed price control setting the maximum amount a seller can charge."
+        },
+        {
+          "term": "Price floor",
+          "meaning": "An imposed limit on how low a price can be; to be effective it must be above the equilibrium price."
+        },
+        {
+          "term": "Monopoly",
+          "meaning": "A market structure with a single seller controlling the entire supply of a unique product with no close substitutes."
+        },
+        {
+          "term": "Hoarding",
+          "meaning": "Accumulation of goods or money beyond immediate need, driven by fear of shortages, expected price rises or speculation."
+        },
+        {
+          "term": "Black marketing",
+          "meaning": "The illegal trade of goods and services that are banned or regulated."
+        },
+        {
+          "term": "Public goods",
+          "meaning": "Goods and services provided by the government for the benefit of all citizens."
+        },
+        {
+          "term": "Ease of doing business",
+          "meaning": "How simple it is to start, run and close a business in a country, measured by regulations, bureaucratic efficiency and legal frameworks."
+        }
+      ],
+      "keyResults": [
+        {
+          "label": "Table 9.1",
+          "statement": "Market demand for mangoes: 6 kg at ₹150, 12 kg at ₹100, 18 kg at ₹50 (Srivalli, Alex and Israt)."
+        },
+        {
+          "label": "Equilibrium",
+          "statement": "Equilibrium price = ₹100; equilibrium quantity = 12 kg (Table 9.3, Fig. 9.7)."
+        },
+        {
+          "label": "Event: 2020",
+          "statement": "During COVID-19 demand for face masks surged and prices rose, later falling to pre-pandemic levels."
+        },
+        {
+          "label": "Example",
+          "statement": "Goa hotel tariffs: ₹1,500 on an off-season weekday, ₹8,000 on a December weekend, ₹25,000 on New Year's Eve."
+        },
+        {
+          "label": "Law",
+          "statement": "Sanitisers were declared essential commodities under the Essential Commodities Act, 1955, with MRP capped at ₹100 for 200 ml."
+        },
+        {
+          "label": "Fact",
+          "statement": "India is the fourth-largest economy in the world."
+        }
+      ],
+      "activities": [
+        "LET’S EXPLORE",
+        "THINK ABOUT IT",
+        "LET’S ANALYSE",
+        "LET’S RECALL"
+      ],
+      "exercises": [
+        {
+          "name": "Questions and activities",
+          "questions": 12
+        }
+      ],
+      "bookSummary": [
+        "Demand is the quantity consumers are willing and able to buy at different prices; the Law of Demand shows an inverse relationship. Demand is influenced by income, prices of substitutes and complements, tastes, seasonality, future expectations and population.",
+        "Supply is the quantity sellers are willing and able to offer at different prices; the Law of Supply shows a direct relationship. Supply depends on prices, related goods' prices, the number of sellers, technology, input costs and factors such as weather.",
+        "Market equilibrium occurs when quantity demanded equals quantity supplied; markets constantly adjust toward new equilibria as weather, trends, technology and income change.",
+        "Government intervenes when markets produce unfair outcomes, under-provide public goods and enable monopolies; however, excessive regulation may also have adverse effects."
+      ],
+      "notes": "Pages 20-26 of the file are maps of India and the world and the book's image credits, not chapter content. The market supply schedule (Table 9.2) and some exercise tables lost their values in extraction."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "draft": "prisma/curriculum-drafts/cbse-10-english-first-flight.json",
+  "format": "One digit per question, in source-id order within the chapter. The digit is the outcome's position in the chapter (1-based, topics in order); 0 means the question tests no outcome in the draft and is left untagged on purpose.",
+  "chapters": {
+    "1": "1121133345 1111111211 2155513345",
+    "2": "1122221334 1122112222 1225555533",
+    "3": "1111133334 1111114411 2111333535",
+    "4": "1112213344 2121111111 2555555533",
+    "5": "1111111113 1111241111 1141115133",
+    "6": "1111211334 1111112121 1111211555",
+    "7": "1112223334 1111111151 1124543333",
+    "8": "1111222334 1111112222 2255554533",
+    "9": "1111111233 1121111121 2114111111"
+  },
+  "book": "jeff1"
+}

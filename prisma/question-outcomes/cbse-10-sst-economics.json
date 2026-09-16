@@ -1,0 +1,12 @@
+{
+  "draft": "prisma/curriculum-drafts/cbse-10-sst-economics.json",
+  "format": "One digit per question, in source-id order within the chapter. The digit is the outcome's position in the chapter (1-based, topics in order); 0 means the question tests no outcome in the draft and is left untagged on purpose.",
+  "chapters": {
+    "1": "1334445555 3344244555 5555121555",
+    "2": "1122225535 1111121333 3333344444",
+    "3": "1222234444 1222223333 3334444444",
+    "4": "1111233334 2111111122 3334333444",
+    "5": "3113332222 1111112322 2222311333"
+  },
+  "book": "jess2"
+}
