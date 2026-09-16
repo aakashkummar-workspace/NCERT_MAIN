@@ -92,9 +92,9 @@ model Organization {
   /// It points across the plane boundary on purpose: boards are global
   /// curriculum rows, and this is the tenant's one declared edge into the
   /// shared tree.
-  boardId      String             @map("board_id") @db.Uuid
+  boardId String @map("board_id") @db.Uuid
 
-  settings     Json               @default("{}")
+  settings Json @default("{}")
 
   /// The shared question library (core/library). Requested is stamped by the
   /// column default when an organization is created, so signup does nothing
@@ -107,11 +107,11 @@ model Organization {
   /// so switching them on later re-queues every organization that lacks them.
   libraryIncludesExemplar Boolean   @default(false) @map("library_includes_exemplar")
 
-  createdAt    DateTime           @default(now()) @map("created_at")
-  updatedAt    DateTime           @default(now()) @updatedAt @map("updated_at")
-  deletedAt    DateTime?          @map("deleted_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @default(now()) @updatedAt @map("updated_at")
+  deletedAt DateTime? @map("deleted_at")
 
-  board       Board        @relation(fields: [boardId], references: [id])
+  board       Board                 @relation(fields: [boardId], references: [id])
   memberships Membership[]
   sessions    Session[]
   invitations Invitation[]
@@ -423,14 +423,14 @@ model Class {
   updatedAt      DateTime    @default(now()) @updatedAt @map("updated_at")
   deletedAt      DateTime?   @map("deleted_at")
 
-  organization Organization     @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-  grade        Grade            @relation(fields: [gradeId], references: [id])
-  subject      Subject          @relation(fields: [subjectId], references: [id])
-  teachers     ClassTeacher[]
-  enrolments   ClassEnrolment[]
-  assessments  Assessment[]
-  assignments  Assignment[]
-  announcements Announcement[]
+  organization     Organization       @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  grade            Grade              @relation(fields: [gradeId], references: [id])
+  subject          Subject            @relation(fields: [subjectId], references: [id])
+  teachers         ClassTeacher[]
+  enrolments       ClassEnrolment[]
+  assessments      Assessment[]
+  assignments      Assignment[]
+  announcements    Announcement[]
   assignedPractice AssignedPractice[]
 
   @@index([organizationId, status])
@@ -583,8 +583,8 @@ model LearningOutcome {
   /// Review by a subject teacher (core/curriculum/review.ts). Null means not
   /// reviewed — every imported draft starts that way — and any edit clears it,
   /// because the review was given to the previous wording.
-  reviewedAt   DateTime? @map("reviewed_at")
-  reviewedById String?   @map("reviewed_by_id") @db.Uuid
+  reviewedAt   DateTime?  @map("reviewed_at")
+  reviewedById String?    @map("reviewed_by_id") @db.Uuid
   updatedAt    DateTime   @default(now()) @updatedAt @map("updated_at")
 
   topic    Topic            @relation(fields: [topicId], references: [id], onDelete: Cascade)
@@ -602,11 +602,11 @@ model LearningOutcome {
 /// Measuring per outcome fragments the evidence; measuring per concept
 /// concentrates it.
 model Concept {
-  id          String   @id @default(uuid()) @db.Uuid
-  slug        String   @unique
-  name        String
-  description String?
-  createdAt   DateTime @default(now()) @map("created_at")
+  id           String    @id @default(uuid()) @db.Uuid
+  slug         String    @unique
+  name         String
+  description  String?
+  createdAt    DateTime  @default(now()) @map("created_at")
   /// Review by a subject teacher (core/curriculum/review.ts). Null means not
   /// reviewed — every imported draft starts that way — and any edit clears it,
   /// because the review was given to the previous wording.
@@ -730,8 +730,8 @@ model Question {
   /// The outcome tag was checked by a reviewer. Separate from approval: a
   /// question can be correctly worded and filed under the wrong outcome, and
   /// the tag is what routes its evidence to a concept.
-  tagReviewedAt   DateTime? @map("tag_reviewed_at")
-  tagReviewedById String?   @map("tag_reviewed_by_id") @db.Uuid
+  tagReviewedAt   DateTime?           @map("tag_reviewed_at")
+  tagReviewedById String?             @map("tag_reviewed_by_id") @db.Uuid
 
   /// The version a reader gets. An attempt records the version it was SERVED,
   /// so a paper written in August still marks the way it did in August even
@@ -958,19 +958,71 @@ model Assignment {
   /// under AFTER_CLOSE. Read by the student result page in a later slice.
   resultsReleasedAt DateTime? @map("results_released_at")
 
+  /// The named series this paper belongs to, when it belongs to one.
+  ///
+  /// A column, so a paper is in at most one series — six papers of a
+  /// half-yearly each name it, and no paper can be half of two.
+  examSeriesId String? @map("exam_series_id") @db.Uuid
+
   cancelledAt DateTime? @map("cancelled_at")
   createdAt   DateTime  @default(now()) @map("created_at")
   updatedAt   DateTime  @default(now()) @updatedAt @map("updated_at")
 
   assessment Assessment         @relation(fields: [assessmentId], references: [id])
   class      Class              @relation(fields: [classId], references: [id])
+  examSeries ExamSeries?        @relation(fields: [examSeriesId], references: [id], onDelete: SetNull)
   targets    AssignmentTarget[]
   attempts   Attempt[]
 
+  @@index([organizationId, examSeriesId])
   @@index([organizationId, classId])
   @@index([organizationId, assessmentId])
   @@index([organizationId, opensAt, closesAt])
   @@map("assignments")
+}
+
+/// Six papers that know they belong together.
+///
+/// A half-yearly is six assignments with no relationship between them: a
+/// teacher sets each one, and a parent sees six unrelated results. This is the
+/// label that ties them, and it is ONLY a label — it holds no window, no
+/// marks, and no status.
+///
+/// There is deliberately no status column. Upcoming, running and finished are
+/// a function of the papers' own windows and the clock, exactly as an
+/// assignment's own status is; a stored one would need a job flipping rows and
+/// would be a lie between ticks.
+///
+/// And no total. An aggregate percentage across a series is the composite
+/// score this product refuses everywhere else, arriving at the one place the
+/// pressure is strongest — a sheet a parent keeps.
+model ExamSeries {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+
+  name String
+
+  /// "2026-27". A series belongs to a year because that is how a school names
+  /// it, and it keeps last year's half-yearly out of this year's list.
+  academicYear String @map("academic_year")
+
+  /// One line: what this series is for, in the teacher's own words.
+  note String?
+
+  /// Withdrawn rather than deleted, and withdrawing it does NOT cancel its
+  /// papers — a teacher tidying up a label must not silently cancel six exams
+  /// a class is about to sit. The papers keep their own windows and simply
+  /// stop being grouped.
+  cancelledAt DateTime? @map("cancelled_at")
+
+  createdById String   @map("created_by_id") @db.Uuid
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @default(now()) @updatedAt @map("updated_at")
+
+  assignments Assignment[]
+
+  @@index([organizationId, academicYear, createdAt])
+  @@map("exam_series")
 }
 
 /// Present only when the assignment goes to a SUBSET of the class.
@@ -1040,15 +1092,15 @@ model Attempt {
   durationMs Int      @map("duration_ms")
   expiresAt  DateTime @map("expires_at")
 
-  submittedAt  DateTime?     @map("submitted_at")
-  submitReason SubmitReason? @map("submit_reason")
-  scoredAt     DateTime?     @map("scored_at")
-  releasedAt   DateTime?     @map("released_at")
+  submittedAt    DateTime?     @map("submitted_at")
+  submitReason   SubmitReason? @map("submit_reason")
+  scoredAt       DateTime?     @map("scored_at")
+  releasedAt     DateTime?     @map("released_at")
   /// When the student last opened this result. Teacher feedback written after
   /// it (an answer `graded_at` later than this) is "new" on their home page.
   /// A stamp rather than a per-comment read flag, because what matters is
   /// whether they have looked since the teacher last said something.
-  feedbackSeenAt DateTime? @map("feedback_seen_at")
+  feedbackSeenAt DateTime?     @map("feedback_seen_at")
 
   rawScore   Decimal? @map("raw_score") @db.Decimal(6, 2)
   maxScore   Decimal? @map("max_score") @db.Decimal(6, 2)
@@ -1888,7 +1940,7 @@ model AssignedPractice {
 
   /// A concept, because that is what mastery is measured per and what a
   /// recommendation names.
-  conceptId String @map("concept_id") @db.Uuid
+  conceptId   String @map("concept_id") @db.Uuid
   /// Denormalised so a card can name the idea without reaching across the
   /// plane boundary on every read. A rename shows up on the next assignment.
   conceptName String @map("concept_name")

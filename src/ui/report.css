@@ -195,6 +195,28 @@
   vertical-align: top;
 }
 
+/* A named event heading its own papers. Not uppercase like the column
+   headings above it — this is a name a school chose, and shouting it makes it
+   read as another column. It carries no figure: there is no series total, and
+   this is the row somebody would put one in. */
+.ui-report-group th {
+  padding: 14px 10px 6px 0;
+  border-bottom: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--text-primary);
+}
+
+/* Keep a series' heading with the first paper under it when the sheet is
+   printed, or a group name can end a page on its own. */
+@media print {
+  .ui-report-group th {
+    break-after: avoid;
+  }
+}
+
 .ui-report-subject {
   display: block;
   font-size: 12px;

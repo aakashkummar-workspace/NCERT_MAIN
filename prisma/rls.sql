@@ -162,6 +162,10 @@ declare
     -- Teacher-assigned practice. One teachers instruction to one class, and
     -- an ordinary tenant table: which class is checked on top, as everywhere.
     'assigned_practice',
+    -- Exam series. A label over a school's own papers, carrying no window, no
+    -- marks and no status; an ordinary tenant table like the assignments it
+    -- groups.
+    'exam_series',
     -- White labelling. A school's own presentation and its uploaded logos —
     -- ordinary tenant tables. The branded sign-in page reads them before any
     -- tenant is known, and does so through `app_public_branding` below rather

@@ -247,6 +247,10 @@ export async function getAssignment(organizationId: string, id: string) {
           },
         },
         class: { select: { id: true, name: true } },
+        // The named event this paper is part of, when it is part of one. Read
+        // here rather than on the page, so the page cannot ask a second time
+        // and get a different answer.
+        examSeries: { select: { id: true, name: true } },
         targets: true,
       },
     });
@@ -294,6 +298,7 @@ export async function getAssignment(organizationId: string, id: string) {
       resultsPolicy: row.resultsPolicy,
       resultsReleasedAt: row.resultsReleasedAt,
       cancelledAt: row.cancelledAt,
+      series: row.examSeries ? { id: row.examSeries.id, name: row.examSeries.name } : null,
       wholeClass: targeted.size === 0,
       students: students.map((student) => ({
         userId: student.id,

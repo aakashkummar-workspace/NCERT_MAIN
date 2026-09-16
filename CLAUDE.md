@@ -37,11 +37,11 @@ calibration that silently produces nonsense corrupts every mastery figure
 downstream of it — which is every figure the product exists to produce. They are
 waiting on data, not on a decision. See [IMPLEMENTATION_PLAN.md](./IMPLEMENTATION_PLAN.md).
 
-**What is planned next is in IMPLEMENTATION_PLAN.md section 7.** Live exam
-monitoring, marks export, teacher-assigned practice, exam series, and
-cross-school concept benchmarks — each written down with the refusal it has
-to make, because every one of them is a feature somebody could build in a way
-that quietly lies. Nothing there is started.
+**Phase 4 is under way, in IMPLEMENTATION_PLAN.md section 7.** Live exam
+monitoring, marks export, teacher-assigned practice and exam series are BUILT.
+Cross-school concept benchmarks (7.5) are not, and ship last of the five
+because they are the easiest of them to build into a lie. Each is written down
+with the refusal it has to make.
 **Content arrived in September 2026.** The NCERT import brought 3,857 CBSE
 Class 9 and 10 questions and draft outcomes and concepts for every chapter but
 Hindi. The drafts await a teacher's review, and the bank must not reach any
@@ -67,7 +67,7 @@ npm run verify                # typecheck + lint + unit
 npm run test:integration      # needs the database up
 npm run audit:rls             # the one that must never be skipped
 npm run build && npm start    # then, in another shell:
-npm run smoke                 # 834 HTTP checks across twenty-four suites
+npm run smoke                 # 872 HTTP checks across twenty-five suites
 npm run test:e2e              # 186 browser checks: 13 flows, axe on all 52 routes,
                               # tap targets and layout at 360 / 768 / 1440
 npm run test:a11y             # just the accessibility sweep
@@ -1362,6 +1362,70 @@ about sixty-five defects. The lessons are about where tests stop looking:
 - **A malformed id is a 404, not a 500.** Prisma throws on a non-UUID, so every
   `[id]` route validates the id before querying.
 
+### Exam series
+
+- **A series is a LABEL, and every refusal follows from that.** It holds no
+  window, no marks and no status; each paper keeps its own window, results
+  policy and marking. So assigning, sitting, marking and releasing are
+  untouched, and a school that never makes one loses nothing.
+- **No aggregate across a series, and no field to put one in.** "Half-yearly:
+  68%" is the composite this product refuses everywhere else — no overall score
+  per student, no class mastery score, no grade on a report, no readiness
+  percentage — arriving where the pressure is strongest, because a series looks
+  exactly like a report card. Six papers out of different totals, some part
+  marked, some unreleased, do not average into anything defensible. A unit test
+  asserts a rendered group carries only `seriesId`, `seriesName` and
+  `sittings`, and an integration test greps the payload.
+- **No status column.** Upcoming, running and finished are a function of the
+  papers' own windows and the clock, exactly as an assignment's status is. The
+  stored row is grepped for `status`, `opensAt`, `closesAt`, `total` and
+  `percentage` in an integration test, and `seriesStatus` is pure so the badge
+  a teacher sees and the figure the server renders are one function.
+- **Mid-week is RUNNING, not FINISHED.** Monday's paper is over and
+  Wednesday's has not opened, so nothing is open at this minute — which is most
+  of a half-yearly week. "Finished" would be false and "coming up" worse.
+- **EMPTY is a real state**, because a named series holding nothing is where
+  every series starts. A cancelled paper is ignored when deciding, so a
+  called-off last paper does not hold a half-yearly open forever.
+- **Withdrawing a series does NOT cancel its papers.** The one thing this
+  feature must never do: a teacher tidying up a label they mistyped must not
+  silently cancel six exams a class is about to sit. `cancelledAt` on the
+  series means "stop grouping these"; the confirm names the paper count and
+  says they are untouched, the API answers with it, and an integration test
+  asserts every paper is still `canStart` afterwards.
+- **A paper is in at most one series — a column — and is never moved
+  silently.** Adding one that already belongs elsewhere is a 409 naming the
+  problem. A paper that quietly left the half-yearly when somebody built the
+  pre-boards is a paper missing from a report nobody will re-read.
+- **The picker offers finished papers too.** A school routinely sets six papers
+  in a week and names the event afterwards; hiding shut ones would make
+  grouping a half-yearly impossible the day after it ended.
+- **A duplicate name in one academic year is refused**, ignoring case, spacing
+  and the separator: "Half-Yearly" and "Half Yearly" are one event to everybody
+  except a database. The refusal names the series that already exists, not the
+  string just typed. The same name NEXT year is fine — schools reuse them.
+- **The report STAMPS the series name on each sitting**, beside the id. A
+  series renamed in December must not change what a parent was handed in
+  September — the same invariant as the rest of that payload — and an
+  integration test renames one and asserts the stored document did not follow.
+- **Grouping is presentation and is derived, never stored twice.** The payload
+  holds one row per paper carrying its series; `groupBySeries` in
+  `ReportSheet.tsx` orders the groups by when they were sat and puts ungrouped
+  papers last. A report with no series at all renders as the plain table it
+  always was.
+- **`PAYLOAD_VERSION` is 2, and the renderer now accepts anything UP TO the
+  version it knows.** The old check was exact equality, which would have made
+  every report stamped before this deploy render as "cannot be shown" — the
+  product forgetting documents it had already handed to parents. Every version
+  has only ever added optional facts, so an older payload renders with what it
+  lacks treated as absent. A NEWER one still refuses, because this build cannot
+  know what it would be leaving out. The integration tests assert the stamp
+  against the constant rather than a literal.
+- **`measuredWorld()` lives in `tests/integration/support/`** for the reason
+  `makeWorld` does: a report refuses below three measured concepts, so every
+  suite that wants a report rather than a refusal builds the same fixture, and
+  two copies of one that size drift within a week.
+
 ### Practice a teacher asked for
 
 - **It is an INSTRUCTION, not a new kind of assessment.** `assigned_practice`
@@ -2003,7 +2067,7 @@ about sixty-five defects. The lessons are about where tests stop looking:
 
 ### End-to-end and accessibility
 
-- **The suite covers only what a browser can prove.** 834 smoke checks already
+- **The suite covers only what a browser can prove.** 872 smoke checks already
   drive the real HTTP API against a real build; re-proving status codes and
   payload shapes in Chromium would double the runtime and the maintenance for
   nothing. E2E is for work surviving a refresh or a dropped connection,

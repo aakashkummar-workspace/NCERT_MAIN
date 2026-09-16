@@ -70,6 +70,22 @@ export type ReportSitting = {
   total: number | null;
   /** Papers still partly with the teacher. Named, never averaged away. */
   fullyMarked: boolean;
+  /**
+   * The series this paper belonged to, when it belonged to one.
+   *
+   * The NAME is stamped alongside the id, not looked up when the sheet is
+   * read: a series renamed in December must not change what a parent was
+   * handed in September, which is the same invariant as the rest of this
+   * payload. The id travels too, so the sheet can group without matching on
+   * strings.
+   *
+   * There is no series TOTAL here, and no field one could be put in. An
+   * aggregate across six papers marked out of different totals — some part
+   * marked, some unreleased — is the composite score this product refuses
+   * everywhere else, arriving on the one document a family keeps.
+   */
+  seriesId: string | null;
+  seriesName: string | null;
 };
 
 export type ReportInput = {

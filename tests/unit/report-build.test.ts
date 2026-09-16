@@ -33,6 +33,8 @@ function sitting(over: Partial<ReportSitting> = {}): ReportSitting {
     percentage: over.percentage === undefined ? 0.62 : over.percentage,
     awarded: over.awarded === undefined ? 18 : over.awarded,
     total: over.total === undefined ? 30 : over.total,
+    seriesId: over.seriesId ?? null,
+    seriesName: over.seriesName ?? null,
     fullyMarked: over.fullyMarked ?? true,
   };
 }

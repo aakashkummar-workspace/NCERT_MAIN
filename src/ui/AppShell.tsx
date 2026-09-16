@@ -13,16 +13,17 @@ import { ThemeToggle } from "./ThemeToggle";
  */
 
 import {
-  DashboardIcon,
-  ClassesIcon,
-  AssessmentsIcon,
-  QuestionsIcon,
-  StudentsIcon,
-  BookOpenIcon,
   AnalyticsIcon,
-  SparklesIcon,
+  AssessmentsIcon,
+  BookOpenIcon,
+  ClassesIcon,
+  DashboardIcon,
+  FileTextIcon,
+  QuestionsIcon,
   ReportsIcon,
   SettingsIcon,
+  SparklesIcon,
+  StudentsIcon,
 } from "./icons";
 
 type NavItem = {
@@ -39,6 +40,7 @@ const NAV: { section: string; items: NavItem[] }[] = [
       { href: "/teacher", label: "Dashboard", icon: <DashboardIcon size={18} /> },
       { href: "/teacher/classes", label: "My Classes", icon: <ClassesIcon size={18} /> },
       { href: "/teacher/assessments", label: "Assessments", icon: <AssessmentsIcon size={18} /> },
+      { href: "/teacher/series", label: "Exam Series", icon: <FileTextIcon size={18} /> },
       { href: "/teacher/questions", label: "Question Bank", icon: <QuestionsIcon size={18} /> },
       { href: "/teacher/students", label: "Students", icon: <StudentsIcon size={18} /> },
       { href: "/teacher/syllabus", label: "Syllabus", icon: <BookOpenIcon size={18} /> },

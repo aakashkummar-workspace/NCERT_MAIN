@@ -44,7 +44,17 @@ import {
 export type Actor = { organizationId: string; userId: string };
 
 /** The shape `payload` is in. Bump when the payload changes shape. */
-export const PAYLOAD_VERSION = 1;
+/**
+ * The stored payload's shape.
+ *
+ * 2 added the series a paper belonged to, on each sitting. Version 1 documents
+ * still render: the renderer accepts any version up to the one it knows and
+ * treats what is missing as absent, because a sheet stamped in September has
+ * to stay readable in December. A payload NEWER than the build says so and
+ * refuses — a half-drawn document is worse than one that admits it cannot be
+ * shown here.
+ */
+export const PAYLOAD_VERSION = 2;
 
 export type GenerateResult =
   | { ok: true; reportId: string; payload: ReportPayload }
@@ -356,6 +366,11 @@ async function gather(
         resultsPolicy: true,
         resultsReleasedAt: true,
         assessmentId: true,
+        // Which named event this paper was part of. The name is read here and
+        // STAMPED into the payload, so a series renamed later cannot change a
+        // document already handed over.
+        examSeriesId: true,
+        examSeries: { select: { name: true } },
       },
     });
 
@@ -470,6 +485,8 @@ async function gather(
       awarded: visible ? awarded : null,
       total: visible ? total : null,
       fullyMarked: pendingMarks === 0,
+      seriesId: assignment.examSeriesId,
+      seriesName: assignment.examSeries?.name ?? null,
     });
   }
 

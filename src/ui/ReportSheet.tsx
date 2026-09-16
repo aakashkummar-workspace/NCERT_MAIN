@@ -20,9 +20,16 @@
  * does not know renders as a plain statement rather than as a half-drawn sheet
  * with fields missing — a document with holes in it is worse than one that says
  * it cannot be shown here.
+ *
+ * "Does not know" means NEWER. An older payload renders, with what it lacks
+ * treated as absent: every version has only ever ADDED optional facts, and
+ * refusing to draw a sheet stamped before the last deploy would make the
+ * product forget documents it had already handed to parents. A newer one is
+ * the case that must refuse — this build cannot know what it would be leaving
+ * out.
  */
 
-export const KNOWN_PAYLOAD_VERSION = 1;
+export const KNOWN_PAYLOAD_VERSION = 2;
 
 export type ReportSheetConcept = {
   conceptId: string;
@@ -47,6 +54,9 @@ export type ReportSheetSitting = {
   percentage: number | null;
   awarded: number | null;
   total: number | null;
+  /** Optional: payload version 1 carried no series. */
+  seriesId?: string | null;
+  seriesName?: string | null;
 };
 
 export type ReportSheetPayload = {
@@ -85,6 +95,70 @@ export type ReportSheetLetterhead = {
   signatories: string[];
   hidePoweredBy: boolean;
 };
+
+export type ReportSheetSittingGroup = {
+  seriesId: string | null;
+  seriesName: string | null;
+  sittings: ReportSheetSitting[];
+};
+
+/**
+ * The papers, grouped by the series they belonged to.
+ *
+ * Grouping is PRESENTATION and is derived here rather than stored twice: the
+ * payload holds one row per paper carrying the series it was part of, exactly
+ * as it holds two integers for coverage rather than a ratio. A stored document
+ * should hold facts.
+ *
+ * Groups run in the order the papers were sat, and papers in no series come
+ * last. A report with no series at all produces one unnamed group, which
+ * renders as the plain table it always was — a school that never makes a
+ * series sees no change.
+ *
+ * There is no group total, and no field for one: six papers out of different
+ * totals, some part marked, cannot honestly become a number, and a report card
+ * is where that number would do the most damage.
+ */
+export function groupBySeries(
+  sittings: ReportSheetSitting[],
+): ReportSheetSittingGroup[] {
+  const groups = new Map<string, ReportSheetSittingGroup>();
+  const loose: ReportSheetSitting[] = [];
+
+  for (const sitting of sittings) {
+    if (!sitting.seriesId) {
+      loose.push(sitting);
+      continue;
+    }
+    const existing = groups.get(sitting.seriesId);
+    if (existing) {
+      existing.sittings.push(sitting);
+      continue;
+    }
+    groups.set(sitting.seriesId, {
+      seriesId: sitting.seriesId,
+      // Stamped on the sitting, so a rename since cannot move it.
+      seriesName: sitting.seriesName ?? null,
+      sittings: [sitting],
+    });
+  }
+
+  if (groups.size === 0) {
+    return [{ seriesId: null, seriesName: null, sittings: sittings }];
+  }
+
+  const when = (group: ReportSheetSittingGroup) =>
+    Math.min(
+      ...group.sittings.map((sitting) =>
+        new Date(sitting.satAt).getTime(),
+      ),
+    );
+  const ordered = [...groups.values()].sort((a, b) => when(a) - when(b));
+  if (loose.length > 0) {
+    ordered.push({ seriesId: null, seriesName: null, sittings: loose });
+  }
+  return ordered;
+}
 
 const DATE = new Intl.DateTimeFormat("en-IN", {
   day: "numeric",
@@ -146,12 +220,12 @@ export function ReportSheet({
   letterhead?: ReportSheetLetterhead | null;
   letterheadLogoUrl?: string | null;
 }) {
-  if (payloadVersion !== KNOWN_PAYLOAD_VERSION) {
+  if (payloadVersion > KNOWN_PAYLOAD_VERSION) {
     return (
       <section className="ui-report">
         <p className="ui-report-stale">
-          This report was written in an older format that this version of the
-          site cannot display. Ask the school for a fresh one — the original is
+          This report was written in a newer format than this version of the
+          site can display. Ask the school for a fresh one — the original is
           not lost.
         </p>
       </section>
@@ -164,6 +238,10 @@ export function ReportSheet({
   // below the line or not — so this needs no new field and no version bump,
   // and reports already written say it too.
   const { attentionUnnamed, strengthsUnnamed } = unnamedCounts(payload);
+
+  // Whether any paper on this sheet belonged to a named event. Version 1
+  // payloads carry none, so they render exactly as they did before.
+  const named = payload.sittings.some((sitting) => Boolean(sitting.seriesId));
 
   return (
     <article className="ui-report">
@@ -301,26 +379,42 @@ export function ReportSheet({
                 <th scope="col">Marks</th>
               </tr>
             </thead>
-            <tbody>
-              {payload.sittings.map((sitting) => (
-                <tr key={sitting.assignmentId}>
-                  <td>
-                    {sitting.title}
-                    <span className="ui-report-subject">
-                      {sitting.subjectName}
-                      {/* Said, rather than shown as four identical rows. */}
-                      {sitting.attempts > 1 && ` · best of ${sitting.attempts} goes`}
-                    </span>
-                  </td>
-                  <td className="tabular">{on(sitting.satAt)}</td>
-                  <td className="tabular">
-                    {sitting.awarded === null || sitting.total === null
-                      ? "—"
-                      : `${sitting.awarded} of ${sitting.total}`}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
+            {groupBySeries(payload.sittings).map((group) => (
+              <tbody key={group.seriesId ?? "loose"}>
+                {/*
+                  A named event gets a heading and its papers beneath it, and
+                  no total: "Half-Yearly" above six rows says they belong
+                  together, which is all the series ever claimed. `named` is
+                  false for a report with no series at all, where this renders
+                  as the plain table it has always been.
+                */}
+                {named && (
+                  <tr className="ui-report-group">
+                    <th scope="colgroup" colSpan={3}>
+                      {group.seriesName ?? "Other tests"}
+                    </th>
+                  </tr>
+                )}
+                {group.sittings.map((sitting) => (
+                  <tr key={sitting.assignmentId}>
+                    <td>
+                      {sitting.title}
+                      <span className="ui-report-subject">
+                        {sitting.subjectName}
+                        {/* Said, rather than shown as four identical rows. */}
+                        {sitting.attempts > 1 && ` · best of ${sitting.attempts} goes`}
+                      </span>
+                    </td>
+                    <td className="tabular">{on(sitting.satAt)}</td>
+                    <td className="tabular">
+                      {sitting.awarded === null || sitting.total === null
+                        ? "—"
+                        : `${sitting.awarded} of ${sitting.total}`}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            ))}
           </table>
           {payload.awaitingMarking > 0 && (
             <p className="ui-report-note">

@@ -2120,7 +2120,10 @@
   color: var(--text-tertiary);
 }
 
-.ui-new-assessment {
+/* The two panels that name a thing before its own screen opens: an
+   assessment, and an exam series. Same box, said once. */
+.ui-new-assessment,
+.ui-new-series {
   width: min(560px, 100%);
   padding: 18px 20px;
   background: var(--surface);
@@ -2458,5 +2461,153 @@
        does not care which direction was the easy one. Longer labels are
        already wider than this and are unaffected. */
     min-width: var(--tap-min);
+  }
+}
+
+/* ------------------------------------------------------- Exam series -- */
+/* Nothing else in the product owns `.ui-series-*` — grepped before naming,
+   the rule `.ui-result-score` taught twice. */
+
+/* The list of series borrows the assessment list's shape, because it is the
+   same thing: rows that lead somewhere. */
+.ui-series-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.ui-series-list li {
+  margin: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-series-list li:last-child {
+  border-bottom: 0;
+}
+
+.ui-series-list a {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 15px 18px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ui-series-list a:hover {
+  background: var(--surface-sunken);
+}
+
+.ui-series-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.ui-series-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 12.5px;
+  color: var(--text-tertiary);
+}
+
+.ui-series-note {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-series-papers-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ui-series-papers-list li {
+  margin: 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ui-series-papers-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.ui-series-paper-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-weight: 600;
+  font-size: 14.5px;
+}
+
+.ui-series-paper-meta {
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+.ui-series-papers {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ui-series-add {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.ui-series-add .ui-field {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ui-series-remove-list {
+  list-style: none;
+  margin: 0;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13.5px;
+}
+
+.ui-series-remove-list li {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ui-series-remove-class {
+  color: var(--text-tertiary);
+}
+
+/* A destructive control must not wrap under the wrong paper's name: at phone
+   width the row becomes two, the name first. */
+@media (max-width: 640px) {
+  .ui-series-add {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ui-series-add .ui-button {
+    width: 100%;
+  }
+  .ui-series-remove-list li {
+    flex-direction: column;
+    align-items: stretch;
   }
 }

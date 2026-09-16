@@ -71,6 +71,16 @@ export default async function AssignmentPage({
             <Link href={`/teacher/assessments/${assignment.assessmentId}`}>
               {assignment.assessmentTitle}
             </Link>
+            {/* Which event this paper belongs to, said where somebody
+                wondering "is this in the half-yearly?" is already looking. */}
+            {assignment.series && (
+              <>
+                {" · "}
+                <Link href={`/teacher/series/${assignment.series.id}`}>
+                  {assignment.series.name}
+                </Link>
+              </>
+            )}
           </>
         }
         title={assignment.className}

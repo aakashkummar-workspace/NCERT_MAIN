@@ -312,6 +312,11 @@ every word that would turn a late one into a reproach.
 
 ### 7.4 Exam series — six papers that know they belong together
 
+**BUILT.** `/teacher/series`, and a section per series on the term report. The
+series is a LABEL: it holds no window, no marks and no status, so nothing about
+assigning, sitting, marking or releasing changed, and a school that never makes
+one loses nothing. Withdrawing a series does not cancel its papers.
+
 A half-yearly is six assignments with no relationship between them. A teacher
 sets each one; a parent sees six unrelated results.
 
@@ -326,8 +331,14 @@ term report gains a section per series.
 - **The series carries no status column.** Upcoming, open and finished are a
   function of the papers' own windows and the clock.
 
-**Proof:** a test that a series holding papers in three window states reports
-all three correctly, with no stored status.
+**Proof:** 14 integration tests, 16 unit tests and 38 smoke checks. A series
+holding a shut, an open and an unopened paper reports all three from their own
+stamps and is "under way"; the stored row is grepped for `status`, `opensAt`,
+`closesAt`, `total` and `percentage` and holds none of them. A report stamps
+the series NAME on each paper, and renaming the series afterwards does not
+change a document already handed over. Withdrawing the label leaves every paper
+open and sittable — asserted through `canStart`, because that is the failure
+this must never have.
 
 ### 7.5 Cross-school concept benchmarks — the one only this architecture allows
 
