@@ -9,6 +9,12 @@ import {
   type Exception,
 } from "@/core/institute/kpis";
 import { PageHeader, StatCard } from "@/ui";
+import {
+  contributionState,
+  MIN_MEASURED_TO_CONTRIBUTE,
+  MIN_SCHOOLS,
+} from "@/core/benchmarks";
+import { BenchmarkOptIn } from "./BenchmarkOptIn";
 
 export const generateMetadata = brandedPageMetadata("Institute");
 
@@ -24,10 +30,11 @@ export default async function InstituteDashboard() {
   if (!session) redirect("/signin");
 
   const organizationId = session.actor.organizationId;
-  const [kpis, found, live] = await Promise.all([
+  const [kpis, found, live, benchmarks] = await Promise.all([
     instituteKpis(organizationId),
     exceptions(organizationId),
     liveAssignments(organizationId),
+    contributionState(organizationId),
   ]);
 
   const high = found.filter((row) => row.severity === "high");
@@ -122,10 +129,20 @@ export default async function InstituteDashboard() {
         />
       </div>
 
+      <div style={{ marginTop: 20 }}>
+        <BenchmarkOptIn
+          contributing={benchmarks.contributing}
+          concepts={benchmarks.concepts}
+          minSchools={MIN_SCHOOLS}
+          minStudents={MIN_MEASURED_TO_CONTRIBUTE}
+        />
+      </div>
+
       <p className="ui-hint" style={{ marginTop: 20 }}>
         {/*
           Said out loud on the owner's own page, because this is where the
-          request for a league table arrives.
+          request for a league table arrives — about teachers here, and about
+          other schools in the card above.
         */}
         There is no ranking of teachers here, and that is deliberate — a teacher
         given the weaker set scores lower however well they teach, so a table

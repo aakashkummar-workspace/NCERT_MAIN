@@ -950,3 +950,49 @@
     min-width: var(--tap-min);
   }
 }
+
+/* ------------------------------------------------- Cross-school benchmarks -- */
+/* Grepped before naming: nothing else in the product owns `.ui-benchmark-*`
+   or `.ui-concept-benchmark`. */
+
+.ui-benchmark-copy {
+  margin: 0 0 10px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.ui-benchmark-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+/* The state is a sentence, not a colour: "Contributing on 9 ideas" reads the
+   same to somebody who cannot tell the dot from the background. */
+.ui-benchmark-state {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* `--success` is measured at 5.37:1 on the light surfaces and 7.54:1 on the
+   dark one — it passes AA as text, which a fill token would not. */
+.ui-benchmark-state[data-on] {
+  color: var(--success);
+}
+
+@media (max-width: 640px) {
+  .ui-benchmark-foot {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ui-benchmark-foot .ui-button {
+    width: 100%;
+  }
+}

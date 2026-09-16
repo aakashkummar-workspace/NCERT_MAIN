@@ -37,11 +37,13 @@ calibration that silently produces nonsense corrupts every mastery figure
 downstream of it — which is every figure the product exists to produce. They are
 waiting on data, not on a decision. See [IMPLEMENTATION_PLAN.md](./IMPLEMENTATION_PLAN.md).
 
-**Phase 4 is under way, in IMPLEMENTATION_PLAN.md section 7.** Live exam
-monitoring, marks export, teacher-assigned practice and exam series are BUILT.
-Cross-school concept benchmarks (7.5) are not, and ship last of the five
-because they are the easiest of them to build into a lie. Each is written down
-with the refusal it has to make.
+**Phase 4's five features are BUILT** — live exam monitoring, marks export,
+teacher-assigned practice, exam series, and cross-school concept benchmarks.
+The last of those cannot be SHOWN working: its floor is five contributing
+schools and this deployment has one, so every refusal is proven and a live
+median is not. What remains in IMPLEMENTATION_PLAN.md section 7 is 7.6, the
+India bets — a Hindi question bank, WhatsApp for parents, offline-tolerant
+practice — which are planned rather than started.
 **Content arrived in September 2026.** The NCERT import brought 3,857 CBSE
 Class 9 and 10 questions and draft outcomes and concepts for every chapter but
 Hindi. The drafts await a teacher's review, and the bank must not reach any
@@ -67,7 +69,7 @@ npm run verify                # typecheck + lint + unit
 npm run test:integration      # needs the database up
 npm run audit:rls             # the one that must never be skipped
 npm run build && npm start    # then, in another shell:
-npm run smoke                 # 872 HTTP checks across twenty-five suites
+npm run smoke                 # 901 HTTP checks across twenty-six suites
 npm run test:e2e              # 186 browser checks: 13 flows, axe on all 52 routes,
                               # tap targets and layout at 360 / 768 / 1440
 npm run test:a11y             # just the accessibility sweep
@@ -1362,6 +1364,77 @@ about sixty-five defects. The lessons are about where tests stop looking:
 - **A malformed id is a 404, not a 500.** Prisma throws on a non-UUID, so every
   `[id]` route validates the id before querying.
 
+### Cross-school concept benchmarks
+
+- **The two-plane split was built for this, and this is the first thing to use
+  it.** Concepts are global rows every school shares; evidence is
+  tenant-scoped. So "your class is at 42% on this idea, the middle school
+  across seven is at 61%" is answerable without any school seeing another's
+  rows — and nothing else in the product could ask it.
+- **No connection reads every school's mastery rows, and none was added.** The
+  platform role is documented as reaching four tables that carry no student
+  work, and widening it for a reporting feature would hand a reporting problem
+  every table in the database. Instead each school computes its OWN mean inside
+  its own tenant transaction and stores one row per concept
+  (`concept_benchmarks`); the benchmark is a median over those rows. What
+  crosses the boundary is a median, a spread and two counts.
+- **`src/db/benchmarks.ts` is the THIRD cross-tenant seam**, fenced by ESLint to
+  `src/core/benchmarks`. `unscoped.ts` exists because sign-in does not yet know
+  the tenant; `maintenance.ts` because a job must visit every tenant, which is
+  why its functions return ids and never rows. This one is neither: the ANSWER
+  is an aggregate over every tenant, which tenant-by-tenant work cannot produce
+  for a page load.
+- **The return SHAPE is the control, not the caller's good behaviour.**
+  `app_concept_benchmark()` returns `schools, students, median, p25, p75` and
+  has no column for an organization id, a name, a slug or a per-school row — so
+  a league table cannot be built from what comes out, however a caller behaves.
+- **The floor is on SCHOOLS, not on students, and that is the whole refusal.**
+  Below `MIN_SCHOOLS = 5` there is no figure at all. A median over two schools
+  describes those two schools, and with two contributors each can derive the
+  other's figure from the median and its own — a student floor would not fix
+  that, because two schools of four hundred are still two schools. The floor is
+  a parameter of the SQL function as well as a constant in core, and an
+  integration test asks the same query with a floor of one to prove the refusal
+  is the floor rather than an empty table.
+- **It compares CONCEPTS, never schools.** The output is one of two findings,
+  and they need different people to do different things: *this idea is hard
+  wherever it is taught* (low median — reteaching is the wrong response) or
+  *this class is behind on it* (healthy median, class materially below). The
+  median is read BEFORE the gap, because it changes what the gap means.
+- **No ranking, no percentile, no "3rd of 5", no named peers.** The same
+  argument that keeps the teacher league table out of the institute console,
+  applied to customers: once a school knows it is ranked, the rational move is
+  to stop measuring the students who would lower the rank — the opposite of
+  what the product is for. Unit tests grep the sentence and a smoke check greps
+  the rendered page, including for every contributing school's id, name and
+  slug.
+- **A school contributes nothing until somebody there agrees**, and the job is
+  handed ids by a SQL function that filters on the stamp — so a job that forgot
+  could not reach a school that declined. **Withdrawing DELETES** the school's
+  rows rather than freezing them: "we stopped updating it" is not an answer
+  anybody accepts a year later.
+- **Contributing is not the price of reading.** A school that declines still
+  sees the benchmarks. Charging for the same thing twice — once in money, once
+  in data — is how a product that says it is on the customer's side stops
+  being. It is also why the opt-in is on `/teacher/settings` as well as the
+  institute console and is NOT plan-gated: participation is something a school
+  agrees to, not something it buys.
+- **A school below `MIN_MEASURED_TO_CONTRIBUTE` contributes nothing on that
+  concept.** The same bar the class read already refuses at, and it matters more
+  here: a thin contribution does not mislead one teacher, it moves the figure
+  every other school is compared against. Only rows the estimator stood behind
+  count — `estimate` not null and the band not INSUFFICIENT.
+- **A concept a school stops measuring stops contributing.** `contributeFor`
+  deletes rows it did not just refresh, because a stale mean would go on moving
+  other schools' medians after the class that produced it moved on, and a figure
+  nothing can refresh is a figure nobody can explain.
+- **The job runs AFTER the nightly mastery refresh** (03:00 IST against 02:00).
+  A contribution is a mean over estimates, so computing it before the decay ran
+  would publish yesterday's confidence to every other school.
+- **It cannot be shown working yet, and that is stated rather than hidden.**
+  Five contributing schools is the floor and this deployment has one school with
+  real content. Every refusal is proven; a live five-school median is not.
+
 ### Exam series
 
 - **A series is a LABEL, and every refusal follows from that.** It holds no
@@ -2067,7 +2140,7 @@ about sixty-five defects. The lessons are about where tests stop looking:
 
 ### End-to-end and accessibility
 
-- **The suite covers only what a browser can prove.** 872 smoke checks already
+- **The suite covers only what a browser can prove.** 901 smoke checks already
   drive the real HTTP API against a real build; re-proving status codes and
   payload shapes in Chromium would double the runtime and the maintenance for
   nothing. E2E is for work surviving a refresh or a dropped connection,

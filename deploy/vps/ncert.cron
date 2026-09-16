@@ -17,3 +17,9 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 20:30 UTC = 02:00 IST refresh decayed mastery; 21:00 UTC = 02:30 IST type mistakes.
 30 20 * * *  root docker exec ncert-app sh -c 'curl -fsS -m 1800 -X POST -H "Authorization: Bearer $CRON_SECRET" http://127.0.0.1:3000/api/cron/refresh-mastery/' >> /var/log/ncert-cron.log 2>&1
 0 21 * * *   root docker exec ncert-app sh -c 'curl -fsS -m 1800 -X POST -H "Authorization: Bearer $CRON_SECRET" http://127.0.0.1:3000/api/cron/classify-mistakes/' >> /var/log/ncert-cron.log 2>&1
+
+# 21:30 UTC = 03:00 IST: recompute what each opted-in school contributes to the
+# cross-school benchmarks. AFTER the mastery refresh above, because a
+# contribution is a mean over estimates and publishing one computed before the
+# decay ran would tell every other school yesterday's confidence.
+30 21 * * *  root docker exec ncert-app sh -c 'curl -fsS -m 1800 -X POST -H "Authorization: Bearer $CRON_SECRET" http://127.0.0.1:3000/api/cron/refresh-benchmarks/' >> /var/log/ncert-cron.log 2>&1

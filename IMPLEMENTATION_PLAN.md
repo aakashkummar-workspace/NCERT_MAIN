@@ -342,6 +342,19 @@ this must never have.
 
 ### 7.5 Cross-school concept benchmarks — the one only this architecture allows
 
+**BUILT.** Beside every concept on `/teacher/analytics/[classId]`, and opted
+into from the institute console or Settings. Each school computes its own mean
+inside its own tenant and stores one row per concept; the benchmark is a median
+over those rows, read through `app_concept_benchmark()` — a function whose
+return shape has no column that could name a school.
+
+**What it cannot yet be shown doing.** The floor is five contributing schools,
+and this deployment has one school with real content. Every refusal is proven,
+including that the figure does not exist below the floor; what a live
+five-school median looks like is not, because there are not five schools. That
+is the same honest position as the calibration items, one level up: the code is
+right, the data is not there yet.
+
 Concepts are global rows shared by every school; evidence is tenant-scoped.
 That two-plane split was built for exactly this and nothing has used it yet:
 *"your class is at 0.42 on Nature of the roots; the median across schools is
@@ -365,9 +378,14 @@ of the five.
 - **Opt-in, and contributing is not the price of reading.** A school that
   declines still gets the product it paid for.
 
-**Proof:** a test that the aggregate refuses below the school floor; a test that
-the payload holds no organization id, name or slug; and the standing grep for
-`rank|league`.
+**Proof:** 14 unit tests, 9 integration tests and 29 smoke checks. The
+aggregate refuses below the school floor — and the same query asked with a
+floor of one answers, which is what proves the refusal is the floor rather
+than an empty table. The payload is grepped for every contributing school's
+id, name and slug, and the rendered page is too; the standing grep for
+`rank|league|percentile|1st of` runs over both the sentence and the HTML.
+`percentile_cont` in SQL and the pure `median()` are asserted to agree on the
+same five means.
 
 ### 7.6 The India bets, worth planning before they are needed
 

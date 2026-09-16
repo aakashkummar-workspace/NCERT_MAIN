@@ -5,6 +5,7 @@ import { z } from "zod";
 import { getSession } from "@/core/identity/context";
 import { classOverview, displayPercent, MIN_MEASURED } from "@/core/analytics/class";
 import { insightIncluded } from "@/core/analytics/insight";
+import { benchmarksForConcepts } from "@/core/benchmarks";
 import { AppShell } from "@/ui/AppShell";
 import { Alert, Card, EmptyState, PageHeader, Stack } from "@/ui";
 import { BAND_LABEL, type MasteryBand } from "@/ui/Mastery";
@@ -40,6 +41,22 @@ export default async function ClassAnalyticsPage({
   if (!overview) notFound();
 
   const attention = overview.concepts.filter((concept) => concept.needsAttention);
+
+  // What every other school measuring the same idea is at. The class figure is
+  // PASSED IN rather than re-derived: two functions that both decide what a
+  // class is at would disagree eventually, and this page would then be arguing
+  // with itself in two lines of the same row.
+  //
+  // Below the school floor each of these is a refusal, which is the normal
+  // state until enough schools have opted in — so the row simply says nothing
+  // rather than showing an empty comparison.
+  const benchmarks = await benchmarksForConcepts(
+    overview.concepts.map((concept) => ({
+      conceptId: concept.conceptId,
+      conceptName: concept.conceptName,
+      classMean: concept.meanEstimate,
+    })),
+  );
 
   return (
     <AppShell
@@ -150,6 +167,23 @@ export default async function ClassAnalyticsPage({
                       ) : null,
                     )}
                   </div>
+
+                  {(() => {
+                    const against = benchmarks.get(concept.conceptId);
+                    if (!against?.ok) return null;
+                    return (
+                      // A sentence, not a position. It names a median and a
+                      // spread over a number of schools and never says which
+                      // schools, where this one stands among them, or anything
+                      // that could be worked out by elimination.
+                      <p
+                        className="ui-concept-benchmark"
+                        data-verdict={against.verdict}
+                      >
+                        {against.sentence}
+                      </p>
+                    );
+                  })()}
 
                   <p className="ui-concept-counts">
                     {LEGEND.filter((band) => concept.counts[band] > 0).map((band) => (

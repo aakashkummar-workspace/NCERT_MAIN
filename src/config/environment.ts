@@ -166,7 +166,7 @@ export function checkEnvironment(
     degraded.push({
       key: "CRON_SECRET",
       message:
-        "No cron secret, so every scheduled job refuses. Mastery will not decay, attempts will not be swept, and mistakes will not be classified.",
+        "No cron secret, so every scheduled job refuses. Mastery will not decay, attempts will not be swept, mistakes will not be classified, and the cross-school benchmarks will not be recomputed.",
       fix: "Set CRON_SECRET and give the same value to whatever calls /api/cron/*.",
     });
   }

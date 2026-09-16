@@ -133,6 +133,13 @@ const config = [
       // so its name, colours and logo are a pre-tenant read — exact slug in,
       // the columns the page draws out, nothing about the school's work.
       "src/core/branding/public.ts",
+      // Cross-school concept benchmarks. The answer IS an aggregate over every
+      // tenant, which tenant-by-tenant work cannot produce for a page load, so
+      // this module holds the third cross-tenant seam — @/db/benchmarks, whose
+      // one read returns a median and two counts and has no column that could
+      // name a school. It still writes each school's own contribution inside
+      // withTenant().
+      "src/core/benchmarks/**",
       // The SMS ledger. A student asking for a sign-in code has no tenant yet —
       // the code is what will eventually tell us which one — so its row belongs
       // to nobody and the tenant policy rightly refuses to let the app role
@@ -165,6 +172,11 @@ const config = [
               name: "@/db/maintenance",
               message:
                 "Cross-tenant enumeration is for scheduled jobs only. Only the scheduled jobs may hold it — see the files list above; everything else goes through withTenant().",
+            },
+            {
+              name: "@/db/benchmarks",
+              message:
+                "The cross-school read crosses every tenant. Only src/core/benchmarks may hold it; everything else goes through withTenant().",
             },
           ],
         },
@@ -199,6 +211,10 @@ const config = [
             {
               name: "@/db/platform",
               message: "The platform connection writes the shared curriculum.",
+            },
+            {
+              name: "@/db/benchmarks",
+              message: "The cross-school read crosses every tenant.",
             },
           ],
         },
@@ -250,6 +266,11 @@ const config = [
             {
               name: "@/db/maintenance",
               message: "Cross-tenant enumeration is for scheduled jobs only.",
+            },
+            {
+              name: "@/db/benchmarks",
+              message:
+                "The cross-school read crosses every tenant. A parent surface has no business holding it.",
             },
             {
               name: "@/db/tenant",

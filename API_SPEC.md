@@ -687,11 +687,18 @@ GET  /api/admin/organizations/          platform admin, audited
 GET  /api/admin/ai/usage/?orgId=&from=&to=
 POST /api/admin/curriculum/import/
 
-POST /api/cron/sweep-attempts/     bearer CRON_SECRET
-POST /api/cron/drain-jobs/
-POST /api/cron/classify-mistakes/  nightly Batch API run
-POST /api/cron/purge-retention/
+POST /api/cron/sweep-attempts/       bearer CRON_SECRET, every 5 minutes
+POST /api/cron/deliver-webhooks/     every minute
+POST /api/cron/share-library/        every 5 minutes, five schools a run
+POST /api/cron/refresh-mastery/      nightly 02:00 IST — the estimate decays with the clock
+POST /api/cron/classify-mistakes/    nightly 02:30 IST, batched, FAST tier
+POST /api/cron/refresh-benchmarks/   nightly 03:00 IST, AFTER the mastery refresh
 ```
+
+`drain-jobs` and `purge-retention` were in this list and have never existed;
+webhook delivery is `deliver-webhooks` and there is no retention purge yet. A
+document asserting an endpoint nobody wrote is the same class of defect as a
+contrast ratio measured against the wrong background.
 
 ---
 

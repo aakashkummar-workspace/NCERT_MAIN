@@ -9,6 +9,12 @@ import { boardChangeBlockers, organizationBoard } from "@/core/organizations";
 import { editorState } from "@/core/branding";
 import { BrandingEditor } from "@/app/institute/branding/BrandingEditor";
 import { BoardCard } from "./BoardCard";
+import { BenchmarkOptIn } from "@/app/institute/BenchmarkOptIn";
+import {
+  contributionState,
+  MIN_MEASURED_TO_CONTRIBUTE,
+  MIN_SCHOOLS,
+} from "@/core/benchmarks";
 import { AppShell } from "@/ui/AppShell";
 import { Alert, Badge, Card, PageHeader, Stack } from "@/ui";
 
@@ -55,6 +61,15 @@ export default async function SettingsPage() {
       ? await editorState(session.actor.organizationId)
       : null;
   const brandingOpen = Boolean(branding?.entitled);
+  // Contributing to the benchmarks is decided HERE as well as in the console,
+  // and unlike branding it is not gated by plan: a solo teacher on Free may
+  // contribute and may read, because participation is something a school
+  // agrees to rather than something it buys. Owners and admins only — the same
+  // `organization:update` the save route guards.
+  const benchmarks =
+    session.actor.role === "OWNER" || session.actor.role === "ADMIN"
+      ? await contributionState(session.actor.organizationId)
+      : null;
 
   const [plan, classes, board, boards, blockers] = await Promise.all([
     currentPlan(session.actor.organizationId),
@@ -202,6 +217,15 @@ export default async function SettingsPage() {
               </button>
             </form>
           </Card>
+
+          {benchmarks && (
+            <BenchmarkOptIn
+              contributing={benchmarks.contributing}
+              concepts={benchmarks.concepts}
+              minSchools={MIN_SCHOOLS}
+              minStudents={MIN_MEASURED_TO_CONTRIBUTE}
+            />
+          )}
 
           <Card title="Appearance">
             <p style={{ margin: 0, fontSize: 14, color: "var(--text-secondary)" }}>

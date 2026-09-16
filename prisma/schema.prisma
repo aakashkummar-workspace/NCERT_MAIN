@@ -107,6 +107,18 @@ model Organization {
   /// so switching them on later re-queues every organization that lacks them.
   libraryIncludesExemplar Boolean   @default(false) @map("library_includes_exemplar")
 
+  /// When this school agreed to CONTRIBUTE to cross-school concept benchmarks.
+  ///
+  /// Null is the default and is a real answer: nothing of this school's
+  /// evidence reaches an aggregate until somebody here says so. Opting out
+  /// clears the stamp AND deletes the school's aggregate row — a withdrawal
+  /// that leaves the numbers in is not a withdrawal.
+  ///
+  /// Contributing is not the price of reading. A school that declines still
+  /// sees the benchmark, because the alternative is a product that charges for
+  /// the same thing twice: once in money and once in data.
+  benchmarksOptedInAt DateTime? @map("benchmarks_opted_in_at")
+
   createdAt DateTime  @default(now()) @map("created_at")
   updatedAt DateTime  @default(now()) @updatedAt @map("updated_at")
   deletedAt DateTime? @map("deleted_at")
@@ -1290,6 +1302,57 @@ model ConceptEvidence {
 /// `concept_evidence` by `core/mastery/estimate.ts`, and a recomputation that
 /// disagreed with a stored row would be a bug in the cache, never a second
 /// opinion.
+/// One school's contribution to a concept benchmark: a mean and a count.
+///
+/// ---------------------------------------------------------------------------
+/// Why a table rather than a query
+/// ---------------------------------------------------------------------------
+/// Evidence is tenant-scoped and must stay that way, so no connection in this
+/// product can read every school's mastery rows — deliberately: the platform
+/// role is documented as reaching four tables that carry no student work, and
+/// widening it for a reporting feature would hand a reporting problem every
+/// table in the database.
+///
+/// So each school computes its OWN figure inside its own tenant transaction,
+/// under the same policies as a browser request, and writes one row per
+/// concept. The benchmark is then a median over these rows. No student row
+/// ever leaves the tenant plane, and the most a bug here can expose is a mean
+/// over at least MIN_MEASURED students of one school.
+///
+/// ---------------------------------------------------------------------------
+/// The row carries an organization id and the READ never returns one
+/// ---------------------------------------------------------------------------
+/// It has to: the row exists so that one school can be recomputed, or deleted
+/// when it opts out. But a per-school mean keyed by school IS the raw material
+/// of a league table, so nothing reads these rows across tenants except
+/// `app_concept_benchmark()`, whose return shape has no column for a school —
+/// not an id, not a name, not a count small enough to identify one.
+model ConceptBenchmark {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+
+  /// A global curriculum row, like everywhere else mastery is measured. No
+  /// foreign key, for the reason `concept_evidence.concept_id` has none: a
+  /// cross-plane constraint would couple the tenant tables to the shared one.
+  conceptId String @map("concept_id") @db.Uuid
+
+  /// Students behind the mean. Never below MIN_MEASURED — a school with two
+  /// measured students contributes nothing rather than contributing noise.
+  measuredStudents Int @map("measured_students")
+
+  /// The mean over this school's measured students, per student. Not a mean
+  /// over mastery rows: averaging rows lets one keen student count several
+  /// times, which is the defect `conceptsAcrossBatches` already fixed a layer
+  /// down.
+  meanEstimate Decimal @map("mean_estimate") @db.Decimal(4, 3)
+
+  computedAt DateTime @default(now()) @map("computed_at")
+
+  @@unique([organizationId, conceptId])
+  @@index([conceptId])
+  @@map("concept_benchmarks")
+}
+
 model StudentConceptMastery {
   id             String @id @default(uuid()) @db.Uuid
   organizationId String @map("organization_id") @db.Uuid

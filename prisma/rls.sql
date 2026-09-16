@@ -166,6 +166,13 @@ declare
     -- marks and no status; an ordinary tenant table like the assignments it
     -- groups.
     'exam_series',
+    -- A school's own contribution to a concept benchmark: one mean and one
+    -- count per concept, computed inside this school's tenant from this
+    -- school's students. Tenant-scoped like everything else, so a school can
+    -- see exactly what it contributes and nothing of anybody else's. The
+    -- cross-school read is `app_concept_benchmark` below, which returns no
+    -- column that could name a school.
+    'concept_benchmarks',
     -- White labelling. A school's own presentation and its uploaded logos —
     -- ordinary tenant tables. The branded sign-in page reads them before any
     -- tenant is known, and does so through `app_public_branding` below rather
@@ -1100,6 +1107,80 @@ as $$
 $$;
 
 grant execute on function app_maint_orgs_with_stale_mastery(timestamptz) to sahayak_app;
+
+-- The cross-school concept benchmark: a median and a spread, and nothing that
+-- could name a school.
+--
+-- This is the one read in the product that crosses every tenant, and it is a
+-- function rather than a grant for the reason the pre-tenant auth reads are:
+-- the shape is fixed here, so no caller can widen it. There is no
+-- organization_id in the return type, no name, no slug, no ranking and no
+-- per-school row — a league table cannot be built from what comes out, however
+-- the caller behaves.
+--
+-- THE FLOOR IS ON SCHOOLS, not on students. A "median across schools" over two
+-- schools describes those two schools, and with two contributors each of them
+-- can work out the other's figure from the median and their own. Below
+-- p_min_schools the function returns NO ROW at all rather than a null-filled
+-- one: the absence is the refusal, and a row of nulls is something a caller
+-- eventually renders as a dash beside a real-looking label.
+--
+-- The caller restates the same floor in TypeScript (core/benchmarks). Two
+-- statements of one rule is the shape `app_branding_entitled` already has, and
+-- an integration test holds them against each other.
+create or replace function app_concept_benchmark(
+  p_concept_id uuid,
+  p_min_schools int
+)
+  returns table (
+    schools int,
+    students int,
+    median numeric,
+    p25 numeric,
+    p75 numeric
+  )
+  language sql
+  security definer
+  set search_path = public, pg_temp
+  stable
+as $$
+  select
+    count(*)::int as schools,
+    sum(b.measured_students)::int as students,
+    -- Each school one vote, exactly as the batch mean gives each student one:
+    -- a median over school means, never over student rows, or the biggest
+    -- school decides what "across schools" means.
+    percentile_cont(0.5) within group (order by b.mean_estimate) as median,
+    percentile_cont(0.25) within group (order by b.mean_estimate) as p25,
+    percentile_cont(0.75) within group (order by b.mean_estimate) as p75
+  from concept_benchmarks b
+  where b.concept_id = p_concept_id
+  having count(*) >= greatest(p_min_schools, 1)
+$$;
+
+grant execute on function app_concept_benchmark(uuid, int) to sahayak_app;
+
+-- Schools that agreed to contribute and hold mastery rows to contribute from.
+--
+-- Ids only, like every other maintenance function: the computing happens
+-- tenant by tenant inside withTenant(), under the same policies as a browser
+-- request. Opting in is the gate, and it is checked here rather than in the
+-- job, so a job that forgets cannot reach a school that declined.
+create or replace function app_maint_orgs_for_benchmarks()
+  returns table (organization_id uuid)
+  language sql
+  security definer
+  set search_path = public, pg_temp
+  stable
+as $$
+  select distinct o.id
+  from organizations o
+  join student_concept_mastery m on m.organization_id = o.id
+  where o.benchmarks_opted_in_at is not null
+    and o.deleted_at is null
+$$;
+
+grant execute on function app_maint_orgs_for_benchmarks() to sahayak_app;
 
 -- Organizations holding mistakes nothing has classified yet.
 --

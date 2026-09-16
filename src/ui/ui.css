@@ -2615,3 +2615,27 @@
     align-items: stretch;
   }
 }
+
+/* A concept's line against the median across schools, on class analytics.
+   A sentence rather than a figure, and never a position — the verdict is an
+   attribute so a stylesheet can tint it, and the words say it too. */
+.ui-concept-benchmark {
+  margin: 6px 0 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  padding-left: 10px;
+  border-left: 2px solid var(--border-strong);
+}
+
+.ui-concept-benchmark[data-verdict="behind"] {
+  border-left-color: var(--warning);
+}
+
+.ui-concept-benchmark[data-verdict="hard-everywhere"] {
+  border-left-color: var(--primary-300);
+}
+
+.ui-concept-benchmark[data-verdict="ahead"] {
+  border-left-color: var(--success);
+}
