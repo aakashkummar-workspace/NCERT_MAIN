@@ -37,6 +37,11 @@ calibration that silently produces nonsense corrupts every mastery figure
 downstream of it — which is every figure the product exists to produce. They are
 waiting on data, not on a decision. See [IMPLEMENTATION_PLAN.md](./IMPLEMENTATION_PLAN.md).
 
+**What is planned next is in IMPLEMENTATION_PLAN.md section 7.** Live exam
+monitoring, marks export, teacher-assigned practice, exam series, and
+cross-school concept benchmarks — each written down with the refusal it has
+to make, because every one of them is a feature somebody could build in a way
+that quietly lies. Nothing there is started.
 **Content arrived in September 2026.** The NCERT import brought 3,857 CBSE
 Class 9 and 10 questions and draft outcomes and concepts for every chapter but
 Hindi. The drafts await a teacher's review, and the bank must not reach any
