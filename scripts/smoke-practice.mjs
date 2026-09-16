@@ -278,6 +278,10 @@ check("and the options never carry isCorrect",
 
 const page = await student.page(`/student/practice/${sessionId}/`);
 check("the runner renders", page.status === 200, `status ${page.status}`);
+// The outbox key is per session, so two sets open in two tabs cannot overwrite
+// each other's unsent answers.
+check("and carries the per-session outbox key for unsent answers",
+  page.html.includes(sessionId), "");
 check("with no timer on it", !/id="timer"|ui-timer/.test(page.html));
 check("and no explanation in the HTML",
   !page.html.includes("Because of the reason for question"));
@@ -305,8 +309,30 @@ r = await student.json(`/api/practice/sessions/${sessionId}/answers/`, "POST", {
   response: { kind: "choice", keys: ["A"] },
 });
 // A set a student could walk until every verdict was green would make practice
-// evidence worthless.
+// evidence worthless. Note the response is DIFFERENT from the one sent above.
 check("answering the same one twice is refused", r.status === 409, `status ${r.status}`);
+
+// But the same answer again is a REPLAY, not a second answer. A device on wifi
+// that reaches the router and nothing else has to be able to ask again, and a
+// refusal there leaves a student staring at an error for work they did once.
+r = await student.json(`/api/practice/sessions/${sessionId}/answers/`, "POST", {
+  practiceAnswerId: questions[0].practiceAnswerId,
+  response: { kind: "choice", keys: ["B"] },
+  timeSpentSeconds: 12,
+});
+check("sending the same answer again replays the verdict", r.status === 200,
+  `status ${r.status}`);
+check("saying it was a replay rather than a fresh answer",
+  r.body?.replayed === true, JSON.stringify(r.body?.replayed));
+check("with the verdict it recorded the first time",
+  r.body?.correct === answered?.correct &&
+    r.body?.explanation === answered?.explanation,
+  "");
+// The set's shape was decided by the first call. Deciding it again would hand a
+// student an extra question for having a bad connection.
+check("and the same next question, not a new one",
+  (r.body?.next?.practiceAnswerId ?? null) === (answered?.next?.practiceAnswerId ?? null),
+  "");
 
 r = await student.json(`/api/practice/sessions/${sessionId}/`);
 const reloaded = r.body?.questions ?? [];

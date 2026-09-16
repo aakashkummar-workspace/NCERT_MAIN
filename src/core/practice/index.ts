@@ -1,8 +1,10 @@
 import "server-only";
 import { randomUUID } from "node:crypto";
+import { Prisma } from "@prisma/client";
 import { withTenant } from "@/db/tenant";
 import { conceptContext } from "@/core/curriculum/concepts";
 import { markAnswer, type Response } from "@/core/attempts/score";
+import { sameResponse } from "@/core/attempts/same-response";
 import { isObjective } from "@/core/questions/validate";
 import { recommendFor, type ConceptState, type Recommendation, MIN_SET, MAX_SET } from "./recommend";
 import { recordPracticeEvidence } from "./evidence";
@@ -502,6 +504,14 @@ export type AnswerResult =
       /** Set when that was the last one. */
       finished: boolean;
       /**
+       * True when this was a REPLAY of an answer the server already had.
+       *
+       * The verdict is the recorded one, so the screen is identical — but a
+       * caller that wanted to know can, and a retry silently indistinguishable
+       * from a fresh answer would hide a real bug behind a working page.
+       */
+      replayed?: boolean;
+      /**
        * The question chosen from how this set has gone, ready to render.
        *
        * Returned with the verdict rather than fetched separately: the runner
@@ -543,10 +553,24 @@ export async function answerPractice(
       // Answering twice would let a student walk the set until every verdict
       // was green, which is the one thing that would make practice evidence
       // worthless. The first answer stands.
-      return {
-        ok: false,
-        message: "You have already answered this one. Move on to the next.",
-      };
+      //
+      // But a REPLAY of the same answer is not a second answer. A device that
+      // sent this and never heard back — school wifi reaching the router and
+      // nothing else — has to be able to ask again, and telling it "you have
+      // already answered this one" leaves a student staring at a refusal for
+      // work they did once. Same lesson as submitting a paper: the client that
+      // retried did nothing wrong.
+      //
+      // So an identical response replays the recorded verdict, and a DIFFERENT
+      // one is still refused. `replayed` says which happened, because a retry
+      // that silently looks like a fresh answer would hide a real bug.
+      if (!sameResponse(answer.response as never, response)) {
+        return {
+          ok: false,
+          message: "You have already answered this one. Move on to the next.",
+        };
+      }
+      return replayAnswer(tx, session, answer);
     }
 
     const version = answer.questionVersionId
@@ -669,37 +693,15 @@ export async function answerPractice(
           ],
         });
         served = { practiceAnswerId: id };
-
-        const nextVersion = next.currentVersionId
-          ? await tx.questionVersion.findFirst({ where: { id: next.currentVersionId } })
-          : null;
-        const nextQuestion = await tx.question.findFirst({
-          where: { id: next.id },
-          select: { marks: true },
-        });
-        const nextOptions = (nextVersion?.options ?? null) as
-          | { key: string; text: string; isCorrect?: boolean }[]
-          | null;
-
-        servedQuestion = {
-          practiceAnswerId: id,
+        // Built by the one builder, so a question served with a verdict and a
+        // question served on a REPLAY of that verdict cannot differ by a field
+        // somebody forgot.
+        servedQuestion = await sealedQuestion(tx, {
+          id,
           questionId: next.id,
+          questionVersionId: next.currentVersionId,
           position: answers.length + 1,
-          type: next.type,
-          stem: nextVersion?.stem ?? "This question",
-          // Rebuilt field by field, never filtered — the rule the player set.
-          options:
-            nextOptions === null
-              ? null
-              : nextOptions.map((option) => ({ key: option.key, text: option.text })),
-          marks: nextQuestion?.marks ?? 1,
-          response: null,
-          isCorrect: null,
-          // Sealed, exactly as a question fetched any other way is.
-          explanation: null,
-          correctAnswer: null,
-          correctKeys: null,
-        };
+        });
       } else {
         // The bank ran out. The set ends here rather than stalling on a screen
         // with no next button — and its count comes down to what was actually
@@ -818,6 +820,106 @@ export async function recentSessions(
     startedAt: session.startedAt,
     completedAt: session.completedAt,
   }));
+}
+
+/**
+ * One unanswered question, sealed, ready to render.
+ *
+ * The single builder for what the runner receives: options rebuilt field by
+ * field rather than filtered — the rule the player set, so a field added to
+ * `Option` later cannot leak by being forgotten — and the explanation, the
+ * answer and the keys absent rather than hidden.
+ */
+async function sealedQuestion(
+  tx: Prisma.TransactionClient,
+  row: {
+    id: string;
+    questionId: string;
+    questionVersionId: string | null;
+    position: number;
+  },
+): Promise<PracticeQuestion | null> {
+  const version = row.questionVersionId
+    ? await tx.questionVersion.findFirst({ where: { id: row.questionVersionId } })
+    : null;
+  const question = await tx.question.findFirst({
+    where: { id: row.questionId },
+    select: { type: true, marks: true },
+  });
+  if (!question) return null;
+
+  const options = (version?.options ?? null) as
+    | { key: string; text: string; isCorrect?: boolean }[]
+    | null;
+
+  return {
+    practiceAnswerId: row.id,
+    questionId: row.questionId,
+    position: row.position,
+    type: question.type,
+    stem: version?.stem ?? "This question",
+    options:
+      options === null
+        ? null
+        : options.map((option) => ({ key: option.key, text: option.text })),
+    marks: question.marks,
+    response: null,
+    isCorrect: null,
+    explanation: null,
+    correctAnswer: null,
+    correctKeys: null,
+  };
+}
+
+/**
+ * The verdict this answer already has, for a device asking again.
+ *
+ * Nothing is written. The counts, the next question and the finished flag are
+ * re-derived from the rows exactly as the first call produced them, so a
+ * student whose answer landed but whose reply was lost sees the screen they
+ * should have seen — rather than a refusal for work they did once.
+ */
+async function replayAnswer(
+  tx: Prisma.TransactionClient,
+  session: { id: string; questionCount: number; completedAt: Date | null },
+  answer: { id: string; position: number; isCorrect: boolean | null; questionVersionId: string | null },
+): Promise<AnswerResult & { sessionId?: string; finishedNow?: boolean }> {
+  const version = answer.questionVersionId
+    ? await tx.questionVersion.findFirst({ where: { id: answer.questionVersionId } })
+    : null;
+
+  const answers = await tx.practiceAnswer.findMany({
+    where: { practiceSessionId: session.id },
+    orderBy: { position: "asc" },
+  });
+  const answered = answers.filter((row) => row.isCorrect !== null).length;
+
+  // Whatever was served after this one, if anything was. A replay must not
+  // serve a NEW question: the set's shape was decided by the first call, and
+  // deciding it again would hand a student an extra question for having a bad
+  // connection.
+  const following = answers.find((row) => row.position === answer.position + 1);
+  const next =
+    following && following.isCorrect === null
+      ? await sealedQuestion(tx, following)
+      : null;
+
+  return {
+    ok: true,
+    replayed: true,
+    correct: answer.isCorrect === true,
+    explanation: version?.explanation ?? null,
+    correctAnswer: describeAnswer(version?.options as never, version?.answerKey),
+    correctKeys: correctKeysOf(version?.options as never),
+    answered,
+    questionCount: session.questionCount,
+    finished: session.completedAt !== null || next === null,
+    next,
+    sessionId: session.id,
+    // The evidence was written when the answer first landed. Writing it again
+    // here would double every practice row for one dropped reply.
+    finishedNow: false,
+  };
 }
 
 /** The keys that are right, for marking the options themselves. */

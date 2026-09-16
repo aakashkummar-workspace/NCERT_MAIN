@@ -340,6 +340,108 @@ test("flow 9b: an answer given offline is on the device first, and syncs on reco
 });
 
 // ---------------------------------------------------------------------------
+// Variant 2b — the same thing, in PRACTICE
+// ---------------------------------------------------------------------------
+
+/** The practice outbox, keyed per session so two tabs cannot collide. */
+const outboxKey = (sessionId: string) => `sahayak.practice.outbox.${sessionId}`;
+
+async function practiceQueued(
+  page: Page,
+  sessionId: string,
+): Promise<{ practiceAnswerId: string; response: unknown }[]> {
+  const raw = await page.evaluate(
+    (key) => localStorage.getItem(key),
+    outboxKey(sessionId),
+  );
+  if (raw === null) return [];
+  return (JSON.parse(raw) as { entries?: { practiceAnswerId: string; response: unknown }[] })
+    .entries ?? [];
+}
+
+test("an answer given offline in PRACTICE is on the device first, and syncs on reconnect", async ({
+  browser,
+}) => {
+  const teacherContext = await browser.newContext();
+  const world = await makeWorld(teacherContext, { questionCount: 8 });
+
+  // The concept behind the world's own outcome: practice is chosen and
+  // measured per concept, as every mastery figure is.
+  const client = await direct();
+  const conceptRow = await client.query<{ concept_id: string }>(
+    "select concept_id from concept_outcomes where learning_outcome_id = $1 limit 1",
+    [world.outcomeId],
+  );
+  const conceptId = conceptRow.rows[0]?.concept_id;
+  test.skip(!conceptId, "no concept covers the world's outcome");
+
+  const studentContext = await browser.newContext();
+  await signInStudent(studentContext, world.students[0]!.phone);
+
+  const opened = await studentContext.request.post("/api/practice/sessions/", {
+    data: { conceptId, source: "SELF_SELECTED", questionCount: 4 },
+  });
+  expect(opened.ok()).toBe(true);
+  const sessionId = ((await opened.json()) as { sessionId: string }).sessionId;
+
+  const page = await studentContext.newPage();
+  await page.goto(`/student/practice/${sessionId}/`);
+  await expect(page.getByRole("button", { name: "Check" })).toBeVisible();
+
+  // The school wifi that reaches the router and nothing else.
+  await studentContext.setOffline(true);
+
+  await page.getByRole("button", { name: /^A / }).click();
+  await page.getByRole("button", { name: /Check|Saved/ }).click();
+
+  // Told in the words the product chose, and told the truth: the answer is
+  // kept, and the verdict is not being invented on the device.
+  await expect(page.getByText(/Saved on this device/)).toBeVisible();
+  await expect(page.getByText(/back — nothing is lost/)).toBeVisible();
+  await expect(page.getByText("Right.", { exact: true })).toBeHidden();
+  await expect(page.getByText("Not this time.", { exact: true })).toBeHidden();
+
+  // On the device BEFORE the request went out, which is the whole reason a tab
+  // that dies between the two still holds the answer.
+  const pending = await practiceQueued(page, sessionId);
+  expect(pending).toHaveLength(1);
+  expect(pending[0]!.response).toEqual({ kind: "choice", keys: ["A"] });
+
+  // A reload is deliberately NOT attempted here, and the reason is a real
+  // limit worth stating: there is no service worker, so with the connection
+  // down the browser cannot fetch the document at all and `page.reload()`
+  // fails with ERR_INTERNET_DISCONNECTED. Practice is offline-TOLERANT — an
+  // answer already given is kept and sent later — not offline-capable. What
+  // the storage entry buys is the tab dying, the phone locking, or the student
+  // coming back later: all of those reload with a connection, and the queued
+  // answer goes up on mount.
+
+  // Back on the network. The runner flushes on the `online` event rather than
+  // waiting out its timer, and the verdict arrives — which is the thing the
+  // student was promised and the thing a local mark could never be.
+  await studentContext.setOffline(false);
+  await expect(page.getByText(/^(Right\.|Not this time\.)$/)).toBeVisible({
+    timeout: 20_000,
+  });
+  await expect
+    .poll(() => practiceQueued(page, sessionId).then((rows) => rows.length), {
+      timeout: 20_000,
+    })
+    .toBe(0);
+
+  // And the server has exactly one answer for it, not two.
+  const view = await studentContext.request.get(`/api/practice/sessions/${sessionId}/`);
+  const body = (await view.json()) as {
+    questions: { practiceAnswerId: string; isCorrect: boolean | null }[];
+  };
+  const answered = body.questions.filter((row) => row.isCorrect !== null);
+  expect(answered).toHaveLength(1);
+
+  await studentContext.close();
+  await teacherContext.close();
+});
+
+// ---------------------------------------------------------------------------
 // Variant 3 — the clock runs out with the tab in the background
 // ---------------------------------------------------------------------------
 

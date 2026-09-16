@@ -41,9 +41,12 @@ waiting on data, not on a decision. See [IMPLEMENTATION_PLAN.md](./IMPLEMENTATIO
 teacher-assigned practice, exam series, and cross-school concept benchmarks.
 The last of those cannot be SHOWN working: its floor is five contributing
 schools and this deployment has one, so every refusal is proven and a live
-median is not. What remains in IMPLEMENTATION_PLAN.md section 7 is 7.6, the
-India bets — a Hindi question bank, WhatsApp for parents, offline-tolerant
-practice — which are planned rather than started.
+median is not. Of the India bets in section 7.6, offline-tolerant
+PRACTICE is built — the answer is written to the device before it is sent, and a
+replay of it is no longer refused. The Mistake Bank retry still is not, and a
+Hindi question bank and WhatsApp for parents are planned rather than started:
+both wait on somebody outside this repository (Hindi reviewers, and WhatsApp
+template registration).
 **Content arrived in September 2026.** The NCERT import brought 3,857 CBSE
 Class 9 and 10 questions and draft outcomes and concepts for every chapter but
 Hindi. The drafts await a teacher's review, and the bank must not reach any
@@ -69,7 +72,7 @@ npm run verify                # typecheck + lint + unit
 npm run test:integration      # needs the database up
 npm run audit:rls             # the one that must never be skipped
 npm run build && npm start    # then, in another shell:
-npm run smoke                 # 901 HTTP checks across twenty-six suites
+npm run smoke                 # 906 HTTP checks across twenty-six suites
 npm run test:e2e              # 186 browser checks: 13 flows, axe on all 52 routes,
                               # tap targets and layout at 360 / 768 / 1440
 npm run test:a11y             # just the accessibility sweep
@@ -1364,6 +1367,68 @@ about sixty-five defects. The lessons are about where tests stop looking:
 - **A malformed id is a 404, not a 500.** Prisma throws on a non-UUID, so every
   `[id]` route validates the id before querying.
 
+### Practice on a bad connection
+
+- **The answer is written to the device BEFORE it is sent**, which is the rule
+  the exam player has followed since it was built and practice did not — and
+  practice is the thing actually done at home, on wifi that reaches the router
+  and nothing else. A dropped request, a 500 and a dead tab all mean "not now":
+  the answer survives, and it goes up by itself when the connection returns.
+- **Offline-TOLERANT, not offline-capable, and the screen says which.** An
+  answer given with no connection is KEPT and not judged. The verdict is the
+  server's: the explanation and the key are absent from the payload until the
+  answer lands, because a set that arrives with the answers in it is a reading
+  exercise, so marking locally would mean shipping the key to the device. The
+  copy says "Saved on this device… it will go up by itself when you are back —
+  nothing is lost, and you will get the answer then", which is the whole truth
+  in one sentence.
+- **There is no service worker, so there is no offline document.** With the
+  connection down the browser cannot fetch the page at all — an e2e reload
+  fails with `ERR_INTERNET_DISCONNECTED`, which is why that step is not in the
+  test. What the queue buys is the tab dying, the phone locking, and the
+  student coming back later: all of those reload WITH a connection, and the
+  queued answer goes up on mount.
+- **A REPLAY of the same answer is not a second answer.** The server returns the
+  recorded verdict and the question it already served; a DIFFERENT answer to an
+  answered question is still refused, because a set a student could walk until
+  every verdict was green would make practice evidence worthless. Same lesson
+  as submitting a paper: the client that retried did nothing wrong, and telling
+  it otherwise leaves a student staring at a refusal for work they did once.
+- **A replay writes nothing.** No second answer row, no second evidence row —
+  an integration test counts `concept_evidence` across a replay of the answer
+  that FINISHES a set, because that is the one that writes. Doubling a set's
+  evidence for one dropped reply would move the estimate for free, which is
+  what `PRACTICE_WEIGHT` exists to stop.
+- **A replay serves no NEW question.** The shape of the set was decided by the
+  first call; deciding it again would hand a student an extra question for
+  having a bad connection. `replayAnswer` returns whatever was already at the
+  next position.
+- **`sameResponse` compares MEANING, not bytes** — options sorted (the marker
+  already sorts them), text trimmed but NOT case-folded (a text key may be
+  case-sensitive and this function must not decide that), numbers as numbers.
+  An unknown `kind` reads as a different answer, which refuses rather than
+  replays.
+- **One entry per question in the outbox, replaced rather than appended.** A
+  student who taps twice before the first attempt lands has not answered twice,
+  and two entries would make the second a "different answer" the server rightly
+  refuses.
+- **A 4xx is dropped from the queue; only "not now" stays.** A refusal is the
+  server's decision and will not change on a retry, so re-sending it every
+  fifteen seconds forever would be a loop with a sentence attached.
+- **The outbox is an EXTERNAL STORE, not component state.** localStorage is a
+  browser store, so it is read through `useSyncExternalStore` like the theme
+  and `navigator.onLine`; reading it in a mount effect and calling setState is
+  a cascading render, which the linter makes an error. The snapshot is cached
+  per session id, because `useSyncExternalStore` compares by identity and a
+  fresh `parse()` per render loops forever.
+- **The queue lives in the Runner, not in the question card.** The card
+  unmounts when the student moves on — that is how the inputs reset — and an
+  unsent answer must not go with it.
+- **Three agreeing signals for the unsent state**, the rule voice input
+  already follows: the words, the dot, and the button reading "Saved —
+  sending…". Colour is never alone, and "sending" and "offline" are different
+  sentences because they are different facts.
+
 ### Cross-school concept benchmarks
 
 - **The two-plane split was built for this, and this is the first thing to use
@@ -2140,7 +2205,7 @@ about sixty-five defects. The lessons are about where tests stop looking:
 
 ### End-to-end and accessibility
 
-- **The suite covers only what a browser can prove.** 901 smoke checks already
+- **The suite covers only what a browser can prove.** 906 smoke checks already
   drive the real HTTP API against a real build; re-proving status codes and
   payload shapes in Chromium would double the runtime and the maintenance for
   nothing. E2E is for work surviving a refresh or a dropped connection,

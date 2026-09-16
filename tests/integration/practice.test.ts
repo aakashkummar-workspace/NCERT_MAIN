@@ -120,6 +120,116 @@ async function workThrough(world: World, sessionId: string, correct: boolean) {
   throw new Error("workThrough did not finish");
 }
 
+describe("a device that never heard back can ask again", () => {
+  it("replays the recorded verdict for an identical answer", async () => {
+    const world = await struggling();
+    const suggestions = await recommendations(studentOf(world));
+    if (!suggestions.ok) throw new Error("expected a recommendation");
+    const started = await startPractice(studentOf(world), {
+      conceptId: suggestions.candidates[0]!.conceptId,
+      source: "SELF_SELECTED",
+    });
+    if (!started.ok) throw new Error(started.message);
+
+    const view = await getPractice(studentOf(world), started.sessionId);
+    const open = view!.questions.find((question) => question.isCorrect === null)!;
+    const response: Response = { kind: "choice", keys: ["A"] };
+
+    const first = await answerPractice(studentOf(world), open.practiceAnswerId, response);
+    if (!first.ok) throw new Error(first.message);
+
+    // The wifi reached the router and nothing else, so the device sends the
+    // same answer again. Telling a student "you have already answered this
+    // one" for work they did once is the failure here.
+    const again = await answerPractice(studentOf(world), open.practiceAnswerId, response);
+    expect(again.ok).toBe(true);
+    if (!again.ok) return;
+    expect(again.replayed).toBe(true);
+    // The SAME verdict, the same explanation, the same answer in words.
+    expect(again.correct).toBe(first.correct);
+    expect(again.explanation).toBe(first.explanation);
+    expect(again.correctAnswer).toBe(first.correctAnswer);
+    // And the same next question, not a new one: the shape of the set was
+    // decided by the first call, and deciding it again would hand a student an
+    // extra question for having a bad connection.
+    expect(again.next?.practiceAnswerId).toBe(first.next?.practiceAnswerId ?? null);
+  });
+
+  it("still refuses a DIFFERENT answer to a question already answered", async () => {
+    const world = await struggling();
+    const suggestions = await recommendations(studentOf(world));
+    if (!suggestions.ok) throw new Error("expected a recommendation");
+    const started = await startPractice(studentOf(world), {
+      conceptId: suggestions.candidates[0]!.conceptId,
+      source: "SELF_SELECTED",
+    });
+    if (!started.ok) throw new Error(started.message);
+    const view = await getPractice(studentOf(world), started.sessionId);
+    const open = view!.questions.find((question) => question.isCorrect === null)!;
+
+    await answerPractice(studentOf(world), open.practiceAnswerId, {
+      kind: "choice",
+      keys: ["B"],
+    });
+    const changed = await answerPractice(studentOf(world), open.practiceAnswerId, {
+      kind: "choice",
+      keys: ["A"],
+    });
+    // A set a student could walk until every verdict was green would make
+    // practice evidence worthless. That rule is untouched.
+    expect(changed.ok).toBe(false);
+    if (changed.ok) return;
+    expect(changed.message).toMatch(/already answered/i);
+  });
+
+  it("writes no second answer and no second evidence row for a replay", async () => {
+    const world = await struggling();
+    const suggestions = await recommendations(studentOf(world));
+    if (!suggestions.ok) throw new Error("expected a recommendation");
+    const started = await startPractice(studentOf(world), {
+      conceptId: suggestions.candidates[0]!.conceptId,
+      source: "SELF_SELECTED",
+      questionCount: 4,
+    });
+    if (!started.ok) throw new Error(started.message);
+
+    // Work the set, replaying the LAST answer — the one that finishes the set
+    // and therefore writes the evidence.
+    let lastAnswerId = "";
+    let lastResponse: Response = null;
+    for (let guard = 0; guard < 30; guard++) {
+      const view = await getPractice(studentOf(world), started.sessionId);
+      const open = view!.questions.find((question) => question.isCorrect === null);
+      if (!open) break;
+      lastAnswerId = open.practiceAnswerId;
+      lastResponse =
+        open.type === "TRUE_FALSE"
+          ? { kind: "boolean", value: true }
+          : { kind: "choice", keys: ["A"] };
+      const result = await answerPractice(studentOf(world), lastAnswerId, lastResponse);
+      if (!result.ok || result.finished) break;
+    }
+
+    const before = await withTenant(world.organizationId, (tx) =>
+      tx.conceptEvidence.count({ where: { source: "PRACTICE" } }),
+    );
+    const replay = await answerPractice(studentOf(world), lastAnswerId, lastResponse);
+    expect(replay.ok).toBe(true);
+
+    const after = await withTenant(world.organizationId, (tx) =>
+      tx.conceptEvidence.count({ where: { source: "PRACTICE" } }),
+    );
+    // Doubling a practice set's evidence for one dropped reply would move the
+    // estimate for free, which is exactly what PRACTICE_WEIGHT exists to stop.
+    expect(after).toBe(before);
+
+    const answered = await withTenant(world.organizationId, (tx) =>
+      tx.practiceAnswer.findFirstOrThrow({ where: { id: lastAnswerId } }),
+    );
+    expect(answered.isCorrect).not.toBeNull();
+  });
+});
+
 describe("what to practise", () => {
   it("refuses to suggest anything before anything is measured", async () => {
     const world = await makeWorld();

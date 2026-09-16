@@ -2675,3 +2675,35 @@
     width: 100%;
   }
 }
+
+/* An answer saved on the device and not yet sent.
+   Three agreeing signals, the rule voice input follows: the words, this dot,
+   and the button above reading "Saved — sending…". Colour is never alone. */
+.ui-runner-unsent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.ui-runner-unsent-dot {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Offline is a different fact from "sending": one is about to finish, the
+   other is waiting for something outside the page. The wording says so and
+   the dot changes with it. */
+.ui-runner-unsent[data-offline] {
+  color: var(--text-primary);
+}
+
+.ui-runner-unsent[data-offline] .ui-runner-unsent-dot {
+  background: var(--warning);
+}

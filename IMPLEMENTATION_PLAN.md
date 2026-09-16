@@ -400,10 +400,27 @@ same five means.
   an intent named in business logic, one directory naming the vendor, one door,
   one ESLint fence — and the same registration paperwork, so the wording lives
   beside the id it was registered under.
-- **Offline-tolerant practice.** The player already survives a dropped
-  connection; practice and the Mistake Bank do not. School wifi reaches the
-  router and nothing else, and that is the condition homework is actually done
-  in.
+- **Offline-tolerant practice. BUILT for practice; the Mistake Bank retry is
+  not done yet.** Pressing Check writes the answer to the device first and
+  sends it after, so a dropped request, a 500 and a dead tab all mean "not
+  now": the answer survives, goes up by itself when the connection returns,
+  and the verdict arrives then.
+
+  It is offline-TOLERANT, not offline-capable, and the difference is stated on
+  screen rather than papered over. The verdict is the server's — the
+  explanation and the key are absent from the payload until the answer lands,
+  because a set that arrives with the answers in it is a reading exercise — so
+  an answer given with no connection is kept and NOT judged. Marking it on the
+  device would mean shipping the key there, which is the one thing the sealed
+  payload exists to prevent. There is also no service worker, so with the
+  connection down the document cannot be fetched at all; what the queue buys is
+  the tab dying, the phone locking, and the student coming back later.
+
+  That required the server to learn one thing: a replay of the SAME answer is
+  not a second answer. It returns the recorded verdict and the question it
+  already served; a DIFFERENT answer to an answered question is still refused,
+  because a set a student could walk until every verdict was green would make
+  practice evidence worthless.
 
 ### 7.7 What is deliberately NOT on this list
 

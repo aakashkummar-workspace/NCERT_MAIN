@@ -2,13 +2,27 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import {
   buildResponse,
   isMultiSelect,
   parseNumber,
   toggleKey,
 } from "@/core/attempts/response";
+import type { Response } from "@/core/attempts/score";
+import {
+  next as nextInOutbox,
+  pending as pendingFor,
+  queue as queueEntry,
+  settle as settleEntry,
+  type Outbox,
+} from "@/core/practice/outbox";
+import {
+  empty as emptyOutbox,
+  read as readOutbox,
+  subscribe as subscribeToOutbox,
+  write as writeOutbox,
+} from "./outbox-store";
 import { AskForHelp } from "../../_tutor/AskForHelp";
 import { SaveQuestion } from "../../_saved/SaveQuestion";
 
@@ -26,6 +40,23 @@ import { SaveQuestion } from "../../_saved/SaveQuestion";
  * than not being told.
  *
  * ---------------------------------------------------------------------------
+ * An answer is written to the device before it is sent
+ * ---------------------------------------------------------------------------
+ * The exam player has worked this way since it was built; practice did not, and
+ * practice is the thing actually done at home on wifi that reaches the router
+ * and nothing else. So pressing Check writes the answer to localStorage FIRST
+ * and then sends it: a dropped request, a 500 and a dead tab all mean "not
+ * now", the answer survives a reload, and it goes up by itself when the
+ * connection returns.
+ *
+ * What it does NOT do is mark the answer here. The verdict is the server's —
+ * the explanation and the key are absent from the payload until the answer
+ * lands, because a set that arrives with the answers in it is a reading
+ * exercise. So an answer given offline is KEPT and not judged, the screen says
+ * exactly that, and the verdict appears when it gets through. Anything else
+ * would either lie about the answer or ship the key to the device.
+ *
+ * ---------------------------------------------------------------------------
  * One card per question, keyed
  * ---------------------------------------------------------------------------
  * The per-question state — what they have selected, whether a request is in
@@ -35,6 +66,21 @@ import { SaveQuestion } from "../../_saved/SaveQuestion";
  * effect is a cascading render and the linter rejects it; this is the shape
  * that rule is pointing at.
  */
+
+/**
+ * `navigator.onLine` only knows about the radio, so it says "online" on a
+ * school wifi that reaches nothing. The real signal is whether the last
+ * request landed — the runner shows an offline state only when both agree,
+ * which is the rule the exam player already follows.
+ */
+function subscribeToNetwork(onChange: () => void): () => void {
+  window.addEventListener("online", onChange);
+  window.addEventListener("offline", onChange);
+  return () => {
+    window.removeEventListener("online", onChange);
+    window.removeEventListener("offline", onChange);
+  };
+}
 
 export type RunnerQuestion = {
   practiceAnswerId: string;
@@ -119,6 +165,7 @@ export function Runner({
   const [index, setIndex] = useState(
     firstOpen === -1 ? Math.max(0, questions.length - 1) : firstOpen,
   );
+  const [sendError, setSendError] = useState<string | null>(null);
   const [verdicts, setVerdicts] = useState<Record<string, Verdict>>(() =>
     Object.fromEntries(
       questions
@@ -135,6 +182,156 @@ export function Runner({
         ]),
     ),
   );
+
+  /**
+   * Record a verdict the server sent back, and the question it served with it.
+   *
+   * One place, used by the first send and by every replay, so an answer that
+   * landed on the second attempt produces exactly the screen it would have
+   * produced on the first.
+   */
+  const applyVerdict = useCallback(
+    (
+      answerId: string,
+      verdictFor: Verdict,
+      finished: boolean,
+      served: RunnerQuestion | null,
+    ) => {
+      setVerdicts((current) => ({ ...current, [answerId]: verdictFor }));
+      // Appended, not replaced: the student is still reading the verdict on the
+      // question they just answered, and the next one appears when they press
+      // Next rather than under them.
+      if (served) {
+        setQuestions((current) =>
+          current.some((row) => row.practiceAnswerId === served.practiceAnswerId)
+            ? current
+            : [...current, served],
+        );
+      }
+      // So the progress page and the mistake bank reflect it on the way out.
+      if (finished) router.refresh();
+    },
+    [router],
+  );
+
+  // ---- The outbox --------------------------------------------------------
+  //
+  // One per session, in localStorage, written BEFORE the request. Held here
+  // rather than in the card because a card unmounts when the student moves on
+  // and an unsent answer must not go with it.
+  // Read through `useSyncExternalStore`, the right primitive for a browser
+  // store — and the one this codebase already uses for the theme and for
+  // `navigator.onLine`. Reading storage in a mount effect and calling setState
+  // is a cascading render the linter rejects outright.
+  const outbox = useSyncExternalStore(
+    subscribeToOutbox,
+    () => readOutbox(sessionId),
+    emptyOutbox,
+  );
+  const [reachable, setReachable] = useState(true);
+  const sendingRef = useRef(false);
+
+  const browserOnline = useSyncExternalStore(
+    subscribeToNetwork,
+    () => navigator.onLine,
+    () => true,
+  );
+  const online = browserOnline && reachable;
+
+  const persist = useCallback(
+    (nextOutbox: Outbox) => writeOutbox(sessionId, nextOutbox),
+    [sessionId],
+  );
+
+  /**
+   * Send the oldest unsent answer.
+   *
+   * Safe to call at any time, including when the answer already landed and the
+   * reply was lost: the server replays the recorded verdict for an identical
+   * answer rather than refusing it. That is what makes retrying honest instead
+   * of hopeful.
+   */
+  const flush = useCallback(async (): Promise<void> => {
+    if (sendingRef.current) return;
+    const entry = nextInOutbox(readOutbox(sessionId));
+    if (!entry) return;
+
+    sendingRef.current = true;
+    try {
+      const result = await fetch(`/api/practice/sessions/${sessionId}/answers/`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          practiceAnswerId: entry.practiceAnswerId,
+          response: entry.response,
+          timeSpentSeconds: entry.timeSpentSeconds,
+        }),
+      });
+      const json = await result.json().catch(() => null);
+      if (!result.ok) {
+        // A refusal is the server's decision and will not change on a retry —
+        // drop it and say so, rather than sending it every thirty seconds
+        // forever. Only "not now" stays queued.
+        if (result.status >= 400 && result.status < 500) {
+          persist(settleEntry(readOutbox(sessionId), entry.practiceAnswerId));
+          setSendError(json?.error?.message ?? "That answer was not accepted.");
+          return;
+        }
+        setReachable(false);
+        return;
+      }
+
+      setReachable(true);
+      setSendError(null);
+      persist(settleEntry(readOutbox(sessionId), entry.practiceAnswerId));
+      applyVerdict(
+        entry.practiceAnswerId,
+        {
+          correct: json.correct,
+          explanation: json.explanation,
+          correctAnswer: json.correctAnswer,
+          correctKeys: json.correctKeys ?? null,
+          chosen: chosenKeysOf(entry.response),
+        },
+        Boolean(json.finished),
+        (json.next ?? null) as RunnerQuestion | null,
+      );
+    } catch {
+      setReachable(false);
+    } finally {
+      sendingRef.current = false;
+    }
+  }, [applyVerdict, persist, sessionId]);
+
+  // Anything the store already holds on load is sent: an answer given on a
+  // train and reloaded in a station goes up without being retyped. Inside an
+  // async function rather than in the effect body, the shape the exam player's
+  // own restore uses — a setState called synchronously from an effect is a
+  // cascading render, and the linter makes that an error rather than advice.
+  useEffect(() => {
+    let live = true;
+    void (async () => {
+      await Promise.resolve();
+      if (live) await flush();
+    })();
+    return () => {
+      live = false;
+    };
+  }, [flush]);
+
+  // Retried the instant the network comes back, and on a slow timer as well,
+  // because the radio is not the network: school wifi reaches the router and
+  // fires no `online` event when the rest of it returns. Both are listeners,
+  // which is where work that reacts to the browser belongs.
+  useEffect(() => {
+    const timer = setInterval(() => void flush(), 15_000);
+    const onReconnect = () => void flush();
+    window.addEventListener("online", onReconnect);
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("online", onReconnect);
+    };
+  }, [flush]);
 
   const question = questions[index];
   if (!question) return null;
@@ -171,25 +368,28 @@ export function Runner({
 
       <QuestionCard
         key={question.practiceAnswerId}
-        sessionId={sessionId}
         question={question}
         verdict={verdict}
         helpOffered={helpOffered}
         saved={savedQuestionIds.includes(question.questionId)}
-        onAnswered={(answerId, next, finished, served) => {
-          setVerdicts((current) => ({ ...current, [answerId]: next }));
-          // Appended, not replaced: the student is still reading the verdict on
-          // the question they just answered, and the next one appears when they
-          // press Next rather than under them.
-          if (served) {
-            setQuestions((current) =>
-              current.some((row) => row.practiceAnswerId === served.practiceAnswerId)
-                ? current
-                : [...current, served],
-            );
-          }
-          // So the progress page and the mistake bank reflect it on the way out.
-          if (finished) router.refresh();
+        // Queued, then sent. The card no longer talks to the network at all:
+        // an unsent answer has to outlive the card, because the card unmounts
+        // when the student moves on.
+        unsent={pendingFor(outbox, question.practiceAnswerId) !== null}
+        online={online}
+        sendError={sendError}
+        onAnswer={(response, timeSpentSeconds) => {
+          setSendError(null);
+          persist(
+            queueEntry(readOutbox(sessionId), {
+              practiceAnswerId: question.practiceAnswerId,
+              response,
+              timeSpentSeconds,
+              queuedAt: Date.now(),
+              attempts: 0,
+            }),
+          );
+          void flush();
         }}
       />
 
@@ -259,30 +459,29 @@ export function Runner({
 }
 
 function QuestionCard({
-  sessionId,
   question,
   verdict,
   helpOffered,
   saved,
-  onAnswered,
+  unsent,
+  online,
+  sendError,
+  onAnswer,
 }: {
-  sessionId: string;
   question: RunnerQuestion;
   verdict: Verdict | undefined;
   helpOffered: boolean;
   saved: boolean;
-  onAnswered: (
-    answerId: string,
-    verdict: Verdict,
-    finished: boolean,
-    served: RunnerQuestion | null,
-  ) => void;
+  /** This answer is on the device and has not reached the server yet. */
+  unsent: boolean;
+  online: boolean;
+  sendError: string | null;
+  /** Hand the answer up. The Runner queues it and does the sending. */
+  onAnswer: (response: Response, timeSpentSeconds: number) => void;
 }) {
   const [keys, setKeys] = useState<string[]>([]);
   const [bool, setBool] = useState<boolean | null>(null);
   const [text, setText] = useState("");
-  const [pending, setPending] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   // Time on THIS question. Measured in a mount effect rather than at render:
   // `useRef(Date.now())` during render is the purity rule the linter enforces.
@@ -311,52 +510,21 @@ function QuestionCard({
   const ready = response !== null;
   const unreadable = numericType && text.trim() !== "" && parseNumber(text) === null;
 
-  async function submit() {
+  function submit() {
     if (response === null) return;
-    setPending(true);
-    setError(null);
-    try {
-      const result = await fetch(`/api/practice/sessions/${sessionId}/answers/`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          practiceAnswerId: question.practiceAnswerId,
-          response,
-          timeSpentSeconds: Math.min(
-            3600,
-            Math.max(0, Math.round((Date.now() - startedAt.current) / 1000)),
-          ),
-        }),
-      });
-      const json = await result.json().catch(() => null);
-      if (!result.ok) {
-        setError(json?.error?.message ?? "Something went wrong. Try again.");
-        return;
-      }
-      onAnswered(
-        question.practiceAnswerId,
-        {
-          correct: json.correct,
-          explanation: json.explanation,
-          correctAnswer: json.correctAnswer,
-          correctKeys: json.correctKeys ?? null,
-          chosen: choiceType ? keys : booleanType ? [bool ? "T" : "F"] : [],
-        },
-        Boolean(json.finished),
-        (json.next ?? null) as RunnerQuestion | null,
-      );
-    } catch {
-      setError("We could not reach the server. Check your connection and try again.");
-    } finally {
-      setPending(false);
-    }
+    // Handed up, not sent: the Runner writes it to the device first and owns
+    // the retrying, because an unsent answer has to outlive this card.
+    onAnswer(
+      response,
+      Math.min(3600, Math.max(0, Math.round((Date.now() - startedAt.current) / 1000))),
+    );
   }
 
   return (
     <>
       <p className="ui-runner-stem">{question.stem}</p>
 
-      {error && <p className="ui-practice-error">{error}</p>}
+      {sendError && <p className="ui-practice-error">{sendError}</p>}
 
       {choiceType && multi && !answered && (
         <p className="ui-hint">More than one option may be right. Tick every one that is.</p>
@@ -510,12 +678,28 @@ function QuestionCard({
               className="ui-button"
               data-variant="primary"
               data-size="lg"
-              disabled={!ready || pending}
-              onClick={() => void submit()}
+              disabled={!ready || unsent}
+              onClick={submit}
             >
-              <span>{pending ? "Checking…" : "Check"}</span>
+              <span>{unsent ? "Saved — sending…" : "Check"}</span>
             </button>
           </div>
+
+          {unsent && (
+            /*
+              Three agreeing signals, the rule voice input already follows:
+              the words, the dot, and the button above saying the same thing.
+              Colour is never the only encoding — and the sentence has to be
+              honest about what is and is not happening, because the one thing
+              a student fears here is that the answer is gone.
+            */
+            <p className="ui-runner-unsent" role="status" data-offline={!online || undefined}>
+              <span className="ui-runner-unsent-dot" aria-hidden="true" />
+              {online
+                ? "Saved on this device. Sending it now — the answer is not lost."
+                : "Saved on this device. You are offline, so it will go up by itself when you are back — nothing is lost, and you will get the answer then."}
+            </p>
+          )}
           {/*
             Offered while they are stuck, which is the only moment it is worth
             anything — and gone once the verdict and the explanation are on
