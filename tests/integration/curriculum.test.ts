@@ -135,7 +135,16 @@ describe("the curriculum plane is readable by tenants and writable by none", () 
 describe("the worked example", () => {
   it("is seeded, so the shape of a good outcome is in the database", async () => {
     const chapter = await prisma.chapter.findFirstOrThrow({
-      where: { number: 6, subject: { code: "MATH", grade: { number: 10 } } },
+      where: {
+        number: 6,
+        // The BOARD as well as the class year. `subjects` is unique on
+        // (grade, code) and every board has its own Class 10 Maths, so
+        // "MATH in class 10" names two rows — CBSE's, with fourteen
+        // chapters, and ICSE's, which has none authored. `findFirst` may
+        // return either, and which one it returns is not a thing a test may
+        // depend on. `fixtureChapter()` already scoped its lookup this way.
+        subject: { code: "MATH", grade: { number: 10, board: { code: "CBSE" } } },
+      },
     });
     const detail = await chapterDetail(chapter.id);
 
@@ -295,7 +304,12 @@ describe("authoring through the platform connection", () => {
 
   it("counts chapters for a subject", async () => {
     const subject = await prisma.subject.findFirstOrThrow({
-      where: { code: "MATH", grade: { number: 10 } },
+      // CBSE's Class 10 Maths, named by board. Without it this asked for
+      // "Maths in class 10", which is one row per board, and it had started
+      // returning ICSE's — 0 chapters against the 14 asserted below. It read
+      // exactly like a broken seed and was a test naming a row that is not
+      // unique.
+      where: { code: "MATH", grade: { number: 10, board: { code: "CBSE" } } },
     });
     // Fixture chapters live in this subject while a run is going — every suite
     // that authors curriculum puts its own chapter here — so count the real ones.
