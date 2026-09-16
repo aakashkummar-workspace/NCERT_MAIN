@@ -135,8 +135,15 @@ export default async function AssignmentPage({
               </ul>
             )}
             <p className="ui-hint" style={{ marginTop: 14 }}>
+              {/* While it is open, the useful link is who is writing; once it
+                  closes, it is the marks. Both are always reachable — the
+                  order just follows what a teacher is doing at the time. */}
+              <Link href={`/teacher/assignments/${assignment.id}/monitor`}>
+                Watch it live
+              </Link>{" "}
+              for who has started, who has handed in and who has time left, or{" "}
               <Link href={`/teacher/assignments/${assignment.id}/results`}>
-                See the results
+                see the results
               </Link>{" "}
               for scores, marking and question-by-question analysis.
             </p>

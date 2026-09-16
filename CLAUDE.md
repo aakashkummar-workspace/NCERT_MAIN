@@ -1362,6 +1362,32 @@ about sixty-five defects. The lessons are about where tests stop looking:
 - **A malformed id is a 404, not a 500.** Prisma throws on a non-UUID, so every
   `[id]` route validates the id before querying.
 
+### The live view of a paper being sat
+
+- **No marks while a paper is being written, and that IS the feature.** A
+  percentage over a half-answered paper moves every minute and describes
+  nothing — and a teacher watching one during an exam is watching one child.
+  Progress is *answered N of M*, which is what an invigilator can act on. The
+  query does not select `raw_score`, `percentage` or per-answer marks, and an
+  integration test greps the whole payload for all three.
+- **Derived at read time, stored nowhere** — the rule an assignment's status
+  already follows. A stored "who is live" is a row that is a lie between
+  ticks: a student shown as writing who handed in four minutes ago.
+- **A blank is not an answer.** `response: { not: DbNull }`, or the room looks
+  further on than it is.
+- **Handing in and the clock running out are different states**, because only
+  one of them is a choice. `submit_reason = TIMEOUT` is its own badge.
+- **`tab_switches` stays where it is.** Proctoring is a different product and
+  a different conversation about consent; this page shows who needs help.
+- **The order is whoever needs the invigilator first** — writing, then not
+  started, then finished; inside a group, least progress first.
+- **The poll is 15 seconds and stops when the tab is hidden**, through
+  `router.refresh()` rather than a second client-side reader that would
+  eventually disagree with the server about who is still writing.
+- **Its smoke check asserts a fact about the PAGE, not the database.** The
+  first version asserted some row reads "3 of 4 answered", which is a claim
+  about whether anyone had sat the paper in that smoke world. What must
+  always hold is that the page states why marks are absent.
 ### The printed paper
 
 - **It prints the FROZEN versions, so a DRAFT is refused.** `getAssessment`

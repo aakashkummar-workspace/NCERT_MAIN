@@ -1,0 +1,79 @@
+/*
+ * The live view of a paper being sat.
+ *
+ * One row per student, ordered by who needs the invigilator first. Class names
+ * are `ui-live-*`; grep the other stylesheets before adding one.
+ */
+
+.ui-live {
+  margin-top: 22px;
+}
+
+.ui-live-refresh {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-live-list {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.ui-live-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 160px) 110px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+}
+
+/* A student still writing is the row that matters, so it carries the accent —
+   and the state is also a badge with a word in it, because colour is never the
+   only encoding. */
+.ui-live-row[data-state="IN_PROGRESS"] {
+  border-left: 3px solid var(--accent);
+}
+.ui-live-row[data-state="NOT_STARTED"] {
+  border-left: 3px solid var(--warning);
+}
+
+.ui-live-name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ui-live-progress {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.ui-live-clock {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+/* On a phone the row becomes two lines: the name and its state on the first,
+   the progress and the clock on the second. A four-column grid at 360px puts a
+   destructive amount of text in a 40px column. */
+@media (max-width: 640px) {
+  .ui-live-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 6px;
+  }
+  .ui-live-progress {
+    grid-column: 1;
+  }
+  .ui-live-clock {
+    grid-column: 2;
+  }
+}

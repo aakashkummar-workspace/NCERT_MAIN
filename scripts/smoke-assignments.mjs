@@ -261,6 +261,25 @@ const stolenCancel = await other.json(`/api/assignments/${assignmentId}/`, "DELE
 check("cannot cancel another organisation's assignment",
   stolenCancel.status === 404, `status ${stolenCancel.status}`);
 
+// --- The live view (IMPLEMENTATION_PLAN.md §7.1) ------------------------------
+
+r = await teacher.page(`/teacher/assignments/${assignmentId}/monitor/`);
+check("the live view opens for the teacher", r.status === 200, `status ${r.status}`);
+check("and names the four states a sitting can be in",
+  ["Writing", "Not started", "Handed in", "Time ran out"].every((label) =>
+    r.html.includes(label)));
+// A fact about the PAGE, not about the database: in this world nobody has sat
+// the paper yet, so asserting that some row reads "3 of 4 answered" would be a
+// check on the data. What must always hold is that the page states the rule.
+check("and says why marks are not shown during a paper",
+  /Marks are not shown while a paper is being written/.test(r.html));
+check("and carries no score at all",
+  !/rawScore|percentage|awardedMarks/.test(r.html));
+
+const stolenLive = await other.page(`/teacher/assignments/${assignmentId}/monitor/`);
+check("another organisation's live view is 404", stolenLive.status === 404,
+  `status ${stolenLive.status}`);
+
 let failed = 0;
 for (const { name, pass, detail } of results) {
   if (!pass) failed++;
