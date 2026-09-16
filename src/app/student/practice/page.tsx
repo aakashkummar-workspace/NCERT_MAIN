@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { getSession } from "@/core/identity/context";
 import { recommendations, recentSessions } from "@/core/practice";
+import { openForStudent } from "@/core/practice/assigned";
 import { StudentShell } from "@/ui/StudentShell";
 import { EmptyState, PageHeader } from "@/ui";
 import { StartPractice } from "./StartPractice";
@@ -11,10 +12,18 @@ export const metadata: Metadata = { title: "Practice" };
 
 export const dynamic = "force-dynamic";
 
+const DUE = new Intl.DateTimeFormat("en-IN", {
+  weekday: "long",
+  day: "numeric",
+  month: "short",
+  timeZone: "Asia/Kolkata",
+});
+const dueLabel = (date: Date) => DUE.format(date);
+
 export default async function PracticePage({
   searchParams,
 }: {
-  searchParams: Promise<{ conceptId?: string }>;
+  searchParams: Promise<{ conceptId?: string; assigned?: string }>;
 }) {
   const session = await getSession();
   if (!session) redirect("/signin/student");
@@ -24,12 +33,22 @@ export default async function PracticePage({
     organizationId: session.actor.organizationId,
     userId: session.actor.userId,
   };
-  const [suggestions, history] = await Promise.all([
+  const [suggestions, history, assigned] = await Promise.all([
     recommendations(actor),
     recentSessions(actor, 8),
+    openForStudent(actor.organizationId, actor.userId),
   ]);
 
-  const unfinished = history.filter((row) => row.completedAt === null);
+  // A set opened from a teacher instruction is offered ONCE, on its own card
+  // above, which carries who asked for it. Listing it again under "carry on"
+  // would be the page arguing with itself — the same rule that keeps a concept
+  // with an open set out of the recommendations below.
+  const assignedSessions = new Set(
+    assigned.map((set) => set.sessionId).filter((id): id is string => id !== null),
+  );
+  const unfinished = history.filter(
+    (row) => row.completedAt === null && !assignedSessions.has(row.id),
+  );
 
   // Arriving from the study plan, which named one concept. It is hoisted to the
   // top rather than filtered to, and a concept that is no longer a candidate —
@@ -37,7 +56,15 @@ export default async function PracticePage({
   // there. That is the plan's own rule working: an item leaves when the
   // evidence changes, so following a stale link lands on the ordinary page
   // rather than on an error about something that is no longer true.
-  const wanted = (await searchParams).conceptId ?? null;
+  const query = await searchParams;
+  const wanted = query.conceptId ?? null;
+  // Arriving from a teacher instruction in the plan. A withdrawn or finished
+  // one is simply not in the list, so a stale link lands on the ordinary page
+  // rather than on an error about something no longer true — the same rule the
+  // concept link above follows.
+  const fromTeacher = query.assigned
+    ? (assigned.find((set) => set.id === query.assigned) ?? null)
+    : null;
 
   // A concept with a set already open is offered once, as "carry on" — not
   // again below as a fresh recommendation. Both routes resume the same session,
@@ -69,6 +96,53 @@ export default async function PracticePage({
             : undefined
         }
       />
+
+      {assigned.length > 0 && (
+        // A teacher asked for these, so they sit above the product own
+        // suggestions — and they say who asked, because "somebody asked" is a
+        // different kind of reason from "this would help".
+        <ul className="ui-practice-sets" aria-label="Set by your teacher">
+          {assigned.map((set) => (
+            <li
+              key={set.id}
+              className="ui-practice-set"
+              data-assigned="true"
+              data-from-plan={set.id === fromTeacher?.id || undefined}
+            >
+              <div className="ui-practice-set-body">
+                <p className="ui-practice-set-flag">
+                  Set by your {set.className} teacher
+                </p>
+                <h2 className="ui-practice-set-title">{set.conceptName}</h2>
+                <p className="ui-practice-set-why">
+                  {set.note ? set.note : "Untimed, with feedback after every question."}
+                  {set.dueAt ? ` Asked for by ${dueLabel(set.dueAt)}.` : ""}
+                </p>
+                <p className="ui-practice-set-meta tabular">
+                  {set.questionCount} questions · no timer · no marks
+                </p>
+              </div>
+              {set.state === "IN_PROGRESS" && set.sessionId ? (
+                <Link
+                  href={`/student/practice/${set.sessionId}`}
+                  className="ui-button"
+                  data-variant="primary"
+                  data-size="md"
+                >
+                  <span>Carry on</span>
+                </Link>
+              ) : (
+                <StartPractice
+                  conceptId={set.conceptId}
+                  questionCount={set.questionCount}
+                  assignedPracticeId={set.id}
+                  label="Start this set"
+                />
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
 
       {unfinished.length > 0 && (
         // Offered first and by name. A half-done set a student cannot find
@@ -106,10 +180,10 @@ export default async function PracticePage({
               data-reason={candidate.reason}
               data-from-plan={candidate.conceptId === wanted || undefined}
             >
-              {candidate.conceptId === wanted && (
-                <p className="ui-practice-set-flag">From your plan</p>
-              )}
               <div className="ui-practice-set-body">
+                {candidate.conceptId === wanted && (
+                  <p className="ui-practice-set-flag">From your plan</p>
+                )}
                 <h2 className="ui-practice-set-title">{candidate.conceptName}</h2>
                 {/*
                   The reason, in a sentence built from the numbers that produced

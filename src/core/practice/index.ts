@@ -219,6 +219,14 @@ export type StartInput = {
   conceptId: string;
   source: "RECOMMENDED" | "MISTAKE_REVIEW" | "SELF_SELECTED" | "ASSIGNED";
   questionCount?: number;
+  /**
+   * The teacher instruction this set answers, when there is one.
+   *
+   * Stamped on the session rather than inferred from the concept and the date:
+   * "did this student do what their teacher asked" must not be a guess, and a
+   * student who practises the same idea on their own has not done the homework.
+   */
+  assignedPracticeId?: string | null;
 };
 
 export type StartResult =
@@ -248,6 +256,16 @@ export async function startPractice(
       orderBy: { startedAt: "desc" },
     });
     if (open) {
+      // An open set on this concept is ADOPTED rather than duplicated when a
+      // teacher instruction is named. Two half-done sets on the same idea is
+      // exactly what the resume rule exists to prevent, and a student sitting
+      // one right now is practising the thing they were asked to practise.
+      if (input.assignedPracticeId && open.assignedPracticeId === null) {
+        await tx.practiceSession.update({
+          where: { id: open.id },
+          data: { assignedPracticeId: input.assignedPracticeId },
+        });
+      }
       return { ok: true, sessionId: open.id, questionCount: open.questionCount };
     }
 
@@ -320,6 +338,7 @@ export async function startPractice(
         organizationId: actor.organizationId,
         studentUserId: actor.userId,
         source: input.source,
+        assignedPracticeId: input.assignedPracticeId ?? null,
         conceptIds: [input.conceptId],
         questionCount: count,
         baseDifficulty: base,

@@ -7,6 +7,7 @@ import {
   type StudentAssignment,
 } from "@/core/attempts/student-view";
 import { studentConceptStates } from "@/core/practice";
+import { openForStudent } from "@/core/practice/assigned";
 import { mistakeSummary } from "@/core/mistakes/read";
 import { buildPlan, type PlanItem } from "@/core/plan/build";
 import { examReadiness } from "@/core/readiness";
@@ -156,9 +157,15 @@ export async function studentDashboard(
   const concepts = studentConceptStates(actor, now);
   const mistakes = mistakeSummary(organizationId, studentUserId);
   const week = effortCounts(organizationId, studentUserId, now);
+  // Practice a teacher asked for. Read here rather than inside the plan so
+  // Home and /student/plan are built from the same inputs: two plans that
+  // disagree on the same screen is worse than either being wrong alone.
+  const assigned = openForStudent(organizationId, studentUserId);
   // Rejections are handled where each is awaited; these stop an early failure
   // being reported as unhandled before its consumer gets to it.
-  for (const shared of [assignments, concepts, mistakes, week]) shared.catch(() => {});
+  for (const shared of [assignments, concepts, mistakes, week, assigned]) {
+    shared.catch(() => {});
+  }
 
   const [
     tests,
@@ -175,7 +182,9 @@ export async function studentDashboard(
     settle("tests", () => assignments),
     settle("results", () => resultsAndFeedback(organizationId, studentUserId, now)),
     settle("concepts", async () => ({ subjects: conceptSnapshot(await concepts) })),
-    settle("plan", async () => planSection(await assignments, await concepts, await mistakes, now)),
+    settle("plan", async () =>
+      planSection(await assignments, await concepts, await mistakes, await assigned, now),
+    ),
     settle("mistakes", async () => {
       const [summary, effort] = await Promise.all([mistakes, week]);
       return { open: summary.open + summary.retried, resolvedThisWeek: effort.mistakesFixed };
@@ -249,6 +258,7 @@ function planSection(
   assignments: StudentAssignment[],
   concepts: Awaited<ReturnType<typeof studentConceptStates>>,
   mistakes: Awaited<ReturnType<typeof mistakeSummary>>,
+  assigned: Awaited<ReturnType<typeof openForStudent>>,
   now: Date,
 ): PlanSection {
   const plan = buildPlan(
@@ -257,6 +267,15 @@ function planSection(
       concepts,
       openMistakes: mistakes.open + mistakes.retried,
       mistakeConceptName: mistakes.worst?.conceptName ?? null,
+      assignedPractice: assigned.map((set) => ({
+        id: set.id,
+        conceptId: set.conceptId,
+        conceptName: set.conceptName,
+        questionCount: set.questionCount,
+        dueAt: set.dueAt,
+        className: set.className,
+        inProgress: set.state === "IN_PROGRESS",
+      })),
     },
     now,
   );

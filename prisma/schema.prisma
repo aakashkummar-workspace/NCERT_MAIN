@@ -431,6 +431,7 @@ model Class {
   assessments  Assessment[]
   assignments  Assignment[]
   announcements Announcement[]
+  assignedPractice AssignedPractice[]
 
   @@index([organizationId, status])
   @@index([organizationId, ownerTeacherId])
@@ -1864,6 +1865,60 @@ enum MistakeStatus {
 /// teaches nothing the exam did not already teach — the whole value is being
 /// told *immediately* that the answer was wrong and why, while the reasoning
 /// is still in the student's head.
+/// A teacher telling a class to practise one idea before a date.
+///
+/// Practice was student-initiated: the product recommended, the student chose.
+/// A teacher could set a formal paper, or a remedial one through an
+/// intervention, but "ten questions on ratio by Friday, no clock" had nowhere
+/// to live — and it is the commonest homework there is.
+///
+/// It is still PRACTICE. The sittings it produces write evidence at
+/// PRACTICE_WEIGHT like any other, carry no marks, and cannot be passed or
+/// failed. A teacher assigning it does not make it a supervised paper, and the
+/// moment it is scored like one the tutor's rule — help means no evidence —
+/// starts costing a student marks.
+///
+/// Whole class only, deliberately: a concept a class is behind on is a class
+/// problem, and a per-student picker here would be a second, worse version of
+/// the targeting an intervention already does from measured evidence.
+model AssignedPractice {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  classId        String @map("class_id") @db.Uuid
+
+  /// A concept, because that is what mastery is measured per and what a
+  /// recommendation names.
+  conceptId String @map("concept_id") @db.Uuid
+  /// Denormalised so a card can name the idea without reaching across the
+  /// plane boundary on every read. A rename shows up on the next assignment.
+  conceptName String @map("concept_name")
+
+  questionCount Int @map("question_count")
+
+  /// When the teacher would like it done. It orders the study plan and nothing
+  /// else: late is not a penalty, because a plan already behind is one a
+  /// student closes rather than catches up on.
+  dueAt DateTime? @map("due_at")
+
+  /// One line from the teacher, shown on the card.
+  note String?
+
+  /// Withdrawn rather than deleted: a student who already practised it has
+  /// evidence pointing here, and the card should stop appearing without that
+  /// history disappearing.
+  cancelledAt DateTime? @map("cancelled_at")
+
+  createdById String   @map("created_by_id") @db.Uuid
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @default(now()) @updatedAt @map("updated_at")
+
+  class    Class             @relation(fields: [classId], references: [id], onDelete: Cascade)
+  sessions PracticeSession[]
+
+  @@index([organizationId, classId, createdAt])
+  @@map("assigned_practice")
+}
+
 model PracticeSession {
   id             String @id @default(uuid()) @db.Uuid
   organizationId String @map("organization_id") @db.Uuid
@@ -1873,6 +1928,11 @@ model PracticeSession {
   /// me to" are different sessions, and only one of them measures whether the
   /// recommendations are any good.
   source PracticeSource
+
+  /// Set when a teacher asked for this one, so completion can be seen without
+  /// guessing from the concept and the date.
+  assignedPracticeId String?           @map("assigned_practice_id") @db.Uuid
+  assignedPractice   AssignedPractice? @relation(fields: [assignedPracticeId], references: [id], onDelete: SetNull)
 
   /// What it was about. Stored rather than re-derived: the recommendation that
   /// produced this session is a claim, and a claim you cannot look up later is

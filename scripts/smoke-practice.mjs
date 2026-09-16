@@ -104,7 +104,7 @@ await teacher.json("/api/auth/signup/", "POST", {
 });
 
 const covered = await db.query(
-  "select co.learning_outcome_id as id from concept_outcomes co limit 1",
+  "select co.learning_outcome_id as id, co.concept_id from concept_outcomes co limit 1",
 );
 const picker = await teacher.json("/api/curriculum/picker/");
 const outcome = picker.body.outcomes.find((o) => o.id === covered.rows[0]?.id);
@@ -452,6 +452,114 @@ check("home carries a way in", home.html.includes("/student/practice"));
 check("with the reason on it, not a generic prompt",
   home.html.includes("Practice ") && /getting about|not fixed yet|some of the time/i.test(home.html),
   "");
+
+// --- Practice a teacher asked for ------------------------------------------
+//
+// The instruction is the only thing this adds: everything the student then
+// does is the practice checked above. So what is worth a round trip here is
+// that it refuses what the bank cannot honour, that it reaches the student's
+// own surfaces, and that withdrawing it takes it away again.
+
+const conceptId = covered.rows[0].concept_id;
+
+// A concept in the same subject that this school holds no questions on. The
+// refusal is the interesting half: a card on thirty home pages that cannot be
+// honoured is what it exists to prevent, and it names the number rather than
+// saying "not enough".
+const barren = await db.query(
+  `select distinct co.concept_id as id
+     from concept_outcomes co
+     join learning_outcomes lo on lo.id = co.learning_outcome_id
+     join topics t on t.id = lo.topic_id
+     join chapters ch on ch.id = t.chapter_id
+    where ch.subject_id = $1 and co.concept_id <> $2
+    limit 1`,
+  [chapter.subjectId, conceptId],
+);
+if (barren.rows[0]) {
+  r = await teacher.json(`/api/classes/${klass.id}/practice/`, "POST", {
+    conceptId: barren.rows[0].id,
+    questionCount: 5,
+  });
+  check("an idea the bank cannot honour is refused", r.status === 409,
+    `status ${r.status}`);
+  check("saying so in a sentence a teacher can act on",
+    /bank holds (no|\d+) practice question/i.test(r.body?.error?.message ?? ""),
+    r.body?.error?.message);
+}
+
+const dueOn = new Date(Date.now() + hours(48)).toISOString().slice(0, 10);
+r = await teacher.json(`/api/classes/${klass.id}/practice/`, "POST", {
+  conceptId,
+  questionCount: 5,
+  dueOn,
+  note: "Before Thursday's lesson.",
+});
+check("practice can be set for the class", r.status === 201, `status ${r.status}`);
+const assignedId = r.body?.id;
+
+r = await student.json(`/api/classes/${klass.id}/practice/`, "POST", {
+  conceptId,
+  questionCount: 5,
+});
+// Setting work for a class is a teacher's act, and a student does not hold the
+// permission it needs — the same refusal every other write on a class makes.
+check("a student cannot set practice for their own class", r.status === 403,
+  `status ${r.status}`);
+
+let practicePage = await student.page("/student/practice/");
+check("the set appears on the student's practice page",
+  practicePage.html.includes("Set by your"), "");
+check("saying which class's teacher asked",
+  practicePage.html.includes("Class 10-P"), "");
+// It is practice, and the card says so before they start: no timer, no marks.
+check("and that it carries no timer and no marks",
+  /no timer/i.test(practicePage.html) && /no marks/i.test(practicePage.html), "");
+check("with the note the teacher typed",
+  practicePage.html.includes("Before Thursday"), "");
+
+const planPage = await student.page("/student/plan/");
+check("the study plan lists it", planPage.html.includes(`assigned=${assignedId}`),
+  "");
+check("labelled as something their teacher set",
+  /set by your teacher/i.test(planPage.html), "");
+// A due date orders the plan. It never scolds: an overdue set still counts.
+for (const scolding of [/overdue/i, /you are late/i, /missed/i]) {
+  check(`the plan does not scold (${scolding.source})`,
+    !scolding.test(planPage.html), "");
+}
+
+// The teacher's own view: counts, and never a score.
+const classPage = await teacher.page(`/teacher/classes/${klass.id}/`);
+check("the class page lists what was set", /Set practice/i.test(classPage.html));
+// React puts a comment between two adjacent expressions, so the counted
+// sentence arrives as `0<!-- --> of <!-- -->1 done` in the HTML.
+const classHtml = classPage.html.replace(/<!--\s*-->/g, "");
+check("as how many have done it, of how many enrolled",
+  /0 of 1 done/.test(classHtml), "");
+// Counts, never a score: there is no mark here to show, and a marks column is
+// the one thing this feature must not grow.
+check("and never as a score",
+  !/(?:^|[^A-Za-z])marks?(?:[^A-Za-z]|$)/i.test(
+    classHtml.split("Set practice")[1]?.slice(0, 2000) ?? "",
+  ),
+  "");
+
+r = await teacher.json(`/api/classes/${klass.id}/practice/`, "DELETE", {
+  assignedPracticeId: assignedId,
+});
+check("it can be withdrawn", r.status === 200, `status ${r.status}`);
+
+practicePage = await student.page("/student/practice/");
+check("and stops appearing for the student",
+  !practicePage.html.includes("Set by your"), "");
+
+r = await teacher.json(`/api/classes/${klass.id}/practice/`, "DELETE", {
+  assignedPracticeId: assignedId,
+});
+// A stamp, not a delete — so withdrawing twice is not a second withdrawal.
+check("withdrawing it twice is not a second withdrawal", r.status === 404,
+  `status ${r.status}`);
 
 await db.end();
 report();

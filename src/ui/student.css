@@ -1224,6 +1224,12 @@
   border-left-color: var(--success);
 }
 
+/* Somebody asked for this one. The stripe is the accent rather than a reason
+   colour, and the line above the heading says who — colour is never alone. */
+.ui-practice-set[data-assigned="true"] {
+  border-left-color: var(--accent);
+}
+
 .ui-practice-set-body {
   display: flex;
   flex-direction: column;
@@ -2594,5 +2600,78 @@
     order: 10;
     flex-basis: 100%;
     justify-content: flex-end;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Setting practice for a class (teacher)
+   --------------------------------------------------------------------------- */
+
+.ui-setpractice-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ui-setpractice-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+}
+
+.ui-setpractice-foot {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ui-setpractice-list {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+.ui-setpractice-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ui-setpractice-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ui-setpractice-meta {
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+.ui-setpractice-note {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* A destructive action must not wrap under the wrong name — it shares the row
+   with the idea it withdraws, and drops to its own full-width line only once
+   the name has a line of its own. */
+@media (max-width: 640px) {
+  .ui-setpractice-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ui-setpractice-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ui-setpractice-foot .ui-button {
+    width: 100%;
   }
 }

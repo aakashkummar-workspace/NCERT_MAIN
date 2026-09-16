@@ -221,6 +221,9 @@ Ordered by *value per unit of risk*, not by size.
 
 ### 7.1 Live exam monitoring — first, and it is nearly free
 
+**BUILT.** `/teacher/assignments/[id]/monitor`, refreshed every fifteen seconds
+and paused when the tab is hidden.
+
 Nothing in the product invigilates. A teacher running thirty students finds out
 afterwards who never opened the paper.
 
@@ -248,6 +251,9 @@ organization gets the same 404 as a stranger.
 
 ### 7.2 Marks export — the office asks for this first
 
+**BUILT.** `/api/results/[id]/export` per paper and `/api/classes/[id]/marks`
+per class, linked from the results page and the class page.
+
 There is no export anywhere in the product; the only CSV code is the roster
 *importer*. Every school re-keys marks into its own register.
 
@@ -271,6 +277,12 @@ smoke check that the response is `text/csv` with a filename.
 
 ### 7.3 Teacher-assigned practice — the commonest homework there is
 
+**BUILT**, per CONCEPT rather than per chapter. Mastery is measured per concept
+and `core/practice` selects per concept, so a chapter-wide instruction would be
+several sets pretending to be one — and the count, the due date and the "how
+many have done it" figure would all belong to none of them. A teacher who wants
+a chapter sets the two or three ideas in it, and sees each one's progress.
+
 Practice today is student-initiated; a teacher can only set a formal paper, or
 a remedial one through an intervention. "Ten questions on ratio by Friday, no
 clock" has nowhere to live.
@@ -291,8 +303,12 @@ every question.
   else; a plan that is already behind is one a student closes rather than
   catches up on.
 
-**Proof:** a test that an assigned set produces evidence at the practice weight,
-and that its questions obey the 30-day repeat rule like any other.
+**Proof:** 12 integration tests and 21 smoke checks. An assigned set produces
+evidence at `PRACTICE_WEIGHT` and its questions obey the 30-day repeat rule
+like any other, because it IS an ordinary practice session with an instruction
+stamped on it. A set already open on that idea is adopted rather than
+duplicated. The plan item is a deadline, uncapped, and a unit test greps it for
+every word that would turn a late one into a reproach.
 
 ### 7.4 Exam series — six papers that know they belong together
 

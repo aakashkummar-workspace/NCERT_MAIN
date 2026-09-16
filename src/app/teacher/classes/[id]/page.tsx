@@ -16,9 +16,12 @@ import {
   Stack,
 } from "@/ui";
 import { canPostToClass, listAnnouncementsForClass } from "@/core/announcements";
+import { conceptsForSubjects } from "@/core/curriculum/concepts";
+import { listForClass } from "@/core/practice/assigned";
 import { AddStudents } from "./AddStudents";
 import { Announcements } from "./Announcements";
 import { JoinCode } from "./JoinCode";
+import { SetPractice } from "./SetPractice";
 import { StudentList } from "./StudentList";
 
 export async function generateMetadata({
@@ -47,9 +50,14 @@ export default async function ClassPage({
   const klass = await getClass(session.actor.organizationId, id);
   if (!klass) notFound();
 
-  const [announcements, canPost] = await Promise.all([
+  const [announcements, canPost, practiceSets, concepts] = await Promise.all([
     listAnnouncementsForClass(session.actor.organizationId, id),
     canPostToClass(session.actor, id),
+    listForClass(session.actor.organizationId, id),
+    // Only this class’s own subject: practice on a History idea in a Maths
+    // class would file its evidence under a syllabus these students are not
+    // measured on, so the picker cannot offer one.
+    conceptsForSubjects([klass.subjectId]),
   ]);
 
   const withoutPhone = klass.students.filter((s) => !s.canSignIn).length;
@@ -167,6 +175,12 @@ export default async function ClassPage({
                 </Card>
               )}
               <StudentList classId={klass.id} students={klass.students} />
+              <SetPractice
+                classId={klass.id}
+                className={klass.name}
+                concepts={concepts}
+                sets={practiceSets}
+              />
               <AddStudents classId={klass.id} variant="collapsed" />
               {/* The register a school actually keeps: one row per student, one
                   column per paper. The year to date by default, because a

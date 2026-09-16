@@ -4,6 +4,7 @@ import {
   MAX_ITEMS,
   MAX_PRACTICE_ITEMS,
   REVISE_WINDOW_DAYS,
+  type PlanAssignedPractice,
   type PlanConcept,
   type PlanTest,
   whenPhrase,
@@ -347,6 +348,125 @@ describe("the discretionary half", () => {
     );
     if (!plan.ok) throw new Error("expected a plan");
     expect(plan.items.length).toBeLessThanOrEqual(MAX_ITEMS);
+  });
+});
+
+function assigned(over: Partial<PlanAssignedPractice> = {}): PlanAssignedPractice {
+  return {
+    id: over.id ?? "ap1",
+    conceptId: over.conceptId ?? "c1",
+    conceptName: over.conceptName ?? "Similarity of triangles",
+    questionCount: over.questionCount ?? 6,
+    dueAt: over.dueAt === undefined ? days(2) : over.dueAt,
+    className: over.className ?? "Class 10-A",
+    inProgress: over.inProgress ?? false,
+  };
+}
+
+describe("practice a teacher asked for", () => {
+  it("sits above the product's own suggestions, and is a deadline", () => {
+    const plan = buildPlan(
+      { tests: [], concepts: [concept()], openMistakes: 3, assignedPractice: [assigned()] },
+      NOW,
+    );
+    if (!plan.ok) throw new Error("expected a plan");
+    expect(plan.items[0]!.kind).toBe("assigned-practice");
+    expect(plan.items[0]!.deadline).toBe(true);
+    // Somebody asked, and it says who — "somebody asked" is a different kind
+    // of reason from "this would help".
+    expect(plan.items[0]!.why).toMatch(/Class 10-A teacher asked for 6 questions/);
+    expect(plan.items[0]!.href).toBe("/student/practice?assigned=ap1");
+  });
+
+  it("is under a half-finished paper, which is time about to be lost", () => {
+    const plan = buildPlan(
+      {
+        tests: [test({ status: "OPEN", canStart: true, inProgressAttemptId: "att-1" })],
+        concepts: [concept()],
+        openMistakes: 0,
+        assignedPractice: [assigned()],
+      },
+      NOW,
+    );
+    if (!plan.ok) throw new Error("expected a plan");
+    expect(plan.items[0]!.kind).toBe("resume-test");
+    expect(plan.items[1]!.kind).toBe("assigned-practice");
+  });
+
+  it("is never trimmed by the item cap", () => {
+    const sets = Array.from({ length: 7 }, (_, index) =>
+      assigned({ id: `ap${index}`, conceptId: `c${index}`, conceptName: `Idea ${index}` }),
+    );
+    const plan = buildPlan(
+      { tests: [], concepts: [concept()], openMistakes: 4, assignedPractice: sets },
+      NOW,
+    );
+    if (!plan.ok) throw new Error("expected a plan");
+    // The cap exists to stop the product competing for a student's evening
+    // with its own suggestions. A teacher's instruction is not a suggestion.
+    expect(plan.items.filter((item) => item.kind === "assigned-practice")).toHaveLength(7);
+  });
+
+  it("states an overdue one as a fact, never as a reproach", () => {
+    const plan = buildPlan(
+      {
+        tests: [],
+        concepts: [concept()],
+        openMistakes: 0,
+        assignedPractice: [assigned({ dueAt: days(-3) })],
+      },
+      NOW,
+    );
+    if (!plan.ok) throw new Error("expected a plan");
+    const item = plan.items[0]!;
+    expect(item.why).toMatch(/it still counts/i);
+    for (const scolding of [/overdue/i, /late/i, /missed/i, /should have/i]) {
+      expect(item.why).not.toMatch(scolding);
+    }
+  });
+
+  it("says carry on with one already begun, rather than start", () => {
+    const plan = buildPlan(
+      {
+        tests: [],
+        concepts: [concept()],
+        openMistakes: 0,
+        assignedPractice: [assigned({ inProgress: true })],
+      },
+      NOW,
+    );
+    if (!plan.ok) throw new Error("expected a plan");
+    expect(plan.items[0]!.actionLabel).toBe("Carry on");
+    expect(plan.items[0]!.title).toMatch(/^Finish the practice on/);
+  });
+
+  it("gives the plan something to say when nothing has been measured", () => {
+    // Every other kind of item is derived from evidence and correctly refuses
+    // here. An instruction is not derived from evidence, so it survives.
+    const plan = buildPlan(
+      {
+        tests: [],
+        concepts: [concept({ estimate: null, band: "INSUFFICIENT" })],
+        openMistakes: 0,
+        assignedPractice: [assigned()],
+      },
+      NOW,
+    );
+    expect(plan.ok).toBe(true);
+    if (!plan.ok) return;
+    expect(plan.items).toHaveLength(1);
+  });
+
+  it("never mentions marks, a mark scheme or a pass", () => {
+    const plan = buildPlan(
+      { tests: [], concepts: [concept()], openMistakes: 0, assignedPractice: [assigned()] },
+      NOW,
+    );
+    if (!plan.ok) throw new Error("expected a plan");
+    const words = `${plan.items[0]!.title} ${plan.items[0]!.why}`.toLowerCase();
+    for (const forbidden of ["mark", "score", "pass", "grade", "submit"]) {
+      expect(words).not.toContain(forbidden);
+    }
   });
 });
 

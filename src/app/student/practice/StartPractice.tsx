@@ -14,9 +14,14 @@ import { useState } from "react";
 export function StartPractice({
   conceptId,
   questionCount,
+  assignedPracticeId,
+  label,
 }: {
   conceptId: string;
   questionCount: number;
+  /** Set when a teacher asked for this one, so the set records the homework. */
+  assignedPracticeId?: string;
+  label?: string;
 }) {
   const router = useRouter();
   const [pending, setPending] = useState(false);
@@ -31,7 +36,11 @@ export function StartPractice({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           conceptId,
-          source: "RECOMMENDED",
+          assignedPracticeId,
+          // The source says who decided. "A teacher asked" and "the product
+          // suggested" are different sessions, and only one of them measures
+          // whether the recommendations are any good.
+          source: assignedPracticeId ? "ASSIGNED" : "RECOMMENDED",
           questionCount,
         }),
       });
@@ -57,7 +66,7 @@ export function StartPractice({
         disabled={pending}
         onClick={() => void start()}
       >
-        <span>{pending ? "Opening…" : "Start"}</span>
+        <span>{pending ? "Opening…" : (label ?? "Start")}</span>
       </button>
     </div>
   );

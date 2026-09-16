@@ -67,7 +67,7 @@ npm run verify                # typecheck + lint + unit
 npm run test:integration      # needs the database up
 npm run audit:rls             # the one that must never be skipped
 npm run build && npm start    # then, in another shell:
-npm run smoke                 # 766 HTTP checks across twenty-three suites
+npm run smoke                 # 834 HTTP checks across twenty-four suites
 npm run test:e2e              # 186 browser checks: 13 flows, axe on all 52 routes,
                               # tap targets and layout at 360 / 768 / 1440
 npm run test:a11y             # just the accessibility sweep
@@ -1362,6 +1362,70 @@ about sixty-five defects. The lessons are about where tests stop looking:
 - **A malformed id is a 404, not a 500.** Prisma throws on a non-UUID, so every
   `[id]` route validates the id before querying.
 
+### Practice a teacher asked for
+
+- **It is an INSTRUCTION, not a new kind of assessment.** `assigned_practice`
+  stores which idea, how many and by when; everything the student then does is
+  an ordinary practice session with that id stamped on it, so the adaptive
+  selection, the feedback after every question, the 30-day repeat rule and the
+  evidence at `PRACTICE_WEIGHT` are the ones already built. There is no marks
+  column, no pass mark and no submission, and an integration test greps the
+  stored row for `marks|score|passmark|grade`.
+- **The moment it is scored like a test, the tutor's rule starts costing
+  marks.** Help means no evidence — which is right for a claim about what a
+  student can do alone, and would be a punishment if this carried marks. So it
+  does not, and the student's card says "no timer · no marks" before they start.
+- **Late is not a penalty.** `due_at` orders the study plan and nothing else.
+  Nothing turns red, and an overdue set reads "It was asked for earlier — it
+  still counts". A unit test greps the plan item for *overdue*, *late*,
+  *missed* and *should have*.
+- **A deadline item, and therefore uncapped.** `MAX_ITEMS` exists to stop the
+  product competing for a student's evening with its own suggestions; a
+  teacher's instruction is not the product's suggestion. It sits under a
+  half-finished paper — time already spent, about to be lost — and above
+  everything else.
+- **It survives the plan's refusal.** Every other item is derived from
+  evidence and correctly refuses when nothing is measured. An instruction is
+  not derived from evidence, so a student on their first day still has a plan
+  if their teacher asked for something.
+- **Home and `/student/plan` are built from the SAME inputs.** The dashboard
+  calls `buildPlan` directly to read once for the whole page, so the assigned
+  sets had to be threaded through `studentDashboard` too — two plans
+  disagreeing on the same screen is worse than either being wrong alone. Same
+  reasoning as `studentConceptStates` having one parser and two callers.
+- **It refuses before it promises, with the number.** `assignPractice` counts
+  the APPROVED machine-markable questions the school holds on that concept and
+  refuses below the count asked for: *the bank holds 2 practice questions on
+  Similarity of triangles, and you asked for 6*. A card on thirty home pages
+  that cannot be honoured is the failure, and the count is clamped to what
+  `startPractice` would actually serve so the card cannot promise twenty and
+  hand over ten.
+- **The concept must belong to the class's own subject** — the coherence check
+  the question editor already makes. Practice on a History idea set to a Maths
+  class would file its evidence under a syllabus those students are not
+  measured on, and nothing downstream would look wrong.
+- **Per concept, never per chapter.** Mastery is measured per concept and
+  `core/practice` selects per concept, so a chapter-wide instruction would be
+  several sets pretending to be one, with a count and a progress figure
+  belonging to none of them.
+- **An open set on that idea is ADOPTED, not duplicated.** A student already
+  practising the thing they were asked to practise has done the homework; two
+  half-done sets on one idea is exactly what the resume rule exists to
+  prevent. The route verifies the instruction against `openForStudent` before
+  it stamps anything — the id arrives in a request body, so it is checked, not
+  trusted.
+- **A finished one leaves the list rather than sitting there with a tick**, the
+  study plan's rule, and a withdrawn one disappears the same way. Withdrawing
+  is a stamp (`cancelled_at`), never a delete: the sittings point at it, and
+  "what was asked for, and when was it withdrawn" is a question somebody asks.
+- **The teacher sees COUNTS.** *8 of 30 done, 3 part way*. There is no mark to
+  show and nothing else here to act on, and a marks column is the one thing
+  this feature must not grow.
+- **The flag belongs INSIDE `.ui-practice-set-body`.** `.ui-practice-set` is a
+  flex ROW, so "Set by your Class 10-A teacher" as a direct child became a
+  column beside the heading rather than a label above it — which is also how
+  the study plan's own "From your plan" flag had been rendering.
+
 ### Exporting marks
 
 - **Marks only. Never mastery.** An estimate is a belief carrying a denominator
@@ -1939,7 +2003,7 @@ about sixty-five defects. The lessons are about where tests stop looking:
 
 ### End-to-end and accessibility
 
-- **The suite covers only what a browser can prove.** 766 smoke checks already
+- **The suite covers only what a browser can prove.** 834 smoke checks already
   drive the real HTTP API against a real build; re-proving status codes and
   payload shapes in Chromium would double the runtime and the maintenance for
   nothing. E2E is for work surviving a refresh or a dropped connection,

@@ -26,6 +26,9 @@ export const dynamic = "force-dynamic";
 
 /** What each kind of item is, in two words, above the instruction. */
 const KIND_LABEL: Record<PlanItemKind, string> = {
+  // Named as what it is: somebody asked. That is a different kind of reason
+  // from the products own "worth doing".
+  "assigned-practice": "Set by your teacher",
   "resume-test": "Unfinished",
   "sit-test": "Due",
   "revise-for-test": "Before your test",

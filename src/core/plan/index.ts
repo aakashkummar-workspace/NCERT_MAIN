@@ -2,6 +2,7 @@ import "server-only";
 import { studentAssignments } from "@/core/attempts/student-view";
 import { studentConceptStates } from "@/core/practice";
 import { mistakeSummary } from "@/core/mistakes/read";
+import { openForStudent } from "@/core/practice/assigned";
 import { buildPlan, type Plan, type PlanTest } from "./build";
 
 /**
@@ -35,10 +36,11 @@ export async function studyPlan(
   actor: Actor,
   now = new Date(),
 ): Promise<Plan> {
-  const [assignments, concepts, mistakes] = await Promise.all([
+  const [assignments, concepts, mistakes, assigned] = await Promise.all([
     studentAssignments(actor.organizationId, actor.userId),
     studentConceptStates(actor, now),
     mistakeSummary(actor.organizationId, actor.userId),
+    openForStudent(actor.organizationId, actor.userId),
   ]);
 
   const tests: PlanTest[] = assignments.map((assignment) => ({
@@ -62,6 +64,17 @@ export async function studyPlan(
       // dropped it would contradict the page it links to.
       openMistakes: mistakes.open + mistakes.retried,
       mistakeConceptName: mistakes.worst?.conceptName ?? null,
+      // Already filtered to the ones this student has not finished, and to
+      // instructions that have not been withdrawn.
+      assignedPractice: assigned.map((set) => ({
+        id: set.id,
+        conceptId: set.conceptId,
+        conceptName: set.conceptName,
+        questionCount: set.questionCount,
+        dueAt: set.dueAt,
+        className: set.className,
+        inProgress: set.state === "IN_PROGRESS",
+      })),
     },
     now,
   );

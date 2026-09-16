@@ -95,6 +95,7 @@ export type PlanTest = {
 };
 
 export type PlanItemKind =
+  | "assigned-practice"
   | "resume-test"
   | "sit-test"
   | "revise-for-test"
@@ -184,6 +185,17 @@ function shutsSentence(closesAt: Date, now: Date): string {
  * with practice would be the product competing with their teacher for the same
  * evening.
  */
+/** One teacher instruction, as the plan needs it. */
+export type PlanAssignedPractice = {
+  id: string;
+  conceptId: string;
+  conceptName: string;
+  questionCount: number;
+  dueAt: Date | null;
+  className: string;
+  inProgress: boolean;
+};
+
 export function buildPlan(
   input: {
     tests: PlanTest[];
@@ -198,6 +210,14 @@ export function buildPlan(
      * the second is what makes somebody open the list.
      */
     mistakeConceptName?: string | null;
+    /**
+     * Practice a teacher asked for, not yet done.
+     *
+     * A deadline item, so it is never trimmed by MAX_ITEMS: the cap exists to
+     * stop the product competing for a student evening with its own
+     * suggestions, and a teachers instruction is not the products suggestion.
+     */
+    assignedPractice?: PlanAssignedPractice[];
   },
   now = new Date(),
 ): Plan {
@@ -222,6 +242,41 @@ export function buildPlan(
     });
   }
 
+  // --- 1b. Practice a teacher asked for ------------------------------------
+  //
+  // Under a half-finished paper and above everything else: somebody asked for
+  // it, which is more than the product can say about its own suggestions.
+  //
+  // A due date is stated as WHEN, never as a penalty — "asked for by
+  // tomorrow", and for one already past "it was asked for earlier, it still
+  // counts". A fact, not a reproach: a plan that scolds is a plan a student
+  // closes. It goes through `whenPhrase` like every other date here, so no
+  // weekday and no clock time reaches a plan item.
+  for (const set of input.assignedPractice ?? []) {
+    const when = set.dueAt ? whenPhrase(set.dueAt, now) : null;
+    const overdue = set.dueAt !== null && set.dueAt.getTime() < now.getTime();
+    deadlines.push({
+      kind: "assigned-practice",
+      title: set.inProgress
+        ? `Finish the practice on ${set.conceptName}`
+        : `Practise ${set.conceptName}`,
+      why: [
+        `Your ${set.className} teacher asked for ${set.questionCount} questions.`,
+        overdue
+          ? "It was asked for earlier — it still counts."
+          : when
+            ? `Asked for by ${when}.`
+            : null,
+        "No clock, and feedback after every question.",
+      ]
+        .filter(Boolean)
+        .join(" "),
+      href: `/student/practice?assigned=${set.id}`,
+      actionLabel: set.inProgress ? "Carry on" : "Start",
+      conceptId: set.conceptId,
+      deadline: true,
+    });
+  }
   // --- 2. A paper open and not yet started ---------------------------------
   //
   // NOT YET STARTED, meaning no sitting at all. A second attempt the teacher

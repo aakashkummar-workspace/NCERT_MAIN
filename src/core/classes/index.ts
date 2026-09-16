@@ -123,6 +123,9 @@ export async function getClass(organizationId: string, classId: string) {
       gradeLabel: found.grade.label,
       gradeNumber: found.grade.number,
       subjectName: found.subject.name,
+      // Needed to ask which concepts this class could possibly practise: a
+      // class may only be set practice on its own subject.
+      subjectId: found.subjectId,
       academicYear: found.academicYear,
       joinCode: found.joinCode,
       status: found.status,
