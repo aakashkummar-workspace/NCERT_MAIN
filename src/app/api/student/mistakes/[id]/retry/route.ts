@@ -12,6 +12,15 @@ const Body = z.object({
     z.object({ kind: z.literal("numeric"), value: z.number() }),
     z.object({ kind: z.literal("text"), value: z.string().max(4000) }),
   ]),
+  /**
+   * The key the device minted before this request left it.
+   *
+   * Optional: a caller without one gets the old behaviour, which counts every
+   * call as a retry. With one, a replay of the same retry returns the recorded
+   * verdict and increments nothing — a retry stamps a count the page shows and
+   * the classifier reads, so a dropped reply must not become a second go.
+   */
+  clientRetryId: z.uuid().optional(),
 });
 
 /**
@@ -41,6 +50,7 @@ export async function POST(
     },
     id,
     parsed.data.response,
+    parsed.data.clientRetryId ?? null,
   );
   if (!result.ok) return fail("NOT_FOUND", result.message);
 

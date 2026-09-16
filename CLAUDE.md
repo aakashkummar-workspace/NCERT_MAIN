@@ -41,12 +41,12 @@ waiting on data, not on a decision. See [IMPLEMENTATION_PLAN.md](./IMPLEMENTATIO
 teacher-assigned practice, exam series, and cross-school concept benchmarks.
 The last of those cannot be SHOWN working: its floor is five contributing
 schools and this deployment has one, so every refusal is proven and a live
-median is not. Of the India bets in section 7.6, offline-tolerant
-PRACTICE is built — the answer is written to the device before it is sent, and a
-replay of it is no longer refused. The Mistake Bank retry still is not, and a
-Hindi question bank and WhatsApp for parents are planned rather than started:
-both wait on somebody outside this repository (Hindi reviewers, and WhatsApp
-template registration).
+median is not. Of the India bets in section 7.6,
+offline-tolerant practice is built — for PRACTICE and for the Mistake Bank
+retry, both writing the answer to the device before sending it, and neither
+losing it to a dropped request. A Hindi question bank and WhatsApp for parents
+are planned rather than started: both wait on somebody outside this repository
+(Hindi reviewers, and WhatsApp template registration).
 **Content arrived in September 2026.** The NCERT import brought 3,857 CBSE
 Class 9 and 10 questions and draft outcomes and concepts for every chapter but
 Hindi. The drafts await a teacher's review, and the bank must not reach any
@@ -72,7 +72,7 @@ npm run verify                # typecheck + lint + unit
 npm run test:integration      # needs the database up
 npm run audit:rls             # the one that must never be skipped
 npm run build && npm start    # then, in another shell:
-npm run smoke                 # 906 HTTP checks across twenty-six suites
+npm run smoke                 # 912 HTTP checks across twenty-six suites
 npm run test:e2e              # 186 browser checks: 13 flows, axe on all 52 routes,
                               # tap targets and layout at 360 / 768 / 1440
 npm run test:a11y             # just the accessibility sweep
@@ -1367,13 +1367,20 @@ about sixty-five defects. The lessons are about where tests stop looking:
 - **A malformed id is a 404, not a 500.** Prisma throws on a non-UUID, so every
   `[id]` route validates the id before querying.
 
-### Practice on a bad connection
+### Practice and the Mistake Bank on a bad connection
 
 - **The answer is written to the device BEFORE it is sent**, which is the rule
-  the exam player has followed since it was built and practice did not — and
-  practice is the thing actually done at home, on wifi that reaches the router
-  and nothing else. A dropped request, a 500 and a dead tab all mean "not now":
-  the answer survives, and it goes up by itself when the connection returns.
+  the exam player has followed since it was built and neither practice nor the
+  Mistake Bank retry did — and both are what is actually done at home, on wifi
+  that reaches the router and nothing else. A dropped request, a 500 and a dead
+  tab all mean "not now": the answer survives, and it goes up by itself when
+  the connection returns.
+- **One outbox, three callers.** `core/attempts/outbox.ts` is shared by
+  practice and the retry, beside `response.ts`, for the reason that file
+  exists: three components once turned input into a response three ways and two
+  of them were wrong. Its entries are keyed by a neutral `id` and its storage
+  key is scoped (`sahayak.practice.…`, `sahayak.mistake.…`), so a set and a
+  retry open in two tabs cannot overwrite each other.
 - **Offline-TOLERANT, not offline-capable, and the screen says which.** An
   answer given with no connection is KEPT and not judged. The verdict is the
   server's: the explanation and the key are absent from the payload until the
@@ -1394,6 +1401,19 @@ about sixty-five defects. The lessons are about where tests stop looking:
   every verdict was green would make practice evidence worthless. Same lesson
   as submitting a paper: the client that retried did nothing wrong, and telling
   it otherwise leaves a student staring at a refusal for work they did once.
+- **The Mistake Bank needed a KEY rather than a comparison, because a retry
+  increments a count.** `retry_count` is on the page and `last_retried_at` is
+  read by the nightly classifier's CARELESS rule, and a student coming back on
+  Thursday with the same wrong answer IS a second go — so "same response" could
+  never separate a replay from a genuine attempt. The device mints
+  `clientRetryId` before the first send and `student_mistakes.last_client_retry_id`
+  remembers it: a matching key returns the recorded verdict and writes nothing,
+  not the count and not the date. A key the server invented would be a new key
+  every time, which is the bug it exists to prevent — `clientAttemptId`'s
+  reasoning, one surface along.
+- **No key means count it.** A caller without one cannot tell a replay from a
+  second go, so the honest default is the old behaviour. An integration test
+  pins all three: same key once, new key twice, no key twice.
 - **A replay writes nothing.** No second answer row, no second evidence row —
   an integration test counts `concept_evidence` across a replay of the answer
   that FINISHES a set, because that is the one that writes. Doubling a set's
@@ -2205,7 +2225,7 @@ about sixty-five defects. The lessons are about where tests stop looking:
 
 ### End-to-end and accessibility
 
-- **The suite covers only what a browser can prove.** 906 smoke checks already
+- **The suite covers only what a browser can prove.** 912 smoke checks already
   drive the real HTTP API against a real build; re-proving status codes and
   payload shapes in Chromium would double the runtime and the maintenance for
   nothing. E2E is for work surviving a refresh or a dropped connection,

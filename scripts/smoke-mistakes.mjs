@@ -346,6 +346,44 @@ check("but moves it to RETRIED, never to RESOLVED",
   r.body?.status === "RETRIED", r.body?.status);
 check("and says why, so nobody is surprised it is still on the list",
   /different question/i.test(r.body?.message ?? ""), r.body?.message ?? "");
+const afterCorrect = r.body?.retryCount;
+
+// --- A device that never heard back can ask again --------------------------
+//
+// A retry increments a count the page shows and the nightly classifier reads,
+// so a dropped reply must not become a second go. The key is minted on the
+// device before the request leaves it.
+
+const replayKey = crypto.randomUUID();
+r = await mine.json(`/api/student/mistakes/${wrong.id}/retry/`, "POST", {
+  response: { kind: "choice", keys: ["A"] },
+  clientRetryId: replayKey,
+});
+check("a retry carrying a device key is accepted", r.status === 200,
+  `status ${r.status}`);
+const keyed = r.body?.retryCount;
+check("and counts as one go", keyed === afterCorrect + 1, `${afterCorrect} → ${keyed}`);
+
+r = await mine.json(`/api/student/mistakes/${wrong.id}/retry/`, "POST", {
+  response: { kind: "choice", keys: ["A"] },
+  clientRetryId: replayKey,
+});
+check("sending it again with the same key replays the verdict", r.status === 200,
+  `status ${r.status}`);
+check("saying it was a replay", r.body?.replayed === true, JSON.stringify(r.body?.replayed));
+// The one that matters: telling a student they had two goes at something they
+// answered once is what the key exists to prevent.
+check("and counts nothing extra", r.body?.retryCount === keyed,
+  `${keyed} → ${r.body?.retryCount}`);
+
+r = await mine.json(`/api/student/mistakes/${wrong.id}/retry/`, "POST", {
+  response: { kind: "choice", keys: ["A"] },
+  clientRetryId: crypto.randomUUID(),
+});
+// A student coming back another day IS a second go, even on the same answer,
+// which is why this is a key rather than a comparison of responses.
+check("a new key is a genuine second go", r.body?.retryCount === keyed + 1,
+  `${keyed} → ${r.body?.retryCount}`);
 
 // --- Resolution is on independent evidence ----------------------------------
 

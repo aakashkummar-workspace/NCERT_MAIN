@@ -11,7 +11,7 @@ import {
   serialise,
   settle,
   type OutboxEntry,
-} from "@/core/practice/outbox";
+} from "@/core/attempts/outbox";
 import { sameResponse } from "@/core/attempts/same-response";
 
 /**
@@ -23,7 +23,7 @@ import { sameResponse } from "@/core/attempts/same-response";
  */
 
 const entry = (over: Partial<OutboxEntry> = {}): OutboxEntry => ({
-  practiceAnswerId: over.practiceAnswerId ?? "pa1",
+  id: over.id ?? "pa1",
   response: over.response ?? { kind: "choice", keys: ["A"] },
   timeSpentSeconds: over.timeSpentSeconds ?? 12,
   queuedAt: over.queuedAt ?? 1_700_000_000_000,
@@ -45,31 +45,31 @@ describe("one entry per question, ever", () => {
 
   it("keeps separate questions apart, oldest first", () => {
     const outbox = queue(
-      queue(EMPTY, entry({ practiceAnswerId: "pa1" })),
-      entry({ practiceAnswerId: "pa2" }),
+      queue(EMPTY, entry({ id: "pa1" })),
+      entry({ id: "pa2" }),
     );
-    expect(outbox.entries.map((row) => row.practiceAnswerId)).toEqual(["pa1", "pa2"]);
+    expect(outbox.entries.map((row) => row.id)).toEqual(["pa1", "pa2"]);
     // Answers go up in the order they were given.
-    expect(next(outbox)?.practiceAnswerId).toBe("pa1");
+    expect(next(outbox)?.id).toBe("pa1");
   });
 
   it("never grows past a set's worth of questions", () => {
     let outbox = EMPTY;
     for (let index = 0; index < MAX_ENTRIES + 5; index++) {
-      outbox = queue(outbox, entry({ practiceAnswerId: `pa${index}` }));
+      outbox = queue(outbox, entry({ id: `pa${index}` }));
     }
     expect(outbox.entries).toHaveLength(MAX_ENTRIES);
     // The oldest are the ones dropped: a set is at most ten questions, so more
     // than that means something is wrong rather than something is pending.
-    expect(next(outbox)?.practiceAnswerId).toBe("pa5");
+    expect(next(outbox)?.id).toBe("pa5");
   });
 
   it("drops one when the server has it, and leaves the rest", () => {
     const outbox = settle(
-      queue(queue(EMPTY, entry({ practiceAnswerId: "pa1" })), entry({ practiceAnswerId: "pa2" })),
+      queue(queue(EMPTY, entry({ id: "pa1" })), entry({ id: "pa2" })),
       "pa1",
     );
-    expect(outbox.entries.map((row) => row.practiceAnswerId)).toEqual(["pa2"]);
+    expect(outbox.entries.map((row) => row.id)).toEqual(["pa2"]);
     expect(pending(outbox, "pa1")).toBeNull();
   });
 
@@ -94,7 +94,7 @@ describe("what a previous page load left behind", () => {
       "not json",
       "[]",
       '{"entries":"nope"}',
-      '{"entries":[{"practiceAnswerId":""}]}',
+      '{"entries":[{"id":""}]}',
       '{"entries":[{"nothing":true}]}',
     ]) {
       expect(parse(raw)).toEqual(EMPTY);
@@ -104,15 +104,17 @@ describe("what a previous page load left behind", () => {
   it("keeps an entry whose response is null, which is a real answer state", () => {
     const blank = parse(
       JSON.stringify({
-        entries: [{ practiceAnswerId: "pa1", response: null, timeSpentSeconds: 4, queuedAt: 1, attempts: 0 }],
+        entries: [{ id: "pa1", response: null, timeSpentSeconds: 4, queuedAt: 1, attempts: 0 }],
       }),
     );
     expect(blank.entries).toHaveLength(1);
   });
 
   it("is keyed per session, so two tabs cannot overwrite each other", () => {
-    expect(outboxKey("s1")).not.toBe(outboxKey("s2"));
-    expect(outboxKey("s1")).toContain("s1");
+    expect(outboxKey("practice", "s1")).not.toBe(outboxKey("practice", "s2"));
+    expect(outboxKey("practice", "s1")).toContain("s1");
+    // And scoped, so a set and a mistake retry cannot collide either.
+    expect(outboxKey("practice", "x")).not.toBe(outboxKey("mistake", "x"));
   });
 });
 

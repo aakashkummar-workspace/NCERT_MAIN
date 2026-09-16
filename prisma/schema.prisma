@@ -1909,10 +1909,23 @@ model StudentMistake {
   status MistakeStatus @default(UNRESOLVED)
 
   /// How many times they have come back to this exact question.
-  retryCount       Int       @default(0) @map("retry_count")
-  lastRetriedAt    DateTime? @map("last_retried_at")
+  retryCount    Int       @default(0) @map("retry_count")
+  lastRetriedAt DateTime? @map("last_retried_at")
+
+  /// The key the DEVICE minted for the last retry, before the request left it.
+  ///
+  /// A retry increments `retry_count` and stamps `last_retried_at`, so a device
+  /// that sent one and never heard back cannot simply ask again: a replay would
+  /// tell a student they had three goes at something they answered once, and the
+  /// mistake classifier's CARELESS rule reads that visit count. Matching this
+  /// key returns the recorded verdict and writes nothing.
+  ///
+  /// Minted on the device rather than here, for `clientAttemptId`'s reason: a
+  /// key the server invents is a new key every time, which is the bug it exists
+  /// to prevent.
+  lastClientRetryId String?  @map("last_client_retry_id") @db.Uuid
   /// True only for the most recent retry. Null before the first.
-  lastRetryCorrect Boolean?  @map("last_retry_correct")
+  lastRetryCorrect  Boolean? @map("last_retry_correct")
 
   /// When independent evidence closed it. Never set by a person.
   resolvedAt DateTime? @map("resolved_at")

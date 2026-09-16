@@ -16,7 +16,7 @@ import {
   queue as queueEntry,
   settle as settleEntry,
   type Outbox,
-} from "@/core/practice/outbox";
+} from "@/core/attempts/outbox";
 import {
   empty as emptyOutbox,
   read as readOutbox,
@@ -262,7 +262,7 @@ export function Runner({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          practiceAnswerId: entry.practiceAnswerId,
+          practiceAnswerId: entry.id,
           response: entry.response,
           timeSpentSeconds: entry.timeSpentSeconds,
         }),
@@ -273,7 +273,7 @@ export function Runner({
         // drop it and say so, rather than sending it every thirty seconds
         // forever. Only "not now" stays queued.
         if (result.status >= 400 && result.status < 500) {
-          persist(settleEntry(readOutbox(sessionId), entry.practiceAnswerId));
+          persist(settleEntry(readOutbox(sessionId), entry.id));
           setSendError(json?.error?.message ?? "That answer was not accepted.");
           return;
         }
@@ -283,9 +283,9 @@ export function Runner({
 
       setReachable(true);
       setSendError(null);
-      persist(settleEntry(readOutbox(sessionId), entry.practiceAnswerId));
+      persist(settleEntry(readOutbox(sessionId), entry.id));
       applyVerdict(
-        entry.practiceAnswerId,
+        entry.id,
         {
           correct: json.correct,
           explanation: json.explanation,
@@ -382,7 +382,7 @@ export function Runner({
           setSendError(null);
           persist(
             queueEntry(readOutbox(sessionId), {
-              practiceAnswerId: question.practiceAnswerId,
+              id: question.practiceAnswerId,
               response,
               timeSpentSeconds,
               queuedAt: Date.now(),

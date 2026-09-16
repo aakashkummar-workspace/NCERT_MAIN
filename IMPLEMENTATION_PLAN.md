@@ -400,11 +400,11 @@ same five means.
   an intent named in business logic, one directory naming the vendor, one door,
   one ESLint fence — and the same registration paperwork, so the wording lives
   beside the id it was registered under.
-- **Offline-tolerant practice. BUILT for practice; the Mistake Bank retry is
-  not done yet.** Pressing Check writes the answer to the device first and
-  sends it after, so a dropped request, a 500 and a dead tab all mean "not
-  now": the answer survives, goes up by itself when the connection returns,
-  and the verdict arrives then.
+- **Offline-tolerant practice. BUILT**, for practice and for the Mistake Bank
+  retry. Pressing Check writes the answer to the device first and sends it
+  after, so a dropped request, a 500 and a dead tab all mean "not now": the
+  answer survives, goes up by itself when the connection returns, and the
+  verdict arrives then. One queue serves both, beside the response builder.
 
   It is offline-TOLERANT, not offline-capable, and the difference is stated on
   screen rather than papered over. The verdict is the server's — the
@@ -421,6 +421,12 @@ same five means.
   already served; a DIFFERENT answer to an answered question is still refused,
   because a set a student could walk until every verdict was green would make
   practice evidence worthless.
+
+  The retry needed a KEY rather than a comparison, because it increments a
+  count the page shows and the nightly classifier reads — and a student coming
+  back on Thursday with the same wrong answer IS a second go. The device mints
+  it before the first send, `student_mistakes.last_client_retry_id` remembers
+  it, and a matching key writes nothing: not the count, not the date.
 
 ### 7.7 What is deliberately NOT on this list
 

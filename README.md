@@ -149,7 +149,7 @@ npm run dev                # http://localhost:3210
 npm run verify             # encoding + typecheck + lint + 322 unit tests
 npm run test:integration   # 281 tests, needs the database up
 npm run audit:rls          # the check that must never be skipped
-npm run smoke              # 906 HTTP checks against a running build
+npm run smoke              # 912 HTTP checks against a running build
 npm run test:e2e           # 178 browser checks: the thirteen flows, axe on every
                            # route, tap targets and layout at 360 / 768 / 1440
 ```

@@ -262,6 +262,14 @@ export type RetryResult =
       correctAnswer: string | null;
       /** Said out loud on the screen. See the note at the top of this file. */
       message: string;
+      /**
+       * True when this was a REPLAY of a retry the server already had.
+       *
+       * The screen is identical — it is the recorded verdict — but a retry
+       * silently indistinguishable from a fresh one would hide a real bug
+       * behind a working page.
+       */
+      replayed?: boolean;
     }
   | { ok: false; message: string };
 
@@ -269,6 +277,13 @@ export async function retryMistake(
   actor: { organizationId: string; userId: string },
   id: string,
   response: Response,
+  /**
+   * The key the device minted before this request left it.
+   *
+   * Optional, and absent means "count this as a retry" — which is the right
+   * default for a caller that has no way of telling a replay from a second go.
+   */
+  clientRetryId?: string | null,
   now = new Date(),
 ): Promise<RetryResult> {
   return withTenant<RetryResult>(actor.organizationId, async (tx) => {
@@ -292,6 +307,28 @@ export async function retryMistake(
       where: { id: mistake.attemptAnswerId },
       select: { maxMarks: true },
     });
+
+    // The same retry, asked again by a device that never heard back. The
+    // recorded verdict, and NOTHING written: `retry_count` and
+    // `last_retried_at` are what the page shows and what the classifier's
+    // CARELESS rule reads, so counting a dropped reply as a second go would
+    // tell a student they had three attempts at something they answered once.
+    if (
+      clientRetryId &&
+      mistake.lastClientRetryId === clientRetryId &&
+      mistake.lastRetryCorrect !== null
+    ) {
+      return {
+        ok: true,
+        replayed: true,
+        correct: mistake.lastRetryCorrect,
+        status: mistake.status as MistakeStatus,
+        retryCount: mistake.retryCount,
+        explanation: version.explanation,
+        correctAnswer: describeAnswer(version.options as never, version.answerKey),
+        message: retryMessage(mistake.lastRetryCorrect),
+      };
+    }
 
     // Marked by the same function that marked it the first time, against the
     // version they were served. Two markers would eventually disagree, and a
@@ -322,6 +359,7 @@ export async function retryMistake(
         retryCount: { increment: 1 },
         lastRetriedAt: now,
         lastRetryCorrect: correct,
+        lastClientRetryId: clientRetryId ?? null,
         // RETRIED, never RESOLVED. Getting the same question right a second
         // time is engagement, not proof — resolution needs a different question
         // on the same concept, and `reconcileResolved` finds it.

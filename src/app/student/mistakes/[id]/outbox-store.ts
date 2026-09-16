@@ -15,6 +15,11 @@ import {
  * mount effect and calling `setState` is a cascading render, which
  * `react-hooks/set-state-in-effect` rejects as an error rather than a warning.
  *
+ * Beside the practice one rather than shared with it: each surface reads its
+ * own scope, and a single module taking a scope argument would be one cache
+ * keyed by two things — which is how a set and a retry end up overwriting each
+ * other's unsent answer.
+ *
  * So the snapshot lives here, is read from storage on first access, and is
  * replaced only by `write()`. The cached object matters as much as the
  * persistence: `useSyncExternalStore` compares snapshots by identity, and a
@@ -24,15 +29,15 @@ import {
 
 const listeners = new Set<() => void>();
 
-/** One entry per session id. Two sets open in two tabs never share a snapshot. */
+/** One entry per mistake id, so two tabs never share a snapshot. */
 const cache = new Map<string, Outbox>();
 
-function load(sessionId: string): Outbox {
+function load(mistakeId: string): Outbox {
   try {
-    return parse(localStorage.getItem(outboxKey("practice", sessionId)));
+    return parse(localStorage.getItem(outboxKey("mistake", mistakeId)));
   } catch {
     // Private window, or storage blocked. An unreadable queue must not take
-    // the runner down with it: the worst case is the answer is sent again,
+    // the page down with it: the worst case is the answer is sent again,
     // which the server now replays rather than refusing.
     return EMPTY;
   }
@@ -45,11 +50,11 @@ export function subscribe(onChange: () => void): () => void {
   };
 }
 
-export function read(sessionId: string): Outbox {
-  const cached = cache.get(sessionId);
+export function read(mistakeId: string): Outbox {
+  const cached = cache.get(mistakeId);
   if (cached) return cached;
-  const loaded = load(sessionId);
-  cache.set(sessionId, loaded);
+  const loaded = load(mistakeId);
+  cache.set(mistakeId, loaded);
   return loaded;
 }
 
@@ -58,10 +63,10 @@ export function empty(): Outbox {
   return EMPTY;
 }
 
-export function write(sessionId: string, outbox: Outbox): void {
-  cache.set(sessionId, outbox);
+export function write(mistakeId: string, outbox: Outbox): void {
+  cache.set(mistakeId, outbox);
   try {
-    localStorage.setItem(outboxKey("practice", sessionId), serialise(outbox));
+    localStorage.setItem(outboxKey("mistake", mistakeId), serialise(outbox));
   } catch {
     // The in-memory snapshot still sends; only surviving a reload is lost, and
     // that is not worth an error message on top of a question.

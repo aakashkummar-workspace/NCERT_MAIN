@@ -281,6 +281,83 @@ describe("retrying is engagement, not proof", () => {
   });
 });
 
+describe("a device that never heard back can ask again", () => {
+  it("replays a retry carrying the same key, and counts it once", async () => {
+    const world = await makeWorld({ maxAttempts: 3 });
+    await sit(world, student(world), { mcq: "B" });
+    const mistakes = await listMistakes(world.organizationId, world.studentId);
+    const mcq = mistakes.find((m) => m.marks === 2)!;
+    const actor = { organizationId: world.organizationId, userId: world.studentId };
+    const key = randomUUID();
+
+    const first = await retryMistake(actor, mcq.id, { kind: "choice", keys: ["A"] }, key);
+    if (!first.ok) throw new Error(first.message);
+    expect(first.retryCount).toBe(1);
+
+    const stamped = await withTenant(world.organizationId, (tx) =>
+      tx.studentMistake.findFirstOrThrow({ where: { id: mcq.id } }),
+    );
+
+    // The wifi reached the router and nothing else, so the device sends the
+    // same retry again with the key it minted before the first attempt.
+    const again = await retryMistake(actor, mcq.id, { kind: "choice", keys: ["A"] }, key);
+    expect(again.ok).toBe(true);
+    if (!again.ok) return;
+    expect(again.replayed).toBe(true);
+    expect(again.correct).toBe(first.correct);
+    expect(again.explanation).toBe(first.explanation);
+
+    // The count is what the page shows and what the classifier's CARELESS rule
+    // reads. Telling a student they had two goes at something they answered
+    // once is the failure this key exists to prevent.
+    expect(again.retryCount).toBe(1);
+    const row = await withTenant(world.organizationId, (tx) =>
+      tx.studentMistake.findFirstOrThrow({ where: { id: mcq.id } }),
+    );
+    expect(row.retryCount).toBe(1);
+    // And the date did not move either: `last_retried_at` is read by the
+    // nightly classifier, and a replay that re-stamped it would make a retry
+    // from Tuesday look like one from tonight.
+    expect(row.lastRetriedAt?.getTime()).toBe(stamped.lastRetriedAt?.getTime());
+  });
+
+  it("counts a genuine second go, which carries its own key", async () => {
+    const world = await makeWorld({ maxAttempts: 3 });
+    await sit(world, student(world), { mcq: "B" });
+    const mistakes = await listMistakes(world.organizationId, world.studentId);
+    const mcq = mistakes.find((m) => m.marks === 2)!;
+    const actor = { organizationId: world.organizationId, userId: world.studentId };
+
+    await retryMistake(actor, mcq.id, { kind: "choice", keys: ["C"] }, randomUUID());
+    const second = await retryMistake(
+      actor,
+      mcq.id,
+      { kind: "choice", keys: ["A"] },
+      randomUUID(),
+    );
+    if (!second.ok) throw new Error(second.message);
+    // A student coming back another day IS a second go, even on the same
+    // answer — which is why this is a key and not a comparison of responses.
+    expect(second.replayed).toBeUndefined();
+    expect(second.retryCount).toBe(2);
+  });
+
+  it("counts every call when no key is sent, which is the old behaviour", async () => {
+    const world = await makeWorld({ maxAttempts: 3 });
+    await sit(world, student(world), { mcq: "B" });
+    const mistakes = await listMistakes(world.organizationId, world.studentId);
+    const mcq = mistakes.find((m) => m.marks === 2)!;
+    const actor = { organizationId: world.organizationId, userId: world.studentId };
+
+    await retryMistake(actor, mcq.id, { kind: "choice", keys: ["C"] });
+    const second = await retryMistake(actor, mcq.id, { kind: "choice", keys: ["C"] });
+    if (!second.ok) throw new Error(second.message);
+    // A caller with no key has no way of telling a replay from a second go, so
+    // the honest default is to count it.
+    expect(second.retryCount).toBe(2);
+  });
+});
+
 describe("a mistake closes on independent evidence", () => {
   it("resolves when a different question on the concept goes right", async () => {
     const world = await makeWorld({ maxAttempts: 3 });

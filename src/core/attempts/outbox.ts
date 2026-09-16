@@ -1,7 +1,13 @@
-import type { Response } from "@/core/attempts/score";
+import type { Response } from "./score";
 
 /**
- * The practice outbox: an answer written to the device before it is sent.
+ * An answer written to the device before it is sent.
+ *
+ * Shared by practice and the Mistake Bank retry, because both learned the same
+ * lesson from the exam player and a second copy of a queue is a second copy
+ * that drifts — the rule the response builder already follows, where three
+ * components used to turn input into a response three ways and two of them
+ * were wrong.
  *
  * ---------------------------------------------------------------------------
  * Why practice needs one at all
@@ -34,14 +40,34 @@ import type { Response } from "@/core/attempts/score";
  */
 
 export type OutboxEntry = {
-  /** The practice answer this belongs to. One entry per question, ever. */
-  practiceAnswerId: string;
+  /**
+   * What this answer belongs to — a practice answer id, or a mistake id.
+   *
+   * One entry per id, ever: a student who taps twice before the first attempt
+   * lands has not answered twice.
+   */
+  id: string;
   response: Response;
   timeSpentSeconds: number;
   /** When the student pressed, so a long wait can be stated in the UI. */
   queuedAt: number;
   /** How many times sending has been attempted, for the screen's wording. */
   attempts: number;
+  /**
+   * A key minted on the DEVICE before the request left it, where the receiver
+   * counts attempts.
+   *
+   * The Mistake Bank increments `retry_count` and stamps `last_retried_at`, so
+   * a replay that looked like a fresh retry would tell a student they had three
+   * goes at something they answered once — and the classifier's CARELESS rule
+   * reads that visit count. A key minted server-side would be a new key every
+   * time, which is the bug it exists to prevent: the same reasoning as
+   * `clientAttemptId` on a sitting.
+   *
+   * Practice needs none — an answer row is unanswered exactly once — so it is
+   * optional rather than invented for both.
+   */
+  clientKey?: string;
 };
 
 export type Outbox = { entries: OutboxEntry[] };
@@ -59,40 +85,26 @@ export const MAX_ENTRIES = 10;
  * make the second a "different answer" the server rightly refuses.
  */
 export function queue(outbox: Outbox, entry: OutboxEntry): Outbox {
-  const without = outbox.entries.filter(
-    (row) => row.practiceAnswerId !== entry.practiceAnswerId,
-  );
+  const without = outbox.entries.filter((row) => row.id !== entry.id);
   return { entries: [...without, entry].slice(-MAX_ENTRIES) };
 }
 
 /** Drop one, because the server now has it. */
-export function settle(outbox: Outbox, practiceAnswerId: string): Outbox {
-  return {
-    entries: outbox.entries.filter(
-      (row) => row.practiceAnswerId !== practiceAnswerId,
-    ),
-  };
+export function settle(outbox: Outbox, id: string): Outbox {
+  return { entries: outbox.entries.filter((row) => row.id !== id) };
 }
 
 /** Note a failed attempt, so the screen can say "still trying" honestly. */
-export function attempted(outbox: Outbox, practiceAnswerId: string): Outbox {
+export function attempted(outbox: Outbox, id: string): Outbox {
   return {
     entries: outbox.entries.map((row) =>
-      row.practiceAnswerId === practiceAnswerId
-        ? { ...row, attempts: row.attempts + 1 }
-        : row,
+      row.id === id ? { ...row, attempts: row.attempts + 1 } : row,
     ),
   };
 }
 
-export function pending(
-  outbox: Outbox,
-  practiceAnswerId: string,
-): OutboxEntry | null {
-  return (
-    outbox.entries.find((row) => row.practiceAnswerId === practiceAnswerId) ??
-    null
-  );
+export function pending(outbox: Outbox, id: string): OutboxEntry | null {
+  return outbox.entries.find((row) => row.id === id) ?? null;
 }
 
 /** The oldest first: answers go up in the order they were given. */
@@ -131,8 +143,8 @@ function isEntry(value: unknown): value is OutboxEntry {
   if (!value || typeof value !== "object") return false;
   const row = value as Record<string, unknown>;
   return (
-    typeof row.practiceAnswerId === "string" &&
-    row.practiceAnswerId.length > 0 &&
+    typeof row.id === "string" &&
+    row.id.length > 0 &&
     typeof row.timeSpentSeconds === "number" &&
     typeof row.queuedAt === "number" &&
     typeof row.attempts === "number" &&
@@ -142,7 +154,12 @@ function isEntry(value: unknown): value is OutboxEntry {
   );
 }
 
-/** The key. Per SESSION, so two sets open in two tabs cannot overwrite each other. */
-export function outboxKey(sessionId: string): string {
-  return `sahayak.practice.outbox.${sessionId}`;
+/**
+ * The storage key.
+ *
+ * Scoped, so a practice set and a mistake retry open in two tabs cannot
+ * overwrite each other's unsent answers.
+ */
+export function outboxKey(scope: "practice" | "mistake", id: string): string {
+  return `sahayak.${scope}.outbox.${id}`;
 }
