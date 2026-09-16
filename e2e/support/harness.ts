@@ -242,6 +242,8 @@ export type World = {
   questionIds: string[];
   assessmentId: string;
   assignmentId: string;
+  /** A named exam series holding the world's paper. */
+  seriesId: string;
   students: Student[];
 };
 
@@ -381,6 +383,19 @@ export async function makeWorld(
     throw new Error(`makeWorld: assign failed ${assigned.status()} ${await assigned.text()}`);
   }
 
+  const assignmentId = (await assigned.json()).id as string;
+
+  // A named series holding that paper, so the accessibility sweep has a
+  // populated series page to look at rather than an empty state.
+  const series = await request.post("/api/series/", {
+    data: { name: `Half-Yearly ${Date.now()}`, academicYear: "2026-27" },
+  });
+  if (!series.ok()) {
+    throw new Error(`makeWorld: series failed ${series.status()} ${await series.text()}`);
+  }
+  const seriesId = (await series.json()).id as string;
+  await request.post(`/api/series/${seriesId}/papers/`, { data: { assignmentId } });
+
   return {
     teacher,
     classId,
@@ -391,7 +406,8 @@ export async function makeWorld(
     outcomeId: outcome.id,
     questionIds,
     assessmentId,
-    assignmentId: (await assigned.json()).id,
+    assignmentId,
+    seriesId,
     students,
   };
 }

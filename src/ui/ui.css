@@ -2451,6 +2451,10 @@
   .ui-brand,
   .ui-plan-link a,
   .ui-page-eyebrow a,
+  /* The paper title on a series page: a link to the assignment, 23px tall
+     under a thumb. Caught by the tap-target sweep the day the page was
+     added, which is the argument for putting a new screen in that list. */
+  .ui-series-paper-head a,
   .ui-heatmap th[scope="row"] a {
     display: inline-flex;
     align-items: center;

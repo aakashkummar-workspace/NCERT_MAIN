@@ -344,6 +344,14 @@ const SCREENS: Screen[] = [
     role: "teacher",
     path: () => `/teacher/classes/${world?.classId ?? ""}/`,
   },
+  {
+    // The series page carries a destructive control ("Take out") beside the
+    // name of an exam, which is exactly the row this suite exists to watch at
+    // 360px: a wrap that puts it under the wrong paper's name.
+    name: "teacher exam series",
+    role: "teacher",
+    path: () => `/teacher/series/${world?.seriesId ?? ""}/`,
+  },
   { name: "teacher questions", role: "teacher", path: () => "/teacher/questions/" },
   { name: "teacher analytics", role: "teacher", path: () => "/teacher/analytics/" },
   {

@@ -101,6 +101,8 @@ type Ids = {
   questionId: string;
   assessmentId: string;
   assignmentId: string;
+  /** The exam series the world's paper was grouped into. */
+  seriesId: string;
   studentUserId: string;
   submittedAttemptId: string;
   openAttemptId: string;
@@ -587,6 +589,7 @@ async function buildWorld(browser: Browser): Promise<Ids> {
     questionId: world.questionIds[0]!,
     assessmentId: world.assessmentId,
     assignmentId: world.assignmentId,
+    seriesId: world.seriesId,
     studentUserId: roster.userId,
     submittedAttemptId,
     openAttemptId,
@@ -782,6 +785,8 @@ check("teacher", [
   t("/teacher/questions/[id]/", () => `/teacher/questions/${fx.ids.questionId}/`),
   t("/teacher/assessments/", () => "/teacher/assessments/"),
   t("/teacher/assessments/[id]/", () => `/teacher/assessments/${fx.ids.assessmentId}/`),
+  t("/teacher/series/", () => "/teacher/series/"),
+  t("/teacher/series/[id]/", () => `/teacher/series/${fx.ids.seriesId}/`),
   t("/teacher/assignments/[id]/", () => `/teacher/assignments/${fx.ids.assignmentId}/`),
   t("/teacher/assignments/[id]/marking/", () => `/teacher/assignments/${fx.ids.assignmentId}/marking/`),
   t("/teacher/assignments/[id]/results/", () => `/teacher/assignments/${fx.ids.assignmentId}/results/`),
