@@ -192,6 +192,29 @@
   gap: 8px;
 }
 
+/* A row that carries actions: the sentence takes the room, the buttons sit at
+   the end, and on a phone they drop under the sentence rather than squeezing
+   it into a column one word wide. */
+.ui-attention li:has(.ui-attention-actions) {
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ui-attention-text {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+.ui-attention-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Targets of a link from the dashboard, clear of the sticky top bar. */
+.ui-anchor,
+.ui-gap {
+  scroll-margin-top: 84px;
+}
+
 /* ------------------------------------------------------ Marking board -- */
 
 .ui-marking {

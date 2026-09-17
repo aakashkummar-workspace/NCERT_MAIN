@@ -40,14 +40,25 @@ export function SetPractice({
   className,
   concepts,
   sets,
+  initialConceptId,
 }: {
   classId: string;
   className: string;
   concepts: { conceptId: string; conceptName: string }[];
   sets: PracticeSetRow[];
+  /**
+   * Chosen already when the teacher arrived from a learning gap on the
+   * dashboard. Ignored unless it is one of THIS class's concepts, because the
+   * value came from a URL.
+   */
+  initialConceptId?: string;
 }) {
   const router = useRouter();
-  const [conceptId, setConceptId] = useState("");
+  const [conceptId, setConceptId] = useState(
+    initialConceptId && concepts.some((concept) => concept.conceptId === initialConceptId)
+      ? initialConceptId
+      : "",
+  );
   const [count, setCount] = useState(MIN_SET);
   const [dueOn, setDueOn] = useState("");
   const [note, setNote] = useState("");

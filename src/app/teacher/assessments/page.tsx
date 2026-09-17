@@ -20,9 +20,17 @@ const STATUS_TONE = {
   ARCHIVED: "neutral",
 } as const;
 
-export default async function AssessmentsPage() {
+export default async function AssessmentsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ new?: string | string[]; class?: string | string[] }>;
+}) {
   const session = await getSession();
   if (!session) redirect("/signin");
+  const query = await searchParams;
+  // `?new=1&class=<id>` from a class page opens the form for that class.
+  const initialClassId =
+    query.new === "1" && typeof query.class === "string" ? query.class : undefined;
 
   // The board comes from the organization on the session, never from a
   // parameter. A paper built from another board's grades would be marked
@@ -58,6 +66,7 @@ export default async function AssessmentsPage() {
               subjectName: klass.subjectName,
             }))}
             academicYear={currentAcademicYear()}
+            initialClassId={initialClassId}
           />
         }
       />

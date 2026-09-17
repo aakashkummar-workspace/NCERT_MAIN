@@ -1091,6 +1091,76 @@
   font-size: 13px;
   color: var(--text-secondary);
 }
+/* The name and what is known about the student, stacked in one grid cell, so
+   the roster grid (and its phone layout) keeps its four columns. */
+.ui-roster-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.ui-roster-name {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.ui-roster-name:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.ui-roster-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+/* ---------------------------------------------------------- Class papers -- */
+
+.ui-class-papers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ui-class-papers li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.ui-class-papers li:first-child {
+  padding-top: 0;
+}
+.ui-class-papers li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.ui-class-paper-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1 1 260px;
+}
+.ui-class-paper-title {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+.ui-class-paper-meta,
+.ui-class-paper-facts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
 @media (max-width: 640px) {
   /* Two rows rather than four: roll, name and Remove on the first, the phone
      tucked under the name. Letting Remove wrap to its own full-width line made
@@ -1856,6 +1926,9 @@
   font-size: 14.5px;
   line-height: 1.5;
   max-width: 92ch;
+  /* A poem or an extract is set line by line; collapsing it into one paragraph
+     changes what the question is asking. */
+  white-space: pre-wrap;
 }
 .ui-question-meta {
   display: flex;
@@ -2258,6 +2331,9 @@
 .ui-pick-stem {
   font-size: 14px;
   line-height: 1.5;
+  /* A poem or an extract is set line by line; collapsing it into one paragraph
+     changes what the question is asking. */
+  white-space: pre-wrap;
 }
 .ui-pick-meta {
   grid-column: 2;

@@ -47,6 +47,8 @@ export default async function TeacherDashboard() {
   const emptyClasses = classes.filter((klass) => klass.studentCount === 0);
 
   const started = classes.length > 0;
+  const live = workload.open.filter((row) => row.writing > 0);
+  const cannotSignIn = workload.cannotSignIn.reduce((sum, row) => sum + row.students, 0);
 
   return (
     <AppShell
@@ -152,6 +154,72 @@ export default async function TeacherDashboard() {
           />
         </Grid>
 
+        {/*
+          A paper being sat right now outranks everything else on this page,
+          and only while it is true: nothing is stored, so the card is gone the
+          moment the room empties. Counts only — how far on each student is,
+          and no marks at all, is the monitor's job.
+        */}
+        {live.length > 0 && (
+          <Card title="Live now" description="Papers students are writing at this moment.">
+            <ul className="ui-attention">
+              {live.slice(0, 3).map((row) => (
+                <li key={`live-${row.assignmentId}`}>
+                  <Badge tone="success">Live</Badge>
+                  <span className="ui-attention-text">
+                    <Link href={`/teacher/assignments/${row.assignmentId}/monitor`}>
+                      {row.title}
+                    </Link>{" "}
+                    · {row.className} — {row.writing} writing now, {row.submitted} handed in
+                  </span>
+                  <span className="ui-attention-actions">
+                    <Link
+                      href={`/teacher/assignments/${row.assignmentId}/monitor`}
+                      className="ui-button"
+                      data-variant="secondary"
+                      data-size="sm"
+                    >
+                      <span>Watch the room</span>
+                    </Link>
+                  </span>
+                </li>
+              ))}
+            </ul>
+            {live.length > 3 && (
+              <p className="ui-hint" style={{ margin: "10px 0 0" }}>
+                …and {live.length - 3} more being written, under Assessments.
+              </p>
+            )}
+          </Card>
+        )}
+
+        {/*
+          The classes page says this too, but a teacher about to open a paper
+          is on this page, not that one — and a student with no number cannot
+          sign in to sit it at all.
+        */}
+        {cannotSignIn > 0 && (
+          <Alert
+            tone="warning"
+            title={`${cannotSignIn} ${cannotSignIn === 1 ? "student cannot" : "students cannot"} sign in`}
+          >
+            A mobile number is the only way a student signs in, so{" "}
+            {cannotSignIn === 1 ? "this student" : "these students"} cannot sit any
+            paper yet. Add the numbers on the class page:{" "}
+            {workload.cannotSignIn.slice(0, 3).map((row, index) => (
+              <span key={row.classId}>
+                {index > 0 && " · "}
+                <Link href={`/teacher/classes/${row.classId}`}>
+                  {row.className} ({row.students})
+                </Link>
+              </span>
+            ))}
+            {workload.cannotSignIn.length > 3 &&
+              ` and ${workload.cannotSignIn.length - 3} more ${workload.cannotSignIn.length - 3 === 1 ? "class" : "classes"}`}
+            .
+          </Alert>
+        )}
+
         {(workload.marking.length > 0 ||
           gaps.gaps.length > 0 ||
           gaps.toMeasure.total > 0 ||
@@ -179,10 +247,37 @@ export default async function TeacherDashboard() {
                       ? "Gap persists"
                       : `${gap.severity[0]}${gap.severity.slice(1).toLowerCase()} gap`}
                   </Badge>
-                  <span>
+                  <span className="ui-attention-text">
                     <Link href={`/teacher/analytics/${gap.scopeId}/gaps`}>{gap.conceptName}</Link>{" "}
                     · {gap.className} — {gap.affectedStudentCount} of{" "}
                     {gap.measuredStudentCount} measured students below the line
+                  </span>
+                  {/*
+                    A finding with no next step makes the teacher work out
+                    what to do. These are the two the product supports: plan a
+                    reteach (whose result is then measured against a stamped
+                    baseline) or set practice on the idea. Neither closes the
+                    gap — only evidence does.
+                  */}
+                  <span className="ui-attention-actions">
+                    <Link
+                      href={`/teacher/analytics/${gap.scopeId}/gaps#gap-${gap.id}`}
+                      className="ui-button"
+                      data-variant="secondary"
+                      data-size="sm"
+                      aria-label={`Plan a reteach of ${gap.conceptName} for ${gap.className}`}
+                    >
+                      <span>Plan a reteach</span>
+                    </Link>
+                    <Link
+                      href={`/teacher/classes/${gap.scopeId}?practice=${gap.conceptId}#set-practice`}
+                      className="ui-button"
+                      data-variant="ghost"
+                      data-size="sm"
+                      aria-label={`Set practice on ${gap.conceptName} for ${gap.className}`}
+                    >
+                      <span>Set practice</span>
+                    </Link>
                   </span>
                 </li>
               ))}
@@ -215,7 +310,7 @@ export default async function TeacherDashboard() {
                   </span>
                 </li>
               )}
-              {workload.open.slice(0, 3).map((row) => (
+              {workload.open.filter((row) => row.writing === 0).slice(0, 3).map((row) => (
                 <li key={`open-${row.assignmentId}`}>
                   <Badge tone="success">Open</Badge>
                   <span>

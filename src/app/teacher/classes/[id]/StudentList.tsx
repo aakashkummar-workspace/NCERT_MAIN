@@ -1,8 +1,24 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Avatar, Badge, Button, Card, TrashIcon } from "@/ui";
+
+/**
+ * What the product knows about a student's learning, for their roster row.
+ *
+ * Counts by band and the weakest concept by name, never an overall score — the
+ * same shape as the students index, from the same function. `measured` is the
+ * denominator; at zero there is nothing to say, and the row says that rather
+ * than printing a number.
+ */
+export type RosterStatus = {
+  measured: number;
+  struggling: number;
+  secure: number;
+  weakest: { name: string; percent: number } | null;
+};
 
 type Student = {
   userId: string;
@@ -16,9 +32,11 @@ type Student = {
 export function StudentList({
   classId,
   students,
+  status,
 }: {
   classId: string;
   students: Student[];
+  status: Record<string, RosterStatus>;
 }) {
   const router = useRouter();
   const [query, setQuery] = useState("");
@@ -85,7 +103,15 @@ export function StudentList({
                 style={{ display: "flex", alignItems: "center", gap: 10, minWidth: 0 }}
               >
                 <Avatar name={student.fullName} />
-                <span className="ui-student-name">{student.fullName}</span>
+                <span className="ui-roster-text">
+                  <Link
+                    href={`/teacher/students/${student.userId}`}
+                    className="ui-student-name ui-roster-name"
+                  >
+                    {student.fullName}
+                  </Link>
+                  <RosterLine status={status[student.userId]} />
+                </span>
               </div>
               <span className="ui-student-phone tabular">
                 {student.phone ? (
@@ -111,5 +137,25 @@ export function StudentList({
         </ul>
       )}
     </Card>
+  );
+}
+
+function RosterLine({ status }: { status: RosterStatus | undefined }) {
+  if (!status || status.measured === 0) {
+    // Not a zero: nothing has been marked on them yet, which is a statement
+    // about the marking, not about the student.
+    return <span className="ui-roster-status">Nothing measured yet</span>;
+  }
+  return (
+    <span className="ui-roster-status">
+      {status.struggling > 0 && <Badge tone="danger">{status.struggling} to work on</Badge>}
+      {status.secure > 0 && <Badge tone="success">{status.secure} secure</Badge>}
+      {status.weakest && (
+        <span>
+          Weakest: {status.weakest.name}{" "}
+          <span className="tabular">({status.weakest.percent}%)</span>
+        </span>
+      )}
+    </span>
   );
 }

@@ -18,6 +18,11 @@ import {
 import { canPostToClass, listAnnouncementsForClass } from "@/core/announcements";
 import { conceptsForSubjects } from "@/core/curriculum/concepts";
 import { listForClass } from "@/core/practice/assigned";
+import { classPapers } from "@/core/assignments/class-papers";
+import { listStudents } from "@/core/analytics/students";
+import { conceptContext } from "@/core/curriculum/concepts";
+import { ClassPapers } from "./ClassPapers";
+import type { RosterStatus } from "./StudentList";
 import { AddStudents } from "./AddStudents";
 import { Announcements } from "./Announcements";
 import { JoinCode } from "./JoinCode";
@@ -40,17 +45,20 @@ export async function generateMetadata({
 
 export default async function ClassPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ id: string }>;
+  searchParams: Promise<{ practice?: string | string[] }>;
 }) {
   const session = await getSession();
   if (!session) redirect("/signin");
 
   const { id } = await params;
+  const { practice: practiceConcept } = await searchParams;
   const klass = await getClass(session.actor.organizationId, id);
   if (!klass) notFound();
 
-  const [announcements, canPost, practiceSets, concepts] = await Promise.all([
+  const [announcements, canPost, practiceSets, concepts, papers, learning] = await Promise.all([
     listAnnouncementsForClass(session.actor.organizationId, id),
     canPostToClass(session.actor, id),
     listForClass(session.actor.organizationId, id),
@@ -58,7 +66,33 @@ export default async function ClassPage({
     // class would file its evidence under a syllabus these students are not
     // measured on, so the picker cannot offer one.
     conceptsForSubjects([klass.subjectId]),
+    classPapers(session.actor.organizationId, id),
+    listStudents(
+      session.actor.organizationId,
+      klass.students.map((student) => student.userId),
+    ),
   ]);
+
+  // The weakest concept is named on each row, so resolve the names once.
+  const weakestNames = await conceptContext([
+    ...new Set(learning.flatMap((row) => (row.weakest ? [row.weakest.conceptId] : []))),
+  ]);
+  const rosterStatus: Record<string, RosterStatus> = Object.fromEntries(
+    learning.map((row) => [
+      row.studentUserId,
+      {
+        measured: row.measuredConcepts,
+        struggling: row.struggling,
+        secure: row.secure,
+        weakest: row.weakest
+          ? {
+              name: weakestNames.get(row.weakest.conceptId)?.name ?? "a concept",
+              percent: Math.round(row.weakest.estimate * 100),
+            }
+          : null,
+      },
+    ]),
+  );
 
   const withoutPhone = klass.students.filter((s) => !s.canSignIn).length;
   const hasStudents = klass.students.length > 0;
@@ -124,7 +158,7 @@ export default async function ClassPage({
         actions={
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
             <Link
-              href={`/teacher/assessments`}
+              href={`/teacher/assessments?new=1&class=${klass.id}`}
               className="ui-button"
               data-variant="primary"
               data-size="md"
@@ -133,7 +167,7 @@ export default async function ClassPage({
               <span>Create Assessment</span>
             </Link>
             <Link
-              href="/teacher/analytics"
+              href={`/teacher/analytics/${klass.id}`}
               className="ui-button"
               data-variant="secondary"
               data-size="md"
@@ -174,13 +208,23 @@ export default async function ClassPage({
                   </div>
                 </Card>
               )}
-              <StudentList classId={klass.id} students={klass.students} />
-              <SetPractice
+              <ClassPapers classId={klass.id} papers={papers.papers} total={papers.total} />
+              <StudentList
                 classId={klass.id}
-                className={klass.name}
-                concepts={concepts}
-                sets={practiceSets}
+                students={klass.students}
+                status={rosterStatus}
               />
+              <div id="set-practice" className="ui-anchor">
+                <SetPractice
+                  classId={klass.id}
+                  className={klass.name}
+                  concepts={concepts}
+                  sets={practiceSets}
+                  initialConceptId={
+                    typeof practiceConcept === "string" ? practiceConcept : undefined
+                  }
+                />
+              </div>
               <AddStudents classId={klass.id} variant="collapsed" />
               {/* The register a school actually keeps: one row per student, one
                   column per paper. The year to date by default, because a

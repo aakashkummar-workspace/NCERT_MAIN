@@ -34,6 +34,24 @@ export type OpenRow = {
   closesAt: Date;
   /** Distinct students who have handed a paper in. */
   submitted: number;
+  /**
+   * Distinct students with a sitting still running, by the rule the live view
+   * uses: the attempt is IN_PROGRESS. A count only — who, and how far on, is
+   * the monitor's job, and it carries no marks either way.
+   */
+  writing: number;
+};
+
+/**
+ * Students on a class roster who cannot sign in, because a phone number is the
+ * only way a student does. Discovering that on the morning of a paper is the
+ * failure this exists to prevent, so it sits on the dashboard as well as on the
+ * class and students pages.
+ */
+export type CannotSignInRow = {
+  classId: string;
+  className: string;
+  students: number;
 };
 
 export type ReleasedRow = {
@@ -50,6 +68,7 @@ export type Workload = {
   answersToMark: number;
   open: OpenRow[];
   released: ReleasedRow[];
+  cannotSignIn: CannotSignInRow[];
 };
 
 /** How far back "recently released" reaches. */
@@ -120,16 +139,23 @@ export async function teacherWorkload(
     const openAssignments = assignments.filter(
       (row) => assignmentStatus(row, now) === "OPEN",
     );
-    const submittedAttempts =
+    const openAttempts =
       openAssignments.length === 0
         ? []
         : await tx.attempt.findMany({
-            where: {
-              assignmentId: { in: openAssignments.map((row) => row.id) },
-              status: { not: "IN_PROGRESS" },
-            },
-            select: { assignmentId: true, studentUserId: true },
+            where: { assignmentId: { in: openAssignments.map((row) => row.id) } },
+            select: { assignmentId: true, studentUserId: true, status: true },
           });
+    const distinctStudents = (assignmentId: string, writing: boolean) =>
+      new Set(
+        openAttempts
+          .filter(
+            (attempt) =>
+              attempt.assignmentId === assignmentId &&
+              (attempt.status === "IN_PROGRESS") === writing,
+          )
+          .map((attempt) => attempt.studentUserId),
+      ).size;
 
     const open: OpenRow[] = openAssignments
       .map((row) => ({
@@ -137,11 +163,8 @@ export async function teacherWorkload(
         title: row.assessment.title,
         className: row.class.name,
         closesAt: row.closesAt,
-        submitted: new Set(
-          submittedAttempts
-            .filter((attempt) => attempt.assignmentId === row.id)
-            .map((attempt) => attempt.studentUserId),
-        ).size,
+        submitted: distinctStudents(row.id, false),
+        writing: distinctStudents(row.id, true),
       }))
       // Closing soonest first: that is the one a reminder still helps with.
       .sort((a, b) => a.closesAt.getTime() - b.closesAt.getTime());
@@ -160,7 +183,41 @@ export async function teacherWorkload(
       }))
       .sort((a, b) => b.releasedAt.getTime() - a.releasedAt.getTime());
 
+    // Enrolments carry no relation to users, so this is two reads: who is on a
+    // live roster, then which of them has no phone.
+    const enrolments = await tx.classEnrolment.findMany({
+      where: { status: "ACTIVE", class: { deletedAt: null } },
+      select: { studentUserId: true, class: { select: { id: true, name: true } } },
+    });
+    const noPhone =
+      enrolments.length === 0
+        ? new Set<string>()
+        : new Set(
+            (
+              await tx.user.findMany({
+                where: {
+                  id: { in: [...new Set(enrolments.map((row) => row.studentUserId))] },
+                  phone: null,
+                },
+                select: { id: true },
+              })
+            ).map((user) => user.id),
+          );
+    const byClass = new Map<string, CannotSignInRow>();
+    for (const enrolment of enrolments) {
+      if (!noPhone.has(enrolment.studentUserId)) continue;
+      const row = byClass.get(enrolment.class.id) ?? {
+        classId: enrolment.class.id,
+        className: enrolment.class.name,
+        students: 0,
+      };
+      row.students++;
+      byClass.set(enrolment.class.id, row);
+    }
+    const cannotSignIn = [...byClass.values()].sort((a, b) => b.students - a.students);
+
     return {
+      cannotSignIn,
       marking,
       papersToMark: marking.reduce((sum, row) => sum + row.papers, 0),
       answersToMark: marking.reduce((sum, row) => sum + row.answers, 0),

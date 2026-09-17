@@ -31,17 +31,28 @@ export function NewAssessment({
   classes,
   academicYear,
   label = "Build an assessment",
+  initialClassId,
 }: {
   grades: Grade[];
   classes: ClassOption[];
   academicYear: string;
   label?: string;
+  /**
+   * Arrived from a class page's "Create Assessment": open the form with that
+   * class, its grade and its subject already chosen. It came from a URL, so it
+   * only counts when it names one of this school's classes AND a grade and
+   * subject the form can offer — otherwise the form opens closed, as before.
+   */
+  initialClassId?: string;
 }) {
   const router = useRouter();
-  const [open, setOpen] = useState(false);
-  const [gradeId, setGradeId] = useState(grades[0]?.id ?? "");
-  const [subjectId, setSubjectId] = useState(grades[0]?.subjects[0]?.id ?? "");
-  const [classId, setClassId] = useState("");
+  const preset = presetFor(grades, classes, initialClassId);
+  const [open, setOpen] = useState(preset !== null);
+  const [gradeId, setGradeId] = useState(preset?.gradeId ?? grades[0]?.id ?? "");
+  const [subjectId, setSubjectId] = useState(
+    preset?.subjectId ?? grades[0]?.subjects[0]?.id ?? "",
+  );
+  const [classId, setClassId] = useState(preset?.classId ?? "");
   const [title, setTitle] = useState(`Class test — ${academicYear}`);
   const [duration, setDuration] = useState(45);
   const [totalMarks, setTotalMarks] = useState(20);
@@ -242,4 +253,19 @@ export function NewAssessment({
       </div>
     </div>
   );
+}
+
+function presetFor(
+  grades: Grade[],
+  classes: ClassOption[],
+  classId: string | undefined,
+): { gradeId: string; subjectId: string; classId: string } | null {
+  const klass = classId ? classes.find((option) => option.id === classId) : undefined;
+  if (!klass) return null;
+  for (const grade of grades) {
+    if (grade.number !== klass.gradeNumber) continue;
+    const subject = grade.subjects.find((option) => option.name === klass.subjectName);
+    if (subject) return { gradeId: grade.id, subjectId: subject.id, classId: klass.id };
+  }
+  return null;
 }

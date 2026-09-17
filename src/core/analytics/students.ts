@@ -36,10 +36,21 @@ export type StudentRow = {
 
 export async function listStudents(
   organizationId: string,
+  /**
+   * Narrow to these students — the class page's roster. Still intersected with
+   * the organization's active student memberships, so an id that is not one of
+   * this school's students yields nothing rather than a row.
+   */
+  only?: string[],
 ): Promise<StudentRow[]> {
   return withTenant(organizationId, async (tx) => {
+    if (only && only.length === 0) return [];
     const memberships = await tx.membership.findMany({
-      where: { role: "STUDENT", status: "ACTIVE" },
+      where: {
+        role: "STUDENT",
+        status: "ACTIVE",
+        ...(only ? { userId: { in: only } } : {}),
+      },
       select: { userId: true },
     });
     const studentIds = memberships.map((membership) => membership.userId);

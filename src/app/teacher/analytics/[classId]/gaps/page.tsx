@@ -170,7 +170,7 @@ function GapCard({
   const closed = gap.status === "RESOLVED";
 
   return (
-    <li className="ui-gap" data-severity={closed ? undefined : gap.severity}>
+    <li id={`gap-${gap.id}`} className="ui-gap" data-severity={closed ? undefined : gap.severity}>
       <div className="ui-gap-head">
         <div>
           <h2 className="ui-gap-title">{gap.conceptName}</h2>
