@@ -1,5 +1,6 @@
 import { removeLogo, uploadLogo } from "@/core/branding";
 import { MAX_LOGO_BYTES } from "@/core/branding/logo";
+import { expireBrand } from "@/app/_branding/cache-tag";
 import { guard } from "../../../_lib/guard";
 import { fail, ok } from "../../../_lib/respond";
 
@@ -54,6 +55,7 @@ export async function POST(request: Request) {
     if (result.reason === "not-entitled") return fail("NOT_FOUND", "We could not find that.");
     return fail("VALIDATION_FAILED", result.message);
   }
+  expireBrand(check.session.actor.organizationId);
   return ok({ logoId: result.logoId, url: result.url });
 }
 
@@ -68,5 +70,6 @@ export async function DELETE() {
     role: check.session.actor.role,
   });
   if (!result.ok) return fail("NOT_FOUND", "We could not find that.");
+  expireBrand(check.session.actor.organizationId);
   return ok({ removed: true });
 }

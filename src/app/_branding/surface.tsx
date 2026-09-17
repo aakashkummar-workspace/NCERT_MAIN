@@ -1,18 +1,29 @@
 import "server-only";
 import { cache, type ReactNode } from "react";
 import type { Metadata } from "next";
+import { unstable_cache } from "next/cache";
 import { effectiveBranding, type Brand } from "@/core/branding";
 import { getSession } from "@/core/identity/context";
 import { BrandProvider, type UiBrand } from "@/ui/Brand";
 import { BrandStyle } from "@/ui/BrandStyle";
+import { brandTag } from "./cache-tag";
 
 /**
- * Branding for a signed-in surface, read once per request.
+ * Branding for a signed-in surface.
  *
  * `cache` because a layout and its `generateMetadata` both want it, and a
- * branded page should not cost four entitlement reads.
+ * branded page should not cost four entitlement reads. `unstable_cache` on top,
+ * for 60 seconds across requests, because it was over a second of every click
+ * against a remote database. The routes that change it expire it at once
+ * (`expireBrand`), so the 60 seconds only bounds a change made outside them —
+ * a plan lapsing, or a fix over psql.
  */
-export const brandFor = cache((organizationId: string) => effectiveBranding(organizationId));
+export const brandFor = cache((organizationId: string) =>
+  unstable_cache(() => effectiveBranding(organizationId), ["brand", organizationId], {
+    revalidate: 60,
+    tags: [brandTag(organizationId)],
+  })(),
+);
 
 export function toUiBrand(brand: Brand | null): UiBrand | null {
   if (!brand) return null;

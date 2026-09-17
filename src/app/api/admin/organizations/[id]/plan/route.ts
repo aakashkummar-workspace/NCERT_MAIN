@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { setOrganizationPlan } from "@/core/platform/plans";
+import { expireBrand } from "@/app/_branding/cache-tag";
 import { guardPlatform } from "../../../../_lib/platform";
 import { fail, failValidation, ok } from "../../../../_lib/respond";
 
@@ -33,5 +34,7 @@ export async function POST(
   if (!result.ok) {
     return fail(result.code === "NOT_FOUND" ? "NOT_FOUND" : "VALIDATION_FAILED", result.message);
   }
+  // A plan decides whether branding shows at all.
+  expireBrand(id);
   return ok(result);
 }

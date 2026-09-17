@@ -15,7 +15,18 @@ import {
 } from "@/ui/icons";
 import { InteractiveDemo } from "./InteractiveDemo";
 import { CurriculumExplorer } from "./CurriculumExplorer";
+import { unstable_cache } from "next/cache";
 import { publicCurriculum } from "@/core/curriculum/admin";
+
+/**
+ * The public syllabus changes when somebody authors curriculum, not per
+ * visitor, and reading it is a full chapter-and-outcome query to a database a
+ * network hop away — about a second on every landing-page view. Ten minutes
+ * stale on the marketing page is invisible; a second of blank screen is not.
+ */
+const cachedPublicCurriculum = unstable_cache(publicCurriculum, ["public-curriculum"], {
+  revalidate: 600,
+});
 
 export default async function Home() {
   const session = await getSession();
@@ -34,7 +45,7 @@ export default async function Home() {
 
   // Read from the curriculum plane, not typed into the page: the chapter lists
   // and outcome counts a visitor sees are the ones the product holds.
-  const curriculum = await publicCurriculum();
+  const curriculum = await cachedPublicCurriculum();
 
   return (
     <div className="ui-landing">

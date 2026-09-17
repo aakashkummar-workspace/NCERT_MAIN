@@ -1,4 +1,5 @@
 import "server-only";
+import { cache } from "react";
 import { withTenant } from "@/db/tenant";
 import { planEntitlements } from "./plans";
 
@@ -163,10 +164,18 @@ export async function currentPlan(
   };
 }
 
+/**
+ * One subscription read and one plan read per render, not one per `can()`.
+ * A page checks several capabilities, and each check was two network round
+ * trips. Per-request only (React `cache`); route handlers read fresh.
+ */
+const subscriptionFor = cache((organizationId: string) =>
+  withTenant(organizationId, (tx) => tx.subscription.findFirst({ where: { organizationId } })),
+);
+const cachedPlanEntitlements = cache(planEntitlements);
+
 async function entitlementFor(organizationId: string, key: string) {
-  const subscription = await withTenant(organizationId, (tx) =>
-    tx.subscription.findFirst({ where: { organizationId } }),
-  );
+  const subscription = await subscriptionFor(organizationId);
 
   // A subscription that has lapsed does not keep its entitlements. Falling back
   // to free is the honest behaviour: the account still works, at the free
@@ -175,7 +184,7 @@ async function entitlementFor(organizationId: string, key: string) {
     subscription &&
     (subscription.status === "ACTIVE" || subscription.status === "TRIALING");
 
-  const plan = await planEntitlements(
+  const plan = await cachedPlanEntitlements(
     active ? subscription.planId : null,
     FREE_PLAN_CODE,
   );

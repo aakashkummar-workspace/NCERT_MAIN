@@ -1,4 +1,5 @@
 import { saveBranding } from "@/core/branding";
+import { expireBrand } from "@/app/_branding/cache-tag";
 import { guard } from "../../_lib/guard";
 import { fail, ok } from "../../_lib/respond";
 
@@ -46,5 +47,6 @@ export async function PUT(request: Request) {
     return fail("VALIDATION_FAILED", result.message, { errors: result.errors });
   }
 
+  expireBrand(check.session.actor.organizationId);
   return ok({ saved: true, warnings: result.warnings });
 }

@@ -1,4 +1,5 @@
 import "server-only";
+import { cache } from "react";
 import { cookies } from "next/headers";
 import { resolveSession } from "@/db/unscoped";
 import type { Actor, Role } from "./authorize";
@@ -34,7 +35,19 @@ export type SessionContext = {
   locale: string | null;
 };
 
-export async function getSession(): Promise<SessionContext | null> {
+/**
+ * Memoised per request with React `cache`.
+ *
+ * A signed-in page asks for the session from its `generateMetadata`, its
+ * surface layout and the page itself, and the database is a network hop away:
+ * three identical lookups cost three round trips before any page work starts.
+ * The memo lives for one server render and is discarded with it, so nothing
+ * crosses requests. Outside a render (route handlers) `cache` does not
+ * memoise, which keeps sign-in and sign-out reading the session fresh.
+ */
+export const getSession = cache(resolveSessionContext);
+
+async function resolveSessionContext(): Promise<SessionContext | null> {
   const store = await cookies();
   const raw = store.get(SESSION_COOKIE)?.value;
   if (!raw) return null;

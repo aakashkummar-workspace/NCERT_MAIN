@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from "next";
+import { Suspense } from "react";
+import { NavigationProgress } from "@/ui/NavigationProgress";
 import { Inter, Noto_Sans, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import "@/ui/ui.css";
@@ -97,7 +99,13 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {/* Suspense because it reads the search params; it renders nothing until a click. */}
+        <Suspense fallback={null}>
+          <NavigationProgress />
+        </Suspense>
+        {children}
+      </body>
     </html>
   );
 }

@@ -589,7 +589,8 @@
   background: var(--surface-sunken);
   color: var(--text-primary);
 }
-.ui-nav-item[aria-current="page"] {
+.ui-nav-item[aria-current="page"],
+.ui-nav-item[data-pending="true"] {
   background: var(--accent-wash);
   color: var(--accent);
   font-weight: 600;
@@ -2638,4 +2639,50 @@
 
 .ui-concept-benchmark[data-verdict="ahead"] {
   border-left-color: var(--success);
+}
+
+/* ------------------------------------------------------ Navigation progress -- */
+
+/* The pressed menu item looks current at once (NavigationProgress sets
+   data-pending), and the page it is leaving stops looking current, so the
+   menu never shows two selections while the next page renders. */
+.ui-nav:has([data-pending="true"]) .ui-nav-item[aria-current="page"]:not([data-pending="true"]) {
+  background: transparent;
+  color: inherit;
+  font-weight: 500;
+  box-shadow: none;
+}
+.ui-institute-nav a[data-pending="true"] {
+  color: var(--accent);
+}
+
+.ui-nav-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 3px;
+  z-index: 1000;
+  overflow: hidden;
+  pointer-events: none;
+}
+.ui-nav-progress-bar {
+  display: block;
+  height: 100%;
+  width: 40%;
+  background: var(--accent);
+  animation: ui-nav-progress 1.1s ease-in-out infinite;
+}
+@keyframes ui-nav-progress {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(250%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ui-nav-progress-bar {
+    width: 100%;
+    animation: none;
+    opacity: 0.6;
+  }
 }
