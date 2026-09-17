@@ -1,0 +1,3589 @@
+{
+  "book": "jeff1",
+  "grade": 10,
+  "subject": "ENG",
+  "title": "First Flight",
+  "status": "DRAFT — for review by an English teacher before any question is approved",
+  "source": "Written against NCERT Class X English 'First Flight' (jeff1, reprint 2026-27), read from the chapter PDFs, to the CBSE English Language and Literature (184) question paper design for 2025-26. Extracts are quoted from the book and checked word for word by scripts/check-english-questions.mjs.",
+  "chapters": [
+    {
+      "number": 1,
+      "questions": [
+        {
+          "id": "jeff1-01-c1",
+          "kind": "competency",
+          "outcome": "E10FF-01-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "In his second letter, Lencho calls the post-office employees 'a bunch of crooks'. What makes this situation ironic?",
+          "options": [
+            {
+              "text": "The postmaster had kept the rest of the money for himself.",
+              "correct": false
+            },
+            {
+              "text": "The employees were the very people who had collected money to help him.",
+              "correct": true
+            },
+            {
+              "text": "Lencho had never actually received any money.",
+              "correct": false
+            },
+            {
+              "text": "The first letter had not been posted at all.",
+              "correct": false
+            }
+          ],
+          "explanation": "The postmaster, his employees and friends gave their own money so that Lencho's faith would not be shaken. Lencho accuses exactly these people of stealing — the opposite of what really happened, which is what makes it ironic."
+        },
+        {
+          "id": "jeff1-01-c2",
+          "kind": "competency",
+          "outcome": "E10FF-01-5",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "'Lencho was an ox of a man, working like an animal in the fields.' Which quality of an ox does this metaphor transfer to Lencho?",
+          "options": [
+            {
+              "text": "Stubbornness in an argument",
+              "correct": false
+            },
+            {
+              "text": "Slowness in understanding",
+              "correct": false
+            },
+            {
+              "text": "Strength and the capacity for hard physical work",
+              "correct": true
+            },
+            {
+              "text": "Gentleness towards other animals",
+              "correct": false
+            }
+          ],
+          "explanation": "The sentence itself explains the comparison: Lencho worked 'like an animal in the fields'. An ox is valued for its strength and for heavy labour, and that quality is transferred to Lencho."
+        },
+        {
+          "id": "jeff1-01-c3",
+          "kind": "competency",
+          "outcome": "E10FF-01-3",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "In 'Fire and Ice', the poet says that for destruction ice 'is also great / And would suffice'. Reading the poem closely, what does ice most likely stand for?",
+          "options": [
+            {
+              "text": "Desire",
+              "correct": false
+            },
+            {
+              "text": "Greed",
+              "correct": false
+            },
+            {
+              "text": "Hope",
+              "correct": false
+            },
+            {
+              "text": "Hatred",
+              "correct": true
+            }
+          ],
+          "explanation": "The poet links fire to 'desire' ('From what I've tasted of desire / I hold with those who favour fire') and ice to 'hate' ('I think I know enough of hate / To say that for destruction ice / Is also great'). Ice stands for hatred — cold, rigid and indifferent."
+        },
+        {
+          "id": "jeff1-01-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FF-01-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "Lencho showed not the slightest surprise on seeing the money; such was his confidence -- but he became angry when he counted the money. God could not have made a mistake, nor could he have denied Lencho what he had requested. Immediately, Lencho went up to the window to ask for paper and ink. On the public writing-table, he started to write, with much wrinkling of his brow, caused by the effort he had to make to express his ideas.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Lencho 'showed not the slightest surprise' on seeing the money because he",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "was confident that God would answer his letter",
+                  "correct": true
+                },
+                {
+                  "text": "had already been told that money had come",
+                  "correct": false
+                },
+                {
+                  "text": "expected the postmaster to help him",
+                  "correct": false
+                },
+                {
+                  "text": "did not really need the money",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — 'such was his confidence': he was certain God would answer."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which phrase in the extract shows that writing did not come easily to Lencho?",
+              "marks": 1,
+              "answer": "'with much wrinkling of his brow' (caused by the effort he had to make to express his ideas)."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The word 'denied', as used in the extract, means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "delayed",
+                  "correct": false
+                },
+                {
+                  "text": "refused to give",
+                  "correct": true
+                },
+                {
+                  "text": "forgotten",
+                  "correct": false
+                },
+                {
+                  "text": "doubled",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) refused to give."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why did Lencho become angry when he counted the money? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "He found only seventy of the hundred pesos he had asked for. Since he believed God could neither make a mistake nor refuse him, he concluded that someone at the post office had taken the rest. (1 mark: the shortfall; 1 mark: why he blamed the post office.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-01-e2",
+          "kind": "extract",
+          "source": "poem",
+          "outcome": "E10FF-01-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "The way a crow\nShook down on me\nThe dust of snow\nFrom a hemlock tree\n\nHas given my heart\nA change of mood\nAnd saved some part\nOf a day I had rued.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "A crow and a hemlock tree are usually associated with",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "love and friendship",
+                  "correct": false
+                },
+                {
+                  "text": "wealth and success",
+                  "correct": false
+                },
+                {
+                  "text": "gloom and sorrow",
+                  "correct": true
+                },
+                {
+                  "text": "joy and celebration",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) gloom and sorrow — a crow is seen as a bad omen and the hemlock is a poisonous tree, which makes the lift in the poet's mood the more surprising."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What does the word 'rued' mean?",
+              "marks": 1,
+              "answer": "Held in regret; regretted."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The poet's mood changes because",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the snow stops falling",
+                  "correct": false
+                },
+                {
+                  "text": "he climbs a hemlock tree",
+                  "correct": false
+                },
+                {
+                  "text": "the sun comes out after the snow",
+                  "correct": false
+                },
+                {
+                  "text": "a crow shakes snow down on him from a tree",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) a crow shakes the dust of snow down on him from a hemlock tree."
+            },
+            {
+              "type": "sa",
+              "prompt": "How can a small moment 'save some part' of a bad day? Answer in 30–40 words with reference to the poem.",
+              "marks": 2,
+              "answer": "A small, unexpected event can break a gloomy mood. The poet's day was one he 'had rued', but the dust of snow from the crow cheered him, so the rest of the day was not wasted. (1 mark: the change of mood; 1 mark: link to the poem.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-01-s1",
+          "kind": "short",
+          "outcome": "E10FF-01-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Why did the postmaster decide to answer Lencho's letter, and why did he sign the reply 'God'? Answer in 40–50 words.",
+          "valuePoints": [
+            "He was moved by Lencho's faith: 'What faith! I wish I had the faith of the man who wrote this letter.'",
+            "He did not want to shake the writer's faith in God.",
+            "He collected money from his employees and friends and gave part of his own salary.",
+            "He signed it 'God' so that Lencho would believe God himself had answered."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Why he answered (faith, not wanting to shake it) and why he signed it 'God'. Any two of the value points, correctly linked."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-01-s2",
+          "kind": "short",
+          "outcome": "E10FF-01-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "How did the rain first raise Lencho's hopes, and how were those hopes destroyed? Answer in 40–50 words.",
+          "valuePoints": [
+            "His field of ripe corn needed only a downpour or a shower.",
+            "When big drops fell he called them 'new coins' — ten cent pieces and fives — promising a good harvest.",
+            "A strong wind brought very large hailstones that fell for an hour.",
+            "The field was white 'as if covered with salt'; the corn was totally destroyed."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The hope the rain brought (the 'new coins') and the hailstorm that destroyed the crop."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-01-s3",
+          "kind": "short",
+          "outcome": "E10FF-01-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "'A Letter to God' shows a conflict between humans and nature, and a conflict between humans themselves. Give one example of each. Answer in 40–50 words.",
+          "valuePoints": [
+            "Humans and nature: the hailstorm destroys the crop Lencho has worked for, leaving his family facing hunger.",
+            "Humans themselves: Lencho distrusts the post-office employees and calls them 'a bunch of crooks'.",
+            "The second conflict exists only in Lencho's mind — the employees had in fact helped him."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "One correct example of each conflict (1 mark each)."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-01-s4",
+          "kind": "short",
+          "outcome": "E10FF-01-3",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "In 'Fire and Ice', what do 'fire' and 'ice' stand for, and why does the poet believe either could end the world? Answer in 40–50 words.",
+          "valuePoints": [
+            "Fire stands for desire — greed, lust, fury — which burns and spreads quickly.",
+            "Ice stands for hatred — coldness, rigidity, indifference — which destroys slowly.",
+            "The poet has 'tasted of desire' and knows 'enough of hate', so he judges either is powerful enough to destroy the world."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "What fire and ice symbolise, and the poet's reason that either would suffice."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-01-l1",
+          "kind": "long",
+          "lifeSkill": "Empathy",
+          "outcome": "E10FF-01-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "The postmaster and his employees gave their own money to help a stranger whose letter they had first laughed at — and were then called crooks for it. Imagine you are the postmaster. Write a diary entry, in about 100–120 words, on the day you read Lencho's second letter: what you felt, and whether you still believe helping him was the right thing to do.",
+          "valuePoints": [
+            "Written as a diary entry: date, first person, reflective tone.",
+            "Feelings on reading the letter — hurt, amusement or sadness at being called a crook.",
+            "Why he helped: Lencho's faith, and not wanting to shake it.",
+            "A considered answer on whether helping was right — for example, that kindness does not depend on thanks.",
+            "Some understanding of Lencho's position: poor, desperate, and unaware of who really sent the money."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Feelings, reasons for helping and a reasoned judgement, drawn from the story and going beyond it."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Diary format (date, first person); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-01-l2",
+          "kind": "long",
+          "lifeSkill": "Coping with stress and setbacks",
+          "outcome": "E10FF-01-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Lencho lost his entire crop in one hour, yet his family said, 'no one dies of hunger', and he held on to hope. Write an article for your school magazine, in about 100–120 words, titled 'When Things Go Wrong: Faith, Hope and Effort'. Draw on Lencho's story, and suggest how a young person can respond to a setback they could not prevent.",
+          "valuePoints": [
+            "Article format: title, and a clear opening that sets out the idea.",
+            "Lencho's situation: total loss, and the single hope that kept the family going.",
+            "Hope helps a person carry on, but it works best alongside effort and asking for help.",
+            "Practical ways a student can cope with a setback — talking to someone, planning the next step, not losing heart.",
+            "A reasoned conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses Lencho's story and extends it to real advice for coping with a setback."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Article format with a title; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "questions": [
+        {
+          "id": "jeff1-02-c1",
+          "kind": "competency",
+          "outcome": "E10FF-02-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "Mandela writes that 'the oppressor must be liberated just as surely as the oppressed'. Why does he believe the oppressor is not free either?",
+          "options": [
+            {
+              "text": "The oppressor lives in fear of being arrested by the new government.",
+              "correct": false
+            },
+            {
+              "text": "The oppressor is 'a prisoner of hatred', locked behind the bars of prejudice and narrow-mindedness.",
+              "correct": true
+            },
+            {
+              "text": "The oppressor has lost his land and wealth now that apartheid has ended.",
+              "correct": false
+            },
+            {
+              "text": "The oppressor must obey laws made by the international leaders.",
+              "correct": false
+            }
+          ],
+          "explanation": "Mandela says, 'A man who takes away another man's freedom is a prisoner of hatred; he is locked behind the bars of prejudice and narrowmindedness.' Hatred imprisons the oppressor's own mind, so 'the oppressed and the oppressor alike are robbed of their humanity.'"
+        },
+        {
+          "id": "jeff1-02-c2",
+          "kind": "competency",
+          "outcome": "E10FF-02-1",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "At the inauguration the highest generals saluted Mandela, though 'not so many years before they would not have saluted but arrested' him. What does their salute show most clearly?",
+          "options": [
+            {
+              "text": "The generals had been ordered by the visiting world leaders to salute him.",
+              "correct": false
+            },
+            {
+              "text": "Mandela had once served as an officer in the defence force.",
+              "correct": false
+            },
+            {
+              "text": "The army wished to display its ribbons and medals to the guests.",
+              "correct": false
+            },
+            {
+              "text": "The military's loyalty now lay with a democracy and a freely elected government.",
+              "correct": true
+            }
+          ],
+          "explanation": "Mandela calls the ceremony 'a demonstration of the military's loyalty to democracy, to a new government that had been freely and fairly elected'. The men who once would have arrested him now 'pledged their loyalty' — a sign of how completely power had changed hands."
+        },
+        {
+          "id": "jeff1-02-c3",
+          "kind": "competency",
+          "outcome": "E10FF-02-3",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "In 'A Tiger in the Zoo', two stanzas begin 'He should be...'. What do these stanzas describe?",
+          "options": [
+            {
+              "text": "The life the tiger naturally belongs to, in the wild",
+              "correct": true
+            },
+            {
+              "text": "The day the tiger was captured by hunters",
+              "correct": false
+            },
+            {
+              "text": "What the visitors to the zoo imagine the tiger is thinking",
+              "correct": false
+            },
+            {
+              "text": "The life the tiger will lead once the zoo sets him free",
+              "correct": false
+            }
+          ],
+          "explanation": "'Should' marks what ought to be but is not: the tiger 'should be lurking in shadow ... Near the water hole' and 'snarling around houses / At the jungle's edge'. The next stanza returns to the reality — 'But he's locked in a concrete cell'."
+        },
+        {
+          "id": "jeff1-02-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FF-02-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "It is from these comrades in the struggle that I learned the meaning of courage. Time and again, I have seen men and women risk and give their lives for an idea. I have seen men stand up to attacks and torture without breaking, showing a strength and resilience that defies the imagination. I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "According to the extract, Mandela learned the meaning of courage from",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the guards in his prison",
+                  "correct": false
+                },
+                {
+                  "text": "the international leaders at the inauguration",
+                  "correct": false
+                },
+                {
+                  "text": "his comrades in the struggle",
+                  "correct": true
+                },
+                {
+                  "text": "his father and the customs of his tribe",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) his comrades in the struggle — 'It is from these comrades in the struggle that I learned the meaning of courage.'"
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which word in the extract means 'the ability to deal with any kind of hardship and recover from its effects'?",
+              "marks": 1,
+              "answer": "Resilience."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'Courage was not the absence of fear, but the triumph over it.' This means that a brave person",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "feels fear but overcomes it",
+                  "correct": true
+                },
+                {
+                  "text": "never feels afraid of anything",
+                  "correct": false
+                },
+                {
+                  "text": "hides fear by pretending to others",
+                  "correct": false
+                },
+                {
+                  "text": "stays away from situations that cause fear",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) feels fear but overcomes it — 'The brave man is not he who does not feel afraid, but he who conquers that fear.'"
+            },
+            {
+              "type": "sa",
+              "prompt": "Mandela believes that 'depths of oppression' can create 'heights of character'. How do his comrades illustrate this? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Decades of oppression and brutality produced men like Oliver Tambo, Walter Sisulu and Chief Luthuli, of extraordinary courage, wisdom and generosity. Such people risked and gave their lives for an idea and stood up to torture without breaking. (1 mark: oppression produced great character; 1 mark: an example of that courage.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-02-e2",
+          "kind": "extract",
+          "source": "poem",
+          "outcome": "E10FF-02-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "But he's locked in a concrete cell,\nHis strength behind bars,\nStalking the length of his cage,\nIgnoring visitors.\n\nHe hears the last voice at night,\nThe patrolling cars,\nAnd stares with his brilliant eyes\nAt the brilliant stars.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The 'concrete cell' in the extract is",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the tiger's den in the jungle",
+                  "correct": false
+                },
+                {
+                  "text": "a prison for criminals near the zoo",
+                  "correct": false
+                },
+                {
+                  "text": "a house at the jungle's edge",
+                  "correct": false
+                },
+                {
+                  "text": "the tiger's cage in the zoo",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) the tiger's cage in the zoo."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which line of the extract suggests that the tiger's power is wasted?",
+              "marks": 1,
+              "answer": "'His strength behind bars'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The tiger 'stares with his brilliant eyes / At the brilliant stars' most probably because he",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "is counting the stars to pass the night",
+                  "correct": false
+                },
+                {
+                  "text": "longs for the freedom of the open sky and the wild",
+                  "correct": true
+                },
+                {
+                  "text": "is frightened by the patrolling cars",
+                  "correct": false
+                },
+                {
+                  "text": "is waiting for the visitors to return",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) he longs for the freedom of the open sky and the wild — the stars are free and far away, beyond the bars he cannot cross."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does the tiger ignore the visitors? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "He is angry and helpless in captivity — 'In his quiet rage' — and the visitors are only people who come to look at him on show. Instead of hunting in the wild he paces the length of his cage and shuts them out. (1 mark: his anger/helplessness at being caged; 1 mark: the visitors as a reminder of his captivity.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-02-s1",
+          "kind": "short",
+          "outcome": "E10FF-02-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "What 'twin obligations' does Mandela speak of, and why could a man of his birth and colour not fulfil both in South Africa? Answer in 40–50 words.",
+          "valuePoints": [
+            "Obligations to his family — his parents, wife and children.",
+            "Obligations to his people, his community and his country.",
+            "In South Africa a man of colour who tried to live as a human being was punished and isolated.",
+            "A man who served his people was 'ripped from his family and his home' and forced into 'a twilight existence of secrecy and rebellion'."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Names both obligations and explains why apartheid made it impossible to fulfil both."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-02-s2",
+          "kind": "short",
+          "outcome": "E10FF-02-2",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "How did Mandela's understanding of freedom change from his boyhood to the day he joined the African National Congress? Answer in 40–50 words.",
+          "valuePoints": [
+            "As a boy he felt born free — to run in the fields, swim in the stream, roast mealies and ride bulls.",
+            "As a student he wanted 'transitory freedoms' for himself: staying out at night, reading what he pleased, going where he chose.",
+            "As a young man in Johannesburg he yearned for basic, honourable freedoms: achieving his potential, earning his keep, marrying and having a family.",
+            "When he saw that his brothers and sisters were not free, his hunger for his own freedom became the greater hunger for the freedom of his people, and he joined the ANC."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Traces the stages from personal freedom to the freedom of his people, with at least one detail from the text."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-02-s3",
+          "kind": "short",
+          "outcome": "E10FF-02-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "Describe how the two national anthems were sung at the inauguration, and explain what this scene symbolised for Mandela. Answer in 40–50 words.",
+          "valuePoints": [
+            "Whites sang 'Nkosi Sikelel' iAfrika' and blacks sang 'Die Stem', the old anthem of the Republic.",
+            "Neither group knew the lyrics of the anthem they once despised, but 'they would soon know the words by heart'.",
+            "For Mandela the day was symbolised by this scene: the races honouring each other's anthem showed a new, united, non-racial South Africa."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Who sang which anthem, and what the scene stood for."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-02-s4",
+          "kind": "short",
+          "outcome": "E10FF-02-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "How does Leslie Norris contrast the tiger in the zoo with the tiger in the wild in 'A Tiger in the Zoo'? Answer in 40–50 words.",
+          "valuePoints": [
+            "In the zoo he stalks 'the few steps of his cage' in 'quiet rage', locked in a concrete cell with his strength behind bars.",
+            "In the wild he would be 'lurking in shadow, / Sliding through long grass / Near the water hole / Where plump deer pass'.",
+            "He would be snarling around houses at the jungle's edge, baring his fangs and claws, terrorising the village.",
+            "The contrast shows a powerful, free predator reduced to a helpless, angry captive."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "At least one detail of the caged tiger and one of the wild tiger, with the point of the contrast."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-02-l1",
+          "kind": "long",
+          "lifeSkill": "Critical thinking",
+          "outcome": "E10FF-02-3",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "The tiger in Leslie Norris's poem paces a concrete cell when he should be sliding through long grass near a water hole. Your school is holding a morning-assembly discussion on zoos. Write a speech, in about 100–120 words, on the topic 'Should Wild Animals Be Kept in Zoos?' Weigh both sides and give your own reasoned view.",
+          "valuePoints": [
+            "Speech format: greeting the audience, stating the topic, a closing thank-you.",
+            "The tiger in the poem as an example of what captivity does to a wild animal — restless, angry, its strength wasted.",
+            "Arguments for zoos: protecting or conserving some species, and educating the public.",
+            "Arguments against, or alternatives: confinement and loss of natural life; wildlife sanctuaries and national parks.",
+            "A clear, reasoned personal conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses the poem and weighs arguments on both sides to reach a reasoned view."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Speech format (address, opening, conclusion); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-02-l2",
+          "kind": "long",
+          "lifeSkill": "Empathy",
+          "outcome": "E10FF-02-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Mandela writes, 'People must learn to hate, and if they can learn to hate, they can be taught to love.' A new student in your class is being teased for the colour of their skin and the way they speak. Write an article for your school magazine, in about 100–120 words, titled 'Taught to Love', drawing on Mandela's words and suggesting how students can make every classmate feel respected.",
+          "valuePoints": [
+            "Article format: title, and an opening that sets out the problem.",
+            "Mandela's idea that no one is born hating, and that love comes more naturally to the human heart.",
+            "How teasing someone for their colour or background hurts them — imagining how it feels.",
+            "Practical steps: speaking up, including the new student, talking to a teacher.",
+            "A reasoned conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses Mandela's words and extends them to real, respectful ways of treating a classmate."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Article format with a title; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "questions": [
+        {
+          "id": "jeff1-03-c1",
+          "kind": "competency",
+          "outcome": "E10FF-03-1",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "The young seagull stood on one leg on the brink of the ledge, closed one eye, then the other, 'and pretended to be falling asleep'. Why did he do this?",
+          "options": [
+            {
+              "text": "He was exhausted after trying to fly all morning.",
+              "correct": false
+            },
+            {
+              "text": "He wanted his family to leave the plateau.",
+              "correct": false
+            },
+            {
+              "text": "He was trying to draw his family's attention, since nobody had come near him.",
+              "correct": true
+            },
+            {
+              "text": "He was copying the way his father rested.",
+              "correct": false
+            }
+          ],
+          "explanation": "Nobody had come near him for twenty-four hours, and he was hungry. The next sentence — 'Still they took no notice of him' — shows that the pretence was meant to make his family notice him."
+        },
+        {
+          "id": "jeff1-03-c2",
+          "kind": "competency",
+          "outcome": "E10FF-03-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "In 'The Black Aeroplane', why is the woman's reply at the control centre the most important moment of the story?",
+          "options": [
+            {
+              "text": "It suggests that the aeroplane which guided the narrator may not have been a real aeroplane at all.",
+              "correct": true
+            },
+            {
+              "text": "It proves that the narrator's radio had been working all along.",
+              "correct": false
+            },
+            {
+              "text": "It shows that the narrator had landed at the wrong airport.",
+              "correct": false
+            },
+            {
+              "text": "It reveals that the black aeroplane crashed in the storm.",
+              "correct": false
+            }
+          ],
+          "explanation": "She says, 'No other aeroplanes were flying tonight. Yours was the only one I could see on the radar.' The narrator is left asking who the pilot 'on the strange black aeroplane, flying in the storm, without lights' was — the mystery the story ends on."
+        },
+        {
+          "id": "jeff1-03-c3",
+          "kind": "competency",
+          "outcome": "E10FF-03-3",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "Much of the humour of 'How to Tell Wild Animals' comes from the fact that each 'rule' for identifying an animal",
+          "options": [
+            {
+              "text": "is taken from a scientific guide to wildlife",
+              "correct": false
+            },
+            {
+              "text": "warns the reader never to enter a jungle",
+              "correct": false
+            },
+            {
+              "text": "depends only on the colour of the animal",
+              "correct": false
+            },
+            {
+              "text": "works only after the animal has attacked, when it is too late",
+              "correct": true
+            }
+          ],
+          "explanation": "You will know the lion 'as you're dyin'', the Bengal Tiger if you 'notice if he eats you', and the Leopard 'As soon as he has lept on you'. The identification comes at the moment it is useless, which is the joke."
+        },
+        {
+          "id": "jeff1-03-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FF-03-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "But when she was just opposite to him, she halted, her wings motionless, the piece of fish in her beak almost within reach of his beak. He waited a moment in surprise, wondering why she did not come nearer, and then, maddened by hunger, he dived at the fish. With a loud scream he fell outwards and downwards into space. Then a monstrous terror seized him and his heart stood still. He could hear nothing. But it only lasted a minute. The next moment he felt his wings spread outwards.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "What made the young seagull dive at the fish?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "His father's command",
+                  "correct": false
+                },
+                {
+                  "text": "Hunger that drove him beyond his fear",
+                  "correct": true
+                },
+                {
+                  "text": "A strong gust of wind",
+                  "correct": false
+                },
+                {
+                  "text": "His brothers' taunting",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) hunger — 'maddened by hunger, he dived at the fish.'"
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which phrase in the extract shows how extreme the seagull's fear was as he fell?",
+              "marks": 1,
+              "answer": "'a monstrous terror seized him and his heart stood still'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "In 'But it only lasted a minute', the word 'it' refers to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the piece of fish",
+                  "correct": false
+                },
+                {
+                  "text": "the mother's flight across",
+                  "correct": false
+                },
+                {
+                  "text": "the seagull's terror as he fell",
+                  "correct": true
+                },
+                {
+                  "text": "the family's screaming",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) the seagull's terror as he fell — the next moment his wings spread and he was no longer afraid."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why do you think the mother halted just out of the young seagull's reach? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Scolding and threats had not made him fly, so she used his hunger. Stopping just out of reach made him dive at the fish, and once he fell off the ledge his wings spread and he flew. (1 mark: a deliberate way to make him leave the ledge; 1 mark: the result.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-03-e2",
+          "kind": "extract",
+          "source": "poem",
+          "outcome": "E10FF-03-3",
+          "difficulty": "HARD",
+          "marks": 5,
+          "extract": "What is the boy now, who has lost his ball,\nWhat, what is he to do? I saw it go\nMerrily bouncing, down the street, and then\nMerrily over — there it is in the water!\nNo use to say ‘O there are other balls’:\nAn ultimate shaking grief fixes the boy\nAs he stands rigid, trembling, staring down\nAll his young days into the harbour where\nHis ball went. I would not intrude on him;",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The poet says it is 'No use to say \"O there are other balls\"' because",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the boy's grief is about more than a ball that can be replaced",
+                  "correct": true
+                },
+                {
+                  "text": "no other balls can be bought in the town",
+                  "correct": false
+                },
+                {
+                  "text": "the boy refuses to play with new balls",
+                  "correct": false
+                },
+                {
+                  "text": "the poet has no money to offer the boy",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) the boy's grief is about more than a replaceable ball — he is feeling loss itself, and the ball carried his young days."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which word in the extract means that the boy stands stiff and unmoving?",
+              "marks": 1,
+              "answer": "Rigid."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'staring down / All his young days into the harbour' suggests that",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the boy has lived beside the harbour all his life",
+                  "correct": false
+                },
+                {
+                  "text": "the boy is afraid of deep water",
+                  "correct": false
+                },
+                {
+                  "text": "the boy is planning to swim after the ball",
+                  "correct": false
+                },
+                {
+                  "text": "the ball held memories of the days of his childhood",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) the ball held memories of his childhood — with it, he watches those days disappear into the water."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does the poet decide not to intrude on the boy? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "The boy must learn for himself what loss means and 'how to stand up' after it. Comfort or money for another ball would not help, since 'A dime, another ball, is worthless' and 'no one buys a ball back'. (1 mark: he must learn it alone; 1 mark: money or a replacement cannot help.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-03-s1",
+          "kind": "short",
+          "outcome": "E10FF-03-2",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "Why was the young seagull afraid to fly, and how did his family try to make him fly? Answer in 40–50 words.",
+          "valuePoints": [
+            "The great expanse of sea stretched far below — 'miles down' — and he felt certain his wings would never support him.",
+            "His parents called to him shrilly, scolded him and threatened to let him starve on the ledge unless he flew.",
+            "His family walked about on the plateau taunting him with his cowardice.",
+            "Finally his mother used food: she flew towards him with a piece of fish and halted just out of reach."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The reason for his fear and at least two ways the family tried to push him."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-03-s2",
+          "kind": "short",
+          "outcome": "E10FF-03-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Why did the narrator of 'The Black Aeroplane' fly into the storm, and what happened to him inside the clouds? Answer in 40–50 words.",
+          "valuePoints": [
+            "He could not fly over the huge storm clouds and did not have enough fuel to fly around them.",
+            "He knew he ought to go back to Paris, but he wanted to get home and have his English breakfast: 'I'll take the risk.'",
+            "Inside the clouds everything was black and the aeroplane jumped and twisted.",
+            "The compass, the other instruments and the radio were dead; he was lost in the storm."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Why he took the risk and what went wrong inside the storm."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-03-s3",
+          "kind": "short",
+          "outcome": "E10FF-03-4",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "What do the words 'upbraiding', 'taunting' and 'derisively' tell us about the way the young seagull's family treated him before his first flight? Answer in 40–50 words.",
+          "valuePoints": [
+            "'Upbraiding' means scolding: his parents scolded him and threatened to let him starve.",
+            "'Taunting' shows the family mocking his cowardice as they walked about on the plateau.",
+            "'Derisively' describes his mother screaming 'Gaw-col-ah' back at him in a mocking way when he begged for food.",
+            "Together the words show harsh, pushing treatment meant to force him to fly."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The meaning of the words in context and what they show about the family's treatment of him."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-03-s4",
+          "kind": "short",
+          "outcome": "E10FF-03-5",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "In 'How to Tell Wild Animals', the poet takes liberties with language in words such as 'dyin'', 'lept' and in the line 'A novice might nonplus'. Why does she do this? Answer in 40–50 words.",
+          "valuePoints": [
+            "'dyin'' is shortened so that it rhymes with 'lion'.",
+            "'lept' and 'lep' are spelt the way they sound, keeping the rhythm and adding to the fun.",
+            "'A novice might nonplus' should correctly be 'A novice might be nonplussed'; the poet's version keeps the metre and rhymes with 'thus'.",
+            "These liberties add to the humour of the poem."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Explains at least two of the liberties and the reason (rhyme, rhythm, humour)."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-03-l1",
+          "kind": "long",
+          "lifeSkill": "Coping with stress",
+          "outcome": "E10FF-03-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Your younger cousin has been chosen to speak at the school's annual day but is so frightened that they want to withdraw. Like the young seagull on his ledge, they are sure they will fail. Write a letter to your cousin, in about 100–120 words, using the seagull's story to help them face their fear.",
+          "valuePoints": [
+            "Informal letter format: address, date, greeting, closing.",
+            "Acknowledges the fear as natural — the seagull too was certain his wings would not support him.",
+            "The seagull's fear lasted only a minute; once he leapt, he found he could fly and forgot he had ever been afraid.",
+            "Practical advice: practise, take one step at a time, trust the people who believe in you.",
+            "Encouraging, warm conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses the seagull's story and turns it into real, encouraging advice for facing fear."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Informal letter format; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-03-l2",
+          "kind": "long",
+          "lifeSkill": "Decision making",
+          "outcome": "E10FF-03-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "The pilot in 'The Black Aeroplane' knew he ought to go back to Paris, but he wanted his breakfast at home, so he said, 'I'll take the risk,' and flew into the storm. Write a paragraph, in about 100–120 words, on 'Taking Risks: Brave or Careless?', judging his decision and explaining how young people can decide when a risk is worth taking.",
+          "valuePoints": [
+            "The pilot's choice: a small reward (getting home for breakfast) weighed against a great danger (a storm, little fuel).",
+            "The result: dead instruments, no radio, almost no fuel — he survived only through help he could not explain.",
+            "A clear judgement on whether the decision was brave or careless.",
+            "Guidance for young people: weigh what could be gained against what could be lost, listen to warnings, consider safer options.",
+            "A reasoned conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Judges the pilot's decision and extends it to sensible guidance on risk-taking."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "A single well-structured paragraph with a topic sentence and conclusion; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "questions": [
+        {
+          "id": "jeff1-04-c1",
+          "kind": "competency",
+          "outcome": "E10FF-04-1",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "Anne recalls the saying, 'Paper has more patience than people.' What does this tell us about why she began her diary?",
+          "options": [
+            {
+              "text": "She hoped to publish her writing and become famous.",
+              "correct": false
+            },
+            {
+              "text": "She had no true friend to confide in, and paper would listen without judging.",
+              "correct": true
+            },
+            {
+              "text": "Her teacher had told the class to keep a daily record.",
+              "correct": false
+            },
+            {
+              "text": "Her parents had forbidden her to talk at home.",
+              "correct": false
+            }
+          ],
+          "explanation": "Anne writes, 'Now I'm back to the point that prompted me to keep a diary in the first place: I don't have a friend.' She wants 'to get all kinds of things off my chest', and a diary is patient in a way people are not."
+        },
+        {
+          "id": "jeff1-04-c2",
+          "kind": "competency",
+          "outcome": "E10FF-04-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "After Anne's poem about the ducklings, 'Mr Keesing took the joke the right way.' What does this reveal about him?",
+          "options": [
+            {
+              "text": "He was afraid that Anne would complain to her parents.",
+              "correct": false
+            },
+            {
+              "text": "He had not understood that the poem was about him.",
+              "correct": false
+            },
+            {
+              "text": "He could enjoy wit and humour even when the joke was on him.",
+              "correct": true
+            },
+            {
+              "text": "He had decided to stop teaching Anne's class.",
+              "correct": false
+            }
+          ],
+          "explanation": "He read the poem to the class 'adding his own comments, and to several other classes as well', stopped giving her extra homework, and is now 'always making jokes'. He could appreciate cleverness turned against himself."
+        },
+        {
+          "id": "jeff1-04-c3",
+          "kind": "competency",
+          "outcome": "E10FF-04-3",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "In 'Amanda!', who speaks the stanzas written in brackets?",
+          "options": [
+            {
+              "text": "Amanda, imagining herself somewhere free",
+              "correct": true
+            },
+            {
+              "text": "The adult, remembering her own childhood",
+              "correct": false
+            },
+            {
+              "text": "The poet, commenting on Amanda's behaviour",
+              "correct": false
+            },
+            {
+              "text": "Amanda's friend, trying to comfort her",
+              "correct": false
+            }
+          ],
+          "explanation": "The bracketed stanzas are in the first person — 'I am an orphan', 'I am Rapunzel' — and describe the calm, free worlds Amanda escapes into while an elder keeps instructing her."
+        },
+        {
+          "id": "jeff1-04-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FF-04-1",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "Let me put it more clearly, since no one will believe that a thirteen-year-old girl is completely alone in the world. And I'm not. I have loving parents and a sixteen-year-old sister, and there are about thirty people I can call friends. I have a family, loving aunts and a good home. No, on the surface I seem to have everything, except my one true friend. All I think about when I'm with friends is having a good time. I can't bring myself to talk about anything but ordinary everyday things.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "'on the surface I seem to have everything' suggests that Anne",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "is proud of her family's wealth",
+                  "correct": false
+                },
+                {
+                  "text": "is unhappy with her parents",
+                  "correct": false
+                },
+                {
+                  "text": "has too many friends to manage",
+                  "correct": false
+                },
+                {
+                  "text": "lacks something deeper that others cannot see",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) she lacks something deeper — 'except my one true friend'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which phrase in the extract shows that Anne's conversations with her friends stay on the surface?",
+              "marks": 1,
+              "answer": "'ordinary everyday things' (she cannot bring herself to talk about anything else)."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The expression 'can't bring myself to' means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "am not allowed to",
+                  "correct": false
+                },
+                {
+                  "text": "cannot make myself do something",
+                  "correct": true
+                },
+                {
+                  "text": "keep forgetting to",
+                  "correct": false
+                },
+                {
+                  "text": "refuse to listen to",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) cannot make myself do something (because it feels too difficult)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does Anne feel alone, although she has loving parents and about thirty friends? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "She has no one true friend to confide in. With friends she only has a good time and talks about ordinary things, so they never get closer; that is why she makes the diary, 'Kitty', her friend. (1 mark: no confidant; 1 mark: friendships stay on the surface.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-04-e2",
+          "kind": "extract",
+          "source": "poem",
+          "outcome": "E10FF-04-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "Did you finish your homework, Amanda?\nDid you tidy your room, Amanda?\nI thought I told you to clean your shoes,\nAmanda!\n\n(I am an orphan, roaming the street.\nI pattern soft dust with my hushed, bare feet.\nThe silence is golden, the freedom is sweet.)",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The first stanza of the extract is made up of",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Amanda's own thoughts",
+                  "correct": false
+                },
+                {
+                  "text": "a conversation between two friends",
+                  "correct": false
+                },
+                {
+                  "text": "an elder's questions and instructions, nagging Amanda",
+                  "correct": true
+                },
+                {
+                  "text": "a teacher's praise for Amanda's work",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) an elder's questions and instructions, nagging Amanda."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which phrase in the extract shows what Amanda longs for?",
+              "marks": 1,
+              "answer": "'the freedom is sweet'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Amanda imagines herself as an orphan because",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "an orphan would have no one ordering her about",
+                  "correct": true
+                },
+                {
+                  "text": "she has really lost her parents",
+                  "correct": false
+                },
+                {
+                  "text": "she wants to run away from school",
+                  "correct": false
+                },
+                {
+                  "text": "she enjoys walking barefoot in the dust",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) an orphan would have no one to order her about — she is not really an orphan; she longs to be free of instructions."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does 'The silence is golden' tell us about how Amanda feels? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Amanda is tired of the constant questions and orders she hears. Silence is precious to her because it means nobody is nagging, so in her imagination she values quiet and freedom above everything. (1 mark: tired of the nagging; 1 mark: why silence is precious.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-04-s1",
+          "kind": "short",
+          "outcome": "E10FF-04-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "How did Anne use her essays to answer Mr Keesing's punishments for talking in class? Answer in 40–50 words.",
+          "valuePoints": [
+            "In 'A Chatterbox' she argued that talking is a student's trait, and that she could not cure herself of it since her mother talked as much as she did — inherited traits cannot be helped.",
+            "She handed in the second essay, 'An Incorrigible Chatterbox', and Mr Keesing had nothing to complain about for two lessons.",
+            "For 'Quack, Quack, Quack, Said Mistress Chatterbox' she wrote a poem, with Sanne's help, about a father swan who bit his three ducklings to death for quacking too much.",
+            "Mr Keesing took the joke the right way, read it to several classes, and let her talk after that."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "How the first essay and the poem turned the punishment around, and the result."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-04-s2",
+          "kind": "short",
+          "outcome": "E10FF-04-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "Why does Anne give Kitty a brief sketch of her life, and what does it reveal about her feelings for her family? Answer in 40–50 words.",
+          "valuePoints": [
+            "No one would understand a word of her stories to Kitty if she were to plunge right in.",
+            "She calls her father 'the most adorable father I've ever seen'.",
+            "She still thinks of her grandmother and loves her; Grandma's candle was lit along with the rest at her 1942 birthday.",
+            "She jokes that she was 'plunked down on the table as a birthday present for Margot' — a light, affectionate tone."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The reason for the sketch and at least one sign of her feelings for her family."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-04-s3",
+          "kind": "short",
+          "outcome": "E10FF-04-4",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "Anne writes 'I'd worry about that later' and 'he'd finally had enough'. Give the full form of each contraction, explain why a contraction like 'I'd' needs context, and say why contracted forms suit a diary. Answer in 40–50 words.",
+          "valuePoints": [
+            "'I'd worry about that later' = I would worry.",
+            "'he'd finally had enough' = he had finally had enough.",
+            "Forms such as 'I'd' or 'he'd' can stand for two full forms ('had' or 'would'); the verb that follows shows which.",
+            "Writing a diary is like speaking to oneself, and contracted forms make it sound like real speech."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Both full forms correct, the double meaning explained, and why contractions suit a diary."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-04-s4",
+          "kind": "short",
+          "outcome": "E10FF-04-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "What does Amanda long for, as shown by the mermaid, the orphan and Rapunzel she imagines herself to be? Answer in 40–50 words.",
+          "valuePoints": [
+            "As a mermaid, the 'sole inhabitant' of a languid, emerald sea, drifting blissfully — peace and solitude.",
+            "As an orphan roaming the street — 'The silence is golden, the freedom is sweet' — no one to instruct her.",
+            "As Rapunzel in a tower, 'tranquil and rare', who will never let down her hair — nobody can reach her.",
+            "Together they show she longs for freedom from constant nagging and for time to herself."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "At least two of the imagined figures linked to what Amanda longs for."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-04-l1",
+          "kind": "long",
+          "lifeSkill": "Interpersonal relationships",
+          "outcome": "E10FF-04-1",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Anne had loving parents and about thirty friends, yet felt she had no one true friend to confide in. Many teenagers today have hundreds of contacts on their phones and still feel the same. Write a letter to Anne, in about 100–120 words, telling her what you think makes a true friend and how a young person can build a friendship deep enough to confide in.",
+          "valuePoints": [
+            "Informal letter format: greeting to Anne, closing.",
+            "Shows understanding of Anne's loneliness — friends she only has a good time with, talk of ordinary everyday things.",
+            "What makes a true friend: trust, listening, being there in difficult times.",
+            "Practical ways to build closeness: sharing something real, listening without judging, spending time together.",
+            "A warm, thoughtful conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Understands Anne's situation and extends it to real ideas about true friendship."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Informal letter format; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-04-l2",
+          "kind": "long",
+          "lifeSkill": "Effective communication",
+          "outcome": "E10FF-04-3",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "In 'Amanda!', an elder issues one instruction after another while Amanda escapes into daydreams and is finally called 'moody'. Neither is really listening to the other. Write an article for your school magazine, in about 100–120 words, titled 'Listening Both Ways', suggesting how parents and teenagers can talk to each other better.",
+          "valuePoints": [
+            "Article format: title, and an opening drawn from the poem.",
+            "Why constant instructions make a teenager withdraw, as Amanda does into her imagined worlds.",
+            "Why elders give instructions — care and concern — and why a teenager should try to understand that.",
+            "Practical suggestions: speaking calmly, listening without interrupting, spending time together, explaining the reasons for rules.",
+            "A reasoned conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses the poem and offers balanced, practical ideas for both parents and teenagers."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Article format with a title; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "questions": [
+        {
+          "id": "jeff1-05-c1",
+          "kind": "competency",
+          "outcome": "E10FF-05-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "'Even today any person with a jackfruit-like physical appearance is easily compared to a baker.' What does this comparison suggest about the bakers of the old days in Goa?",
+          "options": [
+            {
+              "text": "Baking was a profitable trade, and bakers and their families were well fed and prosperous.",
+              "correct": true
+            },
+            {
+              "text": "Bakers sold jackfruit along with their bread on their selling rounds.",
+              "correct": false
+            },
+            {
+              "text": "Bakers were mocked by the villagers for the way they dressed.",
+              "correct": false
+            },
+            {
+              "text": "Bakers worked so hard that they had no time to look after their health.",
+              "correct": false
+            }
+          ],
+          "explanation": "The text says baking 'was indeed a profitable profession in the old days. The baker and his family never starved.' They 'always looked happy and prosperous' and their 'plump physique was an open testimony to this' — so a plump, jackfruit-like person is compared to a baker."
+        },
+        {
+          "id": "jeff1-05-c2",
+          "kind": "competency",
+          "outcome": "E10FF-05-1",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "When Rajvir cries out excitedly at his first sight of a tea garden, Pranjol does not share his excitement. Why?",
+          "options": [
+            {
+              "text": "Pranjol does not like the taste of tea.",
+              "correct": false
+            },
+            {
+              "text": "Pranjol is annoyed that Rajvir has interrupted his detective book.",
+              "correct": false
+            },
+            {
+              "text": "Pranjol was born and brought up on a plantation, so tea gardens are nothing new to him.",
+              "correct": true
+            },
+            {
+              "text": "Pranjol thinks the gardens of Assam are smaller than those elsewhere.",
+              "correct": false
+            }
+          ],
+          "explanation": "The text explains: 'Pranjol, who had been born and brought up on a plantation, didn't share Rajvir's excitement.' He tells Rajvir, 'You will see enough gardens to last you a lifetime!'"
+        },
+        {
+          "id": "jeff1-05-c3",
+          "kind": "competency",
+          "outcome": "E10FF-05-3",
+          "difficulty": "HARD",
+          "marks": 1,
+          "stem": "At the end of 'The Trees', 'The moon is broken like a mirror, / its pieces flash now in the crown / of the tallest oak.' What has most likely caused this change in how the moon appears?",
+          "options": [
+            {
+              "text": "Clouds have covered the sky and hidden the moon.",
+              "correct": false
+            },
+            {
+              "text": "The poet has broken a mirror inside the house.",
+              "correct": false
+            },
+            {
+              "text": "The night has ended and the moon has set.",
+              "correct": false
+            },
+            {
+              "text": "The trees have moved out, and the moon is now seen in fragments through their branches.",
+              "correct": true
+            }
+          ],
+          "explanation": "Earlier 'the whole moon shines in a sky still open'. Once 'The trees are stumbling forward / into the night', the moonlight is broken up by the branches, so only its 'pieces flash now in the crown / of the tallest oak'."
+        },
+        {
+          "id": "jeff1-05-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FF-05-1",
+          "difficulty": "EASY",
+          "marks": 5,
+          "extract": "The baker made his musical entry on the scene with the ‘jhang, jhang’ sound of his specially made bamboo staff. One hand supported the basket on his head and the other banged the bamboo on the ground. He would greet the lady of the house with \"Good morning\" and then place his basket on the vertical bamboo. We kids would be pushed aside with a mild rebuke and the loaves would be delivered to the servant. But we would not give up. We would climb a bench or the parapet and peep into the basket, somehow. I can still recall the typical fragrance of those loaves. Loaves for the elders and the bangles for the children.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The baker's 'musical entry' refers to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "a song he sang as he walked through the village",
+                  "correct": false
+                },
+                {
+                  "text": "the 'jhang, jhang' sound of his bamboo staff",
+                  "correct": true
+                },
+                {
+                  "text": "the children cheering when he arrived",
+                  "correct": false
+                },
+                {
+                  "text": "the greeting he gave the lady of the house",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) — the 'jhang, jhang' sound of his specially made bamboo staff banged on the ground."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What did the children look for in the baker's basket?",
+              "marks": 1,
+              "answer": "The (bread-)bangles: 'Loaves for the elders and the bangles for the children.'"
+            },
+            {
+              "type": "mcq",
+              "prompt": "The word 'rebuke', as used in the extract, means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "a gentle push",
+                  "correct": false
+                },
+                {
+                  "text": "a reward",
+                  "correct": false
+                },
+                {
+                  "text": "a warm greeting",
+                  "correct": false
+                },
+                {
+                  "text": "an expression of disapproval; a scolding",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) an expression of disapproval; a scolding."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does the extract show about the author's feelings towards his childhood? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "He remembers it fondly and nostalgically. Details such as the 'jhang, jhang' sound, climbing the parapet to peep into the basket, and 'I can still recall the typical fragrance of those loaves' show the memories are still vivid and dear. (1 mark: fond/nostalgic feeling; 1 mark: support from the extract.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-05-e2",
+          "kind": "extract",
+          "source": "poem",
+          "outcome": "E10FF-05-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "The trees inside are moving out into the forest,\nthe forest that was empty all these days\nwhere no bird could sit\nno insect hide\nno sun bury its feet in shadow\nthe forest that was empty all these nights\nwill be full of trees by morning.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The forest is described as 'empty' because",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "it had no trees in it",
+                  "correct": true
+                },
+                {
+                  "text": "all the animals had been hunted",
+                  "correct": false
+                },
+                {
+                  "text": "nobody visited it at night",
+                  "correct": false
+                },
+                {
+                  "text": "it had been flooded",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — the trees were 'inside', so the forest had no trees; it 'will be full of trees by morning' once they move out."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Name one thing that could not happen in the treeless forest.",
+              "marks": 1,
+              "answer": "Any one: no bird could sit; no insect could hide; the sun could not bury its feet in shadow."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'no sun bury its feet in shadow' suggests that, without trees,",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the sun never rose over the forest",
+                  "correct": false
+                },
+                {
+                  "text": "the forest was always dark",
+                  "correct": false
+                },
+                {
+                  "text": "there was no shade for the sunlight to fall into",
+                  "correct": true
+                },
+                {
+                  "text": "the sun was too hot for anyone to walk there",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) — the sun's rays ('feet') touching the ground could not rest in the shade that trees cast."
+            },
+            {
+              "type": "sa",
+              "prompt": "Where are the trees at the start of the poem, and what might their moving out suggest? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "The trees are inside the poet's house, on the veranda. Their moving out suggests nature breaking free of human confinement and returning to where it belongs, filling the empty forest again. (1 mark: where the trees are; 1 mark: a reasonable interpretation.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-05-s1",
+          "kind": "short",
+          "outcome": "E10FF-05-2",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "How does 'A Baker from Goa' show that bread was an important part of Goan village life? Answer in 40–50 words.",
+          "valuePoints": [
+            "Marriage gifts are meaningless without the sweet bread known as the bol.",
+            "A party or a feast loses its charm without bread.",
+            "The lady of the house must prepare sandwiches for her daughter's engagement.",
+            "Cakes and bolinhas are a must for Christmas and other festivals, so the baker's furnace in the village is 'absolutely essential'."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "At least two occasions on which bread is essential, linked to the baker's importance to the village."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-05-s2",
+          "kind": "short",
+          "outcome": "E10FF-05-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "What evidence does 'Coorg' give for the belief that the Kodavus may be of Greek or Arabic descent? Answer in 40–50 words.",
+          "valuePoints": [
+            "One story says a part of Alexander's army moved south along the coast and settled in Coorg when return became impractical.",
+            "They married amongst the locals; their martial traditions, marriage and religious rites are distinct from the Hindu mainstream.",
+            "The Arab-origin theory is supported by the long, black coat with an embroidered waist-belt, the kuppia.",
+            "The kuppia resembles the kuffia worn by the Arabs and the Kurds."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The Greek story (Alexander's army) and the Arab evidence (kuppia and kuffia), 1 mark each."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-05-s3",
+          "kind": "short",
+          "outcome": "E10FF-05-5",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Your family in Bangalore is planning a trip to Coorg. Using the fact file in the chapter, explain the ways you could travel there. Answer in 40–50 words.",
+          "valuePoints": [
+            "Madikeri, the district headquarters, is the only gateway to Coorg.",
+            "By road there are two routes from Bangalore of around 250–260 km; the route via Mysore is the most frequented.",
+            "By air, the nearest airports are Mangalore (135 km) and Bangalore (260 km).",
+            "By rail, the nearest railheads are Mysore, Mangalore and Hassan."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Accurate information from the fact file on at least two ways of reaching Coorg, applied to a traveller from Bangalore."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-05-s4",
+          "kind": "short",
+          "outcome": "E10FF-05-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Which two legends about the discovery of tea does Rajvir tell Pranjol, and what does his knowledge show about him? Answer in 40–50 words.",
+          "valuePoints": [
+            "A Chinese emperor always boiled water; a few leaves from the twigs burning under the pot fell in and gave it a delicious flavour — said to be tea leaves.",
+            "Bodhidharma, a Buddhist ascetic, cut off his eyelids because he felt sleepy during meditation; ten tea plants grew from them, and their leaves in hot water banished sleep.",
+            "Rajvir had been reading as much as he could about tea — Mr Barua says he seems to have done his homework.",
+            "He is curious and eager to learn more."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Both legends in outline and what they show about Rajvir's curiosity or preparation."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-05-l1",
+          "kind": "long",
+          "lifeSkill": "Creative thinking",
+          "outcome": "E10FF-05-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "In Goa the pader's son still carries on the family profession, and the thud and jingle of his bamboo can still be heard in some places. Many other traditional crafts, such as pottery, handloom and bamboo weaving, are dying out. Write an article for your school magazine, in about 100–120 words, titled 'Keeping Old Skills Alive', suggesting practical ways in which young people and communities can help traditional professions survive.",
+          "valuePoints": [
+            "Article format: title, and an opening that sets out the problem.",
+            "The pader as an example: a profession that has survived because the family carries it on and the village still needs bread for its occasions.",
+            "Reasons crafts decline — machine-made goods, lack of demand, young people leaving the trade.",
+            "Creative, practical suggestions — buying local, school exhibitions, online selling, learning a craft, festivals that use traditional products.",
+            "A reasoned conclusion on why these skills matter."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses the pader's story and extends it to original, workable ideas for reviving traditional crafts."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Article format with a title; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-05-l2",
+          "kind": "long",
+          "lifeSkill": "Critical thinking",
+          "outcome": "E10FF-05-3",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "In 'The Trees', the trees kept inside a house break out into the empty forest. In our cities, plants are often kept in pots for decoration while forests are cut down. Write a speech, in about 100–120 words, to be delivered in your school assembly on World Environment Day, on the topic 'Do Trees Belong in Our Homes or in the Forest?'. Refer to the poem and give your own reasoned view.",
+          "valuePoints": [
+            "Speech format: greeting the audience, stating the topic, and a closing line of thanks.",
+            "Reference to the poem: the trees straining to leave the house and the forest 'empty' without them.",
+            "The contrast between decorating homes with plants and cutting down forests.",
+            "A reasoned view — for example, that indoor plants are no substitute for protecting forests where birds and insects live.",
+            "A practical appeal to listeners, such as planting and protecting trees."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses the poem and goes beyond it to a clear, reasoned argument about humans and nature."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Speech format (greeting, topic, conclusion); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "questions": [
+        {
+          "id": "jeff1-06-c1",
+          "kind": "competency",
+          "outcome": "E10FF-06-5",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "Maxwell says that opening the sack began 'a thraldom to otters, an otter fixation'. What does he mean?",
+          "options": [
+            {
+              "text": "He was afraid of otters for the rest of his life.",
+              "correct": false
+            },
+            {
+              "text": "He has been held under the spell of a very strong attachment to otters ever since.",
+              "correct": true
+            },
+            {
+              "text": "He began to trade in otters for a living.",
+              "correct": false
+            },
+            {
+              "text": "He was forced by law to look after the otter.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Thraldom' means being under the control of something, and a 'fixation' is a very strong attachment. Maxwell says this phase 'has not yet ended, and may... not end before I do' — otters have held him ever since."
+        },
+        {
+          "id": "jeff1-06-c2",
+          "kind": "competency",
+          "outcome": "E10FF-06-3",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "In 'Fog', the fog sits looking over harbour and city 'on silent haunches'. What does this image suggest about the fog?",
+          "options": [
+            {
+              "text": "It roars in angrily from the sea.",
+              "correct": false
+            },
+            {
+              "text": "It is dangerous and attacks the city.",
+              "correct": false
+            },
+            {
+              "text": "It spreads quickly and disappears at once.",
+              "correct": false
+            },
+            {
+              "text": "It settles quietly and stays still for a while, like a sitting cat.",
+              "correct": true
+            }
+          ],
+          "explanation": "A cat sits 'on haunches' (with knees bent), silently watching. The fog, too, comes 'on little cat feet', sits quietly over the harbour and city, 'and then moves on'."
+        },
+        {
+          "id": "jeff1-06-c3",
+          "kind": "competency",
+          "outcome": "E10FF-06-4",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "Choose the correct option to complete the sentence: 'Fifty years ago, very few people ______ own cars.'",
+          "options": [
+            {
+              "text": "used to",
+              "correct": true
+            },
+            {
+              "text": "would",
+              "correct": false
+            },
+            {
+              "text": "were used to",
+              "correct": false
+            },
+            {
+              "text": "would be",
+              "correct": false
+            }
+          ],
+          "explanation": "The chapter explains that 'would' and 'used to' both describe repeated actions in the past, but for past states or situations only 'used to' is correct. Owning a car is a state, so 'used to' is right and 'would' is not."
+        },
+        {
+          "id": "jeff1-06-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FF-06-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "I made a body-belt for him and took him on a lead to the bathroom, where for half an hour he went wild with joy in the water, plunging and rolling in it, shooting up and down the length of the bathtub underwater, and making enough slosh and splash for a hippo. This, I was to learn, is a characteristic of otters; every drop of water must be, so to speak, extended and spread about the place; a bowl must at once be overturned, or, if it will not be overturned, be sat in and sploshed in until it overflows.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "'making enough slosh and splash for a hippo' is used to show that Mij",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "was as large as a hippo",
+                  "correct": false
+                },
+                {
+                  "text": "was frightened of the water",
+                  "correct": false
+                },
+                {
+                  "text": "played in the water with great energy and noise",
+                  "correct": true
+                },
+                {
+                  "text": "wanted to be let out of the bathroom",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) — the exaggeration shows how energetically and noisily the small otter played."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How long did Mij play in the bathtub on this occasion?",
+              "marks": 1,
+              "answer": "For half an hour."
+            },
+            {
+              "type": "mcq",
+              "prompt": "According to the extract, what does an otter do with a bowl of water?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Overturns it, or sits and splashes in it until it overflows",
+                  "correct": true
+                },
+                {
+                  "text": "Drinks from it slowly",
+                  "correct": false
+                },
+                {
+                  "text": "Carries it around the room",
+                  "correct": false
+                },
+                {
+                  "text": "Ignores it unless it is full of fish",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — 'a bowl must at once be overturned, or... be sat in and sploshed in until it overflows'."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does this extract reveal about otters and about how Maxwell observes Mij? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Otters love water that moves; they must splash and spread it about rather than leave it still. Maxwell watches Mij closely and with amused affection, describing his play in lively, humorous detail. (1 mark: the otter's nature; 1 mark: Maxwell's observation.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-06-e2",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FF-06-1",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "When I returned, there was an appalling spectacle. There was complete silence from the box, but from its airholes and chinks around the lid, blood had trickled and dried. I whipped off the lock and tore open the lid, and Mij, exhausted and blood-spattered, whimpered and caught at my leg. He had torn the lining of the box to shreds; when I removed the last of it so that there were no cutting edges left, it was just ten minutes until the time of the flight, and the airport was five miles distant.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The phrase 'an appalling spectacle' means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "a funny sight",
+                  "correct": false
+                },
+                {
+                  "text": "a shocking scene",
+                  "correct": true
+                },
+                {
+                  "text": "a beautiful view",
+                  "correct": false
+                },
+                {
+                  "text": "a strange noise",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) a shocking scene."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Why had Maxwell put Mij into the box an hour before they started?",
+              "marks": 1,
+              "answer": "So that he would become accustomed to it before the flight."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Mij 'whimpered and caught at my leg' when the lid was opened. This shows that Mij",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "wanted to bite Maxwell",
+                  "correct": false
+                },
+                {
+                  "text": "was trying to escape from Maxwell",
+                  "correct": false
+                },
+                {
+                  "text": "was hungry for his fish",
+                  "correct": false
+                },
+                {
+                  "text": "was distressed and turned to Maxwell for comfort",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) — exhausted and hurt, Mij clung to Maxwell, the one he trusted."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why was this moment so difficult for Maxwell? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Mij was hurt and exhausted from tearing the box lining, yet it was just ten minutes to the flight with the airport five miles away. Maxwell had to put the miserable otter back into the box. (1 mark: Mij's condition; 1 mark: the time pressure.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-06-s1",
+          "kind": "short",
+          "outcome": "E10FF-06-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "How did Maxwell come to own Mijbil? Answer in 40–50 words.",
+          "valuePoints": [
+            "Maxwell wanted to keep an otter instead of a dog at Camusfearna.",
+            "A friend said he should get one in the Tigris marshes, where otters were as common as mosquitoes and often tamed by the Arabs.",
+            "Waiting at Basra for his delayed mail, he found two Arabs in his bedroom with a sack that squirmed.",
+            "They handed him a note from his friend: 'Here is your otter...'"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "His wish for an otter, the friend's advice, and how the otter was delivered in the sack at Basra."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-06-s2",
+          "kind": "short",
+          "outcome": "E10FF-06-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Describe the game Mij invented in London with a ping-pong ball. What does it reveal about him? Answer in 40–50 words.",
+          "valuePoints": [
+            "A damaged suitcase lid sloped from one end to the other; Mij placed the ball on the high end so it ran down.",
+            "He dashed to the other end to ambush its arrival, hid, crouched, sprang up, grabbed it and trotted back to the high end.",
+            "The game could keep him engrossed for up to half an hour.",
+            "It shows he was intelligent, inventive and playful."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The game described accurately and at least one quality of Mij it reveals."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-06-s3",
+          "kind": "short",
+          "outcome": "E10FF-06-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "How does Carl Sandburg compare the fog to a cat without ever saying that it is 'like' a cat? Answer in 40–50 words.",
+          "valuePoints": [
+            "The fog 'comes on little cat feet' — silently and softly, as a cat moves.",
+            "It 'sits looking over harbour and city on silent haunches', like a cat sitting and watching.",
+            "It 'then moves on', as a cat leaves quietly.",
+            "Because he transfers a cat's features to the fog without 'like' or 'as', it is a metaphor, not a simile."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "At least two cat-like features of the fog from the poem, and the idea that the comparison is a metaphor."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-06-s4",
+          "kind": "short",
+          "outcome": "E10FF-06-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "What guesses did Londoners make about what Mij was, and why did these guesses surprise Maxwell? Answer in 40–50 words.",
+          "valuePoints": [
+            "People guessed every Mustelline but the otter, and also a baby seal, a squirrel, a walrus, a hippo, a beaver, a bear cub, a leopard and a 'brontosaur'.",
+            "A labourer glared and growled, 'Here, Mister — what is that supposed to be?'",
+            "Maxwell did not find it strange that Londoners could not recognise an otter.",
+            "What surprised him was the wide variety of guesses — Mij was 'anything but an otter'."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Several of the guesses from the text and why their variety surprised Maxwell."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-06-l1",
+          "kind": "long",
+          "lifeSkill": "Critical thinking",
+          "outcome": "E10FF-06-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Mij was brought from the marshes of Iraq to a flat in London, walked on a lead and packed into a box for a flight. Many wild species are now protected by law. Your school is holding a debate on the motion 'Wild animals should not be kept as pets'. Write your speech, in about 100–120 words, either for or against the motion, drawing on Mij's story.",
+          "valuePoints": [
+            "Debate format: addressing the chair and audience, stating the side taken clearly.",
+            "Evidence from the story — Mij's love of water, his distress in the box, life on a lead in London streets, and the deep bond with Maxwell.",
+            "Arguments about the animal's needs, its natural habitat and the owner's responsibility.",
+            "Awareness that laws now protect many wild species.",
+            "A firm, reasoned conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "A clear stand supported by evidence from the story and reasoned arguments beyond it."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Debate format (address, stand, conclusion); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-06-l2",
+          "kind": "long",
+          "lifeSkill": "Empathy",
+          "outcome": "E10FF-06-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "An hour before the flight, Maxwell found Mij exhausted and blood-spattered in the box, and had to put him back in it. Imagine you are Maxwell. Write a diary entry, in about 100–120 words, on the night you reached London, describing how you felt about what Mij went through and what the day taught you about caring for a pet.",
+          "valuePoints": [
+            "Written as a diary entry: date, first person, reflective tone.",
+            "Feelings on finding Mij hurt in the box, and on having to put him back.",
+            "Gratitude towards the air hostess and the relief of Mij nuzzling his face.",
+            "Understanding Mij's fear and distress from the otter's point of view.",
+            "A lesson about the responsibility of owning a pet — planning for its needs in advance."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Feelings, understanding of Mij's distress and a lesson learnt, drawn from the story and going beyond it."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Diary format (date, first person); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "questions": [
+        {
+          "id": "jeff1-07-c1",
+          "kind": "competency",
+          "outcome": "E10FF-07-4",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "'\"There's nobody here who's a child,\" she said haughtily.' What does the adverb 'haughtily' show about Valli at this moment?",
+          "options": [
+            {
+              "text": "She is frightened of the elderly man.",
+              "correct": false
+            },
+            {
+              "text": "She is grateful for his concern.",
+              "correct": false
+            },
+            {
+              "text": "She is proud and offended at being treated as a child.",
+              "correct": true
+            },
+            {
+              "text": "She is too shy to look at him.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Haughtily' means proudly. Valli is annoyed by the man's attention and insists, 'I've paid my thirty paise like everyone else' — she wants to be treated as a grown-up."
+        },
+        {
+          "id": "jeff1-07-c2",
+          "kind": "competency",
+          "outcome": "E10FF-07-2",
+          "difficulty": "HARD",
+          "marks": 1,
+          "stem": "At the end, Valli's mother says that even when we know about something, 'we often can't understand it completely', and Valli breathes, 'Oh, yes!' Why does Valli agree so strongly?",
+          "options": [
+            {
+              "text": "She wants to join the adults' conversation to seem grown-up.",
+              "correct": false
+            },
+            {
+              "text": "Seeing the dead cow has shown her something about life and death that she cannot fully understand.",
+              "correct": true
+            },
+            {
+              "text": "She is afraid her mother has found out about the bus ride.",
+              "correct": false
+            },
+            {
+              "text": "She did not understand the conductor's jokes on the bus.",
+              "correct": false
+            }
+          ],
+          "explanation": "On the way back Valli saw the young cow that had run in front of the bus lying dead, and 'The memory of the dead cow haunted her'. Her mother's words describe exactly what she has just experienced, which is why she agrees."
+        },
+        {
+          "id": "jeff1-07-c3",
+          "kind": "competency",
+          "outcome": "E10FF-07-3",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "After the pirate is gone, Mustard, Ink and Blink say they would have been braver, and Custard agrees 'That everybody is braver than me.' What makes this ending humorous?",
+          "options": [
+            {
+              "text": "Custard is lying to make the others feel better.",
+              "correct": false
+            },
+            {
+              "text": "The pirate comes back and frightens them all again.",
+              "correct": false
+            },
+            {
+              "text": "Belinda punishes the pets for running away.",
+              "correct": false
+            },
+            {
+              "text": "The ones who fled boast of their courage, while the only one who fought is still thought a coward.",
+              "correct": true
+            }
+          ],
+          "explanation": "Mustard 'fled with a terrified yelp', Ink 'trickled down' and Blink 'strategically mouseholed', while Custard 'went at the pirate' and gobbled him. Yet they claim they would have been braver, and Custard 'keeps crying for a nice safe cage' — the irony is the humour."
+        },
+        {
+          "id": "jeff1-07-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FF-07-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "The conductor nodded, and she was overcome with sadness. What had been a lovable, beautiful creature just a little while ago had now suddenly lost its charm and its life and looked so horrible, so frightening as it lay there, legs spreadeagled, a fixed stare in its lifeless eyes, blood all over... The bus moved on. The memory of the dead cow haunted her, dampening her enthusiasm. She no longer wanted to look out the window.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The word 'haunted', as used in the extract, means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "frightened her with a ghost",
+                  "correct": false
+                },
+                {
+                  "text": "made her fall asleep",
+                  "correct": false
+                },
+                {
+                  "text": "made her laugh again",
+                  "correct": false
+                },
+                {
+                  "text": "kept returning to her mind and could not be forgotten",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) returned repeatedly to her mind; was impossible to forget."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which phrase in the extract shows that the sight took away Valli's joy in the journey?",
+              "marks": 1,
+              "answer": "'dampening her enthusiasm' (also accept: 'She no longer wanted to look out the window')."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The cow's death affected Valli deeply mainly because",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "she had laughed at the same cow running in front of the bus only a little while earlier",
+                  "correct": true
+                },
+                {
+                  "text": "the cow belonged to her family",
+                  "correct": false
+                },
+                {
+                  "text": "the conductor blamed her for the accident",
+                  "correct": false
+                },
+                {
+                  "text": "the bus had struck the cow",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — on the way to town the same young cow had made her laugh 'until there were tears in her eyes'; now it lay dead."
+            },
+            {
+              "type": "sa",
+              "prompt": "How does this moment change Valli's return journey? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Until then she greeted everything with excitement. The sight of the dead cow made her sad; she no longer looked out of the window and sat 'glued to her seat' until the village. She met death for the first time. (1 mark: the change in her behaviour; 1 mark: its meaning for her.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-07-e2",
+          "kind": "extract",
+          "source": "poem",
+          "outcome": "E10FF-07-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "But up jumped Custard, snorting like an engine,\nClashed his tail like irons in a dungeon,\nWith a clatter and a clank and a jangling squirm,\nHe went at the pirate like a robin at a worm.\n\nThe pirate gaped at Belinda's dragon,\nAnd gulped some grog from his pocket flagon,\nHe fired two bullets, but they didn't hit,\nAnd Custard gobbled him, every bit.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "'snorting like an engine' is an example of",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "a metaphor",
+                  "correct": false
+                },
+                {
+                  "text": "a simile",
+                  "correct": true
+                },
+                {
+                  "text": "personification",
+                  "correct": false
+                },
+                {
+                  "text": "alliteration",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) a simile — Custard's snorting is compared to an engine using 'like'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which line shows that the pirate's attack failed?",
+              "marks": 1,
+              "answer": "'He fired two bullets, but they didn't hit'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'He went at the pirate like a robin at a worm' suggests that Custard attacked",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "slowly and nervously",
+                  "correct": false
+                },
+                {
+                  "text": "only after the others had fled",
+                  "correct": false
+                },
+                {
+                  "text": "swiftly and easily, as a bird seizes its food",
+                  "correct": true
+                },
+                {
+                  "text": "while crying for his cage",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) — a robin pounces on a worm quickly and without fear; the pirate is as helpless as a worm."
+            },
+            {
+              "type": "sa",
+              "prompt": "How does Custard's action in these stanzas contrast with the way he is described in the rest of the poem? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Elsewhere Custard is called a 'cowardly dragon' who cries 'for a nice safe cage' and is teased by the others. Here, when the brave-seeming pets flee, he alone attacks and gobbles the pirate. (1 mark: how he is described elsewhere; 1 mark: the contrast in this action.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-07-s1",
+          "kind": "short",
+          "outcome": "E10FF-07-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "How did Valli plan and save for her first bus journey? Answer in 40–50 words.",
+          "valuePoints": [
+            "She listened to neighbours and bus passengers and asked a few discreet questions: the town was six miles away, the fare thirty paise one way, and the trip took forty-five minutes.",
+            "She could return on the same bus by paying another thirty paise, so she planned to take the one-o'clock bus.",
+            "She saved stray coins, resisting peppermints, toys and balloons, and even a ride on the merry-go-round at the village fair, until she had sixty paise.",
+            "She slipped out while her mother napped after lunch, from about one to four."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "How she gathered details of the journey and how she saved the sixty paise (and slipped out unseen)."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-07-s2",
+          "kind": "short",
+          "outcome": "E10FF-07-5",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Valli finds the elderly woman beside her 'absolutely repulsive' and calls her questions 'drivel'. Explain what these words mean here and what they reveal about Valli. Answer in 40–50 words.",
+          "valuePoints": [
+            "'Repulsive' means causing strong dislike: Valli dislikes the big holes in the woman's ear lobes, her ugly earrings and the betel juice about to spill over her lips.",
+            "'Drivel' means silly nonsense: the woman asks whether it is proper for a young girl to travel alone and what street and house she is going to.",
+            "Valli judges by appearance, as a child might.",
+            "She resents being treated as a child and insists she can take care of herself."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The meaning of both words in context and what Valli's reaction reveals about her."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-07-s3",
+          "kind": "short",
+          "outcome": "E10FF-07-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Why does the conductor call Valli 'madam', and how does his attitude towards her show kindness? Answer in 40–50 words.",
+          "valuePoints": [
+            "Valli stops the bus commandingly, refuses his help to get on and insists she can manage by herself, so the jolly conductor jokingly calls her 'madam'.",
+            "He teases her gently, and she ends up laughing with him.",
+            "At the town he offers to bring her a cold drink as his treat.",
+            "He watches over her and, at the end, invites her to come for a bus ride again."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Why he calls her 'madam' and at least one instance of his kindness."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-07-s4",
+          "kind": "short",
+          "outcome": "E10FF-07-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Is 'The Tale of Custard the Dragon' a serious or a light-hearted poem? Give reasons from the poem. Answer in 40–50 words.",
+          "valuePoints": [
+            "It is light-hearted — a humorous ballad close to a parody.",
+            "Made-up and playful words: 'realio, trulio', 'winda', 'Weeck!', 'mouseholed'.",
+            "Comic exaggeration: 'as brave as a barrel full of bears', chasing 'lions down the stairs'.",
+            "The irony that the 'cowardly' dragon is the only one who fights, while the others boast afterwards."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "A clear judgement that the poem is light-hearted, supported by at least two features from the poem."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-07-l1",
+          "kind": "long",
+          "lifeSkill": "Decision making",
+          "outcome": "E10FF-07-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Valli planned her trip carefully and saved her own money, but she slipped out while her mother slept and told no one where she was going. Imagine you are Valli's older cousin who has just heard about the trip. Write a letter to Valli, in about 100–120 words, praising what was admirable in her plan and helping her think about how she could make such decisions more safely in future.",
+          "valuePoints": [
+            "Informal letter format: address, date, greeting, closing.",
+            "Praise for her planning, patience in saving sixty paise, independence and self-control.",
+            "Concern about the risks of travelling alone without telling any adult.",
+            "Practical advice — sharing plans with a trusted adult, weighing risks before acting.",
+            "An affectionate, encouraging tone rather than a scolding one."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Balanced praise and advice, drawn from the story and extended to sensible decision making."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Informal letter format; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-07-l2",
+          "kind": "long",
+          "lifeSkill": "Empathy",
+          "outcome": "E10FF-07-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "On her way back, Valli saw the young cow lying dead where it had been struck by some fast-moving vehicle. Animals and people are hurt on Indian roads every day. Write an article for your local newspaper, in about 100–120 words, titled 'Share the Road', on why drivers and pedestrians must care for the safety of every living being on the road, with suggestions for making roads safer.",
+          "valuePoints": [
+            "Article format: title, and an opening that states the concern.",
+            "Reference to the dead cow in the story and the shock it caused Valli.",
+            "Empathy for animals and people at risk from speeding vehicles.",
+            "Practical suggestions — slowing down, care near villages, helping stray animals, road-safety awareness.",
+            "A reasoned conclusion appealing to readers."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses the incident from the story and extends it to a caring, practical view of road safety."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Article format with a title; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "questions": [
+        {
+          "id": "jeff1-08-c1",
+          "kind": "competency",
+          "outcome": "E10FF-08-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "The Buddha asked Kisa Gotami for mustard-seed 'from a house where no one has lost a child, husband, parent or friend'. Why did he set this condition instead of simply telling her that death comes to everyone?",
+          "options": [
+            {
+              "text": "He wanted to keep her busy until her grief faded with time.",
+              "correct": false
+            },
+            {
+              "text": "He wanted her to discover for herself that death is common to all.",
+              "correct": true
+            },
+            {
+              "text": "He believed such mustard-seed could really bring her son back to life.",
+              "correct": false
+            },
+            {
+              "text": "He wanted to test whether her neighbours would be generous to her.",
+              "correct": false
+            }
+          ],
+          "explanation": "No such house existed: 'there was no house but some beloved one had died in it.' Searching from house to house, Kisa Gotami realised on her own, 'Death is common to all' — a lesson learnt through her own experience rather than simply being told."
+        },
+        {
+          "id": "jeff1-08-c2",
+          "kind": "competency",
+          "outcome": "E10FF-08-5",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "Kisa Gotami thinks, 'yet in this valley of desolation there is a path that leads him to immortality who has surrendered all selfishness.' What does 'this valley of desolation' refer to?",
+          "options": [
+            {
+              "text": "The city of Benares on the river Ganges",
+              "correct": false
+            },
+            {
+              "text": "The wayside where she sat down, tired and hopeless",
+              "correct": false
+            },
+            {
+              "text": "The house where her son had died",
+              "correct": false
+            },
+            {
+              "text": "The world of mortals, which is full of sorrow and loss",
+              "correct": true
+            }
+          ],
+          "explanation": "Desolation means deep sorrow; she has just 'considered the fate of men, that their lives flicker up and are extinguished again'. The 'valley' is the whole world of human life, filled with grief because everyone dies — not any single place."
+        },
+        {
+          "id": "jeff1-08-c3",
+          "kind": "competency",
+          "outcome": "E10FF-08-3",
+          "difficulty": "HARD",
+          "marks": 1,
+          "stem": "In 'For Anne Gregory', the old religious man found 'a text to prove / That only God, my dear, / Could love you for yourself alone / And not your yellow hair.' What does this final stanza suggest?",
+          "options": [
+            {
+              "text": "Human love is almost always drawn by outward beauty; love for the inner self alone is divine.",
+              "correct": true
+            },
+            {
+              "text": "Religious people do not care about beauty of any kind.",
+              "correct": false
+            },
+            {
+              "text": "Dyeing her hair would make the young woman loved for herself.",
+              "correct": false
+            },
+            {
+              "text": "Young men are wrong to feel despair at a woman's beauty.",
+              "correct": false
+            }
+          ],
+          "explanation": "The young woman believes changing her hair colour will make men love her 'for myself alone'. The speaker answers that only God can love a person that way — implying that human love is always tied to how a person looks, and that pure love of the inner self is beyond humans."
+        },
+        {
+          "id": "jeff1-08-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FF-08-4",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "Kisa Gotami had an only son, and he died. In her grief she carried the dead child to all her neighbours, asking them for medicine, and the people said, \"She has lost her senses. The boy is dead.\"\nAt length, Kisa Gotami met a man who replied to her request, \"I cannot give thee medicine for thy child, but I know a physician who can.\"\nAnd the girl said, \"Pray tell me, sir; who is it?\" And the man replied, \"Go to Sakyamuni, the Buddha.\"",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The people said Kisa Gotami had 'lost her senses' because she",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "had stopped speaking to her neighbours",
+                  "correct": false
+                },
+                {
+                  "text": "was wandering far from her own home",
+                  "correct": false
+                },
+                {
+                  "text": "was asking for medicine for a child who was already dead",
+                  "correct": true
+                },
+                {
+                  "text": "refused to accept any help that was offered",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) — she carried the dead child around 'asking them for medicine', though 'The boy is dead.'"
+            },
+            {
+              "type": "vsa",
+              "prompt": "Rewrite in present-day English: 'I cannot give thee medicine for thy child.'",
+              "marks": 1,
+              "answer": "I cannot give you medicine for your child. ('thee' = you; 'thy' = your.)"
+            },
+            {
+              "type": "mcq",
+              "prompt": "The phrase 'Pray tell me', as used in the extract, is",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "a polite, old-fashioned way of saying 'Please tell me'",
+                  "correct": true
+                },
+                {
+                  "text": "a request to say a prayer for her son",
+                  "correct": false
+                },
+                {
+                  "text": "an angry demand for an answer",
+                  "correct": false
+                },
+                {
+                  "text": "a question about whether the man is religious",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — 'Pray' here is an old-fashioned word for 'please'."
+            },
+            {
+              "type": "sa",
+              "prompt": "How did the man who sent Kisa Gotami to the Buddha show more understanding than her other neighbours? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "The neighbours only declared that she had lost her senses. The man did not mock her; he gently said he had no medicine and directed her to someone who could truly help — the Buddha, the 'physician' who could heal her grief. (1 mark: the neighbours' dismissive response; 1 mark: the man's kind, helpful response.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-08-e2",
+          "kind": "extract",
+          "source": "poem",
+          "outcome": "E10FF-08-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "\"Never shall a young man,\nThrown into despair\nBy those great honey-coloured\nRamparts at your ear,\nLove you for yourself alone\nAnd not your yellow hair.\"\n\n\"But I can get a hair-dye\nAnd set such colour there,\nBrown, or black, or carrot,\nThat young men in despair\nMay love me for myself alone\nAnd not my yellow hair.\"",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "'Those great honey-coloured / Ramparts at your ear' refers to the young woman's",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "golden earrings",
+                  "correct": false
+                },
+                {
+                  "text": "beautiful yellow hair falling beside her ears",
+                  "correct": true
+                },
+                {
+                  "text": "proud and unfriendly manner",
+                  "correct": false
+                },
+                {
+                  "text": "high-walled family house",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) — her thick yellow hair, compared to ramparts (the high walls of a fort) around her ears."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What does the young woman say she can do about her hair?",
+              "marks": 1,
+              "answer": "She can dye it another colour — brown, black or carrot."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What does the young woman want most, according to the second stanza?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "To look more fashionable than other women",
+                  "correct": false
+                },
+                {
+                  "text": "To put an end to the young men's despair",
+                  "correct": false
+                },
+                {
+                  "text": "To stop young men from noticing her at all",
+                  "correct": false
+                },
+                {
+                  "text": "To be loved for herself and not for her looks",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) — she wants young men to 'love me for myself alone / And not my yellow hair'."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does the speaker call the hair 'ramparts', and why are young men 'thrown into despair' by it? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Ramparts are the high protective walls of a fort; her hair is like a barrier that stops young men from seeing and loving the real person inside. They are so overwhelmed by her beauty that they despair of winning her. (1 mark: the rampart image; 1 mark: the reason for despair.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-08-s1",
+          "kind": "short",
+          "outcome": "E10FF-08-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "What did Prince Siddhartha see that changed his life, and how did he become the Buddha? Answer in 40–50 words.",
+          "valuePoints": [
+            "At about twenty-five, while out hunting, he saw a sick man, an aged man, a funeral procession and a monk begging for alms.",
+            "These sights so moved him that he went out into the world to seek enlightenment about sorrow.",
+            "He wandered for seven years and sat under a peepal tree, vowing to stay until enlightenment came.",
+            "Enlightened after seven days, he renamed it the Bodhi Tree and began to teach; he became known as the Buddha."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The sights that moved him and the path to enlightenment under the Bodhi Tree. Any two or three value points, correctly linked."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-08-s2",
+          "kind": "short",
+          "outcome": "E10FF-08-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "What did Kisa Gotami understand while sitting by the wayside that she had failed to understand earlier? Answer in 40–50 words.",
+          "valuePoints": [
+            "Watching the city lights flicker up and go out, she saw that human lives too 'flicker up and are extinguished again'.",
+            "She realised 'Death is common to all' — every house had lost someone.",
+            "She saw she had been 'selfish' in her grief, thinking only of her own loss.",
+            "Earlier she had refused to accept her son's death and sought medicine to revive him."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Her new understanding (death is universal; her grief was selfish) contrasted with her earlier refusal to accept death."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-08-s3",
+          "kind": "short",
+          "outcome": "E10FF-08-5",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "The Buddha compares mortals to 'ripe fruits' and 'earthen vessels', and speaks of drawing out 'the arrow of lamentation'. What do these images teach? Answer in 40–50 words.",
+          "valuePoints": [
+            "Ripe fruits are early in danger of falling; so mortals, once born, are always in danger of death.",
+            "Earthen vessels made by the potter all end in being broken; so every life ends.",
+            "Grief is like an arrow lodged in the body — it keeps causing pain until it is drawn out.",
+            "Weeping does not save the dead; one who draws out the arrow and becomes composed obtains peace of mind."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Meaning of the fruit/vessel comparisons (death is certain) and of the arrow image (grief must be let go for peace)."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-08-s4",
+          "kind": "short",
+          "outcome": "E10FF-08-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "In 'For Anne Gregory', how does the argument between the young man and the young woman develop, and who has the last word? Answer in 40–50 words.",
+          "valuePoints": [
+            "He says no young man will love her for herself alone, only for her yellow hair.",
+            "She replies that she can dye her hair brown, black or carrot so that she is loved for herself.",
+            "He ends by quoting an old religious man: only God could love her for herself alone.",
+            "The speaker has the last word — outward beauty cannot be separated from human love."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The three stages of the argument and the point of the final stanza."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-08-l1",
+          "kind": "long",
+          "lifeSkill": "Empathy",
+          "outcome": "E10FF-08-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Your close friend has recently lost a grandparent and has been quiet and withdrawn at school. Remembering how the Buddha helped Kisa Gotami find peace, write a letter to your friend, in about 100–120 words, offering comfort and support. Be gentle: let your friend know that grief is natural, and that they are not alone.",
+          "valuePoints": [
+            "Informal letter format: address, date, salutation, closing; warm and sensitive tone.",
+            "Acknowledges the loss and the friend's feelings without dismissing them.",
+            "Draws gently on Kisa Gotami's story — loss touches every family, so no one grieves alone.",
+            "Offers practical support: being there to talk, spending time together, sharing memories of the grandparent.",
+            "Encourages the friend, with time, to find peace of mind rather than hurry them to 'get over it'."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Comfort and support that show understanding of grief, linked sensitively to the Buddha's lesson and going beyond it."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Informal letter format; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and a gentle tone."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-08-l2",
+          "kind": "long",
+          "lifeSkill": "Self-awareness",
+          "outcome": "E10FF-08-3",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "In 'For Anne Gregory', a young woman wishes to be loved 'for myself alone' and not for her hair. Today, many teenagers edit photos with filters and worry about how they look online. Write an article for your school magazine, in about 100–120 words, titled 'More Than a Filter: Valuing Who We Really Are', drawing on the poem.",
+          "valuePoints": [
+            "Article format: title, and an opening that sets out the concern.",
+            "Link to the poem: the young woman's wish to be valued for herself, not her looks.",
+            "Why chasing looks and online approval can harm confidence and self-worth.",
+            "Qualities that truly matter — kindness, honesty, talent, effort — and ways to value them in oneself and others.",
+            "A reasoned conclusion, perhaps acknowledging the poem's point that looks and people are hard to separate."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses the poem's idea and extends it to thoughtful advice about self-worth and appearance."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Article format with a title; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "questions": [
+        {
+          "id": "jeff1-09-c1",
+          "kind": "competency",
+          "outcome": "E10FF-09-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "Natalya says the Oxen Meadows 'aren't worth much to me. They only come to five dessiatins, and are worth perhaps 300 roubles', and Lomov says, 'I don't want the Meadows'. What makes their quarrel comic?",
+          "options": [
+            {
+              "text": "The Meadows actually belong to the peasants, not to either family.",
+              "correct": false
+            },
+            {
+              "text": "Lomov is only pretending to be angry in order to impress Natalya.",
+              "correct": false
+            },
+            {
+              "text": "Both say the land means little to them, yet they fight over it furiously.",
+              "correct": true
+            },
+            {
+              "text": "Natalya does not know where the Oxen Meadows are.",
+              "correct": false
+            }
+          ],
+          "explanation": "Each claims not to care about the land itself — Natalya 'can't stand unfairness', Lomov is 'acting on principle' — yet they shout 'Mine!' and 'Ours!' and threaten mowers and courts. The gap between the petty stake and the fury is the comedy."
+        },
+        {
+          "id": "jeff1-09-c2",
+          "kind": "competency",
+          "outcome": "E10FF-09-5",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "During the quarrel, the stage direction reads: '[Quickly steps to the carafe and drinks more water]'. What does this action show about Lomov?",
+          "options": [
+            {
+              "text": "He is nervous and excitable, and easily upset.",
+              "correct": true
+            },
+            {
+              "text": "He is calm and in full control of the argument.",
+              "correct": false
+            },
+            {
+              "text": "He has just returned from a long, hot journey.",
+              "correct": false
+            },
+            {
+              "text": "He wants to change the subject politely.",
+              "correct": false
+            }
+          ],
+          "explanation": "Lomov describes himself as someone who suffers 'from palpitations', 'excitable and always getting awfully upset', and he keeps drinking water whenever he is agitated. The direction shows his nervousness mounting as he is accused of being a landgrabber."
+        },
+        {
+          "id": "jeff1-09-c3",
+          "kind": "competency",
+          "outcome": "E10FF-09-1",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "When Lomov arrives, Chubukov says aside, 'He's come to borrow money. Shan't give him any!' Minutes later he says, 'I've always loved you, my angel, as if you were my own son.' What does this contrast reveal?",
+          "options": [
+            {
+              "text": "Chubukov has always been a generous neighbour to Lomov.",
+              "correct": false
+            },
+            {
+              "text": "Chubukov is too confused by joy to remember what he thought.",
+              "correct": false
+            },
+            {
+              "text": "Chubukov had secretly planned the proposal himself.",
+              "correct": false
+            },
+            {
+              "text": "Chubukov's show of affection is insincere and depends on what he stands to gain.",
+              "correct": true
+            }
+          ],
+          "explanation": "His private thought is suspicious and mean; his public warmth appears only once he hears the proposal, which suits his wish to marry off his daughter to a wealthy neighbour. The aside exposes the flattery as self-interest."
+        },
+        {
+          "id": "jeff1-09-e1",
+          "kind": "extract",
+          "source": "drama",
+          "outcome": "E10FF-09-5",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "LOMOV : It's cold... I'm trembling all over, just as if I'd got an examination before me. The great thing is, I must have my mind made up. If I give myself time to think, to hesitate, to talk a lot, to look for an ideal, or for real love, then I'll never get married. Brr... It's cold! Natalya Stepanovna is an excellent housekeeper, not bad-looking, well-educated. What more do I want? But I'm getting a noise in my ears from excitement. [Drinks] And it's impossible for me not to marry. In the first place, I'm already 35 -- a critical age, so to speak. In the second place, I ought to lead a quiet and regular life.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Lomov feels he must make up his mind quickly because",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Chubukov has asked him to decide at once",
+                  "correct": false
+                },
+                {
+                  "text": "if he stops to think or look for real love, he will never marry",
+                  "correct": true
+                },
+                {
+                  "text": "Natalya is about to marry someone else",
+                  "correct": false
+                },
+                {
+                  "text": "he has to leave for an examination",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) — 'If I give myself time to think, to hesitate... then I'll never get married.'"
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which three qualities does Lomov see in Natalya Stepanovna?",
+              "marks": 1,
+              "answer": "She is an excellent housekeeper, not bad-looking and well-educated."
+            },
+            {
+              "type": "mcq",
+              "prompt": "By calling 35 'a critical age', Lomov means that",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "his health is in serious danger",
+                  "correct": false
+                },
+                {
+                  "text": "he has become very critical of other people",
+                  "correct": false
+                },
+                {
+                  "text": "he is getting too old to put off marriage any longer",
+                  "correct": true
+                },
+                {
+                  "text": "he is at the best age to buy more land",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) — he feels time is running out for him to marry."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does this speech reveal about Lomov's reasons for marrying? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "His reasons are practical, not romantic: he wants a good housekeeper, feels he is at 'a critical age', and needs 'a quiet and regular life' for his health. He even says looking for 'real love' would stop him marrying. (1 mark: practical reasons; 1 mark: absence of love, supported from the extract.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-09-e2",
+          "kind": "extract",
+          "source": "drama",
+          "outcome": "E10FF-09-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "LOMOV : Excuse me, Natalya Stepanovna, but you forget that he is overshot, and an overshot always means the dog is a bad hunter!\nNATALYA : Overshot, is he? The first time I hear it!\nLOMOV : I assure you that his lower jaw is shorter than the upper.\nNATALYA : Have you measured?\nLOMOV : Yes. He's all right at following, of course, but if you want to get hold of anything...\nNATALYA : In the first place, our Squeezer is a thoroughbred animal, the son of Harness and Chisels while there's no getting at the pedigree of your dog at all. He's old and as ugly as a worn-out cab-horse.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "According to Lomov, a dog that is 'overshot' has",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "a lower jaw shorter than the upper",
+                  "correct": true
+                },
+                {
+                  "text": "been shot at and wounded while hunting",
+                  "correct": false
+                },
+                {
+                  "text": "run past the fox it was chasing",
+                  "correct": false
+                },
+                {
+                  "text": "been sold for more than it was worth",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — 'his lower jaw is shorter than the upper.'"
+            },
+            {
+              "type": "vsa",
+              "prompt": "Change into reported speech: LOMOV: 'I assure you that his lower jaw is shorter than the upper.'",
+              "marks": 1,
+              "answer": "Lomov assured Natalya that his (Squeezer's) lower jaw was shorter than the upper."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What makes this exchange especially comic in the play?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Natalya has never seen either of the dogs.",
+                  "correct": false
+                },
+                {
+                  "text": "Lomov and Natalya are secretly joking with each other.",
+                  "correct": false
+                },
+                {
+                  "text": "Chubukov is hiding and listening to them.",
+                  "correct": false
+                },
+                {
+                  "text": "Having just made peace over the Meadows, they start a new quarrel over a trifle, with the proposal still unmade.",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) — Natalya had just given in over the Meadows to get him to propose; now they quarrel over dogs instead."
+            },
+            {
+              "type": "sa",
+              "prompt": "How does Natalya try to prove that Squeezer is the better dog, and what does her description of Guess show about her? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "She points to Squeezer's pedigree — a thoroughbred, 'the son of Harness and Chisels' — and says Guess's pedigree cannot be traced. Calling Guess 'as ugly as a worn-out cab-horse' shows she is quarrelsome, stubborn and insulting. (1 mark: her argument; 1 mark: what it shows about her.)"
+            }
+          ]
+        },
+        {
+          "id": "jeff1-09-s1",
+          "kind": "short",
+          "outcome": "E10FF-09-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "After two quarrels, how does the marriage finally get settled at the end of 'The Proposal'? Answer in 40–50 words.",
+          "valuePoints": [
+            "Lomov collapses into an armchair during the quarrel over the dogs, and Natalya thinks he is dead.",
+            "As he comes round, Chubukov puts Lomov's hand into his daughter's: 'She's willing!'",
+            "Natalya agrees — 'Yes, yes, I'm willing' — and they kiss.",
+            "Chubukov wants only to be left in peace; the couple start quarrelling about the dogs again at once."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Lomov's collapse, Chubukov joining their hands, and the renewed quarrel. Any two or three value points, correctly linked."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-09-s2",
+          "kind": "short",
+          "outcome": "E10FF-09-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "How does a remark about the Oxen Meadows turn Lomov's proposal into a bitter quarrel? Answer in 40–50 words.",
+          "valuePoints": [
+            "Lomov mentions 'my Oxen Meadows' touching the Chubukovs' birchwoods, while leading up to his proposal.",
+            "Natalya interrupts, insisting the Meadows are 'ours', and each refuses to give way.",
+            "It grows into threats — Natalya's mowers, Lomov's 'I'll give it to them in the neck!', and a court case.",
+            "When Chubukov joins in, they insult each other's families, and Lomov leaves before he can propose."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "How the dispute begins and how it escalates until the proposal is forgotten."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-09-s3",
+          "kind": "short",
+          "outcome": "E10FF-09-5",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "Lomov keeps complaining about his heart, his foot and his side. How do these complaints and the stage directions add to the comedy of the play? Answer in 40–50 words.",
+          "valuePoints": [
+            "Directions such as '[Clutches at his heart]', '[Drinks]' and '[Falls into an armchair]' show his exaggerated nervousness.",
+            "His complaints — 'My foot's gone to sleep', 'my heart's burst!' — interrupt the quarrels at their height.",
+            "He keeps arguing even while claiming he is dying, which is absurd.",
+            "His 'death' leads to the farcical ending, where he is married off as he comes round."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Examples of his complaints or stage directions, and how they make the situation absurd and funny."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-09-s4",
+          "kind": "short",
+          "outcome": "E10FF-09-5",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "How does Natalya react when she learns that Lomov had come to propose to her, and what does this reveal about her? Answer in 40–50 words.",
+          "valuePoints": [
+            "She is shocked: 'To propose? To me? Why didn't you tell me so before?'",
+            "She falls into an easy-chair, wails and has hysterics, demanding 'Bring him back!'",
+            "She blames her father, and on Lomov's return gives up the Meadows: 'really are yours'.",
+            "It reveals she wanted to marry him and cares more about the match than the land she fought for."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Her sudden change of behaviour (with evidence from dialogue or stage directions) and what it shows about her wishes."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-09-l1",
+          "kind": "long",
+          "lifeSkill": "Coping with emotions (anger management)",
+          "outcome": "E10FF-09-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "In 'The Proposal', a simple visit ends in shouting, insults and near-collapse because no one can control their temper. You have been asked to speak at your school's morning assembly on 'Cool Heads, Warm Hearts: Managing Anger'. Write the speech, in about 100–120 words, using examples from the play and suggesting how students can handle anger better.",
+          "valuePoints": [
+            "Speech format: greeting the audience, a title or introduction, a closing thank-you.",
+            "Examples from the play: the petty quarrels over the Meadows and the dogs, family insults, Lomov's palpitations.",
+            "Ill effects of anger — damaged relationships, harm to health, losing sight of what really matters.",
+            "Practical ways to manage anger: pausing before speaking, listening to the other side, walking away and returning calmly.",
+            "A clear, persuasive conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses the play's quarrels and extends them to real, practical advice on managing anger."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Speech format (greeting, introduction, conclusion); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jeff1-09-l2",
+          "kind": "long",
+          "lifeSkill": "Problem solving",
+          "outcome": "E10FF-09-1",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Imagine you are a sensible friend of both families. After reading how Lomov and Natalya began their engagement by quarrelling again over Guess and Squeezer, write a letter to them, in about 100–120 words, suggesting how they can settle disagreements without hurting each other and build a peaceful life together.",
+          "valuePoints": [
+            "Letter format: address, date, salutation, closing; friendly, respectful tone.",
+            "Reference to their quarrels — the Oxen Meadows and the dogs — and how trivial the issues were.",
+            "Suggestions: listening before replying, agreeing to disagree on small matters, never insulting each other's families.",
+            "Reminding them of what matters more than 'principle' — respect, care and each other's health.",
+            "A warm, encouraging conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Draws on the couple's quarrels and offers practical, sensible ways to resolve disagreements."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Letter format; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

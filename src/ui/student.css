@@ -967,6 +967,9 @@
   font-size: 17px;
   line-height: 1.55;
   margin: 0;
+  /* A poem or an extract is set line by line; collapsing it into one paragraph
+     changes what the question is asking. */
+  white-space: pre-wrap;
 }
 
 .ui-mistake-detail-options {
@@ -1341,6 +1344,9 @@
   font-size: 18px;
   line-height: 1.55;
   margin: 0;
+  /* A poem or an extract is set line by line; collapsing it into one paragraph
+     changes what the question is asking. */
+  white-space: pre-wrap;
 }
 
 .ui-runner-options {

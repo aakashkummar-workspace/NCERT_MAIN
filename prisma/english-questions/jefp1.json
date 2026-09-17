@@ -1,0 +1,3593 @@
+{
+  "book": "jefp1",
+  "grade": 10,
+  "subject": "ENGFP",
+  "title": "Footprints without Feet",
+  "status": "DRAFT — for review by an English teacher before any question is approved",
+  "source": "Written against NCERT Class X English supplementary reader ‘Footprints without Feet’ (jefp1, reprint 2026-27), read from the chapter PDFs, to the CBSE English Language and Literature (184) question paper design for 2025-26. The board paper sets no extract from this book; the extracts here are practice. Extracts are quoted from the book and checked word for word by scripts/check-english-questions.mjs.",
+  "chapters": [
+    {
+      "number": 1,
+      "questions": [
+        {
+          "id": "jefp1-01-c1",
+          "kind": "competency",
+          "outcome": "E10FP-01-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "Mrs Pumphrey calls Tricki's recovery 'a triumph of surgery'. Why is this phrase ironic?",
+          "options": [
+            {
+              "text": "The operation was a failure and Tricki had to be treated again.",
+              "correct": false
+            },
+            {
+              "text": "No operation was done; Tricki recovered through a strict diet, exercise and the company of other dogs.",
+              "correct": true
+            },
+            {
+              "text": "Mr Herriot had operated on the wrong dog.",
+              "correct": false
+            },
+            {
+              "text": "Tricki recovered before he ever reached the surgery.",
+              "correct": false
+            }
+          ],
+          "explanation": "The narrator says Tricki 'had no medicinal treatment of any kind'. He was given no food for two days and then ran about with the dogs. The 'surgery' was only the vet's premises, so calling it a triumph of surgery is the opposite of what happened."
+        },
+        {
+          "id": "jefp1-01-c2",
+          "kind": "competency",
+          "outcome": "E10FP-01-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "Mrs Pumphrey thought Tricki was 'suffering from malnutrition' and gave him malt, cod-liver oil and Horlicks. What does this reveal about her?",
+          "options": [
+            {
+              "text": "She had carefully followed the vet's advice.",
+              "correct": false
+            },
+            {
+              "text": "She wanted to save money on his regular meals.",
+              "correct": false
+            },
+            {
+              "text": "She knew he was overfed but did not care.",
+              "correct": false
+            },
+            {
+              "text": "Her love was blind: she misread overeating as weakness and made the problem worse.",
+              "correct": true
+            }
+          ],
+          "explanation": "Tricki was 'hugely fat, like a bloated sausage', yet she believed he needed 'little extras between meals to build him up'. She also admits she could not keep him off sweet things: 'I can't bear to refuse him.' Her indulgence caused the illness."
+        },
+        {
+          "id": "jefp1-01-c3",
+          "kind": "competency",
+          "outcome": "E10FP-01-2",
+          "difficulty": "HARD",
+          "marks": 1,
+          "stem": "When the eggs, wine and brandy arrive, 'the real possibilities of the situation began to dawn on the household.' What does this suggest about the narrator's tone?",
+          "options": [
+            {
+              "text": "It is gently humorous: the vet and his partners enjoy the gifts meant for Tricki.",
+              "correct": true
+            },
+            {
+              "text": "It is angry, because Mrs Pumphrey is wasting good food.",
+              "correct": false
+            },
+            {
+              "text": "It is worried, because Tricki may be harmed by the wine.",
+              "correct": false
+            },
+            {
+              "text": "It is sad, because the household misses Tricki's mistress.",
+              "correct": false
+            }
+          ],
+          "explanation": "The narrator describes 'two eggs each for breakfast', lunch as 'a ceremonial occasion' with wine, and brandy 'reverently drunk' — 'days of deep content'. The gifts meant 'to enrich Tricki's blood' are enjoyed by the humans, and the tone is light and amused."
+        },
+        {
+          "id": "jefp1-01-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-01-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "Mrs Pumphrey hastened to explain, \"He was so listless, Mr Herriot. He seemed to have no energy. I thought he must be suffering from malnutrition, so I have been giving him some little extras between meals to build him up, some malt and cod-liver oil and a bowl of Horlicks at night to make him sleep -- nothing much really.\"",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The word 'listless', as used in the extract, means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "restless and noisy",
+                  "correct": false
+                },
+                {
+                  "text": "hungry all the time",
+                  "correct": false
+                },
+                {
+                  "text": "lacking energy and enthusiasm",
+                  "correct": true
+                },
+                {
+                  "text": "unable to sleep",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) lacking energy and enthusiasm — she explains it herself: 'He seemed to have no energy.'"
+            },
+            {
+              "type": "vsa",
+              "prompt": "What did Mrs Pumphrey wrongly believe was the cause of Tricki's condition?",
+              "marks": 1,
+              "answer": "Malnutrition — she thought he was not getting enough nourishment."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The words 'nothing much really' at the end of her explanation show that Mrs Pumphrey",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "does not see that the extras are part of the problem",
+                  "correct": true
+                },
+                {
+                  "text": "has stopped feeding Tricki altogether",
+                  "correct": false
+                },
+                {
+                  "text": "is lying about how little she feeds him",
+                  "correct": false
+                },
+                {
+                  "text": "wants the vet to prescribe more food",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — she treats malt, cod-liver oil and Horlicks between meals as trifles, not seeing that overfeeding is what is making Tricki ill."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why did the narrator feel that Tricki needed to be taken away from Mrs Pumphrey? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Mrs Pumphrey could not refuse Tricki food — she gave him sweets and extras and 'had to relent' on the diet. Tricki's 'only fault was greed', so the vet saw that the only way to save him was to get him out of the house. (1 mark: her indulgence; 1 mark: the need to remove him to cure him.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-01-e2",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-01-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "The word 'convalescing' seemed to do something to Mrs Pumphrey. She started to bring round fresh eggs, two dozen at a time, to build up Tricki's strength. For a happy period my partners and I had two eggs each for breakfast, but when the bottles of wine began to arrive, the real possibilities of the situation began to dawn on the household.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "'Convalescing' means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "getting worse",
+                  "correct": false
+                },
+                {
+                  "text": "being operated on",
+                  "correct": false
+                },
+                {
+                  "text": "refusing food",
+                  "correct": false
+                },
+                {
+                  "text": "recovering from an illness",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) recovering from an illness."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Why did Mrs Pumphrey send fresh eggs to the surgery?",
+              "marks": 1,
+              "answer": "To build up Tricki's strength."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Who actually ate the eggs Mrs Pumphrey sent?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Tricki and the other dogs",
+                  "correct": false
+                },
+                {
+                  "text": "The narrator and his partners",
+                  "correct": true
+                },
+                {
+                  "text": "Mrs Pumphrey's own staff",
+                  "correct": false
+                },
+                {
+                  "text": "Tristan alone",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) — 'my partners and I had two eggs each for breakfast'."
+            },
+            {
+              "type": "sa",
+              "prompt": "What were 'the real possibilities of the situation' that dawned on the household? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "The household realised that while Tricki stayed, Mrs Pumphrey would keep sending luxuries meant for him — eggs, wine to 'enrich Tricki's blood', later brandy — which they themselves could enjoy. (1 mark: the gifts would keep coming; 1 mark: the vets, not Tricki, would enjoy them.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-01-s1",
+          "kind": "short",
+          "outcome": "E10FP-01-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "How did Tricki recover at the surgery without any medicine? Answer in 40–50 words.",
+          "valuePoints": [
+            "For two days he was given no food but plenty of water.",
+            "He was kept with the other dogs and began to show interest in his surroundings.",
+            "He had to compete with the dogs at mealtimes and ran about with them all day, joining their scrimmages.",
+            "In two weeks he became 'a lithe, hard-muscled animal'."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The fasting and the exercise and company of the other dogs, linked to his recovery. Any two or three value points, correctly linked."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-01-s2",
+          "kind": "short",
+          "outcome": "E10FP-01-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Mr Herriot is both tactful and full of common sense. Support this with evidence from the story. Answer in 40–50 words.",
+          "valuePoints": [
+            "Common sense: he saw that Tricki's 'only fault was greed' and cured him with diet and exercise, not medicine.",
+            "He took a firm line and removed Tricki from the house, since that was 'the only way to save him'.",
+            "Tact: he dodged Mrs Pumphrey's questions about cushions and coats, telling her only that Tricki was 'convalescing rapidly'.",
+            "He did not tell her that her own indulgence was the cause, and let her believe in 'a triumph of surgery'."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "One piece of evidence for common sense and one for tact (1 mark each)."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-01-s3",
+          "kind": "short",
+          "outcome": "E10FP-01-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "Describe the scene when Mrs Pumphrey came to collect Tricki. What does it show? Answer in 40–50 words.",
+          "valuePoints": [
+            "She arrived in a huge car — 'about thirty feet of gleaming black metal' — with a chauffeur, trembling and anxious.",
+            "Tricki leapt from the narrator's arms into her lap and licked her face, barking.",
+            "The beds, toys, cushions, coats and bowls were returned, none of them used.",
+            "In tears, she thanked him for 'a triumph of surgery' — showing her deep love, and that she never understood the real cure."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Details of the reunion and what it shows about Mrs Pumphrey or Tricki."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-01-s4",
+          "kind": "short",
+          "outcome": "E10FP-01-2",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "Do you think Tricki was happy to go home? Give reasons from the story. Answer in 40–50 words.",
+          "valuePoints": [
+            "Yes: when he saw his mistress he 'took off from my arms in a tremendous leap' into her lap, licking her face.",
+            "He clearly loved Mrs Pumphrey.",
+            "But at the surgery 'he had never had such a time in his life', running and hunting rats with the gang.",
+            "A balanced answer may note that his old pampered life could make him ill again."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "A clear view supported by at least two details from the story."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-01-l1",
+          "kind": "long",
+          "lifeSkill": "Critical thinking",
+          "outcome": "E10FP-01-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Mrs Pumphrey loved Tricki, yet her love made him ill. Some parents, too, give children whatever they ask for. Write an article for your school magazine, in about 100–120 words, titled 'When Love Says Yes Too Often'. Draw on the story, and suggest how caring for someone can include saying no.",
+          "valuePoints": [
+            "Article format: title, and an opening that sets out the idea.",
+            "Mrs Pumphrey's indulgence — sweets, extras between meals, no exercise — and its result: Tricki fell seriously ill.",
+            "The cure came from firmness: a strict diet, exercise and the company of other dogs.",
+            "Overindulgence of children (junk food, gadgets, no limits) can harm health and habits.",
+            "A reasoned conclusion that real care sometimes means setting limits."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses Mrs Pumphrey and Tricki and extends the idea to real life with a reasoned view."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Article format with a title; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-01-l2",
+          "kind": "long",
+          "lifeSkill": "Decision making",
+          "outcome": "E10FP-01-1",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Imagine you are Mr Herriot. On the evening you drove Tricki away from Mrs Pumphrey's house, with everyone in tears, you write a diary entry in about 100–120 words. Describe what you saw, why you took this firm decision, and how you feel about it.",
+          "valuePoints": [
+            "Diary format: date, first person, reflective tone.",
+            "Tricki's condition: hugely fat, refusing food, vomiting, lying on a rug panting.",
+            "Why he acted: Mrs Pumphrey could not keep Tricki on a diet; removing him was the only way to save him.",
+            "The scene of leaving: maids bringing beds and bowls, coats thrown through the window, everyone in tears.",
+            "His feelings — sympathy for Mrs Pumphrey but confidence in his plan ('I think I know a cure for you')."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "The situation, the reasons for the decision and the narrator's feelings, drawn from the story."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Diary format (date, first person); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "questions": [
+        {
+          "id": "jefp1-02-c1",
+          "kind": "competency",
+          "outcome": "E10FP-02-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "The narrator says 'it's difficult to rob a careless man'. Why does he find robbing Anil difficult?",
+          "options": [
+            {
+              "text": "Anil kept his money locked away safely.",
+              "correct": false
+            },
+            {
+              "text": "Anil was strong enough to catch him.",
+              "correct": false
+            },
+            {
+              "text": "Anil trusted him completely, and a trusting man may not even notice the loss, which takes the pleasure out of it.",
+              "correct": true
+            },
+            {
+              "text": "Anil had very little money worth stealing.",
+              "correct": false
+            }
+          ],
+          "explanation": "Anil 'was the most trusting person I had ever met. And that is why it was so difficult to rob him.' A careless man 'doesn't even notice he's been robbed and that takes all the pleasure out of the work.'"
+        },
+        {
+          "id": "jefp1-02-c2",
+          "kind": "competency",
+          "outcome": "E10FP-02-2",
+          "difficulty": "HARD",
+          "marks": 1,
+          "stem": "At the end, 'the smile came by itself, without any effort.' What does this change in Hari Singh's smile suggest?",
+          "options": [
+            {
+              "text": "His smile was now genuine, not a trick to win someone's confidence.",
+              "correct": true
+            },
+            {
+              "text": "He was relieved that Anil had not discovered the theft.",
+              "correct": false
+            },
+            {
+              "text": "He was planning to steal from Anil again.",
+              "correct": false
+            },
+            {
+              "text": "He was pleased to be paid more than before.",
+              "correct": false
+            }
+          ],
+          "explanation": "Earlier he used 'my most appealing smile' deliberately to manipulate Anil. At the end Anil 'knew' but forgave silently, and the smile came 'without any effort' — a sign of real gratitude and change."
+        },
+        {
+          "id": "jefp1-02-c3",
+          "kind": "competency",
+          "outcome": "E10FP-02-1",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "How did Hari Singh realise that Anil knew about the theft?",
+          "options": [
+            {
+              "text": "Anil counted the money in front of him.",
+              "correct": false
+            },
+            {
+              "text": "Anil told him he had seen him leave at night.",
+              "correct": false
+            },
+            {
+              "text": "The police came to the room in the morning.",
+              "correct": false
+            },
+            {
+              "text": "The fifty-rupee note Anil gave him was still wet from the night's rain.",
+              "correct": true
+            }
+          ],
+          "explanation": "The notes had got damp in the rain while Hari Singh sat in the bazaar. When he took the note from Anil, 'it was still wet from the night's rain' — so Anil must have found the returned money. 'He knew.'"
+        },
+        {
+          "id": "jefp1-02-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-02-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "Anil was asleep. A beam of moonlight stepped over the balcony and fell on the bed. I sat up on the floor, considering the situation. If I took the money, I could catch the 10.30 Express to Lucknow. Slipping out of the blanket, I crept up to the bed. Anil was sleeping peacefully. His face was clear and unlined; even I had more marks on my face, though mine were mostly scars.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The word 'unlined', as used in the extract, suggests that Anil",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "was very old",
+                  "correct": false
+                },
+                {
+                  "text": "showed no sign of worry or anxiety",
+                  "correct": true
+                },
+                {
+                  "text": "was badly injured",
+                  "correct": false
+                },
+                {
+                  "text": "had not shaved",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) showed no sign of worry or anxiety."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Where did the narrator plan to go with the stolen money?",
+              "marks": 1,
+              "answer": "To Lucknow, by the 10.30 Express."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The contrast between Anil's 'clear' face and the narrator's scars suggests that",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Anil was younger than the narrator",
+                  "correct": false
+                },
+                {
+                  "text": "the narrator had been in a wrestling match",
+                  "correct": false
+                },
+                {
+                  "text": "Anil had never had to work",
+                  "correct": false
+                },
+                {
+                  "text": "the narrator, though younger, had led a harder, rougher life",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) — the fifteen-year-old thief bears scars, while the trusting Anil, about 25, sleeps peacefully without a care."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why did the narrator decide it was time to steal the money? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "He had not done 'real work' for a month and felt out of practice. He also told himself that Anil would only waste the money on his friends, and did not even pay him. (1 mark: out of practice; 1 mark: his excuses about Anil.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-02-e2",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-02-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "In my short career as a thief, I had made a study of men's faces when they had lost their goods. The greedy man showed fear; the rich man showed anger; the poor man showed acceptance. But I knew that Anil's face, when he discovered the theft, would show only a touch of sadness. Not for the loss of money, but for the loss of trust.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "According to the narrator, how did a poor man react to being robbed?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "With fear",
+                  "correct": false
+                },
+                {
+                  "text": "With anger",
+                  "correct": false
+                },
+                {
+                  "text": "With acceptance",
+                  "correct": true
+                },
+                {
+                  "text": "With sadness",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) — 'the poor man showed acceptance'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What, according to the narrator, would Anil be sad about?",
+              "marks": 1,
+              "answer": "The loss of trust, not the loss of money."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The phrase 'I had made a study of men's faces' shows that the narrator was",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "an observant judge of people",
+                  "correct": true
+                },
+                {
+                  "text": "a student of painting",
+                  "correct": false
+                },
+                {
+                  "text": "afraid of being recognised",
+                  "correct": false
+                },
+                {
+                  "text": "careless about his work",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) an observant judge of people — he had watched closely how different people react to loss."
+            },
+            {
+              "type": "sa",
+              "prompt": "How does this understanding of Anil help explain why the narrator later returned the money? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "He knew Anil valued trust more than money, so the theft would hurt Anil as a betrayal. Along with his wish to learn to read and write, this made him go back and put the notes under the mattress. (1 mark: Anil values trust; 1 mark: link to returning the money.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-02-s1",
+          "kind": "short",
+          "outcome": "E10FP-02-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Why did Hari Singh return the money to Anil? Answer in 40–50 words.",
+          "valuePoints": [
+            "He realised he could no longer learn to write whole sentences if he ran away.",
+            "'Whole sentences… could one day bring me more than a few hundred rupees'; he wanted to be 'a clever and respected man'.",
+            "Stealing was simple, but 'just as simple to be caught'.",
+            "He knew Anil would feel the loss of trust, and he had nowhere else to go."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The wish for education and respect as the main reason, with at least one further reason from the story."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-02-s2",
+          "kind": "short",
+          "outcome": "E10FP-02-2",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "Why do you think Anil did not hand the thief over to the police? Answer in 40–50 words.",
+          "valuePoints": [
+            "Anil was kind and 'the most trusting person' the narrator had met.",
+            "The money had been returned, so nothing was lost.",
+            "He saw that the boy had chosen to come back, and wanted to give him a chance.",
+            "He showed his forgiveness by paying him and saying, 'Today we'll start writing sentences.'"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "A reasoned view grounded in Anil's character and the ending of the story."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-02-s3",
+          "kind": "short",
+          "outcome": "E10FP-02-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "How did Hari Singh get into Anil's confidence, and what did he get in return for working for him? Answer in 40–50 words.",
+          "valuePoints": [
+            "He flattered Anil at a wrestling match: 'You look a bit of a wrestler yourself.'",
+            "He smiled in his 'most appealing way' and lied that he could cook.",
+            "In return Anil fed him and let him sleep on the balcony, though he could not pay him.",
+            "Anil taught him to cook, to write his name, and promised to teach him sentences and numbers."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "How he won Anil's confidence and what he received in return."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-02-s4",
+          "kind": "short",
+          "outcome": "E10FP-02-2",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "How do Hari Singh's thoughts about education change during the story? Answer in 40–50 words.",
+          "valuePoints": [
+            "At first he saw education as a tool: once he wrote 'like an educated man there would be no limit to what I could achieve'.",
+            "After the theft he had 'forgotten about them in the excitement'.",
+            "Sitting in the rain, he realised whole sentences could bring more than a few hundred rupees.",
+            "He came to value becoming 'a clever and respected man', not merely a successful thief."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "His early view and his later view of education, correctly contrasted."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-02-l1",
+          "kind": "long",
+          "lifeSkill": "Empathy",
+          "outcome": "E10FP-02-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Anil discovered that his money had been taken and returned, yet said nothing and offered to teach Hari Singh sentences. Imagine you are Anil. Write a diary entry, in about 100–120 words, on the morning you found the wet notes: what you understood, how you felt, and why you chose to forgive the boy.",
+          "valuePoints": [
+            "Diary format: date, first person, reflective tone.",
+            "What he noticed: the notes under the mattress were wet from the night's rain.",
+            "Feelings: hurt at the broken trust, but touched that the boy came back.",
+            "Why he forgave: the boy came back of his own accord; he wants to learn; a second chance can change a life.",
+            "His decision: to pay him regularly and begin teaching sentences, without mentioning the theft."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Anil's discovery, feelings and reasons for forgiving, drawn from the story and going beyond it."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Diary format (date, first person); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-02-l2",
+          "kind": "long",
+          "lifeSkill": "Interpersonal relationships",
+          "outcome": "E10FP-02-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "'Trust can change a person more than punishment can.' Write a speech, in about 100–120 words, to be delivered in your school assembly on this topic. Use 'The Thief's Story' as your example, and say what young people can learn about trusting others and being trustworthy.",
+          "valuePoints": [
+            "Speech format: greeting, topic introduced, closing thanks.",
+            "Anil trusted Hari Singh with a key and his money, taught him and did not report him.",
+            "That trust, and the hope of education, made the thief return the money and change.",
+            "Punishment might have hardened him; trust gave him a reason to be better.",
+            "What students can learn: to give others a fair chance, and to value the trust placed in them."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses the story as evidence and extends the idea of trust to students' own lives."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Speech format (greeting, introduction, conclusion); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "questions": [
+        {
+          "id": "jefp1-03-c1",
+          "kind": "competency",
+          "outcome": "E10FP-03-1",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "Why did Fowler feel 'let down' when he met Ausable?",
+          "options": [
+            {
+              "text": "Ausable refused to talk about his work.",
+              "correct": false
+            },
+            {
+              "text": "Ausable was rude to him at the music hall.",
+              "correct": false
+            },
+            {
+              "text": "Ausable had forgotten their appointment.",
+              "correct": false
+            },
+            {
+              "text": "Ausable, fat and living in a gloomy hotel, did not match the romantic idea of a secret agent Fowler had read about.",
+              "correct": true
+            }
+          ],
+          "explanation": "'Ausable did not fit any description of a secret agent Fowler had ever read.' He was 'fat. Very fat', had an American accent, and a small room in a 'gloomy French hotel' — 'scarcely a setting for a romantic adventure'."
+        },
+        {
+          "id": "jefp1-03-c2",
+          "kind": "competency",
+          "outcome": "E10FP-03-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "Why did Ausable complain in detail about the balcony and the management that had failed to block it off?",
+          "options": [
+            {
+              "text": "He was genuinely angry that someone had entered his room.",
+              "correct": false
+            },
+            {
+              "text": "He wanted to make Max believe the balcony was real, so that Max would use it to escape.",
+              "correct": true
+            },
+            {
+              "text": "He wanted Fowler to report the matter to the police.",
+              "correct": false
+            },
+            {
+              "text": "He was trying to keep Max talking until the report arrived.",
+              "correct": false
+            }
+          ],
+          "explanation": "The story ends 'there is no balcony'. Ausable's irritated complaint — the old living room, the empty room two doors down, the promise to block it off — was detailed enough to convince Max, who later dropped from the window."
+        },
+        {
+          "id": "jefp1-03-c3",
+          "kind": "competency",
+          "outcome": "E10FP-03-2",
+          "difficulty": "HARD",
+          "marks": 1,
+          "stem": "What does the final line, 'You see, my young friend, there is no balcony', reveal about Ausable?",
+          "options": [
+            {
+              "text": "He had not known what was outside his own window.",
+              "correct": false
+            },
+            {
+              "text": "He had wanted Fowler to be frightened.",
+              "correct": false
+            },
+            {
+              "text": "Behind his dull appearance he was a quick-witted agent who defeated an armed enemy with words alone.",
+              "correct": true
+            },
+            {
+              "text": "He had expected the police to arrest Max.",
+              "correct": false
+            }
+          ],
+          "explanation": "Ausable had no gun and no police. He invented the balcony and the police, and turned the waiter's knock to his advantage. Max 'dropped' from the sixth-floor window and screamed — defeated by Ausable's presence of mind."
+        },
+        {
+          "id": "jefp1-03-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-03-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "Ausable was, for one thing, fat. Very fat. And then there was his accent. Though he spoke French and German passably, he had never altogether lost the American accent he had brought to Paris from Boston twenty years ago.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The word 'passably', as used in the extract, means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "just well enough",
+                  "correct": true
+                },
+                {
+                  "text": "fluently and elegantly",
+                  "correct": false
+                },
+                {
+                  "text": "very badly",
+                  "correct": false
+                },
+                {
+                  "text": "secretly",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) just well enough; tolerably well."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Where had Ausable come to Paris from?",
+              "marks": 1,
+              "answer": "From Boston, twenty years ago."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The short sentences 'Ausable was, for one thing, fat. Very fat.' mainly convey",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Ausable's pride in his appearance",
+                  "correct": false
+                },
+                {
+                  "text": "the danger Ausable was in",
+                  "correct": false
+                },
+                {
+                  "text": "Fowler's admiration for Ausable",
+                  "correct": false
+                },
+                {
+                  "text": "Fowler's disappointment at how unlike a spy Ausable looked",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) — the blunt, repeated 'fat' reflects how let down Fowler felt."
+            },
+            {
+              "type": "sa",
+              "prompt": "How is Ausable different from the secret agents Fowler had imagined? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Fowler had imagined mysterious figures, pistol shots and 'dark-eyed beauties'. Ausable was a very fat man with an American accent, living in a small room in a gloomy hotel, who got only a 'prosaic telephone call'. (1 mark: what Fowler imagined; 1 mark: what Ausable was really like.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-03-e2",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-03-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "Fowler jumped at the sudden knocking at the door. Ausable just smiled. \"That will be the police,\" he said. \"I thought that such an important paper as the one we are waiting for should have a little extra protection. I told them to check on me to make sure everything was all right.\"",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The contrast between Fowler, who 'jumped', and Ausable, who 'just smiled', shows that Ausable was",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "unaware of the danger",
+                  "correct": false
+                },
+                {
+                  "text": "calm and in control",
+                  "correct": true
+                },
+                {
+                  "text": "expecting to be shot",
+                  "correct": false
+                },
+                {
+                  "text": "rude to his guest",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) calm and in control — he immediately used the knock as part of his plan."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Who was actually knocking at the door?",
+              "marks": 1,
+              "answer": "Henry, a waiter bringing the drink Ausable had ordered."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why did Ausable say the police were at the door?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "To frighten Max into escaping onto the 'balcony'",
+                  "correct": true
+                },
+                {
+                  "text": "Because he really had called the police",
+                  "correct": false
+                },
+                {
+                  "text": "To impress Fowler with his importance",
+                  "correct": false
+                },
+                {
+                  "text": "To stop Fowler from opening the door",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — he wanted Max to panic and climb out of the window onto the balcony that did not exist."
+            },
+            {
+              "type": "sa",
+              "prompt": "What did Max do on hearing that the police had come, and what happened to him? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Max, black with anger, backed to the window and climbed over the sill, saying he would wait on the balcony. When he pushed himself off to drop onto it, he screamed, because there was no balcony. (1 mark: his escape to the window; 1 mark: the fall.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-03-s1",
+          "kind": "short",
+          "outcome": "E10FP-03-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "How did Ausable make his story about the balcony convincing? Answer in 40–50 words.",
+          "valuePoints": [
+            "He spoke 'with extreme irritation', threatening to 'raise the devil with the management'.",
+            "He gave precise detail: the room was once part of a large unit and the next room had the balcony.",
+            "He said somebody had got in that way last month, from the empty room two doors down.",
+            "He added that the management had promised to block it off but had not."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "At least two features (his irritation, the detail, the past incident) that made the lie believable."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-03-s2",
+          "kind": "short",
+          "outcome": "E10FP-03-2",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "When do you think Ausable thought up his plan to get rid of Max? Did he plan it in advance or use events as they happened? Answer in 40–50 words.",
+          "valuePoints": [
+            "He could not have planned it in advance: he was surprised to find Max, whom he thought was in Berlin.",
+            "He invented the balcony story soon after sitting down, on learning Max was armed.",
+            "He had ordered a drink for when he returned, and used the waiter's knock by claiming it was the police.",
+            "So he prepared the ground quickly and took advantage of events as they came."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "A clear view supported by evidence of when the plan was formed."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-03-s3",
+          "kind": "short",
+          "outcome": "E10FP-03-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "Who was Max, how had he got into Ausable's room, and what did he want? Answer in 40–50 words.",
+          "valuePoints": [
+            "Max was another secret agent, slender, with a fox-like face, whom Ausable thought was in Berlin.",
+            "He had entered with a passkey, not through a balcony.",
+            "He held a small automatic pistol.",
+            "He wanted the report about some new missiles that was to be brought to Ausable that night."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Who Max was, how he entered, and the report he wanted."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-03-s4",
+          "kind": "short",
+          "outcome": "E10FP-03-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Ausable says Fowler expected 'the crack of pistols' but got only 'a prosaic telephone call'. How does the story's ending overturn Fowler's idea of a dull evening? Answer in 40–50 words.",
+          "valuePoints": [
+            "'Prosaic' means ordinary; Fowler had found Ausable's work boring.",
+            "Within minutes he had his 'first authentic thrill' — an armed spy in the room.",
+            "Ausable outwitted Max without any violence, using only words.",
+            "Fowler learns that real espionage depends on quick thinking, not glamour."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Meaning of 'prosaic' in context and how the events proved Fowler's expectation wrong."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-03-l1",
+          "kind": "long",
+          "lifeSkill": "Problem solving",
+          "outcome": "E10FP-03-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Ausable showed great presence of mind — thinking quickly and acting calmly in danger. Write an article for your school magazine, in about 100–120 words, titled 'Keep Calm and Think'. Use Ausable as an example, and explain how students can prepare themselves to act sensibly in an emergency, such as a small fire in the kitchen.",
+          "valuePoints": [
+            "Article format: title, and an opening that sets out the idea.",
+            "Ausable faced an armed man, yet stayed calm, invented the balcony and used the waiter's knock.",
+            "Panic makes a situation worse; a clear head finds a way out.",
+            "Presence of mind comes from mental preparedness — thinking in advance about possible dangers.",
+            "Practical steps: knowing emergency numbers, basic first aid and safety drills; a reasoned conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses Ausable's example and extends it to sensible, practical advice for emergencies."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Article format with a title; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-03-l2",
+          "kind": "long",
+          "lifeSkill": "Self-awareness",
+          "outcome": "E10FP-03-1",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Fowler judged Ausable by his appearance and was disappointed, until the events of the night proved him wrong. Imagine you are Fowler. Write a diary entry, in about 100–120 words, on that night: what you had expected, what happened, and what you learnt about judging people by how they look.",
+          "valuePoints": [
+            "Diary format: date, first person, reflective tone.",
+            "Expectations: a glamorous spy, mysterious figures, pistols; disappointment at a fat man in a gloomy hotel.",
+            "Events: Max with a pistol, the balcony story, the knock, Max's scream, the waiter.",
+            "Realisation: Ausable's calm quick thinking made him a far better agent than he looked.",
+            "Lesson: appearances can mislead; ability and character matter more than looks."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Fowler's expectations, the night's events and a reflective lesson, drawn from the story and going beyond it."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Diary format (date, first person); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "questions": [
+        {
+          "id": "jefp1-04-c1",
+          "kind": "competency",
+          "outcome": "E10FP-04-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "Eager to please the young lady, Horace 'took off his gloves and gave her his cigarette lighter'. Why is this small action important to the way the story ends?",
+          "options": [
+            {
+              "text": "It showed the lady that he was not carrying a weapon.",
+              "correct": false
+            },
+            {
+              "text": "It meant he opened the safe bare-handed and left fingerprints all over the room.",
+              "correct": true
+            },
+            {
+              "text": "It allowed the lady to recognise him later at the police station.",
+              "correct": false
+            },
+            {
+              "text": "It made him sneeze, which woke the servants in the house.",
+              "correct": false
+            }
+          ],
+          "explanation": "Horace was 'always careful not to leave any fingerprints', but once the gloves were off he opened the safe without them. 'His fingerprints, for he had opened the safe without gloves, were all over the room' — the evidence that got him arrested."
+        },
+        {
+          "id": "jefp1-04-c2",
+          "kind": "competency",
+          "outcome": "E10FP-04-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "At the end, Horace 'gets very angry when anyone talks about honour among thieves'. What is the most likely reason?",
+          "options": [
+            {
+              "text": "He believes that thieves should never work together.",
+              "correct": false
+            },
+            {
+              "text": "He thinks the police treated him more harshly than other thieves.",
+              "correct": false
+            },
+            {
+              "text": "He is ashamed that he broke his promise never to steal again.",
+              "correct": false
+            },
+            {
+              "text": "A fellow thief tricked him and let him take the blame for her robbery.",
+              "correct": true
+            }
+          ],
+          "explanation": "The young lady 'was in the same profession as he was' and 'tricked him' into opening the safe. She showed no honour towards a fellow thief, so the saying now sounds false and bitter to him."
+        },
+        {
+          "id": "jefp1-04-c3",
+          "kind": "competency",
+          "outcome": "E10FP-04-1",
+          "difficulty": "HARD",
+          "marks": 1,
+          "stem": "Which detail did most to convince Horace that the young woman in red belonged to the house?",
+          "options": [
+            {
+              "text": "Sherry rubbed against her, and she spoke to the dog by name and straightened the ornaments.",
+              "correct": true
+            },
+            {
+              "text": "She showed him a key to the safe and a letter from her husband.",
+              "correct": false
+            },
+            {
+              "text": "She telephoned the police in front of him.",
+              "correct": false
+            },
+            {
+              "text": "She knew the numbers to open the safe.",
+              "correct": false
+            }
+          ],
+          "explanation": "Sherry was 'rubbing against her'; she said 'Down, Sherry' and 'straightened the ornaments' on the fireplace, acting as if at home. Ironically, Horace himself kept the dog quiet by calling it by its name — the same trick she used on him."
+        },
+        {
+          "id": "jefp1-04-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-04-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "The safe was not going to be hard to open. After all, he had lived with locks and safes all his life. The burglar alarm was poorly built. He went into the hall to cut its wire. He came back and sneezed loudly as the smell of the flowers came to him again.\nHow foolish people are when they own valuable things, Horace thought. A magazine article had described this house, giving a plan of all the rooms and a picture of this room. The writer had even mentioned that the painting hid a safe!",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Horace felt the safe 'was not going to be hard to open' because",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the family had left it unlocked",
+                  "correct": false
+                },
+                {
+                  "text": "the servants had told him the numbers",
+                  "correct": false
+                },
+                {
+                  "text": "he made locks and had lived with locks and safes all his life",
+                  "correct": true
+                },
+                {
+                  "text": "the burglar alarm had already been switched off",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) — 'he had lived with locks and safes all his life'; he made locks for a living."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How had Horace learnt that the painting hid a safe?",
+              "marks": 1,
+              "answer": "From a magazine article that described the house, gave a plan of the rooms and a picture of the room, and mentioned that the painting hid a safe."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which of these best describes Horace's attitude in the second paragraph?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Nervous and doubtful",
+                  "correct": false
+                },
+                {
+                  "text": "Guilty and ashamed",
+                  "correct": false
+                },
+                {
+                  "text": "Angry and resentful",
+                  "correct": false
+                },
+                {
+                  "text": "Confident and scornful of careless owners",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) — 'How foolish people are when they own valuable things' shows his confidence and his scorn for careless owners."
+            },
+            {
+              "type": "sa",
+              "prompt": "Horace thinks people who own valuable things are foolish. Why is this thought ironic in the light of what happens later? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Horace, who mocks others for carelessness, is himself fooled by the young lady. He believes her story, takes off his gloves, opens the safe for her and is arrested for the robbery. (1 mark: how he is fooled; 1 mark: the link to his own careless trust.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-04-e2",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-04-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "But he never got the chance to begin his plan. By noon a policeman had arrested him for the jewel robbery at Shotover Grange.\nHis fingerprints, for he had opened the safe without gloves, were all over the room, and no one believed him when he said that the wife of the owner of the house had asked him to open the safe for her. The wife herself, a gray-haired, sharp-tongued woman of sixty, said that the story was nonsense. Horace is now the assistant librarian in the prison. He often thinks of the charming, clever young lady who was in the same profession as he was, and who tricked him.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The 'plan' that Horace never got the chance to begin was",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "to look for another safe to rob",
+                  "correct": true
+                },
+                {
+                  "text": "to give up stealing for ever",
+                  "correct": false
+                },
+                {
+                  "text": "to find the young lady and get his share",
+                  "correct": false
+                },
+                {
+                  "text": "to leave the country before the police came",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — on the third day he thought of the books he wanted and 'knew he would have to look for another safe'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What proved to Horace that the young lady was not the owner's wife?",
+              "marks": 1,
+              "answer": "The real wife was a gray-haired, sharp-tongued woman of sixty, who said his story was nonsense."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The phrase 'in the same profession as he was' means that the young lady was",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "a locksmith",
+                  "correct": false
+                },
+                {
+                  "text": "a librarian",
+                  "correct": false
+                },
+                {
+                  "text": "a thief",
+                  "correct": true
+                },
+                {
+                  "text": "a police officer",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) a thief — like Horace, she had come to steal the jewels."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why did no one believe Horace's account of what happened? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "His fingerprints were all over the room, since he had opened the safe without gloves, so the evidence pointed only to him. His claim that the owner's wife had asked him was denied by the real wife, a woman of sixty. (1 mark: the fingerprints; 1 mark: the real wife's denial.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-04-s1",
+          "kind": "short",
+          "outcome": "E10FP-04-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "Why did Horace Danby rob a safe every year, and how did he prepare for the robbery at Shotover Grange? Answer in 40–50 words.",
+          "valuePoints": [
+            "He loved rare, expensive books and stole enough each year to buy them secretly through an agent.",
+            "Three very interesting books were coming up for sale in the autumn.",
+            "For two weeks he studied the house — its rooms, electric wiring, paths and garden.",
+            "He waited until the two servants had gone to the movies, wore gloves and used the kitchen key hung outside."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "His reason for stealing (books) and at least two details of his careful preparation."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-04-s2",
+          "kind": "short",
+          "outcome": "E10FP-04-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "What subtle ways did the young lady use to deceive Horace into believing she was the lady of the house? Answer in 40–50 words.",
+          "valuePoints": [
+            "She behaved as if at home: the dog Sherry rubbed against her, she called it by name and straightened the ornaments.",
+            "She seemed amused and calm, and threatened to telephone the police.",
+            "She said she had promised her husband to take the jewels to the bank and needed them for a party.",
+            "She let Horace suggest that she had forgotten the numbers, and said her husband would not be back for a month."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "At least two of her methods — her familiar behaviour and her believable story — correctly described."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-04-s3",
+          "kind": "short",
+          "outcome": "E10FP-04-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "'Horace Danby was good and respectable -- but not completely honest.' Why is this description apt for him? Answer in 40–50 words.",
+          "valuePoints": [
+            "Everyone thought him a good, honest citizen; he made locks and ran a successful business with two helpers.",
+            "Yet he robbed a safe every year to buy rare books.",
+            "He claims he steals only from those who have a lot of money, and is not violent — he admits he was only trying to frighten the lady.",
+            "So he is respectable in public but a thief in secret."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "His respectable public life and his secret yearly robberies, linked to the description."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-04-s4",
+          "kind": "short",
+          "outcome": "E10FP-04-1",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "Horace Danby was a careful planner, yet he was caught. Where did he go wrong? Answer in 40–50 words.",
+          "valuePoints": [
+            "He trusted a stranger without checking who she really was.",
+            "Eager to please her, he took off his gloves and opened the safe bare-handed, leaving fingerprints.",
+            "His overconfidence — scorning 'foolish' owners — made him careless.",
+            "His hay fever made him sneeze, and the lady said she heard him from the top of the house."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "At least two mistakes — trusting the lady, removing his gloves, overconfidence — and how they led to his arrest."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-04-l1",
+          "kind": "long",
+          "lifeSkill": "Critical thinking",
+          "outcome": "E10FP-04-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Horace Danby told the young lady, 'I steal only from those who have a lot of money. I steal for a very good reason.' Write an article for your school magazine, in about 100–120 words, titled 'Can a Good Reason Justify a Wrong Action?' Use Horace's story, and give your own reasoned view on whether the ends can justify the means.",
+          "valuePoints": [
+            "Article format: title, and an opening that sets out the question.",
+            "Horace's reasoning: he stole only from the rich, to buy books he loved.",
+            "Why the reasoning fails: stealing harms others whatever the motive, and he kept breaking the law and his promise.",
+            "A wider example or argument — a wrong act does not become right because of the purpose behind it.",
+            "A clear, reasoned conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Examines Horace's justification and reaches a reasoned view of whether intentions justify actions, going beyond the story."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Article format with a title; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-04-l2",
+          "kind": "long",
+          "lifeSkill": "Self-awareness",
+          "outcome": "E10FP-04-1",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Horace Danby is now the assistant librarian in the prison, and often thinks of the young lady who tricked him. Imagine you are Horace. Write a diary entry, in about 100–120 words, looking back honestly at what happened at Shotover Grange and at what you have learnt about yourself.",
+          "valuePoints": [
+            "Diary format: date, first person, reflective tone.",
+            "An account of how he was tricked — trusting the lady, opening the safe without gloves.",
+            "Honest recognition of his own faults: overconfidence, and a life of secret stealing.",
+            "What he has learnt — that he too was 'foolish', and that being deceived does not make his own stealing right.",
+            "A resolution or thought about the future."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Events recalled accurately, with honest reflection on Horace's own faults and a lesson learnt."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Diary format (date, first person); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "questions": [
+        {
+          "id": "jefp1-05-c1",
+          "kind": "competency",
+          "outcome": "E10FP-05-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "At Drury Lane, Griffin 'callously attacked the shopkeeper from behind' and robbed him. What does the word 'callously' reveal about Griffin?",
+          "options": [
+            {
+              "text": "He was too frightened to face the shopkeeper.",
+              "correct": false
+            },
+            {
+              "text": "He was clumsy because of the cold.",
+              "correct": false
+            },
+            {
+              "text": "He cared nothing for the harm he did to others.",
+              "correct": true
+            },
+            {
+              "text": "He regretted hurting a man who had helped him.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Callously' means without pity or concern. Griffin attacks an innocent shopkeeper simply to escape unseen, and then robs him of all his money — he puts his own needs above anyone else's safety."
+        },
+        {
+          "id": "jefp1-05-c2",
+          "kind": "competency",
+          "outcome": "E10FP-05-1",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "Why did Mr and Mrs Hall decide to look into the scientist's room early that morning?",
+          "options": [
+            {
+              "text": "His door, usually shut and locked, was wide open, and the chance seemed too good to miss.",
+              "correct": true
+            },
+            {
+              "text": "They heard him shouting for help.",
+              "correct": false
+            },
+            {
+              "text": "The constable had asked them to search it.",
+              "correct": false
+            },
+            {
+              "text": "He had asked Mrs Hall to change the bedclothes.",
+              "correct": false
+            }
+          ],
+          "explanation": "The text says the door was 'wide open. Usually it was shut and locked, and he was furious if anyone entered his room. The opportunity seemed too good to be missed.' Curiosity about their secretive guest drew them in."
+        },
+        {
+          "id": "jefp1-05-c3",
+          "kind": "competency",
+          "outcome": "E10FP-05-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "Why did the villagers suspect the strange scientist of the burglary at the clergyman's home?",
+          "options": [
+            {
+              "text": "Someone had seen him near the clergyman's study.",
+              "correct": false
+            },
+            {
+              "text": "The clergyman recognised his bandages.",
+              "correct": false
+            },
+            {
+              "text": "He had threatened the clergyman the day before.",
+              "correct": false
+            },
+            {
+              "text": "He suddenly had ready cash soon after admitting he had no money.",
+              "correct": true
+            }
+          ],
+          "explanation": "'Suspicion grew even stronger when he suddenly produced some ready cash, though he had admitted not long before that he had no money.' Nobody had seen the thief, so the sudden money was the clue."
+        },
+        {
+          "id": "jefp1-05-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-05-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "Griffin, the scientist, had carried out experiment after experiment to prove that the human body could become invisible. Finally he swallowed certain rare drugs and his body became as transparent as a sheet of glass -- though it also remained as solid as glass.\nBrilliant scientist though he was, Griffin was rather a lawless person. His landlord disliked him and tried to eject him. In revenge Griffin set fire to the house. To get away without being seen he had to remove his clothes. Thus it was that he became a homeless wanderer, without clothes, without money, and quite invisible -- until he happened to step in some mud, and left footprints as he walked!",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Griffin's body became invisible because he",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "wore a special sheet of glass",
+                  "correct": false
+                },
+                {
+                  "text": "swallowed certain rare drugs",
+                  "correct": true
+                },
+                {
+                  "text": "set fire to his landlord's house",
+                  "correct": false
+                },
+                {
+                  "text": "removed all his clothes",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) — 'he swallowed certain rare drugs and his body became as transparent as a sheet of glass'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which word in the extract means 'to force someone to leave a place'?",
+              "marks": 1,
+              "answer": "'eject'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Griffin had to remove his clothes because",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "they had caught fire",
+                  "correct": false
+                },
+                {
+                  "text": "they were muddy",
+                  "correct": false
+                },
+                {
+                  "text": "he wanted to test his invisibility",
+                  "correct": false
+                },
+                {
+                  "text": "he had to get away without being seen",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) — 'To get away without being seen he had to remove his clothes.'"
+            },
+            {
+              "type": "sa",
+              "prompt": "Which action in the extract best shows that Griffin was 'rather a lawless person'? Explain in 30–40 words.",
+              "marks": 2,
+              "answer": "When his landlord disliked him and tried to eject him, Griffin set fire to the house in revenge. Instead of accepting the landlord's decision, he committed a serious, dangerous crime. (1 mark: setting fire to the house; 1 mark: why it shows lawlessness.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-05-e2",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-05-1",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "All of a sudden Mrs Hall heard a sniff close to her ear. A moment later the hat on the bedpost leapt up and dashed itself into her face. Then the bedroom chair became alive. Springing into the air it charged straight at her, legs foremost. As she and her husband turned away in terror, the extraordinary chair pushed them both out of the room and then appeared to slam and lock the door after them.\nMrs Hall almost fell down the stairs in hysterics. She was convinced that the room was haunted by spirits, and that the stranger had somehow caused these to enter into her furniture.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The 'sniff close to her ear' was most probably made by",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the invisible Griffin standing in the room",
+                  "correct": true
+                },
+                {
+                  "text": "a spirit haunting the furniture",
+                  "correct": false
+                },
+                {
+                  "text": "Mr Hall, who had a cold",
+                  "correct": false
+                },
+                {
+                  "text": "the clergyman hiding behind the door",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — Griffin, invisible without his clothes and bandages, was in the room; it was he who threw the hat and moved the chair."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What did Mrs Hall believe had happened to her furniture?",
+              "marks": 1,
+              "answer": "That the room was haunted by spirits which the stranger had somehow caused to enter her furniture."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The word 'hysterics', as used in the extract, means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "loud laughter at a joke",
+                  "correct": false
+                },
+                {
+                  "text": "a state of deep sleep",
+                  "correct": false
+                },
+                {
+                  "text": "a fit of uncontrollable fear and excitement",
+                  "correct": true
+                },
+                {
+                  "text": "a sudden fall caused by illness",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) a fit of uncontrollable fear and excitement."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why did the events in the room seem supernatural to Mr and Mrs Hall, though they had a simple explanation? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "The room looked empty and his clothes and bandages lay about, so they could not see anyone. The hat and chair seemed to move by themselves, but it was the invisible Griffin throwing them. (1 mark: why it seemed supernatural; 1 mark: the real explanation.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-05-s1",
+          "kind": "short",
+          "outcome": "E10FP-05-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "How did Griffin become a homeless wanderer in London, and how did two boys come to follow him? Answer in 40–50 words.",
+          "valuePoints": [
+            "His landlord tried to eject him, and Griffin set fire to the house in revenge.",
+            "To escape unseen he removed his clothes, and was left without clothes or money.",
+            "He stepped in some mud and left footprints as he walked.",
+            "Two boys saw fresh muddy footprints appearing from nowhere and followed them until they faded."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Why he became a homeless wanderer and how his muddy footprints gave him away."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-05-s2",
+          "kind": "short",
+          "outcome": "E10FP-05-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "What did Griffin do inside the big London store, and why did he have to escape from it? Answer in 40–50 words.",
+          "valuePoints": [
+            "It was mid-winter, so he slipped into the store for warmth.",
+            "After closing time he broke open boxes and dressed in warm clothes, shoes, an overcoat and a wide-brimmed hat.",
+            "He ate cold meat, coffee, sweets and wine, and slept on a pile of quilts.",
+            "He overslept; when assistants saw him he panicked and ran, escaping only by taking off his clothes."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "What he did in the store and why and how he escaped."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-05-s3",
+          "kind": "short",
+          "outcome": "E10FP-05-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "'Griffin was rather a lawless person.' Support this statement with examples from the story. Answer in 40–50 words.",
+          "valuePoints": [
+            "He set fire to his landlord's house in revenge.",
+            "He broke into a London store and took clothes and food.",
+            "He attacked a shopkeeper at Drury Lane from behind and robbed him.",
+            "He stole the housekeeping money from the clergyman's desk, and resisted arrest, knocking Jaffers unconscious."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "At least three lawless acts from the story, correctly described."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-05-s4",
+          "kind": "short",
+          "outcome": "E10FP-05-2",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "How would you assess Griffin as a scientist? Answer in 40–50 words.",
+          "valuePoints": [
+            "He was brilliant and persistent: after experiment after experiment he made the human body invisible.",
+            "But he used his discovery for selfish and criminal ends — theft, attacks and escaping the law.",
+            "He did not think ahead: invisibility left him cold, homeless and hunted.",
+            "A great discovery without a sense of responsibility made him dangerous rather than useful."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "His brilliance as a scientist balanced against his misuse of the discovery."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-05-l1",
+          "kind": "long",
+          "lifeSkill": "Critical thinking",
+          "outcome": "E10FP-05-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Griffin made a remarkable discovery but used it to steal, attack people and escape the law. You are to speak in the school assembly on Science Day. Write a speech, in about 100–120 words, on 'Every Discovery Brings a Responsibility', using Griffin's story and one or two ways in which science today can be used well or badly.",
+          "valuePoints": [
+            "Speech format: greeting, topic introduced, closing thanks.",
+            "Griffin's brilliance, and how he misused invisibility for selfish and criminal ends.",
+            "The idea that knowledge itself is neutral; its use decides whether it helps or harms.",
+            "One or two present-day examples of science used well or badly.",
+            "A conclusion on the responsibility of scientists and of all who use science."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Draws on Griffin's misuse of his discovery and argues for responsible use of science beyond the story."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Speech format (greeting, introduction, conclusion); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-05-l2",
+          "kind": "long",
+          "lifeSkill": "Empathy",
+          "outcome": "E10FP-05-1",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Mrs Hall made every effort to be friendly to the strange guest and excused his irritable temper — and was then terrified in her own house. Imagine you are Mrs Hall. Write a diary entry, in about 100–120 words, on the evening after the scientist threw off his bandages in the bar: what you felt, and whether you would welcome a stranger again.",
+          "valuePoints": [
+            "Diary format: date, first person, reflective tone.",
+            "Events recalled: the hat and chair attacking her, her mother's chair, the headless man and Jaffers' struggle.",
+            "Her feelings: fear, shock, hurt that her kindness was repaid this way.",
+            "A reasoned thought on whether to trust and welcome strangers again — kindness with caution.",
+            "Some sense of how odd and isolated the stranger himself seemed."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Feelings and events drawn accurately from the story, with a thoughtful view on welcoming strangers."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Diary format (date, first person); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "questions": [
+        {
+          "id": "jefp1-06-c1",
+          "kind": "competency",
+          "outcome": "E10FP-06-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "In the seventh grade Ebright entered a county science fair and won nothing. What did the loss teach him?",
+          "options": [
+            {
+              "text": "That science fairs favoured older students",
+              "correct": false
+            },
+            {
+              "text": "That the winners had tried to do real experiments, not simply make a neat display",
+              "correct": true
+            },
+            {
+              "text": "That he should give up studying insects",
+              "correct": false
+            },
+            {
+              "text": "That frog tissues were a better subject than butterflies",
+              "correct": false
+            }
+          ],
+          "explanation": "His entry was slides of frog tissues. 'He realised the winners had tried to do real experiments, not simply make a neat display', and he resolved: 'for the next year's fair I would have to do a real experiment.'"
+        },
+        {
+          "id": "jefp1-06-c2",
+          "kind": "competency",
+          "outcome": "E10FP-06-3",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "Ebright worked in summer 'at the entomology laboratory of the Walter Reed Army Institute of Research'. Why was an entomology laboratory a fitting place for him?",
+          "options": [
+            {
+              "text": "It studied the chemistry of rocks and fossils.",
+              "correct": false
+            },
+            {
+              "text": "It trained army officers in debating.",
+              "correct": false
+            },
+            {
+              "text": "Entomology is the study of insects, and his research was on monarch butterflies.",
+              "correct": true
+            },
+            {
+              "text": "It was the laboratory where the Proceedings were printed.",
+              "correct": false
+            }
+          ],
+          "explanation": "The glossary defines entomology as 'the study of insects'. Ebright's research on the gold spots of the monarch pupa was insect research, so the laboratory suited his work."
+        },
+        {
+          "id": "jefp1-06-c3",
+          "kind": "competency",
+          "outcome": "E10FP-06-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "Mr Weiherer said Richard 'was competitive, but not in a bad sense'. What did he mean?",
+          "options": [
+            {
+              "text": "Richard wanted to do the best job he could, not win merely for a prize.",
+              "correct": true
+            },
+            {
+              "text": "Richard never entered competitions he might lose.",
+              "correct": false
+            },
+            {
+              "text": "Richard helped his rivals so that they would win.",
+              "correct": false
+            },
+            {
+              "text": "Richard competed only in debating, never in science.",
+              "correct": false
+            }
+          ],
+          "explanation": "Mr Weiherer explained: 'Richard wasn't interested in winning for winning's sake or winning to get a prize. Rather, he was winning because he wanted to do the best job he could.'"
+        },
+        {
+          "id": "jefp1-06-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-06-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "From the first he had a driving curiosity along with a bright mind. He also had a mother who encouraged his interest in learning. She took him on trips, bought him telescopes, microscopes, cameras, mounting materials, and other equipment and helped him in many other ways.\n\"I was his only companion until he started school,\" his mother said. \"After that I would bring home friends for him. But at night we just did things together. Richie was my whole life after his father died when Richie was in third grade.\"\nShe and her son spent almost every evening at the dining room table. \"If he didn't have things to do, I found work for him -- not physical work, but learning things,\" his mother said. \"He liked it. He wanted to learn.\"",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The phrase 'a driving curiosity' suggests that Ebright's curiosity was",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "occasional and easily lost",
+                  "correct": false
+                },
+                {
+                  "text": "limited to cars and machines",
+                  "correct": false
+                },
+                {
+                  "text": "strong enough to push him constantly to learn more",
+                  "correct": true
+                },
+                {
+                  "text": "forced on him by his mother",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) — 'driving' means a powerful force that keeps pushing him forward."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Name any two things Ebright's mother bought him to encourage his interest in learning.",
+              "marks": 1,
+              "answer": "Any two of: telescopes, microscopes, cameras, mounting materials (and other equipment)."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The work his mother found for him in the evenings was",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "learning things",
+                  "correct": true
+                },
+                {
+                  "text": "household chores",
+                  "correct": false
+                },
+                {
+                  "text": "physical exercise",
+                  "correct": false
+                },
+                {
+                  "text": "tagging butterflies for money",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — 'not physical work, but learning things'."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why was Ebright's mother such an important influence in his life? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "After his father died she was his only companion and did things with him every evening. She encouraged his learning with trips, equipment and work, and later got him the book that opened the world of science to him. (1 mark: her closeness; 1 mark: how she encouraged his learning.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-06-e2",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-06-2",
+          "difficulty": "HARD",
+          "marks": 5,
+          "extract": "\"Richard was competitive,\" Mr Weiherer continued, \"but not in a bad sense.\" He explained, \"Richard wasn't interested in winning for winning's sake or winning to get a prize. Rather, he was winning because he wanted to do the best job he could. For the right reasons, he wants to be the best.\"\nAnd that is one of the ingredients in the making of a scientist. Start with a first-rate mind, add curiosity, and mix in the will to win for the right reasons. Ebright has these qualities. From the time the book, The Travels of Monarch X, opened the world of science to him, Richard Ebright has never lost his scientific curiosity.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Mr Weiherer, who speaks in the extract, was Ebright's",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "college room-mate",
+                  "correct": false
+                },
+                {
+                  "text": "science fair judge",
+                  "correct": false
+                },
+                {
+                  "text": "research supervisor at Harvard",
+                  "correct": false
+                },
+                {
+                  "text": "social studies teacher and adviser to the Debating and Model United Nations clubs",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) his social studies teacher and adviser to both clubs."
+            },
+            {
+              "type": "vsa",
+              "prompt": "The writer compares the making of a scientist to following a recipe. Which three 'ingredients' does he name?",
+              "marks": 1,
+              "answer": "A first-rate mind, curiosity, and the will to win for the right reasons."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'The Travels of Monarch X' is mentioned in the extract because it",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "opened the world of science to Ebright",
+                  "correct": true
+                },
+                {
+                  "text": "was written by Ebright's teacher",
+                  "correct": false
+                },
+                {
+                  "text": "won Ebright a prize at a science fair",
+                  "correct": false
+                },
+                {
+                  "text": "described Ebright's theory of cell life",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — the book, about how monarch butterflies migrate to Central America, 'opened the world of science to him'."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does 'winning for the right reasons' mean? Illustrate with one example from Ebright's life. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "It means competing to do one's best work, not just for prizes. After losing at a county science fair, Ebright realised the winners had done real experiments, not neat displays, and resolved: 'for the next year's fair I would have to do a real experiment'. (1 mark: meaning; 1 mark: a correct example.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-06-s1",
+          "kind": "short",
+          "outcome": "E10FP-06-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "How did the book 'The Travels of Monarch X' become a turning point in Richard Ebright's life? Answer in 40–50 words.",
+          "valuePoints": [
+            "By the second grade he had collected all the butterfly species around his hometown, and might have stopped collecting.",
+            "His mother got him the book, which told how monarch butterflies migrate to Central America.",
+            "It invited readers to tag butterflies for Dr Frederick A. Urquhart's research; his mother wrote to Dr Urquhart.",
+            "This opened the world of science to him and led to his later experiments."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "What the book was about and how it turned his hobby into scientific work."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-06-s2",
+          "kind": "short",
+          "outcome": "E10FP-06-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Why did Ebright begin raising butterflies in his basement, and why did he later lose interest in tagging them? Answer in 40–50 words.",
+          "valuePoints": [
+            "The collecting season around Reading lasts only six weeks, and chasing butterflies one by one catches very few.",
+            "He caught a female monarch, raised her eggs through egg, caterpillar, pupa and adult, then tagged and released them.",
+            "Tagging was tedious and gave little feedback.",
+            "Only two of his tagged butterflies were recaptured, not more than seventy-five miles from his home."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The reason for raising butterflies and the reasons he lost interest in tagging."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-06-s3",
+          "kind": "short",
+          "outcome": "E10FP-06-1",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "How did Ebright's school research on the gold spots of a monarch pupa lead, step by step, to his theory about cell life? Answer in 40–50 words.",
+          "valuePoints": [
+            "He asked the purpose of the twelve tiny gold spots, which everyone assumed were ornamental.",
+            "With another student he built a device showing the spots produced a hormone needed for the butterfly's full development.",
+            "He showed wing cells developed into normal scales only if fed the hormone, and later identified its chemical structure.",
+            "At Harvard, X-ray photos of a hormone's structure, with his hormone findings, gave him the idea of how a cell 'reads' its DNA."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The question about the spots, the hormone discovery and its link to the theory of cell life, in the right order."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-06-s4",
+          "kind": "short",
+          "outcome": "E10FP-06-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Richard Ebright was interested in science, but not so deeply that he had no time for other interests. What were these interests, and what do they show about him? Answer in 40–50 words.",
+          "valuePoints": [
+            "He became a champion debater and public speaker.",
+            "He was a good canoeist and an all-around outdoors-person, and an expert photographer of nature and scientific exhibits.",
+            "In high school he gave energy to the Debating and Model United Nations clubs, putting in three or four hours at night on debate research.",
+            "It shows he was energetic, well-rounded and always gave extra effort."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "At least two of his other interests, and what they reveal about his character."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-06-l1",
+          "kind": "long",
+          "lifeSkill": "Coping with stress and setbacks",
+          "outcome": "E10FP-06-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Ebright said it was 'really a sad feeling to sit there and not get anything while everybody else had won something' — yet that loss taught him what real science is. Write an article for your school magazine, in about 100–120 words, titled 'What a Loss Can Teach Us'. Draw on Ebright's experience, and suggest how students can turn a disappointment into a step forward.",
+          "valuePoints": [
+            "Article format: title, and an opening that sets out the idea.",
+            "Ebright's seventh-grade loss with slides of frog tissues, and what he realised about real experiments.",
+            "How he acted on it: wrote to Dr Urquhart for ideas and went on to win at county and international fairs.",
+            "Practical advice for students: reflect on what went wrong, seek guidance, try again.",
+            "A reasoned conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses Ebright's loss accurately and extends it to real advice for handling disappointment."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Article format with a title; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-06-l2",
+          "kind": "long",
+          "lifeSkill": "Interpersonal relationships",
+          "outcome": "E10FP-06-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Ebright's mother, Dr Urquhart and his teacher Mr Weiherer each helped him at a different stage. Imagine you are Richard Ebright after graduating from Harvard. Write a letter, in about 100–120 words, to Mr Weiherer thanking him and explaining how the people around you helped make you a scientist.",
+          "valuePoints": [
+            "Informal letter format: address, date, salutation, closing.",
+            "Thanks to Mr Weiherer for opening his mind to new ideas through the Debating and Model United Nations clubs.",
+            "The role of his mother (companionship, equipment, the book) and of Dr Urquhart (tagging, ideas for experiments).",
+            "Reflection on how encouragement and guidance, together with his own effort, shaped him.",
+            "Achievements stated accurately — for example, graduating from Harvard with highest honours, second in a class of 1,510."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Gratitude and the roles of mother, Dr Urquhart and Mr Weiherer, accurate to the chapter and reflecting on the value of mentors."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Informal letter format (address, date, salutation, closing); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "questions": [
+        {
+          "id": "jefp1-07-c1",
+          "kind": "competency",
+          "outcome": "E10FP-07-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "At the end of 'The Necklace', Mme Forestier says, 'Mine were false. They were not worth over five hundred francs!' What makes this ending ironic?",
+          "options": [
+            {
+              "text": "Matilda had never really lost the necklace at the ball.",
+              "correct": false
+            },
+            {
+              "text": "The Loisels spent ten years of hardship paying for a necklace that was almost worthless.",
+              "correct": true
+            },
+            {
+              "text": "Mme Forestier had known all along that the necklace had been replaced.",
+              "correct": false
+            },
+            {
+              "text": "Loisel had secretly bought a false necklace to save money.",
+              "correct": false
+            }
+          ],
+          "explanation": "The Loisels paid thirty-six thousand francs for a replacement and 'it has taken us ten years to pay for it'. Only at the end do they learn the original 'was not worth over five hundred francs' — their sacrifice was for nothing, the opposite of what they believed."
+        },
+        {
+          "id": "jefp1-07-c2",
+          "kind": "competency",
+          "outcome": "E10FP-07-2",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "When her husband brings home the invitation to the Minister's party, Matilda throws it 'spitefully upon the table'. What does this reaction reveal about her?",
+          "options": [
+            {
+              "text": "She is dissatisfied because she feels she has nothing fit to wear among rich people.",
+              "correct": true
+            },
+            {
+              "text": "She dislikes the Minister and does not want to meet him.",
+              "correct": false
+            },
+            {
+              "text": "She is too shy to go to any party at all.",
+              "correct": false
+            },
+            {
+              "text": "She is angry that her husband has come home late.",
+              "correct": false
+            }
+          ],
+          "explanation": "She at once asks, 'What do you suppose I have to wear to such a thing as that?' and weeps because she has 'no dress'. Her reaction comes from her discontent with her modest means, not from anything about the party itself."
+        },
+        {
+          "id": "jefp1-07-c3",
+          "kind": "competency",
+          "outcome": "E10FP-07-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "When Matilda asks for four hundred francs for a dress, Loisel 'turned a little pale' but said, 'Very well. I will give you four hundred francs.' What does this show about him?",
+          "options": [
+            {
+              "text": "He suspected that she would waste the money.",
+              "correct": false
+            },
+            {
+              "text": "He was angry and gave the money only to end the quarrel.",
+              "correct": false
+            },
+            {
+              "text": "He hoped she would change her mind and stay at home.",
+              "correct": false
+            },
+            {
+              "text": "He was willing to give up his own wish for her happiness.",
+              "correct": true
+            }
+          ],
+          "explanation": "He turned pale because 'he had saved just this sum to buy a gun' to join hunting parties the next summer. Giving the money anyway shows a loving, self-sacrificing husband."
+        },
+        {
+          "id": "jefp1-07-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-07-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "She suffered incessantly, feeling herself born for all delicacies and luxuries. She suffered from the poverty of her apartment, the shabby walls and the worn chairs. All these things tortured and angered her.\nWhen she seated herself for dinner opposite her husband who uncovered the tureen with a delighted air, saying, \"Oh! the good potpie! I know nothing better than that...,\" she would think of elegant dinners, of shining silver; she thought of the exquisite food served in marvellous dishes. She had neither frocks nor jewels, nothing. And she loved only those things.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The word 'incessantly', as used in the extract, means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "occasionally",
+                  "correct": false
+                },
+                {
+                  "text": "silently",
+                  "correct": false
+                },
+                {
+                  "text": "continuously",
+                  "correct": true
+                },
+                {
+                  "text": "deliberately",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) continuously."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which words in the extract show that Matilda's husband was happy with simple things?",
+              "marks": 1,
+              "answer": "'uncovered the tureen with a delighted air' / 'Oh! the good potpie! I know nothing better than that'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The scene at the dinner table shows that",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Matilda longs for luxury while her husband is content with what they have",
+                  "correct": true
+                },
+                {
+                  "text": "both husband and wife dislike the food they can afford",
+                  "correct": false
+                },
+                {
+                  "text": "the husband is greedy and the wife is generous",
+                  "correct": false
+                },
+                {
+                  "text": "Matilda has cooked an elegant dinner for her husband",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — he is delighted with a potpie, while she thinks of 'elegant dinners' and 'shining silver'."
+            },
+            {
+              "type": "sa",
+              "prompt": "How did Matilda's belief that she was 'born for all delicacies and luxuries' affect her life? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "It made her permanently unhappy. The shabby walls and worn chairs 'tortured and angered her', she dreamt of luxuries she could not have, and she could not enjoy the simple life and loving husband she had. (1 mark: her constant unhappiness; 1 mark: an example from the extract.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-07-e2",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-07-1",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "Mme Loisel now knew the horrible life of necessity. She did her part, however, completely, heroically. It was necessary to pay this frightful debt. She would pay it. They sent away the maid, they changed their lodgings; they rented some rooms in an attic.\nShe learned the odious work of a kitchen. She washed the dishes. She washed the soiled linen, their clothes and dishcloths, which she hung on the line to dry; she took down the refuse to the street each morning and brought up the water, stopping at each landing to catch her breath.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The word 'odious' is closest in meaning to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "simple",
+                  "correct": false
+                },
+                {
+                  "text": "unfamiliar",
+                  "correct": false
+                },
+                {
+                  "text": "well-paid",
+                  "correct": false
+                },
+                {
+                  "text": "hateful",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) hateful — very unpleasant."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What steps did the Loisels take to cut down their expenses?",
+              "marks": 1,
+              "answer": "They sent away the maid, changed their lodgings and rented some rooms in an attic."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'She did her part, however, completely, heroically.' This line presents Matilda as",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "careless and still dreaming of luxury",
+                  "correct": false
+                },
+                {
+                  "text": "determined to meet her responsibility for the debt",
+                  "correct": true
+                },
+                {
+                  "text": "bitter and blaming her husband for the loss",
+                  "correct": false
+                },
+                {
+                  "text": "waiting for Mme Forestier to forgive the debt",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) — 'It was necessary to pay this frightful debt. She would pay it.'"
+            },
+            {
+              "type": "sa",
+              "prompt": "How is the life described in the extract different from the life Matilda had dreamt of? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "She had dreamt of elegant dinners, frocks and jewels. Now she lives in an attic, washes dishes and linen, carries refuse and water, and is breathless on the stairs — a life of hard labour and poverty. (1 mark: her dream; 1 mark: her new life.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-07-s1",
+          "kind": "short",
+          "outcome": "E10FP-07-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "What was the cause of Matilda's ruin, and how could she have avoided it? Answer in 40–50 words.",
+          "valuePoints": [
+            "Her pride and discontent: she felt born for luxuries and would not go to the ball without jewels, thinking there was 'nothing more humiliating' than a shabby air among rich women.",
+            "She hurried away from the ball so that the other women would not notice her modest wraps.",
+            "She did not tell Mme Forestier the truth about losing the necklace.",
+            "She could have avoided it by being content with simple things (such as natural flowers) or by confessing honestly."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The cause of her ruin (pride, vanity, not confessing) and one sensible way she could have avoided it."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-07-s2",
+          "kind": "short",
+          "outcome": "E10FP-07-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "How did the Loisels replace the lost necklace, and what did it cost them? Answer in 40–50 words.",
+          "valuePoints": [
+            "Loisel searched the streets, went to the police and cab offices, and advertised a reward, but found nothing.",
+            "Matilda wrote to her friend that the clasp was broken, to gain time.",
+            "In a shop of the Palais-Royal they found a similar diamond necklace valued at forty thousand francs and bought it for thirty-six thousand.",
+            "Loisel used the eighteen thousand francs his father had left him and borrowed the rest, even from usurers.",
+            "Repaying the debt took ten years of hard work and poverty."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "How the necklace was replaced (the shop, the price, the borrowing) and the ten years of hardship it cost."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-07-s3",
+          "kind": "short",
+          "outcome": "E10FP-07-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Matilda's husband, M. Loisel, is very different from her. Describe his character with examples from the story. Answer in 40–50 words.",
+          "valuePoints": [
+            "Loving and eager to please: he brings the invitation hoping it will make her happy.",
+            "Self-sacrificing: he gives her the four hundred francs he had saved for a gun.",
+            "Content with simple things: he is delighted with a potpie.",
+            "Responsible and hardworking: he searches for the necklace, borrows to replace it, and works evenings and nights copying at five sous a page."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Two or more of his qualities, each supported by an example from the story."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-07-s4",
+          "kind": "short",
+          "outcome": "E10FP-07-2",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "'How small a thing will ruin or save one!' How does this thought apply to Matilda's life? Answer in 40–50 words.",
+          "valuePoints": [
+            "One borrowed necklace, lost on a single evening, changed the whole course of the Loisels' life.",
+            "To replace it they fell into a debt that took ten years of labour to repay; Matilda became 'old', 'strong, hard'.",
+            "A small act — telling Mme Forestier the truth — would have shown that the necklace was false and saved them.",
+            "The ball that seemed her moment of glory became the cause of her ruin."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The 'small thing' (the lost necklace / the unspoken truth) linked to the ruin it caused."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-07-l1",
+          "kind": "long",
+          "lifeSkill": "Decision making",
+          "outcome": "E10FP-07-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "When the necklace was lost, the Loisels chose to hide the truth and replace it secretly — a decision that cost them ten years. Your school is holding an assembly on the theme 'Honesty is the best policy'. Write a speech, in about 100–120 words, using Matilda's story to show how a single decision made in panic can shape a life, and how young people can make better choices when they make a mistake.",
+          "valuePoints": [
+            "Speech format: greeting the audience, a clear opening, and a closing line.",
+            "The Loisels' decision: pretending the clasp was broken and buying a replacement instead of confessing.",
+            "The consequence: ten years of debt and hardship, and the discovery that the necklace was false.",
+            "How honesty could have changed the outcome.",
+            "Practical advice for students: pause before deciding, admit a mistake early, ask a trusted person for help."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses the Loisels' decision and its consequences, and extends it to sensible advice on owning up to mistakes."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Speech format (greeting, opening, conclusion); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-07-l2",
+          "kind": "long",
+          "lifeSkill": "Self-awareness",
+          "outcome": "E10FP-07-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Matilda was unhappy long before she lost the necklace, because she always wanted what she did not have. Imagine you are Matilda on the evening after meeting Mme Forestier on the Champs-Elysees. Write a diary entry, in about 100–120 words, reflecting on your pride, the ten years of hard work, and what you now understand about being content with what life gives you.",
+          "valuePoints": [
+            "Diary format: date, first person, reflective tone.",
+            "Her shock at learning the necklace was false, and the ten years it cost.",
+            "Honest recognition of her own pride and discontent — the dreams of luxury, the fear of looking poor among rich women.",
+            "Some pride in having paid the debt ('decently content').",
+            "A lesson about contentment, honesty or valuing her husband and what she had."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Feelings, honest reflection on her own character and a lesson learnt, drawn from the story and going beyond it."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Diary format (date, first person); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "questions": [
+        {
+          "id": "jefp1-08-c1",
+          "kind": "competency",
+          "outcome": "E10FP-08-2",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "'The teacher's voice was so soft and soothing! In all her life she had never been called like that.' Why did this moment matter so much to Bholi?",
+          "options": [
+            {
+              "text": "The teacher had promised to find her a good husband.",
+              "correct": false
+            },
+            {
+              "text": "She was glad to be allowed to go home early.",
+              "correct": false
+            },
+            {
+              "text": "It was the first time anyone had spoken to her with gentleness and respect.",
+              "correct": true
+            },
+            {
+              "text": "She recognised the teacher as someone from her own family.",
+              "correct": false
+            }
+          ],
+          "explanation": "At home Bholi was neglected and called a fool, and other children mimicked her stammer. The text says 'It touched her heart' — the teacher's kindness was new to her, and it gave her the courage to try to speak."
+        },
+        {
+          "id": "jefp1-08-c2",
+          "kind": "competency",
+          "outcome": "E10FP-08-1",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "Bholi's mother says, 'Send Bholi to school. As it is, there is little chance of her getting married... Let the teachers at school worry about her.' What does this show about how her family saw Bholi?",
+          "options": [
+            {
+              "text": "They believed school would help her find a rich husband.",
+              "correct": false
+            },
+            {
+              "text": "They saw her as a burden with little future worth planning for.",
+              "correct": true
+            },
+            {
+              "text": "They thought she was the cleverest of their daughters.",
+              "correct": false
+            },
+            {
+              "text": "They wanted her to become a teacher one day.",
+              "correct": false
+            }
+          ],
+          "explanation": "Her mother had just asked, 'If girls go to school, who will marry them?' She sends Bholi only because she thinks Bholi's chances of marriage are already poor, so the teachers can 'worry about her'. It shows neglect, not hope for her."
+        },
+        {
+          "id": "jefp1-08-c3",
+          "kind": "competency",
+          "outcome": "E10FP-08-2",
+          "difficulty": "HARD",
+          "marks": 1,
+          "stem": "Throughout the story she is called Bholi, 'the simpleton', but near the end the writer says, 'And Sulekha said in a voice that was calm and steady'. Why is her real name used at this point?",
+          "options": [
+            {
+              "text": "She is no longer the simpleton; she has become a confident, sensible young woman.",
+              "correct": true
+            },
+            {
+              "text": "Her father has changed her name after the wedding was cancelled.",
+              "correct": false
+            },
+            {
+              "text": "The guests at the wedding did not know her pet name.",
+              "correct": false
+            },
+            {
+              "text": "The teacher has asked everyone to call her by her school name.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Bholi' meant 'the simpleton'. By now she speaks 'without even the slightest stammer', rejects a greedy bridegroom and calmly plans to care for her parents and teach. Using 'Sulekha' marks this change."
+        },
+        {
+          "id": "jefp1-08-e1",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-08-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "\"Bholi.\" The teacher's voice was so soft and soothing! In all her life she had never been called like that. It touched her heart. \"Get up,\" said the teacher. It was not a command, but just a friendly suggestion. Bholi got up. \"Now tell me your name.\" Sweat broke out over her whole body. Would her stammering tongue again disgrace her? For the sake of this kind woman, however, she decided to make an effort. She had such a soothing voice; she would not laugh at her.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "'It was not a command, but just a friendly suggestion.' The teacher's manner is in sharp contrast to that of",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the Tehsildar, who opened the school",
+                  "correct": false
+                },
+                {
+                  "text": "her sister Champa, who gave her a dress",
+                  "correct": false
+                },
+                {
+                  "text": "the headmistress, who refused to admit her",
+                  "correct": false
+                },
+                {
+                  "text": "her father, who had shouted at her and called her a fool",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) — that morning Ramlal had shouted, 'What's the matter with you, you fool?'"
+            },
+            {
+              "type": "vsa",
+              "prompt": "Why did sweat break out over Bholi's body when she was asked her name?",
+              "marks": 1,
+              "answer": "She was afraid her stammering tongue would disgrace her again and the girls would laugh at her."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What made Bholi decide to 'make an effort' to speak?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "She wanted to impress the other girls in the class.",
+                  "correct": false
+                },
+                {
+                  "text": "She was afraid she would be punished.",
+                  "correct": false
+                },
+                {
+                  "text": "She trusted that this kind woman would not laugh at her.",
+                  "correct": true
+                },
+                {
+                  "text": "Her father had ordered her to answer the teacher.",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) — 'For the sake of this kind woman... she would not laugh at her.'"
+            },
+            {
+              "type": "sa",
+              "prompt": "How does this moment mark the beginning of a change in Bholi? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "For the first time someone treats her gently, and that trust makes her try to speak despite her fear. With the teacher's encouragement she manages to say her name, and a new confidence and hope begin. (1 mark: the teacher's kindness winning her trust; 1 mark: the first step towards confidence.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-08-e2",
+          "kind": "extract",
+          "source": "prose",
+          "outcome": "E10FP-08-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "Once again the veil was slipped back from the bride's face, but this time her eyes were not downcast. She was looking up, looking straight at her prospective husband, and in her eyes there was neither anger nor hate, only cold contempt.\nBishamber raised the garland to place it round the bride's neck; but before he could do so, Bholi's hand struck out like a streak of lightning and the garland was flung into the fire. She got up and threw away the veil.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The word 'downcast', as used in the extract, means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "full of tears",
+                  "correct": false
+                },
+                {
+                  "text": "looking downwards",
+                  "correct": true
+                },
+                {
+                  "text": "tightly closed",
+                  "correct": false
+                },
+                {
+                  "text": "shining with joy",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) looking downwards."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Name the figure of speech in 'Bholi's hand struck out like a streak of lightning'.",
+              "marks": 1,
+              "answer": "Simile — her movement is compared to a streak of lightning, showing how swift and sudden it was."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Bholi felt 'cold contempt' for Bishamber because he",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "had demanded five thousand rupees after seeing her pock-marks",
+                  "correct": true
+                },
+                {
+                  "text": "was old and walked with a limp",
+                  "correct": false
+                },
+                {
+                  "text": "came from another village",
+                  "correct": false
+                },
+                {
+                  "text": "had arrived with a noisy brass band",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — he humiliated her father for money; Bholi calls him 'a mean, greedy and contemptible coward'. She had been willing to marry 'this lame old man', so (b) is not the reason."
+            },
+            {
+              "type": "sa",
+              "prompt": "What change in Bholi is shown by 'this time her eyes were not downcast'? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Earlier she kept her face lowered and accepted what was decided for her. Now she looks straight at Bishamber — she has found the confidence and self-respect to judge him and to refuse the marriage. (1 mark: the earlier submissiveness; 1 mark: her new confidence and self-respect.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-08-s1",
+          "kind": "short",
+          "outcome": "E10FP-08-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "Why was Sulekha called 'Bholi', and why was her father worried about her? Answer in 40–50 words.",
+          "valuePoints": [
+            "At ten months she fell off a cot on her head, which perhaps damaged her brain, and she remained a backward child.",
+            "Smallpox at two years left her body disfigured by deep pockmarks.",
+            "She could not speak till five and then stammered; other children mimicked her.",
+            "Ramlal worried because she had 'neither good looks nor intelligence', so finding a bridegroom would be hard, unlike for her sisters."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Why she was called Bholi (the fall, being thought backward) and the reason for her father's worry."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-08-s2",
+          "kind": "short",
+          "outcome": "E10FP-08-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "How did Bholi's teacher play an important role in changing the course of her life? Answer in 40–50 words.",
+          "valuePoints": [
+            "She spoke to Bholi softly and kindly when everyone else laughed at or neglected her.",
+            "She encouraged her to speak ('Well done, well done') and told her to 'put the fear out of your heart'.",
+            "She gave her a picture book and the hope that education would bring respect and an end to being laughed at.",
+            "The education and confidence she gained let Bholi refuse Bishamber and plan to teach in the same school."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "What the teacher did (kindness, encouragement, education) and how it changed Bholi's life."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-08-s3",
+          "kind": "short",
+          "outcome": "E10FP-08-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Why did Bholi's parents accept Bishamber's proposal even though it was an unequal match? Answer in 40–50 words.",
+          "valuePoints": [
+            "He was well-to-do: a big shop, a house of his own and several thousand in the bank.",
+            "He was not asking for any dowry.",
+            "Being from another village, he did not know about her pock-marks and 'lack of sense'.",
+            "They feared that otherwise she might remain unmarried all her life — so they overlooked that he was almost Ramlal's age, limped and had grown-up children."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The parents' reasons for accepting, and what made the match unequal."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-08-s4",
+          "kind": "short",
+          "outcome": "E10FP-08-2",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "Why did Bholi at first agree to marry Bishamber, and why did she later refuse? What does this tell us about her? Answer in 40–50 words.",
+          "valuePoints": [
+            "She agreed for the sake of her family's izzat (honour).",
+            "She refused when Bishamber demanded five thousand rupees after seeing her pock-marks and humiliated her father.",
+            "She would not have 'such a mean, greedy and contemptible coward' as her husband.",
+            "It shows she was caring towards her family, yet had the self-respect and courage — gained through education — to stand up against injustice."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Why she agreed, why she refused, and one quality this reveals."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-08-l1",
+          "kind": "long",
+          "lifeSkill": "Critical thinking",
+          "outcome": "E10FP-08-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Bholi's mother once asked, 'If girls go to school, who will marry them?' Yet it was school that gave Bholi the voice to refuse a greedy bridegroom and plan a life of her own. Write an article for your school magazine, in about 100–120 words, titled 'Education Gives a Girl Her Voice', drawing on Bholi's story and on why demanding dowry is unjust.",
+          "valuePoints": [
+            "Article format: title, and an opening that sets out the idea.",
+            "The attitudes Bholi faced: neglect, being thought a burden, a marriage decided without asking her.",
+            "How education and a kind teacher gave her confidence, speech and self-respect.",
+            "Dowry as injustice: Bishamber's demand humiliated her father and treated her as something to be paid for.",
+            "A reasoned conclusion on educating girls and treating daughters and sons equally."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses Bholi's story and extends it to a reasoned argument about girls' education and dowry."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Article format with a title; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-08-l2",
+          "kind": "long",
+          "lifeSkill": "Empathy",
+          "outcome": "E10FP-08-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Years later, Sulekha is a teacher in the school where she learnt so much. A new student in her class stammers, and some classmates laugh at her. Imagine you are Sulekha. Write a letter, in about 100–120 words, to this student, sharing your own experience and encouraging her not to lose heart.",
+          "valuePoints": [
+            "Letter format: address, date, salutation, closing.",
+            "Sulekha's own experience: being mocked for her stammer and talking very little.",
+            "What helped her: a kind teacher, the advice to 'put the fear out of your heart', coming to school every day.",
+            "Warm encouragement suited to a child — her worth does not depend on how others see her.",
+            "A practical suggestion, and an offer of support."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Draws on Bholi's experience with understanding and offers sensitive, practical encouragement."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Letter format (address, date, salutation, closing); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "questions": [
+        {
+          "id": "jefp1-09-c1",
+          "kind": "competency",
+          "outcome": "E10FP-09-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "stem": "'The Book That Saved the Earth' is a satire. What is the chief target of its humour?",
+          "options": [
+            {
+              "text": "The poor design of Martian spaceships",
+              "correct": false
+            },
+            {
+              "text": "The Earthlings' habit of eating sandwiches",
+              "correct": false
+            },
+            {
+              "text": "Historians who exaggerate the past",
+              "correct": false
+            },
+            {
+              "text": "A vain leader who believes he is never wrong and misreads what he does not understand",
+              "correct": true
+            }
+          ],
+          "explanation": "Think-Tank calls himself 'most powerful and intelligent creature in the whole universe', makes everyone chant that he 'is never wrong', and then mistakes books for sandwiches and nursery rhymes for military threats. The play mocks such arrogance."
+        },
+        {
+          "id": "jefp1-09-c2",
+          "kind": "competency",
+          "outcome": "E10FP-09-2",
+          "difficulty": "EASY",
+          "marks": 1,
+          "stem": "On hearing 'The cow jumped over the moon', Think-Tank fears 'an interplanetary attack of millions of cows'. What is his basic mistake?",
+          "options": [
+            {
+              "text": "He does not believe that cows exist on Earth.",
+              "correct": false
+            },
+            {
+              "text": "He thinks the rhyme is about Mars.",
+              "correct": false
+            },
+            {
+              "text": "He takes a nonsense rhyme for children literally.",
+              "correct": true
+            },
+            {
+              "text": "He confuses the moon with the sun.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Hey diddle diddle' is a nursery rhyme meant for fun — even Oop laughs at 'The dish ran away with the spoon'. Think-Tank reads it as fact and concludes Earthlings have taught 'their domesticated animals musical culture and space techniques'."
+        },
+        {
+          "id": "jefp1-09-c3",
+          "kind": "competency",
+          "outcome": "E10FP-09-1",
+          "difficulty": "HARD",
+          "marks": 1,
+          "stem": "How does Noodle manage to correct Think-Tank's mistakes without offending him?",
+          "options": [
+            {
+              "text": "He contradicts him openly in front of the space crew.",
+              "correct": false
+            },
+            {
+              "text": "He offers his correction humbly, as a small bit of data, and lets Think-Tank take the credit.",
+              "correct": true
+            },
+            {
+              "text": "He sends secret messages to the invasion fleet.",
+              "correct": false
+            },
+            {
+              "text": "He waits until Think-Tank has left before speaking.",
+              "correct": false
+            }
+          ],
+          "explanation": "Noodle says 'an insignificant bit of data floated into my mind' and 'a cloudy piece of information is twirling around in my head'. Think-Tank then adopts the idea as his own: 'Naturally. That was my next point.'"
+        },
+        {
+          "id": "jefp1-09-e1",
+          "kind": "extract",
+          "source": "drama",
+          "outcome": "E10FP-09-1",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "NOODLE: Sir, sir. Great and Mighty Think-Tank. I beg your pardon, but an insignificant bit of data floated into my mind about those sandwiches.\nTHINK-TANK: It can't be worth much, but go ahead. Give us your trifling bit of data.\nNOODLE: Well, sir, I have seen surveyor films of those sandwiches. I noticed that the Earthlings did not eat them. They used them as some sort of communication device.\nTHINK-TANK: (haughtily) Naturally. That was my next point. These are actually communication sandwiches. Think-Tank is never wrong. Who is never wrong?",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The word 'trifling', as used by Think-Tank, means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "unimportant",
+                  "correct": true
+                },
+                {
+                  "text": "confusing",
+                  "correct": false
+                },
+                {
+                  "text": "secret",
+                  "correct": false
+                },
+                {
+                  "text": "surprising",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) unimportant."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What had Noodle noticed in the surveyor films?",
+              "marks": 1,
+              "answer": "That the Earthlings did not eat the 'sandwiches' (books) but used them as some sort of communication device."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'Naturally. That was my next point.' This reply shows that Think-Tank",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "is grateful to Noodle for his help",
+                  "correct": false
+                },
+                {
+                  "text": "has studied Earth carefully",
+                  "correct": false
+                },
+                {
+                  "text": "is only joking with Noodle",
+                  "correct": false
+                },
+                {
+                  "text": "cannot admit a mistake and takes credit for Noodle's idea",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) — he had just ordered Oop to eat a book, yet claims the correction as his own."
+            },
+            {
+              "type": "sa",
+              "prompt": "Think-Tank first dismisses Noodle's data and then adopts it. What does this reveal about the two characters? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Think-Tank is arrogant and vain: he calls Noodle's data 'trifling' and insists he is 'never wrong'. Noodle is humble and tactful, and more observant than his master, correcting him without hurting his pride. (1 mark: Think-Tank; 1 mark: Noodle.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-09-e2",
+          "kind": "extract",
+          "source": "drama",
+          "outcome": "E10FP-09-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "extract": "THINK-TANK: (screaming and holding his head) It's me! It's my Great and Mighty Balloon Brain. The Earthlings have seen me, and they're after me. \"Had a great fall!\" -- That means they plan to capture Mars Central Control and me! It's an invasion of Mars! Noodle, prepare a space capsule for me. I must escape without delay. Space people, you must leave Earth at once, but be sure to remove all traces of your visit. The Earthlings must not know that I know.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Think-Tank believes the picture of Humpty Dumpty is of him because",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the rhyme mentions Mars by name",
+                  "correct": false
+                },
+                {
+                  "text": "Noodle tells him that it is his portrait",
+                  "correct": false
+                },
+                {
+                  "text": "Humpty Dumpty, like him, has a huge egg-shaped head",
+                  "correct": true
+                },
+                {
+                  "text": "he once fell off a wall himself",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) — Think-Tank 'has a huge, egg-shaped head' and boasts of his 'balloon brain'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What does Think-Tank take the words 'Had a great fall!' to mean?",
+              "marks": 1,
+              "answer": "That the Earthlings plan to capture Mars Central Control and him — an invasion of Mars."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which quality of Think-Tank does this speech most clearly reveal?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Cowardice — his first thought is his own escape",
+                  "correct": true
+                },
+                {
+                  "text": "Courage in the face of danger",
+                  "correct": false
+                },
+                {
+                  "text": "Concern for the safety of the Earthlings",
+                  "correct": false
+                },
+                {
+                  "text": "Patience in studying the evidence",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) — 'Noodle, prepare a space capsule for me. I must escape without delay.'"
+            },
+            {
+              "type": "sa",
+              "prompt": "How does this misreading end up saving the Earth? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Believing Mars is about to be invaded, Think-Tank orders the crew to leave Earth and the invasion fleet to evacuate Mars for Alpha Centauri. So the Martian invasion of Earth never happens. (1 mark: his orders to flee; 1 mark: the invasion called off.)"
+            }
+          ]
+        },
+        {
+          "id": "jefp1-09-s1",
+          "kind": "short",
+          "outcome": "E10FP-09-1",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "Why was the twentieth century called the 'Era of the Book', and what does the Historian say was the strangest thing a book ever did? Answer in 40–50 words.",
+          "valuePoints": [
+            "In the twentieth century there were books about everything, 'from ant eaters to Zulus'.",
+            "Books taught people how to, when to, where to and why to; they illustrated, educated, punctuated and decorated.",
+            "The strangest thing a book did was to save the Earth.",
+            "A single book — Mother Goose, a book of nursery rhymes — stopped the Martian invasion of 2040."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Why it was the Era of the Book, and the book saving the Earth from the Martian invasion."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-09-s2",
+          "kind": "short",
+          "outcome": "E10FP-09-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "How does Think-Tank interpret 'Mistress Mary, quite contrary', and why is his reading absurd? Answer in 40–50 words.",
+          "valuePoints": [
+            "He decides the Earthlings have learnt to 'combine agriculture and mining' and can grow rare metals such as silver.",
+            "He believes they can grow cockle shells and even high explosives.",
+            "He tells Noodle to order the invasion fleet to hold.",
+            "It is absurd because it is a simple nursery rhyme; he takes playful words literally, while Oop only laughs at 'pretty maids growing in a garden'."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Think-Tank's interpretation and why it is a misreading of a nursery rhyme."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-09-s3",
+          "kind": "short",
+          "outcome": "E10FP-09-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "What happens when Think-Tank orders Captain Omega to eat the 'sandwich'? What does the scene show about the Martian crew? Answer in 40–50 words.",
+          "valuePoints": [
+            "Omega passes the order to Iota, saying she has not had her breakfast.",
+            "Iota passes it to Oop, claiming it would be impolite to eat before her Sergeant.",
+            "Oop bites a corner of the book, makes terrible faces and says it was 'dry as Martian dust'.",
+            "It shows the crew fear Think-Tank and dare not question him, so each passes the unpleasant order down the ranks — a source of comedy."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "How the order is passed down and what the scene reveals about the crew."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-09-s4",
+          "kind": "short",
+          "outcome": "E10FP-09-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "According to the Historian, how had relations between Earth and Mars changed by the twenty-fifth century? Answer in 40–50 words.",
+          "valuePoints": [
+            "Five hundred years later, Earthlings resumed contact with Mars and became very friendly with the Martians.",
+            "Think-Tank had been replaced by 'the wise and wonderful Noodle'.",
+            "Earthlings taught the Martians the difference between sandwiches and books, and how to read.",
+            "A model library was set up in Marsopolis — though the Martians can never bring themselves to read Mother Goose."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "At least two changes: friendship, Noodle as leader, reading and the library."
+            },
+            {
+              "label": "Expression",
+              "marks": 1,
+              "descriptor": "Clear, connected sentences in about 40–50 words, with accurate grammar and spelling."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-09-l1",
+          "kind": "long",
+          "lifeSkill": "Critical thinking",
+          "outcome": "E10FP-09-2",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Think-Tank jumped to one wrong conclusion after another — books were sandwiches, a nursery rhyme was a battle plan — and never stopped to check. Today, many people believe and forward messages without checking them. Write an article for your school magazine, in about 100–120 words, titled 'Think Before You Conclude', using the play to show the dangers of jumping to conclusions and suggesting how students can check what they read.",
+          "valuePoints": [
+            "Article format: title, and an opening that sets out the idea.",
+            "Examples of Think-Tank's hasty conclusions, and why they were wrong.",
+            "Why pride and fear made him refuse to question himself or listen properly.",
+            "Practical habits: checking the source, asking questions, looking for evidence, listening to others.",
+            "A reasoned conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses Think-Tank's misreadings and extends them to practical advice on checking information."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Article format with a title; ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        },
+        {
+          "id": "jefp1-09-l2",
+          "kind": "long",
+          "lifeSkill": "Effective communication",
+          "outcome": "E10FP-09-1",
+          "difficulty": "HARD",
+          "marks": 6,
+          "stem": "Noodle knew more than his master, yet he had to correct a leader who believed he was never wrong. In group projects, students too sometimes need to disagree with a leader or a friend. Write a speech for your school assembly, in about 100–120 words, on 'Disagreeing Without Disrespect', drawing on how Noodle handled Think-Tank and suggesting how one can speak up politely but honestly.",
+          "valuePoints": [
+            "Speech format: greeting the audience, a clear opening, and a closing line.",
+            "How Noodle handled Think-Tank: humble words, offering 'a bit of data', letting the leader save face.",
+            "A balanced view: tact is useful, but truth still needs to be spoken — Noodle's information mattered.",
+            "Practical ways to disagree respectfully: choose the right moment, stick to facts, listen, avoid mocking.",
+            "A reasoned conclusion."
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 3,
+              "descriptor": "Uses Noodle's approach and extends it to sensible advice on disagreeing respectfully."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Speech format (greeting, opening, conclusion); ideas in a logical order; about 100–120 words."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation; appropriate vocabulary and tone."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
