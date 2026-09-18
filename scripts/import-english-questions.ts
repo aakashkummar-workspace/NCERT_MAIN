@@ -5,6 +5,12 @@
  *     node scripts/check-english-questions.mjs --text .english-text
  *     npx tsx --conditions=react-server scripts/import-english-questions.ts
  *     npx tsx --conditions=react-server scripts/import-english-questions.ts --commit
+ *     npx tsx --conditions=react-server scripts/import-english-questions.ts --org <slug> --commit
+ *
+ * `--org` names the school by SLUG. Two organizations are called "Sirah
+ * Digital" on this deployment, and a lookup by name cannot tell them apart: it
+ * silently picks one, which is how a first run landed in the copy nobody signs
+ * into. A slug is unique, and the run prints the one it chose.
  *
  * Run the checker first: it is the one that compares every extract with the
  * book, and this script refuses to run while it would fail.
@@ -44,6 +50,11 @@ import { validateQuestion } from "../src/core/questions/validate";
 const QUESTIONS_DIR = "prisma/english-questions";
 const TEXT_DIR = ".english-text";
 const ORGANIZATION_NAME = "Sirah Digital";
+
+function organizationArg(): string | undefined {
+  const at = process.argv.indexOf("--org");
+  return at !== -1 ? process.argv[at + 1] : undefined;
+}
 
 /** The app subject each NCERT book is filed under. */
 const BOOK_SUBJECT: Record<string, { grade: number; code: string }> = {
@@ -187,18 +198,28 @@ async function main() {
   }
 
   const db = new PrismaClient({ datasources: { db: { url: process.env.DIRECT_URL } } });
-  const organization = await db.organization.findFirstOrThrow({ where: { name: ORGANIZATION_NAME }, select: { id: true } });
-  // The author the NCERT bank already lives under, filtered as every script
-  // touching this organization must be: live, imported rows only.
-  const anchor = await db.question.findFirstOrThrow({
+  const slug = organizationArg();
+  const organization = await db.organization.findFirstOrThrow({
+    where: slug ? { slug } : { name: ORGANIZATION_NAME },
+    select: { id: true, name: true, slug: true },
+  });
+  // The author the NCERT bank already lives under — live, imported rows only,
+  // as every script touching that organization must filter. A school with no
+  // imported question yet (the bank arriving somewhere new) is authored by its
+  // owner, which is what the library copier does too.
+  const anchor = await db.question.findFirst({
     where: { organizationId: organization.id, source: "IMPORTED", deletedAt: null },
     select: { createdById: true },
   });
   const membership = await db.membership.findFirstOrThrow({
-    where: { organizationId: organization.id, userId: anchor.createdById },
-    select: { role: true },
+    where: {
+      organizationId: organization.id,
+      status: "ACTIVE",
+      ...(anchor ? { userId: anchor.createdById } : { role: "OWNER" }),
+    },
+    select: { userId: true, role: true },
   });
-  const actor = { organizationId: organization.id, userId: anchor.createdById, role: membership.role };
+  const actor = { organizationId: organization.id, userId: membership.userId, role: membership.role };
 
   const counts = { planned: 0, created: 0, duplicate: 0, refused: 0 };
   const byType: Record<string, number> = {};
@@ -272,7 +293,9 @@ async function main() {
   }
 
   await db.$disconnect();
-  console.log(`\nClass 9 and 10 English written questions — ${commit ? "COMMIT" : "dry run"} into ${ORGANIZATION_NAME}`);
+  console.log(
+    `\nClass 9 and 10 English written questions — ${commit ? "COMMIT" : "dry run"} into ${organization.name} (${organization.slug})`,
+  );
   for (const problem of problems) console.log(`  ERROR  ${problem}`);
   console.log("\n" + Object.entries(counts).map(([key, value]) => `  ${key.padEnd(10)} ${value}`).join("\n"));
   console.log("  by type    " + Object.entries(byType).map(([type, n]) => `${type} ${n}`).join(", "));
