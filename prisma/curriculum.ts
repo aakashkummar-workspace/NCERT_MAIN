@@ -75,6 +75,17 @@ export const CHAPTERS: Record<string, Record<string, ChapterSeed[]>> = {
       { number: 8, title: "The Sermon at Benares" },
       { number: 9, title: "The Proposal" },
     ],
+    // CBSE English (184) 2025-26, Section B: the grammar items and the two
+    // writing tasks the Class X paper sets. Not a book — the syllabus itself.
+    ENGGW: [
+      { number: 1, title: "Determiners" },
+      { number: 2, title: "Tenses" },
+      { number: 3, title: "Modals" },
+      { number: 4, title: "Subject–Verb Concord" },
+      { number: 5, title: "Reported Speech" },
+      { number: 6, title: "Formal Letter" },
+      { number: 7, title: "Analytical Paragraph" },
+    ],
     ENGFP: [
       { number: 1, title: "A Triumph of Surgery" },
       { number: 2, title: "The Thief’s Story" },
@@ -203,6 +214,17 @@ export const CHAPTERS: Record<string, Record<string, ChapterSeed[]>> = {
       { number: 11, title: "Reproduction: How Life Continues" },
       { number: 12, title: "Patterns in Life: Diversity and Classification" },
       { number: 13, title: "Earth as a System: Energy, Matter, and Life" },
+    ],
+    // CBSE English (184) 2025-26, Section B for Class IX: the same grammar
+    // items, and the Class IX writing tasks.
+    ENGGW: [
+      { number: 1, title: "Determiners" },
+      { number: 2, title: "Tenses" },
+      { number: 3, title: "Modals" },
+      { number: 4, title: "Subject–Verb Concord" },
+      { number: 5, title: "Reported Speech" },
+      { number: 6, title: "Descriptive Paragraph" },
+      { number: 7, title: "Story and Diary Entry" },
     ],
     ENG: [
       { number: 1, title: "How I Taught My Grandmother to Read" },

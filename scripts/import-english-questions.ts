@@ -1,5 +1,5 @@
 /**
- * Import the CBSE Class 10 English competency, extract, short and long answer
+ * Import the CBSE Class 9 and 10 English competency, extract, short and long answer
  * questions (prisma/english-questions/*.json) into Sirah Digital as DRAFTS.
  *
  *     node scripts/check-english-questions.mjs --text .english-text
@@ -49,6 +49,17 @@ const ORGANIZATION_NAME = "Sirah Digital";
 const BOOK_SUBJECT: Record<string, { grade: number; code: string }> = {
   jeff1: { grade: 10, code: "ENG" },
   jefp1: { grade: 10, code: "ENGFP" },
+  iebe1: { grade: 9, code: "ENG" },
+  gw10: { grade: 10, code: "ENGGW" },
+  gw9: { grade: 9, code: "ENGGW" },
+};
+
+const FORM_NAMES: Record<string, string> = {
+  "formal-letter": "Formal letter",
+  "analytical-paragraph": "Analytical paragraph",
+  "descriptive-paragraph": "Descriptive paragraph",
+  story: "Story",
+  "diary-entry": "Diary entry",
 };
 
 /** Roughly how long each takes, for durations a remedial paper derives. */
@@ -61,7 +72,9 @@ type Difficulty = "EASY" | "MEDIUM" | "HARD";
 type SourceQuestion =
   | { id: string; kind: "competency"; outcome: string; difficulty: Difficulty; marks: number; stem: string; options: Choice[]; explanation: string }
   | { id: string; kind: "extract"; source: string; outcome: string; difficulty: Difficulty; marks: number; extract: string; parts: Part[] }
-  | { id: string; kind: "short" | "long"; lifeSkill?: string; outcome: string; difficulty: Difficulty; marks: number; stem: string; valuePoints: string[]; rubric: Criterion[] };
+  | { id: string; kind: "short" | "long"; lifeSkill?: string; outcome: string; difficulty: Difficulty; marks: number; stem: string; valuePoints: string[]; rubric: Criterion[] }
+  | { id: string; kind: "grammar"; task: string; outcome: string; difficulty: Difficulty; marks: number; stem: string; options: Choice[]; explanation: string }
+  | { id: string; kind: "writing"; form: string; outcome: string; difficulty: Difficulty; marks: number; stem: string; valuePoints: string[]; rubric: Criterion[] };
 type BookFile = { book: string; chapters: { number: number; questions: SourceQuestion[] }[] };
 
 const ROMAN = ["i", "ii", "iii", "iv", "v", "vi"];
@@ -79,7 +92,7 @@ const introFor = (source: string) =>
 function build(question: SourceQuestion, base: Pick<QuestionInput, "subjectId" | "chapterId" | "outcomeIds" | "source">): { label: string; input: QuestionInput }[] {
   const common = { ...base, difficulty: question.difficulty };
 
-  if (question.kind === "competency") {
+  if (question.kind === "competency" || question.kind === "grammar") {
     return [{
       label: question.id,
       input: { ...common, type: "MCQ", marks: 1, expectedTimeSeconds: SECONDS.mcq, stem: question.stem.trim(), options: toOptions(question.options), explanation: question.explanation.trim() },
@@ -132,14 +145,19 @@ function build(question: SourceQuestion, base: Pick<QuestionInput, "subjectId" |
     return [{ label: question.id, input: caseStudy }, ...mcqs];
   }
 
-  const lifeSkill = question.kind === "long" && question.lifeSkill ? `Life skill: ${question.lifeSkill}.\n\n` : "";
+  const lead =
+    question.kind === "long" && question.lifeSkill
+      ? `Life skill: ${question.lifeSkill}.\n\n`
+      : question.kind === "writing"
+        ? `${FORM_NAMES[question.form] ?? question.form}, 100–120 words.\n\n`
+        : "";
   return [{
     label: question.id,
     input: {
       ...common,
-      type: question.kind === "long" ? "LA" : "SA",
+      type: question.kind === "short" ? "SA" : "LA",
       marks: question.marks,
-      expectedTimeSeconds: question.kind === "long" ? SECONDS.long : SECONDS.short,
+      expectedTimeSeconds: question.kind === "short" ? SECONDS.short : SECONDS.long,
       stem: question.stem.trim(),
       rubric: {
         criteria: question.rubric.map((criterion, index) => ({
@@ -149,7 +167,7 @@ function build(question: SourceQuestion, base: Pick<QuestionInput, "subjectId" |
           descriptor: criterion.descriptor?.trim() || null,
         })),
       },
-      explanation: `${lifeSkill}Value points:\n${question.valuePoints.map((point) => `• ${point.trim()}`).join("\n")}`,
+      explanation: `${lead}Value points:\n${question.valuePoints.map((point) => `• ${point.trim()}`).join("\n")}`,
       answerKey: null,
     },
   }];
@@ -254,7 +272,7 @@ async function main() {
   }
 
   await db.$disconnect();
-  console.log(`\nClass 10 English written questions — ${commit ? "COMMIT" : "dry run"} into ${ORGANIZATION_NAME}`);
+  console.log(`\nClass 9 and 10 English written questions — ${commit ? "COMMIT" : "dry run"} into ${ORGANIZATION_NAME}`);
   for (const problem of problems) console.log(`  ERROR  ${problem}`);
   console.log("\n" + Object.entries(counts).map(([key, value]) => `  ${key.padEnd(10)} ${value}`).join("\n"));
   console.log("  by type    " + Object.entries(byType).map(([type, n]) => `${type} ${n}`).join(", "));

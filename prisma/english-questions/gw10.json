@@ -1,0 +1,3417 @@
+{
+  "book": "gw10",
+  "grade": 10,
+  "subject": "ENGGW",
+  "title": "English – Grammar and Writing",
+  "status": "DRAFT — for review by an English teacher before any question is approved",
+  "source": "Written to the CBSE English Language and Literature (184) syllabus for 2025-26, Section B for Class X: grammar assessed through gap filling, editing and transformation, and the formal letter and analytical paragraph writing tasks. No book text is quoted.",
+  "chapters": [
+    {
+      "number": 1,
+      "questions": [
+        {
+          "id": "gw10-01-g01",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Riya wants to become ______ engineer when she finishes school.",
+          "options": [
+            {
+              "text": "an",
+              "correct": true
+            },
+            {
+              "text": "a",
+              "correct": false
+            },
+            {
+              "text": "the",
+              "correct": false
+            },
+            {
+              "text": "some",
+              "correct": false
+            }
+          ],
+          "explanation": "'An' is used before a word that begins with a vowel sound, and 'engineer' begins with a vowel sound.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-01-1"
+        },
+        {
+          "id": "gw10-01-g02",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Our school has invited ______ European scientist to speak at the science exhibition next week.",
+          "options": [
+            {
+              "text": "an",
+              "correct": false
+            },
+            {
+              "text": "much",
+              "correct": false
+            },
+            {
+              "text": "few",
+              "correct": false
+            },
+            {
+              "text": "a",
+              "correct": true
+            }
+          ],
+          "explanation": "The choice between 'a' and 'an' depends on sound, not spelling. 'European' begins with a 'yoo' (consonant) sound, so it takes 'a'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-01-1"
+        },
+        {
+          "id": "gw10-01-g03",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Arjun took ______ hour-long test on Monday and then spent the evening at the badminton court.",
+          "options": [
+            {
+              "text": "a",
+              "correct": false
+            },
+            {
+              "text": "an",
+              "correct": true
+            },
+            {
+              "text": "many",
+              "correct": false
+            },
+            {
+              "text": "few",
+              "correct": false
+            }
+          ],
+          "explanation": "The 'h' in 'hour' is silent, so the word begins with a vowel sound and takes 'an'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-01-1"
+        },
+        {
+          "id": "gw10-01-g04",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "There is very ______ milk left in the fridge, so please buy a packet on your way home from tuition.",
+          "options": [
+            {
+              "text": "little",
+              "correct": true
+            },
+            {
+              "text": "few",
+              "correct": false
+            },
+            {
+              "text": "many",
+              "correct": false
+            },
+            {
+              "text": "a few",
+              "correct": false
+            }
+          ],
+          "explanation": "'Milk' is uncountable, so it takes 'little', not 'few' or 'many'. 'Very little' means hardly any, which is why more must be bought.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-01-2"
+        },
+        {
+          "id": "gw10-01-g05",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "The new library has so ______ books on astronomy that the senior students cannot decide where to begin.",
+          "options": [
+            {
+              "text": "much",
+              "correct": false
+            },
+            {
+              "text": "a lot",
+              "correct": false
+            },
+            {
+              "text": "many",
+              "correct": true
+            },
+            {
+              "text": "lots",
+              "correct": false
+            }
+          ],
+          "explanation": "'Books' is a plural countable noun, so it takes 'many'. 'Much' is used with uncountable nouns, and 'a lot' and 'lots' need 'of' and cannot follow 'so'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-01-2"
+        },
+        {
+          "id": "gw10-01-g06",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Although the team practised hard, it had ______ chance of winning against the defending champions, and most spectators expected it to lose.",
+          "options": [
+            {
+              "text": "few",
+              "correct": false
+            },
+            {
+              "text": "little",
+              "correct": true
+            },
+            {
+              "text": "many",
+              "correct": false
+            },
+            {
+              "text": "several",
+              "correct": false
+            }
+          ],
+          "explanation": "'Chance' used in this sense is uncountable, so it takes 'little', which means almost none. 'Few', 'many' and 'several' go with plural countable nouns.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-01-2"
+        },
+        {
+          "id": "gw10-01-g07",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "______ mangoes in this basket are riper than the ones on that shelf.",
+          "options": [
+            {
+              "text": "This",
+              "correct": false
+            },
+            {
+              "text": "That",
+              "correct": false
+            },
+            {
+              "text": "Much",
+              "correct": false
+            },
+            {
+              "text": "These",
+              "correct": true
+            }
+          ],
+          "explanation": "A plural noun near the speaker takes the demonstrative 'these'; 'this' and 'that' go with singular nouns.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-01-3"
+        },
+        {
+          "id": "gw10-01-g08",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nMy uncle is a honest shopkeeper who never overcharges his customers.",
+          "options": [
+            {
+              "text": "his → their",
+              "correct": false
+            },
+            {
+              "text": "who → which",
+              "correct": false
+            },
+            {
+              "text": "customers → customer",
+              "correct": false
+            },
+            {
+              "text": "a → an",
+              "correct": true
+            }
+          ],
+          "explanation": "The 'h' in 'honest' is silent, so the word begins with a vowel sound and needs 'an'.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-01-3"
+        },
+        {
+          "id": "gw10-01-g09",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nThe principal gave us an useful piece of advice before the board examinations began.",
+          "options": [
+            {
+              "text": "piece → pieces",
+              "correct": false
+            },
+            {
+              "text": "an → a",
+              "correct": true
+            },
+            {
+              "text": "us → our",
+              "correct": false
+            },
+            {
+              "text": "began → begin",
+              "correct": false
+            }
+          ],
+          "explanation": "'Useful' begins with a 'yoo' (consonant) sound, so it takes 'a', even though it is spelt with a vowel.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-01-3"
+        },
+        {
+          "id": "gw10-01-g10",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nWe did not have many time to visit the museum because the bus left early.",
+          "options": [
+            {
+              "text": "many → few",
+              "correct": false
+            },
+            {
+              "text": "did → does",
+              "correct": false
+            },
+            {
+              "text": "many → much",
+              "correct": true
+            },
+            {
+              "text": "left → leave",
+              "correct": false
+            }
+          ],
+          "explanation": "'Time' in the sense of duration is uncountable, so in a negative sentence it takes 'much', not 'many' or 'few'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-01-3"
+        },
+        {
+          "id": "gw10-01-g11",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nEvery students in the class has submitted the project on rainwater harvesting.",
+          "options": [
+            {
+              "text": "students → student",
+              "correct": true
+            },
+            {
+              "text": "has → have",
+              "correct": false
+            },
+            {
+              "text": "Every → Each",
+              "correct": false
+            },
+            {
+              "text": "Every → Many",
+              "correct": false
+            }
+          ],
+          "explanation": "'Every' is followed by a singular noun and a singular verb: 'Every student has submitted'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-01-3"
+        },
+        {
+          "id": "gw10-01-g12",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nThe Sun is the star at the centre of our solar system. A Earth takes about 365 days to go round it.",
+          "options": [
+            {
+              "text": "the centre → a centre",
+              "correct": false
+            },
+            {
+              "text": "A → The",
+              "correct": true
+            },
+            {
+              "text": "days → day",
+              "correct": false
+            },
+            {
+              "text": "our → an",
+              "correct": false
+            }
+          ],
+          "explanation": "The Earth is unique, so it takes the definite article 'the'. 'A' can never come before a vowel sound in any case.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-01-1"
+        },
+        {
+          "id": "gw10-01-g13",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nOnly a little students turned up for the extra class because of the heavy rain.",
+          "options": [
+            {
+              "text": "a little → a few",
+              "correct": true
+            },
+            {
+              "text": "a little → much",
+              "correct": false
+            },
+            {
+              "text": "turned → turn",
+              "correct": false
+            },
+            {
+              "text": "because of → because",
+              "correct": false
+            }
+          ],
+          "explanation": "'Students' is a plural countable noun, so it takes 'a few'. 'A little' and 'much' are used with uncountable nouns.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-01-2"
+        },
+        {
+          "id": "gw10-01-g14",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nKabir has been learning to play the guitar for a year and wants to join an university band next year.",
+          "options": [
+            {
+              "text": "a year → an year",
+              "correct": false
+            },
+            {
+              "text": "has been → have been",
+              "correct": false
+            },
+            {
+              "text": "wants → want",
+              "correct": false
+            },
+            {
+              "text": "an → a",
+              "correct": true
+            }
+          ],
+          "explanation": "'University' begins with a 'yoo' (consonant) sound, so it takes 'a'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-01-1"
+        },
+        {
+          "id": "gw10-01-g15",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence using 'a few' without changing its meaning: 'Some students, though not many, stayed back to decorate the hall.'",
+          "options": [
+            {
+              "text": "A few of students stayed back to decorate the hall.",
+              "correct": false
+            },
+            {
+              "text": "Few students stayed back to decorate the hall.",
+              "correct": false
+            },
+            {
+              "text": "A few students stayed back to decorate the hall.",
+              "correct": true
+            },
+            {
+              "text": "A little students stayed back to decorate the hall.",
+              "correct": false
+            }
+          ],
+          "explanation": "'A few' comes directly before a plural countable noun and means 'some, a small number'. 'Few' without 'a' means 'hardly any', which changes the meaning.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-01-2"
+        },
+        {
+          "id": "gw10-01-g16",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence using 'not much': 'There is only a small amount of sugar in the jar.'",
+          "options": [
+            {
+              "text": "There are not much sugar in the jar.",
+              "correct": false
+            },
+            {
+              "text": "There is not much sugar in the jar.",
+              "correct": true
+            },
+            {
+              "text": "There is not many sugar in the jar.",
+              "correct": false
+            },
+            {
+              "text": "There is not much sugars in the jar.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Sugar' is uncountable: it takes 'much', stays singular and takes the singular verb 'is'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-01-2"
+        },
+        {
+          "id": "gw10-01-g17",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Combine the two sentences into one, using the articles correctly: 'I saw a dog. The dog was chasing a cat.'",
+          "options": [
+            {
+              "text": "I saw an dog which was chasing a cat.",
+              "correct": false
+            },
+            {
+              "text": "I saw dog which was chasing a cat.",
+              "correct": false
+            },
+            {
+              "text": "I saw a dog which was chasing cat.",
+              "correct": false
+            },
+            {
+              "text": "I saw a dog which was chasing a cat.",
+              "correct": true
+            }
+          ],
+          "explanation": "A singular countable noun mentioned for the first time needs 'a' or 'an', and 'dog' and 'cat' begin with consonant sounds, so both take 'a'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-01-1"
+        },
+        {
+          "id": "gw10-01-g18",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence so that it begins with 'Many': 'A large number of volunteers joined the tree-planting drive in Chennai.'",
+          "options": [
+            {
+              "text": "Many volunteers joined the tree-planting drive in Chennai.",
+              "correct": true
+            },
+            {
+              "text": "Many volunteer joined the tree-planting drive in Chennai.",
+              "correct": false
+            },
+            {
+              "text": "Many of volunteers joined the tree-planting drive in Chennai.",
+              "correct": false
+            },
+            {
+              "text": "Many a volunteers joined the tree-planting drive in Chennai.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Many' is followed directly by a plural noun. 'Many of' needs a determiner such as 'the' after it, and 'many a' takes a singular noun.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-01-2"
+        },
+        {
+          "id": "gw10-01-g19",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence using a possessive determiner: 'The bicycle that belongs to Meera and her brother has a flat tyre.'",
+          "options": [
+            {
+              "text": "There bicycle has a flat tyre.",
+              "correct": false
+            },
+            {
+              "text": "Theirs bicycle has a flat tyre.",
+              "correct": false
+            },
+            {
+              "text": "Their bicycle has a flat tyre.",
+              "correct": true
+            },
+            {
+              "text": "Her bicycle has a flat tyre.",
+              "correct": false
+            }
+          ],
+          "explanation": "The bicycle belongs to two people, so the possessive determiner is 'their'. 'Theirs' is a pronoun that stands alone, and 'there' is an adverb of place.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-01-3"
+        },
+        {
+          "id": "gw10-01-g20",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence using 'Each': 'All the participants received a certificate.'",
+          "options": [
+            {
+              "text": "Each participants received a certificate.",
+              "correct": false
+            },
+            {
+              "text": "Each of participant received a certificate.",
+              "correct": false
+            },
+            {
+              "text": "Each participant received a certificate.",
+              "correct": true
+            },
+            {
+              "text": "Each the participants received a certificate.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Each' is followed by a singular noun; 'each of' would need 'the' and a plural noun.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-01-2"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "questions": [
+        {
+          "id": "gw10-02-g01",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Look! The children ______ a sandcastle near the waves.",
+          "options": [
+            {
+              "text": "build",
+              "correct": false
+            },
+            {
+              "text": "are building",
+              "correct": true
+            },
+            {
+              "text": "built",
+              "correct": false
+            },
+            {
+              "text": "were building",
+              "correct": false
+            }
+          ],
+          "explanation": "'Look!' shows the action is happening now, so the present continuous is needed.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-02-2"
+        },
+        {
+          "id": "gw10-02-g02",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "By the time the ambulance arrived, the neighbours ______ the injured cyclist to the side of the road.",
+          "options": [
+            {
+              "text": "have moved",
+              "correct": false
+            },
+            {
+              "text": "will have moved",
+              "correct": false
+            },
+            {
+              "text": "are moving",
+              "correct": false
+            },
+            {
+              "text": "had moved",
+              "correct": true
+            }
+          ],
+          "explanation": "An action completed before another past action ('arrived') is in the past perfect.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-02-2"
+        },
+        {
+          "id": "gw10-02-g03",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Priya is exhausted because she ______ for the district chess championship since six o'clock this morning.",
+          "options": [
+            {
+              "text": "is practising",
+              "correct": false
+            },
+            {
+              "text": "practised",
+              "correct": false
+            },
+            {
+              "text": "had been practising",
+              "correct": false
+            },
+            {
+              "text": "has been practising",
+              "correct": true
+            }
+          ],
+          "explanation": "An action that began in the past and is still going on, with 'since', takes the present perfect continuous. The past perfect continuous does not fit a present situation ('is exhausted').",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-02-1"
+        },
+        {
+          "id": "gw10-02-g04",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "If it ______ tomorrow, the inter-house football match will be postponed.",
+          "options": [
+            {
+              "text": "will rain",
+              "correct": false
+            },
+            {
+              "text": "rains",
+              "correct": true
+            },
+            {
+              "text": "rained",
+              "correct": false
+            },
+            {
+              "text": "would rain",
+              "correct": false
+            }
+          ],
+          "explanation": "In a first conditional, the 'if' clause takes the simple present and the main clause takes 'will'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-02-2"
+        },
+        {
+          "id": "gw10-02-g05",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "The water crisis in our town is not new. For the past five years, the level of groundwater ______ steadily, and experts warn that it will fall further.",
+          "options": [
+            {
+              "text": "is falling",
+              "correct": false
+            },
+            {
+              "text": "fell",
+              "correct": false
+            },
+            {
+              "text": "has been falling",
+              "correct": true
+            },
+            {
+              "text": "had falling",
+              "correct": false
+            }
+          ],
+          "explanation": "'For the past five years' describes a continuing process up to now, which needs the present perfect continuous.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-02-1"
+        },
+        {
+          "id": "gw10-02-g06",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Rohan ______ his homework when the power went off last night.",
+          "options": [
+            {
+              "text": "was doing",
+              "correct": true
+            },
+            {
+              "text": "is doing",
+              "correct": false
+            },
+            {
+              "text": "has done",
+              "correct": false
+            },
+            {
+              "text": "does",
+              "correct": false
+            }
+          ],
+          "explanation": "An action in progress in the past when another action interrupted it takes the past continuous.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-02-2"
+        },
+        {
+          "id": "gw10-02-g07",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "By December next year, the new metro line from the airport to the city centre ______.",
+          "options": [
+            {
+              "text": "will have completed",
+              "correct": false
+            },
+            {
+              "text": "will have been completed",
+              "correct": true
+            },
+            {
+              "text": "has been completed",
+              "correct": false
+            },
+            {
+              "text": "had been completed",
+              "correct": false
+            }
+          ],
+          "explanation": "'By' a future time takes the future perfect, and since the line does not complete itself, the passive 'will have been completed' is required.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-02-1"
+        },
+        {
+          "id": "gw10-02-g08",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nYesterday our class goes on a trip to the planetarium.",
+          "options": [
+            {
+              "text": "goes → went",
+              "correct": true
+            },
+            {
+              "text": "our → we",
+              "correct": false
+            },
+            {
+              "text": "on → in",
+              "correct": false
+            },
+            {
+              "text": "goes → has gone",
+              "correct": false
+            }
+          ],
+          "explanation": "'Yesterday' marks a finished past time, so the simple past 'went' is needed. The present perfect cannot be used with a finished past time.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-02-3"
+        },
+        {
+          "id": "gw10-02-g09",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nI have visited Jaipur with my family in 2023.",
+          "options": [
+            {
+              "text": "with → by",
+              "correct": false
+            },
+            {
+              "text": "in → on",
+              "correct": false
+            },
+            {
+              "text": "have visited → had visited",
+              "correct": false
+            },
+            {
+              "text": "have visited → visited",
+              "correct": true
+            }
+          ],
+          "explanation": "A definite past time such as 'in 2023' takes the simple past, not the present perfect.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-02-3"
+        },
+        {
+          "id": "gw10-02-g10",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nDuring the quiz yesterday, she was knowing the answer to every question.",
+          "options": [
+            {
+              "text": "was knowing → knows",
+              "correct": false
+            },
+            {
+              "text": "was knowing → has known",
+              "correct": false
+            },
+            {
+              "text": "was knowing → knew",
+              "correct": true
+            },
+            {
+              "text": "every → all",
+              "correct": false
+            }
+          ],
+          "explanation": "'Know' is a stative verb and is not normally used in continuous forms; with 'yesterday' the simple past 'knew' is correct.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-02-3"
+        },
+        {
+          "id": "gw10-02-g11",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nThe team had been training for three months before the tournament, and they win the trophy easily.",
+          "options": [
+            {
+              "text": "had been training → has been training",
+              "correct": false
+            },
+            {
+              "text": "win → won",
+              "correct": true
+            },
+            {
+              "text": "for → since",
+              "correct": false
+            },
+            {
+              "text": "they → them",
+              "correct": false
+            }
+          ],
+          "explanation": "The whole account is in the past, so the second action also takes the simple past: 'won'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-02-3"
+        },
+        {
+          "id": "gw10-02-g12",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nHardly had the bell rang when the students rushed out of the classroom.",
+          "options": [
+            {
+              "text": "had → has",
+              "correct": false
+            },
+            {
+              "text": "when → than",
+              "correct": false
+            },
+            {
+              "text": "rushed → rush",
+              "correct": false
+            },
+            {
+              "text": "rang → rung",
+              "correct": true
+            }
+          ],
+          "explanation": "The past perfect is 'had' plus the past participle, and the past participle of 'ring' is 'rung'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-02-3"
+        },
+        {
+          "id": "gw10-02-g13",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nScientists have been study the melting of Himalayan glaciers for over two decades.",
+          "options": [
+            {
+              "text": "study → studying",
+              "correct": true
+            },
+            {
+              "text": "have been → has been",
+              "correct": false
+            },
+            {
+              "text": "for → since",
+              "correct": false
+            },
+            {
+              "text": "the melting → a melting",
+              "correct": false
+            }
+          ],
+          "explanation": "The present perfect continuous is 'have/has been' plus the -ing form of the verb.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-02-1"
+        },
+        {
+          "id": "gw10-02-g14",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nWhen I reached the station, the train already left, so I took an auto-rickshaw home.",
+          "options": [
+            {
+              "text": "took → take",
+              "correct": false
+            },
+            {
+              "text": "reached → had reached",
+              "correct": false
+            },
+            {
+              "text": "already left → had already left",
+              "correct": true
+            },
+            {
+              "text": "so → because",
+              "correct": false
+            }
+          ],
+          "explanation": "The train left before I reached, so the earlier past action takes the past perfect.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-02-3"
+        },
+        {
+          "id": "gw10-02-g15",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite in the present perfect continuous tense: 'Ananya started learning Kathak four years ago, and she is still learning it.'",
+          "options": [
+            {
+              "text": "Ananya has been learning Kathak since four years.",
+              "correct": false
+            },
+            {
+              "text": "Ananya is learning Kathak since four years.",
+              "correct": false
+            },
+            {
+              "text": "Ananya has been learning Kathak for four years.",
+              "correct": true
+            },
+            {
+              "text": "Ananya had been learning Kathak for four years.",
+              "correct": false
+            }
+          ],
+          "explanation": "An action continuing up to now takes 'has been' plus -ing. 'For' goes with a length of time; 'since' goes with a point in time.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-02-1"
+        },
+        {
+          "id": "gw10-02-g16",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change the sentence into the past continuous tense: 'The farmers harvest the wheat in the fields.'",
+          "options": [
+            {
+              "text": "The farmers were harvesting the wheat in the fields.",
+              "correct": true
+            },
+            {
+              "text": "The farmers was harvesting the wheat in the fields.",
+              "correct": false
+            },
+            {
+              "text": "The farmers had harvested the wheat in the fields.",
+              "correct": false
+            },
+            {
+              "text": "The farmers are harvesting the wheat in the fields.",
+              "correct": false
+            }
+          ],
+          "explanation": "The past continuous is 'was/were' plus -ing, and the plural subject 'farmers' takes 'were'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-02-1"
+        },
+        {
+          "id": "gw10-02-g17",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Combine into one sentence using 'before', putting the earlier action in the past perfect: 'We finished decorating the hall. Then the guests arrived.'",
+          "options": [
+            {
+              "text": "We had finished decorating the hall before the guests will arrive.",
+              "correct": false
+            },
+            {
+              "text": "We have finished decorating the hall before the guests arrived.",
+              "correct": false
+            },
+            {
+              "text": "The guests had arrived before we finished decorating the hall.",
+              "correct": false
+            },
+            {
+              "text": "We had finished decorating the hall before the guests arrived.",
+              "correct": true
+            }
+          ],
+          "explanation": "The earlier of two past actions takes the past perfect and the later one the simple past. Swapping them reverses what happened.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-02-2"
+        },
+        {
+          "id": "gw10-02-g18",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence using 'will': 'Our school is going to open the new computer lab next week.'",
+          "options": [
+            {
+              "text": "Our school will opens the new computer lab next week.",
+              "correct": false
+            },
+            {
+              "text": "Our school will open the new computer lab next week.",
+              "correct": true
+            },
+            {
+              "text": "Our school will opened the new computer lab next week.",
+              "correct": false
+            },
+            {
+              "text": "Our school would open the new computer lab next week.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Will' is always followed by the base form of the verb.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-02-1"
+        },
+        {
+          "id": "gw10-02-g19",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite in the passive voice, keeping the same tense: 'The municipal workers are repairing the potholes on our street.'",
+          "options": [
+            {
+              "text": "The potholes on our street are being repaired by the municipal workers.",
+              "correct": true
+            },
+            {
+              "text": "The potholes on our street are repaired by the municipal workers.",
+              "correct": false
+            },
+            {
+              "text": "The potholes on our street have been repaired by the municipal workers.",
+              "correct": false
+            },
+            {
+              "text": "The potholes on our street were being repaired by the municipal workers.",
+              "correct": false
+            }
+          ],
+          "explanation": "The present continuous passive is 'am/is/are being' plus the past participle.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-02-1"
+        },
+        {
+          "id": "gw10-02-g20",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence, replacing 'every July' with 'last July' and changing the verb as needed: 'The heavy rain floods the low-lying areas of the city every July.'",
+          "options": [
+            {
+              "text": "The heavy rain floods the low-lying areas of the city last July.",
+              "correct": false
+            },
+            {
+              "text": "The heavy rain has flooded the low-lying areas of the city last July.",
+              "correct": false
+            },
+            {
+              "text": "The heavy rain flooded the low-lying areas of the city last July.",
+              "correct": true
+            },
+            {
+              "text": "The heavy rain had flooded the low-lying areas of the city last July.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Last July' is a finished past time, so the simple past is used; the present perfect cannot take a finished time expression.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-02-2"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "questions": [
+        {
+          "id": "gw10-03-g01",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "You ______ wear a helmet while riding a two-wheeler; it is the law.",
+          "options": [
+            {
+              "text": "must",
+              "correct": true
+            },
+            {
+              "text": "may",
+              "correct": false
+            },
+            {
+              "text": "might",
+              "correct": false
+            },
+            {
+              "text": "could",
+              "correct": false
+            }
+          ],
+          "explanation": "'Must' expresses a strong obligation, such as a rule or a law.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-03-1"
+        },
+        {
+          "id": "gw10-03-g02",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "______ I borrow your notes on chemical reactions, please? I missed yesterday's class.",
+          "options": [
+            {
+              "text": "Must",
+              "correct": false
+            },
+            {
+              "text": "May",
+              "correct": true
+            },
+            {
+              "text": "Ought",
+              "correct": false
+            },
+            {
+              "text": "Would",
+              "correct": false
+            }
+          ],
+          "explanation": "'May I…?' is a polite way to ask for permission. 'Ought' needs 'to', and 'must' and 'would' do not ask permission.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-03-2"
+        },
+        {
+          "id": "gw10-03-g03",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "When he was only six, my brother ______ swim across the river.",
+          "options": [
+            {
+              "text": "could",
+              "correct": true
+            },
+            {
+              "text": "can",
+              "correct": false
+            },
+            {
+              "text": "may",
+              "correct": false
+            },
+            {
+              "text": "must",
+              "correct": false
+            }
+          ],
+          "explanation": "Ability in the past is expressed with 'could'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-03-1"
+        },
+        {
+          "id": "gw10-03-g04",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "The roads are wet and the sky is dark; it ______ rained heavily during the night.",
+          "options": [
+            {
+              "text": "should have",
+              "correct": false
+            },
+            {
+              "text": "can have",
+              "correct": false
+            },
+            {
+              "text": "ought have",
+              "correct": false
+            },
+            {
+              "text": "must have",
+              "correct": true
+            }
+          ],
+          "explanation": "A confident conclusion about the past, drawn from evidence, uses 'must have' plus the past participle.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-03-2"
+        },
+        {
+          "id": "gw10-03-g05",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "You look very tired, Karan. You ______ take a short break before you start the next chapter.",
+          "options": [
+            {
+              "text": "would",
+              "correct": false
+            },
+            {
+              "text": "need",
+              "correct": false
+            },
+            {
+              "text": "should",
+              "correct": true
+            },
+            {
+              "text": "ought",
+              "correct": false
+            }
+          ],
+          "explanation": "Advice is given with 'should'. 'Ought' and 'need' would both require 'to' here.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-03-2"
+        },
+        {
+          "id": "gw10-03-g06",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Students ______ not bring mobile phones into the examination hall; anyone found with one will be disqualified.",
+          "options": [
+            {
+              "text": "need",
+              "correct": false
+            },
+            {
+              "text": "must",
+              "correct": true
+            },
+            {
+              "text": "would",
+              "correct": false
+            },
+            {
+              "text": "might",
+              "correct": false
+            }
+          ],
+          "explanation": "'Must not' expresses prohibition. 'Need not' means something is not necessary, which contradicts the penalty in the sentence.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-03-1"
+        },
+        {
+          "id": "gw10-03-g07",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "If you had left home ten minutes earlier, you ______ caught the school bus.",
+          "options": [
+            {
+              "text": "will have",
+              "correct": false
+            },
+            {
+              "text": "would",
+              "correct": false
+            },
+            {
+              "text": "will",
+              "correct": false
+            },
+            {
+              "text": "would have",
+              "correct": true
+            }
+          ],
+          "explanation": "In a third conditional, 'if' plus the past perfect is followed by 'would have' plus the past participle.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-03-2"
+        },
+        {
+          "id": "gw10-03-g08",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nShe can speaks three languages fluently.",
+          "options": [
+            {
+              "text": "speaks → speak",
+              "correct": true
+            },
+            {
+              "text": "can → could",
+              "correct": false
+            },
+            {
+              "text": "three → the three",
+              "correct": false
+            },
+            {
+              "text": "fluently → fluent",
+              "correct": false
+            }
+          ],
+          "explanation": "A modal is always followed by the base form of the verb, without -s.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-03-3"
+        },
+        {
+          "id": "gw10-03-g09",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nYou ought obey the traffic rules even when there is no policeman around.",
+          "options": [
+            {
+              "text": "obey → obeys",
+              "correct": false
+            },
+            {
+              "text": "is → are",
+              "correct": false
+            },
+            {
+              "text": "ought → ought to",
+              "correct": true
+            },
+            {
+              "text": "no → any",
+              "correct": false
+            }
+          ],
+          "explanation": "'Ought' is always followed by 'to' and the base form of the verb.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-03-3"
+        },
+        {
+          "id": "gw10-03-g10",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nWe must to finish the science project before Friday.",
+          "options": [
+            {
+              "text": "finish → finished",
+              "correct": false
+            },
+            {
+              "text": "before → until",
+              "correct": false
+            },
+            {
+              "text": "must to → must",
+              "correct": true
+            },
+            {
+              "text": "We → Us",
+              "correct": false
+            }
+          ],
+          "explanation": "'Must' is followed directly by the base form, never by 'to'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-03-3"
+        },
+        {
+          "id": "gw10-03-g11",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nHe should have informed the teacher yesterday, but he could not came to school.",
+          "options": [
+            {
+              "text": "came → come",
+              "correct": true
+            },
+            {
+              "text": "should have informed → should informed",
+              "correct": false
+            },
+            {
+              "text": "could not → cannot",
+              "correct": false
+            },
+            {
+              "text": "yesterday → tomorrow",
+              "correct": false
+            }
+          ],
+          "explanation": "After a modal such as 'could not', the verb is in its base form: 'come'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-03-3"
+        },
+        {
+          "id": "gw10-03-g12",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nThe match is not tomorrow, so you need not to come to the stadium early.",
+          "options": [
+            {
+              "text": "is → was",
+              "correct": false
+            },
+            {
+              "text": "so → because",
+              "correct": false
+            },
+            {
+              "text": "early → earlier",
+              "correct": false
+            },
+            {
+              "text": "need not to → need not",
+              "correct": true
+            }
+          ],
+          "explanation": "Used as a modal, 'need not' is followed by the base form without 'to'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-03-3"
+        },
+        {
+          "id": "gw10-03-g13",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nMay you please pass me the salt?",
+          "options": [
+            {
+              "text": "pass → passed",
+              "correct": false
+            },
+            {
+              "text": "May → Could",
+              "correct": true
+            },
+            {
+              "text": "me → I",
+              "correct": false
+            },
+            {
+              "text": "May → Must",
+              "correct": false
+            }
+          ],
+          "explanation": "'May' asks permission for the speaker ('May I…?'). A polite request for someone else to act uses 'Could you…?' or 'Would you…?'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-03-2"
+        },
+        {
+          "id": "gw10-03-g14",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nWhen I was younger, I would to play cricket in the lane every evening.",
+          "options": [
+            {
+              "text": "would to → would",
+              "correct": true
+            },
+            {
+              "text": "was → were",
+              "correct": false
+            },
+            {
+              "text": "play → played",
+              "correct": false
+            },
+            {
+              "text": "every → all",
+              "correct": false
+            }
+          ],
+          "explanation": "'Would' for a past habit is followed by the base form without 'to'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-03-3"
+        },
+        {
+          "id": "gw10-03-g15",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence using a modal of permission: 'The students are allowed to use the library after school hours.'",
+          "options": [
+            {
+              "text": "The students must use the library after school hours.",
+              "correct": false
+            },
+            {
+              "text": "The students may to use the library after school hours.",
+              "correct": false
+            },
+            {
+              "text": "The students may use the library after school hours.",
+              "correct": true
+            },
+            {
+              "text": "The students may uses the library after school hours.",
+              "correct": false
+            }
+          ],
+          "explanation": "'May' expresses permission and takes the base form. 'Must' would turn permission into an obligation.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-03-1"
+        },
+        {
+          "id": "gw10-03-g16",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence using a modal of obligation: 'It is necessary for all visitors to show their identity cards at the gate.'",
+          "options": [
+            {
+              "text": "All visitors must showing their identity cards at the gate.",
+              "correct": false
+            },
+            {
+              "text": "All visitors must show their identity cards at the gate.",
+              "correct": true
+            },
+            {
+              "text": "All visitors may show their identity cards at the gate.",
+              "correct": false
+            },
+            {
+              "text": "All visitors must shows their identity cards at the gate.",
+              "correct": false
+            }
+          ],
+          "explanation": "Obligation is expressed with 'must' plus the base form. 'May' would only give permission.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-03-2"
+        },
+        {
+          "id": "gw10-03-g17",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the command as a polite request using a modal: 'Open the window.'",
+          "options": [
+            {
+              "text": "Could you please opened the window?",
+              "correct": false
+            },
+            {
+              "text": "Must you please open the window?",
+              "correct": false
+            },
+            {
+              "text": "Could you please to open the window?",
+              "correct": false
+            },
+            {
+              "text": "Could you please open the window?",
+              "correct": true
+            }
+          ],
+          "explanation": "A polite request uses 'Could you…?' followed by the base form of the verb.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-03-2"
+        },
+        {
+          "id": "gw10-03-g18",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence using 'must have': 'I am sure that Aditi forgot her lunch box at home.'",
+          "options": [
+            {
+              "text": "Aditi must have forgot her lunch box at home.",
+              "correct": false
+            },
+            {
+              "text": "Aditi must had forgotten her lunch box at home.",
+              "correct": false
+            },
+            {
+              "text": "Aditi must forgotten her lunch box at home.",
+              "correct": false
+            },
+            {
+              "text": "Aditi must have forgotten her lunch box at home.",
+              "correct": true
+            }
+          ],
+          "explanation": "A certain deduction about the past is 'must have' plus the past participle; the past participle of 'forget' is 'forgotten'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-03-1"
+        },
+        {
+          "id": "gw10-03-g19",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence using 'should' to give advice: 'It is a good idea for you to drink more water in summer.'",
+          "options": [
+            {
+              "text": "You should to drink more water in summer.",
+              "correct": false
+            },
+            {
+              "text": "You should drink more water in summer.",
+              "correct": true
+            },
+            {
+              "text": "You should drinks more water in summer.",
+              "correct": false
+            },
+            {
+              "text": "You must not drink more water in summer.",
+              "correct": false
+            }
+          ],
+          "explanation": "Advice is given with 'should' followed by the base form of the verb.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-03-2"
+        },
+        {
+          "id": "gw10-03-g20",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence using 'can': 'Rahul is able to solve this puzzle in two minutes.'",
+          "options": [
+            {
+              "text": "Rahul can solves this puzzle in two minutes.",
+              "correct": false
+            },
+            {
+              "text": "Rahul can able to solve this puzzle in two minutes.",
+              "correct": false
+            },
+            {
+              "text": "Rahul can solve this puzzle in two minutes.",
+              "correct": true
+            },
+            {
+              "text": "Rahul cans solve this puzzle in two minutes.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Can' expresses ability, never takes -s, and is followed by the base form.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-03-1"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "questions": [
+        {
+          "id": "gw10-04-g01",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Each of the players ______ given a new jersey before the final.",
+          "options": [
+            {
+              "text": "were",
+              "correct": false
+            },
+            {
+              "text": "was",
+              "correct": true
+            },
+            {
+              "text": "are",
+              "correct": false
+            },
+            {
+              "text": "have",
+              "correct": false
+            }
+          ],
+          "explanation": "'Each of' plus a plural noun is still singular, so it takes a singular verb.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-04-1"
+        },
+        {
+          "id": "gw10-04-g02",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Neither the captain nor the other players ______ happy with the umpire's decision.",
+          "options": [
+            {
+              "text": "was",
+              "correct": false
+            },
+            {
+              "text": "is",
+              "correct": false
+            },
+            {
+              "text": "has been",
+              "correct": false
+            },
+            {
+              "text": "were",
+              "correct": true
+            }
+          ],
+          "explanation": "With 'neither…nor', the verb agrees with the nearer subject; 'players' is plural, and the context is past.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-04-2"
+        },
+        {
+          "id": "gw10-04-g03",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "The teacher, along with her students, ______ planting saplings in the school garden.",
+          "options": [
+            {
+              "text": "is",
+              "correct": true
+            },
+            {
+              "text": "are",
+              "correct": false
+            },
+            {
+              "text": "were",
+              "correct": false
+            },
+            {
+              "text": "have",
+              "correct": false
+            }
+          ],
+          "explanation": "A phrase introduced by 'along with' does not change the subject; the subject is 'the teacher', which is singular.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-04-2"
+        },
+        {
+          "id": "gw10-04-g04",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Mathematics ______ my favourite subject, although physics is catching up fast.",
+          "options": [
+            {
+              "text": "are",
+              "correct": false
+            },
+            {
+              "text": "were",
+              "correct": false
+            },
+            {
+              "text": "is",
+              "correct": true
+            },
+            {
+              "text": "have been",
+              "correct": false
+            }
+          ],
+          "explanation": "Names of subjects ending in -s, such as mathematics and physics, are singular.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-04-1"
+        },
+        {
+          "id": "gw10-04-g05",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Bread and butter ______ what my grandfather eats for breakfast every day.",
+          "options": [
+            {
+              "text": "are",
+              "correct": false
+            },
+            {
+              "text": "were",
+              "correct": false
+            },
+            {
+              "text": "is",
+              "correct": true
+            },
+            {
+              "text": "have been",
+              "correct": false
+            }
+          ],
+          "explanation": "Two nouns joined by 'and' that together name a single dish or idea take a singular verb.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-04-2"
+        },
+        {
+          "id": "gw10-04-g06",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Twenty kilometres ______ a long distance to walk in the afternoon heat.",
+          "options": [
+            {
+              "text": "is",
+              "correct": true
+            },
+            {
+              "text": "are",
+              "correct": false
+            },
+            {
+              "text": "were",
+              "correct": false
+            },
+            {
+              "text": "have been",
+              "correct": false
+            }
+          ],
+          "explanation": "A plural amount of distance, money or time thought of as one quantity takes a singular verb.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-04-1"
+        },
+        {
+          "id": "gw10-04-g07",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Either the students or their class teacher ______ going to present the report at the assembly.",
+          "options": [
+            {
+              "text": "are",
+              "correct": false
+            },
+            {
+              "text": "were",
+              "correct": false
+            },
+            {
+              "text": "have",
+              "correct": false
+            },
+            {
+              "text": "is",
+              "correct": true
+            }
+          ],
+          "explanation": "With 'either…or', the verb agrees with the nearer subject, 'their class teacher', which is singular.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-04-2"
+        },
+        {
+          "id": "gw10-04-g08",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nMy brother and I goes to school by the same bus every morning.",
+          "options": [
+            {
+              "text": "I → me",
+              "correct": false
+            },
+            {
+              "text": "goes → go",
+              "correct": true
+            },
+            {
+              "text": "by → in",
+              "correct": false
+            },
+            {
+              "text": "every → all",
+              "correct": false
+            }
+          ],
+          "explanation": "Two subjects joined by 'and' make a plural subject, which takes 'go'.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-04-3"
+        },
+        {
+          "id": "gw10-04-g09",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nOne of the boys in our class have won a scholarship to study robotics.",
+          "options": [
+            {
+              "text": "have → has",
+              "correct": true
+            },
+            {
+              "text": "boys → boy",
+              "correct": false
+            },
+            {
+              "text": "in → on",
+              "correct": false
+            },
+            {
+              "text": "to study → studying",
+              "correct": false
+            }
+          ],
+          "explanation": "The subject is 'one', which is singular; 'of the boys' does not change it.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-04-3"
+        },
+        {
+          "id": "gw10-04-g10",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nThe news about the floods in Assam are very disturbing.",
+          "options": [
+            {
+              "text": "floods → flood",
+              "correct": false
+            },
+            {
+              "text": "in → at",
+              "correct": false
+            },
+            {
+              "text": "are → is",
+              "correct": true
+            },
+            {
+              "text": "very → much",
+              "correct": false
+            }
+          ],
+          "explanation": "'News' is an uncountable noun and takes a singular verb, whatever follows it.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-04-3"
+        },
+        {
+          "id": "gw10-04-g11",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nEvery student and every teacher were present at the Independence Day celebrations.",
+          "options": [
+            {
+              "text": "celebrations → celebration",
+              "correct": false
+            },
+            {
+              "text": "were → was",
+              "correct": true
+            },
+            {
+              "text": "Every student → All student",
+              "correct": false
+            },
+            {
+              "text": "present → presents",
+              "correct": false
+            }
+          ],
+          "explanation": "When each subject joined by 'and' is preceded by 'every' or 'each', the verb is singular.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-04-1"
+        },
+        {
+          "id": "gw10-04-g12",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nThe number of students using public transport has risen this year. A number of them says the new bus route saves time.",
+          "options": [
+            {
+              "text": "has risen → have risen",
+              "correct": false
+            },
+            {
+              "text": "saves → save",
+              "correct": false
+            },
+            {
+              "text": "them → they",
+              "correct": false
+            },
+            {
+              "text": "says → say",
+              "correct": true
+            }
+          ],
+          "explanation": "'The number of' is singular, but 'a number of' means 'many' and takes a plural verb.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-04-3"
+        },
+        {
+          "id": "gw10-04-g13",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nNeither of the two answers are correct, so the teacher asked us to try again.",
+          "options": [
+            {
+              "text": "answers → answer",
+              "correct": false
+            },
+            {
+              "text": "asked → ask",
+              "correct": false
+            },
+            {
+              "text": "us → we",
+              "correct": false
+            },
+            {
+              "text": "are → is",
+              "correct": true
+            }
+          ],
+          "explanation": "'Neither of' plus a plural noun takes a singular verb in standard usage.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-04-1"
+        },
+        {
+          "id": "gw10-04-g14",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nThe quality of the mangoes sold in these markets have improved over the years.",
+          "options": [
+            {
+              "text": "mangoes → mango",
+              "correct": false
+            },
+            {
+              "text": "have → has",
+              "correct": true
+            },
+            {
+              "text": "these → this",
+              "correct": false
+            },
+            {
+              "text": "improved → improve",
+              "correct": false
+            }
+          ],
+          "explanation": "The subject is 'the quality', which is singular; the phrase 'of the mangoes sold in these markets' between them does not change the verb.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-04-2"
+        },
+        {
+          "id": "gw10-04-g15",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence beginning with 'Each': 'All the rooms in the hostel have a study table.'",
+          "options": [
+            {
+              "text": "Each room in the hostel have a study table.",
+              "correct": false
+            },
+            {
+              "text": "Each rooms in the hostel has a study table.",
+              "correct": false
+            },
+            {
+              "text": "Each room in the hostel has a study table.",
+              "correct": true
+            },
+            {
+              "text": "Each of room in the hostel has a study table.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Each' takes a singular noun and a singular verb.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-04-1"
+        },
+        {
+          "id": "gw10-04-g16",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence beginning with 'The coach, as well as the players,': 'The coach and the players are travelling to Kolkata.'",
+          "options": [
+            {
+              "text": "The coach, as well as the players, is travelling to Kolkata.",
+              "correct": true
+            },
+            {
+              "text": "The coach, as well as the players, are travelling to Kolkata.",
+              "correct": false
+            },
+            {
+              "text": "The coach, as well as the players, were travelling to Kolkata.",
+              "correct": false
+            },
+            {
+              "text": "The coach, as well as the players, have travelling to Kolkata.",
+              "correct": false
+            }
+          ],
+          "explanation": "A phrase with 'as well as' is not part of the subject; the verb agrees with 'the coach', which is singular.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-04-2"
+        },
+        {
+          "id": "gw10-04-g17",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Combine the sentences using 'neither…nor': 'My sister does not like spinach. My parents do not like spinach either.'",
+          "options": [
+            {
+              "text": "Neither my sister nor my parents likes spinach.",
+              "correct": false
+            },
+            {
+              "text": "Neither my sister nor my parents like spinach.",
+              "correct": true
+            },
+            {
+              "text": "Neither my sister or my parents like spinach.",
+              "correct": false
+            },
+            {
+              "text": "Neither my sister nor my parents doesn't like spinach.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Neither' pairs with 'nor', the verb agrees with the nearer subject ('parents', plural), and no second negative is added.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-04-2"
+        },
+        {
+          "id": "gw10-04-g18",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change the subject to the plural and make the verb agree: 'The child plays in the park every evening.'",
+          "options": [
+            {
+              "text": "The children play in the park every evening.",
+              "correct": true
+            },
+            {
+              "text": "The children plays in the park every evening.",
+              "correct": false
+            },
+            {
+              "text": "The childrens play in the park every evening.",
+              "correct": false
+            },
+            {
+              "text": "The child play in the park every evening.",
+              "correct": false
+            }
+          ],
+          "explanation": "The plural of 'child' is 'children', and a plural subject takes the verb without -s.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-04-1"
+        },
+        {
+          "id": "gw10-04-g19",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Combine the sentences using 'either…or': 'Ravi cleans the laboratory on Saturdays, or his friends clean it.'",
+          "options": [
+            {
+              "text": "Either Ravi or his friends cleans the laboratory on Saturdays.",
+              "correct": false
+            },
+            {
+              "text": "Either Ravi nor his friends clean the laboratory on Saturdays.",
+              "correct": false
+            },
+            {
+              "text": "Either Ravi or his friends cleaning the laboratory on Saturdays.",
+              "correct": false
+            },
+            {
+              "text": "Either Ravi or his friends clean the laboratory on Saturdays.",
+              "correct": true
+            }
+          ],
+          "explanation": "'Either' pairs with 'or', and the verb agrees with the nearer subject, 'his friends', which is plural.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-04-2"
+        },
+        {
+          "id": "gw10-04-g20",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence beginning with 'Neither of the two bridges': 'Both the bridges over the river are unsafe for heavy vehicles.'",
+          "options": [
+            {
+              "text": "Neither of the two bridges are safe for heavy vehicles.",
+              "correct": false
+            },
+            {
+              "text": "Neither of the two bridges is not safe for heavy vehicles.",
+              "correct": false
+            },
+            {
+              "text": "Neither of the two bridges is safe for heavy vehicles.",
+              "correct": true
+            },
+            {
+              "text": "Neither of the two bridges have safe for heavy vehicles.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Neither of' takes a singular verb, and since 'neither' is already negative, no 'not' is added.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-04-1"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "questions": [
+        {
+          "id": "gw10-05-g01",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Direct: Neha said, \"I am tired after the long rehearsal.\"\nReported: Neha said that she ______ tired after the long rehearsal.",
+          "options": [
+            {
+              "text": "was",
+              "correct": true
+            },
+            {
+              "text": "am",
+              "correct": false
+            },
+            {
+              "text": "were",
+              "correct": false
+            },
+            {
+              "text": "be",
+              "correct": false
+            }
+          ],
+          "explanation": "When the reporting verb is in the past, the present tense changes to the past: 'am' becomes 'was'.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-05-1"
+        },
+        {
+          "id": "gw10-05-g02",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "The librarian asked me ______ I had returned the atlas.",
+          "options": [
+            {
+              "text": "that",
+              "correct": false
+            },
+            {
+              "text": "what",
+              "correct": false
+            },
+            {
+              "text": "do",
+              "correct": false
+            },
+            {
+              "text": "whether",
+              "correct": true
+            }
+          ],
+          "explanation": "A yes/no question is reported with 'if' or 'whether', never with 'that'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-05-2"
+        },
+        {
+          "id": "gw10-05-g03",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "The doctor ______ my grandfather to walk for thirty minutes every day.",
+          "options": [
+            {
+              "text": "said",
+              "correct": false
+            },
+            {
+              "text": "advised",
+              "correct": true
+            },
+            {
+              "text": "told that",
+              "correct": false
+            },
+            {
+              "text": "suggested",
+              "correct": false
+            }
+          ],
+          "explanation": "Advice is reported with 'advised' plus the person plus 'to' and the verb. 'Said' and 'suggested' cannot take a person followed by 'to'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-05-3"
+        },
+        {
+          "id": "gw10-05-g04",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Direct: The coach said to Aman, \"Where did you keep the cricket kit?\"\nReported: The coach asked Aman where ______ the cricket kit.",
+          "options": [
+            {
+              "text": "he had kept",
+              "correct": true
+            },
+            {
+              "text": "did he keep",
+              "correct": false
+            },
+            {
+              "text": "had he kept",
+              "correct": false
+            },
+            {
+              "text": "he has kept",
+              "correct": false
+            }
+          ],
+          "explanation": "A reported question uses statement word order (subject before verb), and the simple past changes to the past perfect.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-05-2"
+        },
+        {
+          "id": "gw10-05-g05",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Direct: Ishaan said, \"I will call you tomorrow.\"\nReported: Ishaan said that he ______ call me the next day.",
+          "options": [
+            {
+              "text": "will",
+              "correct": false
+            },
+            {
+              "text": "shall",
+              "correct": false
+            },
+            {
+              "text": "would",
+              "correct": true
+            },
+            {
+              "text": "can",
+              "correct": false
+            }
+          ],
+          "explanation": "After a past reporting verb, 'will' changes to 'would', and 'tomorrow' becomes 'the next day'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-05-1"
+        },
+        {
+          "id": "gw10-05-g06",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "The teacher told the students ______ make noise in the corridor.",
+          "options": [
+            {
+              "text": "do not",
+              "correct": false
+            },
+            {
+              "text": "not to",
+              "correct": true
+            },
+            {
+              "text": "don't",
+              "correct": false
+            },
+            {
+              "text": "no to",
+              "correct": false
+            }
+          ],
+          "explanation": "A negative command is reported with 'not to' plus the base form of the verb.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-05-3"
+        },
+        {
+          "id": "gw10-05-g07",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Aarav asked his sister, \"Have you finished the science project?\" When she said she had not, he asked, \"When are you planning to finish it?\"\nReported: Aarav asked his sister when she ______ to finish the project.",
+          "options": [
+            {
+              "text": "is planning",
+              "correct": false
+            },
+            {
+              "text": "was she planning",
+              "correct": false
+            },
+            {
+              "text": "has planned",
+              "correct": false
+            },
+            {
+              "text": "was planning",
+              "correct": true
+            }
+          ],
+          "explanation": "In a reported question the present continuous moves back to the past continuous, and the subject comes before the verb.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-05-2"
+        },
+        {
+          "id": "gw10-05-g08",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nMira said that she is going to Shimla the following week.",
+          "options": [
+            {
+              "text": "the following week → next week",
+              "correct": false
+            },
+            {
+              "text": "said → told",
+              "correct": false
+            },
+            {
+              "text": "she → her",
+              "correct": false
+            },
+            {
+              "text": "is → was",
+              "correct": true
+            }
+          ],
+          "explanation": "When the reporting verb is past, the present continuous changes to the past continuous: 'was going'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-05-1"
+        },
+        {
+          "id": "gw10-05-g09",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nThe visitor asked the guard where was the principal's office.",
+          "options": [
+            {
+              "text": "asked → said",
+              "correct": false
+            },
+            {
+              "text": "was the principal's office → the principal's office was",
+              "correct": true
+            },
+            {
+              "text": "where → that",
+              "correct": false
+            },
+            {
+              "text": "the guard → to the guard",
+              "correct": false
+            }
+          ],
+          "explanation": "A reported question takes statement word order: subject first, then verb.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-05-2"
+        },
+        {
+          "id": "gw10-05-g10",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nThe officer ordered the soldiers to stood in a line.",
+          "options": [
+            {
+              "text": "ordered → said",
+              "correct": false
+            },
+            {
+              "text": "soldiers → soldier",
+              "correct": false
+            },
+            {
+              "text": "stood → stand",
+              "correct": true
+            },
+            {
+              "text": "in → on",
+              "correct": false
+            }
+          ],
+          "explanation": "A reported command is 'ordered' plus the person plus 'to' and the base form of the verb.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E10GW-05-3"
+        },
+        {
+          "id": "gw10-05-g11",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nMy mother asked me that whether I had eaten my lunch.",
+          "options": [
+            {
+              "text": "that whether → whether",
+              "correct": true
+            },
+            {
+              "text": "had eaten → have eaten",
+              "correct": false
+            },
+            {
+              "text": "me → to me",
+              "correct": false
+            },
+            {
+              "text": "my lunch → mine lunch",
+              "correct": false
+            }
+          ],
+          "explanation": "A reported yes/no question is introduced by 'whether' or 'if' alone; 'that' is used only for statements.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-05-2"
+        },
+        {
+          "id": "gw10-05-g12",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nKavya said that she had visited the science museum yesterday and that she had enjoyed the robotics section.",
+          "options": [
+            {
+              "text": "had visited → has visited",
+              "correct": false
+            },
+            {
+              "text": "yesterday → the previous day",
+              "correct": true
+            },
+            {
+              "text": "said → told",
+              "correct": false
+            },
+            {
+              "text": "had enjoyed → enjoys",
+              "correct": false
+            }
+          ],
+          "explanation": "In reported speech, words of time shift with the tense: 'yesterday' becomes 'the previous day' or 'the day before'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-05-1"
+        },
+        {
+          "id": "gw10-05-g13",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nThe old man requested the boy help him cross the busy road.",
+          "options": [
+            {
+              "text": "help → to help",
+              "correct": true
+            },
+            {
+              "text": "requested → said",
+              "correct": false
+            },
+            {
+              "text": "him → he",
+              "correct": false
+            },
+            {
+              "text": "busy → busier",
+              "correct": false
+            }
+          ],
+          "explanation": "A reported request is 'requested' plus the person plus 'to' and the base form of the verb.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-05-3"
+        },
+        {
+          "id": "gw10-05-g14",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below contains one error. Choose the option that corrects it.\nRahul asked his friend if he will come to the match the following day.",
+          "options": [
+            {
+              "text": "if → that",
+              "correct": false
+            },
+            {
+              "text": "the following day → tomorrow",
+              "correct": false
+            },
+            {
+              "text": "his friend → to his friend",
+              "correct": false
+            },
+            {
+              "text": "will → would",
+              "correct": true
+            }
+          ],
+          "explanation": "After a past reporting verb, 'will' changes to 'would' in the reported question.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-05-2"
+        },
+        {
+          "id": "gw10-05-g15",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: The principal said, \"The school will remain closed tomorrow because of the cyclone warning.\"",
+          "options": [
+            {
+              "text": "The principal said that the school will remain closed tomorrow because of the cyclone warning.",
+              "correct": false
+            },
+            {
+              "text": "The principal told that the school would remain closed the next day because of the cyclone warning.",
+              "correct": false
+            },
+            {
+              "text": "The principal said that the school would remain closed the next day because of the cyclone warning.",
+              "correct": true
+            },
+            {
+              "text": "The principal said that the school will remain closed the next day because of the cyclone warning.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Will' becomes 'would' and 'tomorrow' becomes 'the next day'. 'Told' needs a listener after it, so 'told that' is wrong.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-05-1"
+        },
+        {
+          "id": "gw10-05-g16",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: Sanjay said to me, \"I have lost my library card here.\"",
+          "options": [
+            {
+              "text": "Sanjay told me that I had lost my library card there.",
+              "correct": false
+            },
+            {
+              "text": "Sanjay told me that he had lost his library card there.",
+              "correct": true
+            },
+            {
+              "text": "Sanjay said me that he had lost his library card there.",
+              "correct": false
+            },
+            {
+              "text": "Sanjay told me that he has lost his library card here.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Said to me' becomes 'told me'; 'I' and 'my' become 'he' and 'his'; the present perfect becomes the past perfect; and 'here' becomes 'there'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-05-1"
+        },
+        {
+          "id": "gw10-05-g17",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: The shopkeeper said to Mr Iyer, \"Do you want a paper bag?\"",
+          "options": [
+            {
+              "text": "The shopkeeper asked Mr Iyer if did he want a paper bag.",
+              "correct": false
+            },
+            {
+              "text": "The shopkeeper asked Mr Iyer that he wanted a paper bag.",
+              "correct": false
+            },
+            {
+              "text": "The shopkeeper said to Mr Iyer if he wants a paper bag.",
+              "correct": false
+            },
+            {
+              "text": "The shopkeeper asked Mr Iyer if he wanted a paper bag.",
+              "correct": true
+            }
+          ],
+          "explanation": "A yes/no question is reported with 'asked' plus 'if' or 'whether', statement word order and no 'do/did', and the simple present moves to the simple past.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-05-2"
+        },
+        {
+          "id": "gw10-05-g18",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: The teacher said to Divya, \"Why are you late today?\"",
+          "options": [
+            {
+              "text": "The teacher asked Divya why she was late that day.",
+              "correct": true
+            },
+            {
+              "text": "The teacher asked Divya why was she late that day.",
+              "correct": false
+            },
+            {
+              "text": "The teacher asked Divya why she is late today.",
+              "correct": false
+            },
+            {
+              "text": "The teacher asked Divya that why she was late that day.",
+              "correct": false
+            }
+          ],
+          "explanation": "A wh-question keeps its question word but takes statement word order; 'are' becomes 'was' and 'today' becomes 'that day'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-05-2"
+        },
+        {
+          "id": "gw10-05-g19",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: The coach said to the players, \"Warm up properly before the match.\"",
+          "options": [
+            {
+              "text": "The coach told the players that warm up properly before the match.",
+              "correct": false
+            },
+            {
+              "text": "The coach said the players to warm up properly before the match.",
+              "correct": false
+            },
+            {
+              "text": "The coach told the players to warm up properly before the match.",
+              "correct": true
+            },
+            {
+              "text": "The coach told to the players warm up properly before the match.",
+              "correct": false
+            }
+          ],
+          "explanation": "A command is reported with a verb such as 'told' or 'ordered', the listener, and 'to' plus the base form of the verb.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E10GW-05-3"
+        },
+        {
+          "id": "gw10-05-g20",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: Ritika said to her brother, \"Please don't touch my paintings.\"",
+          "options": [
+            {
+              "text": "Ritika requested her brother to not touch my paintings.",
+              "correct": false
+            },
+            {
+              "text": "Ritika requested to her brother not to touch her paintings.",
+              "correct": false
+            },
+            {
+              "text": "Ritika requested her brother not to touch her paintings.",
+              "correct": true
+            },
+            {
+              "text": "Ritika said her brother please don't touch her paintings.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Please' signals a request, reported with 'requested' plus the listener plus 'not to'; 'please' is dropped and 'my' becomes 'her'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E10GW-05-3"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "questions": [
+        {
+          "id": "gw10-06-w1",
+          "kind": "writing",
+          "form": "formal-letter",
+          "stem": "You are Kavya Nair of 14, Lake View Apartments, Panampilly Nagar, Kochi. On 2 August you bought a water purifier (Model AquaPure 500, invoice no. AP/2291) from Crystal Home Appliances, MG Road, Kochi. Within a week it began leaking, the filter-change light stays on, and the technician who was promised within 48 hours has not come despite two calls to customer care. Write a letter of complaint to the Customer Care Manager, Crystal Home Appliances, describing the problem and asking for a repair or replacement within a fixed time. Write in 100-120 words.",
+          "valuePoints": [
+            "Format: sender's address, date, receiver's designation and address, subject line, salutation, complimentary close and name",
+            "Purpose stated at once: complaint about a defective water purifier bought on 2 August",
+            "Details for identification: model AquaPure 500, invoice no. AP/2291, date of purchase",
+            "The defects and the inconvenience: leaking, filter light stays on, technician not sent despite two calls",
+            "A clear, polite but firm request: repair or replacement within a stated time, with a mention of the warranty",
+            "Formal tone throughout; no emotional or rude language"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "Sender's address, date, receiver's address, subject, salutation, close and name, in the correct order"
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Product and invoice details, the defects, the failed service calls, and a specific request for repair or replacement"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "Purpose, details and request in separate, logically ordered paragraphs"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Correct grammar, spelling and a consistently formal tone"
+            }
+          ],
+          "difficulty": "EASY",
+          "marks": 5,
+          "outcome": "E10GW-06-1"
+        },
+        {
+          "id": "gw10-06-w2",
+          "kind": "writing",
+          "form": "formal-letter",
+          "stem": "You are Arjun Malhotra of 27, Sector 9, Chandigarh. You have seen an advertisement in a newspaper for a four-week summer Robotics and Coding Camp run by the Director, TechSpark Learning Centre, SCO 112, Sector 17, Chandigarh. The advertisement does not say what the course covers, what it costs or when classes are held. Write a letter of enquiry to the Director asking about the syllabus, the duration and timings, the fee and any concession for school students, whether laptops are provided, and whether a certificate is given. Write in 100-120 words.",
+          "valuePoints": [
+            "Format: sender's address, date, receiver's designation and address, subject line, salutation, close and name",
+            "Reference to the advertisement and the purpose of writing (enquiry about the summer camp)",
+            "Specific questions: syllabus, dates and timings, fee and student concession",
+            "Further questions: whether laptops/kits are provided and whether a certificate is awarded",
+            "A request for a prompt reply or a brochure, and thanks in advance"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "All parts of a formal letter present and correctly placed"
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Refers to the advertisement and asks every question the situation raises, clearly"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "Introduction, grouped questions and a closing request in logical order"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Correct grammar and spelling; polite formal register"
+            }
+          ],
+          "difficulty": "EASY",
+          "marks": 5,
+          "outcome": "E10GW-06-1"
+        },
+        {
+          "id": "gw10-06-w3",
+          "kind": "writing",
+          "form": "formal-letter",
+          "stem": "You are Meenakshi Iyer, Librarian, Sunrise Public School, Anna Nagar, Chennai. The school has sanctioned new books for the library. Write a letter to the Sales Manager, Pioneer Book House, 45 Mount Road, Chennai, placing an order for: 10 copies of an English-Hindi dictionary, 5 copies of a world atlas, 15 copies of 'Wings of Fire', and 5 sets of a children's science encyclopedia. Ask for the usual discount for schools, delivery within two weeks, and books in good condition, and state how payment will be made. Write in 100-120 words.",
+          "valuePoints": [
+            "Format: school address, date, receiver's designation and address, subject line, salutation, close, name and designation",
+            "Purpose stated: placing an order for library books",
+            "The order set out clearly, preferably as a list or table with titles and quantities",
+            "Conditions: school discount, delivery within two weeks, books undamaged (replacement of damaged copies)",
+            "Mode of payment stated (for example, cheque or bank transfer on delivery against a bill)"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "Formal letter format complete, with the writer's designation"
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "All four items with quantities, the discount, the delivery deadline, the condition and the payment terms"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "Purpose, the order list and the terms presented clearly and in order"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Correct grammar, spelling and titles; formal tone"
+            }
+          ],
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "outcome": "E10GW-06-2"
+        },
+        {
+          "id": "gw10-06-w4",
+          "kind": "writing",
+          "form": "formal-letter",
+          "stem": "You are Sameer Qureshi of B-12, Shanti Vihar, Lucknow. During the board examination season, loudspeakers at late-night functions and processions in your area play loud music well past 10 p.m., making it hard for students to study or sleep, and disturbing the elderly and the sick. Write a letter to the Editor, The Northern Times, Lucknow, drawing attention to the problem of noise pollution, its effects, and suggesting what the authorities and residents should do. Write in 100-120 words.",
+          "valuePoints": [
+            "Format: sender's address, date, 'The Editor', newspaper name and address, subject line, salutation, close and name",
+            "A request to publish the letter to draw the authorities' attention",
+            "The problem described: loudspeakers after 10 p.m. during the examination season",
+            "Effects: students unable to study or sleep, the elderly and patients disturbed, health effects of noise",
+            "Suggestions: enforcing the time limit on loudspeakers, police action on complaints, residents keeping volume low, awareness",
+            "A concluding appeal"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "Letter to the editor format, including a subject line"
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Problem, its effects on different groups, and practical suggestions for both authorities and residents"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "Moves from the request to publish, to the problem, effects, suggestions and appeal"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Correct grammar and spelling; formal, persuasive but restrained tone"
+            }
+          ],
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "outcome": "E10GW-06-1"
+        },
+        {
+          "id": "gw10-06-w5",
+          "kind": "writing",
+          "form": "formal-letter",
+          "stem": "You are Ananya Ghosh, Head Girl of Delhi Model School, Salt Lake, Kolkata. Many students stay back after school to prepare for the board examinations, but the library closes at 2:30 p.m., at the same time as classes end. Write a letter to the Principal requesting that the library stay open until 5 p.m. on weekdays from November to February. Give reasons, suggest how it could be supervised (for example, by teachers or senior students on a rota), and assure the Principal that rules will be followed. Write in 100-120 words.",
+          "valuePoints": [
+            "Format: school address, date, 'The Principal' and school address, subject line, salutation, close, name and designation",
+            "The request stated clearly: library open until 5 p.m. on weekdays, November to February",
+            "Reasons: board preparation, reference books unavailable at home, a quiet place to study",
+            "A practical suggestion for supervision (rota of teachers or senior students)",
+            "An assurance of discipline and care of books, and a polite closing request"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "Formal letter to the Principal with subject and designation"
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The specific request, convincing reasons, a supervision plan and an assurance"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "Request, reasons, suggestion and assurance in a logical sequence"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Correct grammar and spelling; respectful formal tone"
+            }
+          ],
+          "difficulty": "EASY",
+          "marks": 5,
+          "outcome": "E10GW-06-2"
+        },
+        {
+          "id": "gw10-06-w6",
+          "kind": "writing",
+          "form": "formal-letter",
+          "stem": "You are Rahul Deshmukh of 8, Gulmohar Colony, Kothrud, Pune. For three weeks garbage has not been collected from your colony, the community bin near the park is overflowing, stray animals scatter the waste, and after recent rain the lane smells and mosquitoes have increased. Residents have complained to the ward office twice with no result. Write a letter to the Health Officer, Pune Municipal Corporation, complaining about the situation and requesting immediate action and a regular collection schedule. Write in 100-120 words.",
+          "valuePoints": [
+            "Format: sender's address, date, receiver's designation and address, subject line, salutation, close and name",
+            "The complaint: garbage not collected for three weeks in Gulmohar Colony, bin overflowing",
+            "Consequences: stray animals, foul smell, mosquitoes and the risk of dengue or malaria",
+            "Earlier complaints to the ward office went unanswered",
+            "Requests: immediate clearing, fogging or spraying, and a fixed regular collection schedule"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "All parts of the formal letter present and correctly placed"
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "The problem, its health risks, the earlier complaints and specific requests for action"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "Clear sequence from the complaint to consequences to requests"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Correct grammar and spelling; firm yet polite tone"
+            }
+          ],
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "outcome": "E10GW-06-2"
+        },
+        {
+          "id": "gw10-06-w7",
+          "kind": "writing",
+          "form": "formal-letter",
+          "stem": "You are Priya Bhatt of 31, Navrangpura, Ahmedabad. The road outside your school carries fast traffic at the start and end of the school day. There is no zebra crossing, no speed breaker and no traffic warden, and two students were injured by a speeding scooter last month. Write a letter to the Editor, Gujarat Daily Herald, Ahmedabad, highlighting the danger to schoolchildren near schools across the city and suggesting measures the traffic police, the municipal corporation, schools and parents can take. Write in 100-120 words.",
+          "valuePoints": [
+            "Format: letter to the editor with sender's address, date, receiver, subject line, salutation, close and name",
+            "The issue raised as a city-wide concern, with the example of the road outside the writer's school",
+            "The dangers: speeding at school hours, no crossing or speed breakers, the recent accident",
+            "Suggestions from more than one side: zebra crossings and speed breakers, wardens at school hours, speed limits enforced, parents and students following road rules",
+            "An appeal to act before a more serious accident occurs"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "Correct letter to the editor format with a subject line"
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Moves from the local example to the city-wide problem and gives measures for several bodies"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "Introduction, problem, suggestions and appeal in well-linked paragraphs"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Correct grammar and spelling; formal, persuasive tone"
+            }
+          ],
+          "difficulty": "HARD",
+          "marks": 5,
+          "outcome": "E10GW-06-1"
+        },
+        {
+          "id": "gw10-06-w8",
+          "kind": "writing",
+          "form": "formal-letter",
+          "stem": "You are Harpreet Kaur of 56, Model Town, Ludhiana. About 300 students from Model Town and nearby colonies attend schools on Ferozepur Road, but only one city bus runs on that route in the morning, at 6:40 a.m., and it is badly overcrowded; the next one reaches after schools begin. Students are forced to use costly autos or arrive late. Write a letter to the Regional Manager, City Bus Service, Ludhiana, requesting an extra bus between 7:00 and 7:30 a.m. and again at 2:00 p.m., giving reasons and the benefits to the service as well as to students. Write in 100-120 words.",
+          "valuePoints": [
+            "Format: sender's address, date, receiver's designation and address, subject line, salutation, close and name",
+            "The request stated precisely: extra buses at 7:00-7:30 a.m. and 2:00 p.m. on the Model Town-Ferozepur Road route",
+            "Reasons with facts: about 300 students, a single overcrowded 6:40 a.m. bus, the next one arriving too late",
+            "Consequences at present: expense of autos, late arrival, safety in overcrowded buses",
+            "Benefits: more passengers and revenue for the service, fewer private vehicles, safer travel; a polite closing request"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "Complete formal letter format with subject line"
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "A precise request supported by the given facts, present difficulties and benefits to both sides"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "Request, reasons, benefits and conclusion logically ordered"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Correct grammar and spelling; courteous formal tone"
+            }
+          ],
+          "difficulty": "HARD",
+          "marks": 5,
+          "outcome": "E10GW-06-2"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "questions": [
+        {
+          "id": "gw10-07-w1",
+          "kind": "writing",
+          "form": "analytical-paragraph",
+          "stem": "A bar chart shows the average daily screen time, in hours, of 200 Class 10 students in a school, divided by activity, on weekdays and at weekends. Weekdays: study and online classes 1.5 hours, social media 1.0 hour, gaming 0.5 hours, watching videos 1.0 hour (total 4.0 hours). Weekends: study and online classes 1.0 hour, social media 2.0 hours, gaming 1.5 hours, watching videos 2.5 hours (total 7.0 hours). Write an analytical paragraph of 100-120 words describing and comparing the data and drawing a conclusion.",
+          "valuePoints": [
+            "Introduction: what the bar chart shows (daily screen time of 200 Class 10 students by activity, weekdays against weekends)",
+            "Total screen time rises from 4 hours on weekdays to 7 hours at weekends, an increase of 3 hours (75%)",
+            "Study is the largest use on weekdays (1.5 hours) but falls to 1 hour at weekends, the only activity that decreases",
+            "Entertainment rises sharply at weekends: videos 1 to 2.5 hours, social media doubles to 2 hours, gaming triples to 1.5 hours",
+            "Supported conclusion: leisure, not study, drives weekend screen time, so students may need to balance weekend screen use"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Accurate figures, the main trend and the key comparisons, with a conclusion the data supports"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Introduction, analysis and conclusion in a coherent single paragraph with linking words"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Correct grammar, spelling and vocabulary of comparison and change"
+            }
+          ],
+          "difficulty": "EASY",
+          "marks": 5,
+          "outcome": "E10GW-07-1"
+        },
+        {
+          "id": "gw10-07-w2",
+          "kind": "writing",
+          "form": "analytical-paragraph",
+          "stem": "A line graph shows the average daily water use per person, in litres, in the town of Rampur from 2019 to 2025: 2019 - 150, 2020 - 165, 2021 - 172, 2022 - 160, 2023 - 140, 2024 - 128, 2025 - 120. A note under the graph says that water meters were installed in every home and rainwater harvesting was made compulsory for new buildings at the start of 2022. Write an analytical paragraph of 100-120 words describing the trend and drawing a conclusion.",
+          "valuePoints": [
+            "Introduction: what the graph shows (daily water use per person in Rampur, 2019-2025)",
+            "Rise from 150 litres in 2019 to a peak of 172 litres in 2021",
+            "Steady fall every year from 2022, reaching 120 litres in 2025, 52 litres below the peak and 30 litres (20%) below 2019",
+            "The turning point coincides with the meters and rainwater harvesting introduced in 2022",
+            "Supported conclusion: the measures appear to have encouraged saving water, though the graph alone cannot prove they were the only cause"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Rise, peak, turning point and fall described with correct figures, linked to the 2022 measures"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Chronological, well-linked paragraph with an introduction and a conclusion"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Correct grammar and precise vocabulary of trends (peaked, declined steadily)"
+            }
+          ],
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "outcome": "E10GW-07-2"
+        },
+        {
+          "id": "gw10-07-w3",
+          "kind": "writing",
+          "form": "analytical-paragraph",
+          "stem": "A pie chart shows the main sport chosen by the 800 students of Green Valley School in 2025: cricket 30% (240 students), football 20% (160), badminton 15% (120), athletics 12% (96), yoga 10% (80), basketball 8% (64), and no sport 5% (40). Write an analytical paragraph of 100-120 words describing the data, comparing the sports and drawing a conclusion.",
+          "valuePoints": [
+            "Introduction: what the pie chart shows (main sport of 800 students of Green Valley School, 2025)",
+            "Cricket is the most popular at 30% (240), and cricket and football together account for half the students",
+            "Badminton (15%) and athletics (12%) form a middle group; yoga (10%) and basketball (8%) are least chosen",
+            "95% of students (760) take part in some sport; only 5% (40) take none",
+            "Supported conclusion: participation is high but concentrated in team sports, so the school might encourage basketball and other less chosen sports"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Largest and smallest shares, groupings and overall participation stated accurately, with a supported conclusion"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Moves logically from the overview to comparisons to a conclusion"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Correct grammar and accurate use of percentages and comparatives"
+            }
+          ],
+          "difficulty": "EASY",
+          "marks": 5,
+          "outcome": "E10GW-07-1"
+        },
+        {
+          "id": "gw10-07-w4",
+          "kind": "writing",
+          "form": "analytical-paragraph",
+          "stem": "A table shows the share of electricity generated from each source in a state in 2015 and 2025. Coal: 70% in 2015, 52% in 2025. Hydro: 12%, 13%. Solar: 3%, 18%. Wind: 5%, 10%. Natural gas: 7%, 4%. Nuclear: 3%, 3%. Write an analytical paragraph of 100-120 words describing the changes, comparing the sources and drawing a conclusion.",
+          "valuePoints": [
+            "Introduction: what the table shows (share of electricity by source in a state, 2015 and 2025)",
+            "Coal remains the largest source but its share falls by 18 percentage points, from 70% to 52%",
+            "Solar grows six-fold, from 3% to 18%, and wind doubles from 5% to 10%, becoming the second and fourth largest sources",
+            "Hydro rises slightly (12% to 13%), natural gas falls (7% to 4%), nuclear is unchanged at 3%",
+            "Renewables (hydro, solar, wind) rise from 20% to 41% of the total",
+            "Supported conclusion: the state is shifting towards clean energy, though coal still supplies about half its electricity"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Major changes quantified correctly, sources compared, and a balanced conclusion"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Grouped logically (falling, rising, stable) with an introduction and conclusion"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Correct grammar; percentage and percentage-point language used accurately"
+            }
+          ],
+          "difficulty": "HARD",
+          "marks": 5,
+          "outcome": "E10GW-07-2"
+        },
+        {
+          "id": "gw10-07-w5",
+          "kind": "writing",
+          "form": "analytical-paragraph",
+          "stem": "A double bar chart shows the results of a survey of the same 400 students of a school in 2021 and 2025, asking how they prefer to read for pleasure. 2021: printed books 60% (240 students), e-books 25% (100), audiobooks 5% (20), do not read for pleasure 10% (40). 2025: printed books 45% (180), e-books 30% (120), audiobooks 15% (60), do not read for pleasure 10% (40). Write an analytical paragraph of 100-120 words describing and comparing the data and drawing a conclusion.",
+          "valuePoints": [
+            "Introduction: what the chart shows (reading preferences of 400 students, 2021 and 2025)",
+            "Printed books remain the most preferred but fall from 60% to 45% (240 to 180 students)",
+            "Digital formats grow: e-books from 25% to 30%, audiobooks triple from 5% to 15%; together from 30% to 45%, equal to print in 2025",
+            "The share who do not read for pleasure stays at 10% (40 students)",
+            "Supported conclusion: students are not reading less but are moving from print to digital formats, so libraries could add e-books and audiobooks"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Changes in each format stated with figures, the unchanged non-readers noted, and a supported conclusion"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Coherent paragraph comparing the two years in a logical order"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Correct grammar and vocabulary of comparison"
+            }
+          ],
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "outcome": "E10GW-07-1"
+        },
+        {
+          "id": "gw10-07-w6",
+          "kind": "writing",
+          "form": "analytical-paragraph",
+          "stem": "Two maps show the town of Navpur in 2001 and 2021. In 2001 Navpur covered 40 square kilometres and had a population of 7.5 lakh. It had farmland to its north, one bridge across the river, a lake of 3 square kilometres in the east, and a single bus depot. In 2021 Navpur covered 95 square kilometres and had a population of 18 lakh. The northern farmland had been replaced by housing colonies and an IT park, a second bridge had been built, a metro line ran from the old centre to the IT park, and the lake had shrunk to 1.5 square kilometres because of construction along its banks. Write an analytical paragraph of 100-120 words describing the changes and drawing a conclusion.",
+          "valuePoints": [
+            "Introduction: what the maps show (Navpur in 2001 and 2021)",
+            "Growth: area more than doubled from 40 to 95 sq km, and population rose 140% from 7.5 lakh to 18 lakh",
+            "Land use: northern farmland replaced by housing colonies and an IT park",
+            "Infrastructure: a second bridge and a metro line from the old centre to the IT park",
+            "Environmental cost: the lake halved from 3 to 1.5 sq km because of construction on its banks",
+            "Supported conclusion: rapid development improved jobs and transport but at the cost of farmland and the lake, so future growth needs planning that protects them"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Changes in size, population, land use, transport and the lake described accurately, with a balanced conclusion"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Changes grouped sensibly rather than listed feature by feature, with an introduction and conclusion"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Correct grammar, especially past and past perfect forms for change over time"
+            }
+          ],
+          "difficulty": "HARD",
+          "marks": 5,
+          "outcome": "E10GW-07-2"
+        },
+        {
+          "id": "gw10-07-w7",
+          "kind": "writing",
+          "form": "analytical-paragraph",
+          "stem": "A flow chart describes how a school recycling drive turned plastic bottles into T-shirts in one term. Step 1: 10,000 plastic bottles were collected. Step 2: they were sorted; 8,500 clean PET bottles were kept and 1,500 contaminated bottles were rejected. Step 3: the 8,500 bottles, at 20 grams each, were washed and shredded into 170 kg of flakes. Step 4: the flakes were melted into pellets; 20 kg were lost in washing and melting, leaving 150 kg of pellets. Step 5: the pellets were spun into polyester fibre and made into 300 T-shirts, using 0.5 kg each. Write an analytical paragraph of 100-120 words describing the process and drawing a conclusion.",
+          "valuePoints": [
+            "Introduction: what the flow chart shows (the five stages from bottle collection to T-shirts)",
+            "The stages described in order with sequencing words: collection, sorting, washing and shredding, melting into pellets, spinning into fibre and making T-shirts",
+            "Losses: 15% of bottles (1,500 of 10,000) rejected at sorting; 20 kg of 170 kg flakes lost in processing",
+            "Output: 150 kg of pellets made 300 T-shirts, so roughly 28 bottles went into each T-shirt (8,500 / 300)",
+            "Supported conclusion: recycling turns waste into a useful product, and cleaner collection would reduce the largest loss"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Every stage with its figures, the losses identified and a conclusion the data supports"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Stages in the correct sequence with clear sequencing connectors"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Correct grammar, especially the passive voice for describing a process"
+            }
+          ],
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "outcome": "E10GW-07-1"
+        },
+        {
+          "id": "gw10-07-w8",
+          "kind": "writing",
+          "form": "analytical-paragraph",
+          "stem": "A table shows how 120 Class 10 students of a school spent their study time per week in the month before the board examinations, in two groups: the 48 students who scored above 80% in the pre-board examination, and the other 72 students. Average hours per week, above-80% group and other group: self-study from the textbook 10 and 8; solving sample papers 8 and 3; coaching classes 4 and 6; online video lessons 2 and 4; group study 1 and 2. Totals: 25 hours and 23 hours. Write an analytical paragraph of 100-120 words comparing the two groups and drawing a conclusion.",
+          "valuePoints": [
+            "Introduction: what the table shows (weekly study time by method for 48 higher-scoring and 72 other students)",
+            "Total study time is similar: 25 hours against 23, a difference of only 2 hours",
+            "The biggest difference is in solving sample papers: 8 hours against 3",
+            "Higher scorers also spend more time on textbook self-study (10 against 8) but less on coaching (4 against 6), videos (2 against 4) and group study (1 against 2)",
+            "Supported conclusion: how students study seems to matter more than how long, with active practice linked to higher scores; the data shows a link, not proof of cause"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Totals and each method compared with correct figures, the largest difference identified, and a carefully supported conclusion"
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "Comparison organised by similarity and difference, with an introduction and conclusion"
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Correct grammar and precise comparative language (whereas, while, compared with)"
+            }
+          ],
+          "difficulty": "HARD",
+          "marks": 5,
+          "outcome": "E10GW-07-2"
+        }
+      ]
+    }
+  ]
+}

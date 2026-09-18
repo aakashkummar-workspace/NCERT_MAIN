@@ -1,0 +1,3413 @@
+{
+  "book": "gw9",
+  "grade": 9,
+  "subject": "ENGGW",
+  "title": "English – Grammar and Writing",
+  "status": "DRAFT — for review by an English teacher before any question is approved",
+  "source": "Written to the CBSE English Language and Literature (184) syllabus for 2025-26, Section B for Class IX: grammar assessed through gap filling, editing and transformation, and the descriptive paragraph and story or diary entry writing tasks. No book text is quoted.",
+  "chapters": [
+    {
+      "number": 1,
+      "questions": [
+        {
+          "id": "gw9-01-g01",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Our school bus was ______ hour late because of the heavy rain.",
+          "options": [
+            {
+              "text": "a",
+              "correct": false
+            },
+            {
+              "text": "much",
+              "correct": false
+            },
+            {
+              "text": "an",
+              "correct": true
+            },
+            {
+              "text": "few",
+              "correct": false
+            }
+          ],
+          "explanation": "'Hour' begins with a silent h, so it starts with a vowel sound and takes 'an'.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-01-1"
+        },
+        {
+          "id": "gw9-01-g02",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Riya wants to become ______ engineer when she grows up.",
+          "options": [
+            {
+              "text": "a",
+              "correct": false
+            },
+            {
+              "text": "much",
+              "correct": false
+            },
+            {
+              "text": "an",
+              "correct": true
+            },
+            {
+              "text": "few",
+              "correct": false
+            }
+          ],
+          "explanation": "'Engineer' begins with a vowel sound, so the article is 'an'.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-01-1"
+        },
+        {
+          "id": "gw9-01-g03",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: The Brahmaputra is one of ______ longest rivers in India.",
+          "options": [
+            {
+              "text": "a",
+              "correct": false
+            },
+            {
+              "text": "an",
+              "correct": false
+            },
+            {
+              "text": "the",
+              "correct": true
+            },
+            {
+              "text": "some",
+              "correct": false
+            }
+          ],
+          "explanation": "A superlative such as 'longest' takes the definite article 'the'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-01-1"
+        },
+        {
+          "id": "gw9-01-g04",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: I bought a notebook and a pen at the stationery shop. ______ notebook cost forty rupees.",
+          "options": [
+            {
+              "text": "An",
+              "correct": false
+            },
+            {
+              "text": "Much",
+              "correct": false
+            },
+            {
+              "text": "Many",
+              "correct": false
+            },
+            {
+              "text": "The",
+              "correct": true
+            }
+          ],
+          "explanation": "A noun already mentioned once takes 'the' the second time, because both speakers now know which one is meant.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-01-1"
+        },
+        {
+          "id": "gw9-01-g05",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: There isn't ______ milk left in the fridge, so please buy a packet on your way home.",
+          "options": [
+            {
+              "text": "many",
+              "correct": false
+            },
+            {
+              "text": "few",
+              "correct": false
+            },
+            {
+              "text": "a few",
+              "correct": false
+            },
+            {
+              "text": "much",
+              "correct": true
+            }
+          ],
+          "explanation": "'Milk' is uncountable, and 'much' is used with uncountable nouns in negative sentences.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-01-2"
+        },
+        {
+          "id": "gw9-01-g06",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: The test was so difficult that very ______ students could finish it on time.",
+          "options": [
+            {
+              "text": "little",
+              "correct": false
+            },
+            {
+              "text": "much",
+              "correct": false
+            },
+            {
+              "text": "less",
+              "correct": false
+            },
+            {
+              "text": "few",
+              "correct": true
+            }
+          ],
+          "explanation": "'Students' is a countable plural noun, so it takes 'few'; 'little', 'much' and 'less' go with uncountable nouns.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-01-2"
+        },
+        {
+          "id": "gw9-01-g07",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Could you lend me ______ money for the bus fare? I have left my wallet at home.",
+          "options": [
+            {
+              "text": "some",
+              "correct": true
+            },
+            {
+              "text": "many",
+              "correct": false
+            },
+            {
+              "text": "few",
+              "correct": false
+            },
+            {
+              "text": "a few",
+              "correct": false
+            }
+          ],
+          "explanation": "'Money' is uncountable, and 'some' is used in requests and offers; 'many', 'few' and 'a few' need countable nouns.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-01-2"
+        },
+        {
+          "id": "gw9-01-g08",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Add ______ salt to the dal; it needs just a pinch more.",
+          "options": [
+            {
+              "text": "a little",
+              "correct": true
+            },
+            {
+              "text": "a few",
+              "correct": false
+            },
+            {
+              "text": "few",
+              "correct": false
+            },
+            {
+              "text": "many",
+              "correct": false
+            }
+          ],
+          "explanation": "'Salt' is uncountable, and 'a little' means a small but positive amount; 'a few', 'few' and 'many' are for countable nouns.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-01-2"
+        },
+        {
+          "id": "gw9-01-g09",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'Aarav is a honest boy who always returns what he borrows.'",
+          "options": [
+            {
+              "text": "a → an",
+              "correct": true
+            },
+            {
+              "text": "honest → honesty",
+              "correct": false
+            },
+            {
+              "text": "who → which",
+              "correct": false
+            },
+            {
+              "text": "returns → return",
+              "correct": false
+            }
+          ],
+          "explanation": "'Honest' begins with a silent h and a vowel sound, so it takes 'an', not 'a'.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-01-3"
+        },
+        {
+          "id": "gw9-01-g10",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'There were too much people at the book fair to move around comfortably.'",
+          "options": [
+            {
+              "text": "were → was",
+              "correct": false
+            },
+            {
+              "text": "much → many",
+              "correct": true
+            },
+            {
+              "text": "too → very",
+              "correct": false
+            },
+            {
+              "text": "the → a",
+              "correct": false
+            }
+          ],
+          "explanation": "'People' is a countable plural noun, so it takes 'many', not 'much'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-01-3"
+        },
+        {
+          "id": "gw9-01-g11",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'Sun rises in the east and sets in the west.'",
+          "options": [
+            {
+              "text": "rises → rise",
+              "correct": false
+            },
+            {
+              "text": "Sun → The sun",
+              "correct": true
+            },
+            {
+              "text": "the east → east",
+              "correct": false
+            },
+            {
+              "text": "sets → set",
+              "correct": false
+            }
+          ],
+          "explanation": "There is only one sun, and a noun that is unique takes 'the'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-01-3"
+        },
+        {
+          "id": "gw9-01-g12",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'This books on the top shelf are for the Class 9 library period.'",
+          "options": [
+            {
+              "text": "are → is",
+              "correct": false
+            },
+            {
+              "text": "This → These",
+              "correct": true
+            },
+            {
+              "text": "books → book",
+              "correct": false
+            },
+            {
+              "text": "for → to",
+              "correct": false
+            }
+          ],
+          "explanation": "A demonstrative must agree with its noun: 'these' goes with the plural 'books'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-01-3"
+        },
+        {
+          "id": "gw9-01-g13",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'She did not have some time to revise before the unit test.'",
+          "options": [
+            {
+              "text": "did → does",
+              "correct": false
+            },
+            {
+              "text": "have → has",
+              "correct": false
+            },
+            {
+              "text": "some → any",
+              "correct": true
+            },
+            {
+              "text": "the → a",
+              "correct": false
+            }
+          ],
+          "explanation": "In negative sentences 'any' is used instead of 'some'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-01-3"
+        },
+        {
+          "id": "gw9-01-g14",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'The students raised their hands, and every students got a chance to speak.'",
+          "options": [
+            {
+              "text": "their → his",
+              "correct": false
+            },
+            {
+              "text": "raised → rise",
+              "correct": false
+            },
+            {
+              "text": "students → student (after 'every')",
+              "correct": true
+            },
+            {
+              "text": "a → the",
+              "correct": false
+            }
+          ],
+          "explanation": "'Every' is followed by a singular noun, so it must be 'every student'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-01-3"
+        },
+        {
+          "id": "gw9-01-g15",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'Mira has less friends in her new school, but she makes new ones every week.'",
+          "options": [
+            {
+              "text": "has → have",
+              "correct": false
+            },
+            {
+              "text": "ones → one",
+              "correct": false
+            },
+            {
+              "text": "less → fewer",
+              "correct": true
+            },
+            {
+              "text": "makes → make",
+              "correct": false
+            }
+          ],
+          "explanation": "'Friends' is a countable plural noun, so it takes 'fewer'; 'less' is for uncountable nouns.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-01-3"
+        },
+        {
+          "id": "gw9-01-g16",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Choose the sentence that expresses the same idea using 'a few': 'Some parents, though not many, came to the sports day meeting.'",
+          "options": [
+            {
+              "text": "A little parents came to the sports day meeting.",
+              "correct": false
+            },
+            {
+              "text": "A few of parent came to the sports day meeting.",
+              "correct": false
+            },
+            {
+              "text": "Few a parents came to the sports day meeting.",
+              "correct": false
+            },
+            {
+              "text": "A few parents came to the sports day meeting.",
+              "correct": true
+            }
+          ],
+          "explanation": "'A few' is used with plural countable nouns to mean a small number; 'a little' is only for uncountable nouns.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-01-2"
+        },
+        {
+          "id": "gw9-01-g17",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence in the plural: 'This is an old coin from the Mughal period.'",
+          "options": [
+            {
+              "text": "These are an old coins from the Mughal period.",
+              "correct": false
+            },
+            {
+              "text": "This are old coins from the Mughal period.",
+              "correct": false
+            },
+            {
+              "text": "These is old coins from the Mughal period.",
+              "correct": false
+            },
+            {
+              "text": "These are old coins from the Mughal period.",
+              "correct": true
+            }
+          ],
+          "explanation": "In the plural 'this' becomes 'these', 'is' becomes 'are', and 'an' is dropped because it is used only with singular nouns.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-01-1"
+        },
+        {
+          "id": "gw9-01-g18",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite using 'hardly any': 'Very few trees were still standing after the cyclone.'",
+          "options": [
+            {
+              "text": "Hardly some trees were still standing after the cyclone.",
+              "correct": false
+            },
+            {
+              "text": "Hardly any tree were still standing after the cyclone.",
+              "correct": false
+            },
+            {
+              "text": "Hardly much trees were still standing after the cyclone.",
+              "correct": false
+            },
+            {
+              "text": "Hardly any trees were still standing after the cyclone.",
+              "correct": true
+            }
+          ],
+          "explanation": "'Hardly' is negative in meaning, so it is followed by 'any', and the plural 'trees' keeps the plural verb 'were'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-01-2"
+        },
+        {
+          "id": "gw9-01-g19",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite the sentence using 'not much': 'There is little water left in the tank.'",
+          "options": [
+            {
+              "text": "There is not much water left in the tank.",
+              "correct": true
+            },
+            {
+              "text": "There is not many water left in the tank.",
+              "correct": false
+            },
+            {
+              "text": "There are not much water left in the tank.",
+              "correct": false
+            },
+            {
+              "text": "There is not much waters left in the tank.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Water' is uncountable, so it takes 'much' and a singular verb, and it has no plural form.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-01-2"
+        },
+        {
+          "id": "gw9-01-g20",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite in the singular: 'Umbrellas are useful in the monsoon.'",
+          "options": [
+            {
+              "text": "An umbrella is useful in the monsoon.",
+              "correct": true
+            },
+            {
+              "text": "A umbrella is useful in the monsoon.",
+              "correct": false
+            },
+            {
+              "text": "An umbrella are useful in the monsoon.",
+              "correct": false
+            },
+            {
+              "text": "Umbrella is useful in a monsoon.",
+              "correct": false
+            }
+          ],
+          "explanation": "A singular countable noun needs an article; 'umbrella' begins with a vowel sound, so it takes 'an', and the verb becomes 'is'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-01-1"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "questions": [
+        {
+          "id": "gw9-02-g01",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Look! The children ______ in the rain.",
+          "options": [
+            {
+              "text": "are playing",
+              "correct": true
+            },
+            {
+              "text": "play",
+              "correct": false
+            },
+            {
+              "text": "played",
+              "correct": false
+            },
+            {
+              "text": "have played",
+              "correct": false
+            }
+          ],
+          "explanation": "'Look!' shows the action is happening now, so the present continuous is needed.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-02-2"
+        },
+        {
+          "id": "gw9-02-g02",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: The school library ______ at 8 a.m. every day.",
+          "options": [
+            {
+              "text": "opens",
+              "correct": true
+            },
+            {
+              "text": "open",
+              "correct": false
+            },
+            {
+              "text": "opening",
+              "correct": false
+            },
+            {
+              "text": "has open",
+              "correct": false
+            }
+          ],
+          "explanation": "'Every day' shows a routine, so the simple present is used, with -s for a singular subject.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-02-2"
+        },
+        {
+          "id": "gw9-02-g03",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: We ______ in this town since 2019.",
+          "options": [
+            {
+              "text": "have lived",
+              "correct": true
+            },
+            {
+              "text": "live",
+              "correct": false
+            },
+            {
+              "text": "are living",
+              "correct": false
+            },
+            {
+              "text": "lived",
+              "correct": false
+            }
+          ],
+          "explanation": "'Since' with a point in time shows an action that began in the past and continues now, so the present perfect is used.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-02-2"
+        },
+        {
+          "id": "gw9-02-g04",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Yesterday, while I ______ my homework, the power went off.",
+          "options": [
+            {
+              "text": "am doing",
+              "correct": false
+            },
+            {
+              "text": "was doing",
+              "correct": true
+            },
+            {
+              "text": "do",
+              "correct": false
+            },
+            {
+              "text": "have done",
+              "correct": false
+            }
+          ],
+          "explanation": "A longer action in progress in the past that is interrupted by a shorter one takes the past continuous.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-02-2"
+        },
+        {
+          "id": "gw9-02-g05",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: By the time the ambulance arrived, the neighbours ______ the injured cyclist to the side of the road.",
+          "options": [
+            {
+              "text": "have moved",
+              "correct": false
+            },
+            {
+              "text": "had moved",
+              "correct": true
+            },
+            {
+              "text": "move",
+              "correct": false
+            },
+            {
+              "text": "will move",
+              "correct": false
+            }
+          ],
+          "explanation": "When one past action was completed before another past action, the earlier one takes the past perfect.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-02-2"
+        },
+        {
+          "id": "gw9-02-g06",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: If it rains tomorrow, the inter-house match ______ postponed.",
+          "options": [
+            {
+              "text": "is being",
+              "correct": false
+            },
+            {
+              "text": "will be",
+              "correct": true
+            },
+            {
+              "text": "was",
+              "correct": false
+            },
+            {
+              "text": "had been",
+              "correct": false
+            }
+          ],
+          "explanation": "In a first conditional the 'if' clause is in the simple present and the main clause uses 'will'; here the passive 'will be postponed'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-02-1"
+        },
+        {
+          "id": "gw9-02-g07",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Priya looks tired because she ______ for the dance competition since six this morning.",
+          "options": [
+            {
+              "text": "is practising",
+              "correct": false
+            },
+            {
+              "text": "practised",
+              "correct": false
+            },
+            {
+              "text": "has been practising",
+              "correct": true
+            },
+            {
+              "text": "had practised",
+              "correct": false
+            }
+          ],
+          "explanation": "An action that began in the past and is still going on, with 'since', takes the present perfect continuous.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-02-1"
+        },
+        {
+          "id": "gw9-02-g08",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: My brother ______ his board exams last March, and now he is in Class 11.",
+          "options": [
+            {
+              "text": "has taken",
+              "correct": false
+            },
+            {
+              "text": "takes",
+              "correct": false
+            },
+            {
+              "text": "took",
+              "correct": true
+            },
+            {
+              "text": "had been taking",
+              "correct": false
+            }
+          ],
+          "explanation": "'Last March' is a finished past time, so the simple past is used, not the present perfect.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-02-2"
+        },
+        {
+          "id": "gw9-02-g09",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'Rahul go to the swimming pool every Sunday morning.'",
+          "options": [
+            {
+              "text": "the → a",
+              "correct": false
+            },
+            {
+              "text": "every → all",
+              "correct": false
+            },
+            {
+              "text": "go → goes",
+              "correct": true
+            },
+            {
+              "text": "morning → mornings",
+              "correct": false
+            }
+          ],
+          "explanation": "In the simple present a third-person singular subject such as 'Rahul' takes the -s form of the verb.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-02-3"
+        },
+        {
+          "id": "gw9-02-g10",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'I have seen that documentary on wildlife last night.'",
+          "options": [
+            {
+              "text": "that → this",
+              "correct": false
+            },
+            {
+              "text": "on → about",
+              "correct": false
+            },
+            {
+              "text": "wildlife → wildlifes",
+              "correct": false
+            },
+            {
+              "text": "have seen → saw",
+              "correct": true
+            }
+          ],
+          "explanation": "'Last night' is a finished past time, and the present perfect cannot be used with it; the simple past is needed.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-02-3"
+        },
+        {
+          "id": "gw9-02-g11",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'When we reached the station, the train already left.'",
+          "options": [
+            {
+              "text": "reached → reach",
+              "correct": false
+            },
+            {
+              "text": "the train → a train",
+              "correct": false
+            },
+            {
+              "text": "When → While",
+              "correct": false
+            },
+            {
+              "text": "already left → had already left",
+              "correct": true
+            }
+          ],
+          "explanation": "The train left before we reached, so the earlier past action takes the past perfect.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-02-3"
+        },
+        {
+          "id": "gw9-02-g12",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'She is knowing the answer to every question in the quiz.'",
+          "options": [
+            {
+              "text": "every → all",
+              "correct": false
+            },
+            {
+              "text": "question → questions",
+              "correct": false
+            },
+            {
+              "text": "in → on",
+              "correct": false
+            },
+            {
+              "text": "is knowing → knows",
+              "correct": true
+            }
+          ],
+          "explanation": "'Know' is a state verb and is not normally used in the continuous form.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-02-3"
+        },
+        {
+          "id": "gw9-02-g13",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'The farmers were waiting for rain for three weeks before the first shower finally came.'",
+          "options": [
+            {
+              "text": "were waiting → had been waiting",
+              "correct": true
+            },
+            {
+              "text": "were waiting → have been waiting",
+              "correct": false
+            },
+            {
+              "text": "came → comes",
+              "correct": false
+            },
+            {
+              "text": "finally → final",
+              "correct": false
+            }
+          ],
+          "explanation": "An action that continued for a period up to another past event takes the past perfect continuous.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-02-3"
+        },
+        {
+          "id": "gw9-02-g14",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'Did you finished the science worksheet before lunch?'",
+          "options": [
+            {
+              "text": "finished → finish",
+              "correct": true
+            },
+            {
+              "text": "Did → Do",
+              "correct": false
+            },
+            {
+              "text": "before → after",
+              "correct": false
+            },
+            {
+              "text": "the → a",
+              "correct": false
+            }
+          ],
+          "explanation": "After the helping verb 'did', the main verb is always in its base form.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-02-3"
+        },
+        {
+          "id": "gw9-02-g15",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into the negative: 'Anjali plays the tabla.'",
+          "options": [
+            {
+              "text": "Anjali does not play the tabla.",
+              "correct": true
+            },
+            {
+              "text": "Anjali does not plays the tabla.",
+              "correct": false
+            },
+            {
+              "text": "Anjali not plays the tabla.",
+              "correct": false
+            },
+            {
+              "text": "Anjali do not play the tabla.",
+              "correct": false
+            }
+          ],
+          "explanation": "A simple present negative with a singular subject uses 'does not' followed by the base form of the verb.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-02-1"
+        },
+        {
+          "id": "gw9-02-g16",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into the present perfect tense: 'The gardener waters the plants.'",
+          "options": [
+            {
+              "text": "The gardener have watered the plants.",
+              "correct": false
+            },
+            {
+              "text": "The gardener has watered the plants.",
+              "correct": true
+            },
+            {
+              "text": "The gardener has water the plants.",
+              "correct": false
+            },
+            {
+              "text": "The gardener had watered the plants.",
+              "correct": false
+            }
+          ],
+          "explanation": "The present perfect is 'has/have' with the past participle; a singular subject takes 'has'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-02-1"
+        },
+        {
+          "id": "gw9-02-g17",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into a question: 'They were repairing the road near the school.'",
+          "options": [
+            {
+              "text": "Did they repairing the road near the school?",
+              "correct": false
+            },
+            {
+              "text": "Were they repairing the road near the school?",
+              "correct": true
+            },
+            {
+              "text": "Were they repair the road near the school?",
+              "correct": false
+            },
+            {
+              "text": "They were repairing the road near the school?",
+              "correct": false
+            }
+          ],
+          "explanation": "In a question the helping verb 'were' comes before the subject, and the -ing form stays.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-02-1"
+        },
+        {
+          "id": "gw9-02-g18",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into the past continuous tense: 'The girls sing the school anthem.'",
+          "options": [
+            {
+              "text": "The girls was singing the school anthem.",
+              "correct": false
+            },
+            {
+              "text": "The girls were singing the school anthem.",
+              "correct": true
+            },
+            {
+              "text": "The girls were sang the school anthem.",
+              "correct": false
+            },
+            {
+              "text": "The girls are singing the school anthem.",
+              "correct": false
+            }
+          ],
+          "explanation": "The past continuous is 'was/were' with the -ing form; a plural subject takes 'were'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-02-1"
+        },
+        {
+          "id": "gw9-02-g19",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Join the two sentences into one using 'after' and the past perfect: 'The guests left. Then we cleaned the hall.'",
+          "options": [
+            {
+              "text": "After the guests have left, we cleaned the hall.",
+              "correct": false
+            },
+            {
+              "text": "After the guests had left, we had clean the hall.",
+              "correct": false
+            },
+            {
+              "text": "After the guests had left, we cleaned the hall.",
+              "correct": true
+            },
+            {
+              "text": "After the guests left, we had been cleaned the hall.",
+              "correct": false
+            }
+          ],
+          "explanation": "The action that happened first takes the past perfect, and the later one stays in the simple past.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-02-2"
+        },
+        {
+          "id": "gw9-02-g20",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite in the future perfect tense, adding 'By December': 'The workers finish the new bridge.'",
+          "options": [
+            {
+              "text": "By December, the workers will has finished the new bridge.",
+              "correct": false
+            },
+            {
+              "text": "By December, the workers will have finish the new bridge.",
+              "correct": false
+            },
+            {
+              "text": "By December, the workers will have finished the new bridge.",
+              "correct": true
+            },
+            {
+              "text": "By December, the workers will be finished the new bridge.",
+              "correct": false
+            }
+          ],
+          "explanation": "The future perfect is 'will have' with the past participle, for an action completed before a future time.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-02-1"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "questions": [
+        {
+          "id": "gw9-03-g01",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: My little sister is only four, but she ______ already read simple words in Hindi and English.",
+          "options": [
+            {
+              "text": "must",
+              "correct": false
+            },
+            {
+              "text": "should",
+              "correct": false
+            },
+            {
+              "text": "can",
+              "correct": true
+            },
+            {
+              "text": "ought",
+              "correct": false
+            }
+          ],
+          "explanation": "'Can' expresses ability in the present.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-03-1"
+        },
+        {
+          "id": "gw9-03-g02",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: You ______ wear a helmet when you ride a scooter; it is the law.",
+          "options": [
+            {
+              "text": "might",
+              "correct": false
+            },
+            {
+              "text": "could",
+              "correct": false
+            },
+            {
+              "text": "must",
+              "correct": true
+            },
+            {
+              "text": "may",
+              "correct": false
+            }
+          ],
+          "explanation": "'Must' expresses a strong obligation, such as a rule or a law.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-03-2"
+        },
+        {
+          "id": "gw9-03-g03",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: ______ I borrow your geometry box for the maths period, please?",
+          "options": [
+            {
+              "text": "Must",
+              "correct": false
+            },
+            {
+              "text": "Should",
+              "correct": false
+            },
+            {
+              "text": "May",
+              "correct": true
+            },
+            {
+              "text": "Ought",
+              "correct": false
+            }
+          ],
+          "explanation": "'May' is used to ask for permission politely.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-03-2"
+        },
+        {
+          "id": "gw9-03-g04",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: The sky is cloudy; it ______ rain later in the afternoon.",
+          "options": [
+            {
+              "text": "must to",
+              "correct": false
+            },
+            {
+              "text": "ought",
+              "correct": false
+            },
+            {
+              "text": "can to",
+              "correct": false
+            },
+            {
+              "text": "might",
+              "correct": true
+            }
+          ],
+          "explanation": "'Might' expresses possibility, and a modal is followed by the base form without 'to' (except 'ought to').",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-03-1"
+        },
+        {
+          "id": "gw9-03-g05",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: You have had a bad cough for a week. You ______ see a doctor.",
+          "options": [
+            {
+              "text": "need",
+              "correct": false
+            },
+            {
+              "text": "would",
+              "correct": false
+            },
+            {
+              "text": "shall",
+              "correct": false
+            },
+            {
+              "text": "should",
+              "correct": true
+            }
+          ],
+          "explanation": "'Should' is used to give advice.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-03-2"
+        },
+        {
+          "id": "gw9-03-g06",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: When he was ten, my father ______ swim across the village pond without stopping.",
+          "options": [
+            {
+              "text": "can",
+              "correct": false
+            },
+            {
+              "text": "must",
+              "correct": false
+            },
+            {
+              "text": "should",
+              "correct": false
+            },
+            {
+              "text": "could",
+              "correct": true
+            }
+          ],
+          "explanation": "'Could' expresses ability in the past.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-03-1"
+        },
+        {
+          "id": "gw9-03-g07",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Students ______ not run in the corridors; someone could get hurt.",
+          "options": [
+            {
+              "text": "must",
+              "correct": true
+            },
+            {
+              "text": "need to",
+              "correct": false
+            },
+            {
+              "text": "would",
+              "correct": false
+            },
+            {
+              "text": "dare to",
+              "correct": false
+            }
+          ],
+          "explanation": "'Must not' expresses a prohibition, something that is not allowed.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-03-2"
+        },
+        {
+          "id": "gw9-03-g08",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'You must to submit your project by Friday.'",
+          "options": [
+            {
+              "text": "must to → must",
+              "correct": true
+            },
+            {
+              "text": "submit → submitted",
+              "correct": false
+            },
+            {
+              "text": "by → till",
+              "correct": false
+            },
+            {
+              "text": "your → you",
+              "correct": false
+            }
+          ],
+          "explanation": "A modal such as 'must' is followed by the base form of the verb without 'to'.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-03-3"
+        },
+        {
+          "id": "gw9-03-g09",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'He can speaks three languages fluently.'",
+          "options": [
+            {
+              "text": "speaks → speak",
+              "correct": true
+            },
+            {
+              "text": "can → could",
+              "correct": false
+            },
+            {
+              "text": "three → third",
+              "correct": false
+            },
+            {
+              "text": "fluently → fluent",
+              "correct": false
+            }
+          ],
+          "explanation": "After a modal the main verb is in its base form, with no -s.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-03-3"
+        },
+        {
+          "id": "gw9-03-g10",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'We should not wasted water during the summer months.'",
+          "options": [
+            {
+              "text": "should → must",
+              "correct": false
+            },
+            {
+              "text": "wasted → waste",
+              "correct": true
+            },
+            {
+              "text": "during → while",
+              "correct": false
+            },
+            {
+              "text": "months → month",
+              "correct": false
+            }
+          ],
+          "explanation": "After a modal the main verb is in its base form, not the past form.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-03-3"
+        },
+        {
+          "id": "gw9-03-g11",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'Might I to use your phone to call my mother?'",
+          "options": [
+            {
+              "text": "Might → Must",
+              "correct": false
+            },
+            {
+              "text": "to use → use",
+              "correct": true
+            },
+            {
+              "text": "your → yours",
+              "correct": false
+            },
+            {
+              "text": "call → calling",
+              "correct": false
+            }
+          ],
+          "explanation": "A modal such as 'might' is followed directly by the base form, without 'to'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-03-3"
+        },
+        {
+          "id": "gw9-03-g12",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'You ought wear your seat belt, even on short trips.'",
+          "options": [
+            {
+              "text": "wear → wearing",
+              "correct": false
+            },
+            {
+              "text": "ought → ought to",
+              "correct": true
+            },
+            {
+              "text": "even → ever",
+              "correct": false
+            },
+            {
+              "text": "trips → trip",
+              "correct": false
+            }
+          ],
+          "explanation": "'Ought' is the one modal that always takes 'to' before the verb: 'ought to wear'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-03-3"
+        },
+        {
+          "id": "gw9-03-g13",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'Last year I can not solve these problems, but now I can.'",
+          "options": [
+            {
+              "text": "these → this",
+              "correct": false
+            },
+            {
+              "text": "now → then",
+              "correct": false
+            },
+            {
+              "text": "can not solve → could not solve",
+              "correct": true
+            },
+            {
+              "text": "problems → problem",
+              "correct": false
+            }
+          ],
+          "explanation": "'Last year' refers to the past, so past ability is expressed with 'could'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-03-3"
+        },
+        {
+          "id": "gw9-03-g14",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite as a polite request using 'Could': 'Open the window.'",
+          "options": [
+            {
+              "text": "Could you please opened the window?",
+              "correct": false
+            },
+            {
+              "text": "Could you please to open the window?",
+              "correct": false
+            },
+            {
+              "text": "Could you please open the window?",
+              "correct": true
+            },
+            {
+              "text": "Could please you open the window?",
+              "correct": false
+            }
+          ],
+          "explanation": "A polite request is 'Could you (please)' followed by the base form of the verb.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-03-2"
+        },
+        {
+          "id": "gw9-03-g15",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite using 'must' to show obligation: 'It is compulsory for all visitors to sign the register.'",
+          "options": [
+            {
+              "text": "All visitors must signs the register.",
+              "correct": false
+            },
+            {
+              "text": "All visitors must to sign the register.",
+              "correct": false
+            },
+            {
+              "text": "All visitors must sign the register.",
+              "correct": true
+            },
+            {
+              "text": "All visitors must signed the register.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Must' expresses obligation and is followed by the base form of the verb.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-03-1"
+        },
+        {
+          "id": "gw9-03-g16",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite using 'may' to show possibility: 'Perhaps the principal will visit our class today.'",
+          "options": [
+            {
+              "text": "The principal may visits our class today.",
+              "correct": false
+            },
+            {
+              "text": "The principal may will visit our class today.",
+              "correct": false
+            },
+            {
+              "text": "The principal mays visit our class today.",
+              "correct": false
+            },
+            {
+              "text": "The principal may visit our class today.",
+              "correct": true
+            }
+          ],
+          "explanation": "'May' expresses possibility; a modal never takes -s and is never followed by another modal.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-03-1"
+        },
+        {
+          "id": "gw9-03-g17",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite using 'can': 'Meena is able to solve the Rubik's cube in two minutes.'",
+          "options": [
+            {
+              "text": "Meena can solves the Rubik's cube in two minutes.",
+              "correct": false
+            },
+            {
+              "text": "Meena cans solve the Rubik's cube in two minutes.",
+              "correct": false
+            },
+            {
+              "text": "Meena can able to solve the Rubik's cube in two minutes.",
+              "correct": false
+            },
+            {
+              "text": "Meena can solve the Rubik's cube in two minutes.",
+              "correct": true
+            }
+          ],
+          "explanation": "'Can' expresses present ability and replaces 'is able to'; it takes the base form of the verb.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-03-1"
+        },
+        {
+          "id": "gw9-03-g18",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite using 'should' to give advice: 'It is a good idea for you to revise every day.'",
+          "options": [
+            {
+              "text": "You should to revise every day.",
+              "correct": false
+            },
+            {
+              "text": "You should revised every day.",
+              "correct": false
+            },
+            {
+              "text": "You should revising every day.",
+              "correct": false
+            },
+            {
+              "text": "You should revise every day.",
+              "correct": true
+            }
+          ],
+          "explanation": "'Should' gives advice and is followed by the base form of the verb.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-03-2"
+        },
+        {
+          "id": "gw9-03-g19",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into the past: 'I can finish the painting in one hour.'",
+          "options": [
+            {
+              "text": "I could finish the painting in one hour.",
+              "correct": true
+            },
+            {
+              "text": "I could finished the painting in one hour.",
+              "correct": false
+            },
+            {
+              "text": "I can finished the painting in one hour.",
+              "correct": false
+            },
+            {
+              "text": "I could have finish the painting in one hour.",
+              "correct": false
+            }
+          ],
+          "explanation": "The past of 'can' for ability is 'could', still followed by the base form.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-03-1"
+        },
+        {
+          "id": "gw9-03-g20",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite using 'need not': 'It is not necessary for you to bring lunch tomorrow.'",
+          "options": [
+            {
+              "text": "You need not bring lunch tomorrow.",
+              "correct": true
+            },
+            {
+              "text": "You need not to bring lunch tomorrow.",
+              "correct": false
+            },
+            {
+              "text": "You need not brings lunch tomorrow.",
+              "correct": false
+            },
+            {
+              "text": "You not need bring lunch tomorrow.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Need not' shows that something is not necessary, and as a modal it is followed by the base form without 'to'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-03-2"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "questions": [
+        {
+          "id": "gw9-04-g01",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Each of the students ______ a library card.",
+          "options": [
+            {
+              "text": "has",
+              "correct": true
+            },
+            {
+              "text": "have",
+              "correct": false
+            },
+            {
+              "text": "are having",
+              "correct": false
+            },
+            {
+              "text": "were having",
+              "correct": false
+            }
+          ],
+          "explanation": "'Each' is singular, so it takes a singular verb even when followed by 'of' and a plural noun.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-04-1"
+        },
+        {
+          "id": "gw9-04-g02",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Mathematics ______ my favourite subject this year.",
+          "options": [
+            {
+              "text": "is",
+              "correct": true
+            },
+            {
+              "text": "are",
+              "correct": false
+            },
+            {
+              "text": "were",
+              "correct": false
+            },
+            {
+              "text": "have been",
+              "correct": false
+            }
+          ],
+          "explanation": "Names of subjects ending in -s, such as mathematics, are singular and take a singular verb.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-04-1"
+        },
+        {
+          "id": "gw9-04-g03",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Rohan and his cousin ______ going to the cricket camp this summer.",
+          "options": [
+            {
+              "text": "are",
+              "correct": true
+            },
+            {
+              "text": "is",
+              "correct": false
+            },
+            {
+              "text": "was",
+              "correct": false
+            },
+            {
+              "text": "has",
+              "correct": false
+            }
+          ],
+          "explanation": "Two subjects joined by 'and' make a plural subject and take a plural verb.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-04-2"
+        },
+        {
+          "id": "gw9-04-g04",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Neither the teacher nor the students ______ aware of the change in the timetable.",
+          "options": [
+            {
+              "text": "was",
+              "correct": false
+            },
+            {
+              "text": "were",
+              "correct": true
+            },
+            {
+              "text": "is",
+              "correct": false
+            },
+            {
+              "text": "has been",
+              "correct": false
+            }
+          ],
+          "explanation": "With 'neither…nor', the verb agrees with the subject nearer to it; 'students' is plural.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-04-2"
+        },
+        {
+          "id": "gw9-04-g05",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: The box of old photographs ______ kept in the cupboard.",
+          "options": [
+            {
+              "text": "are",
+              "correct": false
+            },
+            {
+              "text": "is",
+              "correct": true
+            },
+            {
+              "text": "were",
+              "correct": false
+            },
+            {
+              "text": "have been",
+              "correct": false
+            }
+          ],
+          "explanation": "The verb agrees with the main subject 'box', not with 'photographs' in the phrase that follows it.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-04-2"
+        },
+        {
+          "id": "gw9-04-g06",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Every boy and girl in the class ______ to plant a sapling on Van Mahotsav.",
+          "options": [
+            {
+              "text": "have",
+              "correct": false
+            },
+            {
+              "text": "has",
+              "correct": true
+            },
+            {
+              "text": "are",
+              "correct": false
+            },
+            {
+              "text": "were",
+              "correct": false
+            }
+          ],
+          "explanation": "When 'every' comes before subjects joined by 'and', each is thought of separately and the verb is singular.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-04-1"
+        },
+        {
+          "id": "gw9-04-g07",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: Either my parents or my sister ______ going to attend the annual day function.",
+          "options": [
+            {
+              "text": "are",
+              "correct": false
+            },
+            {
+              "text": "were",
+              "correct": false
+            },
+            {
+              "text": "is",
+              "correct": true
+            },
+            {
+              "text": "have",
+              "correct": false
+            }
+          ],
+          "explanation": "With 'either…or', the verb agrees with the nearer subject; 'sister' is singular.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-04-2"
+        },
+        {
+          "id": "gw9-04-g08",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank: The news about the new metro line ______ very exciting for the commuters.",
+          "options": [
+            {
+              "text": "are",
+              "correct": false
+            },
+            {
+              "text": "were",
+              "correct": false
+            },
+            {
+              "text": "is",
+              "correct": true
+            },
+            {
+              "text": "have been",
+              "correct": false
+            }
+          ],
+          "explanation": "'News' ends in -s but is an uncountable singular noun, so it takes a singular verb.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-04-1"
+        },
+        {
+          "id": "gw9-04-g09",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'The boys in the band practises every evening after school.'",
+          "options": [
+            {
+              "text": "band → bands",
+              "correct": false
+            },
+            {
+              "text": "every → all",
+              "correct": false
+            },
+            {
+              "text": "practises → practise",
+              "correct": true
+            },
+            {
+              "text": "after → since",
+              "correct": false
+            }
+          ],
+          "explanation": "The subject is the plural 'boys', not 'band', so the verb must be the plural 'practise'.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-04-3"
+        },
+        {
+          "id": "gw9-04-g10",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'One of my friends live near the railway station.'",
+          "options": [
+            {
+              "text": "friends → friend",
+              "correct": false
+            },
+            {
+              "text": "near → nearby",
+              "correct": false
+            },
+            {
+              "text": "the → a",
+              "correct": false
+            },
+            {
+              "text": "live → lives",
+              "correct": true
+            }
+          ],
+          "explanation": "In 'one of…', the subject is 'one', which is singular and takes 'lives'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-04-3"
+        },
+        {
+          "id": "gw9-04-g11",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'Bread and butter are my usual breakfast before school.'",
+          "options": [
+            {
+              "text": "my → mine",
+              "correct": false
+            },
+            {
+              "text": "before → after",
+              "correct": false
+            },
+            {
+              "text": "usual → usually",
+              "correct": false
+            },
+            {
+              "text": "are → is",
+              "correct": true
+            }
+          ],
+          "explanation": "Two nouns joined by 'and' that form a single idea or dish take a singular verb.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-04-3"
+        },
+        {
+          "id": "gw9-04-g12",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'The number of students in our school have increased this year.'",
+          "options": [
+            {
+              "text": "number → numbers",
+              "correct": false
+            },
+            {
+              "text": "students → student",
+              "correct": false
+            },
+            {
+              "text": "this → these",
+              "correct": false
+            },
+            {
+              "text": "have → has",
+              "correct": true
+            }
+          ],
+          "explanation": "'The number of' is singular and takes a singular verb; 'a number of' would take a plural one.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-04-3"
+        },
+        {
+          "id": "gw9-04-g13",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'Neither Arjun nor Kavya were present at the rehearsal.'",
+          "options": [
+            {
+              "text": "were → was",
+              "correct": true
+            },
+            {
+              "text": "nor → or",
+              "correct": false
+            },
+            {
+              "text": "present → presents",
+              "correct": false
+            },
+            {
+              "text": "at → on",
+              "correct": false
+            }
+          ],
+          "explanation": "With 'neither…nor' the verb agrees with the nearer subject, and 'Kavya' is singular.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-04-3"
+        },
+        {
+          "id": "gw9-04-g14",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'My grandmother tell us stories from the Panchatantra every night.'",
+          "options": [
+            {
+              "text": "tell → tells",
+              "correct": true
+            },
+            {
+              "text": "us → we",
+              "correct": false
+            },
+            {
+              "text": "stories → story",
+              "correct": false
+            },
+            {
+              "text": "every → all",
+              "correct": false
+            }
+          ],
+          "explanation": "A singular subject such as 'my grandmother' takes the -s form of the verb in the simple present.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-04-3"
+        },
+        {
+          "id": "gw9-04-g15",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'The teacher, along with her students, are planting trees in the school garden.'",
+          "options": [
+            {
+              "text": "are → is",
+              "correct": true
+            },
+            {
+              "text": "her → their",
+              "correct": false
+            },
+            {
+              "text": "planting → planted",
+              "correct": false
+            },
+            {
+              "text": "trees → tree",
+              "correct": false
+            }
+          ],
+          "explanation": "A phrase beginning 'along with' does not change the subject; 'the teacher' is singular and takes 'is'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-04-3"
+        },
+        {
+          "id": "gw9-04-g16",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite in the plural: 'The child plays in the park.'",
+          "options": [
+            {
+              "text": "The children plays in the park.",
+              "correct": false
+            },
+            {
+              "text": "The children play in the park.",
+              "correct": true
+            },
+            {
+              "text": "The childs play in the park.",
+              "correct": false
+            },
+            {
+              "text": "The children is playing in the park.",
+              "correct": false
+            }
+          ],
+          "explanation": "A plural subject such as 'children' takes the base form of the verb, without -s.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-04-1"
+        },
+        {
+          "id": "gw9-04-g17",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite in the singular: 'These dogs bark at strangers.'",
+          "options": [
+            {
+              "text": "This dog bark at strangers.",
+              "correct": false
+            },
+            {
+              "text": "This dog barks at strangers.",
+              "correct": true
+            },
+            {
+              "text": "These dog barks at strangers.",
+              "correct": false
+            },
+            {
+              "text": "This dogs barks at strangers.",
+              "correct": false
+            }
+          ],
+          "explanation": "A singular subject takes the -s form of the verb in the simple present, and 'these' becomes 'this'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-04-1"
+        },
+        {
+          "id": "gw9-04-g18",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite beginning with 'Neither': 'Tanvi does not like spinach, and her brothers do not like it either.'",
+          "options": [
+            {
+              "text": "Neither Tanvi nor her brothers likes spinach.",
+              "correct": false
+            },
+            {
+              "text": "Neither Tanvi nor her brothers like spinach.",
+              "correct": true
+            },
+            {
+              "text": "Neither Tanvi or her brothers like spinach.",
+              "correct": false
+            },
+            {
+              "text": "Neither Tanvi nor her brothers doesn't like spinach.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Neither' pairs with 'nor', the verb agrees with the nearer subject 'brothers', and no second negative is added.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-04-2"
+        },
+        {
+          "id": "gw9-04-g19",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Combine into one sentence using 'as well as': 'The captain is ready. The players are ready too.'",
+          "options": [
+            {
+              "text": "The captain, as well as the players, are ready.",
+              "correct": false
+            },
+            {
+              "text": "The captain as well as the players am ready.",
+              "correct": false
+            },
+            {
+              "text": "The captain, as well as the players, is ready.",
+              "correct": true
+            },
+            {
+              "text": "The captain, as well as the players, were ready.",
+              "correct": false
+            }
+          ],
+          "explanation": "A phrase beginning 'as well as' does not change the subject, so the verb agrees with 'the captain' and the present tense is kept.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-04-2"
+        },
+        {
+          "id": "gw9-04-g20",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Rewrite beginning with 'Everyone': 'All the students have submitted the form.'",
+          "options": [
+            {
+              "text": "Everyone have submitted the form.",
+              "correct": false
+            },
+            {
+              "text": "Everyone are submitted the form.",
+              "correct": false
+            },
+            {
+              "text": "Everyone has submitted the form.",
+              "correct": true
+            },
+            {
+              "text": "Everyone have submit the form.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Everyone' is singular, so it takes 'has'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-04-1"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "questions": [
+        {
+          "id": "gw9-05-g01",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank to report the sentence. Nisha said, \"I am tired after the long bus journey.\" → Nisha said that she ______ tired after the long bus journey.",
+          "options": [
+            {
+              "text": "is",
+              "correct": false
+            },
+            {
+              "text": "has",
+              "correct": false
+            },
+            {
+              "text": "was",
+              "correct": true
+            },
+            {
+              "text": "were",
+              "correct": false
+            }
+          ],
+          "explanation": "When the reporting verb is in the past, the present tense 'am' changes to the past 'was'.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-05-1"
+        },
+        {
+          "id": "gw9-05-g02",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank to report the question. The coach asked me, \"Do you practise every day?\" → The coach asked me ______ I practised every day.",
+          "options": [
+            {
+              "text": "that",
+              "correct": false
+            },
+            {
+              "text": "do",
+              "correct": false
+            },
+            {
+              "text": "if",
+              "correct": true
+            },
+            {
+              "text": "what",
+              "correct": false
+            }
+          ],
+          "explanation": "A yes/no question is reported with 'if' or 'whether', and 'do' is dropped.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-05-2"
+        },
+        {
+          "id": "gw9-05-g03",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank to report the advice. The doctor said to the patient, \"Take this medicine twice a day.\" → The doctor ______ the patient to take the medicine twice a day.",
+          "options": [
+            {
+              "text": "said",
+              "correct": false
+            },
+            {
+              "text": "told that",
+              "correct": false
+            },
+            {
+              "text": "advised",
+              "correct": true
+            },
+            {
+              "text": "spoke",
+              "correct": false
+            }
+          ],
+          "explanation": "A command or advice is reported with a verb such as 'advised' followed by the listener and 'to' with the verb.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-05-3"
+        },
+        {
+          "id": "gw9-05-g04",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank to report the question. Ananya said to the shopkeeper, \"How much does this notebook cost?\" → Ananya asked the shopkeeper how much ______.",
+          "options": [
+            {
+              "text": "did that notebook cost",
+              "correct": false
+            },
+            {
+              "text": "does this notebook cost",
+              "correct": false
+            },
+            {
+              "text": "that notebook costs",
+              "correct": false
+            },
+            {
+              "text": "that notebook cost",
+              "correct": true
+            }
+          ],
+          "explanation": "A reported question uses statement word order with no 'does', the tense shifts back, and 'this' becomes 'that'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-05-2"
+        },
+        {
+          "id": "gw9-05-g05",
+          "kind": "grammar",
+          "task": "gap-filling",
+          "stem": "Fill in the blank. On Monday, Vikram said, \"I will call you tomorrow.\" A week later you report it: Vikram said that he would call me ______.",
+          "options": [
+            {
+              "text": "tomorrow",
+              "correct": false
+            },
+            {
+              "text": "yesterday",
+              "correct": false
+            },
+            {
+              "text": "the previous day",
+              "correct": false
+            },
+            {
+              "text": "the next day",
+              "correct": true
+            }
+          ],
+          "explanation": "In reported speech 'tomorrow' becomes 'the next day', because the time of reporting has changed.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-05-1"
+        },
+        {
+          "id": "gw9-05-g06",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. Meera said, \"I am going to the market.\" This was reported as: 'Meera said that she is going to the market.'",
+          "options": [
+            {
+              "text": "said → told",
+              "correct": false
+            },
+            {
+              "text": "she → her",
+              "correct": false
+            },
+            {
+              "text": "the → a",
+              "correct": false
+            },
+            {
+              "text": "is → was",
+              "correct": true
+            }
+          ],
+          "explanation": "When the reporting verb is in the past, the present continuous changes to the past continuous.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-05-1"
+        },
+        {
+          "id": "gw9-05-g07",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'The teacher asked Raju where did he live.'",
+          "options": [
+            {
+              "text": "did he live → he lived",
+              "correct": true
+            },
+            {
+              "text": "asked → said",
+              "correct": false
+            },
+            {
+              "text": "where → what",
+              "correct": false
+            },
+            {
+              "text": "Raju → to Raju",
+              "correct": false
+            }
+          ],
+          "explanation": "A reported question uses statement word order and drops 'did'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-05-2"
+        },
+        {
+          "id": "gw9-05-g08",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'Mother told me that close the door.'",
+          "options": [
+            {
+              "text": "that close → to close",
+              "correct": true
+            },
+            {
+              "text": "told → said",
+              "correct": false
+            },
+            {
+              "text": "me → I",
+              "correct": false
+            },
+            {
+              "text": "the → a",
+              "correct": false
+            }
+          ],
+          "explanation": "A reported command uses 'to' with the verb, not 'that'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-05-3"
+        },
+        {
+          "id": "gw9-05-g09",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'The librarian asked us whether had we returned the books.'",
+          "options": [
+            {
+              "text": "had we → we had",
+              "correct": true
+            },
+            {
+              "text": "whether → that",
+              "correct": false
+            },
+            {
+              "text": "asked → told",
+              "correct": false
+            },
+            {
+              "text": "returned → return",
+              "correct": false
+            }
+          ],
+          "explanation": "After 'whether' or 'if', a reported question takes statement word order: subject before verb.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-05-2"
+        },
+        {
+          "id": "gw9-05-g10",
+          "kind": "grammar",
+          "task": "editing",
+          "stem": "The sentence below has one error. Choose the correct correction. 'Karan told that he had lost his bicycle key.'",
+          "options": [
+            {
+              "text": "had → has",
+              "correct": false
+            },
+            {
+              "text": "told → said",
+              "correct": true
+            },
+            {
+              "text": "his → him",
+              "correct": false
+            },
+            {
+              "text": "lost → lose",
+              "correct": false
+            }
+          ],
+          "explanation": "'Told' needs an object (told me, told us); without one, 'said' is used.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-05-1"
+        },
+        {
+          "id": "gw9-05-g11",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: Pooja said, \"I am reading a detective story.\"",
+          "options": [
+            {
+              "text": "Pooja said that she is reading a detective story.",
+              "correct": false
+            },
+            {
+              "text": "Pooja said that she was reading a detective story.",
+              "correct": true
+            },
+            {
+              "text": "Pooja said that I was reading a detective story.",
+              "correct": false
+            },
+            {
+              "text": "Pooja told that she was reading a detective story.",
+              "correct": false
+            }
+          ],
+          "explanation": "The present continuous shifts to the past continuous, 'I' becomes 'she', and 'said' is used when there is no object.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-05-1"
+        },
+        {
+          "id": "gw9-05-g12",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: Sameer said to me, \"I have finished my model for the science exhibition.\"",
+          "options": [
+            {
+              "text": "Sameer told me that he has finished his model for the science exhibition.",
+              "correct": false
+            },
+            {
+              "text": "Sameer told me that he had finished his model for the science exhibition.",
+              "correct": true
+            },
+            {
+              "text": "Sameer said me that he had finished his model for the science exhibition.",
+              "correct": false
+            },
+            {
+              "text": "Sameer told me that I had finished my model for the science exhibition.",
+              "correct": false
+            }
+          ],
+          "explanation": "'Said to me' becomes 'told me', the present perfect shifts to the past perfect, and 'I/my' become 'he/his'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-05-1"
+        },
+        {
+          "id": "gw9-05-g13",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: The girls said, \"We visited the planetarium yesterday.\"",
+          "options": [
+            {
+              "text": "The girls said that we had visited the planetarium the previous day.",
+              "correct": false
+            },
+            {
+              "text": "The girls said that they have visited the planetarium the previous day.",
+              "correct": false
+            },
+            {
+              "text": "The girls said that they had visited the planetarium the previous day.",
+              "correct": true
+            },
+            {
+              "text": "The girls said that they had visited the planetarium the next day.",
+              "correct": false
+            }
+          ],
+          "explanation": "The simple past shifts to the past perfect, 'we' becomes 'they', and 'yesterday' becomes 'the previous day'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-05-1"
+        },
+        {
+          "id": "gw9-05-g14",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: Arun said to Neha, \"Are you coming to the match?\"",
+          "options": [
+            {
+              "text": "Arun asked Neha if was she coming to the match.",
+              "correct": false
+            },
+            {
+              "text": "Arun asked Neha that she was coming to the match.",
+              "correct": false
+            },
+            {
+              "text": "Arun asked Neha if she was coming to the match.",
+              "correct": true
+            },
+            {
+              "text": "Arun said Neha if she was coming to the match.",
+              "correct": false
+            }
+          ],
+          "explanation": "A yes/no question is reported with 'asked' and 'if', in statement word order, with the tense shifted back.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-05-2"
+        },
+        {
+          "id": "gw9-05-g15",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: The tourist said to the guide, \"Where is the nearest bus stop?\"",
+          "options": [
+            {
+              "text": "The tourist asked the guide where was the nearest bus stop.",
+              "correct": false
+            },
+            {
+              "text": "The tourist asked the guide that where the nearest bus stop was.",
+              "correct": false
+            },
+            {
+              "text": "The tourist asked the guide where the nearest bus stop was.",
+              "correct": true
+            },
+            {
+              "text": "The tourist asked to the guide where the nearest bus stop was.",
+              "correct": false
+            }
+          ],
+          "explanation": "A wh-question is reported with the question word and statement word order; 'asked' takes its object directly, with no 'that' and no 'to'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-05-2"
+        },
+        {
+          "id": "gw9-05-g16",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: Grandfather said to me, \"Why did you miss the bus?\"",
+          "options": [
+            {
+              "text": "Grandfather asked me why had I missed the bus.",
+              "correct": false
+            },
+            {
+              "text": "Grandfather asked me why you had missed the bus.",
+              "correct": false
+            },
+            {
+              "text": "Grandfather said me why I had missed the bus.",
+              "correct": false
+            },
+            {
+              "text": "Grandfather asked me why I had missed the bus.",
+              "correct": true
+            }
+          ],
+          "explanation": "The question word stays, the word order becomes subject before verb, 'did miss' becomes 'had missed', and 'you' becomes 'I'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-05-2"
+        },
+        {
+          "id": "gw9-05-g17",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: The teacher said to the class, \"Keep quiet.\"",
+          "options": [
+            {
+              "text": "The teacher ordered the class keep quiet.",
+              "correct": false
+            },
+            {
+              "text": "The teacher ordered the class that keep quiet.",
+              "correct": false
+            },
+            {
+              "text": "The teacher said the class to keep quiet.",
+              "correct": false
+            },
+            {
+              "text": "The teacher ordered the class to keep quiet.",
+              "correct": true
+            }
+          ],
+          "explanation": "A command is reported with a verb such as 'ordered', then the listener, then 'to' with the verb.",
+          "difficulty": "EASY",
+          "marks": 1,
+          "outcome": "E9GW-05-3"
+        },
+        {
+          "id": "gw9-05-g18",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: Riya said to her friend, \"Please help me with this sum.\"",
+          "options": [
+            {
+              "text": "Riya requested her friend to please help her with that sum.",
+              "correct": false
+            },
+            {
+              "text": "Riya requested her friend that help her with that sum.",
+              "correct": false
+            },
+            {
+              "text": "Riya requested to her friend to help her with that sum.",
+              "correct": false
+            },
+            {
+              "text": "Riya requested her friend to help her with that sum.",
+              "correct": true
+            }
+          ],
+          "explanation": "A request is reported with 'requested' and 'to' with the verb; 'please' is dropped because 'requested' already carries it, and 'this' becomes 'that'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-05-3"
+        },
+        {
+          "id": "gw9-05-g19",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: The guard said to the visitors, \"Do not touch the paintings.\"",
+          "options": [
+            {
+              "text": "The guard told the visitors not to touch the paintings.",
+              "correct": true
+            },
+            {
+              "text": "The guard told the visitors do not touch the paintings.",
+              "correct": false
+            },
+            {
+              "text": "The guard told the visitors not touch the paintings.",
+              "correct": false
+            },
+            {
+              "text": "The guard said the visitors not to touch the paintings.",
+              "correct": false
+            }
+          ],
+          "explanation": "A negative command is reported with 'not to' before the verb, and 'said to' becomes 'told'.",
+          "difficulty": "HARD",
+          "marks": 1,
+          "outcome": "E9GW-05-3"
+        },
+        {
+          "id": "gw9-05-g20",
+          "kind": "grammar",
+          "task": "transformation",
+          "stem": "Change into reported speech: Mother said to Aman, \"Switch off the geyser after your bath.\"",
+          "options": [
+            {
+              "text": "Mother told Aman to switch off the geyser after his bath.",
+              "correct": true
+            },
+            {
+              "text": "Mother told Aman to switch off the geyser after your bath.",
+              "correct": false
+            },
+            {
+              "text": "Mother told Aman that switch off the geyser after his bath.",
+              "correct": false
+            },
+            {
+              "text": "Mother told to Aman to switch off the geyser after his bath.",
+              "correct": false
+            }
+          ],
+          "explanation": "A command is reported with 'told' and the listener, then 'to' with the verb, and 'your' becomes 'his'.",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "outcome": "E9GW-05-3"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "questions": [
+        {
+          "id": "gw9-06-w1",
+          "kind": "writing",
+          "form": "descriptive-paragraph",
+          "stem": "Your grandmother is the person you most admire in your family. Write a descriptive paragraph of 100–120 words about her, using the following cues: early riser — silver hair and gentle smile — tends a small kitchen garden — tells stories of her village childhood — firm about honesty — the warmth she brings to the home.",
+          "valuePoints": [
+            "Introduces the grandmother and her place in the family",
+            "Describes her appearance (silver hair, gentle smile) with concrete detail",
+            "Describes her daily routine: rising early and tending the kitchen garden",
+            "Shows her character through her stories and her firmness about honesty",
+            "Concludes with the warmth she brings to the home and the writer's admiration"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Uses all the cues, adds relevant detail of its own and gives the reader a clear picture of what is described."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "One coherent paragraph with a clear opening, a logical order of details and a closing impression; ideas linked smoothly."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation largely correct; vocabulary precise and suited to a description; within 100–120 words."
+            }
+          ],
+          "difficulty": "EASY",
+          "marks": 5,
+          "outcome": "E9GW-06-1"
+        },
+        {
+          "id": "gw9-06-w2",
+          "kind": "writing",
+          "form": "descriptive-paragraph",
+          "stem": "Your school held its annual Fun Fair last Saturday to raise money for the school library. Write a descriptive paragraph of 100–120 words about the event, using these cues: colourful stalls run by each class — games and food counters — crowds of parents and neighbours — music from the school band — lucky draw at sunset — money raised for new library books.",
+          "valuePoints": [
+            "Opens by setting the scene: when the fair was held and why",
+            "Describes the stalls, games and food counters with sensory detail (colours, smells, sounds)",
+            "Conveys the atmosphere: the crowds and the school band's music",
+            "Describes the lucky draw at sunset as a high point",
+            "Closes with the amount or result for the library and the overall impression"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Uses all the cues, adds relevant detail of its own and gives the reader a clear picture of what is described."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "One coherent paragraph with a clear opening, a logical order of details and a closing impression; ideas linked smoothly."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation largely correct; vocabulary precise and suited to a description; within 100–120 words."
+            }
+          ],
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "outcome": "E9GW-06-2"
+        },
+        {
+          "id": "gw9-06-w3",
+          "kind": "writing",
+          "form": "descriptive-paragraph",
+          "stem": "After heavy floods in a nearby district, your school's NSS unit organised a relief drive. Write a descriptive paragraph of 100–120 words describing the drive, using these cues: appeal made at the morning assembly — sorting rice, pulses and blankets in the school hall — volunteers working after school — packing and labelling boxes — truck leaving for the relief camp — a sense of purpose and togetherness.",
+          "valuePoints": [
+            "Introduces the floods and the purpose of the relief drive",
+            "Describes the appeal at assembly and how students and families responded",
+            "Pictures the hall: sorting grain, pulses and blankets; volunteers at work after school",
+            "Describes packing, labelling and the truck leaving for the relief camp",
+            "Reflects on the sense of purpose and togetherness, avoiding sensational detail about the victims"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Uses all the cues, adds relevant detail of its own and gives the reader a clear picture of what is described."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "One coherent paragraph with a clear opening, a logical order of details and a closing impression; ideas linked smoothly."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation largely correct; vocabulary precise and suited to a description; within 100–120 words."
+            }
+          ],
+          "difficulty": "HARD",
+          "marks": 5,
+          "outcome": "E9GW-06-1"
+        },
+        {
+          "id": "gw9-06-w4",
+          "kind": "writing",
+          "form": "descriptive-paragraph",
+          "stem": "Write a descriptive paragraph of 100–120 words about a busy vegetable market in your town on a Sunday morning, using these cues: vendors calling out prices — heaps of fresh green vegetables and bright fruit — bargaining shoppers — cycles and carts squeezing through narrow lanes — smell of wet earth and coriander — noise fading by noon.",
+          "valuePoints": [
+            "Sets the scene: the market, the town and the time of day",
+            "Uses sound: vendors calling out prices and shoppers bargaining",
+            "Uses sight and smell: heaps of vegetables and fruit, wet earth and coriander",
+            "Describes movement: cycles and carts squeezing through the lanes",
+            "Ends with the market quietening by noon and an overall impression"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Uses all the cues, adds relevant detail of its own and gives the reader a clear picture of what is described."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "One coherent paragraph with a clear opening, a logical order of details and a closing impression; ideas linked smoothly."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation largely correct; vocabulary precise and suited to a description; within 100–120 words."
+            }
+          ],
+          "difficulty": "EASY",
+          "marks": 5,
+          "outcome": "E9GW-06-2"
+        },
+        {
+          "id": "gw9-06-w5",
+          "kind": "writing",
+          "form": "descriptive-paragraph",
+          "stem": "Your school's sports coach has just retired after twenty years. Write a descriptive paragraph of 100–120 words about him for the school magazine, using these cues: whistle always around his neck — on the ground before sunrise — strict but fair — spotted talent in shy students — district football trophies — the farewell cheer from students.",
+          "valuePoints": [
+            "Introduces the coach and the occasion of his retirement",
+            "Describes a recognisable physical detail (the whistle) and his early mornings on the ground",
+            "Brings out his character: strict but fair, encouraging shy students",
+            "Mentions his achievements, such as the district football trophies",
+            "Concludes with the farewell and what he meant to the school"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Uses all the cues, adds relevant detail of its own and gives the reader a clear picture of what is described."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "One coherent paragraph with a clear opening, a logical order of details and a closing impression; ideas linked smoothly."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation largely correct; vocabulary precise and suited to a description; within 100–120 words."
+            }
+          ],
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "outcome": "E9GW-06-1"
+        },
+        {
+          "id": "gw9-06-w6",
+          "kind": "writing",
+          "form": "descriptive-paragraph",
+          "stem": "Describe the scene at your school on the morning after the first heavy monsoon rain. Write a descriptive paragraph of 100–120 words using these cues: puddles in the courtyard — dripping trees and washed-green leaves — students with wet umbrellas and muddy shoes — the smell of wet soil — a grey sky clearing slowly — excitement mixed with inconvenience.",
+          "valuePoints": [
+            "Establishes the time and situation: the first monsoon rain overnight",
+            "Uses precise visual detail: puddles, dripping trees, washed-green leaves, a clearing grey sky",
+            "Uses other senses: the smell of wet soil, the sound of dripping water or squelching shoes",
+            "Describes the students: wet umbrellas, muddy shoes and their mood",
+            "Balances excitement and inconvenience in a closing impression"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Uses all the cues, adds relevant detail of its own and gives the reader a clear picture of what is described."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "One coherent paragraph with a clear opening, a logical order of details and a closing impression; ideas linked smoothly."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation largely correct; vocabulary precise and suited to a description; within 100–120 words."
+            }
+          ],
+          "difficulty": "HARD",
+          "marks": 5,
+          "outcome": "E9GW-06-2"
+        },
+        {
+          "id": "gw9-06-w7",
+          "kind": "writing",
+          "form": "descriptive-paragraph",
+          "stem": "Your class spent a morning at the local railway station during a project on public transport. Write a descriptive paragraph of 100–120 words about the scene you observed, using these cues: platform crowded with travellers and luggage — tea vendors and announcements — a train pulling in late — porters in red shirts — families saying goodbye — the station falling quiet once the train left.",
+          "valuePoints": [
+            "Introduces the visit and the station",
+            "Describes the crowded platform, travellers and luggage",
+            "Uses sound: tea vendors and announcements; the arrival of the late train",
+            "Describes people: porters in red shirts, families saying goodbye",
+            "Contrasts the bustle with the quiet after the train left, in a closing impression"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Uses all the cues, adds relevant detail of its own and gives the reader a clear picture of what is described."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "One coherent paragraph with a clear opening, a logical order of details and a closing impression; ideas linked smoothly."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation largely correct; vocabulary precise and suited to a description; within 100–120 words."
+            }
+          ],
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "outcome": "E9GW-06-1"
+        },
+        {
+          "id": "gw9-06-w8",
+          "kind": "writing",
+          "form": "descriptive-paragraph",
+          "stem": "Your school celebrated Independence Day with a special programme. Write a descriptive paragraph of 100–120 words about the celebration, using these cues: tricolour decorations — flag hoisting by the chief guest — march past by NCC cadets — patriotic songs and a skit — sweets distributed — a feeling of pride.",
+          "valuePoints": [
+            "Opens with the occasion and the decorated school",
+            "Describes the flag hoisting and the chief guest",
+            "Describes the march past and the cultural items (songs, skit)",
+            "Mentions the distribution of sweets and the mood of the students",
+            "Concludes with the feeling of pride the day left"
+          ],
+          "rubric": [
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Uses all the cues, adds relevant detail of its own and gives the reader a clear picture of what is described."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1.5,
+              "descriptor": "One coherent paragraph with a clear opening, a logical order of details and a closing impression; ideas linked smoothly."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1.5,
+              "descriptor": "Grammar, spelling and punctuation largely correct; vocabulary precise and suited to a description; within 100–120 words."
+            }
+          ],
+          "difficulty": "EASY",
+          "marks": 5,
+          "outcome": "E9GW-06-2"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "questions": [
+        {
+          "id": "gw9-07-w1",
+          "kind": "writing",
+          "form": "story",
+          "stem": "Complete the following story in 100–120 words and give it a suitable title. Opening line: \"The lights went out just as Ananya reached the last page of her science project, and the submission was due the next morning.\" Describe what she did, who or what helped her, and how the story ended.",
+          "valuePoints": [
+            "A suitable title; the opening line used as the start of the story",
+            "The problem developed: the power cut and the deadline",
+            "Ananya's response and the help she found (for example a neighbour, a torch or a friend)",
+            "A turning point that builds some tension",
+            "A clear ending that resolves the problem, possibly with a lesson about planning or resourcefulness"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "A suitable title; the given opening line, cue or title used as instructed; told in consistent past tense."
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "A clear beginning, a development with some tension or problem, and a satisfying ending; characters and setting brought to life."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "Events in a logical sequence with paragraphing and linking words; dialogue, if used, punctuated and purposeful."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Grammar, spelling and punctuation largely correct; within 100–120 words."
+            }
+          ],
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "outcome": "E9GW-07-1"
+        },
+        {
+          "id": "gw9-07-w2",
+          "kind": "writing",
+          "form": "story",
+          "stem": "Write a story in 100–120 words with the title \"The Wallet on the Bus\". Use these cues: a student finds a wallet on a crowded bus — an ID card and money inside — tempted, but decides to return it — finds the owner, an elderly man — his gratitude — what the student learns.",
+          "valuePoints": [
+            "Uses the given title",
+            "Beginning: the crowded bus and the discovery of the wallet",
+            "Development: the temptation and the decision to return it",
+            "Finding the elderly owner through the ID card and his gratitude",
+            "Ending that brings out the value of honesty without preaching"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "A suitable title; the given opening line, cue or title used as instructed; told in consistent past tense."
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "A clear beginning, a development with some tension or problem, and a satisfying ending; characters and setting brought to life."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "Events in a logical sequence with paragraphing and linking words; dialogue, if used, punctuated and purposeful."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Grammar, spelling and punctuation largely correct; within 100–120 words."
+            }
+          ],
+          "difficulty": "EASY",
+          "marks": 5,
+          "outcome": "E9GW-07-1"
+        },
+        {
+          "id": "gw9-07-w3",
+          "kind": "writing",
+          "form": "story",
+          "stem": "Complete the following story in 100–120 words and give it a suitable title. Opening line: \"Nobody on the team believed Kabir could bowl the final over, least of all Kabir himself.\" Develop the tension of the match, show how Kabir's feelings change, and give the story an ending that is believable — he need not win.",
+          "valuePoints": [
+            "A suitable title; the opening line used as the start",
+            "Sets the situation: the match, the score and the final over",
+            "Builds tension ball by ball or through key moments",
+            "Shows Kabir's feelings changing from doubt to determination or acceptance",
+            "A believable ending, whether a win or a loss, with what Kabir gains from it"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "A suitable title; the given opening line, cue or title used as instructed; told in consistent past tense."
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "A clear beginning, a development with some tension or problem, and a satisfying ending; characters and setting brought to life."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "Events in a logical sequence with paragraphing and linking words; dialogue, if used, punctuated and purposeful."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Grammar, spelling and punctuation largely correct; within 100–120 words."
+            }
+          ],
+          "difficulty": "HARD",
+          "marks": 5,
+          "outcome": "E9GW-07-1"
+        },
+        {
+          "id": "gw9-07-w4",
+          "kind": "writing",
+          "form": "story",
+          "stem": "Write a story in 100–120 words using the cue below, and give it a suitable title. Cue: during a school trek in the hills, a group of four friends takes a shortcut and loses the trail as mist rolls in. Describe how they stay calm, what they use to find their way back, and how the trip ends.",
+          "valuePoints": [
+            "A suitable title and the setting of the trek in the hills",
+            "The mistake: taking a shortcut and losing the trail in the mist",
+            "How the friends stay calm and work together",
+            "A sensible means of finding the way (a stream, a whistle, markers, retracing steps)",
+            "A clear ending: reunion with the group and what they learnt"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "A suitable title; the given opening line, cue or title used as instructed; told in consistent past tense."
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "A clear beginning, a development with some tension or problem, and a satisfying ending; characters and setting brought to life."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "Events in a logical sequence with paragraphing and linking words; dialogue, if used, punctuated and purposeful."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Grammar, spelling and punctuation largely correct; within 100–120 words."
+            }
+          ],
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "outcome": "E9GW-07-1"
+        },
+        {
+          "id": "gw9-07-w5",
+          "kind": "writing",
+          "form": "diary-entry",
+          "stem": "Today you took part in a tree-planting drive organised by your school's eco-club in a nearby park. Write a diary entry in 100–120 words recording the day — what you did, who took part and how the park looked by evening — and reflecting on how you felt about contributing to the environment.",
+          "valuePoints": [
+            "Format: date, day, time, 'Dear Diary' and name",
+            "Records the event: the eco-club drive, the park and who took part",
+            "Describes the work done: digging, planting, watering saplings",
+            "Reflects on feelings: satisfaction, tiredness, hope for the saplings",
+            "A resolution or thought about caring for the environment"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "Date, day and time, the salutation 'Dear Diary' and the writer's name at the end."
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Records what happened and reflects honestly on the writer's feelings and what was learnt."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "A natural order from event to reflection, in a personal first-person voice, with linked ideas."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Grammar, spelling and punctuation largely correct; within 100–120 words."
+            }
+          ],
+          "difficulty": "EASY",
+          "marks": 5,
+          "outcome": "E9GW-07-2"
+        },
+        {
+          "id": "gw9-07-w6",
+          "kind": "writing",
+          "form": "diary-entry",
+          "stem": "You had been nervous for weeks about speaking on stage, and today you spoke in the inter-house debate on the topic 'Mobile phones do more good than harm to students'. Write a diary entry in 100–120 words about the experience: how you prepared, what happened on stage, and what you now feel about facing your fear.",
+          "valuePoints": [
+            "Format: date, day, time, 'Dear Diary' and name",
+            "The nervousness beforehand and how the writer prepared",
+            "What happened on stage, including a moment of difficulty or success",
+            "Reflection on facing the fear and what was learnt",
+            "A forward-looking thought, such as taking part again"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "Date, day and time, the salutation 'Dear Diary' and the writer's name at the end."
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Records what happened and reflects honestly on the writer's feelings and what was learnt."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "A natural order from event to reflection, in a personal first-person voice, with linked ideas."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Grammar, spelling and punctuation largely correct; within 100–120 words."
+            }
+          ],
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "outcome": "E9GW-07-2"
+        },
+        {
+          "id": "gw9-07-w7",
+          "kind": "writing",
+          "form": "diary-entry",
+          "stem": "Today you and your closest friend had a disagreement over a group project: you felt your friend had not done a fair share of the work, and harsh words were spoken in front of the class. Write a diary entry in 100–120 words recording what happened, reflecting on both points of view, and deciding what you will do tomorrow to set things right.",
+          "valuePoints": [
+            "Format: date, day, time, 'Dear Diary' and name",
+            "Records the disagreement and its cause briefly and fairly",
+            "Honest reflection on the writer's own feelings and part in it",
+            "Considers the friend's point of view",
+            "A mature decision about how to mend the friendship and share the work"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "Date, day and time, the salutation 'Dear Diary' and the writer's name at the end."
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Records what happened and reflects honestly on the writer's feelings and what was learnt."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "A natural order from event to reflection, in a personal first-person voice, with linked ideas."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Grammar, spelling and punctuation largely correct; within 100–120 words."
+            }
+          ],
+          "difficulty": "HARD",
+          "marks": 5,
+          "outcome": "E9GW-07-2"
+        },
+        {
+          "id": "gw9-07-w8",
+          "kind": "writing",
+          "form": "diary-entry",
+          "stem": "Your family has just moved to a new city and today was your first day at a new school. Write a diary entry in 100–120 words describing the day — the school, your classmates and one moment that stood out — and reflecting on how you felt, what you miss about your old school and what you are looking forward to.",
+          "valuePoints": [
+            "Format: date, day, time, 'Dear Diary' and name",
+            "Records the first day: the school, the classmates and a memorable moment",
+            "Expresses mixed feelings: nervousness, loneliness, curiosity",
+            "Reflects on what the writer misses about the old school",
+            "Ends with hope or something to look forward to"
+          ],
+          "rubric": [
+            {
+              "label": "Format",
+              "marks": 1,
+              "descriptor": "Date, day and time, the salutation 'Dear Diary' and the writer's name at the end."
+            },
+            {
+              "label": "Content",
+              "marks": 2,
+              "descriptor": "Records what happened and reflects honestly on the writer's feelings and what was learnt."
+            },
+            {
+              "label": "Organisation",
+              "marks": 1,
+              "descriptor": "A natural order from event to reflection, in a personal first-person voice, with linked ideas."
+            },
+            {
+              "label": "Accuracy",
+              "marks": 1,
+              "descriptor": "Grammar, spelling and punctuation largely correct; within 100–120 words."
+            }
+          ],
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "outcome": "E9GW-07-2"
+        }
+      ]
+    }
+  ]
+}

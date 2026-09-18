@@ -64,6 +64,16 @@ const CBSE_SUBJECTS: SubjectSeed[] = [
     names: { 10: { name: "Hindi A", shortName: "Hindi A" } },
   },
   { code: "HINB", name: "Hindi B", shortName: "Hindi B", grades: [10] },
+  // Section B of the CBSE English (184) paper — grammar and writing — belongs
+  // to no textbook chapter, so it is its own subject with a chapter per
+  // syllabus item. Last in the list so no existing subject's sort order moves.
+  // A consequence to know: a paper holds one subject, so grammar questions are
+  // set in their own paper rather than inside a First Flight one.
+  {
+    code: "ENGGW",
+    name: "English – Grammar and Writing",
+    shortName: "Grammar & Writing",
+  },
 ];
 
 /**

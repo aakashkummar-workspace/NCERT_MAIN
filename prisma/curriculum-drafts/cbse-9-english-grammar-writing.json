@@ -1,0 +1,284 @@
+{
+  "board": "CBSE",
+  "grade": 9,
+  "subject": "English – Grammar and Writing",
+  "status": "DRAFT — for review by an English teacher before it is relied on",
+  "source": "Drafted against the CBSE English Language and Literature (184) syllabus for 2025-26, Section B for Class IX: the grammar items (determiners, tenses, modals, subject–verb concord, reported speech) assessed through gap filling, editing and transformation, and the descriptive paragraph and story or diary entry writing tasks.",
+  "notes": [
+    "Concept names carry the class, because the same grammar item is taught in both years and concept names must be unique across the curriculum."
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "topics": [
+        {
+          "title": "Using determiners accurately",
+          "outcomes": [
+            {
+              "code": "E9GW-01-1",
+              "statement": "Uses the articles a, an and the correctly, including before vowel sounds and with a noun already mentioned or unique.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9GW-01-2",
+              "statement": "Uses quantifiers such as some, any, much, many, few, a few, little and a little correctly with countable and uncountable nouns.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9GW-01-3",
+              "statement": "Identifies and corrects errors in the use of articles, demonstratives, possessives and quantifiers in a short passage.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Determiners (Class 9)",
+          "outcomes": [
+            "E9GW-01-1",
+            "E9GW-01-2",
+            "E9GW-01-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "topics": [
+        {
+          "title": "Using tenses accurately",
+          "outcomes": [
+            {
+              "code": "E9GW-02-1",
+              "statement": "Uses the simple, continuous, perfect and perfect continuous forms of the present, past and future correctly in context.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9GW-02-2",
+              "statement": "Selects the tense that a time expression or a sequence of events requires when filling gaps in a passage.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9GW-02-3",
+              "statement": "Identifies and corrects errors of tense and verb form in a short passage.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Tenses (Class 9)",
+          "outcomes": [
+            "E9GW-02-1",
+            "E9GW-02-2",
+            "E9GW-02-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "topics": [
+        {
+          "title": "Using modals accurately",
+          "outcomes": [
+            {
+              "code": "E9GW-03-1",
+              "statement": "Uses modals such as can, could, may, might, must, should, ought to, will and would to express ability, permission, possibility, obligation and advice.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9GW-03-2",
+              "statement": "Selects the modal that matches the speaker's purpose in a given situation, such as a polite request or a strong obligation.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9GW-03-3",
+              "statement": "Identifies and corrects the misuse of modals in sentences and short passages.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Modals (Class 9)",
+          "outcomes": [
+            "E9GW-03-1",
+            "E9GW-03-2",
+            "E9GW-03-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "topics": [
+        {
+          "title": "Using subject–verb concord accurately",
+          "outcomes": [
+            {
+              "code": "E9GW-04-1",
+              "statement": "Applies subject–verb agreement with singular, plural and collective subjects and with words such as each, every, either and neither.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9GW-04-2",
+              "statement": "Applies agreement rules when subjects are joined by and, or or neither…nor, or separated from the verb by a phrase.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9GW-04-3",
+              "statement": "Identifies and corrects errors of subject–verb agreement in a short passage.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Subject–verb concord (Class 9)",
+          "outcomes": [
+            "E9GW-04-1",
+            "E9GW-04-2",
+            "E9GW-04-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "topics": [
+        {
+          "title": "Using reported speech accurately",
+          "outcomes": [
+            {
+              "code": "E9GW-05-1",
+              "statement": "Converts statements from direct to reported speech, changing tense, pronouns and words of time and place correctly.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9GW-05-2",
+              "statement": "Converts questions into reported speech, using if or whether or the question word, with statement word order.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            },
+            {
+              "code": "E9GW-05-3",
+              "statement": "Converts commands and requests into reported speech using verbs such as ordered, advised, requested and asked.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reported speech (Class 9)",
+          "outcomes": [
+            "E9GW-05-1",
+            "E9GW-05-2",
+            "E9GW-05-3"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "topics": [
+        {
+          "title": "Writing: descriptive paragraph",
+          "outcomes": [
+            {
+              "code": "E9GW-06-1",
+              "statement": "Describes a person, event or situation from visual or verbal cues in a well-organised paragraph of 100–120 words.",
+              "bloom": "CREATE",
+              "competency": "APPLICATION",
+              "marks": 5
+            },
+            {
+              "code": "E9GW-06-2",
+              "statement": "Uses sensory detail and precise vocabulary to give the reader a clear picture of what is described.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 5
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Descriptive paragraph writing (Class 9)",
+          "outcomes": [
+            "E9GW-06-1",
+            "E9GW-06-2"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "topics": [
+        {
+          "title": "Writing: story and diary entry",
+          "outcomes": [
+            {
+              "code": "E9GW-07-1",
+              "statement": "Writes a story from a given cue or title with a clear beginning, development and ending, in 100–120 words.",
+              "bloom": "CREATE",
+              "competency": "APPLICATION",
+              "marks": 5
+            },
+            {
+              "code": "E9GW-07-2",
+              "statement": "Writes a diary entry in the correct format that records an experience and reflects on personal feelings about it.",
+              "bloom": "CREATE",
+              "competency": "APPLICATION",
+              "marks": 5
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Story and diary entry writing (Class 9)",
+          "outcomes": [
+            "E9GW-07-1",
+            "E9GW-07-2"
+          ]
+        }
+      ]
+    }
+  ],
+  "prerequisites": []
+}
