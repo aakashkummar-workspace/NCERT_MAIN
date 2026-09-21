@@ -1359,6 +1359,30 @@ The lesson both times: **if a query must run before a tenant is known, it belong
   "fixing" an outcome that looks stale, check the syllabus and the questions
   tagged to it: rewording an outcome re-files every question under it.
 
+### Sample papers
+
+- **`scripts/build-sample-papers.ts --org <slug>` builds CBSE-pattern papers as
+  DRAFTS**, through `createAssessment`, `updateDraft` and `setQuestions` — so
+  `checkLayout` judges them exactly as it judges a paper built by hand. Dry run by
+  default; a title that already exists is skipped.
+- **They are drafts because their questions are.** Every written question (VSA,
+  SA, LA, case, assertion–reason) is still a DRAFT, and `publishCheck` refuses a
+  paper holding one. A sample paper is therefore also a review list: a teacher
+  approves what it holds, or swaps it out, and publishes. The script approves
+  nothing.
+- **Section A is 18 APPROVED multiple choice plus 2 assertion–reason**, the board
+  sample papers' split. Questions are dealt chapter by chapter so a paper covers the
+  syllabus, two papers for a subject share no question, and an "OR" alternative is
+  taken from its partner's chapter where the bank allows.
+- **Social Science Section F, the map question, is left EMPTY**, so those papers
+  read 75 of 80 until a teacher adds one. The bank has no map questions, and an
+  ordinary long answer filed there would print "Map skill" above something that is
+  not one.
+- **Class 10 Social Science is four subjects**, and a paper holds one subject, so
+  Geography, Economics, History and Political Science each get their own paper in
+  the pattern. English has no pattern (`patternForSubject` leaves it out on
+  purpose), so it has no sample paper.
+
 ### The review queue
 
 - **`/teacher/questions/review` is where drafts are read and decided**, one at
@@ -2414,6 +2438,19 @@ about sixty-five defects. The lessons are about where tests stop looking:
 - **Kill the dev server before re-testing a build.** A zombie `next start` kept port 3210
   and a readiness probe passed against the *old* code, producing three confident,
   fictitious failures. `npm run smoke` now probes the server before it starts.
+- **Two servers must not share `.next`.** Every `next build` and `next start` in this
+  checkout reads and writes the same folder, so a build run by one session while another
+  session's server is up swaps the files under it. The symptom names nothing useful:
+  *"The client reference manifest for route /student/mistakes does not exist. This is
+  a bug in Next.js"*, as a 500 on one page, while the file is on disk. Before building,
+  check for a `next start` on another port (`Get-CimInstance Win32_Process`), and use a
+  separate worktree for a second server.
+- **The local database holds ~27,000 test placements whose question lives in another
+  organization** — the 11 September bulk move left them behind. Under RLS the joined
+  question is invisible, and with `relationJoins` the Prisma engine panics
+  (`coerce.rs … Option::unwrap() on a None value`) rather than returning null. The
+  attempt sweep reaches them through old "Attempt Org" tenants, so the panic in a smoke
+  run's server log is that, not the page under test. Live data has none.
 
 ## Things not to do
 
