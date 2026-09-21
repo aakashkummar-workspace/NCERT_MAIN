@@ -1,0 +1,1732 @@
+{
+  "book": "iemh1",
+  "chapters": [
+    {
+      "number": 1,
+      "questions": [
+        {
+          "id": "iemh1-01-ar1",
+          "kind": "ar",
+          "outcome": "M9-01-1",
+          "difficulty": "EASY",
+          "marks": 1,
+          "assertion": "The point (0, −7) lies on the y-axis, 7 units below the origin.",
+          "reason": "The coordinates of the origin are (0, 0).",
+          "answer": "b",
+          "explanation": "Both statements are true, but the reason does not explain the assertion. (0, −7) lies on the y-axis because its x-coordinate is 0, and it is below the origin because its y-coordinate is negative — the coordinates of the origin are not what decides this."
+        },
+        {
+          "id": "iemh1-01-ar2",
+          "kind": "ar",
+          "outcome": "M9-01-4",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "The distance of the point (−6, 8) from the origin is 10 units.",
+          "reason": "The distance of a point (x, y) from the origin is x + y.",
+          "answer": "c",
+          "explanation": "The assertion is true: by the Baudhāyana–Pythagoras Theorem the distance is √((−6)² + 8²) = √(36 + 64) = √100 = 10 units. The reason is false; x + y would give −6 + 8 = 2, which is not the distance."
+        },
+        {
+          "id": "iemh1-01-vsa1",
+          "kind": "vsa",
+          "outcome": "M9-01-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "State the quadrant, or the axis, on which each of these points lies: A(−4, 9), B(7, −2), C(0, 5), D(−3, −3).",
+          "answer": "A(−4, 9) has a negative x-coordinate and a positive y-coordinate, so it lies in Quadrant II. B(7, −2) has a positive x-coordinate and a negative y-coordinate, so it lies in Quadrant IV. C(0, 5) has x-coordinate 0, so it lies on the y-axis. D(−3, −3) has both coordinates negative, so it lies in Quadrant III.",
+          "valuePoints": [
+            "A in Quadrant II and B in Quadrant IV",
+            "C on the y-axis (because its x-coordinate is 0)",
+            "D in Quadrant III"
+          ],
+          "rubric": [
+            { "label": "A and B", "marks": 1, "descriptor": "A in Quadrant II and B in Quadrant IV; ½ mark for one of them" },
+            { "label": "C and D", "marks": 1, "descriptor": "C on the y-axis and D in Quadrant III; ½ mark for one of them" }
+          ]
+        },
+        {
+          "id": "iemh1-01-vsa2",
+          "kind": "vsa",
+          "outcome": "M9-01-3",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "P(−5, 4) and Q(11, 4) are two points, and R(11, −6) is a third. Find the lengths PQ and QR.",
+          "answer": "P and Q have the same y-coordinate, so PQ is parallel to the x-axis and PQ = |11 − (−5)| = 16 units. Q and R have the same x-coordinate, so QR is parallel to the y-axis and QR = |4 − (−6)| = 10 units.",
+          "valuePoints": [
+            "PQ is horizontal, so its length is the difference of the x-coordinates: 16 units",
+            "QR is vertical, so its length is the difference of the y-coordinates: 10 units"
+          ],
+          "rubric": [
+            { "label": "PQ", "marks": 1, "descriptor": "|11 − (−5)| = 16 units" },
+            { "label": "QR", "marks": 1, "descriptor": "|4 − (−6)| = 10 units" }
+          ]
+        },
+        {
+          "id": "iemh1-01-vsa3",
+          "kind": "vsa",
+          "outcome": "M9-01-4",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "Find the distance between the points A(2, −3) and B(10, 3).",
+          "answer": "The shift along the x-axis is 10 − 2 = 8 and the shift along the y-axis is 3 − (−3) = 6. By the Baudhāyana–Pythagoras Theorem, AB = √(8² + 6²) = √(64 + 36) = √100 = 10 units.",
+          "valuePoints": [
+            "Shifts along the axes: 8 and 6",
+            "AB = √(8² + 6²) = √100 = 10 units"
+          ],
+          "rubric": [
+            { "label": "Setting up", "marks": 1, "descriptor": "Writes the two shifts 10 − 2 = 8 and 3 − (−3) = 6, or writes the distance expression correctly" },
+            { "label": "Distance", "marks": 1, "descriptor": "AB = 10 units" }
+          ]
+        },
+        {
+          "id": "iemh1-01-sa1",
+          "kind": "sa",
+          "outcome": "M9-01-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "P(2, 1), Q(9, 1) and R(9, 6) are three vertices of a rectangle PQRS whose sides are parallel to the axes. Find the coordinates of the fourth vertex S, and the area of the rectangle.",
+          "answer": "PQ runs from (2, 1) to (9, 1), so it is parallel to the x-axis and PQ = 7 units. QR runs from (9, 1) to (9, 6), so it is parallel to the y-axis and QR = 5 units. S must be level with R (y = 6) and in line with P (x = 2), so S = (2, 6). Area = 7 × 5 = 35 square units.",
+          "valuePoints": [
+            "PQ = 7 units and QR = 5 units",
+            "S = (2, 6)",
+            "Area = 7 × 5 = 35 square units"
+          ],
+          "rubric": [
+            { "label": "Side lengths", "marks": 1, "descriptor": "PQ = 7 units and QR = 5 units" },
+            { "label": "Fourth vertex", "marks": 1, "descriptor": "S = (2, 6)" },
+            { "label": "Area", "marks": 1, "descriptor": "35 square units" }
+          ]
+        },
+        {
+          "id": "iemh1-01-sa2",
+          "kind": "sa",
+          "outcome": "M9-01-4",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Show that the points A(1, −8), B(−4, 7) and C(−7, −4) all lie on one circle whose centre is the origin O(0, 0), and state the radius of that circle.",
+          "answer": "OA = √(1² + (−8)²) = √(1 + 64) = √65 units. OB = √((−4)² + 7²) = √(16 + 49) = √65 units. OC = √((−7)² + (−4)²) = √(49 + 16) = √65 units. All three points are the same distance √65 from O, so all three lie on the circle with centre O and radius √65 units.",
+          "valuePoints": [
+            "OA = √65 units",
+            "OB = √65 and OC = √65 units",
+            "Equal distances from O means the points lie on one circle of radius √65 units"
+          ],
+          "rubric": [
+            { "label": "First distance", "marks": 1, "descriptor": "OA = √65 correctly computed" },
+            { "label": "Other two distances", "marks": 1, "descriptor": "OB = √65 and OC = √65" },
+            { "label": "Conclusion", "marks": 1, "descriptor": "States that equal distances from O put the points on one circle, radius √65 units" }
+          ]
+        },
+        {
+          "id": "iemh1-01-sa3",
+          "kind": "sa",
+          "outcome": "M9-01-3",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "A rectangular field has its corners at A(−7, 3), B(5, 3), C(5, −4) and D(−7, −4) on a map, where one unit represents one metre. Find AB and BC, and the total length of fencing needed to go once around the field.",
+          "answer": "A and B have the same y-coordinate, so AB = |5 − (−7)| = 12 m. B and C have the same x-coordinate, so BC = |3 − (−4)| = 7 m. The fencing needed is the perimeter = 2(12 + 7) = 2 × 19 = 38 m.",
+          "valuePoints": [
+            "AB = 12 m",
+            "BC = 7 m",
+            "Perimeter = 2(12 + 7) = 38 m"
+          ],
+          "rubric": [
+            { "label": "AB", "marks": 1, "descriptor": "AB = 12 m from the difference of the x-coordinates" },
+            { "label": "BC", "marks": 1, "descriptor": "BC = 7 m from the difference of the y-coordinates" },
+            { "label": "Fencing", "marks": 1, "descriptor": "38 m" }
+          ]
+        },
+        {
+          "id": "iemh1-01-la1",
+          "kind": "la",
+          "outcome": "M9-01-4",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "The vertices of a triangle are A(3, 4), D(7, 1) and M(9, 6). Find the lengths of the three sides AD, DM and MA, and state whether the triangle is scalene, isosceles or equilateral. Give reasons.",
+          "answer": "AD: the shifts are 7 − 3 = 4 and 4 − 1 = 3, so AD = √(4² + 3²) = √25 = 5 units. DM: the shifts are 9 − 7 = 2 and 6 − 1 = 5, so DM = √(2² + 5²) = √29 units (about 5.39). MA: the shifts are 9 − 3 = 6 and 6 − 4 = 2, so MA = √(6² + 2²) = √40 = 2√10 units (about 6.32). The three lengths 5, √29 and 2√10 are all different, so the triangle is scalene.",
+          "valuePoints": [
+            "AD = √(4² + 3²) = 5 units",
+            "DM = √(2² + 5²) = √29 units",
+            "MA = √(6² + 2²) = √40 = 2√10 units",
+            "All three sides are unequal, so the triangle is scalene"
+          ],
+          "rubric": [
+            { "label": "Method", "marks": 1, "descriptor": "Uses the Baudhāyana–Pythagoras Theorem on the shifts along the two axes" },
+            { "label": "AD", "marks": 1, "descriptor": "AD = 5 units" },
+            { "label": "DM", "marks": 1, "descriptor": "DM = √29 units" },
+            { "label": "MA", "marks": 1, "descriptor": "MA = √40 = 2√10 units" },
+            { "label": "Type of triangle", "marks": 1, "descriptor": "Scalene, because all three sides are of different length" }
+          ]
+        },
+        {
+          "id": "iemh1-01-la2",
+          "kind": "la",
+          "outcome": "M9-01-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "On a plan of a school ground (1 unit = 1 metre) the four corner posts of a rectangular volleyball court are at P(−6, 4), Q(12, 4), R(12, −5) and S(−6, −5). (i) Explain why PQ is parallel to the x-axis and QR is parallel to the y-axis. (ii) Find the length and the breadth of the court. (iii) Find its area. (iv) Find the length of the diagonal PR.",
+          "answer": "(i) P and Q have the same y-coordinate (4), so the segment PQ is at a constant height above the x-axis and is therefore parallel to it. Q and R have the same x-coordinate (12), so QR is at a constant distance from the y-axis and is parallel to it. (ii) PQ = |12 − (−6)| = 18 m and QR = |4 − (−5)| = 9 m, so the court is 18 m long and 9 m broad. (iii) Area = 18 × 9 = 162 m². (iv) The shifts from P(−6, 4) to R(12, −5) are 18 along the x-axis and 9 along the y-axis, so PR = √(18² + 9²) = √(324 + 81) = √405 = 9√5 m, which is about 20.12 m.",
+          "valuePoints": [
+            "Same y-coordinate means parallel to the x-axis; same x-coordinate means parallel to the y-axis",
+            "Length PQ = 18 m and breadth QR = 9 m",
+            "Area = 18 × 9 = 162 m²",
+            "PR = √(18² + 9²) = √405 = 9√5 m ≈ 20.12 m"
+          ],
+          "rubric": [
+            { "label": "Parallel sides explained", "marks": 1, "descriptor": "Equal y-coordinates give a horizontal side; equal x-coordinates give a vertical side" },
+            { "label": "Length and breadth", "marks": 1, "descriptor": "18 m and 9 m" },
+            { "label": "Area", "marks": 1, "descriptor": "162 m²" },
+            { "label": "Diagonal set up", "marks": 1, "descriptor": "PR = √(18² + 9²)" },
+            { "label": "Diagonal evaluated", "marks": 1, "descriptor": "√405 = 9√5 m ≈ 20.12 m" }
+          ]
+        },
+        {
+          "id": "iemh1-01-case1",
+          "kind": "case",
+          "outcome": "M9-01-4",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "fromBook": false,
+          "passage": "The streets of a new colony in Bhopal are laid out on a grid. The community centre is taken as the origin O, one unit on the plan stands for 100 metres, East is the positive x-direction and North is the positive y-direction. On the plan the school is at S(6, 8), the clinic is at C(−6, 8), the market is at M(6, −3) and the bus stop is at B(0, −5). Every road in the colony runs either East–West or North–South, except for one straight footpath which joins the community centre directly to the school.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "In which quadrant of the plan does the market M(6, −3) lie?",
+              "marks": 1,
+              "options": [
+                { "text": "Quadrant I", "correct": false },
+                { "text": "Quadrant II", "correct": false },
+                { "text": "Quadrant III", "correct": false },
+                { "text": "Quadrant IV", "correct": true }
+              ],
+              "answer": "(d) Quadrant IV — the x-coordinate is positive and the y-coordinate is negative."
+            },
+            {
+              "type": "vsa",
+              "prompt": "The clinic and the school both stand on the same East–West road. How far apart are they, in metres?",
+              "marks": 1,
+              "answer": "Both have y-coordinate 8, so the distance is |6 − (−6)| = 12 units = 12 × 100 = 1200 m."
+            },
+            {
+              "type": "sa",
+              "prompt": "Find the length of the straight footpath from the community centre O to the school S, giving your answer in metres.",
+              "marks": 2,
+              "answer": "OS = √(6² + 8²) = √(36 + 64) = √100 = 10 units (1 mark), and 10 units = 10 × 100 = 1000 m (1 mark)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "questions": [
+        {
+          "id": "iemh1-02-ar1",
+          "kind": "ar",
+          "outcome": "M9-02-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "The graphs of y = 3x + 1 and y = 3x − 4 never meet.",
+          "reason": "Two lines that have equal slopes but different y-intercepts are parallel to each other.",
+          "answer": "a",
+          "explanation": "Both statements are true and the reason explains the assertion: both lines have slope 3 but y-intercepts 1 and −4, so they are parallel and can never meet."
+        },
+        {
+          "id": "iemh1-02-ar2",
+          "kind": "ar",
+          "outcome": "M9-02-1",
+          "difficulty": "EASY",
+          "marks": 1,
+          "assertion": "3z + 7 is a linear polynomial.",
+          "reason": "A polynomial whose degree is 2 is called a linear polynomial.",
+          "answer": "c",
+          "explanation": "The assertion is true — the highest power of z in 3z + 7 is 1, so it is linear. The reason is false: a polynomial of degree 2 is a quadratic polynomial; a linear polynomial is one of degree 1."
+        },
+        {
+          "id": "iemh1-02-vsa1",
+          "kind": "vsa",
+          "outcome": "M9-02-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Find the value of the linear polynomial 5x − 3 when x = −1, and the value of the quadratic polynomial 7s² − 4s + 6 when s = −3.",
+          "answer": "For x = −1: 5(−1) − 3 = −5 − 3 = −8. For s = −3: 7(−3)² − 4(−3) + 6 = 7 × 9 + 12 + 6 = 63 + 12 + 6 = 81.",
+          "valuePoints": [
+            "5x − 3 at x = −1 gives −8",
+            "7s² − 4s + 6 at s = −3 gives 63 + 12 + 6 = 81"
+          ],
+          "rubric": [
+            { "label": "Linear polynomial", "marks": 1, "descriptor": "−8" },
+            { "label": "Quadratic polynomial", "marks": 1, "descriptor": "81, with the substitution shown" }
+          ]
+        },
+        {
+          "id": "iemh1-02-vsa2",
+          "kind": "vsa",
+          "outcome": "M9-02-2",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "For the line y = −3x + 4, write down the slope and the y-intercept, and give the coordinates of the point where the line cuts the y-axis.",
+          "answer": "Comparing with y = ax + b, we get a = −3 and b = 4. So the slope is −3 and the y-intercept is 4. The line cuts the y-axis at the point (0, 4).",
+          "valuePoints": [
+            "Slope a = −3",
+            "y-intercept b = 4, so the line cuts the y-axis at (0, 4)"
+          ],
+          "rubric": [
+            { "label": "Slope", "marks": 1, "descriptor": "−3" },
+            { "label": "Intercept", "marks": 1, "descriptor": "y-intercept 4 and the point (0, 4)" }
+          ]
+        },
+        {
+          "id": "iemh1-02-vsa3",
+          "kind": "vsa",
+          "outcome": "M9-02-4",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "The difference between two positive integers is 63 and the two integers are in the ratio 2 : 5. Find the integers.",
+          "answer": "Let the integers be 2x and 5x. Then 5x − 2x = 63, so 3x = 63 and x = 21. The integers are 2 × 21 = 42 and 5 × 21 = 105. (Check: 105 − 42 = 63 and 42 : 105 = 2 : 5.)",
+          "valuePoints": [
+            "Takes the integers as 2x and 5x and forms 3x = 63",
+            "x = 21, so the integers are 42 and 105"
+          ],
+          "rubric": [
+            { "label": "Equation", "marks": 1, "descriptor": "5x − 2x = 63 (or an equivalent equation)" },
+            { "label": "Integers", "marks": 1, "descriptor": "42 and 105" }
+          ]
+        },
+        {
+          "id": "iemh1-02-sa1",
+          "kind": "sa",
+          "outcome": "M9-02-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "An auto-rickshaw charges ₹30 for the first 2 km and ₹12 for every additional kilometre. (i) Write a rule for the fare F (in ₹) of a journey of n km, where n ≥ 2. (ii) Find the fare for a journey of 9 km. (iii) How far can a passenger travel for ₹150?",
+          "answer": "(i) After the first 2 km there are (n − 2) further kilometres, so F = 30 + 12(n − 2) = 12n + 6. (ii) For n = 9: F = 12 × 9 + 6 = 108 + 6 = ₹114. (iii) 12n + 6 = 150 gives 12n = 144, so n = 12. The passenger can travel 12 km.",
+          "valuePoints": [
+            "F = 30 + 12(n − 2) = 12n + 6",
+            "Fare for 9 km is ₹114",
+            "12n + 6 = 150 gives n = 12 km"
+          ],
+          "rubric": [
+            { "label": "Rule", "marks": 1, "descriptor": "F = 12n + 6 (or 30 + 12(n − 2))" },
+            { "label": "Fare for 9 km", "marks": 1, "descriptor": "₹114" },
+            { "label": "Distance for ₹150", "marks": 1, "descriptor": "12 km" }
+          ]
+        },
+        {
+          "id": "iemh1-02-sa2",
+          "kind": "sa",
+          "outcome": "M9-02-4",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "The present age of Salil's mother is three times Salil's present age. After 5 years their ages will add up to 70 years. Find their present ages.",
+          "answer": "Let Salil's present age be x years; his mother's present age is 3x years. After 5 years their ages are (x + 5) and (3x + 5). So (x + 5) + (3x + 5) = 70, that is 4x + 10 = 70, giving 4x = 60 and x = 15. Salil is 15 years old and his mother is 45 years old. (Check: 20 + 50 = 70.)",
+          "valuePoints": [
+            "Takes the ages as x and 3x",
+            "Forms the equation (x + 5) + (3x + 5) = 70",
+            "x = 15, so Salil is 15 and his mother is 45"
+          ],
+          "rubric": [
+            { "label": "Setting up", "marks": 1, "descriptor": "Ages taken as x and 3x, ages after 5 years written correctly" },
+            { "label": "Equation and solution", "marks": 1, "descriptor": "4x + 10 = 70 leading to x = 15" },
+            { "label": "Both ages", "marks": 1, "descriptor": "15 years and 45 years" }
+          ]
+        },
+        {
+          "id": "iemh1-02-sa3",
+          "kind": "sa",
+          "outcome": "M9-02-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "The graph of a linear polynomial p(x) = ax + b passes through the points (1, 5) and (3, 11). Find p(x), and find the coordinates of the points where its graph cuts the two axes.",
+          "answer": "Substituting gives a + b = 5 and 3a + b = 11. Subtracting, 2a = 6, so a = 3 and then b = 5 − 3 = 2. Hence p(x) = 3x + 2. The graph cuts the y-axis where x = 0, at (0, 2). It cuts the x-axis where 3x + 2 = 0, that is x = −2/3, at (−2/3, 0).",
+          "valuePoints": [
+            "Forms a + b = 5 and 3a + b = 11",
+            "a = 3 and b = 2, so p(x) = 3x + 2",
+            "Cuts the y-axis at (0, 2) and the x-axis at (−2/3, 0)"
+          ],
+          "rubric": [
+            { "label": "Two equations", "marks": 1, "descriptor": "a + b = 5 and 3a + b = 11" },
+            { "label": "Polynomial", "marks": 1, "descriptor": "p(x) = 3x + 2" },
+            { "label": "Intercept points", "marks": 1, "descriptor": "(0, 2) and (−2/3, 0); ½ mark for one of them" }
+          ]
+        },
+        {
+          "id": "iemh1-02-la1",
+          "kind": "la",
+          "outcome": "M9-02-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "A growing pattern of square tiles has 1 tile at Stage 1, and 2 more tiles are added at every following stage. (i) Write the number of tiles at Stages 1 to 5. (ii) Find a rule for the number of tiles at Stage n. (iii) How many tiles are there at Stage 26? (iv) Which stage has 47 tiles? (v) Explain why the relationship between the stage number and the number of tiles is a linear relationship.",
+          "answer": "(i) 1, 3, 5, 7, 9. (ii) The number of tiles is one less than twice the stage number, so the rule is t = 2n − 1. (iii) At Stage 26, t = 2 × 26 − 1 = 51 tiles. (iv) 2n − 1 = 47 gives 2n = 48, so n = 24; Stage 24 has 47 tiles. (v) 2n − 1 is a polynomial of degree 1, and the difference between the numbers of tiles at consecutive stages is the constant 2, so the pattern is linear; its graph is a straight line of slope 2.",
+          "valuePoints": [
+            "First five terms 1, 3, 5, 7, 9",
+            "Rule t = 2n − 1",
+            "Stage 26 has 51 tiles",
+            "47 tiles occur at Stage 24",
+            "Linear because the difference between consecutive terms is the constant 2 (degree 1 polynomial)"
+          ],
+          "rubric": [
+            { "label": "First five terms", "marks": 1, "descriptor": "1, 3, 5, 7, 9" },
+            { "label": "Rule", "marks": 1, "descriptor": "t = 2n − 1" },
+            { "label": "Stage 26", "marks": 1, "descriptor": "51 tiles" },
+            { "label": "Stage with 47 tiles", "marks": 1, "descriptor": "Stage 24" },
+            { "label": "Why linear", "marks": 1, "descriptor": "Constant difference of 2 between consecutive stages; 2n − 1 has degree 1" }
+          ]
+        },
+        {
+          "id": "iemh1-02-la2",
+          "kind": "la",
+          "outcome": "M9-02-2",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "A telecom company charges a fixed monthly rental together with a fixed amount for every GB of data used. A customer's bill was ₹350 in a month when she used 10 GB, and ₹550 in a month when she used 20 GB. The bill y (in ₹) and the data x (in GB) are related by y = ax + b. (i) Write two equations in a and b. (ii) Find a and b. (iii) State what a and b stand for in this situation. (iv) Find the bill for 35 GB. (v) How much data was used in a month when the bill was ₹950?",
+          "answer": "(i) 350 = 10a + b and 550 = 20a + b. (ii) Subtracting the first from the second gives 200 = 10a, so a = 20, and then b = 350 − 200 = 150. (iii) a = 20 is the slope: the charge is ₹20 for every GB used; b = 150 is the y-intercept: the fixed monthly rental of ₹150, paid even when no data is used. (iv) y = 20 × 35 + 150 = 700 + 150 = ₹850. (v) 20x + 150 = 950 gives 20x = 800, so x = 40 GB.",
+          "valuePoints": [
+            "Equations 350 = 10a + b and 550 = 20a + b",
+            "a = 20 and b = 150, so y = 20x + 150",
+            "a is the cost per GB and b is the fixed monthly rental",
+            "Bill for 35 GB is ₹850",
+            "A bill of ₹950 means 40 GB were used"
+          ],
+          "rubric": [
+            { "label": "Two equations", "marks": 1, "descriptor": "350 = 10a + b and 550 = 20a + b" },
+            { "label": "Solving", "marks": 1, "descriptor": "a = 20 and b = 150" },
+            { "label": "Meaning", "marks": 1, "descriptor": "₹20 per GB and ₹150 fixed rental" },
+            { "label": "Bill for 35 GB", "marks": 1, "descriptor": "₹850" },
+            { "label": "Data for ₹950", "marks": 1, "descriptor": "40 GB" }
+          ]
+        },
+        {
+          "id": "iemh1-02-case1",
+          "kind": "case",
+          "outcome": "M9-02-3",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "fromBook": false,
+          "passage": "At the start of summer, the water in a cylindrical tank on the roof of a school stands at a height of 3 metres. Because the water is used and is not replaced, the height falls by a fixed 0.5 metre every month. The caretaker records the height h, in metres, at the end of t months and gets the readings 3, 2.5, 2, 1.5 and 1 for t = 0, 1, 2, 3 and 4. He uses the rule h = 3 − 0.5t to work out when the tank must be refilled, because the school must never let the tank run completely dry.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The pattern described by the rule h = 3 − 0.5t is an example of",
+              "marks": 1,
+              "options": [
+                { "text": "linear growth", "correct": false },
+                { "text": "linear decay", "correct": true },
+                { "text": "a quadratic pattern", "correct": false },
+                { "text": "a constant polynomial", "correct": false }
+              ],
+              "answer": "(b) linear decay — the height falls by the same fixed amount, 0.5 m, over every equal interval of one month."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What is the height of the water at the end of 5 months?",
+              "marks": 1,
+              "answer": "h = 3 − 0.5 × 5 = 3 − 2.5 = 0.5 m."
+            },
+            {
+              "type": "sa",
+              "prompt": "After how many months would the tank be completely empty if nothing were added? State the slope of the line h = 3 − 0.5t and say what the slope means here.",
+              "marks": 2,
+              "answer": "Setting h = 0 gives 3 − 0.5t = 0, so 0.5t = 3 and t = 6 months (1 mark). The slope is −0.5; it means the height of the water falls by 0.5 m each month, and the slope is negative because this is linear decay (1 mark)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "questions": [
+        {
+          "id": "iemh1-03-ar1",
+          "kind": "ar",
+          "outcome": "M9-03-1",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "√12 is an irrational number.",
+          "reason": "The decimal expansion of an irrational number neither terminates nor repeats.",
+          "answer": "b",
+          "explanation": "Both statements are true. But the reason only describes a property that irrational numbers have; it does not show why √12 in particular cannot be written as a ratio of two integers. So the reason is not the explanation of the assertion."
+        },
+        {
+          "id": "iemh1-03-ar2",
+          "kind": "ar",
+          "outcome": "M9-03-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "Every rational number can be written as a terminating decimal.",
+          "reason": "The denominator of a rational number written in its lowest terms may have prime factors other than 2 and 5.",
+          "answer": "d",
+          "explanation": "The assertion is false: 1/3 = 0.333… never terminates. The reason is true, and it is exactly why the assertion fails — a fraction in lowest terms terminates only when its denominator has no prime factor other than 2 and 5."
+        },
+        {
+          "id": "iemh1-03-vsa1",
+          "kind": "vsa",
+          "outcome": "M9-03-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Classify each of the following as rational or irrational, giving a brief reason: (i) √81, (ii) √12, (iii) 0.3333…, (iv) 1.01001000100001… (each block of zeros one longer than the last).",
+          "answer": "(i) √81 = 9, which is a whole number, so it is rational. (ii) 12 is not a perfect square, so √12 cannot be written as a ratio of integers; it is irrational. (iii) 0.3333… is a repeating decimal, equal to 1/3, so it is rational. (iv) 1.01001000100001… never terminates and never repeats a fixed block, so it is irrational.",
+          "valuePoints": [
+            "√81 = 9 is rational; 0.3333… = 1/3 is rational",
+            "√12 is irrational; 1.01001000100001… is non-terminating and non-repeating, so irrational"
+          ],
+          "rubric": [
+            { "label": "Rational ones", "marks": 1, "descriptor": "√81 and 0.3333… identified as rational, with a reason" },
+            { "label": "Irrational ones", "marks": 1, "descriptor": "√12 and 1.01001000100001… identified as irrational, with a reason" }
+          ]
+        },
+        {
+          "id": "iemh1-03-vsa2",
+          "kind": "vsa",
+          "outcome": "M9-03-2",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Without doing the long division, state whether 7/20 and 4/15 have terminating decimal expansions. Give a reason in each case.",
+          "answer": "20 = 2² × 5, so the denominator of 7/20 has only the prime factors 2 and 5, and the decimal terminates (7/20 = 0.35). 15 = 3 × 5 has the prime factor 3, which is neither 2 nor 5, so the decimal expansion of 4/15 does not terminate; it repeats (4/15 = 0.2666…).",
+          "valuePoints": [
+            "20 = 2² × 5, so 7/20 terminates",
+            "15 = 3 × 5 has the prime factor 3, so 4/15 is non-terminating and repeating"
+          ],
+          "rubric": [
+            { "label": "7/20", "marks": 1, "descriptor": "Terminating, because 20 = 2² × 5" },
+            { "label": "4/15", "marks": 1, "descriptor": "Non-terminating repeating, because 15 has the prime factor 3" }
+          ]
+        },
+        {
+          "id": "iemh1-03-vsa3",
+          "kind": "vsa",
+          "outcome": "M9-03-2",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "Express the pure repeating decimal 0.454545… as a fraction p/q in its lowest terms.",
+          "answer": "Let x = 0.454545…. Two digits repeat, so multiply by 10² = 100: 100x = 45.454545…. Subtracting, 100x − x = 45, so 99x = 45 and x = 45/99 = 5/11.",
+          "valuePoints": [
+            "Sets x = 0.454545… and forms 100x = 45.454545…",
+            "99x = 45, so x = 45/99 = 5/11"
+          ],
+          "rubric": [
+            { "label": "Method", "marks": 1, "descriptor": "Multiplies by 100 and subtracts" },
+            { "label": "Answer", "marks": 1, "descriptor": "5/11 in lowest terms" }
+          ]
+        },
+        {
+          "id": "iemh1-03-sa1",
+          "kind": "sa",
+          "outcome": "M9-03-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Express the general repeating decimal 0.1666… (the digit 6 repeating) in the form p/q in its lowest terms, showing every step.",
+          "answer": "Let x = 0.1666…. One digit (the 1) does not repeat, so multiply by 10: 10x = 1.666…. One digit repeats, so multiply again by 10: 100x = 16.666…. Subtracting, 100x − 10x = 16.666… − 1.666… = 15, so 90x = 15 and x = 15/90 = 1/6.",
+          "valuePoints": [
+            "10x = 1.666… (shifting the non-repeating digit)",
+            "100x = 16.666… (shifting one full repeating block)",
+            "90x = 15, so x = 15/90 = 1/6"
+          ],
+          "rubric": [
+            { "label": "First shift", "marks": 1, "descriptor": "10x = 1.666…" },
+            { "label": "Second shift", "marks": 1, "descriptor": "100x = 16.666…" },
+            { "label": "Answer", "marks": 1, "descriptor": "90x = 15 and x = 1/6" }
+          ]
+        },
+        {
+          "id": "iemh1-03-sa2",
+          "kind": "sa",
+          "outcome": "M9-03-2",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "Find five rational numbers lying between 2/5 and 3/5, and explain the method you used.",
+          "answer": "Write both fractions with a larger common denominator so that there is room between the numerators. Multiplying numerator and denominator by 6, 2/5 = 12/30 and 3/5 = 18/30. The five rational numbers 13/30, 14/30, 15/30, 16/30 and 17/30 all lie between them; in lowest terms these are 13/30, 7/15, 1/2, 8/15 and 17/30.",
+          "valuePoints": [
+            "Rewrites 2/5 and 3/5 as 12/30 and 18/30 (or any equivalent pair with a large enough denominator)",
+            "Lists five fractions between them: 13/30, 14/30, 15/30, 16/30, 17/30",
+            "States that the numerators must differ by more than the number of rational numbers wanted"
+          ],
+          "rubric": [
+            { "label": "Common denominator", "marks": 1, "descriptor": "12/30 and 18/30 (or an equivalent choice)" },
+            { "label": "Five numbers", "marks": 1, "descriptor": "Any five distinct rational numbers strictly between them" },
+            { "label": "Explanation", "marks": 1, "descriptor": "Explains why the denominator had to be enlarged first" }
+          ]
+        },
+        {
+          "id": "iemh1-03-sa3",
+          "kind": "sa",
+          "outcome": "M9-03-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Explain why the decimal expansion of every rational number must either terminate or start repeating. Illustrate your explanation with the division of 1 by 7.",
+          "answer": "When p/q is found by long division, every step leaves a remainder that is one of 0, 1, 2, …, q − 1. If a remainder 0 ever appears the division stops and the decimal terminates. If 0 never appears then there are only q − 1 possible remainders, so within at most q steps some remainder must occur a second time; from that point the whole division repeats itself, and so does the block of quotient digits. For 1 ÷ 7 the remainders are 3, 2, 6, 4, 5, 1 and then 3 again, and the quotient digits 142857 repeat: 1/7 = 0.142857142857….",
+          "valuePoints": [
+            "In dividing by q the only possible remainders are 0, 1, …, q − 1",
+            "Remainder 0 gives a terminating decimal; otherwise a remainder must repeat within q steps and the digits then repeat",
+            "1/7 = 0.142857142857… with a repeating block of six digits"
+          ],
+          "rubric": [
+            { "label": "Limited remainders", "marks": 1, "descriptor": "States that only q possible remainders exist" },
+            { "label": "The two cases", "marks": 1, "descriptor": "Remainder 0 terminates; a repeated remainder makes the digits repeat" },
+            { "label": "Illustration", "marks": 1, "descriptor": "1/7 = 0.142857… with the six-digit repeating block" }
+          ]
+        },
+        {
+          "id": "iemh1-03-la1",
+          "kind": "la",
+          "outcome": "M9-03-1",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "Prove, by contradiction, that √2 is an irrational number.",
+          "answer": "Assume the opposite: suppose √2 is rational, so √2 = p/q where p and q are integers, q ≠ 0, and the fraction is in its simplest form (p and q have no common factor other than 1). Squaring, 2 = p²/q², so 2q² = p². Hence p² is even, and since the square of an odd number is odd, p itself must be even. Write p = 2k for some integer k. Then 2q² = (2k)² = 4k², so q² = 2k². Hence q² is even, and therefore q is even. So p and q are both even and share the common factor 2 — which contradicts our statement that p/q was in its simplest form. Since every step was correct, the assumption must be wrong. Therefore √2 cannot be written as a ratio of integers: it is irrational.",
+          "valuePoints": [
+            "Assumes √2 = p/q in simplest form, with p, q integers and q ≠ 0",
+            "Squares to get 2q² = p², so p² is even and hence p is even",
+            "Writes p = 2k and deduces q² = 2k², so q is even",
+            "p and q both even contradicts the fraction being in simplest form",
+            "Concludes √2 is irrational"
+          ],
+          "rubric": [
+            { "label": "Assumption", "marks": 1, "descriptor": "√2 = p/q in lowest terms, q ≠ 0" },
+            { "label": "p is even", "marks": 1, "descriptor": "2q² = p² so p² is even, hence p is even" },
+            { "label": "q is even", "marks": 1, "descriptor": "Substitutes p = 2k to get q² = 2k², hence q is even" },
+            { "label": "Contradiction", "marks": 1, "descriptor": "Common factor 2 contradicts lowest terms" },
+            { "label": "Conclusion", "marks": 1, "descriptor": "States that √2 is therefore irrational" }
+          ]
+        },
+        {
+          "id": "iemh1-03-la2",
+          "kind": "la",
+          "outcome": "M9-03-2",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "(i) Express 2.35777… (only the digit 7 repeating) in the form p/q in its lowest terms. (ii) Using algebra, show that 0.999… is exactly equal to 1.",
+          "answer": "(i) Let x = 2.35777…. Two digits, 3 and 5, do not repeat, so multiply by 10² = 100: 100x = 235.777…. One digit repeats, so multiply once more by 10: 1000x = 2357.777…. Subtracting, 1000x − 100x = 2357.777… − 235.777… = 2122, so 900x = 2122 and x = 2122/900. Dividing numerator and denominator by 2, x = 1061/450. (ii) Let y = 0.999…. One digit repeats, so 10y = 9.999…. Subtracting, 10y − y = 9, so 9y = 9 and y = 1. Hence 0.999… = 1 exactly; a terminating decimal always has a second form ending in repeating 9s.",
+          "valuePoints": [
+            "100x = 235.777… shifts the two non-repeating digits",
+            "1000x = 2357.777… shifts one full repeating block",
+            "900x = 2122, so x = 2122/900 = 1061/450",
+            "10y − y = 9 for y = 0.999…",
+            "y = 1, so 0.999… = 1"
+          ],
+          "rubric": [
+            { "label": "Shift of non-repeating digits", "marks": 1, "descriptor": "100x = 235.777…" },
+            { "label": "Shift of the repeating block", "marks": 1, "descriptor": "1000x = 2357.777…" },
+            { "label": "Fraction in lowest terms", "marks": 1, "descriptor": "2122/900 reduced to 1061/450" },
+            { "label": "Setting up 0.999…", "marks": 1, "descriptor": "y = 0.999… and 10y = 9.999…" },
+            { "label": "0.999… = 1", "marks": 1, "descriptor": "9y = 9, so y = 1" }
+          ]
+        },
+        {
+          "id": "iemh1-03-case1",
+          "kind": "case",
+          "outcome": "M9-03-2",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "fromBook": false,
+          "passage": "In a Class 9 activity the students were asked to divide 1 by 7 by long division and to write down every remainder as they went. Meera got the remainders 3, 2, 6, 4, 5, 1 and then 3 once more, and the quotient digits 1, 4, 2, 8, 5, 7 came round again and again, so she wrote 1/7 = 0.142857142857…. Her teacher pointed out that when we divide by 7 the only remainders possible are 0, 1, 2, 3, 4, 5 and 6, so some remainder has to come back within a few steps. Rahul then divided 3 by 8 and his long division simply stopped: he got 3/8 = 0.375 exactly.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Why can the decimal expansion of 1/7 not terminate?",
+              "marks": 1,
+              "options": [
+                { "text": "Because 7 is an odd number", "correct": false },
+                { "text": "Because the remainder 0 never occurs in the division", "correct": true },
+                { "text": "Because 7 is a prime number", "correct": false },
+                { "text": "Because all six quotient digits are different", "correct": false }
+              ],
+              "answer": "(b) — a decimal terminates exactly when the long division reaches a remainder of 0, and for 1 ÷ 7 that never happens."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How many digits are there in the repeating block of 1/7, and what are they?",
+              "marks": 1,
+              "answer": "Six digits: 142857."
+            },
+            {
+              "type": "sa",
+              "prompt": "Using the prime factors of the denominator, explain why 3/8 has a terminating decimal while 1/7 does not. Then write 3/8 as a fraction whose denominator is 1000.",
+              "marks": 2,
+              "answer": "8 = 2³, whose only prime factor is 2, so 3/8 can be turned into a fraction with a power of 10 as denominator and its decimal terminates; 7 has the prime factor 7, which is neither 2 nor 5, so 1/7 cannot be written with a power of 10 as denominator and its decimal repeats (1 mark). 3/8 = (3 × 125)/(8 × 125) = 375/1000 (1 mark)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "questions": [
+        {
+          "id": "iemh1-04-ar1",
+          "kind": "ar",
+          "outcome": "M9-04-1",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "The value of 96² is 9216.",
+          "reason": "For all numbers a and b, (a − b)² = a² − 2ab + b².",
+          "answer": "a",
+          "explanation": "Both statements are true and the reason explains the assertion: 96² = (100 − 4)² = 100² − 2 × 100 × 4 + 4² = 10000 − 800 + 16 = 9216."
+        },
+        {
+          "id": "iemh1-04-ar2",
+          "kind": "ar",
+          "outcome": "M9-04-4",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "x² − 8x + 12 factorises as (x − 3)(x − 4).",
+          "reason": "To factorise x² + (a + b)x + ab we look for two numbers whose sum is the coefficient of x and whose product is the constant term.",
+          "answer": "d",
+          "explanation": "The assertion is false: (x − 3)(x − 4) = x² − 7x + 12, not x² − 8x + 12. The reason is true, and applying it correctly needs two numbers with sum −8 and product 12, namely −2 and −6, giving x² − 8x + 12 = (x − 2)(x − 6)."
+        },
+        {
+          "id": "iemh1-04-vsa1",
+          "kind": "vsa",
+          "outcome": "M9-04-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Use a suitable identity in each case to evaluate (i) 79² and (ii) 104 × 96.",
+          "answer": "(i) 79² = (80 − 1)² = 80² − 2 × 80 × 1 + 1² = 6400 − 160 + 1 = 6241. (ii) 104 × 96 = (100 + 4)(100 − 4) = 100² − 4² = 10000 − 16 = 9984.",
+          "valuePoints": [
+            "79² = (80 − 1)² = 6400 − 160 + 1 = 6241",
+            "104 × 96 = (100 + 4)(100 − 4) = 10000 − 16 = 9984"
+          ],
+          "rubric": [
+            { "label": "79²", "marks": 1, "descriptor": "6241, with the identity (a − b)² used" },
+            { "label": "104 × 96", "marks": 1, "descriptor": "9984, with the identity (a + b)(a − b) used" }
+          ]
+        },
+        {
+          "id": "iemh1-04-vsa2",
+          "kind": "vsa",
+          "outcome": "M9-04-2",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "Expand (2x + 3y)³ using a suitable identity.",
+          "answer": "Using (a + b)³ = a³ + 3a²b + 3ab² + b³ with a = 2x and b = 3y: (2x)³ + 3(2x)²(3y) + 3(2x)(3y)² + (3y)³ = 8x³ + 3 × 4x² × 3y + 3 × 2x × 9y² + 27y³ = 8x³ + 36x²y + 54xy² + 27y³.",
+          "valuePoints": [
+            "Uses (a + b)³ = a³ + 3a²b + 3ab² + b³ with a = 2x, b = 3y",
+            "8x³ + 36x²y + 54xy² + 27y³"
+          ],
+          "rubric": [
+            { "label": "Identity applied", "marks": 1, "descriptor": "Correct substitution a = 2x, b = 3y into (a + b)³" },
+            { "label": "Expansion", "marks": 1, "descriptor": "8x³ + 36x²y + 54xy² + 27y³" }
+          ]
+        },
+        {
+          "id": "iemh1-04-vsa3",
+          "kind": "vsa",
+          "outcome": "M9-04-4",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Factorise (i) x² + 11x + 30 and (ii) r² − r − 42.",
+          "answer": "(i) Two numbers with sum 11 and product 30 are 5 and 6, so x² + 11x + 30 = (x + 5)(x + 6). (ii) Two numbers with sum −1 and product −42 are −7 and 6, so r² − r − 42 = (r − 7)(r + 6).",
+          "valuePoints": [
+            "x² + 11x + 30 = (x + 5)(x + 6)",
+            "r² − r − 42 = (r − 7)(r + 6)"
+          ],
+          "rubric": [
+            { "label": "First factorisation", "marks": 1, "descriptor": "(x + 5)(x + 6)" },
+            { "label": "Second factorisation", "marks": 1, "descriptor": "(r − 7)(r + 6)" }
+          ]
+        },
+        {
+          "id": "iemh1-04-sa1",
+          "kind": "sa",
+          "outcome": "M9-04-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "If a + b = 7 and ab = 10, find the values of a² + b² and a³ + b³ without finding a and b separately.",
+          "answer": "From (a + b)² = a² + 2ab + b² we get a² + b² = (a + b)² − 2ab = 49 − 20 = 29. From (a + b)³ = a³ + 3a²b + 3ab² + b³ = a³ + b³ + 3ab(a + b) we get a³ + b³ = (a + b)³ − 3ab(a + b) = 343 − 3 × 10 × 7 = 343 − 210 = 133.",
+          "valuePoints": [
+            "a² + b² = (a + b)² − 2ab",
+            "a² + b² = 49 − 20 = 29",
+            "a³ + b³ = (a + b)³ − 3ab(a + b) = 343 − 210 = 133"
+          ],
+          "rubric": [
+            { "label": "Identity for a² + b²", "marks": 1, "descriptor": "Writes a² + b² = (a + b)² − 2ab" },
+            { "label": "Value of a² + b²", "marks": 1, "descriptor": "29" },
+            { "label": "Value of a³ + b³", "marks": 1, "descriptor": "133, from (a + b)³ − 3ab(a + b)" }
+          ]
+        },
+        {
+          "id": "iemh1-04-sa2",
+          "kind": "sa",
+          "outcome": "M9-04-1",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "Factorise 9a² + b² + 4c² − 6ab + 12ac − 4bc.",
+          "answer": "Compare with (x + y + z)² = x² + y² + z² + 2xy + 2yz + 2zx. Here 9a² = (3a)², b² = (−b)² and 4c² = (2c)². Then 2(3a)(−b) = −6ab, 2(−b)(2c) = −4bc and 2(2c)(3a) = 12ac — exactly the three middle terms given. So the expression is (3a − b + 2c)².",
+          "valuePoints": [
+            "Recognises the three squares as (3a)², (−b)² and (2c)²",
+            "Checks the cross terms −6ab, −4bc and +12ac",
+            "Answer: (3a − b + 2c)²"
+          ],
+          "rubric": [
+            { "label": "Squares identified", "marks": 1, "descriptor": "9a² = (3a)², b² = (−b)², 4c² = (2c)²" },
+            { "label": "Cross terms matched", "marks": 1, "descriptor": "Shows 2xy, 2yz, 2zx agree with −6ab, −4bc, 12ac" },
+            { "label": "Answer", "marks": 1, "descriptor": "(3a − b + 2c)²" }
+          ]
+        },
+        {
+          "id": "iemh1-04-sa3",
+          "kind": "sa",
+          "outcome": "M9-04-4",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A rectangular swimming pool is such that its breadth is 4 metres less than its length, and its area is 96 square metres. Using factorisation, find the length and the breadth of the pool.",
+          "answer": "Let the length be x metres; the breadth is (x − 4) metres. Then x(x − 4) = 96, so x² − 4x − 96 = 0. We need two numbers with product −96 and sum −4: these are −12 and 8. So x² − 12x + 8x − 96 = x(x − 12) + 8(x − 12) = (x − 12)(x + 8) = 0. Hence x = 12 or x = −8. A length cannot be negative, so x = 12 m and the breadth is 12 − 4 = 8 m. (Check: 12 × 8 = 96.)",
+          "valuePoints": [
+            "Forms x(x − 4) = 96, that is x² − 4x − 96 = 0",
+            "Factorises as (x − 12)(x + 8) = 0",
+            "Rejects x = −8; length 12 m and breadth 8 m"
+          ],
+          "rubric": [
+            { "label": "Equation", "marks": 1, "descriptor": "x² − 4x − 96 = 0" },
+            { "label": "Factorisation", "marks": 1, "descriptor": "(x − 12)(x + 8) = 0" },
+            { "label": "Dimensions", "marks": 1, "descriptor": "Length 12 m, breadth 8 m, with the negative root rejected" }
+          ]
+        },
+        {
+          "id": "iemh1-04-la1",
+          "kind": "la",
+          "outcome": "M9-04-2",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "(i) Starting from (a + b)³ = a³ + 3a²b + 3ab² + b³, obtain the identity for (a − b)³. (ii) Use a suitable identity to evaluate 199³. (iii) Factorise 8n³ − 60n²m + 150nm² − 125m³.",
+          "answer": "(i) Replacing b by −b: (a + (−b))³ = a³ + 3a²(−b) + 3a(−b)² + (−b)³ = a³ − 3a²b + 3ab² − b³. So (a − b)³ = a³ − 3a²b + 3ab² − b³. (ii) 199³ = (200 − 1)³ = 200³ − 3 × 200² × 1 + 3 × 200 × 1² − 1³ = 8000000 − 120000 + 600 − 1 = 7880599. (iii) Write the expression as (2n)³ − 3(2n)²(5m) + 3(2n)(5m)² − (5m)³, since 3 × 4n² × 5m = 60n²m and 3 × 2n × 25m² = 150nm². Comparing with a³ − 3a²b + 3ab² − b³ with a = 2n and b = 5m, the expression equals (2n − 5m)³.",
+          "valuePoints": [
+            "Replaces b by −b to get (a − b)³ = a³ − 3a²b + 3ab² − b³",
+            "199³ = (200 − 1)³ expanded term by term",
+            "199³ = 8000000 − 120000 + 600 − 1 = 7880599",
+            "Rewrites the expression as (2n)³ − 3(2n)²(5m) + 3(2n)(5m)² − (5m)³",
+            "Factorised form (2n − 5m)³"
+          ],
+          "rubric": [
+            { "label": "Deriving (a − b)³", "marks": 1, "descriptor": "Substitutes −b for b and simplifies correctly" },
+            { "label": "Setting up 199³", "marks": 1, "descriptor": "Writes 199³ = (200 − 1)³ and expands" },
+            { "label": "Value of 199³", "marks": 1, "descriptor": "7880599" },
+            { "label": "Matching the cube", "marks": 1, "descriptor": "Identifies a = 2n and b = 5m with all four terms checked" },
+            { "label": "Factorisation", "marks": 1, "descriptor": "(2n − 5m)³" }
+          ]
+        },
+        {
+          "id": "iemh1-04-la2",
+          "kind": "la",
+          "outcome": "M9-04-3",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "The sum of three numbers is 10, their product is 25 and the sum of their squares is 38. Find the sum of their cubes.",
+          "answer": "Let the numbers be x, y, z, so x + y + z = 10, xyz = 25 and x² + y² + z² = 38. First find xy + yz + zx using (x + y + z)² = x² + y² + z² + 2(xy + yz + zx): 100 = 38 + 2(xy + yz + zx), so 2(xy + yz + zx) = 62 and xy + yz + zx = 31. Now use x³ + y³ + z³ − 3xyz = (x + y + z)(x² + y² + z² − xy − yz − zx). The right side is 10 × (38 − 31) = 10 × 7 = 70. So x³ + y³ + z³ = 70 + 3xyz = 70 + 3 × 25 = 70 + 75 = 145.",
+          "valuePoints": [
+            "Uses (x + y + z)² = x² + y² + z² + 2(xy + yz + zx)",
+            "xy + yz + zx = 31",
+            "Uses x³ + y³ + z³ − 3xyz = (x + y + z)(x² + y² + z² − xy − yz − zx)",
+            "Right-hand side = 10 × 7 = 70",
+            "x³ + y³ + z³ = 70 + 75 = 145"
+          ],
+          "rubric": [
+            { "label": "Square identity used", "marks": 1, "descriptor": "Writes 100 = 38 + 2(xy + yz + zx)" },
+            { "label": "Sum of products", "marks": 1, "descriptor": "xy + yz + zx = 31" },
+            { "label": "Cube identity quoted", "marks": 1, "descriptor": "x³ + y³ + z³ − 3xyz = (x + y + z)(x² + y² + z² − xy − yz − zx)" },
+            { "label": "Substitution", "marks": 1, "descriptor": "10 × (38 − 31) = 70" },
+            { "label": "Answer", "marks": 1, "descriptor": "145" }
+          ]
+        },
+        {
+          "id": "iemh1-04-case1",
+          "kind": "case",
+          "outcome": "M9-04-4",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "fromBook": false,
+          "passage": "Saira is making a large rectangle out of algebra tiles on her desk. She has one square tile whose side is x units, eight rectangular strips each x units long and 1 unit wide, and fifteen small square tiles each of side 1 unit. She fits all of these together into a single large rectangle, with no gaps between the tiles and no tile lying on top of another. When she has finished, she measures the sides of the large rectangle and finds that each of them is a linear expression in x. Her teacher asks the class to find those two expressions without measuring, by working with the total area of the tiles.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The total area of all Saira's tiles, in square units, is",
+              "marks": 1,
+              "options": [
+                { "text": "x² + 8x + 15", "correct": true },
+                { "text": "x² + 15x + 8", "correct": false },
+                { "text": "8x² + x + 15", "correct": false },
+                { "text": "x² + 8x + 8", "correct": false }
+              ],
+              "answer": "(a) x² + 8x + 15 — one tile of area x², eight strips of area x each, and fifteen unit squares."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Write the two numbers whose sum is 8 and whose product is 15.",
+              "marks": 1,
+              "answer": "3 and 5."
+            },
+            {
+              "type": "sa",
+              "prompt": "Find the length and the breadth of Saira's large rectangle in terms of x, and hence find its perimeter.",
+              "marks": 2,
+              "answer": "x² + 8x + 15 = x² + 3x + 5x + 15 = x(x + 3) + 5(x + 3) = (x + 3)(x + 5), so the sides are (x + 5) units and (x + 3) units (1 mark). Perimeter = 2[(x + 5) + (x + 3)] = 2(2x + 8) = 4x + 16 units (1 mark)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "questions": [
+        {
+          "id": "iemh1-05-ar1",
+          "kind": "ar",
+          "outcome": "M9-05-4",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "The angle subtended by a diameter of a circle at any point on the circle is 90°.",
+          "reason": "The angle subtended by an arc at the centre of a circle is double the angle it subtends at any point on the circle outside that arc.",
+          "answer": "a",
+          "explanation": "Both statements are true and the reason explains the assertion: a diameter divides the circle into two arcs, and the arc not containing the point subtends a straight angle of 180° at the centre, so the angle at the point on the circle is half of 180°, which is 90°."
+        },
+        {
+          "id": "iemh1-05-ar2",
+          "kind": "ar",
+          "outcome": "M9-05-5",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "A quadrilateral ABCD whose angles, taken in order, measure ∠A = 80°, ∠B = 110°, ∠C = 100° and ∠D = 70° can be drawn as a cyclic quadrilateral.",
+          "reason": "The four angles of any quadrilateral add up to 360°.",
+          "answer": "b",
+          "explanation": "Both statements are true. The quadrilateral is cyclic because its opposite angles add to 180° (80° + 100° = 180° and 110° + 70° = 180°). The reason is a true fact about every quadrilateral, cyclic or not, so it does not explain the assertion."
+        },
+        {
+          "id": "iemh1-05-vsa1",
+          "kind": "vsa",
+          "outcome": "M9-05-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "A chord of a circle is at a distance of 5 cm from the centre. If the radius of the circle is 13 cm, find the length of the chord.",
+          "answer": "The perpendicular from the centre to the chord bisects it. The perpendicular, half the chord and the radius form a right-angled triangle, so half the chord = √(13² − 5²) = √(169 − 25) = √144 = 12 cm. The chord is 2 × 12 = 24 cm long.",
+          "valuePoints": [
+            "The perpendicular from the centre bisects the chord, giving a right-angled triangle",
+            "Half the chord = √(169 − 25) = 12 cm, so the chord is 24 cm"
+          ],
+          "rubric": [
+            { "label": "Right triangle set up", "marks": 1, "descriptor": "Uses radius 13, distance 5 and half the chord in a right-angled triangle" },
+            { "label": "Length", "marks": 1, "descriptor": "24 cm" }
+          ]
+        },
+        {
+          "id": "iemh1-05-vsa2",
+          "kind": "vsa",
+          "outcome": "M9-05-3",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "An arc of a circle subtends an angle of 70° at the centre. What angle does the same arc subtend at a point on the circle outside that arc? Name the theorem you use.",
+          "answer": "By the theorem that the angle subtended by an arc at the centre is double the angle it subtends at a point on the circle outside the arc, the required angle is 70° ÷ 2 = 35°.",
+          "valuePoints": [
+            "Names the theorem: angle at the centre is double the angle at a point on the circle outside the arc",
+            "Angle = 35°"
+          ],
+          "rubric": [
+            { "label": "Theorem", "marks": 1, "descriptor": "States the angle-at-the-centre theorem" },
+            { "label": "Angle", "marks": 1, "descriptor": "35°" }
+          ]
+        },
+        {
+          "id": "iemh1-05-vsa3",
+          "kind": "vsa",
+          "outcome": "M9-05-5",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "ABCD is a cyclic quadrilateral in which ∠A = 75° and ∠B = 110°. Find ∠C and ∠D.",
+          "answer": "In a cyclic quadrilateral the opposite angles add up to 180°. So ∠C = 180° − ∠A = 180° − 75° = 105°, and ∠D = 180° − ∠B = 180° − 110° = 70°.",
+          "valuePoints": [
+            "Uses ∠A + ∠C = 180° to get ∠C = 105°",
+            "Uses ∠B + ∠D = 180° to get ∠D = 70°"
+          ],
+          "rubric": [
+            { "label": "∠C", "marks": 1, "descriptor": "105°" },
+            { "label": "∠D", "marks": 1, "descriptor": "70°" }
+          ]
+        },
+        {
+          "id": "iemh1-05-sa1",
+          "kind": "sa",
+          "outcome": "M9-05-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A chord of a circle is 16 cm long and its distance from the centre is 6 cm. Find the radius of the circle.",
+          "answer": "Let the centre be O, the chord be AB and let M be the foot of the perpendicular from O to AB. The perpendicular from the centre bisects the chord, so AM = 16 ÷ 2 = 8 cm, and OM = 6 cm. Triangle OMA is right-angled at M, so OA² = OM² + AM² = 6² + 8² = 36 + 64 = 100. Hence the radius OA = √100 = 10 cm.",
+          "valuePoints": [
+            "Perpendicular from the centre bisects the chord, so half the chord is 8 cm",
+            "OA² = 6² + 8² = 100",
+            "Radius = 10 cm"
+          ],
+          "rubric": [
+            { "label": "Half the chord", "marks": 1, "descriptor": "8 cm, quoting that the perpendicular from the centre bisects the chord" },
+            { "label": "Pythagoras", "marks": 1, "descriptor": "OA² = 6² + 8²" },
+            { "label": "Radius", "marks": 1, "descriptor": "10 cm" }
+          ]
+        },
+        {
+          "id": "iemh1-05-sa2",
+          "kind": "sa",
+          "outcome": "M9-05-5",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A quadrilateral PQRS is inscribed in a circle. If ∠P = (2x + 10)° and ∠R = (3x − 20)°, find the value of x and the measures of ∠P and ∠R.",
+          "answer": "∠P and ∠R are opposite angles of a cyclic quadrilateral, so they add up to 180°: (2x + 10) + (3x − 20) = 180, that is 5x − 10 = 180, so 5x = 190 and x = 38. Then ∠P = 2 × 38 + 10 = 86° and ∠R = 3 × 38 − 20 = 94°. (Check: 86° + 94° = 180°.)",
+          "valuePoints": [
+            "Opposite angles of a cyclic quadrilateral sum to 180°",
+            "5x − 10 = 180, so x = 38",
+            "∠P = 86° and ∠R = 94°"
+          ],
+          "rubric": [
+            { "label": "Equation", "marks": 1, "descriptor": "(2x + 10) + (3x − 20) = 180" },
+            { "label": "Value of x", "marks": 1, "descriptor": "x = 38" },
+            { "label": "The two angles", "marks": 1, "descriptor": "∠P = 86° and ∠R = 94°" }
+          ]
+        },
+        {
+          "id": "iemh1-05-sa3",
+          "kind": "sa",
+          "outcome": "M9-05-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "In a circle of radius 13 cm, two chords AB and CD are each 10 cm long. (i) State the theorem that connects chords of equal length with their distances from the centre. (ii) Find the distance of each of these chords from the centre.",
+          "answer": "(i) Chords of a circle having the same length are all at the same distance from the centre of the circle. (ii) The perpendicular from the centre bisects each chord, so half of each chord is 5 cm. If d is the distance from the centre, then d² + 5² = 13², so d² = 169 − 25 = 144 and d = 12 cm. Each chord is 12 cm from the centre, and the two distances are equal, as the theorem says.",
+          "valuePoints": [
+            "States that equal chords are equidistant from the centre",
+            "Half of each chord is 5 cm and d² = 13² − 5² = 144",
+            "Distance = 12 cm for each chord"
+          ],
+          "rubric": [
+            { "label": "Theorem", "marks": 1, "descriptor": "Equal chords are equidistant from the centre" },
+            { "label": "Working", "marks": 1, "descriptor": "d² = 13² − 5² using half the chord" },
+            { "label": "Distance", "marks": 1, "descriptor": "12 cm" }
+          ]
+        },
+        {
+          "id": "iemh1-05-la1",
+          "kind": "la",
+          "outcome": "M9-05-3",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "Let AFB be an arc of a circle with centre C, and let D be a point on the circle outside the arc AFB, placed so that when DC is joined and produced it cuts the circle again at a point E lying on the arc AFB. Prove that ∠BCA = 2∠BDA.",
+          "answer": "Join D to C and produce DC to meet the circle at E on the arc AFB. In triangle BCD, CB and CD are radii, so CB = CD and the triangle is isosceles; hence ∠CBD = ∠CDB. Now ∠BCE is an exterior angle of triangle BCD, so by the exterior angle theorem ∠BCE = ∠CBD + ∠CDB = 2∠BDC. In the same way, triangle ACD is isosceles because CA = CD, so ∠CAD = ∠CDA, and ∠ACE, the exterior angle of triangle ACD, equals ∠CAD + ∠CDA = 2∠CDA. Since E lies on arc AFB, the ray CE lies between CA and CB, so ∠BCA = ∠BCE + ∠ECA and ∠BDA = ∠BDC + ∠CDA. Adding the two results, ∠BCA = 2∠BDC + 2∠CDA = 2(∠BDC + ∠CDA) = 2∠BDA, as required.",
+          "valuePoints": [
+            "Joins DC and produces it to E; notes CB = CD and CA = CD as radii",
+            "Triangle BCD isosceles gives ∠CBD = ∠CDB, so the exterior angle ∠BCE = 2∠BDC",
+            "Triangle ACD isosceles gives ∠ACE = 2∠CDA",
+            "∠BCA = ∠BCE + ∠ECA and ∠BDA = ∠BDC + ∠CDA",
+            "Adding gives ∠BCA = 2∠BDA"
+          ],
+          "rubric": [
+            { "label": "Construction and radii", "marks": 1, "descriptor": "Produces DC to E and states CA = CB = CD" },
+            { "label": "First isosceles triangle", "marks": 1, "descriptor": "∠BCE = ∠CBD + ∠CDB = 2∠BDC by the exterior angle theorem" },
+            { "label": "Second isosceles triangle", "marks": 1, "descriptor": "∠ACE = 2∠CDA" },
+            { "label": "Splitting the angles", "marks": 1, "descriptor": "∠BCA = ∠BCE + ∠ECA and ∠BDA = ∠BDC + ∠CDA" },
+            { "label": "Conclusion", "marks": 1, "descriptor": "∠BCA = 2∠BDA" }
+          ]
+        },
+        {
+          "id": "iemh1-05-la2",
+          "kind": "la",
+          "outcome": "M9-05-1",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "Two parallel chords of a circle have lengths 10 cm and 24 cm and lie on the same side of the centre. The distance between the two chords is 7 cm. Find the radius of the circle.",
+          "answer": "Let the radius be r cm. The perpendicular from the centre bisects each chord, so the half-chords are 5 cm and 12 cm. Let the distances of the 10 cm and 24 cm chords from the centre be p and q. Then p² = r² − 25 and q² = r² − 144, so p² − q² = 119, that is (p − q)(p + q) = 119. The longer chord is nearer the centre, so p > q and the distance between them is p − q = 7. Hence 7(p + q) = 119, giving p + q = 17. Solving p − q = 7 and p + q = 17 gives p = 12 and q = 5. Then r² = p² + 25 = 144 + 25 = 169, so r = 13 cm. (Check with the other chord: 5² + 12² = 169.)",
+          "valuePoints": [
+            "Half-chords are 5 cm and 12 cm; the perpendicular from the centre bisects a chord",
+            "p² = r² − 25 and q² = r² − 144, so p² − q² = 119",
+            "The longer chord is nearer the centre, so p − q = 7",
+            "p + q = 119 ÷ 7 = 17, giving p = 12 and q = 5",
+            "r² = 144 + 25 = 169, so r = 13 cm"
+          ],
+          "rubric": [
+            { "label": "Half-chords", "marks": 1, "descriptor": "5 cm and 12 cm, with the bisection property quoted" },
+            { "label": "Two equations", "marks": 1, "descriptor": "p² = r² − 25 and q² = r² − 144" },
+            { "label": "Using the gap", "marks": 1, "descriptor": "p − q = 7 with the longer chord nearer the centre" },
+            { "label": "Distances", "marks": 1, "descriptor": "p = 12 cm and q = 5 cm" },
+            { "label": "Radius", "marks": 1, "descriptor": "13 cm" }
+          ]
+        },
+        {
+          "id": "iemh1-05-case1",
+          "kind": "case",
+          "outcome": "M9-05-1",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "fromBook": false,
+          "passage": "A circular flower bed in a public park has its centre at O. A straight walkway AB crosses the bed, meeting its edge at A and at B, so AB is a chord of the circle. The gardener measures the radius of the bed as 25 metres, and he finds that the shortest distance from the centre O to the walkway AB is 7 metres. A second straight walkway CD is laid through the centre, from one point C of the edge to the opposite point D, so CD is a diameter. A lamp post stands at a point P on the edge of the bed, and two wires are stretched from the lamp post, one to C and one to D.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The angle ∠CPD between the two wires at the lamp post measures",
+              "marks": 1,
+              "options": [
+                { "text": "45°", "correct": false },
+                { "text": "60°", "correct": false },
+                { "text": "90°", "correct": true },
+                { "text": "120°", "correct": false }
+              ],
+              "answer": "(c) 90° — CD is a diameter, and the angle a diameter subtends at any point on the circle is a right angle."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What is the length of the walkway CD?",
+              "marks": 1,
+              "answer": "CD is a diameter, so CD = 2 × 25 = 50 m."
+            },
+            {
+              "type": "sa",
+              "prompt": "Find the length of the walkway AB.",
+              "marks": 2,
+              "answer": "The shortest distance from O to AB is the perpendicular distance, and the perpendicular from the centre bisects the chord, so half of AB = √(25² − 7²) = √(625 − 49) = √576 = 24 m (1 mark). Hence AB = 2 × 24 = 48 m (1 mark)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "questions": [
+        {
+          "id": "iemh1-06-ar1",
+          "kind": "ar",
+          "outcome": "M9-06-3",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "A median of a triangle divides it into two triangles of equal area.",
+          "reason": "The two triangles formed by a median are congruent to each other.",
+          "answer": "c",
+          "explanation": "The assertion is true: the two triangles have equal bases (the median meets the midpoint of the opposite side) and the same height, so their areas are equal. The reason is false — in general the two triangles are differently shaped and are not congruent, which is exactly what makes the result surprising."
+        },
+        {
+          "id": "iemh1-06-ar2",
+          "kind": "ar",
+          "outcome": "M9-06-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "If the area of a circle is 154 cm², then its radius is 7 cm (taking π = 22/7).",
+          "reason": "The circumference of a circle of radius r is 2πr.",
+          "answer": "b",
+          "explanation": "Both statements are true, but the reason is about circumference, not area, so it does not explain the assertion. The area gives πr² = 154, so r² = 154 × 7 ÷ 22 = 49 and r = 7 cm."
+        },
+        {
+          "id": "iemh1-06-vsa1",
+          "kind": "vsa",
+          "outcome": "M9-06-2",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "The diameter of a bicycle wheel is 56 cm. How far does the cyclist travel when the wheel makes 100 complete turns? Give the answer in metres, taking π = 22/7.",
+          "answer": "In one complete turn the wheel covers its circumference, πd = (22/7) × 56 = 176 cm. In 100 turns the distance is 176 × 100 = 17600 cm = 176 m.",
+          "valuePoints": [
+            "Circumference = (22/7) × 56 = 176 cm",
+            "Distance = 176 × 100 = 17600 cm = 176 m"
+          ],
+          "rubric": [
+            { "label": "Circumference", "marks": 1, "descriptor": "176 cm" },
+            { "label": "Distance", "marks": 1, "descriptor": "176 m (or 17600 cm)" }
+          ]
+        },
+        {
+          "id": "iemh1-06-vsa2",
+          "kind": "vsa",
+          "outcome": "M9-06-4",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Use Heron's formula to find the area of a triangle whose sides are 3 cm, 4 cm and 5 cm.",
+          "answer": "The semi-perimeter is s = (3 + 4 + 5) ÷ 2 = 6 cm. By Heron's formula the area = √(s(s − a)(s − b)(s − c)) = √(6 × 3 × 2 × 1) = √36 = 6 cm².",
+          "valuePoints": [
+            "s = 6 cm",
+            "Area = √(6 × 3 × 2 × 1) = 6 cm²"
+          ],
+          "rubric": [
+            { "label": "Semi-perimeter", "marks": 1, "descriptor": "s = 6 cm" },
+            { "label": "Area", "marks": 1, "descriptor": "6 cm² using Heron's formula" }
+          ]
+        },
+        {
+          "id": "iemh1-06-vsa3",
+          "kind": "vsa",
+          "outcome": "M9-06-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "A parallelogram has base 12 cm and height 7.5 cm. Find its area. A triangle stands on the same base and has the same height — find its area too.",
+          "answer": "Area of the parallelogram = base × height = 12 × 7.5 = 90 cm². Area of the triangle = ½ × base × height = ½ × 12 × 7.5 = 45 cm², which is half the area of the parallelogram.",
+          "valuePoints": [
+            "Parallelogram: 12 × 7.5 = 90 cm²",
+            "Triangle: ½ × 12 × 7.5 = 45 cm², half the parallelogram"
+          ],
+          "rubric": [
+            { "label": "Parallelogram", "marks": 1, "descriptor": "90 cm²" },
+            { "label": "Triangle", "marks": 1, "descriptor": "45 cm²" }
+          ]
+        },
+        {
+          "id": "iemh1-06-sa1",
+          "kind": "sa",
+          "outcome": "M9-06-4",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "The sides of a triangular plot are in the ratio 3 : 5 : 7 and its perimeter is 300 m. Find the area of the plot.",
+          "answer": "Let the sides be 3x, 5x and 7x metres. Then 3x + 5x + 7x = 300, so 15x = 300 and x = 20. The sides are 60 m, 100 m and 140 m. The semi-perimeter is s = 300 ÷ 2 = 150 m. By Heron's formula the area = √(150 × (150 − 60) × (150 − 100) × (150 − 140)) = √(150 × 90 × 50 × 10) = √6750000 = 1500√3 m², which is about 2598.08 m².",
+          "valuePoints": [
+            "Sides 60 m, 100 m and 140 m from 15x = 300",
+            "s = 150 m",
+            "Area = √(150 × 90 × 50 × 10) = 1500√3 ≈ 2598.08 m²"
+          ],
+          "rubric": [
+            { "label": "Sides", "marks": 1, "descriptor": "60 m, 100 m, 140 m" },
+            { "label": "Heron set up", "marks": 1, "descriptor": "s = 150 and the product 150 × 90 × 50 × 10" },
+            { "label": "Area", "marks": 1, "descriptor": "1500√3 m² ≈ 2598.08 m²" }
+          ]
+        },
+        {
+          "id": "iemh1-06-sa2",
+          "kind": "sa",
+          "outcome": "M9-06-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "The minute hand of a large clock is 21 cm long. Find the area swept by the minute hand in 10 minutes. (Take π = 22/7.)",
+          "answer": "In 60 minutes the minute hand sweeps a full turn of 360°, so in 10 minutes it sweeps 360° × (10/60) = 60°. The region swept is a sector of radius 21 cm and angle 60°, whose area is πr² × (θ/360°) = (22/7) × 21 × 21 × (60/360) = 1386 × (1/6) = 231 cm².",
+          "valuePoints": [
+            "Angle swept in 10 minutes = 60°",
+            "Area of sector = πr² × θ/360°",
+            "Area = (22/7) × 441 × (1/6) = 231 cm²"
+          ],
+          "rubric": [
+            { "label": "Angle", "marks": 1, "descriptor": "60°" },
+            { "label": "Formula", "marks": 1, "descriptor": "Uses πr² × θ/360° with r = 21 cm" },
+            { "label": "Area", "marks": 1, "descriptor": "231 cm²" }
+          ]
+        },
+        {
+          "id": "iemh1-06-sa3",
+          "kind": "sa",
+          "outcome": "M9-06-3",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "In triangle ABC, D is the midpoint of BC, so AD is a median. P is any point on the median AD. Prove that area(ABP) = area(ACP).",
+          "answer": "Since AD is a median of triangle ABC, it divides that triangle into two triangles of equal area: area(ABD) = area(ACD). Now join PB and PC. In triangle PBC, D is the midpoint of BC, so PD is a median of triangle PBC and therefore area(PBD) = area(PCD). Subtracting the second pair of equal areas from the first pair: area(ABD) − area(PBD) = area(ACD) − area(PCD). But area(ABD) − area(PBD) = area(ABP) and area(ACD) − area(PCD) = area(ACP). Hence area(ABP) = area(ACP).",
+          "valuePoints": [
+            "AD is a median, so area(ABD) = area(ACD)",
+            "PD is a median of triangle PBC, so area(PBD) = area(PCD)",
+            "Subtracting gives area(ABP) = area(ACP)"
+          ],
+          "rubric": [
+            { "label": "First median", "marks": 1, "descriptor": "area(ABD) = area(ACD)" },
+            { "label": "Second median", "marks": 1, "descriptor": "area(PBD) = area(PCD)" },
+            { "label": "Subtraction", "marks": 1, "descriptor": "Subtracts correctly to reach area(ABP) = area(ACP)" }
+          ]
+        },
+        {
+          "id": "iemh1-06-la1",
+          "kind": "la",
+          "outcome": "M9-06-4",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "A triangular park has sides of length 7 m, 24 m and 25 m. (i) Find its area using Heron's formula. (ii) Show that the park is right-angled and find its area a second way, as a check. (iii) Find the cost of fencing the park once round at ₹40 per metre.",
+          "answer": "(i) s = (7 + 24 + 25) ÷ 2 = 56 ÷ 2 = 28 m. Area = √(28 × (28 − 7) × (28 − 24) × (28 − 25)) = √(28 × 21 × 4 × 3) = √7056 = 84 m². (ii) 7² + 24² = 49 + 576 = 625 = 25², so by the converse of the Baudhāyana–Pythagoras Theorem the triangle is right-angled, with the sides 7 m and 24 m at right angles. Taking 24 m as base and 7 m as height, area = ½ × 24 × 7 = 84 m², the same answer. (iii) The perimeter is 7 + 24 + 25 = 56 m, so the cost = 56 × 40 = ₹2240.",
+          "valuePoints": [
+            "s = 28 m",
+            "Heron gives √(28 × 21 × 4 × 3) = √7056 = 84 m²",
+            "7² + 24² = 625 = 25², so the triangle is right-angled",
+            "½ × 24 × 7 = 84 m², agreeing with Heron's formula",
+            "Perimeter 56 m and cost ₹2240"
+          ],
+          "rubric": [
+            { "label": "Semi-perimeter", "marks": 1, "descriptor": "s = 28 m" },
+            { "label": "Heron's area", "marks": 1, "descriptor": "84 m²" },
+            { "label": "Right angle shown", "marks": 1, "descriptor": "7² + 24² = 25²" },
+            { "label": "Second area", "marks": 1, "descriptor": "½ × 24 × 7 = 84 m²" },
+            { "label": "Cost", "marks": 1, "descriptor": "Perimeter 56 m, cost ₹2240" }
+          ]
+        },
+        {
+          "id": "iemh1-06-la2",
+          "kind": "la",
+          "outcome": "M9-06-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "A circular park has radius 35 m. A path 7 m wide is laid all around the park, on the outside of it. Taking π = 22/7, find (i) the area of the park, (ii) the area of the path, and (iii) the cost of paving the path at ₹150 per square metre.",
+          "answer": "(i) Area of the park = πr² = (22/7) × 35 × 35 = 22 × 5 × 35 = 3850 m². (ii) The outer edge of the path is a circle of radius 35 + 7 = 42 m, whose area is (22/7) × 42 × 42 = 22 × 6 × 42 = 5544 m². The path is the region between the two circles, so its area = 5544 − 3850 = 1694 m². (iii) Cost = 1694 × 150 = ₹2,54,100.",
+          "valuePoints": [
+            "Area of park = (22/7) × 35² = 3850 m²",
+            "Outer radius = 42 m",
+            "Area of the larger circle = (22/7) × 42² = 5544 m²",
+            "Area of path = 5544 − 3850 = 1694 m²",
+            "Cost = 1694 × 150 = ₹2,54,100"
+          ],
+          "rubric": [
+            { "label": "Park area", "marks": 1, "descriptor": "3850 m²" },
+            { "label": "Outer radius", "marks": 1, "descriptor": "42 m" },
+            { "label": "Outer area", "marks": 1, "descriptor": "5544 m²" },
+            { "label": "Path area", "marks": 1, "descriptor": "1694 m² by subtraction" },
+            { "label": "Cost", "marks": 1, "descriptor": "₹2,54,100" }
+          ]
+        },
+        {
+          "id": "iemh1-06-case1",
+          "kind": "case",
+          "outcome": "M9-06-1",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "fromBook": false,
+          "passage": "A school in Nashik is levelling a piece of ground for a kabaddi court and a seating area beside it. The court itself is a rectangle 20 metres long and 14 metres wide. Along one of the 14 metre sides the school will build a seating area in the shape of a semicircle, with that 14 metre side of the court as its diameter. The whole region — the rectangular court together with the semicircular seating area — is to be levelled first, and then a rope is to be taken once around the outside of the court alone to mark it out for play. Take π = 22/7 throughout.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The radius of the semicircular seating area is",
+              "marks": 1,
+              "options": [
+                { "text": "7 m", "correct": true },
+                { "text": "10 m", "correct": false },
+                { "text": "14 m", "correct": false },
+                { "text": "20 m", "correct": false }
+              ],
+              "answer": "(a) 7 m — the 14 m side of the court is the diameter, so the radius is half of it."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find the length of rope needed to go once round the rectangular court.",
+              "marks": 1,
+              "answer": "Perimeter of the rectangle = 2(20 + 14) = 2 × 34 = 68 m."
+            },
+            {
+              "type": "sa",
+              "prompt": "Find the area of the rectangular court and the area of the semicircular seating area, and hence the total area to be levelled.",
+              "marks": 2,
+              "answer": "Rectangle: 20 × 14 = 280 m². Semicircle: ½ × (22/7) × 7 × 7 = ½ × 154 = 77 m² (1 mark for the two areas). Total area to be levelled = 280 + 77 = 357 m² (1 mark)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "questions": [
+        {
+          "id": "iemh1-07-ar1",
+          "kind": "ar",
+          "outcome": "M9-07-3",
+          "difficulty": "EASY",
+          "marks": 1,
+          "assertion": "When a fair 6-sided die is rolled once, the probability of getting a number greater than 4 is 1/3.",
+          "reason": "There are two favourable outcomes, 5 and 6, out of six equally likely outcomes.",
+          "answer": "a",
+          "explanation": "Both statements are true and the reason explains the assertion: P(number greater than 4) = 2/6 = 1/3."
+        },
+        {
+          "id": "iemh1-07-ar2",
+          "kind": "ar",
+          "outcome": "M9-07-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "If a coin is tossed 10 times and lands heads on 7 of them, the coin must be biased.",
+          "reason": "As the number of trials increases, the experimental probability tends to get closer to the theoretical probability.",
+          "answer": "d",
+          "explanation": "The assertion is false: with only ten tosses the experimental probability can easily differ from 1/2 without the coin being biased. The reason is true — it is the Law of Large Numbers, and it is exactly why so small a number of trials proves nothing about bias."
+        },
+        {
+          "id": "iemh1-07-vsa1",
+          "kind": "vsa",
+          "outcome": "M9-07-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "A coin is tossed and a 6-sided die is rolled together. Write the sample space S for this experiment and state the sample size n(S).",
+          "answer": "S = {H1, H2, H3, H4, H5, H6, T1, T2, T3, T4, T5, T6}, where H and T stand for heads and tails on the coin and the number is the score on the die. The sample size is n(S) = 12.",
+          "valuePoints": [
+            "Lists all twelve outcomes, coin result paired with die score",
+            "n(S) = 12"
+          ],
+          "rubric": [
+            { "label": "Sample space", "marks": 1, "descriptor": "All twelve outcomes listed, none repeated" },
+            { "label": "Sample size", "marks": 1, "descriptor": "n(S) = 12" }
+          ]
+        },
+        {
+          "id": "iemh1-07-vsa2",
+          "kind": "vsa",
+          "outcome": "M9-07-3",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "A bag contains 3 red balls, 2 blue balls and 1 green ball, all of the same size. One ball is drawn at random. Find the probability that it is (i) red, (ii) not red.",
+          "answer": "There are 3 + 2 + 1 = 6 equally likely outcomes. (i) P(red) = 3/6 = 1/2. (ii) The balls that are not red are the 2 blue and 1 green, that is 3 balls, so P(not red) = 3/6 = 1/2. (This also equals 1 − P(red).)",
+          "valuePoints": [
+            "Total number of outcomes is 6",
+            "P(red) = 3/6 = 1/2 and P(not red) = 1 − 1/2 = 1/2"
+          ],
+          "rubric": [
+            { "label": "P(red)", "marks": 1, "descriptor": "1/2" },
+            { "label": "P(not red)", "marks": 1, "descriptor": "1/2, ideally shown as 1 − P(red)" }
+          ]
+        },
+        {
+          "id": "iemh1-07-vsa3",
+          "kind": "vsa",
+          "outcome": "M9-07-2",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "A die is rolled 12 times and a 3 appears 3 times. Find the experimental probability of rolling a 3 in this set of trials, and the theoretical probability of rolling a 3 with a fair die.",
+          "answer": "Experimental probability = (number of times the event occurred) ÷ (total number of trials) = 3/12 = 1/4. Theoretical probability = 1/6, since a fair die has six equally likely outcomes and only one of them is a 3.",
+          "valuePoints": [
+            "Experimental probability = 3/12 = 1/4",
+            "Theoretical probability = 1/6"
+          ],
+          "rubric": [
+            { "label": "Experimental", "marks": 1, "descriptor": "1/4" },
+            { "label": "Theoretical", "marks": 1, "descriptor": "1/6" }
+          ]
+        },
+        {
+          "id": "iemh1-07-sa1",
+          "kind": "sa",
+          "outcome": "M9-07-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "The eleven letters of the word PROBABILITY are written on eleven identical cards, one letter on each. A card is drawn at random. Find the probability that the letter on it is (i) B, (ii) a vowel, (iii) not I.",
+          "answer": "The letters are P, R, O, B, A, B, I, L, I, T, Y — eleven equally likely outcomes. (i) B occurs twice, so P(B) = 2/11. (ii) The vowels are O, A, I and I — four cards — so P(vowel) = 4/11. (iii) I occurs twice, so P(I) = 2/11 and P(not I) = 1 − 2/11 = 9/11.",
+          "valuePoints": [
+            "P(B) = 2/11, since B occurs twice among eleven letters",
+            "Vowels O, A, I, I give P(vowel) = 4/11",
+            "P(not I) = 1 − 2/11 = 9/11"
+          ],
+          "rubric": [
+            { "label": "P(B)", "marks": 1, "descriptor": "2/11" },
+            { "label": "P(vowel)", "marks": 1, "descriptor": "4/11" },
+            { "label": "P(not I)", "marks": 1, "descriptor": "9/11" }
+          ]
+        },
+        {
+          "id": "iemh1-07-sa2",
+          "kind": "sa",
+          "outcome": "M9-07-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Two fair coins are tossed together. Using a tree diagram, list the sample space, and then find the probability of getting (i) at least one head, (ii) exactly one head.",
+          "answer": "The tree has two branches for the first coin (H and T) and two branches from each of these for the second coin, giving four paths. So S = {HH, HT, TH, TT} and n(S) = 4. (i) At least one head happens for HH, HT and TH, so P = 3/4. (ii) Exactly one head happens for HT and TH, so P = 2/4 = 1/2.",
+          "valuePoints": [
+            "Tree diagram with two branches then two more from each, giving S = {HH, HT, TH, TT}",
+            "P(at least one head) = 3/4",
+            "P(exactly one head) = 2/4 = 1/2"
+          ],
+          "rubric": [
+            { "label": "Sample space", "marks": 1, "descriptor": "Tree diagram or list giving {HH, HT, TH, TT}" },
+            { "label": "At least one head", "marks": 1, "descriptor": "3/4" },
+            { "label": "Exactly one head", "marks": 1, "descriptor": "1/2" }
+          ]
+        },
+        {
+          "id": "iemh1-07-sa3",
+          "kind": "sa",
+          "outcome": "M9-07-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A random sample of 40 students in a school of 800 students was asked which club they preferred. The answers were: Science Club 14, Arts Club 11, Sports Club 9, Debate Club 6. (i) Find the probability that a student chosen at random from the sample prefers the Arts Club. (ii) Using the sample, estimate how many students in the whole school are likely to prefer the Sports Club.",
+          "answer": "(i) P(Arts Club) = 11/40 = 0.275. (ii) P(Sports Club) = 9/40 = 0.225, so the estimated number in the school is 0.225 × 800 = 180 students.",
+          "valuePoints": [
+            "P(Arts Club) = 11/40 = 0.275",
+            "P(Sports Club) = 9/40 = 0.225",
+            "Estimate for the school = 0.225 × 800 = 180 students"
+          ],
+          "rubric": [
+            { "label": "Arts Club", "marks": 1, "descriptor": "11/40 (or 0.275)" },
+            { "label": "Sports Club probability", "marks": 1, "descriptor": "9/40 (or 0.225)" },
+            { "label": "Estimate", "marks": 1, "descriptor": "180 students" }
+          ]
+        },
+        {
+          "id": "iemh1-07-la1",
+          "kind": "la",
+          "outcome": "M9-07-3",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "Two fair 6-sided dice are rolled together. (i) How many outcomes are there in the sample space? (ii) Find the probability that the sum of the two scores is 7. (iii) Find the probability that the sum is greater than 9. (iv) Find the probability that both dice show the same number. (v) Find the probability that the sum is a prime number greater than 5.",
+          "answer": "(i) Each die has 6 outcomes, so the sample space has 6 × 6 = 36 equally likely outcomes. (ii) Sum 7 comes from (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) — 6 outcomes — so P = 6/36 = 1/6. (iii) Sums greater than 9 are 10, 11 and 12: sum 10 from (4,6), (5,5), (6,4) — 3 outcomes; sum 11 from (5,6), (6,5) — 2 outcomes; sum 12 from (6,6) — 1 outcome. That is 6 outcomes, so P = 6/36 = 1/6. (iv) Both the same means (1,1), (2,2), (3,3), (4,4), (5,5), (6,6) — 6 outcomes — so P = 6/36 = 1/6. (v) The possible sums run from 2 to 12; the prime sums greater than 5 are 7 and 11. Sum 7 gives 6 outcomes and sum 11 gives 2 outcomes, a total of 8, so P = 8/36 = 2/9.",
+          "valuePoints": [
+            "Sample space has 36 equally likely outcomes",
+            "P(sum 7) = 6/36 = 1/6",
+            "P(sum greater than 9) = 6/36 = 1/6",
+            "P(both dice the same) = 6/36 = 1/6",
+            "Prime sums greater than 5 are 7 and 11, giving P = 8/36 = 2/9"
+          ],
+          "rubric": [
+            { "label": "Sample size", "marks": 1, "descriptor": "36 outcomes" },
+            { "label": "Sum 7", "marks": 1, "descriptor": "1/6, with the six outcomes identified" },
+            { "label": "Sum greater than 9", "marks": 1, "descriptor": "1/6" },
+            { "label": "Doubles", "marks": 1, "descriptor": "1/6" },
+            { "label": "Prime sum greater than 5", "marks": 1, "descriptor": "2/9, with sums 7 and 11 identified" }
+          ]
+        },
+        {
+          "id": "iemh1-07-la2",
+          "kind": "la",
+          "outcome": "M9-07-1",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "A basket contains 4 red balls and 5 blue balls, identical except for colour. One ball is drawn at random and laid aside, and then a second ball is drawn. (i) Describe the tree diagram for this experiment, giving the probability on every branch. (ii) Find the probability of drawing a red ball and then a blue ball. (iii) Find the probability that both balls are blue. (iv) Find the probability that the two balls are of different colours.",
+          "answer": "(i) The tree has two first branches: red with probability 4/9 and blue with probability 5/9, since there are 9 balls to begin with. After the first ball is laid aside only 8 remain. From the 'red' branch: red again with probability 3/8, blue with probability 5/8. From the 'blue' branch: red with probability 4/8, blue again with probability 4/8. (ii) P(red then blue) = (4/9) × (5/8) = 20/72 = 5/18. (iii) P(both blue) = (5/9) × (4/8) = 20/72 = 5/18. (iv) Different colours means red-then-blue or blue-then-red: P = 5/18 + (5/9) × (4/8) = 5/18 + 20/72 = 5/18 + 5/18 = 10/18 = 5/9.",
+          "valuePoints": [
+            "First-stage probabilities 4/9 and 5/9",
+            "Second-stage probabilities are out of 8, because the first ball is not replaced",
+            "P(red then blue) = (4/9)(5/8) = 5/18",
+            "P(both blue) = (5/9)(4/8) = 5/18",
+            "P(different colours) = 5/18 + 5/18 = 5/9"
+          ],
+          "rubric": [
+            { "label": "First stage", "marks": 1, "descriptor": "Branches of probability 4/9 and 5/9" },
+            { "label": "Second stage", "marks": 1, "descriptor": "Denominator 8 on every second branch, with the four correct numerators" },
+            { "label": "Red then blue", "marks": 1, "descriptor": "5/18" },
+            { "label": "Both blue", "marks": 1, "descriptor": "5/18" },
+            { "label": "Different colours", "marks": 1, "descriptor": "5/9" }
+          ]
+        },
+        {
+          "id": "iemh1-07-case1",
+          "kind": "case",
+          "outcome": "M9-07-2",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "fromBook": false,
+          "passage": "A tyre company in Pune keeps a record, for 1000 tyres, of the distance each tyre covered before it had to be replaced. The record shows: less than 4000 km, 20 tyres; from 4001 km to 9000 km, 210 tyres; from 9001 km to 14000 km, 325 tyres; more than 14000 km, 445 tyres. Every one of the 1000 tyres appears in exactly one of these four groups. The company uses these records to tell a customer how long a new tyre of the same kind is likely to last before it needs replacing.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The probability that a randomly chosen tyre from this record lasted less than 4000 km is",
+              "marks": 1,
+              "options": [
+                { "text": "0.02", "correct": true },
+                { "text": "0.2", "correct": false },
+                { "text": "0.045", "correct": false },
+                { "text": "0.445", "correct": false }
+              ],
+              "answer": "(a) 0.02 — there are 20 such tyres out of 1000, and 20/1000 = 0.02."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find the probability that a tyre chosen at random from the record lasted more than 14000 km.",
+              "marks": 1,
+              "answer": "445/1000 = 0.445."
+            },
+            {
+              "type": "sa",
+              "prompt": "Find the probability that a tyre lasted between 4000 km and 14000 km. Is this an experimental or a theoretical probability? Give a reason.",
+              "marks": 2,
+              "answer": "The two middle groups hold 210 + 325 = 535 tyres, so the probability is 535/1000 = 0.535 (1 mark). It is an experimental probability, because it is worked out from data actually recorded in 1000 trials, not from an assumption that all outcomes are equally likely (1 mark)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "questions": [
+        {
+          "id": "iemh1-08-ar1",
+          "kind": "ar",
+          "outcome": "M9-08-2",
+          "difficulty": "EASY",
+          "marks": 1,
+          "assertion": "The sequence 2, 6, 18, 54, … is an arithmetic progression.",
+          "reason": "In an arithmetic progression the difference between consecutive terms is a constant.",
+          "answer": "d",
+          "explanation": "The assertion is false: the differences are 4, 12 and 36, which are not constant. The sequence is a geometric progression, since each term is 3 times the one before. The reason correctly states the defining property of an arithmetic progression."
+        },
+        {
+          "id": "iemh1-08-ar2",
+          "kind": "ar",
+          "outcome": "M9-08-5",
+          "difficulty": "EASY",
+          "marks": 1,
+          "assertion": "The sum of the first 20 natural numbers is 210.",
+          "reason": "The sum of the first n natural numbers is n(n + 1)/2.",
+          "answer": "a",
+          "explanation": "Both statements are true and the reason explains the assertion: putting n = 20 gives 20 × 21 ÷ 2 = 210."
+        },
+        {
+          "id": "iemh1-08-vsa1",
+          "kind": "vsa",
+          "outcome": "M9-08-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "The nth term of a sequence is given by the explicit rule tn = 5n − 3. Find t10 and t15.",
+          "answer": "t10 = 5 × 10 − 3 = 50 − 3 = 47. t15 = 5 × 15 − 3 = 75 − 3 = 72.",
+          "valuePoints": [
+            "t10 = 47",
+            "t15 = 72"
+          ],
+          "rubric": [
+            { "label": "Tenth term", "marks": 1, "descriptor": "47" },
+            { "label": "Fifteenth term", "marks": 1, "descriptor": "72" }
+          ]
+        },
+        {
+          "id": "iemh1-08-vsa2",
+          "kind": "vsa",
+          "outcome": "M9-08-3",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Find the 10th and the 26th terms of the arithmetic progression 3, 8, 13, 18, …",
+          "answer": "Here the first term a = 3 and the common difference d = 5. Using tn = a + (n − 1)d: t10 = 3 + 9 × 5 = 3 + 45 = 48, and t26 = 3 + 25 × 5 = 3 + 125 = 128.",
+          "valuePoints": [
+            "a = 3, d = 5, and tn = a + (n − 1)d",
+            "t10 = 48 and t26 = 128"
+          ],
+          "rubric": [
+            { "label": "Formula and values of a, d", "marks": 1, "descriptor": "a = 3, d = 5 used in tn = a + (n − 1)d" },
+            { "label": "Both terms", "marks": 1, "descriptor": "48 and 128; ½ mark for one of them" }
+          ]
+        },
+        {
+          "id": "iemh1-08-vsa3",
+          "kind": "vsa",
+          "outcome": "M9-08-4",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "Write the common ratio of the geometric progression 2, 8, 32, … and find its 6th term.",
+          "answer": "The common ratio is r = 8 ÷ 2 = 4 (and 32 ÷ 8 = 4 as well). Using tn = ar^(n−1) with a = 2: t6 = 2 × 4⁵ = 2 × 1024 = 2048.",
+          "valuePoints": [
+            "Common ratio r = 4",
+            "t6 = 2 × 4⁵ = 2048"
+          ],
+          "rubric": [
+            { "label": "Common ratio", "marks": 1, "descriptor": "r = 4" },
+            { "label": "Sixth term", "marks": 1, "descriptor": "2048" }
+          ]
+        },
+        {
+          "id": "iemh1-08-sa1",
+          "kind": "sa",
+          "outcome": "M9-08-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Which term of the arithmetic progression 21, 18, 15, … is −81? Is 0 a term of this progression? Give reasons.",
+          "answer": "Here a = 21 and d = 18 − 21 = −3, so tn = 21 + (n − 1)(−3) = 24 − 3n. Setting 24 − 3n = −81 gives 3n = 105, so n = 35: −81 is the 35th term. Setting 24 − 3n = 0 gives 3n = 24, so n = 8, which is a natural number, so 0 is a term — it is the 8th term. (The progression runs 21, 18, 15, 12, 9, 6, 3, 0, …)",
+          "valuePoints": [
+            "a = 21, d = −3 and tn = 24 − 3n",
+            "24 − 3n = −81 gives n = 35",
+            "24 − 3n = 0 gives n = 8, a natural number, so 0 is the 8th term"
+          ],
+          "rubric": [
+            { "label": "General term", "marks": 1, "descriptor": "tn = 21 + (n − 1)(−3) = 24 − 3n" },
+            { "label": "Position of −81", "marks": 1, "descriptor": "35th term" },
+            { "label": "Is 0 a term", "marks": 1, "descriptor": "Yes, the 8th term, because n = 8 is a natural number" }
+          ]
+        },
+        {
+          "id": "iemh1-08-sa2",
+          "kind": "sa",
+          "outcome": "M9-08-5",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Find the sum 25 + 26 + 27 + … + 58 using the formula for the sum of the first n natural numbers.",
+          "answer": "Write the sum as (1 + 2 + … + 58) − (1 + 2 + … + 24) = S58 − S24. Now S58 = 58 × 59 ÷ 2 = 1711 and S24 = 24 × 25 ÷ 2 = 300. So the required sum is 1711 − 300 = 1411.",
+          "valuePoints": [
+            "Writes the sum as S58 − S24",
+            "S58 = 58 × 59 ÷ 2 = 1711 and S24 = 24 × 25 ÷ 2 = 300",
+            "Sum = 1411"
+          ],
+          "rubric": [
+            { "label": "Method", "marks": 1, "descriptor": "Expresses the sum as S58 − S24" },
+            { "label": "The two sums", "marks": 1, "descriptor": "1711 and 300" },
+            { "label": "Answer", "marks": 1, "descriptor": "1411" }
+          ]
+        },
+        {
+          "id": "iemh1-08-sa3",
+          "kind": "sa",
+          "outcome": "M9-08-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A sequence is given by the recursive rule u1 = 1 and un = 2u(n−1) + 3 for n ≥ 2. Write the first five terms, and state whether 61 is a term of this sequence.",
+          "answer": "u1 = 1. u2 = 2 × 1 + 3 = 5. u3 = 2 × 5 + 3 = 13. u4 = 2 × 13 + 3 = 29. u5 = 2 × 29 + 3 = 61. So the first five terms are 1, 5, 13, 29, 61, and 61 is a term of the sequence — it is the fifth term.",
+          "valuePoints": [
+            "Uses the rule repeatedly, starting from u1 = 1",
+            "First five terms are 1, 5, 13, 29, 61",
+            "61 is the fifth term"
+          ],
+          "rubric": [
+            { "label": "Use of the rule", "marks": 1, "descriptor": "Substitutes n = 2, 3, 4, 5 correctly" },
+            { "label": "The five terms", "marks": 1, "descriptor": "1, 5, 13, 29, 61" },
+            { "label": "Is 61 a term", "marks": 1, "descriptor": "Yes, the fifth term" }
+          ]
+        },
+        {
+          "id": "iemh1-08-la1",
+          "kind": "la",
+          "outcome": "M9-08-3",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "An arithmetic progression has 50 terms. Its 3rd term is 12 and its 50th term is 106. (i) Write two equations in the first term a and the common difference d. (ii) Find a and d. (iii) Find the 29th term of the progression.",
+          "answer": "(i) Using tn = a + (n − 1)d: the 3rd term gives a + 2d = 12 and the 50th term gives a + 49d = 106. (ii) Subtracting the first equation from the second: 47d = 94, so d = 2. Then a + 4 = 12, so a = 8. (iii) t29 = a + 28d = 8 + 28 × 2 = 8 + 56 = 64. (Check: t3 = 8 + 4 = 12 and t50 = 8 + 98 = 106.)",
+          "valuePoints": [
+            "a + 2d = 12 from the 3rd term",
+            "a + 49d = 106 from the 50th term",
+            "Subtracting gives 47d = 94, so d = 2",
+            "a = 8",
+            "t29 = 8 + 28 × 2 = 64"
+          ],
+          "rubric": [
+            { "label": "First equation", "marks": 1, "descriptor": "a + 2d = 12" },
+            { "label": "Second equation", "marks": 1, "descriptor": "a + 49d = 106" },
+            { "label": "Common difference", "marks": 1, "descriptor": "d = 2" },
+            { "label": "First term", "marks": 1, "descriptor": "a = 8" },
+            { "label": "29th term", "marks": 1, "descriptor": "64" }
+          ]
+        },
+        {
+          "id": "iemh1-08-la2",
+          "kind": "la",
+          "outcome": "M9-08-5",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "(i) Find the sum of the first 25 natural numbers. (ii) A child arranges marbles in rows, 1 marble in the first row, 2 in the second, 3 in the third and so on up to the 25th row. How many marbles are used in all? (iii) Find the smallest value of n for which the sum of the first n natural numbers is greater than 1000.",
+          "answer": "(i) S25 = 25 × 26 ÷ 2 = 650 ÷ 2 = 325. (ii) The numbers of marbles in the rows are 1, 2, 3, …, 25, so the total is exactly S25 = 325 marbles. (iii) We need n(n + 1)/2 > 1000, that is n(n + 1) > 2000. For n = 44, 44 × 45 = 1980, which is not greater than 2000, and S44 = 990. For n = 45, 45 × 46 = 2070 > 2000, and S45 = 1035 > 1000. So the smallest such value is n = 45.",
+          "valuePoints": [
+            "S25 = 25 × 26 ÷ 2 = 325",
+            "The marbles form the same sum, so 325 marbles are used",
+            "Condition n(n + 1) > 2000",
+            "n = 44 gives S44 = 990, which is not enough",
+            "n = 45 gives S45 = 1035 > 1000, so the smallest n is 45"
+          ],
+          "rubric": [
+            { "label": "Sum of first 25", "marks": 1, "descriptor": "325" },
+            { "label": "Marbles", "marks": 1, "descriptor": "325, with the reason that the rows form 1 + 2 + … + 25" },
+            { "label": "Inequality", "marks": 1, "descriptor": "n(n + 1)/2 > 1000" },
+            { "label": "Testing n = 44", "marks": 1, "descriptor": "S44 = 990, not greater than 1000" },
+            { "label": "Answer", "marks": 1, "descriptor": "n = 45, with S45 = 1035" }
+          ]
+        },
+        {
+          "id": "iemh1-08-case1",
+          "kind": "case",
+          "outcome": "M9-08-2",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "fromBook": false,
+          "passage": "In a school laboratory in Kochi, Anjali is watching a culture of bacteria. She begins with 30 bacteria and finds that the number doubles every hour: 60 at the end of the first hour, 120 at the end of the second and 240 at the end of the third. In the courtyard outside, some workers are stacking bricks against a wall. The bottom row has 40 bricks, and every row above it has 3 bricks fewer than the row just below, so the rows hold 40, 37, 34, … bricks. Anjali notices that the two situations produce number patterns of two quite different kinds, and writes both of them down in her notebook.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The numbers of bacteria at the end of each successive hour form",
+              "marks": 1,
+              "options": [
+                { "text": "an arithmetic progression with common difference 30", "correct": false },
+                { "text": "a geometric progression with common ratio 2", "correct": true },
+                { "text": "a geometric progression with common ratio 30", "correct": false },
+                { "text": "neither an arithmetic nor a geometric progression", "correct": false }
+              ],
+              "answer": "(b) — each term is obtained by multiplying the one before it by the fixed number 2, so the common ratio is 2."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How many bacteria are present at the end of the 4th hour?",
+              "marks": 1,
+              "answer": "30 × 2⁴ = 30 × 16 = 480 bacteria."
+            },
+            {
+              "type": "sa",
+              "prompt": "For the stack of bricks: (i) write a rule for the number of bricks in the nth row, and (ii) find how many bricks are in the 12th row.",
+              "marks": 2,
+              "answer": "(i) The rows form an AP with a = 40 and d = −3, so tn = 40 + (n − 1)(−3) = 43 − 3n (1 mark). (ii) t12 = 43 − 36 = 7 bricks (1 mark)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1536 @@
+{
+  "book": "iest1",
+  "chapters": [
+    {
+      "number": 1,
+      "questions": [
+        {
+          "id": "iest1-01-ar1",
+          "kind": "ar",
+          "outcome": "SS9-01-1",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "Understanding a drought needs more than one discipline of Social Science.",
+          "reason": "A drought affects crops, farmers' incomes, government relief measures, migration to cities and traditional ways of coping with scarcity.",
+          "answer": "a",
+          "explanation": "Both statements are true, and R explains A: because a drought touches the environment, the economy, politics, society and culture at once, no single discipline can explain it fully."
+        },
+        {
+          "id": "iest1-01-ar2",
+          "kind": "ar",
+          "outcome": "SS9-01-3",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "The Arthashastra, attributed to Kautilya, examined administration, economic management, taxation and the duties of rulers towards their people.",
+          "reason": "The idea of vasudhaiva kutumbakam means that the world is one family.",
+          "answer": "b",
+          "explanation": "Both statements are true, but R does not explain A. The Arthashastra shows early systematic thinking about governance; vasudhaiva kutumbakam expresses the interconnectedness of human societies, a separate idea."
+        },
+        {
+          "id": "iest1-01-vsa1",
+          "kind": "vsa",
+          "outcome": "SS9-01-2",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Name two archaeological sources and two literary sources that historians use to study the past, as described in the chapter.",
+          "answer": "Archaeological sources: monuments and architectural structures, excavated sites, artefacts, or art such as sculptures and paintings (any two). Literary sources: travelogues, memoirs, correspondence, genealogical records, folklore and oral traditions, or revenue documents (any two).",
+          "valuePoints": [
+            "Two archaeological sources named, such as monuments, excavated sites, artefacts, sculptures or paintings",
+            "Two literary sources named, such as travelogues, memoirs, genealogical records, folklore or revenue documents"
+          ],
+          "rubric": [
+            { "label": "Archaeological sources", "marks": 1, "descriptor": "Any two correct archaeological sources; half a mark for one" },
+            { "label": "Literary sources", "marks": 1, "descriptor": "Any two correct literary sources; half a mark for one" }
+          ]
+        },
+        {
+          "id": "iest1-01-vsa2",
+          "kind": "vsa",
+          "outcome": "SS9-01-3",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "What are the Panchamahabhutas? Name the five elements they refer to.",
+          "answer": "The Panchamahabhutas, or five great elements, is an idea from Indian philosophical traditions that explains the world as composed of five fundamental elements. They are earth, water, fire, air and space. It represents an early attempt to understand nature as one interconnected system in which human life is embedded.",
+          "valuePoints": [
+            "The five great elements of Indian philosophical traditions; the world seen as an interconnected system",
+            "Earth, water, fire, air and space"
+          ],
+          "rubric": [
+            { "label": "Meaning", "marks": 1, "descriptor": "States that it is the idea of five great elements composing the natural world, seen as interconnected" },
+            { "label": "The five elements", "marks": 1, "descriptor": "All five named; half a mark for three or four" }
+          ]
+        },
+        {
+          "id": "iest1-01-vsa3",
+          "kind": "vsa",
+          "outcome": "SS9-01-2",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "What is a numismatic source? State two things historians can learn from such a source.",
+          "answer": "A numismatic source is a historical source made up of coins, currency or medals. From the metal content, inscriptions and symbols on coins, historians study the economy, chronology, rulers, trade, political boundaries and culture of a civilisation.",
+          "valuePoints": [
+            "A source consisting of coins, currency or medals",
+            "Any two of: economy, chronology, rulers, trade, political boundaries, culture"
+          ],
+          "rubric": [
+            { "label": "Definition", "marks": 1, "descriptor": "Coins, currency or medals named as the source" },
+            { "label": "What it tells us", "marks": 1, "descriptor": "Any two correct uses; half a mark for one" }
+          ]
+        },
+        {
+          "id": "iest1-01-sa1",
+          "kind": "sa",
+          "outcome": "SS9-01-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A drought has struck a district. Explain, with reference to any three disciplines of Social Science, how each would help in understanding the situation.",
+          "answer": "Geography would study the environment: the rainfall, the soil and how the land and water of the district have been affected. Economics would study how the failure of crops has reduced farmers' incomes and how resources are produced and distributed in a year of scarcity. Political Science would study the government's relief measures, how those decisions were taken and how power and responsibility are exercised. History would show how such scarcities were faced in the past and what traditional ways of coping the community has. Together these perspectives give a connected understanding that no one discipline gives alone.",
+          "valuePoints": [
+            "Geography: environment, rainfall, land and the relationship between people and their surroundings",
+            "Economics: loss of income, production and distribution of scarce resources",
+            "Political Science: government relief measures and how decisions are made",
+            "History or culture: earlier experiences and traditional ways of coping"
+          ],
+          "rubric": [
+            { "label": "First discipline", "marks": 1, "descriptor": "Names a discipline and links it correctly to one aspect of the drought" },
+            { "label": "Second discipline", "marks": 1, "descriptor": "Names a second discipline and links it correctly" },
+            { "label": "Third discipline", "marks": 1, "descriptor": "Names a third discipline and links it correctly" }
+          ]
+        },
+        {
+          "id": "iest1-01-sa2",
+          "kind": "sa",
+          "outcome": "SS9-01-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Describe three kinds of sources used to write history, giving one example of each from the chapter.",
+          "answer": "Literary sources are written texts, such as the Samaveda manuscript in the National Museum or the palm-leaf manuscript of the Tirukkural. Archaeological sources are material remains such as monuments, excavated sites and artefacts; the terracotta figurine from the Sindhu-Sarasvati civilisation is an example. Epigraphic sources are texts, decrees or records inscribed on durable materials such as stone or metal, for example the Brahmi inscription on a pillar of the Gupta period. Numismatic sources are coins and currency, such as the coin issued by King Samudragupta in the fourth century CE.",
+          "valuePoints": [
+            "Literary source with an example",
+            "Archaeological source with an example",
+            "Epigraphic or numismatic source with an example"
+          ],
+          "rubric": [
+            { "label": "First kind of source", "marks": 1, "descriptor": "Kind named and described, with a correct example from the chapter" },
+            { "label": "Second kind of source", "marks": 1, "descriptor": "Kind named and described, with a correct example" },
+            { "label": "Third kind of source", "marks": 1, "descriptor": "Kind named and described, with a correct example" }
+          ]
+        },
+        {
+          "id": "iest1-01-sa3",
+          "kind": "sa",
+          "outcome": "SS9-01-3",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "Explain how early reflections on governance in India linked political authority with ethics and public welfare.",
+          "answer": "In India the study of politics was not treated as a separate discipline; it was closely linked to dharma, or moral duty, artha, or economic well-being, and rajadharma, the duties of the ruler. Early texts such as the Vedas, Upanishads and Puranas discuss justice, authority, social order and the responsibilities of kings and citizens, and works such as the Mahabharata and the Shukraniti address governance, law and ethical leadership. The Arthashastra, composed about 2,300 years ago, sets out how a state should be governed, how taxes should be collected, how the army should function and how rulers should ensure the welfare of the people. Power was therefore viewed as a responsibility rather than merely a privilege.",
+          "valuePoints": [
+            "Politics linked to dharma, artha and rajadharma rather than treated separately",
+            "Early texts discuss justice, authority and the responsibilities of rulers and citizens",
+            "The Arthashastra details administration, taxation, the army and the welfare of the people",
+            "Power seen as a responsibility, not only a privilege"
+          ],
+          "rubric": [
+            { "label": "Ethical framework", "marks": 1, "descriptor": "Links politics to dharma, artha and rajadharma" },
+            { "label": "Textual evidence", "marks": 1, "descriptor": "Names relevant texts such as the Vedas, the Mahabharata or the Arthashastra with what they discuss" },
+            { "label": "Welfare and responsibility", "marks": 1, "descriptor": "States that rulers were expected to ensure public welfare and that power was a responsibility" }
+          ]
+        },
+        {
+          "id": "iest1-01-la1",
+          "kind": "la",
+          "outcome": "SS9-01-1",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "Name the four core disciplines that Social Science draws from in Grades 9 and 10, describe what each one studies, and explain why human society cannot be understood through any one of them alone.",
+          "answer": "The four core disciplines are Geography, History, Political Science and Economics. Geography studies the Earth, its environments and the relationships between people and their surroundings, asking where things are located, why they are found there and how places affect one another. History examines the human past and helps us understand how societies change over time, drawing on literary and archaeological sources. Political Science analyses systems of governance, power, and the rights and responsibilities of citizens, including constitutions, governments and institutions of the state. Economics explores how societies produce, distribute and utilise resources to meet their needs, and studies decision-making by consumers, producers and governments. No single field can fully explain human society because society is complex and its parts are connected: a drought, for example, affects crops, incomes, government relief, migration and traditional ways of coping at the same time. Each discipline asks different questions, and only together do they give a comprehensive and connected understanding.",
+          "valuePoints": [
+            "Geography: the Earth, environments and people-environment relationships",
+            "History: the human past and change over time",
+            "Political Science: governance, power, rights and responsibilities",
+            "Economics: production, distribution and use of resources",
+            "Society is complex; a single example such as a drought shows why several perspectives are needed"
+          ],
+          "rubric": [
+            { "label": "Geography", "marks": 1, "descriptor": "Named and correctly described" },
+            { "label": "History", "marks": 1, "descriptor": "Named and correctly described" },
+            { "label": "Political Science", "marks": 1, "descriptor": "Named and correctly described" },
+            { "label": "Economics", "marks": 1, "descriptor": "Named and correctly described" },
+            { "label": "Why one discipline is not enough", "marks": 1, "descriptor": "Explains interconnectedness, ideally with an example such as a drought" }
+          ]
+        },
+        {
+          "id": "iest1-01-la2",
+          "kind": "la",
+          "outcome": "SS9-01-2",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "Describe the range of sources that history writing draws on, and explain why modern historiography also uses scientific methods.",
+          "answer": "History writing draws on a wide range of sources. Literary and textual traditions include travelogues, memoirs, correspondence, genealogical records, folklore and oral traditions, and revenue documents. Material remains, known as archaeological sources, include monuments, architectural structures, excavated sites, artefacts, objects and art such as sculptures and paintings. Epigraphic sources are texts, decrees or records inscribed on durable materials such as stone or metal plates, and they give direct evidence about past events, rulers, administration and society. Numismatic sources are coins, currency and medals, whose metal content, inscriptions and symbols tell us about the economy, chronology, rulers, trade, political boundaries and culture. In India the itihasa-purana tradition preserved cultural memory through stories, giving cultural meaning to events and people. Modern historiography relies increasingly on empirical evidence, that is, information collected by actual observation or experimentation, and therefore uses tools such as human genetics, carbon-14 dating, archaeology and laboratory testing to establish timelines and to check what the sources say.",
+          "valuePoints": [
+            "Literary and textual sources named",
+            "Archaeological sources named and defined as material remains",
+            "Epigraphic sources: inscriptions on durable materials, direct evidence of rulers and administration",
+            "Numismatic sources: coins and what they reveal",
+            "Modern historiography uses empirical evidence and scientific tools such as genetics, carbon-14 dating and laboratory testing"
+          ],
+          "rubric": [
+            { "label": "Literary sources", "marks": 1, "descriptor": "Two or more literary sources named" },
+            { "label": "Archaeological sources", "marks": 1, "descriptor": "Defined with examples" },
+            { "label": "Epigraphic sources", "marks": 1, "descriptor": "Defined with what they tell us" },
+            { "label": "Numismatic sources", "marks": 1, "descriptor": "Defined with what they tell us" },
+            { "label": "Scientific methods", "marks": 1, "descriptor": "Names empirical evidence and at least one scientific tool with its purpose" }
+          ]
+        },
+        {
+          "id": "iest1-01-case1",
+          "kind": "case",
+          "outcome": "SS9-01-1",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "passage": "Meera wakes up in a house built with materials brought from several different places. The food on her plate has been harvested, processed, transported, bought and sold through the efforts of many people. She travels to school on a road planned and maintained by public authorities, studies in a school shaped by educational policies and programmes, and switches on a light whose electricity was generated at a distant power station and delivered through a vast network. This year a drought has struck her district. Crops have failed, her uncle's income from farming has fallen sharply, the government has announced relief measures, and two families from her lane have moved to the city looking for work. Older people in the village talk about how such years of scarcity were faced long ago.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Which statement best explains why the drought in Meera's district needs more than one discipline of Social Science?",
+              "marks": 1,
+              "options": [
+                { "text": "Because droughts happen only in some parts of the country.", "correct": false },
+                { "text": "Because it affects the environment, incomes, government relief and migration at the same time.", "correct": true },
+                { "text": "Because Social Science is a group of subjects taught in school.", "correct": false },
+                { "text": "Because rainfall can only be measured by scientists.", "correct": false }
+              ],
+              "answer": "(b) - a drought touches crops and the environment, farmers' incomes, the government's relief measures and the movement of people all at once, so several perspectives are needed."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which discipline of Social Science would study the government's relief measures and how those decisions were taken?",
+              "marks": 1,
+              "answer": "Political Science, which studies governance, how power is distributed, how decisions are made and how policies are implemented."
+            },
+            {
+              "type": "sa",
+              "prompt": "Using two examples from the passage, explain how Meera's ordinary day depends on systems of governance, economic production and the natural environment.",
+              "marks": 2,
+              "answer": "The road she travels on is planned and maintained by public authorities, and her school is shaped by educational policies and programmes, both of which are systems of governance. (1 mark) The food on her plate reaches her only after being harvested, processed, transported, bought and sold by many people, and her electricity is generated far away and delivered through a network, which shows economic production and cooperation resting on the natural environment. (1 mark)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "questions": [
+        {
+          "id": "iest1-02-ar1",
+          "kind": "ar",
+          "outcome": "SS9-02-1",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "The Himalaya are fold mountains.",
+          "reason": "Fold mountains are formed at a convergent boundary when two continental plates collide.",
+          "answer": "a",
+          "explanation": "Both are true and R explains A: the chapter states that when continental plates collide they form fold mountains, such as the Himalaya."
+        },
+        {
+          "id": "iest1-02-ar2",
+          "kind": "ar",
+          "outcome": "SS9-02-3",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "Weathering involves carrying the broken material from one place to another.",
+          "reason": "Erosion wears away soil and rock and moves it by natural agents such as water, wind, ice or waves.",
+          "answer": "d",
+          "explanation": "A is false: weathering breaks rocks down but does not involve movement of the broken material. R is true, and it is precisely erosion, not weathering, that moves the material."
+        },
+        {
+          "id": "iest1-02-vsa1",
+          "kind": "vsa",
+          "outcome": "SS9-02-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Name the three main types of plate boundary and state briefly what happens at each.",
+          "answer": "At a convergent boundary two plates move towards each other, forming fold mountains when continental plates collide, or volcanic activity and earthquakes when an oceanic plate sinks beneath a continental plate. At a divergent boundary plates move away from each other, magma rises and new crust forms, creating features such as mid-ocean ridges. At a transform boundary plates slide past each other without creating or destroying crust, mainly causing earthquakes.",
+          "valuePoints": [
+            "Convergent: plates move towards each other; fold mountains, or volcanoes and earthquakes",
+            "Divergent: plates move apart; magma rises, new crust and mid-ocean ridges",
+            "Transform: plates slide past each other; earthquakes"
+          ],
+          "rubric": [
+            { "label": "Names the three boundaries", "marks": 1, "descriptor": "Convergent, divergent and transform all named" },
+            { "label": "What happens at each", "marks": 1, "descriptor": "Correct process given for all three; half a mark for two" }
+          ]
+        },
+        {
+          "id": "iest1-02-vsa2",
+          "kind": "vsa",
+          "outcome": "SS9-02-2",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "What is the Ring of Fire, and why do earthquakes and volcanoes occur there so frequently?",
+          "answer": "The Ring of Fire is the area around the Pacific Ocean where most of the world's earthquakes and volcanoes occur. They occur there because it lies along plate boundaries, and most earthquakes and volcanoes take place where tectonic plates meet and move against one another.",
+          "valuePoints": [
+            "The area around the Pacific Ocean where most earthquakes and volcanoes occur",
+            "It lies along plate boundaries, where plates meet and move"
+          ],
+          "rubric": [
+            { "label": "Identification", "marks": 1, "descriptor": "Correctly locates it around the Pacific Ocean as a belt of earthquakes and volcanoes" },
+            { "label": "Reason", "marks": 1, "descriptor": "Links the concentration to plate boundaries" }
+          ]
+        },
+        {
+          "id": "iest1-02-vsa3",
+          "kind": "vsa",
+          "outcome": "SS9-02-4",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "What is a delta, and how is it formed?",
+          "answer": "A delta is a landform at the mouth of a river, where the river flows into a sea, ocean or lake and deposits the sediments it has carried from upstream. Over time these deposits build up into a fan-shaped or triangular area of land. Deltas are highly fertile because of their rich alluvial soil.",
+          "valuePoints": [
+            "A landform at the mouth of a river where it meets a sea, ocean or lake",
+            "Formed by the deposition of sediment carried from upstream, building a fan-shaped or triangular area"
+          ],
+          "rubric": [
+            { "label": "Definition", "marks": 1, "descriptor": "Correctly places the delta at the river mouth" },
+            { "label": "Formation", "marks": 1, "descriptor": "Explains deposition of sediment over time" }
+          ]
+        },
+        {
+          "id": "iest1-02-sa1",
+          "kind": "sa",
+          "outcome": "SS9-02-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Distinguish physical, chemical and biological weathering, giving one example of each.",
+          "answer": "In physical weathering, rocks break into smaller pieces because of temperature changes, frost or wind, for example rocks splitting through repeated heating and cooling. In chemical weathering, minerals in rocks change because of reactions with water, air or acids, leading to new substances; substances in the air and in rain cause this. In biological weathering, plants, animals or micro-organisms break rocks down, for example when plant roots grow into cracks in rocks and split them apart. In all three, the rock is only broken down and not carried away.",
+          "valuePoints": [
+            "Physical: breaking by heating and cooling, frost or wind",
+            "Chemical: minerals change by reaction with water, air or acids, forming new substances",
+            "Biological: plants, animals or micro-organisms, for example roots splitting rock"
+          ],
+          "rubric": [
+            { "label": "Physical weathering", "marks": 1, "descriptor": "Correct process with an example" },
+            { "label": "Chemical weathering", "marks": 1, "descriptor": "Correct process with an example" },
+            { "label": "Biological weathering", "marks": 1, "descriptor": "Correct process with an example" }
+          ]
+        },
+        {
+          "id": "iest1-02-sa2",
+          "kind": "sa",
+          "outcome": "SS9-02-4",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Describe three landforms made by a river along its course and state where along the course each is found.",
+          "answer": "A waterfall is formed in the upper course, where the river flows over a steep cliff or vertical drop; hard rocks resist erosion while softer rocks below are worn away, creating a sudden drop. A meander is a winding curve or bend in the middle or lower course, formed as the river erodes the outer banks of bends and deposits sediment on the inner banks, gradually creating large loops. A delta is formed in the lower course at the mouth of the river, where it deposits the sediment it has carried and builds a fan-shaped or triangular area of fertile land.",
+          "valuePoints": [
+            "Waterfall in the upper course, hard rock over soft rock",
+            "Meander in the middle or lower course, erosion on the outer bank and deposition on the inner bank",
+            "Delta in the lower course at the river mouth, built by deposited sediment"
+          ],
+          "rubric": [
+            { "label": "First landform", "marks": 1, "descriptor": "Named, located along the course, and its formation explained" },
+            { "label": "Second landform", "marks": 1, "descriptor": "Named, located, and formation explained" },
+            { "label": "Third landform", "marks": 1, "descriptor": "Named, located, and formation explained" }
+          ]
+        },
+        {
+          "id": "iest1-02-sa3",
+          "kind": "sa",
+          "outcome": "SS9-02-2",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "Explain what causes tectonic plates to move, and why most earthquakes and volcanoes occur along plate boundaries.",
+          "answer": "The movement of tectonic plates is caused by convection currents in the mantle. Heat from the Earth's core makes molten material in the mantle rise, while cooler material sinks, and this continuous movement creates currents that push and pull the plates, making them move in different directions. Plates move slowly, usually a few centimetres a year, over the semi-molten asthenosphere. Most earthquakes and volcanoes occur along plate boundaries because it is there that plates collide, move apart or slide past each other, releasing energy and allowing magma to reach the surface. This is why they are concentrated around the Pacific Ocean, in the belt called the Ring of Fire.",
+          "valuePoints": [
+            "Convection currents in the mantle, driven by heat from the core",
+            "Rising molten material and sinking cooler material push and pull the plates",
+            "Plates move over the semi-molten asthenosphere, a few centimetres a year",
+            "Boundaries are where plates collide, separate or slide past, so earthquakes and volcanoes concentrate there"
+          ],
+          "rubric": [
+            { "label": "Cause of movement", "marks": 1, "descriptor": "Convection currents in the mantle named as the cause" },
+            { "label": "How the currents work", "marks": 1, "descriptor": "Rising hot and sinking cool material pushing and pulling the plates" },
+            { "label": "Why boundaries", "marks": 1, "descriptor": "Links earthquakes and volcanoes to plate interaction at boundaries" }
+          ]
+        },
+        {
+          "id": "iest1-02-la1",
+          "kind": "la",
+          "outcome": "SS9-02-4",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "Describe the landforms created by glaciers, both by erosion and by deposition, and explain how they are useful to human beings.",
+          "answer": "Glacial erosion occurs when glaciers move slowly over the land, carving and shaping it. U-shaped valleys are formed as glaciers widen and deepen river valleys. Cirques are bowl-shaped depressions at the head of a glacier, and aretes are sharp ridges between valleys. Hanging valleys occur where smaller glaciers meet larger ones, and fjords are deep, narrow inlets created when the sea floods glacial valleys. Moraines are depositional landforms made of rocks, soil and debris, called till, carried along and left behind when a glacier melts. Lateral moraines form along the sides of glaciers, terminal moraines at the end of a glacier marking its furthest advance, and medial moraines where two glaciers meet and their lateral moraines join in the middle. These landforms are useful in several ways. U-shaped valleys and cirques attract tourists for trekking, skiing and mountaineering; fjords are used as harbours and for fishing; fertile glacial soil in some valleys supports agriculture; moraines often create fertile soil and can form natural dams and lakes used for water supply, irrigation and sometimes hydroelectric power. Glaciers are also crucial sources of fresh water, feeding rivers that sustain people downstream.",
+          "valuePoints": [
+            "Erosional landforms: U-shaped valleys, cirques, aretes, hanging valleys, fjords",
+            "Moraines defined as deposits of till left by a melting glacier",
+            "Types of moraine: lateral, terminal and medial",
+            "Uses: tourism, harbours and fishing, fertile soil for agriculture",
+            "Moraines form natural dams and lakes; glaciers are sources of fresh water"
+          ],
+          "rubric": [
+            { "label": "Erosional landforms", "marks": 1.5, "descriptor": "At least three named and described" },
+            { "label": "Moraines", "marks": 1, "descriptor": "Defined as deposits of till left by a glacier" },
+            { "label": "Types of moraine", "marks": 0.5, "descriptor": "Lateral, terminal and medial distinguished" },
+            { "label": "Uses to human beings", "marks": 1.5, "descriptor": "At least three uses given" },
+            { "label": "Fresh water", "marks": 0.5, "descriptor": "Glaciers named as sources of fresh water feeding rivers" }
+          ]
+        },
+        {
+          "id": "iest1-02-la2",
+          "kind": "la",
+          "outcome": "SS9-02-1",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "Explain the theory of plate tectonics. In your answer describe the layers of the Earth, name the layer on which the plates move, and state what the theory helps us to understand.",
+          "answer": "Plate tectonics is a theory in earth science, given by W.J. Morgan, that explains the movement of the Earth's crust. According to this theory the outermost layer of the Earth is not one single piece but is broken into several large and small pieces called tectonic plates. The Earth is made up of three main layers: the crust, which is the outermost layer on which we live; the mantle below it, which is very thick and hot; and the core, the innermost layer, which is extremely hot and heavy. The crust together with the upper part of the mantle forms the lithosphere, and it is the lithosphere that is broken into tectonic plates. Beneath it lies the asthenosphere, which is semi-molten and allows the plates to move. Plates are massive slabs of solid rock that move very slowly, usually a few centimetres a year, driven by convection currents in the mantle. There are continental plates, oceanic plates and mixed plates, and major plates include the Pacific, Eurasian, African, North American, South American, Indo-Australian and Antarctic plates. The theory explains the formation of mountains, valleys, ocean basins, volcanoes and earthquakes, and the distribution of continents and oceans. It is also important for identifying earthquake-prone and volcano-prone regions and for managing the disasters that arise from them.",
+          "valuePoints": [
+            "Theory given by W.J. Morgan; the outer layer is broken into tectonic plates",
+            "Three main layers: crust, mantle and core",
+            "Lithosphere is the crust plus the upper mantle; the asthenosphere below is semi-molten and allows movement",
+            "Plates move a few centimetres a year, driven by convection currents; types and major plates",
+            "The theory explains landforms, earthquakes and volcanoes, and helps identify risk regions"
+          ],
+          "rubric": [
+            { "label": "Statement of the theory", "marks": 1, "descriptor": "Outer layer broken into tectonic plates that move" },
+            { "label": "Layers of the Earth", "marks": 1, "descriptor": "Crust, mantle and core correctly described" },
+            { "label": "Lithosphere and asthenosphere", "marks": 1, "descriptor": "Lithosphere defined and the asthenosphere identified as the layer allowing movement" },
+            { "label": "Nature and cause of movement", "marks": 1, "descriptor": "Slow movement of a few centimetres a year, caused by convection currents" },
+            { "label": "Importance of the theory", "marks": 1, "descriptor": "Explains landforms and natural disasters and helps identify prone regions" }
+          ]
+        },
+        {
+          "id": "iest1-02-case1",
+          "kind": "case",
+          "outcome": "SS9-02-3",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "passage": "In a village beside a river, farmers complain that every monsoon the water carries away the top layer of their fields, and that yields have fallen year after year. Close to the bank, two houses and a stretch of road have already been lost to the river. Further inland, strong dry winds lift loose soil from bare fields and pile it against the boundary walls. On the wall of the old temple, the roots of a peepal tree have grown into the cracks and pushed the stones apart, and elsewhere rainwater has slowly changed the surface of the stone itself. The village council has heard of trenches dug along the contour lines of a slope, of earthen bunds built along contours to slow surface run-off, and of terracing that creates level steps on a hillside. It now wants to decide which of these measures would help.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The peepal roots growing into the cracks of the temple wall and pushing the stones apart is an example of",
+              "marks": 1,
+              "options": [
+                { "text": "biological weathering", "correct": true },
+                { "text": "glacial erosion", "correct": false },
+                { "text": "coastal erosion", "correct": false },
+                { "text": "deposition", "correct": false }
+              ],
+              "answer": "(a) - biological weathering is caused by plants, animals or micro-organisms, for example when plant roots grow into cracks in rocks and split them apart."
+            },
+            {
+              "type": "vsa",
+              "prompt": "State one clear difference between weathering and erosion, using an example from the passage for each.",
+              "marks": 1,
+              "answer": "Weathering only breaks material down without moving it, as when rainwater changes the surface of the temple stone; erosion also carries the broken material away, as when the monsoon river removes the topsoil from the fields."
+            },
+            {
+              "type": "sa",
+              "prompt": "Explain how erosion is affecting the occupations and property of the people of this village.",
+              "marks": 2,
+              "answer": "For the farmers, erosion removes the fertile topsoil needed for crop growth, which is why their yields have fallen year after year. (1 mark) For those living near the river, erosion washes away land, houses and roads, causing damage and loss of property, and wind erosion from bare fields further damages the land they depend on. (1 mark)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "questions": [
+        {
+          "id": "iest1-03-ar1",
+          "kind": "ar",
+          "outcome": "SS9-03-1",
+          "difficulty": "EASY",
+          "marks": 1,
+          "assertion": "The stratosphere is the layer of the atmosphere that is ideal for flying aeroplanes.",
+          "reason": "The stratosphere is free of clouds and other weather disturbances.",
+          "answer": "a",
+          "explanation": "Both are true and R explains A: almost all weather phenomena occur in the troposphere, so the cloud-free stratosphere above it is suitable for flight."
+        },
+        {
+          "id": "iest1-03-ar2",
+          "kind": "ar",
+          "outcome": "SS9-03-4",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "The south-west monsoon accounts for most of the rainfall received in India during the year.",
+          "reason": "The south-west monsoon consists of winds that blow from the land towards the sea between June and September.",
+          "answer": "c",
+          "explanation": "A is true, but R is false: the south-west monsoon blows from the sea to the land, across the Indian Ocean, the Arabian Sea and the Bay of Bengal, which is why it carries moisture and brings rain."
+        },
+        {
+          "id": "iest1-03-vsa1",
+          "kind": "vsa",
+          "outcome": "SS9-03-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Give the proportions of nitrogen, oxygen, argon and carbon dioxide in the atmosphere, and state the range within which the amount of water vapour varies.",
+          "answer": "Nitrogen makes up 78 per cent of the atmosphere, oxygen 21 per cent, argon 0.93 per cent and carbon dioxide 0.04 per cent. The amount of water vapour varies, generally ranging from 0.1 per cent to 0.4 per cent.",
+          "valuePoints": [
+            "Nitrogen 78 per cent and oxygen 21 per cent",
+            "Argon 0.93 per cent and carbon dioxide 0.04 per cent",
+            "Water vapour varies from about 0.1 to 0.4 per cent"
+          ],
+          "rubric": [
+            { "label": "Main gases", "marks": 1, "descriptor": "Nitrogen 78 per cent and oxygen 21 per cent given correctly" },
+            { "label": "Other gases and water vapour", "marks": 1, "descriptor": "Argon and carbon dioxide figures and the water vapour range; half a mark for either" }
+          ]
+        },
+        {
+          "id": "iest1-03-vsa2",
+          "kind": "vsa",
+          "outcome": "SS9-03-3",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Distinguish between a sea breeze and a land breeze.",
+          "answer": "A sea breeze is a local wind that blows from the sea to the land during the day, especially in the afternoon, when the land becomes relatively warmer than the sea and a low-pressure region forms over the land. A land breeze blows from the land to the sea at night, because the land cools faster than the sea; since the difference in temperature and pressure is small, the wind speed is low.",
+          "valuePoints": [
+            "Sea breeze: sea to land, during the day, land warmer than sea, low pressure over land",
+            "Land breeze: land to sea, at night, land cools faster than the sea, low wind speed"
+          ],
+          "rubric": [
+            { "label": "Sea breeze", "marks": 1, "descriptor": "Direction, time of day and reason correct" },
+            { "label": "Land breeze", "marks": 1, "descriptor": "Direction, time of day and reason correct" }
+          ]
+        },
+        {
+          "id": "iest1-03-vsa3",
+          "kind": "vsa",
+          "outcome": "SS9-03-4",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "Name the four seasons recognised by the India Meteorological Department and state the months of each.",
+          "answer": "Winter, generally from December to early April; summer or pre-monsoon, from April to June, or up to July in north-western India; monsoon or rainy, the advancing monsoon, generally from June to September; and post-monsoon, the retreating monsoon, from October to December.",
+          "valuePoints": [
+            "Winter (December to early April) and summer or pre-monsoon (April to June)",
+            "Monsoon or advancing monsoon (June to September) and post-monsoon or retreating monsoon (October to December)"
+          ],
+          "rubric": [
+            { "label": "The four seasons named", "marks": 1, "descriptor": "All four named correctly" },
+            { "label": "Months", "marks": 1, "descriptor": "Correct months given for the seasons; half a mark for two correct" }
+          ]
+        },
+        {
+          "id": "iest1-03-sa1",
+          "kind": "sa",
+          "outcome": "SS9-03-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Describe the troposphere and the stratosphere, and give two differences between them.",
+          "answer": "The troposphere is the lowest and most important layer of the atmosphere, with an average height of about 12 kilometres. Temperature decreases with increasing altitude in it, the air we breathe exists here along with most of the water vapour and clouds, and nearly all weather phenomena such as rainfall, fog and hail occur in it. The stratosphere lies above the troposphere and extends up to 50 kilometres. It is free of clouds and weather disturbances, which makes it ideal for flying aeroplanes, and it contains a layer of ozone gas that shields us by filtering the Sun's harmful radiation, including ultraviolet radiation. Two differences are that weather phenomena occur in the troposphere but not in the stratosphere, and that the ozone layer is found in the stratosphere and not in the troposphere. The troposphere is separated from the stratosphere by the tropopause.",
+          "valuePoints": [
+            "Troposphere: about 12 km average height, temperature falls with altitude, holds the air we breathe, water vapour and clouds, nearly all weather",
+            "Stratosphere: extends up to 50 km, cloud-free and free of weather disturbances, aeroplanes fly here",
+            "The ozone layer lies in the stratosphere and filters harmful ultraviolet radiation",
+            "The tropopause separates the two"
+          ],
+          "rubric": [
+            { "label": "Troposphere", "marks": 1, "descriptor": "Height and at least two features correct" },
+            { "label": "Stratosphere", "marks": 1, "descriptor": "Extent and at least two features correct" },
+            { "label": "Two differences", "marks": 1, "descriptor": "Two valid differences stated; half a mark for one" }
+          ]
+        },
+        {
+          "id": "iest1-03-sa2",
+          "kind": "sa",
+          "outcome": "SS9-03-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "What is atmospheric pressure? Explain how differences in temperature create areas of high and low pressure, and how wind results from them.",
+          "answer": "Atmospheric pressure, or air pressure, is the pressure exerted by the weight of air on the Earth's surface. It is highest at sea level and falls rapidly as we go higher in the atmosphere. Horizontally, its distribution depends on the temperature of the air at a place. Where temperatures are high, air heats up and rises, creating a low-pressure area, which is associated with cloudy skies and wet weather. Where temperatures are lower, the air is cold and therefore heavy, and it sinks, creating a high-pressure area, which is associated with clear and sunny skies. Because air always moves from a high-pressure area to a low-pressure area, this difference produces wind, whose direction is also influenced by the rotation of the Earth.",
+          "valuePoints": [
+            "Air pressure is the pressure exerted by the weight of air; highest at sea level and falls with altitude",
+            "Warm air rises, creating low pressure, with cloudy skies and wet weather",
+            "Cold, heavy air sinks, creating high pressure, with clear and sunny skies",
+            "Wind is air moving from high pressure to low pressure; its direction is influenced by the Earth's rotation"
+          ],
+          "rubric": [
+            { "label": "Definition of air pressure", "marks": 1, "descriptor": "Pressure of the weight of air; highest at sea level, falling with altitude" },
+            { "label": "High and low pressure areas", "marks": 1, "descriptor": "Links warm rising air to low pressure and cold sinking air to high pressure" },
+            { "label": "Wind", "marks": 1, "descriptor": "Wind defined as movement of air from high to low pressure" }
+          ]
+        },
+        {
+          "id": "iest1-03-sa3",
+          "kind": "sa",
+          "outcome": "SS9-03-4",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "Why does the south-west monsoon bring heavy rain to most of India while the north-east monsoon generally does not? Name the regions where the north-east monsoon is nevertheless important for rainfall.",
+          "answer": "The south-west monsoon, or summer monsoon, blows between June and September. During summer the landmass of India heats up faster than the surrounding oceans, creating a low-pressure area over the subcontinent while the relatively cooler Indian Ocean has high pressure. Since winds move from high to low pressure, moist winds blow from the ocean towards the land and bring rainfall. The north-east monsoon, or winter monsoon, occurs from October to February. Then the Indian landmass cools faster than the oceans, so high pressure forms over the land and low pressure over the seas, and cold, dry winds blow from land to sea, bringing no rain to most of India. However, where these winds pass over the Bay of Bengal they pick up moisture and cause rainfall on the eastern coast, especially in Tamil Nadu, Andhra Pradesh and parts of Karnataka.",
+          "valuePoints": [
+            "South-west monsoon June to September; land heats faster, low pressure over land, high pressure over the ocean",
+            "Moist winds blow from sea to land and bring rain",
+            "North-east monsoon October to February; land cools faster, so dry winds blow from land to sea",
+            "Those winds pick up moisture over the Bay of Bengal and bring rain to Tamil Nadu, Andhra Pradesh and parts of Karnataka"
+          ],
+          "rubric": [
+            { "label": "South-west monsoon", "marks": 1, "descriptor": "Unequal heating, pressure difference and sea-to-land direction explained" },
+            { "label": "North-east monsoon", "marks": 1, "descriptor": "Land cools faster, land-to-sea dry winds explained" },
+            { "label": "The exception", "marks": 1, "descriptor": "Moisture picked up over the Bay of Bengal; at least two of the regions named" }
+          ]
+        },
+        {
+          "id": "iest1-03-la1",
+          "kind": "la",
+          "outcome": "SS9-03-1",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "Describe the five layers of the atmosphere in order from the Earth's surface upwards, giving the main features of each.",
+          "answer": "The layers of the atmosphere are defined on the basis of changes in temperature and density with increasing altitude, and the density of air is highest near the Earth's surface. The troposphere is the lowest layer, with an average height of about 12 kilometres; temperature decreases with altitude, the air we breathe and most of the water vapour and clouds are found here, and nearly all weather phenomena such as rainfall, fog and hail occur in it. Above it lies the stratosphere, extending up to 50 kilometres; it is free of clouds and weather disturbances, which makes it ideal for flying aeroplanes, and it contains the ozone layer that filters the Sun's harmful ultraviolet radiation. The mesosphere extends up to 80 kilometres; temperature again decreases with altitude, and most meteorites entering from space burn up here. In the thermosphere, which extends from 80 to 700 kilometres, temperature rises very rapidly with altitude because gas molecules absorb X-rays and short-wave ultraviolet radiation from the Sun; it reflects radio waves back towards the Earth and helps radio transmission, the ionosphere is a part of it, and the auroras occur here. The exosphere is the uppermost layer, with very thin air, from which light gases such as helium and hydrogen float into space because gravity is weak.",
+          "valuePoints": [
+            "Layers defined by change in temperature and density with altitude",
+            "Troposphere: about 12 km, temperature falls with altitude, weather occurs here",
+            "Stratosphere: up to 50 km, cloud-free, contains the ozone layer, aeroplanes fly here",
+            "Mesosphere: up to 80 km, temperature falls with altitude, meteorites burn up here",
+            "Thermosphere: 80 to 700 km, temperature rises rapidly, reflects radio waves, auroras; exosphere is uppermost with very thin air"
+          ],
+          "rubric": [
+            { "label": "Troposphere", "marks": 1, "descriptor": "Correctly placed and described" },
+            { "label": "Stratosphere", "marks": 1, "descriptor": "Correctly placed and described, ozone mentioned" },
+            { "label": "Mesosphere", "marks": 1, "descriptor": "Correctly placed and described" },
+            { "label": "Thermosphere", "marks": 1, "descriptor": "Correctly placed and described" },
+            { "label": "Exosphere", "marks": 1, "descriptor": "Correctly placed and described" }
+          ]
+        },
+        {
+          "id": "iest1-03-la2",
+          "kind": "la",
+          "outcome": "SS9-03-3",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "What is precipitation? Name its forms and the main factors that affect it, and explain how local winds such as the land breeze and the sea breeze influence the climate of coastal areas.",
+          "answer": "Precipitation occurs when a part of the atmosphere becomes saturated with water vapour, which condenses and falls to the Earth under gravity. Its forms include drizzle, rain, snow, sleet and hail. When precipitation falls in liquid form it is called rain, which is the commonest form and lowers the temperature of a place; most groundwater is collected from rainwater, and a long absence of rainfall results in a dry climate. The main factors that affect precipitation are the prevailing winds, mountains and the seasons. Humidity is closely related to it: when water evaporates from land and water bodies it becomes water vapour, and as air gets warmer its capacity to hold water vapour increases, so humidity rises. Local winds also matter. A sea breeze blows from the sea to the land during the day, when the land becomes warmer than the sea and a low-pressure area forms over the land; a land breeze blows from the land to the sea at night, because the land cools faster than the sea. Because these two winds alternate, they are essential in creating moderate climatic conditions in coastal regions. Winds in general are named after the direction from which they blow, so a wind blowing from the west is called a westerly.",
+          "valuePoints": [
+            "Precipitation defined as saturated water vapour condensing and falling under gravity",
+            "Forms: drizzle, rain, snow, sleet and hail; rain is the commonest and lowers temperature",
+            "Main factors: prevailing winds, mountains and seasons",
+            "Sea breeze by day and land breeze by night, with the reason for each",
+            "These local winds moderate the climate of coastal regions; winds are named after the direction they blow from"
+          ],
+          "rubric": [
+            { "label": "Definition", "marks": 1, "descriptor": "Saturation, condensation and falling under gravity" },
+            { "label": "Forms of precipitation", "marks": 1, "descriptor": "At least four forms named" },
+            { "label": "Factors affecting precipitation", "marks": 1, "descriptor": "Prevailing winds, mountains and seasons" },
+            { "label": "Land and sea breeze", "marks": 1, "descriptor": "Both described with the correct direction, time and reason" },
+            { "label": "Effect on coastal climate", "marks": 1, "descriptor": "States that these local winds create moderate conditions in coastal regions" }
+          ]
+        },
+        {
+          "id": "iest1-03-case1",
+          "kind": "case",
+          "outcome": "SS9-03-4",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "passage": "In 2025 Punjab experienced severe floods. The state faced very heavy monsoon rains, made heavier by western disturbances that brought still more moisture, and it rained not only in Punjab but also in Himachal Pradesh and Jammu and Kashmir. The Satluj, the Beas, the Ravi and the Ghaggar were already flowing high before the heavy rains began, and when the extra water came down from the hills the rivers overflowed. The damage was made worse by weak and old river embankments that could not hold the rising water, by houses and farms built too close to the rivers, which reduced the natural space where floodwater could spread safely, and by silt and mud collected in rivers and dams, which had reduced their capacity. In some areas flood warnings came late or were not clearly communicated. Thousands of people had to move to relief camps, paddy and other crops were damaged over large areas, poultry and dairy farms were destroyed, roads and bridges were damaged, and standing water spread waterborne disease.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Which of these is a human-made cause of the 2025 floods in Punjab?",
+              "marks": 1,
+              "options": [
+                { "text": "Very heavy monsoon rainfall over the state", "correct": false },
+                { "text": "Weak and old river embankments that could not hold the rising water", "correct": true },
+                { "text": "Western disturbances bringing extra moisture", "correct": false },
+                { "text": "Rain falling in Himachal Pradesh and Jammu and Kashmir", "correct": false }
+              ],
+              "answer": "(b) - embankments are built and maintained by people, so their weakness is a human-made cause; the other three are natural causes."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Name any two rivers of Punjab that were already flowing high before the heavy rains began.",
+              "marks": 1,
+              "answer": "Any two of the Satluj, the Beas, the Ravi and the Ghaggar."
+            },
+            {
+              "type": "sa",
+              "prompt": "Explain two ways in which human activity increased the damage caused by these floods, and suggest one measure that could reduce the damage in future.",
+              "marks": 2,
+              "answer": "Houses and farms had been built too close to the rivers, which reduced the natural space into which floodwater could spread safely, and silt and mud collected in the rivers and dams had reduced their capacity to hold and carry water; late or unclear flood warnings also left people unprepared. (1 mark for any two) A suitable measure would be strengthening and repairing embankments, removing silt from rivers and dams, keeping construction away from riverbanks, or issuing timely and clearly communicated warnings. (1 mark for any one sensible measure)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "questions": [
+        {
+          "id": "iest1-04-ar1",
+          "kind": "ar",
+          "outcome": "SS9-04-4",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "We do not know the names of the rulers of the Sindhu-Sarasvati civilisation from its own writing.",
+          "reason": "The Harappan script, found on seals and pottery, has not yet been deciphered.",
+          "answer": "a",
+          "explanation": "Both are true and R explains A: because the pictographic Harappan script cannot yet be read, the writing it left behind cannot tell us names or events, unlike the deciphered cuneiform of Mesopotamia."
+        },
+        {
+          "id": "iest1-04-ar2",
+          "kind": "ar",
+          "outcome": "SS9-04-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "Homo sapiens were the first hominins to move out of Africa.",
+          "reason": "Homo sapiens evolved in Africa about 300,000 years ago and are now spread all over the Earth.",
+          "answer": "d",
+          "explanation": "A is false: Homo erectus, the maker of handaxes and cleavers, was the first hominin to leave Africa, from about 2 million years ago. R is true: Homo sapiens evolved in Africa around 300,000 years ago and a major movement out of Africa took place around 125,000 years ago."
+        },
+        {
+          "id": "iest1-04-vsa1",
+          "kind": "vsa",
+          "outcome": "SS9-04-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Name two Palaeolithic sites in the Indian subcontinent mentioned in the chapter, with the dates given for each, and name two kinds of tool found at such sites.",
+          "answer": "Attirampakkam in Tamil Nadu is dated to about 1.5 to 1.7 million years ago, and Isampur in Karnataka to about 1.2 million years ago. Tools found at these sites include large cutting tools such as handaxes and cleavers, and also stone scrapers and choppers made of quartzite and limestone.",
+          "valuePoints": [
+            "Attirampakkam, about 1.5 to 1.7 million years ago; Isampur, about 1.2 million years ago",
+            "Handaxes, cleavers, scrapers or choppers"
+          ],
+          "rubric": [
+            { "label": "Sites and dates", "marks": 1, "descriptor": "Two sites named with approximately correct dates; half a mark for one" },
+            { "label": "Tools", "marks": 1, "descriptor": "Two kinds of tool named" }
+          ]
+        },
+        {
+          "id": "iest1-04-vsa2",
+          "kind": "vsa",
+          "outcome": "SS9-04-3",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Name the four earliest world civilisations and the river or rivers along which each of them emerged.",
+          "answer": "The Harappan or Sindhu-Sarasvati civilisation along the Sindhu and Sarasvati rivers; the Mesopotamian civilisation in the region around the Euphrates and Tigris rivers in West Asia; the Egyptian civilisation along the Nile; and the Chinese civilisation in the Huang He basin in northern China.",
+          "valuePoints": [
+            "Harappan or Sindhu-Sarasvati with the Sindhu and Sarasvati; Mesopotamian with the Euphrates and Tigris",
+            "Egyptian with the Nile; Chinese with the Huang He"
+          ],
+          "rubric": [
+            { "label": "First two civilisations", "marks": 1, "descriptor": "Named with the correct rivers" },
+            { "label": "Last two civilisations", "marks": 1, "descriptor": "Named with the correct rivers" }
+          ]
+        },
+        {
+          "id": "iest1-04-vsa3",
+          "kind": "vsa",
+          "outcome": "SS9-04-1",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "What was the Neolithic revolution? State two changes it brought about in the way people lived.",
+          "answer": "The Neolithic revolution was the gradual transition from a hunting and gathering way of life to a food-producing way of life. Its hallmark was the domestication of selected animals and plants and the development of new breeds through cultivation and husbandry. Among the changes it brought were that Neolithic farmers made tools for producing and processing food rather than only for procuring it, they developed earthenware pottery in a variety of shapes and sizes, and they established the first village settlements, which laid the foundations for the urban revolution.",
+          "valuePoints": [
+            "The shift from hunting and gathering to food production, with domestication of plants and animals",
+            "Any two changes: tools for food production and processing, pottery, permanent village settlements"
+          ],
+          "rubric": [
+            { "label": "Meaning", "marks": 1, "descriptor": "Transition to food production and domestication stated" },
+            { "label": "Two changes", "marks": 1, "descriptor": "Two correct changes; half a mark for one" }
+          ]
+        },
+        {
+          "id": "iest1-04-sa1",
+          "kind": "sa",
+          "outcome": "SS9-04-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Write a short note on the Mesopotamian civilisation, mentioning the meaning of its name, its rivers, and two of its achievements.",
+          "answer": "Mesopotamia, meaning 'the land in between', is the Greek name for the land drained by the Euphrates and Tigris rivers in West Asia, a region that today includes mainly Iraq and Kuwait with parts of Turkey and south-western Iran. The crescent-shaped foothills stretching from the Mediterranean to the Persian Gulf are called the fertile crescent because of their high agricultural potential. The earliest city-based civilisation emerged here. Among its achievements, the Sumerians were the first to build a system of dams and canals for irrigation and the first to use mud bricks and burnt bricks in construction; they began writing around 3200 BCE in the cuneiform script; and they invented the wheeled cart and the sailboat. Their number system was based on the number 60, which gave us the 60-minute hour, the 60-second minute and the 360-degree circle.",
+          "valuePoints": [
+            "Mesopotamia means 'the land in between'; a Greek name",
+            "Drained by the Euphrates and Tigris in West Asia; the fertile crescent",
+            "Achievements: dams and canals, mud and burnt bricks, cuneiform writing from about 3200 BCE",
+            "A number system based on 60, giving the 60-minute hour and the 360-degree circle; the wheeled cart and sailboat"
+          ],
+          "rubric": [
+            { "label": "Meaning and location", "marks": 1, "descriptor": "Meaning of the name and the two rivers given" },
+            { "label": "First achievement", "marks": 1, "descriptor": "One achievement correctly described" },
+            { "label": "Second achievement", "marks": 1, "descriptor": "A second achievement correctly described" }
+          ]
+        },
+        {
+          "id": "iest1-04-sa2",
+          "kind": "sa",
+          "outcome": "SS9-04-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Describe the life of the people of Mehrgarh and explain why the site is important in the history of the Indian subcontinent.",
+          "answer": "Mehrgarh, on the Bolan river in present-day Pakistan, is the oldest Neolithic site of the subcontinent and its earliest agricultural village, dating back to about 7000 BCE. Its people built handmade sun-dried brick houses and granaries, buried their dead in graves, and made a variety of ornaments from semi-precious stones such as lapis lazuli and carnelian, and from shells. They cultivated wheat and barley and raised sheep, goats and Indian cattle, particularly the zebu humped bull. They were also the first to make copper objects, entering the metal age and becoming known as Chalcolithic people by about 4000 BCE. Mehrgarh is important because the Neolithic way of life that began there spread into the middle and upper Indus valley and further east, and laid the basis for the Bronze Age Sindhu-Sarasvati civilisation around 3500 BCE.",
+          "valuePoints": [
+            "Oldest Neolithic site, on the Bolan river, dating to about 7000 BCE",
+            "Sun-dried brick houses and granaries, burials, ornaments of lapis lazuli, carnelian and shell",
+            "Cultivated wheat and barley; raised sheep, goats and zebu cattle",
+            "First copper objects by about 4000 BCE; laid the basis for the Sindhu-Sarasvati civilisation"
+          ],
+          "rubric": [
+            { "label": "Location and date", "marks": 1, "descriptor": "Bolan river and about 7000 BCE" },
+            { "label": "Way of life", "marks": 1, "descriptor": "Houses, crops and animals, or ornaments, correctly described" },
+            { "label": "Importance", "marks": 1, "descriptor": "Copper working and the link to the later Sindhu-Sarasvati civilisation" }
+          ]
+        },
+        {
+          "id": "iest1-04-sa3",
+          "kind": "sa",
+          "outcome": "SS9-04-2",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "Arrange Homo habilis, Homo erectus, Homo neanderthalensis and Homo sapiens in evolutionary order and state one distinguishing feature of each.",
+          "answer": "The order is Homo habilis, Homo erectus, Homo neanderthalensis and Homo sapiens. Homo habilis, the handy man, lived in Africa, especially in the Olduvai Gorge in Tanzania and Kenya, and made chopper stone tools. Homo erectus was an upright or bipedal ancestor who lived in the Eastern African Rift Valley about 2 million years ago, made handaxes and cleavers, and was the first hominin to move out of Africa. Homo neanderthalensis lived in Europe and south-west Asia until about 40,000 years ago and made Middle Palaeolithic flake tools. Homo sapiens, modern humans, evolved in Africa about 300,000 years ago, developed complex technologies such as the bow and arrow and microblade tools, produced cave paintings and beads, and are the only human species living today.",
+          "valuePoints": [
+            "Correct order: habilis, erectus, neanderthalensis, sapiens",
+            "Homo habilis: Olduvai Gorge, chopper tools",
+            "Homo erectus: upright, handaxes and cleavers, first to leave Africa",
+            "Homo neanderthalensis: Europe and south-west Asia, flake tools; Homo sapiens: complex technology, art, the only species living today"
+          ],
+          "rubric": [
+            { "label": "Order", "marks": 1, "descriptor": "All four placed in the correct sequence" },
+            { "label": "Features of the first two", "marks": 1, "descriptor": "One correct distinguishing feature each for habilis and erectus" },
+            { "label": "Features of the last two", "marks": 1, "descriptor": "One correct distinguishing feature each for neanderthalensis and sapiens" }
+          ]
+        },
+        {
+          "id": "iest1-04-la1",
+          "kind": "la",
+          "outcome": "SS9-04-4",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "'The four earliest world civilisations emerged in river plains.' Explain why river plains were suited to the growth of civilisations, with reference to the civilisations described in the chapter.",
+          "answer": "All four of the earliest world civilisations grew up in fertile river plains: the Harappan civilisation along the Sindhu and Sarasvati, the Mesopotamian in the plains of the Euphrates and Tigris, the Egyptian along the Nile and the Chinese in the Huang He basin. River plains offered fertile alluvial soil and water, which made a surplus of food possible, and the ability to produce surplus food and material goods laid the foundation for the emergence of civilisation. In Egypt the Nile flooded every summer and left rich black mud called kemet, excellent for growing crops, and about 5000 years ago farmers learned to dig ditches to divert water into their fields and store it in reservoirs. In Mesopotamia the Sumerians were the first to build dams and canals for irrigation, and the introduction of copper tools around 4500 BCE improved farming and helped spread it across the plains. In the Indus and Ghaggar-Sarasvati basins copper tools in the fertile alluvial plains raised productivity and prosperity, and the Harappans built gabarbands across small streams and, at Dholavira, an elaborate system of dams, canals and deep tanks. Such works required collective effort, which encouraged the growth of administration and local government, as in Egypt. Rivers also carried goods and people, so Mesopotamia and the Indus and Ghaggar-Sarasvati valleys, being geographically close, developed strong contacts and trade. Rivers, however, also brought challenges such as flooding, which is why water management mattered so much.",
+          "valuePoints": [
+            "The four civilisations named with their rivers",
+            "Fertile alluvial soil and water made surplus food possible, which is the foundation of civilisation",
+            "Examples of water management: Nile ditches and reservoirs, Sumerian dams and canals, gabarbands and Dholavira's tanks",
+            "Collective effort in irrigation encouraged administration and early local government",
+            "Rivers also aided trade and contact, for example between Mesopotamia and the Harappans"
+          ],
+          "rubric": [
+            { "label": "The four civilisations and their rivers", "marks": 1, "descriptor": "All four correctly matched" },
+            { "label": "Fertility and surplus", "marks": 1, "descriptor": "Links fertile plains to surplus food and the rise of civilisation" },
+            { "label": "Water management examples", "marks": 1, "descriptor": "At least two specific examples from the chapter" },
+            { "label": "Administration", "marks": 1, "descriptor": "Collective effort leading to organisation and government" },
+            { "label": "Trade and challenges", "marks": 1, "descriptor": "Rivers aiding contact and trade, or the challenge of floods" }
+          ]
+        },
+        {
+          "id": "iest1-04-la2",
+          "kind": "la",
+          "outcome": "SS9-04-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "Compare the Egyptian and the Chinese civilisations with reference to their rivers, the records from which we know about them, and two achievements of each.",
+          "answer": "The Egyptian civilisation grew along the Nile, whose annual summer flood left rich black mud called kemet on the land; Egyptians called their land Kemet, meaning 'the black'. The Chinese civilisation flourished along the Huang He, or Yellow River, and the Yangtze, whose valleys were also centres of Neolithic cultures from around 7000 BCE. Egyptian history is reconstructed from rich records: papyrus scrolls, which preserved both stories and practical details, and libraries dating back to 2000 BCE stored them in labelled jars. Greek writers such as Herodotus visited and wrote about Egypt as early as the fifth century BCE, and the script itself was read again after the Rosetta Stone was found in 1799 and deciphered by Jean-Francois Champollion in 1822. For China the earliest source of information is the oracles, symbols made on animal bones and tortoise shells that were heated until they cracked, and interpretations were made from the patterns of the cracks; later, official historiographers recorded events, so China has an abundance of historical records. Among Egyptian achievements are the calendar, developed by counting the days between the floods of the Nile, with three seasons of four months each and a year of 365 days, and the building of pyramids such as the step pyramid at Saqqara over the burial chambers of the pharaohs, together with mummification. Among Chinese achievements are the mastery of bronze metallurgy to produce weapons, tools and elaborate ritual vessels, and the carving of jade objects and figurines; silk, known from the Neolithic period, became a major item of external trade in the second century BCE under the Han dynasty, giving its name to the Silk Route, and China was the first country to introduce paper currency and to develop civil services through public examination.",
+          "valuePoints": [
+            "Egypt on the Nile with its annual inundation and kemet; China on the Huang He and Yangtze",
+            "Egyptian records: papyrus, libraries, Greek writers, the Rosetta Stone deciphered in 1822",
+            "Chinese records: oracle bones and tortoise shells, and official historiographers",
+            "Egyptian achievements: the 365-day calendar, pyramids and mummification",
+            "Chinese achievements: bronze metallurgy, jade carving, silk and the Silk Route, paper currency and civil service examinations"
+          ],
+          "rubric": [
+            { "label": "Rivers", "marks": 1, "descriptor": "Both civilisations correctly matched to their rivers" },
+            { "label": "Egyptian records", "marks": 1, "descriptor": "Papyrus or the Rosetta Stone correctly described" },
+            { "label": "Chinese records", "marks": 1, "descriptor": "Oracle bones and official records described" },
+            { "label": "Egyptian achievements", "marks": 1, "descriptor": "Two achievements given" },
+            { "label": "Chinese achievements", "marks": 1, "descriptor": "Two achievements given" }
+          ]
+        },
+        {
+          "id": "iest1-04-case1",
+          "kind": "case",
+          "outcome": "SS9-04-4",
+          "difficulty": "HARD",
+          "marks": 4,
+          "passage": "Three of the earliest writing systems of the world began at about the same time: the pictographic script used by the Harappans on seals and pottery, the cuneiform script of the Sumerians in Mesopotamia, and the hieroglyphic script of ancient Egypt. Cuneiform was written by pressing a wedge-shaped stylus into the damp surface of clay tablets, and by 3000 BCE it was used all over Mesopotamia by different city-states even though they spoke different languages. Those tablets record great myths and epics, hymns, law codes and educational treatises, and also keep account of the work of potters, seal cutters, shipbuilders, carpenters and farm workers. The Egyptian script became readable again after a French army engineer repairing a fort in 1799 found a large black stone covered in writing of three kinds, one of them Greek, which people could still read; a French linguist deciphered the script in 1822. The Harappan script has still not been deciphered.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Why did the stone found in 1799 make it possible to read the Egyptian script?",
+              "marks": 1,
+              "options": [
+                { "text": "It was the largest inscription ever found in Egypt.", "correct": false },
+                { "text": "It was found inside a royal tomb with the ruler's name on it.", "correct": false },
+                { "text": "It carried the same text in three kinds of writing, one of which could still be read.", "correct": true },
+                { "text": "It was written on papyrus, which is easier to read than stone.", "correct": false }
+              ],
+              "answer": "(c) - because one of the three scripts was Greek, which people could still read, the stone worked like a dictionary for a lost language."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What tool and what material did the Sumerians use for writing in cuneiform?",
+              "marks": 1,
+              "answer": "A wedge-shaped stylus or sharp wedge-shaped reed, pressed into the damp surface of clay tablets."
+            },
+            {
+              "type": "sa",
+              "prompt": "State two kinds of information that historians obtain from the cuneiform tablets but cannot yet obtain from Harappan seals, and explain why.",
+              "marks": 2,
+              "answer": "From cuneiform tablets historians learn the myths, epics, hymns and law codes of the Mesopotamians, and also detailed records of farming and craft activities such as the work of potters, carpenters and shipbuilders. (1 mark for any two) They cannot obtain such information from Harappan seals because the Harappan script has not yet been deciphered, so what the Harappans wrote cannot be read, and their society has to be understood from material remains alone. (1 mark)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "questions": [
+        {
+          "id": "iest1-05-ar1",
+          "kind": "ar",
+          "outcome": "SS9-05-1",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "The rise of the janapadas marks a shift from a kinship-based identity to a territorial identity.",
+          "reason": "The term janapada literally means the place where a people, or jana, first set its feet.",
+          "answer": "a",
+          "explanation": "Both are true and R explains A: the very meaning of the word ties a people to a land, so people were no longer connected only by kinship but also by belonging to a territory."
+        },
+        {
+          "id": "iest1-05-ar2",
+          "kind": "ar",
+          "outcome": "SS9-05-4",
+          "difficulty": "HARD",
+          "marks": 1,
+          "assertion": "The Nashik cave inscription of the second century CE records money deposited with guilds that were obliged to pay a fixed rate of interest.",
+          "reason": "The Mandsaur stone inscription of 473 CE mentions a guild of silk weavers who migrated from Lata in Gujarat to Dashapura in Madhya Pradesh.",
+          "answer": "b",
+          "explanation": "Both statements are true, but R does not explain A. The Nashik inscription shows guilds acting as banking and credit institutions; the Mandsaur inscription shows occupational mobility and migration of a guild. They are two separate pieces of evidence."
+        },
+        {
+          "id": "iest1-05-vsa1",
+          "kind": "vsa",
+          "outcome": "SS9-05-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Name the three assemblies referred to in the Vedic texts and state the role of each.",
+          "answer": "The sabha was a smaller body of select elites that primarily served a judicial function. The samiti was a larger assembly focused on policy decisions and political affairs, representing the broader population. The vidhata was a popular gathering attended by members of the community, which functioned as a forum for discussion on warfare and other political matters.",
+          "valuePoints": [
+            "Sabha: smaller body of select elites, judicial function",
+            "Samiti: larger assembly, policy decisions and political affairs",
+            "Vidhata: popular gathering of the community, discussion of warfare and political matters"
+          ],
+          "rubric": [
+            { "label": "The three assemblies named", "marks": 1, "descriptor": "Sabha, samiti and vidhata all named" },
+            { "label": "Roles", "marks": 1, "descriptor": "Correct role given for all three; half a mark for two" }
+          ]
+        },
+        {
+          "id": "iest1-05-vsa2",
+          "kind": "vsa",
+          "outcome": "SS9-05-2",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Name the four ashramas in order and state what each stage stood for.",
+          "answer": "Brahmacharya, the stage of studentship; grihastha, the stage of the householder; vanaprastha, life in the forest; and sanyasa, renunciation. Dividing life into these four stages, each with its own duties, was meant to give fulfilment in the social, moral and spiritual aspects of a person's life and to bring harmony and balance to society.",
+          "valuePoints": [
+            "Correct order: brahmacharya, grihastha, vanaprastha, sanyasa",
+            "Studentship, householder, life in the forest, renunciation"
+          ],
+          "rubric": [
+            { "label": "Order", "marks": 1, "descriptor": "All four named in the correct order" },
+            { "label": "Meaning of each", "marks": 1, "descriptor": "Correct meaning given for all four; half a mark for two or three" }
+          ]
+        },
+        {
+          "id": "iest1-05-vsa3",
+          "kind": "vsa",
+          "outcome": "SS9-05-3",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "What is meant by the tripartite struggle? Name the three powers involved and the city they fought to control.",
+          "answer": "The tripartite struggle was the contest to control Kannauj, the main capital of the Gurjara-Pratihara dynasty, in modern-day Uttar Pradesh. It is called tripartite because three major powers were involved: the Gurjara-Pratiharas, the Palas and the Rashtrakutas.",
+          "valuePoints": [
+            "A struggle among three powers to control Kannauj",
+            "The Gurjara-Pratiharas, the Palas and the Rashtrakutas"
+          ],
+          "rubric": [
+            { "label": "The city", "marks": 1, "descriptor": "Kannauj named, with its position as the Gurjara-Pratihara capital" },
+            { "label": "The three powers", "marks": 1, "descriptor": "All three named; half a mark for two" }
+          ]
+        },
+        {
+          "id": "iest1-05-sa1",
+          "kind": "sa",
+          "outcome": "SS9-05-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Name the seven constituents of the state in Kautilya's Saptanga theory, and explain what the statement 'one wheel does not move the carriage' means for governance.",
+          "answer": "Kautilya identified the seven constituents of the state as the king, the ministers and other high officials, the territory of the state along with its population, the fortified towns and cities, the treasury or wealth of the kingdom, the forces of defence and law and order, and the allies. The state can function effectively only if these constituents remain properly integrated. The statement that one wheel does not move the carriage captures the belief that effective governance requires cooperation and a well-organised administrative machinery: the king did not rule alone but governed through a multi-layered system, at the centre of which was the council of ministers, a small body of elder statesmen who advised and supported him.",
+          "valuePoints": [
+            "The seven constituents: king, ministers, territory and people, forts, treasury, army, allies",
+            "The state works only when the constituents are properly integrated",
+            "The saying means governance needs cooperation and an organised administrative machinery, not the king alone",
+            "The council of ministers advised and supported the king"
+          ],
+          "rubric": [
+            { "label": "The seven constituents", "marks": 1.5, "descriptor": "All seven named; one mark for five or six" },
+            { "label": "Meaning of the saying", "marks": 1, "descriptor": "Explains that governance needs cooperation and organised administration" },
+            { "label": "Council of ministers", "marks": 0.5, "descriptor": "Mentions that the king governed with advisers and officials" }
+          ]
+        },
+        {
+          "id": "iest1-05-sa2",
+          "kind": "sa",
+          "outcome": "SS9-05-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Describe how early Indian kingdoms and empires were administered below the level of the king, with reference to the divisions used between about 300 CE and 800 CE.",
+          "answer": "Supreme authority rested with the king, but general administration was carried out by officers working at provincial and local levels. Kingdoms were divided into provinces, which were subdivided into divisions and districts. Between about 300 CE and 800 CE power was decentralised: the kingdom was divided into provinces known as bhuktis in the north and mandalas or mandalams in the south; these were subdivided into divisions called vishaya or bhoga in the north and kottams or valanadu in the south; below them were districts, adhishthana or pattana in the north and nadu in the south; groups of villages were called vithis in the north and pattala or kurram in the south; and villages formed the lowest administrative unit. District governors, or pradeshikas, were responsible for judicial and administrative functions, and often took decisions after consulting important residents such as bankers, caravan leaders, artisans and scribes. Cities had their own governors in charge of revenue collection and law and order, and each village was led by a headman, the gramika.",
+          "valuePoints": [
+            "The king held supreme authority but officers administered at provincial and local levels",
+            "Provinces: bhuktis in the north, mandalas or mandalams in the south, with their subdivisions",
+            "Districts and groups of villages named; the village as the lowest unit",
+            "District officers consulted bankers, caravan leaders, artisans and scribes; cities had governors; gramika headed the village"
+          ],
+          "rubric": [
+            { "label": "Hierarchy of divisions", "marks": 1, "descriptor": "Provinces, divisions, districts and villages correctly ordered" },
+            { "label": "Regional terms", "marks": 1, "descriptor": "At least two pairs of northern and southern terms given correctly" },
+            { "label": "Officers", "marks": 1, "descriptor": "District governors, city governors or the gramika described with their duties" }
+          ]
+        },
+        {
+          "id": "iest1-05-sa3",
+          "kind": "sa",
+          "outcome": "SS9-05-4",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "Describe the role of guilds in the early Indian economy, and explain what the Nashik cave inscription tells us about them.",
+          "answer": "Guilds, or shrenis, were collective organisations of traders, artisans and merchants engaged in the same profession, craft or occupation. They played a significant part in the expansion of trade and commerce, especially after the rise of the mahajanapadas in the sixth century BCE, when metallic coins, beginning with silver punch-marked coins, also came into circulation. Guilds regulated the quality of goods and often fixed prices to protect both artisans and consumers, and supervised the conduct of their members through guild courts that enforced professional standards and discipline. The Jataka literature refers to eighteen types of guilds. The Nashik cave inscription of the second century CE, of the Shaka king Nahapana and his son-in-law Ushavadata, records that monetary donations were deposited with guilds, which were obliged to pay a fixed rate of interest on these endowments, and the interest was used to maintain Buddhist monasteries and caves. This shows that guilds were not merely associations of craftspersons and traders but also functioned as banking and credit institutions capable of investing funds securely and generating a steady income.",
+          "valuePoints": [
+            "Guilds or shrenis were associations of people in the same craft or trade",
+            "They regulated quality, fixed prices and disciplined members through guild courts; eighteen types named in the Jataka literature",
+            "The Nashik inscription records deposits with guilds paying a fixed rate of interest, used to maintain Buddhist monasteries",
+            "Guilds therefore also acted as banks, financiers and trustees"
+          ],
+          "rubric": [
+            { "label": "What guilds were", "marks": 1, "descriptor": "Defined as associations of those in the same profession or craft, with their economic role" },
+            { "label": "Functions", "marks": 1, "descriptor": "Quality regulation, price fixing or guild courts described" },
+            { "label": "The inscription", "marks": 1, "descriptor": "Deposits at a fixed rate of interest, showing guilds as banking institutions" }
+          ]
+        },
+        {
+          "id": "iest1-05-la1",
+          "kind": "la",
+          "outcome": "SS9-05-1",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "Trace the development of political organisation in early India from the janas of the Vedic period to the rise of empires.",
+          "answer": "Early Vedic society was organised into janas, or clans, groups of people bound by kinship ties. The Rigveda alone mentions about thirty janas, five of which, the Yadu, Turvasha, Puru, Anu and Druhyu, were together called the panchajana. In this period the raja functioned primarily as a clan chief who led the group in warfare and protected its members, and he worked alongside three assemblies, the sabha, the samiti and the vidhata. With time this organisation evolved into territorial entities called janapadas, roughly between 1000 BCE and 600 BCE, so that people were connected not only by kinship but also by belonging to a land. Control over land, agricultural production and trade routes became increasingly important and led to more complex administration. From about 600 BCE to 300 CE, larger political units called mahajanapadas arose, and the sources usually speak of sixteen of them. The political landscape now included both monarchical states, rajyas, and republican states, ganas or sanghas. Among the mahajanapadas, Magadha in present-day Bihar became the most powerful because of its strategic location, fertile plains and strong rulers, and its expansion led to the rise of the Mauryan Empire, one of the largest and most powerful empires in early Indian history, founded by Chandragupta Maurya in 321 BCE. In the Deccan the Mauryas were succeeded by the Satavahanas, and further south were the Cholas, Pandyas, Keralaputras and Satiyaputras. Later, the Guptas in the north and the imperial Cholas in the south built large empires with elaborate administrative systems.",
+          "valuePoints": [
+            "Janas or clans bound by kinship; about thirty in the Rigveda and the panchajana",
+            "The raja as clan chief with the sabha, samiti and vidhata",
+            "Transition to territorial janapadas between about 1000 and 600 BCE and why territory mattered",
+            "Mahajanapadas from about 600 BCE; sixteen usually named; monarchies and republics",
+            "Magadha's rise and the Mauryan Empire; later the Satavahanas, Guptas and Cholas"
+          ],
+          "rubric": [
+            { "label": "Janas", "marks": 1, "descriptor": "Kin-based clans described, with detail from the Rigveda" },
+            { "label": "The raja and the assemblies", "marks": 1, "descriptor": "Role of the raja and the three assemblies" },
+            { "label": "Janapadas", "marks": 1, "descriptor": "Shift to territorial identity, with the reason and approximate dates" },
+            { "label": "Mahajanapadas", "marks": 1, "descriptor": "Sixteen units, monarchies and republics" },
+            { "label": "Rise of empires", "marks": 1, "descriptor": "Magadha and the Mauryas, and at least one later empire" }
+          ]
+        },
+        {
+          "id": "iest1-05-la2",
+          "kind": "la",
+          "outcome": "SS9-05-4",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "What do inscriptions and other records tell us about social mobility and about the position of women in early India?",
+          "answer": "Varna and jati were not always rigid categories, and there was considerable mobility within and across them. Several ruling families came from diverse social backgrounds, including the Nandas, Mauryas, Shungas, Satavahanas, Vakatakas, Guptas and Pushyabhutis. The Mandsaur stone inscription of 473 CE records a guild of silk weavers who migrated from Lata in Gujarat to Dashapura in Madhya Pradesh during the Gupta period and who were skilled not only in weaving but also in archery, astrology and other occupations, which shows occupational mobility. The Karitalai copperplate inscriptions of Maharaja Jayantha, of the late fifth century CE, record brahmanas working as land managers. Early Vedic texts also show that occupations were flexible: a verse of the Rigveda describes a family in which the speaker is a poet, the father a physician and the mother a grinder of corn. On women, the Vedic period is described as one in which women held a respected position: they took part in scholarly learning, in certain contexts performed rituals, attended gatherings including the sabha, and several hymns of the Rigveda are traditionally attributed to women sages such as Apala, Vishvavara, Ghosha and Lopamudra. Later records show queens and royal women taking part in governance and religious patronage: Prabhavati Gupta, daughter of Chandragupta II, ruled as a regent in the Vakataka kingdom and issued land grants in her own name, and in the Chola period inscriptions record Sembiyan Mahadevi supporting temple building and religious institutions. Women also appear as donors in votive inscriptions from the post-Maurya period, and Sangam literature portrays women in agriculture, cattle rearing, spinning, fishing and salt production, and names poetesses such as Avvaiyar. The position of women did, however, fluctuate and at times declined as social and political conditions changed.",
+          "valuePoints": [
+            "Varna and jati were not wholly rigid; rulers came from diverse backgrounds",
+            "The Mandsaur inscription of 473 CE and the migration and many skills of the silk weavers' guild",
+            "The Karitalai copperplates recording brahmanas as land managers; the Rigveda verse on varied occupations in one family",
+            "Women in the Vedic period: learning, rituals, the sabha, and women sages of the Rigveda",
+            "Prabhavati Gupta as regent issuing land grants, Sembiyan Mahadevi's patronage, women donors and Sangam women; the position fluctuated over time"
+          ],
+          "rubric": [
+            { "label": "Social mobility across varnas", "marks": 1, "descriptor": "States that categories were not rigid, with an example" },
+            { "label": "Inscriptional evidence of occupational mobility", "marks": 1, "descriptor": "Mandsaur or Karitalai inscription correctly used" },
+            { "label": "Women in the Vedic period", "marks": 1, "descriptor": "Learning, rituals or assemblies, and named women sages" },
+            { "label": "Women in authority", "marks": 1, "descriptor": "Prabhavati Gupta or Sembiyan Mahadevi correctly described" },
+            { "label": "Balance", "marks": 1, "descriptor": "Notes that the position of women fluctuated and at times declined" }
+          ]
+        },
+        {
+          "id": "iest1-05-case1",
+          "kind": "case",
+          "outcome": "SS9-05-4",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "passage": "The Uttaramerur inscription of Parantaka I, of the tenth century CE, is carved in the Vaikuntha Perumal temple in the Kanchipuram district of Tamil Nadu. It describes in detail how a village assembly of the Chola period chose its members. The names of eligible candidates were written on palm leaves and placed inside a large pot. At a public gathering, often held at a temple and in full view of the whole community, a young child was asked to draw the leaves out one by one, and those drawn were selected. This was the Kudavolai, or ballot pot, system. The members elected in this way were then divided into specialised committees, called variyams, each entrusted with an important village responsibility such as managing the irrigation tank, administering justice or collecting taxes. The same inscription also specifies that a candidate for the village assembly should have honest earnings and be pure of mind.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The Kudavolai system described in the inscription was used to",
+              "marks": 1,
+              "options": [
+                { "text": "collect land revenue from the villages of the Chola empire", "correct": false },
+                { "text": "select members of the village assembly by drawing palm leaves from a pot", "correct": true },
+                { "text": "record the achievements of Chola rulers on temple walls", "correct": false },
+                { "text": "decide disputes between two neighbouring villages", "correct": false }
+              ],
+              "answer": "(b) - names of eligible candidates were written on palm leaves, placed in a pot and drawn out by a child at a public gathering."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What were variyams, and name one responsibility given to them.",
+              "marks": 1,
+              "answer": "Variyams were the specialised committees into which the elected members of the village assembly were divided. Each was given an important village responsibility, such as managing irrigation through the tank committee, administering justice, or collecting taxes."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does this inscription tell us about village governance and about the place of ethics in public life in early India?",
+              "marks": 2,
+              "answer": "It shows that villages were governed by assemblies whose members were chosen by the community itself, with the draw held in full view of everyone to ensure fairness, and that local work such as irrigation, justice and taxation was managed by committees of the village rather than by the king's officers. (1 mark) It also shows that ethical conduct mattered in public life, since the inscription requires a candidate to have honest earnings and to be pure of mind, which reflects the wider connection between politics and ethics in early India. (1 mark)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "questions": [
+        {
+          "id": "iest1-06-ar1",
+          "kind": "ar",
+          "outcome": "SS9-06-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "Women in India did not have to wage a prolonged struggle to obtain the right to vote.",
+          "reason": "When the Constitution of India came into force in 1950, universal adult franchise was extended to all citizens, men and women alike, without discrimination.",
+          "answer": "a",
+          "explanation": "Both are true and R explains A. In Britain women received full voting rights only in 1928 and in the United States in 1920, after decades of protest, whereas in India the right came to women along with everyone else when the Constitution came into force."
+        },
+        {
+          "id": "iest1-06-ar2",
+          "kind": "ar",
+          "outcome": "SS9-06-4",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "Parliament has the power to amend the Constitution of India under Article 368.",
+          "reason": "The judiciary can declare a law unconstitutional if it is inconsistent with the provisions of the Constitution.",
+          "answer": "b",
+          "explanation": "Both statements are true, but R is not the explanation of A. The power to amend comes from Article 368 so that the Constitution remains flexible and responsive; judicial review is a separate part of the system of checks and balances."
+        },
+        {
+          "id": "iest1-06-vsa1",
+          "kind": "vsa",
+          "outcome": "SS9-06-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "When was the Constitution of India adopted and when did it come into force? How long did the Constituent Assembly take to draft it, and when was the Assembly formed?",
+          "answer": "The Constitution of India was adopted on 26 November 1949 and came into force on 26 January 1950. The Constituent Assembly was formed in 1946, before India attained independence in 1947, and it took 2 years, 11 months and 18 days to draft the world's longest written Constitution.",
+          "valuePoints": [
+            "Adopted on 26 November 1949; came into force on 26 January 1950",
+            "Constituent Assembly formed in 1946; took 2 years, 11 months and 18 days"
+          ],
+          "rubric": [
+            { "label": "The two dates", "marks": 1, "descriptor": "Both dates correct; half a mark for one" },
+            { "label": "The Assembly", "marks": 1, "descriptor": "Formed in 1946 and the drafting time correctly stated" }
+          ]
+        },
+        {
+          "id": "iest1-06-vsa2",
+          "kind": "vsa",
+          "outcome": "SS9-06-3",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Under which Article was the Right to Education added to the Constitution, in which year, and what does it guarantee?",
+          "answer": "The Right to Education was added as Article 21A in 2009. It ensures free and compulsory education for children aged 6 to 14 years.",
+          "valuePoints": [
+            "Article 21A, added in 2009",
+            "Free and compulsory education for children aged 6 to 14"
+          ],
+          "rubric": [
+            { "label": "Article and year", "marks": 1, "descriptor": "Article 21A and 2009 both correct; half a mark for one" },
+            { "label": "What it guarantees", "marks": 1, "descriptor": "Free and compulsory education for the age group 6 to 14" }
+          ]
+        },
+        {
+          "id": "iest1-06-vsa3",
+          "kind": "vsa",
+          "outcome": "SS9-06-2",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "What is universal adult franchise? How is it connected to the idea of popular sovereignty?",
+          "answer": "Universal adult franchise is the right of every citizen aged 18 years and above to vote through a secret ballot. It is connected to popular sovereignty because popular sovereignty means that the ultimate source of power lies with the people and that the state derives its authority from them; citizens exercise their right to vote to elect governments and representatives, and a government so elected formulates policies and implements laws.",
+          "valuePoints": [
+            "Every citizen of 18 years and above has the right to vote through a secret ballot",
+            "Popular sovereignty means the state derives its authority from the people, exercised through voting"
+          ],
+          "rubric": [
+            { "label": "Universal adult franchise", "marks": 1, "descriptor": "Age of 18 and the secret ballot stated" },
+            { "label": "Link to popular sovereignty", "marks": 1, "descriptor": "The people as the ultimate source of the state's authority, expressed by electing representatives" }
+          ]
+        },
+        {
+          "id": "iest1-06-sa1",
+          "kind": "sa",
+          "outcome": "SS9-06-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Name the six Fundamental Rights guaranteed by the Constitution of India along with their Articles, and state how a citizen may seek a remedy if a Fundamental Right is violated.",
+          "answer": "The six Fundamental Rights are the Right to Equality, Articles 14 to 18; the Right to Freedom, Articles 19 to 22; the Right Against Exploitation, Articles 23 and 24; the Right to Freedom of Religion, Articles 25 to 28; Cultural and Educational Rights, Articles 29 and 30; and the Right to Constitutional Remedies, Article 32. Any violation of these can lead to appropriate legal action, and citizens can seek constitutional remedies under Articles 32 and 226 for the protection and reinforcement of their Fundamental Rights. These rights are enforceable in courts of law and are indivisible and inalienable, subject to reasonable restrictions in accordance with the procedure established by law.",
+          "valuePoints": [
+            "Right to Equality (14-18), Right to Freedom (19-22), Right Against Exploitation (23-24)",
+            "Right to Freedom of Religion (25-28), Cultural and Educational Rights (29-30), Right to Constitutional Remedies (32)",
+            "Remedies may be sought under Articles 32 and 226; the rights are enforceable in courts"
+          ],
+          "rubric": [
+            { "label": "First three rights", "marks": 1, "descriptor": "Named with their Articles" },
+            { "label": "Last three rights", "marks": 1, "descriptor": "Named with their Articles" },
+            { "label": "Remedy", "marks": 1, "descriptor": "Articles 32 and 226 named as the route to constitutional remedies" }
+          ]
+        },
+        {
+          "id": "iest1-06-sa2",
+          "kind": "sa",
+          "outcome": "SS9-06-4",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Explain the rule of law and state why it is essential in a democracy.",
+          "answer": "The rule of law is a fundamental principle of any democratic society. It ensures equality before the law, which means every individual, irrespective of status, identity or rank, is treated equally by the law, and equal protection of the law, which means all persons in similar circumstances are treated equally without arbitrary discrimination. It establishes that no one is above the law. When laws are violated, disputes are resolved in a court of law through the procedure established by law and not by force or personal influence, and no citizen can be punished without following that procedure. Everyone is given a fair opportunity to defend their rights against arbitrary action. It is essential because it prevents the misuse of power, protects people's rights, and promotes justice, accountability and trust in the democratic system.",
+          "valuePoints": [
+            "Equality before the law and equal protection of the law defined",
+            "No one is above the law; disputes settled in courts by the procedure established by law, not by force or influence",
+            "Prevents misuse of power, protects rights, and promotes justice, accountability and trust"
+          ],
+          "rubric": [
+            { "label": "Meaning", "marks": 1, "descriptor": "Equality before the law and equal protection explained" },
+            { "label": "How it operates", "marks": 1, "descriptor": "No one above the law; disputes settled by procedure established by law" },
+            { "label": "Why it is essential", "marks": 1, "descriptor": "Prevents misuse of power and protects rights, building trust" }
+          ]
+        },
+        {
+          "id": "iest1-06-sa3",
+          "kind": "sa",
+          "outcome": "SS9-06-2",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "Compare how women obtained the right to vote in India with how they obtained it in Britain and the United States of America, and explain why the right to vote alone does not ensure equal participation.",
+          "answer": "In a number of countries women had to wage a long and difficult struggle to secure the right to vote. In Britain women received full voting rights only in 1928, and in the United States of America in 1920, after decades of protests and movements, so democracy in those societies expanded gradually. In India, by contrast, when the Constitution came into force in 1950 universal adult franchise was extended to all citizens, men and women alike, without discrimination, and Indian women did not have to engage in prolonged legal battles or protests to secure voting rights. However, the right to vote does not automatically ensure equal participation, because social prejudices continue to act as barriers and affect the adequate representation of women in politics. This is why the Constitution provides for reservation of not less than one-third of the directly elected seats for women in every Panchayat under Article 243(d) and in every Municipality under Article 243(t), and several states and union territories have gone further and provided 50 per cent reservation.",
+          "valuePoints": [
+            "Britain 1928 and the United States 1920, after long struggles",
+            "In India universal adult franchise came to all citizens together when the Constitution came into force in 1950",
+            "Voting rights alone do not ensure participation, as social prejudices remain a barrier",
+            "Reservation for women under Articles 243(d) and 243(t), with several states providing 50 per cent"
+          ],
+          "rubric": [
+            { "label": "Britain and the United States", "marks": 1, "descriptor": "Both years given with the long struggle noted" },
+            { "label": "India", "marks": 1, "descriptor": "Universal adult franchise from 1950, without a separate struggle" },
+            { "label": "Beyond the vote", "marks": 1, "descriptor": "Social prejudice as a barrier, and reservation in local bodies as a response" }
+          ]
+        },
+        {
+          "id": "iest1-06-la1",
+          "kind": "la",
+          "outcome": "SS9-06-4",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "Explain the separation of powers among the three organs of government in India, and describe how checks and balances are maintained between them.",
+          "answer": "The separation of powers means that the work of government is divided among three organs, each with distinct responsibilities. The legislature makes laws, the executive implements them, and the judiciary interprets them. This prevents the concentration of power in any one organ and enables democratic institutions to function effectively and responsibly. The separation is essential for maintaining checks and balances. For example, Parliament has the power to amend the Constitution under Article 368, but the judiciary can review such amendments to ensure that they are consistent with the spirit of the Constitution. The executive power of enforcement agencies is regulated by laws and rules framed by Parliament and can also be reviewed by competent courts. If a law is inconsistent with the constitutional provisions, the judiciary has the power to declare it unconstitutional. The judiciary upholds the Constitution, ensures that laws enacted by Parliament and the State Legislative Assemblies are in accordance with it, and is an impartial and independent institution that safeguards citizens' rights; through initiatives such as Public Interest Litigation it has also widened access to justice. Accountability is further supported by elections, public debate, engagement with civil society, and laws such as the Right to Information Act, 2005, which allows citizens to seek information from government agencies. If one organ made the laws, implemented them and judged disputes about them, power would be concentrated and citizens' rights would have no protection.",
+          "valuePoints": [
+            "Legislature makes laws, executive implements them, judiciary interprets them",
+            "Separation prevents the concentration of power in one organ",
+            "Parliament may amend under Article 368 but the judiciary can review amendments and declare a law unconstitutional",
+            "Executive agencies are regulated by laws framed by Parliament and reviewed by courts; judiciary independent, PIL widens access",
+            "Accountability also through elections, public debate, civil society and the Right to Information Act, 2005"
+          ],
+          "rubric": [
+            { "label": "The three organs", "marks": 1, "descriptor": "All three named with their functions" },
+            { "label": "Purpose of separation", "marks": 1, "descriptor": "Prevents concentration of power" },
+            { "label": "Judicial review", "marks": 1, "descriptor": "Review of amendments and power to declare a law unconstitutional" },
+            { "label": "Limits on the executive", "marks": 1, "descriptor": "Executive bound by laws made by Parliament and reviewable by courts" },
+            { "label": "Wider accountability", "marks": 1, "descriptor": "Elections, public debate, civil society or the RTI Act named" }
+          ]
+        },
+        {
+          "id": "iest1-06-la2",
+          "kind": "la",
+          "outcome": "SS9-06-1",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "'The democratic ethos in India did not emerge suddenly.' Trace the development of democratic ideas in India from early times to the framing of the Constitution.",
+          "answer": "The idea of democracy has been part of the Indian ethos since early times. In the Vedic period there were assemblies such as the sabha, the samiti and the vidhata, which involved collective decision-making, and the king was not an independent ruler but worked in consultation with assemblies, ministers and officers of various capacities. Early republican states, the ganas or sanghas, also existed alongside monarchies. A verse from the Aikyamatya Suktam of the Rigveda emphasises collective thinking, shared discussion and unity of purpose, showing that consultation, consensus and shared responsibility have deep roots in India's intellectual and cultural traditions. The functioning of the Bauddha Sanghas, the monastic community established by Gautama Buddha, also reflects these traditions: the Sangha encouraged debate and discussion, and its members could choose their leader and take decisions through voting. Over the long passage of time invasions disrupted the political and social fabric of parts of the country, and by the nineteenth century the British had colonised most of the subcontinent; foreign rule altered political structures and limited people's participation in their own governance. However, the long struggle for independence revived and strengthened democratic ideas. Before independence, the Constituent Assembly was formed in 1946 to draft a constitution, and it took 2 years, 11 months and 18 days to produce the world's longest written Constitution. Alongside indigenous traditions, the global spread of democratic values influenced the Constituent Assembly Debates, and the members believed the Constitution should be not a rigid legal code but a dynamic document capable of evolving through lawful amendments without compromising its fundamental values. The Constitution was adopted on 26 November 1949 and came into force on 26 January 1950.",
+          "valuePoints": [
+            "Vedic assemblies: sabha, samiti and vidhata, and the king ruling in consultation",
+            "Early republican states, the ganas or sanghas; the Aikyamatya Suktam on collective thinking",
+            "The Bauddha Sanghas: debate, choosing a leader, decisions by voting",
+            "Colonial rule limited participation; the freedom struggle revived democratic ideas",
+            "Constituent Assembly formed in 1946, drafting took 2 years 11 months 18 days; Constitution adopted 26 November 1949 and in force 26 January 1950"
+          ],
+          "rubric": [
+            { "label": "Vedic assemblies", "marks": 1, "descriptor": "Named with their role in collective decision-making" },
+            { "label": "Republics and the Rigvedic verse", "marks": 1, "descriptor": "Ganas or sanghas, and the value of consultation and consensus" },
+            { "label": "Bauddha Sanghas", "marks": 1, "descriptor": "Debate, choice of leader and decisions by voting" },
+            { "label": "Colonial interruption and the freedom struggle", "marks": 1, "descriptor": "Participation limited under foreign rule, ideas revived by the struggle" },
+            { "label": "Making of the Constitution", "marks": 1, "descriptor": "Constituent Assembly and the dates correctly given" }
+          ]
+        },
+        {
+          "id": "iest1-06-case1",
+          "kind": "case",
+          "outcome": "SS9-06-2",
+          "difficulty": "EASY",
+          "marks": 4,
+          "passage": "India is the world's largest democracy. With a population of over 140 crore, it had a voter base of over 96.8 crore registered voters in 2024. Elections are conducted in the 22 scheduled languages along with several other languages, and election symbols are used so that every citizen, including those who cannot read, can vote independently. More than one million polling stations are set up, including in remote areas such as mountains, forests, deserts and islands, and in some cases a polling station is created even for a single voter. India has over 2,800 registered political parties, reflecting the country's social and regional diversity and allowing many viewpoints to compete peacefully. On average, in 2019, a Member of Parliament represented about 25 lakh people.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Why are election symbols used in Indian elections?",
+              "marks": 1,
+              "options": [
+                { "text": "So that political parties can be fined if they break the rules", "correct": false },
+                { "text": "So that the votes can be counted more quickly", "correct": false },
+                { "text": "So that polling stations in remote areas need fewer officers", "correct": false },
+                { "text": "So that a citizen who cannot read is still able to vote independently", "correct": true }
+              ],
+              "answer": "(d) - symbols allow voters who cannot read the names of candidates or parties to identify their choice and vote on their own."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How many registered voters did India have in 2024, and in how many scheduled languages are elections conducted?",
+              "marks": 1,
+              "answer": "Over 96.8 crore registered voters in 2024, and elections are conducted in the 22 scheduled languages along with several other languages."
+            },
+            {
+              "type": "sa",
+              "prompt": "Using the passage, explain how the scale and inclusiveness of Indian elections reflect the principle of popular sovereignty.",
+              "marks": 2,
+              "answer": "Popular sovereignty means that the ultimate source of power lies with the people and that the government derives its authority from them; with over 96.8 crore voters choosing their representatives, the authority of the government in India rests on an enormous exercise of public choice. (1 mark) The arrangements described, elections in 22 scheduled languages, symbols for those who cannot read, more than a million polling stations including one for a single voter, and over 2,800 parties offering many viewpoints, show that the exercise is meant to include every citizen, so that no one's share of that power is lost. (1 mark)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "questions": [
+        {
+          "id": "iest1-07-ar1",
+          "kind": "ar",
+          "outcome": "SS9-07-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "Under the First-Past-The-Post system a candidate can be declared elected with less than 50 per cent of the votes polled.",
+          "reason": "Under the First-Past-The-Post system a candidate must receive more than half of the votes polled in the constituency in order to win.",
+          "answer": "c",
+          "explanation": "A is true and R is false. Under FPTP the candidate with the most votes wins, even if the votes are less than 50 per cent of the total polled; it is the majority system that requires more than 50 per cent, failing which the top two candidates compete in a second round."
+        },
+        {
+          "id": "iest1-07-ar2",
+          "kind": "ar",
+          "outcome": "SS9-07-3",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "The Election Commission of India was created by the Representation of the People Act, 1951.",
+          "reason": "Articles 324 to 329 of the Constitution provide for the establishment of the Election Commission of India and define its powers and duties.",
+          "answer": "d",
+          "explanation": "A is false: the ECI is an autonomous permanent constitutional body established on 25 January 1950, not a creation of the 1951 Act. R is true, and it is the Constitution that provides for the Commission."
+        },
+        {
+          "id": "iest1-07-vsa1",
+          "kind": "vsa",
+          "outcome": "SS9-07-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Distinguish between direct and indirect elections, giving one Indian example of each.",
+          "answer": "In a direct election, citizens vote directly to choose their representatives or leaders; members of the Lok Sabha, members of the Vidhan Sabha and members of local bodies such as panchayats and municipal corporations are elected directly, every five years. In an indirect election, citizens vote for representatives who then elect the leaders; the President, the Vice President and members of the Rajya Sabha are elected indirectly.",
+          "valuePoints": [
+            "Direct election: citizens vote directly; Lok Sabha, Vidhan Sabha or local bodies",
+            "Indirect election: elected representatives choose the leaders; President, Vice President or Rajya Sabha"
+          ],
+          "rubric": [
+            { "label": "Direct election", "marks": 1, "descriptor": "Defined with a correct Indian example" },
+            { "label": "Indirect election", "marks": 1, "descriptor": "Defined with a correct Indian example" }
+          ]
+        },
+        {
+          "id": "iest1-07-vsa2",
+          "kind": "vsa",
+          "outcome": "SS9-07-3",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "What is delimitation, and why is it necessary?",
+          "answer": "Delimitation is the process of determining the number of seats and fixing the territorial boundaries of constituencies in each state for elections to the Lok Sabha and the Vidhan Sabha. It is necessary because the boundaries of constituencies are not permanently fixed and population density shifts over time. Without delimitation one Member of Parliament might represent five lakh people while another represented twenty-five lakh, which would defeat the objective of equal representation. Delimitation aims to keep the ratio of seats to population as close to equal as possible across all constituencies. Article 82 of the Constitution mandates the establishment of a Delimitation Commission.",
+          "valuePoints": [
+            "Fixing the number of seats and the boundaries of constituencies for the Lok Sabha and Vidhan Sabha",
+            "Needed because population density shifts; it keeps the ratio of seats to population as equal as possible"
+          ],
+          "rubric": [
+            { "label": "Definition", "marks": 1, "descriptor": "Number of seats and territorial boundaries of constituencies" },
+            { "label": "Reason", "marks": 1, "descriptor": "Equal representation despite shifting population" }
+          ]
+        },
+        {
+          "id": "iest1-07-vsa3",
+          "kind": "vsa",
+          "outcome": "SS9-07-4",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "What does ETPBS stand for, and how does it help voters?",
+          "answer": "ETPBS stands for the Electronically Transmitted Postal Ballot System. It was developed for service voters, and it enables them to receive a postal ballot electronically and cast their vote from their preferred location, which is outside their originally assigned voting constituency.",
+          "valuePoints": [
+            "Electronically Transmitted Postal Ballot System",
+            "Allows service voters to receive a ballot electronically and vote from outside their own constituency"
+          ],
+          "rubric": [
+            { "label": "Full form", "marks": 1, "descriptor": "Expanded correctly" },
+            { "label": "How it helps", "marks": 1, "descriptor": "Service voters able to vote from outside their constituency" }
+          ]
+        },
+        {
+          "id": "iest1-07-sa1",
+          "kind": "sa",
+          "outcome": "SS9-07-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Compare the First-Past-The-Post system, the majority system and proportional representation on the basis of how a voter votes and how seats are won.",
+          "answer": "Under the First-Past-The-Post system each voter votes for one candidate in their constituency, and the candidate with the most votes wins even if those votes are less than 50 per cent of the total polled. Under the majority system each voter votes for one candidate, but to win a candidate must receive more than 50 per cent of the votes; if no one does, the top two candidates compete again in a second round. Under proportional representation voters vote for a party rather than a person, and seats in the parliament are allotted in proportion to the total votes received by each party, so power is shared proportionately. India elects members of the Lok Sabha and the Vidhan Sabha by the First-Past-The-Post system, while the Rajya Sabha, the President and the Vice President are elected by proportional representation.",
+          "valuePoints": [
+            "FPTP: one vote for one candidate in a constituency; the highest number of votes wins, even under 50 per cent",
+            "Majority system: more than 50 per cent needed, otherwise a second round between the top two",
+            "Proportional representation: vote for a party; seats in proportion to votes received",
+            "India uses FPTP for the Lok Sabha and Vidhan Sabha, proportional representation for the Rajya Sabha, President and Vice President"
+          ],
+          "rubric": [
+            { "label": "First-Past-The-Post", "marks": 1, "descriptor": "Correctly described, including that fewer than half the votes can win" },
+            { "label": "Majority system", "marks": 1, "descriptor": "More than 50 per cent required, with the second round" },
+            { "label": "Proportional representation", "marks": 1, "descriptor": "Vote for a party, seats allotted in proportion to votes" }
+          ]
+        },
+        {
+          "id": "iest1-07-sa2",
+          "kind": "sa",
+          "outcome": "SS9-07-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Describe any three functions of the Election Commission of India.",
+          "answer": "First, the Commission prepares the electoral roll. It sends official enumerators to every household to collect data about eligible electors, and rolls are prepared for each constituency, organised polling station-wise; only those whose names appear on the roll may vote. It also conducts the Special Intensive Revision, updating, verifying and correcting the rolls so that no eligible citizen is left out and no ineligible person is included, and it settles claims and objections before publishing the final roll. Second, it decides the schedule and dates of elections, taking into account weather conditions, the agricultural cycle, school and university examination schedules and festivals. Third, it registers political parties and allots symbols: only registered parties may contest, it classifies parties as recognised national or state parties or registered-unrecognised parties, allots election symbols, insists that parties hold organisational elections periodically, and acts as a quasi-judicial body in disputes over recognition and symbols. It also works to ensure that elections are free, fair, transparent and inclusive.",
+          "valuePoints": [
+            "Preparation and revision of the electoral roll, including the Special Intensive Revision",
+            "Deciding the schedule and dates of elections, considering weather, agriculture, examinations and festivals",
+            "Registration of political parties, their classification and the allotment of symbols",
+            "Ensuring free, fair and inclusive elections"
+          ],
+          "rubric": [
+            { "label": "First function", "marks": 1, "descriptor": "Correctly named and explained" },
+            { "label": "Second function", "marks": 1, "descriptor": "Correctly named and explained" },
+            { "label": "Third function", "marks": 1, "descriptor": "Correctly named and explained" }
+          ]
+        },
+        {
+          "id": "iest1-07-sa3",
+          "kind": "sa",
+          "outcome": "SS9-07-4",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "State three corrupt practices or electoral offences listed in the Representation of the People Act, 1951, and explain why each would damage a free and fair election.",
+          "answer": "First, any gift, offer or promise made by a candidate, or with the candidate's consent, to a person in order to make them contest, withdraw, vote or refrain from voting is a corrupt practice; it replaces the voter's free judgement with an inducement. Second, appealing to people to vote or refrain from voting on the basis of religion, caste, race, community or language is an offence; it divides the electorate on identities rather than on programmes and policies. Third, candidates, or anyone acting on their behalf, are prohibited from taking assistance in favour of the candidate from government-related personnel, including gazetted officers, judges and magistrates, armed forces personnel, police personnel and excise officers; such assistance would put the machinery of the state behind one contestant and destroy the equality of the contest. If fairness is not ensured, public confidence in electoral institutions gradually weakens, and although elections are held, their democratic value is reduced.",
+          "valuePoints": [
+            "Gifts, offers or promises to make someone contest, withdraw, vote or not vote",
+            "Appeals on the basis of religion, caste, race, community or language",
+            "Assistance from government-related personnel such as gazetted officers, judges, armed forces, police or excise officers",
+            "Such practices weaken public confidence and reduce the democratic value of the election"
+          ],
+          "rubric": [
+            { "label": "First practice", "marks": 1, "descriptor": "Correctly stated with a reason why it harms fairness" },
+            { "label": "Second practice", "marks": 1, "descriptor": "Correctly stated with a reason" },
+            { "label": "Third practice", "marks": 1, "descriptor": "Correctly stated with a reason" }
+          ]
+        },
+        {
+          "id": "iest1-07-la1",
+          "kind": "la",
+          "outcome": "SS9-07-3",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "Describe the Election Commission of India: what kind of body it is, how election work is organised at the state level, and the criteria by which a party is recognised as a national party or as a state party.",
+          "answer": "The Constitution of India vests in the Election Commission of India the superintendence, direction and control of the entire process for the conduct of elections. It is an autonomous, permanent, constitutional body established on 25 January 1950, and Articles 324 to 329 of the Constitution provide for it and define its powers and duties. It conducts elections to the Lok Sabha, the Rajya Sabha, the Vidhan Sabha, the Vidhan Parishad, and to the offices of the President and the Vice President. At the state level, election work is supervised by the Chief Electoral Officer of the state, who is appointed by the Commission from among the civil servants in consultation with the concerned state government; various state government officers such as District Magistrates, Sub-Divisional Magistrates and Tahsildars are also assigned election duties as District Election Officers, Returning Officers and Electoral Registration Officers. A party may be recognised as a national party if it fulfils any one of three conditions: it secures not less than 6 per cent of the valid votes polled in any four or more states in a general election to the Lok Sabha or to the Legislative Assembly and in addition wins four seats in the Lok Sabha from one or more states; or it wins at least 2 per cent of the seats in the Lok Sabha with candidates elected from at least three states; or it is recognised as a state party in at least four states. A party may be recognised as a state party if, for example, it secures not less than 6 per cent of the valid votes polled at a general election to the Legislative Assembly of that state and in addition wins at least two seats in that Assembly, or wins at least 3 per cent of the seats in the Assembly or at least three seats, whichever is more. Parties that have not secured enough votes, or have never contested since registration, remain registered-unrecognised political parties.",
+          "valuePoints": [
+            "An autonomous permanent constitutional body established on 25 January 1950; Articles 324 to 329",
+            "Conducts elections to the Lok Sabha, Rajya Sabha, Vidhan Sabha, Vidhan Parishad, President and Vice President",
+            "Chief Electoral Officer of the state appointed by the ECI; state officers assigned election duties",
+            "Any one of three conditions for national party recognition, stated correctly",
+            "At least one condition for state party recognition, and the meaning of registered-unrecognised parties"
+          ],
+          "rubric": [
+            { "label": "Nature of the body", "marks": 1, "descriptor": "Constitutional, autonomous and permanent, with the date and the Articles" },
+            { "label": "Scope of its work", "marks": 1, "descriptor": "The elections it conducts" },
+            { "label": "State-level machinery", "marks": 1, "descriptor": "Chief Electoral Officer and officers assigned election duties" },
+            { "label": "National party criteria", "marks": 1, "descriptor": "At least two of the three conditions stated correctly" },
+            { "label": "State party criteria", "marks": 1, "descriptor": "At least one condition stated correctly, with registered-unrecognised parties explained" }
+          ]
+        },
+        {
+          "id": "iest1-07-la2",
+          "kind": "la",
+          "outcome": "SS9-07-1",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "'Elections are the soul of democracy.' Explain why regular elections matter, and describe the role political parties play in them.",
+          "answer": "Elections are one of the most important processes for exercising democratic rights, and regular and periodic elections lie at the core of democracy. One of the most crucial elements of democracy is participating in the periodic election of those who will make decisions on our behalf. Elected representatives are accountable to the people, and the right to elect them and to hold them accountable is ensured through periodic elections; the vote is the principal means by which a citizen exercises this right. A government cannot continue beyond its prescribed term without seeking the mandate of the people again, and a contest in which only one party stands would give the voter no real choice. Elections therefore provide accountability, representation, legitimacy and equality. Political parties are essential to this system. There are often dozens of contestants in each constituency, and most belong to a party, though some contest independently. Voters learn about the candidates, their policies, their vision for development and their positions on social, economic, cultural and political issues mainly through the parties. Parties organise public opinion, campaign on specific issues, offer voters meaningful choices and enable them to make informed decisions. They present their agenda and elaborate on their promises in election rallies and through media platforms. After the election, the winning party or coalition forms the government and formulates and implements policies, while the opposition ensures accountability and participates in debates and committees. India has a multi-party system, which reflects the country's diversity of languages, cultures, religions and regions, and parties function within the framework of the Representation of the People Act, 1951.",
+          "valuePoints": [
+            "Periodic elections are at the core of democracy; representatives are accountable to the people",
+            "A government cannot continue beyond its term without a fresh mandate, and a single-party contest offers no choice",
+            "Elections provide accountability, representation, legitimacy and equality",
+            "Parties organise public opinion, campaign, offer choices and inform voters",
+            "The winning party forms the government, the opposition ensures accountability; India's multi-party system reflects its diversity"
+          ],
+          "rubric": [
+            { "label": "Why periodic elections matter", "marks": 1, "descriptor": "Accountability of representatives and the need for a fresh mandate" },
+            { "label": "What elections provide", "marks": 1, "descriptor": "At least three of accountability, representation, legitimacy and equality" },
+            { "label": "Parties and the voter", "marks": 1, "descriptor": "How parties inform voters and offer meaningful choices" },
+            { "label": "Government and opposition", "marks": 1, "descriptor": "Roles after the election correctly described" },
+            { "label": "The multi-party system", "marks": 1, "descriptor": "Linked to India's diversity and to the legal framework" }
+          ]
+        },
+        {
+          "id": "iest1-07-case1",
+          "kind": "case",
+          "outcome": "SS9-07-4",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "passage": "On polling day, Ravi went with his family to a polling station guarded by police personnel. A wheelchair had been kept ready for his elder brother, who has a disability, and volunteers guided them to the booth. The voting machine at the booth carried Braille markings. After casting his vote, Ravi was able to see the slip printed by the Voter Verifiable Paper Audit Trail. His eighty-nine-year-old grandmother had not come with them; she had voted from home, a facility extended across India for the first time during the 2024 General Elections to senior citizens above 85 years of age and to persons with disabilities having a benchmark disability of 40 per cent. Ravi's cousin, posted far from home with the armed forces, had received his postal ballot electronically and had voted from where he was stationed.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Voting from home for senior citizens above 85 years of age and for persons with a benchmark disability of 40 per cent was extended across India for the first time during",
+              "marks": 1,
+              "options": [
+                { "text": "the 2024 General Elections", "correct": true },
+                { "text": "the first Delimitation Commission of 1952", "correct": false },
+                { "text": "the National Voters' Day of 25 January", "correct": false },
+                { "text": "the general elections held after the Emergency in 1977", "correct": false }
+              ],
+              "answer": "(a) - the chapter states that this facility was extended across India for the first time during the 2024 General Elections."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which system did Ravi's cousin use to vote, and for whom was it developed?",
+              "marks": 1,
+              "answer": "He used the Electronically Transmitted Postal Ballot System, ETPBS, which was developed for service voters so that they can receive and cast their postal ballots electronically from anywhere outside their constituency."
+            },
+            {
+              "type": "sa",
+              "prompt": "Name two steps described in the passage that made this election more inclusive, and explain why such steps matter for a free and fair election.",
+              "marks": 2,
+              "answer": "Two such steps are the wheelchair and volunteers provided for a person with a disability together with Braille markings on the voting machine, and the facility of voting from home for very senior citizens and persons with a benchmark disability; the electronic postal ballot for service voters is a third. (1 mark for any two) These matter because if some citizens face difficulty in exercising their right to vote because of accessibility, then although the election is held, its democratic value is reduced; making the process inclusive, impartial and trustworthy is what maintains public confidence in it. (1 mark)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

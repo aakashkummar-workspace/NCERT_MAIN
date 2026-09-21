@@ -1,0 +1,254 @@
+{
+  "book": "iest1",
+  "chapters": [
+    {
+      "number": 8,
+      "questions": [
+        {
+          "id": "iest1-08-ar1", "kind": "ar", "outcome": "SS9-08-1", "difficulty": "EASY", "marks": 1,
+          "assertion": "A farmer who decides to grow more barley on a piece of land must grow less wheat on it.",
+          "reason": "The land, water and labour available to the farmer are limited, so growing more of one crop means giving up some of the other.",
+          "answer": "a",
+          "explanation": "Both are true and R explains A. Because resources are limited, choosing more barley means sacrificing some wheat — the chapter calls this sacrifice the opportunity cost of growing barley."
+        },
+        {
+          "id": "iest1-08-ar2", "kind": "ar", "outcome": "SS9-08-4", "difficulty": "MEDIUM", "marks": 1,
+          "assertion": "A planned economy gives enterprises a strong motivation to improve quality and innovate.",
+          "reason": "In a planned economy, strict permits and licences prevent a large number of enterprises from operating and so restrict competition.",
+          "answer": "d",
+          "explanation": "A is false and R is true. The chapter says that because a planned economy restricts competition among private enterprises, 'there is little motivation among enterprises to improve quality or innovate'."
+        },
+        {
+          "id": "iest1-08-vsa1", "kind": "vsa", "outcome": "SS9-08-1", "difficulty": "EASY", "marks": 2,
+          "stem": "Distinguish between needs and wants, giving one example of each.",
+          "answer": "Needs are essentials we cannot do without, such as food, water and shelter. Wants are things we desire but can live without, such as gadgets, vacations or luxury items; human wants are unlimited and keep changing.",
+          "valuePoints": ["Needs are essentials — for example food, water or shelter", "Wants are desires beyond essentials — for example gadgets, vacations or luxury items", "Wants are unlimited and keep changing"],
+          "rubric": [
+            { "label": "Needs", "marks": 1, "descriptor": "Meaning of needs with a correct example" },
+            { "label": "Wants", "marks": 1, "descriptor": "Meaning of wants with a correct example" }
+          ]
+        },
+        {
+          "id": "iest1-08-vsa2", "kind": "vsa", "outcome": "SS9-08-3", "difficulty": "MEDIUM", "marks": 2,
+          "stem": "What is the difference between labour-intensive and capital-intensive production? Give one example of an activity of each kind.",
+          "answer": "Labour-intensive production uses more workers and less machinery — for example agriculture or handicrafts. Capital-intensive production uses more machines and technology and fewer workers — for example steel or automobile manufacturing.",
+          "valuePoints": ["Labour-intensive: more workers, less machinery", "Example: agriculture or handicrafts", "Capital-intensive: more machines and technology, fewer workers", "Example: steel or automobile manufacturing"],
+          "rubric": [
+            { "label": "Labour-intensive", "marks": 1, "descriptor": "Meaning (½) and a correct example (½)" },
+            { "label": "Capital-intensive", "marks": 1, "descriptor": "Meaning (½) and a correct example (½)" }
+          ]
+        },
+        {
+          "id": "iest1-08-vsa3", "kind": "vsa", "outcome": "SS9-08-4", "difficulty": "MEDIUM", "marks": 2,
+          "stem": "What is a mixed economy? Name two countries the chapter gives as examples of mixed economies.",
+          "answer": "A mixed economy combines features of market and planned economies: private individuals, enterprises and the government all play important roles, and private ownership exists with some government regulation. Examples: India (post-1991), China (post-1978), Germany and Sweden.",
+          "valuePoints": ["Combines features of market and planned economies", "Private sector and government coexist; private players are regulated", "Examples: India (post-1991), China (post-1978), Germany, Sweden"],
+          "rubric": [
+            { "label": "Meaning", "marks": 1, "descriptor": "Private sector and government both play a role, with regulation" },
+            { "label": "Examples", "marks": 1, "descriptor": "Any two of India (post-1991), China (post-1978), Germany, Sweden — ½ each" }
+          ]
+        },
+        {
+          "id": "iest1-08-sa1", "kind": "sa", "outcome": "SS9-08-1", "difficulty": "MEDIUM", "marks": 3,
+          "stem": "Scarcity forces every economy to answer three key questions. State and briefly explain each question.",
+          "answer": "(1) What to produce: which goods and services, and in what quantities, should be produced — for example, water-intensive sugarcane and paddy or drought-resistant millets and pulses. (2) How to produce: which methods, resources and technologies to use — for example, whether to automate or employ more labour. (3) For whom to produce: which group of consumers to serve, given different needs, incomes and tastes — for example, school shoes for students and sports shoes for athletes.",
+          "valuePoints": ["What to produce — which goods and services and how much", "How to produce — choice of methods, resources and technology", "For whom to produce — which consumers are served, given needs and purchasing power"],
+          "rubric": [
+            { "label": "What to produce", "marks": 1, "descriptor": "Question named and explained" },
+            { "label": "How to produce", "marks": 1, "descriptor": "Question named and explained" },
+            { "label": "For whom to produce", "marks": 1, "descriptor": "Question named and explained" }
+          ]
+        },
+        {
+          "id": "iest1-08-sa2", "kind": "sa", "outcome": "SS9-08-3", "difficulty": "HARD", "marks": 3,
+          "stem": "A garment manufacturer must choose between labour-intensive and capital-intensive methods. Explain any three factors that influence this choice.",
+          "answer": "(1) Relative cost of labour and machines: if machines are expensive the firm relies more on labour; if labour is costly or scarce, machines become more efficient. (2) Level of technology: advanced technology encourages machine use, limited technology leads to manual production. (3) Nature of the product: customised or designer clothes need skilled labour, while mass-produced garments suit machines. (Also accepted: government laws and regulations, such as labour laws or incentives for machinery.)",
+          "valuePoints": ["Cost and availability of labour versus machines", "Level of technology available", "Nature of the product — customised versus mass-produced", "Government laws and regulations"],
+          "rubric": [
+            { "label": "First factor", "marks": 1, "descriptor": "Any one factor, correctly explained" },
+            { "label": "Second factor", "marks": 1, "descriptor": "A different factor, correctly explained" },
+            { "label": "Third factor", "marks": 1, "descriptor": "A third factor, correctly explained" }
+          ]
+        },
+        {
+          "id": "iest1-08-sa3", "kind": "sa", "outcome": "SS9-08-4", "difficulty": "MEDIUM", "marks": 3,
+          "stem": "How did India's economic system change after the economic difficulties of 1991? Explain in three points.",
+          "answer": "(1) After Independence India followed a state-led approach, like a planned economy: the government controlled industries and regulated production through licences and permits, and the public sector dominated banking, transport and heavy industries. (2) Facing serious economic difficulties by 1991, the government introduced reforms that reduced excessive regulation, encouraged private enterprise, opened the economy to global trade and investment, and increased competition. (3) India gradually moved towards a more market-oriented system while the government kept an important role — a mixed economy.",
+          "valuePoints": ["Before 1991: state-led, licences and permits, public sector dominance", "1991 reforms: less regulation, more private enterprise, opening to global trade and investment, more competition", "Result: more market-oriented, with an important role retained by the government"],
+          "rubric": [
+            { "label": "Before 1991", "marks": 1, "descriptor": "State-led system described" },
+            { "label": "The reforms", "marks": 1, "descriptor": "At least two features of the reforms" },
+            { "label": "Outcome", "marks": 1, "descriptor": "More market-oriented, government still important" }
+          ]
+        },
+        {
+          "id": "iest1-08-la1", "kind": "la", "outcome": "SS9-08-4", "difficulty": "HARD", "marks": 5,
+          "stem": "Compare planned, market and mixed economies in terms of ownership of resources, who makes economic decisions, and competition and innovation. Why do most modern economies have mixed features?",
+          "answer": "Planned economy: the government owns most resources (land, factories, banks, transport); a central planning authority decides what, how much, how and for whom to produce and at what prices; strict permits restrict competition, so there is little motivation to innovate (e.g. former Soviet Union, North Korea, Cuba). Market economy: individuals and private companies own most resources; demand and supply answer the key questions with little government intervention, the government acting like a referee; many producers compete, encouraging quality, lower prices and innovation (e.g. USA, Japan, Hong Kong). Mixed economy: private individuals, enterprises and the government all play important roles; private ownership exists with government regulation, and large public sector companies operate (e.g. India post-1991, China post-1978, Germany, Sweden). Most economies are mixed because pure systems have limits — markets need rules, consumer protection and public goods, while full state control reduces competition and innovation.",
+          "valuePoints": ["Ownership: government (planned), private (market), both (mixed)", "Decisions: central planning authority / demand and supply / shared with regulation", "Competition and innovation: restricted / encouraged / private competition under rules", "Correct examples of each system", "Reason most economies are mixed"],
+          "rubric": [
+            { "label": "Ownership", "marks": 1, "descriptor": "Correct for all three systems" },
+            { "label": "Decision-making", "marks": 1, "descriptor": "Correct for all three systems" },
+            { "label": "Competition and innovation", "marks": 1, "descriptor": "Correct contrast drawn" },
+            { "label": "Examples", "marks": 1, "descriptor": "At least one correct example for each system" },
+            { "label": "Why mixed", "marks": 1, "descriptor": "A reasoned explanation of why pure systems are rare" }
+          ]
+        },
+        {
+          "id": "iest1-08-la2", "kind": "la", "outcome": "SS9-08-2", "difficulty": "HARD", "marks": 5,
+          "stem": "A farmer can grow the following combinations of barley and wheat on a piece of land: A — 0 kg barley, 100 kg wheat; B — 25 kg barley, 90 kg wheat; C — 50 kg barley, 70 kg wheat; D — 75 kg barley, 40 kg wheat; E — 100 kg barley, 0 kg wheat. (i) What is the curve drawn from these combinations called, and what does it show? (ii) Find how much wheat is given up for each extra 25 kg of barley when moving from A to B, B to C, C to D and D to E. (iii) What pattern do you notice? (iv) What do all points on this curve represent?",
+          "answer": "(i) It is the Production Possibility Curve (PPC). It shows the different combinations of the two goods that can be produced using all available resources — the trade-off between barley and wheat. (ii) A→B: 100 − 90 = 10 kg; B→C: 90 − 70 = 20 kg; C→D: 70 − 40 = 30 kg; D→E: 40 − 0 = 40 kg of wheat given up for each extra 25 kg of barley. (iii) The wheat given up — the opportunity cost of growing more barley — rises with each step (10, 20, 30, 40 kg). (iv) Every point on the PPC shows the maximum output that can be produced through efficient use of resources, avoiding wastage.",
+          "valuePoints": ["Name: Production Possibility Curve; shows the trade-off between two goods", "Opportunity costs 10, 20, 30 and 40 kg of wheat", "The sacrifice of wheat increases as more barley is grown", "Points on the curve = maximum output with efficient use of resources"],
+          "rubric": [
+            { "label": "Name and meaning", "marks": 1, "descriptor": "Production Possibility Curve; trade-off between the two goods" },
+            { "label": "Calculations", "marks": 2, "descriptor": "All four values correct (½ each)" },
+            { "label": "Pattern", "marks": 1, "descriptor": "Opportunity cost of barley rises at each step" },
+            { "label": "Points on the curve", "marks": 1, "descriptor": "Maximum output with efficient use of resources" }
+          ]
+        },
+        {
+          "id": "iest1-08-case1", "kind": "case", "outcome": "SS9-08-1", "difficulty": "MEDIUM", "marks": 4,
+          "passage": "Ramesh farms five acres in a district where rainfall is low and groundwater is falling. His neighbours grow sugarcane, which earns high profits and supplies the local sugar mill. An agricultural officer advises him to grow millets and pulses instead. These crops need much less water and improve the health of the soil, but they earn less money this season. Ramesh has only enough land, water and money for one plan. He must decide which crop to grow, and whether to buy a small harvesting machine or keep employing workers from his village. Whatever he chooses, he will have to give something up.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq", "prompt": "If Ramesh grows sugarcane, the water saved and the improvement in soil health that he gives up are best described as", "marks": 1,
+              "options": [
+                { "text": "the market price of sugarcane", "correct": false },
+                { "text": "the opportunity cost of growing sugarcane", "correct": true },
+                { "text": "the demand for millets", "correct": false },
+                { "text": "the profit from the sugar mill", "correct": false }
+              ],
+              "answer": "(b) — the value of the next-best alternative given up is the opportunity cost."
+            },
+            { "type": "vsa", "prompt": "Which of the three key economic questions is Ramesh facing when he decides between buying a harvesting machine and employing workers?", "marks": 1, "answer": "How to produce." },
+            { "type": "sa", "prompt": "Explain the trade-off between short-term gains and long-term sustainability in Ramesh's choice of crop.", "marks": 2, "answer": "Sugarcane brings higher profits now (short-term gain) but uses much water in a dry area. Millets and pulses earn less now but save water and improve soil health, supporting farming in the long run (sustainability). (1 mark: short-term gain of sugarcane; 1 mark: long-term benefit of millets and pulses.)" }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "questions": [
+        {
+          "id": "iest1-09-ar1", "kind": "ar", "outcome": "SS9-09-1", "difficulty": "EASY", "marks": 1,
+          "assertion": "When the price of mangoes fell from ₹150 to ₹50 per kg, Srivalli bought 3 kg instead of 1 kg.",
+          "reason": "The law of demand states that there is an inverse relationship between the price of a product and its quantity demanded.",
+          "answer": "a",
+          "explanation": "Both are true and R explains A: as the price fell, the quantity Srivalli demanded rose, which is exactly the inverse relationship the law of demand describes."
+        },
+        {
+          "id": "iest1-09-ar2", "kind": "ar", "outcome": "SS9-09-4", "difficulty": "MEDIUM", "marks": 1,
+          "assertion": "For a price floor to be effective, it must be set above the market equilibrium price.",
+          "reason": "A price ceiling is a price control that sets the maximum amount a seller can charge.",
+          "answer": "b",
+          "explanation": "Both statements are true, but R describes a price ceiling, which does not explain why a price floor must lie above equilibrium."
+        },
+        {
+          "id": "iest1-09-vsa1", "kind": "vsa", "outcome": "SS9-09-2", "difficulty": "EASY", "marks": 2,
+          "stem": "Distinguish between substitute goods and complementary goods, with one example of each.",
+          "answer": "Substitute goods can replace each other, such as tea and coffee: if coffee becomes dearer, some people switch to tea. Complementary goods are used together, such as cars and petrol or smartphones and earphones: demand for one moves with demand for the other.",
+          "valuePoints": ["Substitutes replace each other — tea and coffee", "Complements are used together — cars and petrol, smartphones and earphones"],
+          "rubric": [
+            { "label": "Substitute goods", "marks": 1, "descriptor": "Meaning (½) and a correct example (½)" },
+            { "label": "Complementary goods", "marks": 1, "descriptor": "Meaning (½) and a correct example (½)" }
+          ]
+        },
+        {
+          "id": "iest1-09-vsa2", "kind": "vsa", "outcome": "SS9-09-1", "difficulty": "MEDIUM", "marks": 2,
+          "stem": "What is market demand? At a price of ₹100 per kg, Srivalli demands 2 kg of mangoes, Alex 4 kg and Israt 6 kg. What is the market demand at this price?",
+          "answer": "Market demand is the total quantity of a product demanded by all buyers at different prices — the sum of all individual demands. At ₹100 per kg it is 2 + 4 + 6 = 12 kg.",
+          "valuePoints": ["Market demand = sum of all individual demands at a given price", "2 + 4 + 6 = 12 kg"],
+          "rubric": [
+            { "label": "Meaning", "marks": 1, "descriptor": "Sum of all individual demands" },
+            { "label": "Calculation", "marks": 1, "descriptor": "12 kg" }
+          ]
+        },
+        {
+          "id": "iest1-09-vsa3", "kind": "vsa", "outcome": "SS9-09-3", "difficulty": "MEDIUM", "marks": 2,
+          "stem": "Why might potato wholesalers hold back supply during the peak season? How does this affect supply in the market now?",
+          "answer": "If wholesalers expect prices to rise, they hold back stock now to sell it later at higher prices. This reduces the quantity supplied in the market at present.",
+          "valuePoints": ["Expectation that prices will rise later", "Present supply falls"],
+          "rubric": [
+            { "label": "Reason", "marks": 1, "descriptor": "Expectation of higher future prices" },
+            { "label": "Effect", "marks": 1, "descriptor": "Current supply decreases" }
+          ]
+        },
+        {
+          "id": "iest1-09-sa1", "kind": "sa", "outcome": "SS9-09-1", "difficulty": "MEDIUM", "marks": 3,
+          "stem": "The demand for a good does not depend on its price alone. Explain any three other factors that affect demand.",
+          "answer": "(1) Income of the consumer: when income rises, people buy more or choose better-quality goods even if prices are unchanged. (2) Price of related goods: if coffee becomes dearer, demand for tea (a substitute) rises; if movie tickets become dearer, demand for cinema popcorn (a complement) falls. (3) Seasonality: demand changes with weather and festivals — sweaters in winter, sweets during the festive season. (Also accepted: tastes and preferences, size and composition of the population, future price expectations.)",
+          "valuePoints": ["Income of the consumer", "Prices of related goods — substitutes and complements", "Tastes, preferences and population", "Seasonality", "Future price expectations"],
+          "rubric": [
+            { "label": "First factor", "marks": 1, "descriptor": "Named and explained with an example" },
+            { "label": "Second factor", "marks": 1, "descriptor": "Named and explained with an example" },
+            { "label": "Third factor", "marks": 1, "descriptor": "Named and explained with an example" }
+          ]
+        },
+        {
+          "id": "iest1-09-sa2", "kind": "sa", "outcome": "SS9-09-3", "difficulty": "MEDIUM", "marks": 3,
+          "stem": "In a mango market, at ₹40 per kg the quantity demanded is 38 kg and the quantity supplied is 6 kg; at ₹100 both are 12 kg; at ₹150 the quantity demanded is 8 kg and the quantity supplied is 43 kg. (i) Find the equilibrium price and quantity. (ii) What situation exists at ₹40 and at ₹150, and by how much?",
+          "answer": "(i) Equilibrium is where quantity demanded equals quantity supplied: price ₹100, quantity 12 kg. (ii) At ₹40 there is excess demand (a shortage) of 38 − 6 = 32 kg. At ₹150 there is excess supply (a surplus) of 43 − 8 = 35 kg.",
+          "valuePoints": ["Equilibrium price ₹100 and quantity 12 kg", "At ₹40: excess demand of 32 kg", "At ₹150: excess supply of 35 kg"],
+          "rubric": [
+            { "label": "Equilibrium", "marks": 1, "descriptor": "₹100 and 12 kg" },
+            { "label": "At ₹40", "marks": 1, "descriptor": "Excess demand, 32 kg" },
+            { "label": "At ₹150", "marks": 1, "descriptor": "Excess supply, 35 kg" }
+          ]
+        },
+        {
+          "id": "iest1-09-sa3", "kind": "sa", "outcome": "SS9-09-4", "difficulty": "MEDIUM", "marks": 3,
+          "stem": "Why are public goods such as parks and street lights usually provided by the government? Explain using the example of a neighbourhood park.",
+          "answer": "Public goods are available to everyone, and one person's use does not stop others using them. Private companies rarely provide them because they earn no direct profit. In the park example, if each family contributed ₹5,000 the park could be built, but many families think, 'If others pay, the park will be built anyway and I can use it without paying.' So too little money is collected and the park is never built, even though everyone needs it. The government therefore provides or funds such goods to ensure welfare and equal access.",
+          "valuePoints": ["Public goods benefit all and no one is excluded", "No direct profit, so private firms do not provide them", "People expect others to pay, so not enough money is collected", "Government provides them for welfare and equal access"],
+          "rubric": [
+            { "label": "Nature of public goods", "marks": 1, "descriptor": "Available to all; no direct profit for private firms" },
+            { "label": "The park example", "marks": 1, "descriptor": "Families expect others to pay, so the park is not built" },
+            { "label": "Role of government", "marks": 1, "descriptor": "Government provides or funds them for welfare and access" }
+          ]
+        },
+        {
+          "id": "iest1-09-la1", "kind": "la", "outcome": "SS9-09-4", "difficulty": "HARD", "marks": 5,
+          "stem": "'Markets do not always work fairly, but too much government intervention can also cause harm.' Explain how the government regulates unfair practices in the market, and discuss the limitations of such intervention.",
+          "answer": "Regulation: the government sets a price ceiling (maximum price) on essentials such as medicines to prevent overcharging; it sets a price floor such as a minimum wage so that workers earn enough; and it checks monopolies, which could charge higher prices, give poorer quality and restrict supply. Regulators such as RBI, TRAI and SEBI keep markets transparent; during COVID-19 sanitisers were declared essential commodities and capped at ₹100 for 200 ml. Limitations: (a) price distortions — if wheat is capped at ₹20 per kg when the market price is ₹30, farmers earn less and may produce less, causing shortages; (b) compliance burdens — many licences and permits, for example for a small restaurant, discourage small entrepreneurs; (c) heavy regulation and price controls reduce incentives to invest in new ideas and technology. So intervention is needed but must be applied carefully.",
+          "valuePoints": ["Price ceiling on essentials such as medicines", "Price floor such as the minimum wage", "Checking monopolies; regulators such as RBI, TRAI, SEBI", "Limitation: price distortions and shortages (wheat ₹20 vs ₹30)", "Limitations: compliance burdens; reduced innovation"],
+          "rubric": [
+            { "label": "Regulation of unfair practices", "marks": 2, "descriptor": "At least two correct measures, explained" },
+            { "label": "Limitations", "marks": 2, "descriptor": "At least two correct limitations, explained" },
+            { "label": "Balanced conclusion", "marks": 1, "descriptor": "Intervention needed but must be careful" }
+          ]
+        },
+        {
+          "id": "iest1-09-la2", "kind": "la", "outcome": "SS9-09-1", "difficulty": "HARD", "marks": 5,
+          "stem": "State the law of supply. Three sellers A, B and C supply 1 kg, 3 kg and 2 kg of mangoes at ₹50 per kg, and 3 kg, 7 kg and 8 kg at ₹150 per kg. Find the market supply at each price. Then explain any three factors other than price that affect supply.",
+          "answer": "Law of supply: as price rises, quantity supplied increases, and as price falls, it decreases, because higher prices raise profitability and attract new firms. Market supply at ₹50 = 1 + 3 + 2 = 6 kg; at ₹150 = 3 + 7 + 8 = 18 kg. Other factors: (1) Price of related goods — if wheat prices are low and chickpea prices high, a farmer grows more chickpeas next season. (2) Number of sellers — more sellers raise market supply and lower prices. (3) Technology — drip irrigation, weather sensors or cold storage lower costs and raise supply. (Also accepted: future expectations — producers expecting a boom produce more.)",
+          "valuePoints": ["Law of supply: direct relationship between price and quantity supplied", "Market supply 6 kg at ₹50 and 18 kg at ₹150", "Price of related goods", "Number of sellers", "Technology; future expectations"],
+          "rubric": [
+            { "label": "Law of supply", "marks": 1, "descriptor": "Direct relationship stated, with a reason" },
+            { "label": "Market supply", "marks": 1, "descriptor": "6 kg and 18 kg (½ each)" },
+            { "label": "Factors", "marks": 3, "descriptor": "Three factors other than price, each explained (1 each)" }
+          ]
+        },
+        {
+          "id": "iest1-09-case1", "kind": "case", "outcome": "SS9-09-3", "difficulty": "MEDIUM", "marks": 4,
+          "passage": "A hotel in Goa has 100 rooms, but it does not charge the same tariff all year. On a Monday in July, in the off-season, a room costs ₹1,500 a night. On a Saturday in December, during the tourist season, it costs ₹8,000. On New Year's Eve, when demand is very high, the same room costs ₹25,000. If a group tour cancels its booking, the hotel may cut its tariff by 40 per cent overnight to fill the empty rooms quickly. The hotel may even change its tariff several times in a day, depending on how fast rooms are being booked, what nearby hotels charge, festivals and events in the area, and weather forecasts.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq", "prompt": "The main reason the same room costs ₹25,000 on New Year's Eve but ₹1,500 on a Monday in July is", "marks": 1,
+              "options": [
+                { "text": "the government fixes a higher price for festivals", "correct": false },
+                { "text": "the hotel has more rooms on New Year's Eve", "correct": false },
+                { "text": "the cost of cleaning rooms rises in December", "correct": false },
+                { "text": "demand for rooms is much higher on New Year's Eve", "correct": true }
+              ],
+              "answer": "(d) — the tariff rises with demand; the number of rooms (supply) stays the same."
+            },
+            { "type": "vsa", "prompt": "If a group tour cancels and the hotel cuts an ₹8,000 tariff by 40 per cent, what is the new tariff?", "marks": 1, "answer": "40% of ₹8,000 = ₹3,200, so the new tariff is ₹8,000 − ₹3,200 = ₹4,800." },
+            { "type": "sa", "prompt": "Why does the chapter say that 'equilibrium' in real-world markets is never stable? Use the hotel example in your answer.", "marks": 2, "answer": "Real markets are dynamic: demand and supply keep changing with seasons, events, weather and other conditions, so the market keeps adjusting to a new equilibrium and never fully settles. The hotel's tariff changes with the season, festivals, cancellations and bookings — sometimes several times a day. (1 mark: conditions keep changing, so equilibrium keeps moving; 1 mark: the hotel example applied.)" }
+          ]
+        }
+      ]
+    }
+  ]
+}

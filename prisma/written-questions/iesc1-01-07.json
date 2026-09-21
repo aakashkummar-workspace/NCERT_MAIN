@@ -1,0 +1,2297 @@
+{
+  "book": "iesc1",
+  "chapters": [
+    {
+      "number": 1,
+      "questions": [
+        {
+          "id": "iesc1-01-ar1",
+          "kind": "ar",
+          "outcome": "S9-01-2",
+          "difficulty": "EASY",
+          "marks": 1,
+          "assertion": "Measurements in science are based on agreed international standards such as the SI units, and not on local objects or opinions.",
+          "reason": "Standard units allow scientific results obtained in different places to be compared, and they also ensure fairness in daily life and trade.",
+          "answer": "a",
+          "explanation": "Both statements are true and R explains A: a kilogram must mean the same amount everywhere, so measurement is tied to agreed international standards rather than to a local weight."
+        },
+        {
+          "id": "iesc1-01-ar2",
+          "kind": "ar",
+          "outcome": "S9-01-1",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "In science, a theory means a guess or an untested idea.",
+          "reason": "A theory provides an explanation of why an observed pattern occurs, based on evidence gathered and tested over time.",
+          "answer": "d",
+          "explanation": "A is false: in science a theory is not a guess but an explanation based on careful testing and critical examination. R is true, and it is exactly the reason A is false."
+        },
+        {
+          "id": "iesc1-01-vsa1",
+          "kind": "vsa",
+          "outcome": "S9-01-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Distinguish between a law and a theory as these words are used in science. Give one example of each from the chapter.",
+          "answer": "A law describes a regular pattern observed in nature, stated in words or as a mathematical relationship — for example, Newton's laws of motion, which explain the jerk felt when a bus stops suddenly. A theory goes a step further and explains why the pattern occurs, using evidence gathered over time — for example, the atomic theory, which explains how molecules are formed.",
+          "valuePoints": [
+            "A law describes a regular pattern observed in nature",
+            "A theory explains why the pattern occurs, based on evidence",
+            "Examples: Newton's laws of motion (law); atomic theory (theory)"
+          ],
+          "rubric": [
+            {
+              "label": "Law described with an example",
+              "marks": 1,
+              "descriptor": "Describes a pattern in nature (half) with a named example such as Newton's laws of motion (half)"
+            },
+            {
+              "label": "Theory described with an example",
+              "marks": 1,
+              "descriptor": "Explanation of why the pattern occurs, based on evidence (half) with a named example such as the atomic theory (half)"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-01-vsa2",
+          "kind": "vsa",
+          "outcome": "S9-01-3",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "Weather forecasts are usually reliable for the next few hours but much less certain for a date two weeks away. Give two reasons why.",
+          "answer": "Weather depends on many changing factors at once — temperature, pressure, humidity and wind — so a forecast has to track all of them together. Very tiny differences in the conditions grow larger as time passes, so a small difference today can lead to something completely different a fortnight later. Forecasts therefore become less certain the further ahead they look.",
+          "valuePoints": [
+            "Weather depends on many changing factors: temperature, pressure, humidity, wind",
+            "Very small differences in conditions grow over time and lead to a completely different outcome",
+            "Hence forecasts are reliable for hours or a few days, and less certain further ahead"
+          ],
+          "rubric": [
+            {
+              "label": "Many interacting factors",
+              "marks": 1,
+              "descriptor": "Names at least two of temperature, pressure, humidity and wind as factors the weather depends on"
+            },
+            {
+              "label": "Small differences grow with time",
+              "marks": 1,
+              "descriptor": "States that tiny differences in conditions grow over time, making long-range forecasts uncertain"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-01-vsa3",
+          "kind": "vsa",
+          "outcome": "S9-01-2",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Why does science use a shared set of symbols and units for physical quantities? Write the symbols used for mass, velocity, force and electric current.",
+          "answer": "A shared set of terms, symbols and units lets scientists anywhere in the world describe observations, compare results and build ideas together, because every term then means exactly the same thing to everyone. The symbols are: mass m, velocity v, force F and electric current I.",
+          "valuePoints": [
+            "Shared symbols and units allow observations to be described, compared and built upon across the world",
+            "m for mass, v for velocity, F for force, I for electric current"
+          ],
+          "rubric": [
+            {
+              "label": "Reason for a shared language",
+              "marks": 1,
+              "descriptor": "Clear, unambiguous communication and comparison of results between scientists anywhere"
+            },
+            {
+              "label": "Symbols",
+              "marks": 1,
+              "descriptor": "All four correct: m, v, F, I; half a mark if two or three are correct"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-01-sa1",
+          "kind": "sa",
+          "outcome": "S9-01-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A cricket ball is hit for a six. You want to build a simple model to decide whether the ball will cross the boundary without hitting the ground first. Name two details you would include and two you would ignore, and explain why leaving details out is a deliberate choice rather than a mistake.",
+          "answer": "Details to include: the mass of the ball, and the speed and direction in which it has been hit — these decide how far and how high the ball goes. Details to ignore: the brand of the bat, the colour of the ball and the amount of grass on the field make no difference at all; air resistance, the spin of the ball and the stitching at the seam have smaller effects and can also be left out of a simple model. Leaving details out is deliberate. The natural world is too complex to study in full detail, so a model keeps only what is most important for the question being asked. This keeps the model simple enough to work with while still allowing us to answer the question, and more detail can be added later when greater accuracy is needed.",
+          "valuePoints": [
+            "Include: mass of the ball; speed and direction of the hit",
+            "Ignore: brand of bat, colour of ball, grass on the field, or smaller effects such as air resistance, spin and the seam",
+            "Simplification is deliberate — a model keeps only what matters for the question, and detail can be added later for accuracy"
+          ],
+          "rubric": [
+            {
+              "label": "Details included",
+              "marks": 1,
+              "descriptor": "Two relevant quantities, such as the mass of the ball and the speed and direction of the hit"
+            },
+            {
+              "label": "Details ignored",
+              "marks": 1,
+              "descriptor": "Two irrelevant or small-effect details, such as the brand of bat, colour of the ball, grass, air resistance or spin"
+            },
+            {
+              "label": "Why simplification is deliberate",
+              "marks": 1,
+              "descriptor": "States that models deliberately ignore detail to keep the problem simple enough to answer, with detail added later for accuracy"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-01-sa2",
+          "kind": "sa",
+          "outcome": "S9-01-2",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "A passenger aircraft needed 22,300 kg of fuel in total, but the ground crew worked out the amount using the density of fuel in pounds per litre instead of kilograms per litre. The aircraft took off about 15,000 litres short and ran out of fuel in mid-flight. What went wrong, and what does this incident show about the use of SI units?",
+          "answer": "The crew used the wrong unit of mass. A pound and a kilogram are very different amounts, so working out the volume of fuel from a density expressed in pounds per litre gave a figure far smaller than the volume actually needed. The aircraft was loaded about 15,000 litres short and the fuel ran out in flight; it could only glide to an emergency landing. The incident shows that a measurement means nothing unless its unit is stated and agreed. Using standard SI units everywhere removes the need for conversions between different systems of units, and it is exactly those conversions that let such mistakes in.",
+          "valuePoints": [
+            "Pounds and kilograms are different units of mass, so the calculated volume of fuel was far too small",
+            "The aircraft was about 15,000 litres short and ran out of fuel in flight",
+            "Using standard SI units everywhere avoids conversions and the errors they cause"
+          ],
+          "rubric": [
+            {
+              "label": "Identifies the error",
+              "marks": 1,
+              "descriptor": "Density taken in pounds per litre instead of kilograms per litre; pounds and kilograms are very different"
+            },
+            {
+              "label": "Consequence",
+              "marks": 1,
+              "descriptor": "Too little fuel was loaded (about 15,000 litres short), so the aircraft ran out of fuel mid-flight"
+            },
+            {
+              "label": "Lesson about SI units",
+              "marks": 1,
+              "descriptor": "Standard SI units used everywhere avoid conversions and prevent this kind of error"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-01-sa3",
+          "kind": "sa",
+          "outcome": "S9-01-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Varsha tells Meghna, \"It will rain this afternoon because the clouds look dark.\" Write three questions Meghna could ask to make this prediction scientifically testable, and state what all three questions have in common.",
+          "answer": "Meghna could ask: (i) What is the humidity today, and was it above 80 per cent the last time it rained? (ii) What is today's wind speed and direction? (iii) Is the temperature dropping the way it did before the recent rains? Another good question is what the condition of the sky was when it rained last time. What all three have in common is that each asks for measurable data or for a comparison with a past pattern, rather than for an opinion. Questions with a simple yes or no answer are usually not so useful, because they do not produce evidence that can be checked against what actually happens.",
+          "valuePoints": [
+            "Three questions asking for measurable quantities: humidity, wind speed and direction, temperature trend, sky conditions on earlier rainy days",
+            "All ask for measurable data or past patterns rather than for an opinion",
+            "Simple yes or no questions are of little use for testing a prediction"
+          ],
+          "rubric": [
+            {
+              "label": "Testable questions",
+              "marks": 1.5,
+              "descriptor": "Half a mark each for up to three questions seeking a measurable quantity or a past pattern"
+            },
+            {
+              "label": "What they have in common",
+              "marks": 1,
+              "descriptor": "Each asks for measurable evidence or past patterns, not for an opinion"
+            },
+            {
+              "label": "Why yes or no questions are weak",
+              "marks": 0.5,
+              "descriptor": "States that yes or no questions give no evidence that can be checked"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-01-la1",
+          "kind": "la",
+          "outcome": "S9-01-1",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "\"No scientific theory is ever final, and none is beyond question.\" Explain what this statement means. In your answer describe the role of prediction in science, say what scientists do when a prediction does not match an observation, and explain why this openness is called a strength of science rather than a weakness. Use the claim that food becomes harmful during an eclipse to show how such a claim can be examined scientifically.",
+          "answer": "Well-established laws, theories and models let us anticipate what will happen under new or different conditions before an experiment is performed, and in many cases even when it cannot be performed — how far a kicked football will travel, how much carbon dioxide a reaction will produce, how breathing changes while running. These are not guesses but reasoned expectations based on evidence and careful thinking. When a prediction matches the observation, confidence in the underlying science grows. When it does not, scientists do not defend the idea on the basis of opinion or belief; they re-examine their assumptions, their models and their measurements, and revise the idea if the evidence requires it. Even the most successful theories have limits, and may fail when new conditions are explored or when measurements become more precise. This openness to being corrected by nature itself is a strength rather than a weakness, because it is what has made scientific knowledge reliable: an idea that survives repeated testing has earned its place, and one that fails is replaced rather than protected. The eclipse claim can be examined in the same way. An eclipse is only a play of shadows, so we can ask what physical change actually occurs during one. Does the temperature change significantly? Does food go bad if it is simply left in a shadow? No physical, chemical or biological mechanism supports the claim, and asking these measurable questions is enough to disprove it.",
+          "valuePoints": [
+            "Laws, theories and models allow reasoned predictions about new conditions; they are not guesses",
+            "A matching prediction increases confidence in the underlying science",
+            "A failed prediction makes scientists re-examine assumptions, models and measurements; ideas are rejected on evidence, not opinion",
+            "Openness to correction is a strength because it is what makes scientific knowledge reliable",
+            "Eclipse claim: an eclipse is a play of shadows; ask whether temperature changes or food spoils in shadow; no mechanism supports the claim"
+          ],
+          "rubric": [
+            {
+              "label": "Role of prediction",
+              "marks": 1,
+              "descriptor": "Predictions are reasoned expectations drawn from laws, theories and models, with an example"
+            },
+            {
+              "label": "When a prediction matches",
+              "marks": 1,
+              "descriptor": "Confidence in the underlying science grows"
+            },
+            {
+              "label": "When a prediction fails",
+              "marks": 1,
+              "descriptor": "Assumptions, models or measurements are re-examined; ideas are rejected only on evidence"
+            },
+            {
+              "label": "Why this is a strength",
+              "marks": 1,
+              "descriptor": "Correction by nature is what makes science reliable; no theory is final"
+            },
+            {
+              "label": "Eclipse claim examined",
+              "marks": 1,
+              "descriptor": "Asks measurable questions such as temperature change or food left in shadow, and concludes no mechanism supports the claim"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-01-la2",
+          "kind": "la",
+          "outcome": "S9-01-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "Estimate roughly how many litres of air a person breathes in one day. Take about 15 breaths per minute and about 0.5 litre of air in one breath, and show your working. Then check your estimate by a second route: about 4 to 5 breaths fill a party balloon of volume about 2 litres, a balloon can be blown up in about 20 s, so about 3 balloons could be filled in a minute. Finally, explain why an approximate answer is good enough here.",
+          "answer": "First route: the number of minutes in a day is 60 × 24 = 1440 min. Number of breaths in a day = 15 breaths per minute × 1440 min = 21,600 breaths, that is roughly 20 thousand breaths. Volume of air breathed in a day = 21,600 × 0.5 L = 10,800 L, that is about 10,000 litres. Second route: 3 balloons per minute × 2 litres per balloon × 1440 minutes per day = 8,640 litres. The two routes give about 10,000 L and about 8,640 L, which are close enough for estimation purposes, so the first answer is reasonable. (The balloon route is only a check: nobody could actually blow up balloons non-stop all day, unlike restful breathing.) An approximate answer is good enough here because the aim is not an exact number but to see whether the answer makes sense — 100 litres a day would clearly be far too little and a million litres far too much. Estimating in this way helps build intuition, detect errors and develop confidence in one's own reasoning.",
+          "valuePoints": [
+            "1440 minutes in a day; 15 × 1440 = 21,600 breaths, about 20 thousand",
+            "21,600 × 0.5 L = 10,800 L, about 10,000 litres a day",
+            "Check: 3 balloons per minute × 2 L × 1440 min = 8,640 L",
+            "The two estimates agree closely enough, so the first estimate is reasonable",
+            "An estimate is enough because the purpose is to judge whether an answer is sensible, not to obtain an exact value"
+          ],
+          "rubric": [
+            {
+              "label": "Breaths per day",
+              "marks": 1,
+              "descriptor": "60 × 24 = 1440 min and 15 × 1440 = 21,600 breaths (accept about 20 thousand)"
+            },
+            {
+              "label": "Volume per day",
+              "marks": 1,
+              "descriptor": "21,600 × 0.5 L = 10,800 L, about 10,000 litres"
+            },
+            {
+              "label": "Second route",
+              "marks": 1,
+              "descriptor": "3 × 2 L × 1440 = 8,640 L"
+            },
+            {
+              "label": "Comparison of the two",
+              "marks": 1,
+              "descriptor": "States that the two estimates are close, so the first estimate is reasonable"
+            },
+            {
+              "label": "Why an estimate is enough",
+              "marks": 1,
+              "descriptor": "The aim is to check whether the answer is sensible; estimation builds intuition and helps detect errors"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-01-case1",
+          "kind": "case",
+          "outcome": "S9-01-1",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "passage": "A message forwarded to Nisha's class group claims that a certain copper bangle cures fever within a day. Several of her classmates believe it because the message says that thousands of people have already shared it. Their teacher asks the class neither to accept nor to reject the claim straight away, but to work out how it could be tested. The class agrees on a few questions. Was the temperature of these people actually measured with a thermometer, before and after? How many people wore the bangle, and how many did not? Did the people who did not wear it also get better within a day, since many fevers settle by themselves? Is there any known physical, chemical or biological mechanism by which copper touching the skin could change body temperature? By the end of the discussion the class has turned a forwarded claim into a set of questions that ask for measurements and comparisons.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Which of these questions asked by the class is the LEAST useful for testing the claim scientifically?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Was the temperature measured with a thermometer before and after?",
+                  "correct": false
+                },
+                {
+                  "text": "Have thousands of people already shared the message?",
+                  "correct": true
+                },
+                {
+                  "text": "Did people who did not wear the bangle also get better within a day?",
+                  "correct": false
+                },
+                {
+                  "text": "Is there any known mechanism by which copper on the skin could change body temperature?",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) — the number of people who have shared a message is not evidence about whether it is true. The other three ask for measurable data, a comparison, or a mechanism."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Why did the class ask about the people who did NOT wear the bangle?",
+              "marks": 1,
+              "answer": "Because many fevers settle by themselves within a day. Unless we know what happened to the people who did not wear the bangle, we cannot tell whether wearing it made any difference at all."
+            },
+            {
+              "type": "sa",
+              "prompt": "The teacher says the class should neither simply accept nor simply reject the claim. Explain why this is the scientific attitude, and state what would make the class change its mind.",
+              "marks": 2,
+              "answer": "In science an idea is judged on evidence, not on opinion, belief or how many people repeat it, so rejecting the claim merely because it sounds odd would be as unscientific as believing it because it was forwarded many times (1 mark). The class should change its mind if careful measurements — temperatures recorded before and after, for people who wore the bangle and for people who did not — showed a real difference, and if a physical, chemical or biological mechanism could explain it; if the measurements show no difference, the claim is disproved (1 mark)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "questions": [
+        {
+          "id": "iesc1-02-ar1",
+          "kind": "ar",
+          "outcome": "S9-02-3",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "A bacterial cell is described as a prokaryotic cell.",
+          "reason": "A bacterial cell has a cell wall outside its cell membrane.",
+          "answer": "b",
+          "explanation": "Both statements are true, but R is not the explanation of A. A bacterial cell is prokaryotic because it lacks a well-defined, membrane-bound nucleus and membrane-bound organelles; its genetic material lies in a region called the nucleoid. A cell wall is also present in plant and fungal cells, which are eukaryotic, so a cell wall does not make a cell prokaryotic."
+        },
+        {
+          "id": "iesc1-02-ar2",
+          "kind": "ar",
+          "outcome": "S9-02-4",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "When a Rhoeo leaf peel is placed in a 20 per cent sugar solution, the outer boundary of each cell keeps its shape even though the contents inside shrink.",
+          "reason": "A plant cell has a rigid cell wall outside the cell membrane, which maintains the shape of the cell.",
+          "answer": "a",
+          "explanation": "Both are true and R explains A: the cell loses water by osmosis and the cell membrane pulls away from the cell wall, but the rigid cell wall keeps the outer shape unchanged. A cheek cell, which has no cell wall, simply shrinks."
+        },
+        {
+          "id": "iesc1-02-vsa1",
+          "kind": "vsa",
+          "outcome": "S9-02-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Who first observed cells, in which year and in what material? What is the limit of resolution of the human eye?",
+          "answer": "Robert Hooke was the first person to observe a cell, in 1665, using a microscope he designed himself; he was examining a thin slice of cork, in which he saw small box-like compartments and named them cells. The limit of resolution of the human eye is 0.1 mm: viewed from about 25 cm, two points closer than this cannot be seen as separate.",
+          "valuePoints": [
+            "Robert Hooke, 1665, in a thin slice of cork",
+            "He saw box-like compartments and named them cells",
+            "Limit of resolution of the human eye is 0.1 mm (at about 25 cm)"
+          ],
+          "rubric": [
+            {
+              "label": "Discovery of the cell",
+              "marks": 1,
+              "descriptor": "Robert Hooke (half); 1665 and cork (half)"
+            },
+            {
+              "label": "Limit of resolution",
+              "marks": 1,
+              "descriptor": "0.1 mm; accept a mention of the near point of 25 cm"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-02-vsa2",
+          "kind": "vsa",
+          "outcome": "S9-02-4",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "Two pieces of potato of roughly equal size are weighed and then left for an hour, one in a beaker of plain water and the other in a beaker of 20 per cent salt solution. State how the weight of each piece changes, and explain why.",
+          "answer": "The piece in plain water gains weight and swells; the piece in the salt solution loses weight and shrinks. The cell membrane is selectively permeable: it lets water pass through but not the salt. Water therefore moves by osmosis from where there is more water and less solute to where there is less water and more solute. In plain water the surroundings are more dilute than the cell contents, so water enters the potato; in the 20 per cent salt solution the surroundings are more concentrated, so water leaves the potato.",
+          "valuePoints": [
+            "In plain water the potato piece gains weight and swells; in salt solution it loses weight and shrinks",
+            "The cell membrane is selectively permeable — it allows water but not salt to pass",
+            "Water moves by osmosis from the more dilute to the more concentrated side"
+          ],
+          "rubric": [
+            {
+              "label": "Change in weight",
+              "marks": 1,
+              "descriptor": "Gains weight in plain water (half) and loses weight in salt solution (half)"
+            },
+            {
+              "label": "Explanation",
+              "marks": 1,
+              "descriptor": "Osmosis through a selectively permeable membrane, water moving from the dilute to the concentrated side"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-02-vsa3",
+          "kind": "vsa",
+          "outcome": "S9-02-2",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Name the organelle called the powerhouse of the cell and say why it is given that name. Name the organelle that modifies, sorts and packages materials received from the endoplasmic reticulum.",
+          "answer": "The mitochondrion is called the powerhouse of the cell because glucose and other molecules are broken down inside it during cellular respiration and the energy released is stored as ATP, which is used for most cellular activities. The Golgi apparatus modifies, sorts and packages proteins and lipids into vesicles for transport, secretion or lysosome formation.",
+          "valuePoints": [
+            "Mitochondrion — cellular respiration releases energy which is stored as ATP, the energy currency of the cell",
+            "Golgi apparatus — modifies, sorts and packages materials into vesicles"
+          ],
+          "rubric": [
+            {
+              "label": "Mitochondrion",
+              "marks": 1,
+              "descriptor": "Named (half) with the reason: energy released in cellular respiration, stored as ATP (half)"
+            },
+            {
+              "label": "Golgi apparatus",
+              "marks": 1,
+              "descriptor": "Named correctly; accept Golgi body or Golgi complex"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-02-sa1",
+          "kind": "sa",
+          "outcome": "S9-02-1",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A student places a transparent ruler on the stage of a light microscope and finds the diameter of the circular field of view to be 4 mm. She then puts an onion peel slide on the stage and counts 20 cells lying along the diameter of the field of view. (i) Find the estimated size of one onion peel cell in micrometres. (ii) If the eyepiece has a magnifying power of 10X and the objective lens in use has a magnifying power of 40X, what is the total magnification? (1 mm = 1000 micrometres.)",
+          "answer": "(i) Diameter of the field of view = 4 mm = 4 × 1000 = 4000 micrometres. Estimated size of one cell = diameter of the visible field in micrometres divided by the number of cells along the diameter = 4000 / 20 = 200 micrometres. (ii) Total magnification = magnifying power of the eyepiece × magnifying power of the objective lens = 10 × 40 = 400X. So the cell, whose real size is about 200 micrometres, appears 400 times larger.",
+          "valuePoints": [
+            "4 mm converted to 4000 micrometres",
+            "4000 / 20 = 200 micrometres for one cell",
+            "Total magnification = 10 × 40 = 400X"
+          ],
+          "rubric": [
+            {
+              "label": "Unit conversion",
+              "marks": 1,
+              "descriptor": "4 mm written as 4000 micrometres"
+            },
+            {
+              "label": "Size of one cell",
+              "marks": 1,
+              "descriptor": "4000 divided by 20 = 200 micrometres, with the formula shown"
+            },
+            {
+              "label": "Total magnification",
+              "marks": 1,
+              "descriptor": "10 × 40 = 400X"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-02-sa2",
+          "kind": "sa",
+          "outcome": "S9-02-3",
+          "difficulty": "EASY",
+          "marks": 3,
+          "stem": "Give three differences between a prokaryotic cell and a eukaryotic cell, and name one organism whose cells are of each type.",
+          "answer": "(i) A prokaryotic cell has no membrane-bound nucleus; its genetic material lies in a region called the nucleoid. A eukaryotic cell has a well-defined nucleus enclosed by a nuclear membrane. (ii) A prokaryotic cell has no membrane-bound organelles, and most cellular activities take place directly in the cytoplasm; a eukaryotic cell has several membrane-bound organelles. (iii) A typical prokaryotic cell is 1 to 10 micrometres across and the organism is usually unicellular, while a typical eukaryotic cell is 10 to 100 micrometres across and the organism may be unicellular or multicellular. Example of a prokaryote: a bacterium. Example of a eukaryote: a plant such as an onion, or an animal such as a human being.",
+          "valuePoints": [
+            "Nucleus: nucleoid without a membrane in prokaryotes, well-defined membrane-bound nucleus in eukaryotes",
+            "Membrane-bound organelles absent in prokaryotes, present in eukaryotes",
+            "Size 1 to 10 micrometres and usually unicellular, against 10 to 100 micrometres and unicellular or multicellular",
+            "Examples: bacterium (prokaryote); onion or human (eukaryote)"
+          ],
+          "rubric": [
+            {
+              "label": "Nucleus",
+              "marks": 1,
+              "descriptor": "Nucleoid without a membrane against a well-defined membrane-bound nucleus"
+            },
+            {
+              "label": "Organelles or size",
+              "marks": 1,
+              "descriptor": "Membrane-bound organelles absent against present, or the size and cell-number difference"
+            },
+            {
+              "label": "Third difference and examples",
+              "marks": 1,
+              "descriptor": "A correct third difference (half) and one named organism of each type (half)"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-02-sa3",
+          "kind": "sa",
+          "outcome": "S9-02-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Plastids are of three kinds. Name them, state where each is found and what each does, and explain how chromoplasts help a plant even though they take no part in making food.",
+          "answer": "Chloroplasts contain the green pigment chlorophyll, which absorbs sunlight; they are found in the green parts of a plant and are the site of photosynthesis. Chromoplasts contain pigments other than chlorophyll — yellow, orange or red — and are found in flower petals and in fruits. Leucoplasts have no pigment and are colourless; they store food materials such as starch, oils or proteins, for example in potato and taro (Colocasia) cells. Chromoplasts help the plant because the bright colours they give to flowers attract pollinators, and the bright colours of fruits attract fruit-eating animals that help disperse the seeds.",
+          "valuePoints": [
+            "Chloroplast: chlorophyll, green parts, photosynthesis",
+            "Chromoplast: yellow, orange or red pigments, in petals and fruits",
+            "Leucoplast: colourless, stores starch, oils or proteins",
+            "Chromoplasts attract pollinators to flowers and seed-dispersing animals to fruits"
+          ],
+          "rubric": [
+            {
+              "label": "Chloroplast",
+              "marks": 1,
+              "descriptor": "Named with chlorophyll and photosynthesis"
+            },
+            {
+              "label": "Chromoplast and leucoplast",
+              "marks": 1,
+              "descriptor": "Half a mark each for pigment or storage function and where they are found"
+            },
+            {
+              "label": "Use of bright colours",
+              "marks": 1,
+              "descriptor": "Attracting pollinators, and fruit-eating animals that disperse seeds"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-02-la1",
+          "kind": "la",
+          "outcome": "S9-02-4",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "Distinguish between diffusion and osmosis. Then describe what happens to a cell placed in a hypotonic, an isotonic and a hypertonic solution. Finally, explain why adding a large amount of salt or sugar to pieces of fruit, as when making pickle or murabba, keeps them from being spoiled by bacteria and fungi.",
+          "answer": "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration; it takes place because of a difference in concentration, and it can occur even without any membrane. Osmosis is the diffusion of water across a selectively permeable membrane — a membrane that lets some substances through and blocks others. In a hypotonic solution the solute concentration outside is lower than inside the cell, so water moves into the cell and it swells. In an isotonic solution the concentrations outside and inside are equal, so there is no net movement of water and the cell stays as it is. In a hypertonic solution the solute concentration outside is higher than inside, so water moves out of the cell and it shrinks; an animal cell such as a cheek cell shrinks visibly, while in a plant cell the contents pull away from the rigid cell wall. Adding a large amount of salt or sugar makes the surroundings of the fruit strongly hypertonic. Any bacterium or fungus landing on it loses water by osmosis into the concentrated solution, so it cannot grow or multiply. The preservation of pickles, murabbas and sharbat therefore depends on osmosis and not on any chemical added to kill the microorganisms.",
+          "valuePoints": [
+            "Diffusion: net movement of particles from higher to lower concentration, no membrane needed",
+            "Osmosis: diffusion of water across a selectively permeable membrane",
+            "Hypotonic: water enters and the cell swells",
+            "Isotonic: no net movement of water; hypertonic: water leaves and the cell shrinks",
+            "High salt or sugar makes the surroundings hypertonic, so spoilage microorganisms lose water and cannot grow"
+          ],
+          "rubric": [
+            {
+              "label": "Diffusion",
+              "marks": 1,
+              "descriptor": "Net movement from higher to lower concentration; occurs even without a membrane"
+            },
+            {
+              "label": "Osmosis",
+              "marks": 1,
+              "descriptor": "Diffusion of water through a selectively permeable membrane"
+            },
+            {
+              "label": "Hypotonic and isotonic",
+              "marks": 1,
+              "descriptor": "Half a mark each: cell swells; no net change"
+            },
+            {
+              "label": "Hypertonic",
+              "marks": 1,
+              "descriptor": "Water leaves the cell and it shrinks; plant cell contents pull away from the cell wall"
+            },
+            {
+              "label": "Preservation by salt or sugar",
+              "marks": 1,
+              "descriptor": "Strongly hypertonic surroundings draw water out of bacteria and fungi, so they cannot grow"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-02-la2",
+          "kind": "la",
+          "outcome": "S9-02-2",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "A cell is often compared with a tiny living factory in which each part does a specific job. Describe the function of each of the following: the nucleus, the rough endoplasmic reticulum, the Golgi apparatus, the lysosome and the vacuole of a mature plant cell.",
+          "answer": "Nucleus: it has a double-layered nuclear membrane with pores through which material passes between the nucleus and the cytoplasm. It contains the chromosomes, which are made of DNA and specific proteins and carry the information for inheritance; the functional segments of DNA are the genes. The nucleus therefore controls the activities of the cell, and its nucleolus is where ribosomal subunits are made. Rough endoplasmic reticulum: it is a network spreading through the cytoplasm with ribosomes attached to its surface, which is why it looks rough; it is mainly involved in the synthesis and secretion of proteins, for example in gland cells such as pancreatic cells. Golgi apparatus: stacks of flattened sac-like structures that act like the cell's post office, modifying, sorting and packaging proteins and lipids into vesicles for transport, secretion or lysosome formation. Lysosome: a single membrane-bound sac filled with enzymes that break down unwanted proteins, carbohydrates and fats and even damaged parts of the cell, keeping the cell clean and healthy; the products are released into the cytoplasm to be reused. Vacuole: a mature plant cell usually has one large central vacuole bounded by a single selectively permeable membrane and filled with cell sap. It stores water, minerals, sugars and waste materials, and by storing water it keeps up the pressure inside the cell that keeps the plant firm; when water is short the vacuole loses water and the plant wilts.",
+          "valuePoints": [
+            "Nucleus: contains chromosomes of DNA and protein, carries genetic information and controls cell activities",
+            "Rough ER: ribosomes on its surface, synthesis and secretion of proteins",
+            "Golgi apparatus: modifies, sorts and packages proteins and lipids into vesicles",
+            "Lysosome: enzyme-filled sac that breaks down waste and worn-out parts of the cell",
+            "Vacuole: stores water, minerals, sugars and wastes, and keeps the plant cell firm"
+          ],
+          "rubric": [
+            {
+              "label": "Nucleus",
+              "marks": 1,
+              "descriptor": "Chromosomes, DNA and genetic information, and control of cell activities"
+            },
+            {
+              "label": "Rough endoplasmic reticulum",
+              "marks": 1,
+              "descriptor": "Ribosomes attached; synthesis and transport or secretion of proteins"
+            },
+            {
+              "label": "Golgi apparatus",
+              "marks": 1,
+              "descriptor": "Modifies, sorts and packages materials into vesicles"
+            },
+            {
+              "label": "Lysosome",
+              "marks": 1,
+              "descriptor": "Membrane-bound sac of enzymes that digests waste and damaged organelles"
+            },
+            {
+              "label": "Vacuole",
+              "marks": 1,
+              "descriptor": "Stores water, minerals, sugars and wastes, and maintains firmness of the cell"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-02-case1",
+          "kind": "case",
+          "outcome": "S9-02-4",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "passage": "Four potato halves are peeled and scooped out to make small potato cups. Three of them are made from raw potatoes and one from a potato that has first been boiled. Each cup is stood in a beaker containing plain water. Cup A is left empty. One teaspoon of sugar is put into Cup B. One teaspoon of salt is put into Cup C. One teaspoon of sugar is put into Cup D, which is the boiled potato. After two hours the four cups are examined. A clear liquid has collected in the hollows of Cup B and Cup C. The hollows of Cup A and Cup D are still dry.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The liquid that collects in the hollows of Cups B and C has come from",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the sugar and the salt melting in the warm air",
+                  "correct": false
+                },
+                {
+                  "text": "the water in the beaker, which has moved through the potato tissue into the hollow",
+                  "correct": true
+                },
+                {
+                  "text": "the sugar and salt moving out of the hollow into the beaker",
+                  "correct": false
+                },
+                {
+                  "text": "water vapour from the air condensing inside the hollow",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) — the sugar and the salt make the liquid in the hollow much more concentrated than the water in the beaker, so water moves through the living potato cells by osmosis and collects in the hollow."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Why is Cup A, which is left empty, necessary in this experiment?",
+              "marks": 1,
+              "answer": "Cup A is the control. It shows that water does not simply collect in a scooped-out potato standing in a beaker. Because nothing gathers in Cup A, the liquid found in Cups B and C must be the result of adding the sugar and the salt."
+            },
+            {
+              "type": "sa",
+              "prompt": "Explain why no water gathers in the hollow of Cup D, even though sugar was added to it exactly as in Cup B.",
+              "marks": 2,
+              "answer": "Cup D is made from a boiled potato, so its cells are dead and their cell membranes are no longer selectively permeable (1 mark). Osmosis requires a living, selectively permeable membrane to let water through while holding back the sugar; with the membranes destroyed, there is no controlled movement of water from the beaker into the hollow, so the hollow stays dry (1 mark)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "questions": [
+        {
+          "id": "iesc1-03-ar1",
+          "kind": "ar",
+          "outcome": "S9-03-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "The fibres of a coconut husk are hard and strong, so they can be used to make tough mats.",
+          "reason": "Sclerenchyma cells are living cells with thin walls thickened unevenly at the corners by pectin.",
+          "answer": "c",
+          "explanation": "A is true: the hardness comes from sclerenchyma, found in hard coverings of seeds and nuts such as the coconut husk. R is false — that description belongs to collenchyma. Sclerenchyma cells have thick walls due to the deposition of lignin and most of them are dead."
+        },
+        {
+          "id": "iesc1-03-ar2",
+          "kind": "ar",
+          "outcome": "S9-03-1",
+          "difficulty": "EASY",
+          "marks": 1,
+          "assertion": "Grass grows again after it has been mowed or grazed by animals.",
+          "reason": "Grasses have an intercalary meristem located at the base of the internode, just above the node.",
+          "answer": "a",
+          "explanation": "Both are true and R explains A: the intercalary meristem is a region of actively dividing cells that is not at the tip, so growth continues even after the tips have been removed."
+        },
+        {
+          "id": "iesc1-03-vsa1",
+          "kind": "vsa",
+          "outcome": "S9-03-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Which meristematic tissue increases the girth of a stem, and where is it located? How does its activity allow the age of a tree to be estimated?",
+          "answer": "The lateral meristem increases the girth of the stem. Its actively dividing cells are arranged in a ring along the circumference of the stem, and they produce new cells both inside and outside in a concentric manner, so the diameter of the stem increases. This concentric growth produces the annual growth rings seen on the cut surface of a trunk, and by counting these rings scientists can estimate the age of a tree. The widths of the rings also tell us whether the growing conditions in a particular year were favourable or unfavourable.",
+          "valuePoints": [
+            "Lateral meristem, arranged in a ring along the circumference of the stem",
+            "It produces new cells inside and outside concentrically, increasing the diameter",
+            "Counting the annual growth rings it produces gives the age of the tree"
+          ],
+          "rubric": [
+            {
+              "label": "Tissue and location",
+              "marks": 1,
+              "descriptor": "Lateral meristem (half) arranged in a ring in the stem (half)"
+            },
+            {
+              "label": "Annual rings",
+              "marks": 1,
+              "descriptor": "Concentric growth forms annual rings, which can be counted to estimate the tree's age"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-03-vsa2",
+          "kind": "vsa",
+          "outcome": "S9-03-3",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Name the connective tissue that joins a muscle to a bone and the one that joins a bone to another bone. State one function of each.",
+          "answer": "A tendon connects a muscle to a bone. When a muscle contracts, the tendon transmits that force to the bone, producing movement at a joint. A ligament connects one bone to another bone. It provides stability at the joint, limits how far the joint can move and helps prevent dislocation.",
+          "valuePoints": [
+            "Tendon connects muscle to bone and transmits the pull of the muscle to the bone to bring about movement",
+            "Ligament connects bone to bone, gives stability, limits movement and prevents dislocation"
+          ],
+          "rubric": [
+            {
+              "label": "Tendon",
+              "marks": 1,
+              "descriptor": "Named (half) with its function of transmitting muscle force to bone (half)"
+            },
+            {
+              "label": "Ligament",
+              "marks": 1,
+              "descriptor": "Named (half) with its function of stabilising a joint and limiting movement (half)"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-03-vsa3",
+          "kind": "vsa",
+          "outcome": "S9-03-2",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "Xylem and phloem are both called complex permanent tissues. Give two differences between them.",
+          "answer": "Xylem transports water and minerals from the roots to the other parts of the plant and also gives the plant strength, while phloem transports the food prepared in the leaves to the other parts of the plant. Xylem is made largely of dead, thick-walled cells — tracheids, vessels and xylem fibres are primarily sclerenchymatous, and only the xylem parenchyma is living — whereas phloem is mostly made up of living cells: sieve tubes, companion cells, phloem parenchyma and phloem fibres.",
+          "valuePoints": [
+            "Xylem carries water and minerals upwards from the roots; phloem carries food from the leaves",
+            "Xylem is largely dead and thick-walled, with only xylem parenchyma living; phloem is mostly living",
+            "They are complex tissues because each is made of more than one type of cell"
+          ],
+          "rubric": [
+            {
+              "label": "What each transports",
+              "marks": 1,
+              "descriptor": "Water and minerals against food"
+            },
+            {
+              "label": "Second difference",
+              "marks": 1,
+              "descriptor": "Xylem mostly dead cells against phloem mostly living cells, or the cell types of each"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-03-sa1",
+          "kind": "sa",
+          "outcome": "S9-03-4",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Compare skeletal, smooth and cardiac muscle on the basis of the shape of their cells, the number of nuclei and striations, and where each is found in the body.",
+          "answer": "Skeletal muscle is made of bundles of long, cylindrical, unbranched muscle fibres that are multinucleate, that is they have many nuclei, and are striated, showing light and dark bands. It is attached to the skeleton and brings about voluntary movements such as running, writing or lifting. Smooth muscle cells are spindle-shaped, have a single nucleus and lack striations. They are found in organs such as the stomach and the intestines, where they produce slow, continuous involuntary movements such as those of digestion. Cardiac muscle fibres are cylindrical and branched with a single nucleus and faint striations. They are found only in the heart, and they work rhythmically and tirelessly so that the heart beats throughout life without fatigue.",
+          "valuePoints": [
+            "Skeletal: long cylindrical unbranched fibres, multinucleate, striated, attached to the skeleton, voluntary",
+            "Smooth: spindle-shaped, single nucleus, no striations, in stomach and intestines, involuntary",
+            "Cardiac: cylindrical and branched, single nucleus, faint striations, only in the heart, works without fatigue"
+          ],
+          "rubric": [
+            {
+              "label": "Skeletal muscle",
+              "marks": 1,
+              "descriptor": "Cylindrical unbranched multinucleate striated fibres attached to the skeleton"
+            },
+            {
+              "label": "Smooth muscle",
+              "marks": 1,
+              "descriptor": "Spindle-shaped, uninucleate, unstriated, in organs such as stomach and intestine"
+            },
+            {
+              "label": "Cardiac muscle",
+              "marks": 1,
+              "descriptor": "Cylindrical branched, single nucleus, faint striations, only in the heart"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-03-sa2",
+          "kind": "sa",
+          "outcome": "S9-03-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A young mango sapling bends in the monsoon wind without breaking, while a dry coconut husk fibre is hard and brittle. Name the simple permanent tissue responsible in each case, describe the structure of its cells, and predict what would happen to the mango stem if the flexible tissue were replaced by the hard one.",
+          "answer": "The flexibility of the mango stem is due to collenchyma, which consists of living cells whose walls are thickened unevenly at the corners by the deposition of pectin, a substance that gives flexibility rather like rubber; this allows stems and tendrils to bend without breaking. The hardness of the coconut husk fibre is due to sclerenchyma, whose cells have thick walls because of the deposition of lignin, making them hard and strong; most of these cells are dead. If the collenchyma of the mango stem were replaced by sclerenchyma, the stem would become rigid and would no longer be able to bend in the wind; instead of bending it would snap, because a rigid tissue cannot absorb the bending without breaking.",
+          "valuePoints": [
+            "Collenchyma: living cells with unevenly thickened corners due to pectin, giving support with flexibility",
+            "Sclerenchyma: thick lignified walls, hard and strong, most cells dead",
+            "If replaced by sclerenchyma the stem would be rigid and would break instead of bending"
+          ],
+          "rubric": [
+            {
+              "label": "Collenchyma",
+              "marks": 1,
+              "descriptor": "Named, with living cells thickened at the corners by pectin, giving flexibility"
+            },
+            {
+              "label": "Sclerenchyma",
+              "marks": 1,
+              "descriptor": "Named, with thick lignified walls and mostly dead cells"
+            },
+            {
+              "label": "Prediction",
+              "marks": 1,
+              "descriptor": "The stem would become rigid and snap in the wind instead of bending"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-03-sa3",
+          "kind": "sa",
+          "outcome": "S9-03-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Epithelial tissues are structurally adapted to the work they do. For each of the following, describe the structure of the epithelium and say where it is found in the body: (i) rapid exchange of gases, (ii) protection against friction and microbes, (iii) absorption of nutrients.",
+          "answer": "(i) For exchange, the epithelium is a single layer of thin, flat cells, so that liquids and gases can diffuse across it rapidly. It lines the blood vessels and the lungs. (ii) For protection, the epithelium has many layers of cells, and the outer cells are flat and tightly packed. This protects the tissues underneath from mechanical injury, friction and the entry of microbes. It is found in the skin, the mouth and the oesophagus. (iii) For absorption, the epithelium is a single layer of tall, pillar-like cells, often carrying hair-like structures that increase the surface area; this allows the efficient uptake of nutrients and water. It lines the small intestine.",
+          "valuePoints": [
+            "Exchange: single layer of thin flat cells, lining blood vessels and lungs",
+            "Protection: many layers with flat, tightly packed outer cells, in skin, mouth and oesophagus",
+            "Absorption: single layer of tall pillar-like cells with hair-like structures, lining the small intestine"
+          ],
+          "rubric": [
+            {
+              "label": "Exchange",
+              "marks": 1,
+              "descriptor": "Single layer of thin flat cells, in the lining of blood vessels or lungs"
+            },
+            {
+              "label": "Protection",
+              "marks": 1,
+              "descriptor": "Many layers with flat tightly packed outer cells, in skin, mouth or oesophagus"
+            },
+            {
+              "label": "Absorption",
+              "marks": 1,
+              "descriptor": "Single layer of tall pillar-like cells, lining the small intestine"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-03-la1",
+          "kind": "la",
+          "outcome": "S9-03-1",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "Describe the structure of a meristematic cell and explain how that structure suits its work. Name the three types of meristem, state where each is found and what each achieves. Then explain what is meant by differentiation, and why a plant needs permanent tissues as well as meristems.",
+          "answer": "The cells of a meristematic tissue are small, with thin cell walls, a large and prominent nucleus and dense cytoplasm containing many organelles. Vacuoles are generally absent and the cells are tightly packed with little or no intercellular space. This structure suits continuous and rapid cell division: thin walls and small size make division easy, dense cytoplasm and a large nucleus supply the materials and the instructions for it, and having no large vacuole means the cell's volume is working cytoplasm rather than stored sap. The three meristems are: the apical meristem, at the tips of roots and shoots, which makes the plant grow in length; the lateral meristem, arranged in a ring along the circumference of the stem, which increases its girth; and the intercalary meristem, at the base of the internode just above the node, which lets grasses and hedges grow again after being cut or grazed. Because of continuous division, new cells are constantly added. Some of these remain meristematic while others lose the ability to divide, change in structure and become specialised for a particular job; this process is called differentiation, and the tissues it produces are the permanent tissues. A plant needs them because growth alone is not enough: it must also be protected (epidermis), supported (parenchyma, collenchyma, sclerenchyma) and supplied with water and food (xylem and phloem). This division of labour is what allows a large plant body to function at all.",
+          "valuePoints": [
+            "Meristematic cells: small, thin-walled, large prominent nucleus, dense cytoplasm, vacuoles generally absent, tightly packed",
+            "This structure allows continuous and rapid cell division",
+            "Apical meristem at root and shoot tips increases length",
+            "Lateral meristem in a ring in the stem increases girth; intercalary meristem at the base of the internode allows regrowth after cutting or grazing",
+            "Differentiation: cells that lose the power to divide change structure and become specialised permanent tissues for protection, support, storage and transport"
+          ],
+          "rubric": [
+            {
+              "label": "Structure of a meristematic cell",
+              "marks": 1,
+              "descriptor": "At least three of: small, thin walls, large nucleus, dense cytoplasm, no vacuole, no intercellular space"
+            },
+            {
+              "label": "How the structure suits the function",
+              "marks": 1,
+              "descriptor": "Links the features to continuous and rapid cell division"
+            },
+            {
+              "label": "Apical meristem",
+              "marks": 1,
+              "descriptor": "At the tips of roots and shoots; increases length"
+            },
+            {
+              "label": "Lateral and intercalary meristems",
+              "marks": 1,
+              "descriptor": "Half a mark each for location and what each achieves"
+            },
+            {
+              "label": "Differentiation and permanent tissues",
+              "marks": 1,
+              "descriptor": "Cells lose the ability to divide and become specialised for support, transport, protection or storage"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-03-la2",
+          "kind": "la",
+          "outcome": "S9-03-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "Animal tissues are mainly of four types. Name them and state the chief function of each. Then describe the three main parts of a neuron and what each part does.",
+          "answer": "The four types are epithelial, connective, muscular and nervous tissue. Epithelial tissue forms the outer covering of the body and lines internal organs such as the mouth, lungs, blood vessels and intestine. Its cells are closely packed with very little space between them, which prevents the entry of germs and reduces water loss, and it also helps in absorption, secretion and the movement of substances. Connective tissue connects and supports other tissues and organs; blood, bone, cartilage, tendons and ligaments are all connective tissues, and they differ because their matrix differs — watery and jelly-like in blood, hard and rigid in bone, soft and jelly-like in cartilage. Muscular tissue produces the voluntary and involuntary movements of the body, such as running, the movement of food along the intestine and the beating of the heart. Nervous tissue forms the body's control and coordination network, receiving, processing and transmitting messages. Its cells are called neurons. A neuron has three main parts: the cell body, which contains the nucleus and controls the activities of the cell; the dendrites, which receive signals from other neurons; and the axon, a long fibre that carries messages away from the cell body and ends in axon terminals, which pass the message on to other cells.",
+          "valuePoints": [
+            "Epithelial tissue: covering and lining, closely packed cells, protection, absorption and secretion",
+            "Connective tissue: connects and supports; blood, bone, cartilage, tendon, ligament; differs by its matrix",
+            "Muscular tissue: brings about voluntary and involuntary movement",
+            "Nervous tissue: receives, processes and transmits messages; control and coordination",
+            "Neuron: cell body with the nucleus, dendrites that receive signals, axon that carries messages to the axon terminals"
+          ],
+          "rubric": [
+            {
+              "label": "Epithelial tissue",
+              "marks": 1,
+              "descriptor": "Named with covering or lining function and closely packed cells"
+            },
+            {
+              "label": "Connective tissue",
+              "marks": 1,
+              "descriptor": "Named with the function of connecting and supporting, and an example"
+            },
+            {
+              "label": "Muscular tissue",
+              "marks": 1,
+              "descriptor": "Named with the function of producing movement"
+            },
+            {
+              "label": "Nervous tissue",
+              "marks": 1,
+              "descriptor": "Named with the function of receiving and transmitting messages"
+            },
+            {
+              "label": "Parts of a neuron",
+              "marks": 1,
+              "descriptor": "Cell body, dendrites and axon, each with its role; half a mark if only two are correct"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-03-case1",
+          "kind": "case",
+          "outcome": "S9-03-2",
+          "difficulty": "HARD",
+          "marks": 4,
+          "passage": "During a forest survey a team notices a large tree from which an elephant has stripped a wide band of bark all the way around the trunk, because bark is a rich source of nutrients for the animal. The team records that the leaves of the tree are still green several weeks later, but they decide to watch the tree over the coming months. A forest officer explains that the bark of an older stem is formed from cork cells, which are dead, compactly arranged and impermeable to water and gases, and that the conducting tissues lie in the wood beneath it. She adds that the outcome will depend on exactly how deep the damage goes.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Removing a ring of bark and the tissue immediately beneath it all the way around the trunk would first interrupt",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the transport of water and minerals from the roots to the leaves",
+                  "correct": false
+                },
+                {
+                  "text": "the transport of food made in the leaves down to the roots",
+                  "correct": true
+                },
+                {
+                  "text": "the absorption of water by the root hairs",
+                  "correct": false
+                },
+                {
+                  "text": "the exchange of gases through the stomata of the leaves",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) — the phloem lies just inside the bark, so debarking a whole ring cuts the path by which food made in the leaves travels down to the rest of the plant, including the roots."
+            },
+            {
+              "type": "vsa",
+              "prompt": "State one function of the bark itself that the tree has now lost.",
+              "marks": 1,
+              "answer": "Protection. The cork cells of the bark are dead, compactly arranged and impermeable to water and gases, so they protect the inner tissues from water loss and from mechanical injury and invasion by parasites; the exposed trunk has lost this protective covering."
+            },
+            {
+              "type": "sa",
+              "prompt": "The forest officer says the outcome depends on how deep the damage goes. If the damage later reaches the tissue further inside the trunk, which tissue would be affected and what function of the tree would then be hampered? State one assumption you are making.",
+              "marks": 2,
+              "answer": "Further inward lies the xylem, so deeper damage would affect the xylem and hamper the transport of water and minerals from the roots to the leaves and the rest of the plant; the xylem also gives the stem strength, so the trunk would be weakened as well (1 mark). Assumption: that the ring of damage goes all the way round the trunk, so that no undamaged strip of conducting tissue is left to carry water or food past the injury — if a strip survives, the tree may continue to live (1 mark)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "questions": [
+        {
+          "id": "iesc1-04-ar1",
+          "kind": "ar",
+          "outcome": "S9-04-1",
+          "difficulty": "HARD",
+          "marks": 1,
+          "assertion": "An object in uniform circular motion is accelerating.",
+          "reason": "In uniform circular motion the speed of the object is constant at every point on the circle.",
+          "answer": "b",
+          "explanation": "Both statements are true, but R is not the explanation of A. The object accelerates because the direction of its velocity changes continuously; the constancy of the speed is what makes the motion uniform, and it is not the cause of the acceleration."
+        },
+        {
+          "id": "iesc1-04-ar2",
+          "kind": "ar",
+          "outcome": "S9-04-4",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "The area enclosed between the line of a position-time graph and the time axis gives the displacement of the object.",
+          "reason": "The area enclosed between the line of a velocity-time graph and the time axis gives the displacement of the object.",
+          "answer": "d",
+          "explanation": "A is false: from a position-time graph the displacement is read directly as the change in position, and its slope gives the velocity; the area under it has no such meaning. R is true — for a velocity-time graph the area under the line does give the displacement in that time interval."
+        },
+        {
+          "id": "iesc1-04-vsa1",
+          "kind": "vsa",
+          "outcome": "S9-04-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "A man walks from his home to a shop 250 m away along a straight road. On reaching it he finds he has forgotten his cloth bag, walks back home to fetch it, goes to the shop again, buys provisions and returns home. Find the total distance travelled by him and his displacement from home.",
+          "answer": "The man covers the 250 m stretch four times: home to shop, shop to home, home to shop, shop to home. Total distance travelled = 4 × 250 m = 1000 m. His final position is his home, which is also his starting position, so the net change in his position is zero. Displacement = 0 m.",
+          "valuePoints": [
+            "The 250 m stretch is covered four times, so the total distance is 4 × 250 = 1000 m",
+            "He ends where he started, so the displacement is zero"
+          ],
+          "rubric": [
+            {
+              "label": "Total distance",
+              "marks": 1,
+              "descriptor": "4 × 250 m = 1000 m (accept 1 km)"
+            },
+            {
+              "label": "Displacement",
+              "marks": 1,
+              "descriptor": "Zero, with the reason that the final and initial positions are the same"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-04-vsa2",
+          "kind": "vsa",
+          "outcome": "S9-04-2",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "On a family road trip you drive 200 km north in 3 hours and then 200 km south in 2 hours, along the same straight road. Find the average speed and the average velocity for the whole trip.",
+          "answer": "Total distance travelled = 200 km + 200 km = 400 km. Total time interval = 3 h + 2 h = 5 h. Average speed = total distance travelled / time interval = 400 km / 5 h = 80 km per hour. Displacement = 200 km north followed by 200 km south brings you back to the starting point, so the displacement is 0 km. Average velocity = displacement / time interval = 0 km / 5 h = 0 km per hour.",
+          "valuePoints": [
+            "Total distance 400 km in 5 h gives an average speed of 80 km per hour",
+            "Displacement is zero because the trip ends at the starting point, so the average velocity is zero"
+          ],
+          "rubric": [
+            {
+              "label": "Average speed",
+              "marks": 1,
+              "descriptor": "400 km divided by 5 h = 80 km per hour, with the formula shown"
+            },
+            {
+              "label": "Average velocity",
+              "marks": 1,
+              "descriptor": "Zero, because the displacement is zero"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-04-vsa3",
+          "kind": "vsa",
+          "outcome": "S9-04-3",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "A car starts from rest and its velocity reaches 24 m s⁻¹ in 6 s along a straight road. Find its average acceleration and the distance travelled in these 6 s, assuming the acceleration is constant.",
+          "answer": "Given u = 0 m s⁻¹, v = 24 m s⁻¹, t = 6 s. Using a = (v − u)/t = (24 − 0)/6 = 4 m s⁻². Using s = ut + ½at² = 0 × 6 + ½ × 4 × 6² = ½ × 4 × 36 = 72 m. So the average acceleration is 4 m s⁻² in the direction of motion and the distance travelled is 72 m.",
+          "valuePoints": [
+            "a = (24 − 0)/6 = 4 m s⁻²",
+            "s = ut + ½at² = ½ × 4 × 36 = 72 m"
+          ],
+          "rubric": [
+            {
+              "label": "Acceleration",
+              "marks": 1,
+              "descriptor": "(24 − 0)/6 = 4 m s⁻², with the equation used"
+            },
+            {
+              "label": "Distance",
+              "marks": 1,
+              "descriptor": "72 m from s = ut + ½at² (or from average velocity 12 m s⁻¹ × 6 s)"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-04-sa1",
+          "kind": "sa",
+          "outcome": "S9-04-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A motorbike moving along a straight road with an initial velocity of 28 m s⁻¹ and constant acceleration comes to a stop after travelling 98 m. Find the acceleration of the motorbike and the time it takes to stop. What does the sign of the acceleration tell you?",
+          "answer": "Given u = 28 m s⁻¹, v = 0 m s⁻¹, s = 98 m. Using v² = u² + 2as: 0 = 28² + 2 × a × 98, so 0 = 784 + 196a, giving a = −784/196 = −4 m s⁻². Using v = u + at: 0 = 28 + (−4)t, so t = 28/4 = 7 s. The minus sign shows that the acceleration acts in the direction opposite to the direction of the velocity, which is why the magnitude of the velocity decreases and the motorbike slows down to a stop.",
+          "valuePoints": [
+            "v² = u² + 2as gives 0 = 784 + 196a, so a = −4 m s⁻²",
+            "v = u + at gives t = 28/4 = 7 s",
+            "The negative sign means the acceleration is opposite to the velocity, so the motorbike slows down"
+          ],
+          "rubric": [
+            {
+              "label": "Acceleration",
+              "marks": 1,
+              "descriptor": "Correct use of v² = u² + 2as to obtain −4 m s⁻²"
+            },
+            {
+              "label": "Time",
+              "marks": 1,
+              "descriptor": "7 s from v = u + at (or from s = ½(u + v)t)"
+            },
+            {
+              "label": "Meaning of the sign",
+              "marks": 1,
+              "descriptor": "Acceleration acts opposite to the direction of velocity, so the speed decreases"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-04-sa2",
+          "kind": "sa",
+          "outcome": "S9-04-4",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "The velocity-time graph of a car moving in a straight line in one direction is a horizontal straight line at 20 m s⁻¹ from t = 0 s to t = 10 s, and from t = 10 s to t = 15 s it is a straight line sloping down from 20 m s⁻¹ to 0 m s⁻¹. Find (i) the acceleration between 10 s and 15 s, and (ii) the total displacement in the 15 s.",
+          "answer": "(i) The acceleration is the slope of the velocity-time line. Between 10 s and 15 s, a = (v − u)/(t₂ − t₁) = (0 − 20)/(15 − 10) = −20/5 = −4 m s⁻². The minus sign shows the acceleration is opposite to the direction of motion. Between 0 s and 10 s the line is parallel to the time axis, so the velocity is constant and the acceleration is zero. (ii) The displacement is the area enclosed between the line and the time axis. From 0 s to 10 s it is a rectangle: 20 m s⁻¹ × 10 s = 200 m. From 10 s to 15 s it is a triangle: ½ × 5 s × 20 m s⁻¹ = 50 m. Total displacement = 200 m + 50 m = 250 m.",
+          "valuePoints": [
+            "Acceleration is the slope: (0 − 20)/5 = −4 m s⁻², opposite to the direction of motion",
+            "Displacement is the area under the graph",
+            "Rectangle 20 × 10 = 200 m, triangle ½ × 5 × 20 = 50 m, total 250 m"
+          ],
+          "rubric": [
+            {
+              "label": "Acceleration from the slope",
+              "marks": 1,
+              "descriptor": "−4 m s⁻², with the slope method stated"
+            },
+            {
+              "label": "Area of each part",
+              "marks": 1,
+              "descriptor": "200 m for the rectangle and 50 m for the triangle"
+            },
+            {
+              "label": "Total displacement",
+              "marks": 1,
+              "descriptor": "250 m, stating that the area under a velocity-time graph gives displacement"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-04-sa3",
+          "kind": "sa",
+          "outcome": "S9-04-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A truck driver driving at 54 km h⁻¹ sees a road sign with a speed limit of 40 km h⁻¹ for trucks. He slows down to 36 km h⁻¹ in 10 s. Assuming the acceleration is constant while slowing down, find the acceleration and the distance travelled during this time.",
+          "answer": "First convert the velocities to SI units. u = 54 km h⁻¹ = 54 × 1000 m / 3600 s = 15 m s⁻¹, and v = 36 km h⁻¹ = 36 × 1000 m / 3600 s = 10 m s⁻¹, with t = 10 s. Acceleration a = (v − u)/t = (10 − 15)/10 = −0.5 m s⁻², the minus sign showing it is opposite to the direction of motion. For the distance, s = ½(u + v)t = ½ × (15 + 10) × 10 = ½ × 25 × 10 = 125 m. (The same answer follows from s = ut + ½at² = 15 × 10 + ½ × (−0.5) × 100 = 150 − 25 = 125 m.)",
+          "valuePoints": [
+            "54 km h⁻¹ = 15 m s⁻¹ and 36 km h⁻¹ = 10 m s⁻¹",
+            "a = (10 − 15)/10 = −0.5 m s⁻²",
+            "s = ½(u + v)t = 125 m"
+          ],
+          "rubric": [
+            {
+              "label": "Conversion of units",
+              "marks": 1,
+              "descriptor": "Both velocities converted correctly to 15 m s⁻¹ and 10 m s⁻¹"
+            },
+            {
+              "label": "Acceleration",
+              "marks": 1,
+              "descriptor": "−0.5 m s⁻², with the negative sign explained or the magnitude stated as slowing down"
+            },
+            {
+              "label": "Distance",
+              "marks": 1,
+              "descriptor": "125 m by any correct kinematic route"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-04-la1",
+          "kind": "la",
+          "outcome": "S9-04-3",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "A car starts from rest on a straight road and accelerates uniformly to 20 m s⁻¹ in 5 seconds. It then travels at 20 m s⁻¹ for 10 seconds, and finally the driver applies the brakes and the car stops, with uniform acceleration, in 6 seconds. Find the acceleration in each of the three stages and the total distance travelled.",
+          "answer": "Stage 1 — speeding up: u = 0, v = 20 m s⁻¹, t = 5 s. a₁ = (20 − 0)/5 = 4 m s⁻². Distance s₁ = ½(u + v)t = ½ × 20 × 5 = 50 m. Stage 2 — constant velocity: the velocity does not change, so a₂ = 0 m s⁻². Distance s₂ = 20 m s⁻¹ × 10 s = 200 m. Stage 3 — braking: u = 20 m s⁻¹, v = 0, t = 6 s. a₃ = (0 − 20)/6 = −3.33 m s⁻², that is a magnitude of about 3.3 m s⁻² acting opposite to the motion. Distance s₃ = ½(u + v)t = ½ × 20 × 6 = 60 m. Total distance travelled = 50 m + 200 m + 60 m = 310 m. Since the car moves in one direction throughout, the magnitude of the displacement is also 310 m.",
+          "valuePoints": [
+            "Stage 1: a = 4 m s⁻², distance = ½ × 20 × 5 = 50 m",
+            "Stage 2: a = 0, distance = 20 × 10 = 200 m",
+            "Stage 3: a = −20/6 = about −3.3 m s⁻², distance = ½ × 20 × 6 = 60 m",
+            "Total distance = 50 + 200 + 60 = 310 m",
+            "Motion is in one direction, so the magnitude of displacement equals the distance"
+          ],
+          "rubric": [
+            {
+              "label": "First stage",
+              "marks": 1.5,
+              "descriptor": "a = 4 m s⁻² (half) and s = 50 m (1)"
+            },
+            {
+              "label": "Second stage",
+              "marks": 1,
+              "descriptor": "a = 0 (half) and s = 200 m (half)"
+            },
+            {
+              "label": "Third stage",
+              "marks": 1.5,
+              "descriptor": "a = about −3.3 m s⁻² (half) and s = 60 m (1)"
+            },
+            {
+              "label": "Total distance",
+              "marks": 1,
+              "descriptor": "310 m"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-04-la2",
+          "kind": "la",
+          "outcome": "S9-04-4",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "A cyclist moves along a straight road in one direction. Her velocity-time graph over 120 s is made of three straight portions: from 0 s to 20 s the velocity rises uniformly from 0 to 5 m s⁻¹; from 20 s to 80 s it stays at 5 m s⁻¹; from 80 s to 120 s it falls uniformly from 5 m s⁻¹ to 0. Find the acceleration in each of the three portions, the total displacement in the 120 s, and the average acceleration over the whole 120 s. Explain why the last answer does not mean the cyclist never accelerated.",
+          "answer": "Acceleration is the slope of each portion. From 0 s to 20 s: a = (5 − 0)/(20 − 0) = 0.25 m s⁻², in the direction of motion. From 20 s to 80 s: the line is parallel to the time axis, so a = 0. From 80 s to 120 s: a = (0 − 5)/(120 − 80) = −5/40 = −0.125 m s⁻², opposite to the direction of motion. The displacement is the area enclosed between the line and the time axis. First portion, a triangle: ½ × 20 s × 5 m s⁻¹ = 50 m. Second portion, a rectangle: 5 m s⁻¹ × 60 s = 300 m. Third portion, a triangle: ½ × 40 s × 5 m s⁻¹ = 100 m. Total displacement = 50 + 300 + 100 = 450 m. Average acceleration over the whole interval = (final velocity − initial velocity)/time interval = (0 − 0)/120 s = 0 m s⁻². This does not mean the cyclist never accelerated. Average acceleration compares only the velocity at the two end instants; here she started at rest and finished at rest, so the change over the whole interval is zero, even though her velocity increased during the first 20 s and decreased during the last 40 s. To see that, one has to look at the acceleration over the shorter intervals.",
+          "valuePoints": [
+            "0 to 20 s: a = 5/20 = 0.25 m s⁻²",
+            "20 to 80 s: a = 0; 80 to 120 s: a = −5/40 = −0.125 m s⁻²",
+            "Areas: ½ × 20 × 5 = 50 m, 5 × 60 = 300 m, ½ × 40 × 5 = 100 m",
+            "Total displacement = 450 m",
+            "Average acceleration over 120 s = (0 − 0)/120 = 0, because it compares only the velocities at the two end instants"
+          ],
+          "rubric": [
+            {
+              "label": "Acceleration in the first portion",
+              "marks": 1,
+              "descriptor": "0.25 m s⁻² from the slope"
+            },
+            {
+              "label": "Acceleration in the other two portions",
+              "marks": 1,
+              "descriptor": "Half a mark each for 0 and for −0.125 m s⁻²"
+            },
+            {
+              "label": "Areas of the three portions",
+              "marks": 1,
+              "descriptor": "50 m, 300 m and 100 m"
+            },
+            {
+              "label": "Total displacement",
+              "marks": 1,
+              "descriptor": "450 m, stating that the area under the graph gives the displacement"
+            },
+            {
+              "label": "Average acceleration and its meaning",
+              "marks": 1,
+              "descriptor": "Zero (half), because it uses only the initial and final velocities, which are both zero (half)"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-04-case1",
+          "kind": "case",
+          "outcome": "S9-04-1",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "passage": "Rohan studies science at home from 6:00 PM to 7:30 PM. While taking a break he watches the minute hand of the wall clock on the opposite wall. The minute hand is 7 cm long and its tip travels along a circle of radius 7 cm. The hand goes round once every 60 minutes, at a steady rate, so the tip covers equal lengths of the circle in equal intervals of time. Rohan wonders how far the tip of the hand travels while he studies, and whether it gets anywhere at all. Take the value of pi as 22/7.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The tip of the minute hand moves at a constant speed along a circle. Its motion is",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "not accelerated, because its speed does not change",
+                  "correct": false
+                },
+                {
+                  "text": "accelerated, because the direction of its velocity changes continuously",
+                  "correct": true
+                },
+                {
+                  "text": "not accelerated, because it returns to the same position every hour",
+                  "correct": false
+                },
+                {
+                  "text": "accelerated, because it covers unequal distances in equal intervals of time",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) — this is uniform circular motion. The speed is constant but the direction of the velocity changes at every instant, and a change in the direction of the velocity is itself an acceleration."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Calculate the total distance travelled by the tip of the minute hand between 6:00 PM and 7:30 PM.",
+              "marks": 1,
+              "answer": "In one revolution the tip covers the circumference, 2 pi R = 2 × (22/7) × 7 cm = 44 cm. From 6:00 PM to 7:30 PM is 90 minutes, which is 1.5 revolutions. Distance = 1.5 × 44 cm = 66 cm."
+            },
+            {
+              "type": "sa",
+              "prompt": "Find the displacement of the tip of the minute hand between 6:00 PM and 7:30 PM. Then state its average velocity over the one hour from 6:00 PM to 7:00 PM, with a reason.",
+              "marks": 2,
+              "answer": "In 90 minutes the hand makes one and a half turns, so it finishes exactly opposite where it began: the tip is at the other end of a diameter. The magnitude of the displacement is therefore 2R = 2 × 7 cm = 14 cm, directed from the 12 mark towards the 6 mark, while the distance travelled was 66 cm — the two are very different because displacement is only the net change in position (1 mark). Over the one hour from 6:00 PM to 7:00 PM the hand completes exactly one revolution and the tip comes back to its starting position, so the displacement is zero and the average velocity, which is displacement divided by time interval, is 0 cm per hour — even though the average speed over that hour is 44 cm per hour (1 mark)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "questions": [
+        {
+          "id": "iesc1-05-ar1",
+          "kind": "ar",
+          "outcome": "S9-05-2",
+          "difficulty": "EASY",
+          "marks": 1,
+          "assertion": "When a beam of laser light is passed through a beaker containing a few drops of milk in water, the path of the beam is seen from the side.",
+          "reason": "The dispersed particles of a colloid are large enough to scatter light.",
+          "answer": "a",
+          "explanation": "Both are true and R explains A: milk is a colloid, its particles are 1 to 1000 nm across, and scattering of light by such particles is the Tyndall effect, which is what makes the path of the beam visible."
+        },
+        {
+          "id": "iesc1-05-ar2",
+          "kind": "ar",
+          "outcome": "S9-05-4",
+          "difficulty": "HARD",
+          "marks": 1,
+          "assertion": "Two miscible liquids boiling at 60 °C and at 65 °C can be separated cleanly from each other by simple distillation.",
+          "reason": "Simple distillation separates two miscible liquids whose boiling points differ by at least about 25 °C.",
+          "answer": "d",
+          "explanation": "A is false: the two boiling points differ by only 5 °C, so both liquids form vapour at nearly the same time and neither is obtained pure; such a mixture needs fractional distillation. R is true and is exactly the rule that makes A false."
+        },
+        {
+          "id": "iesc1-05-vsa1",
+          "kind": "vsa",
+          "outcome": "S9-05-3",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "A talcum powder contains 4 % m/m zinc oxide, which acts as an antiseptic. How much zinc oxide is present in 300 g of this talcum powder? Show your working.",
+          "answer": "Mass by mass percentage = (mass of solute / mass of the whole mixture) × 100. So 4 = (mass of zinc oxide / 300 g) × 100, giving mass of zinc oxide = 4 × 300 / 100 = 12 g. There are 12 g of zinc oxide in 300 g of the talcum powder.",
+          "valuePoints": [
+            "Uses mass by mass percentage = (mass of solute / mass of mixture) × 100",
+            "Mass of zinc oxide = 4 × 300 / 100 = 12 g"
+          ],
+          "rubric": [
+            {
+              "label": "Correct relation used",
+              "marks": 1,
+              "descriptor": "Writes the mass by mass percentage formula and substitutes 4 % and 300 g"
+            },
+            {
+              "label": "Answer",
+              "marks": 1,
+              "descriptor": "12 g, with the unit"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-05-vsa2",
+          "kind": "vsa",
+          "outcome": "S9-05-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "Classify each of the following as a homogeneous or a heterogeneous mixture, giving a one-line reason for each: salt solution, sand in water, brass, muddy water.",
+          "answer": "Salt solution — homogeneous: the composition is uniform throughout, and the first sip is as salty as the last. Sand in water — heterogeneous: the sand particles are easily visible and settle with time, so the composition is not uniform. Brass — homogeneous: it is an alloy, a homogeneous mixture of about 80 per cent copper and 20 per cent zinc that looks like a single metal. Muddy water — heterogeneous: the mud particles remain suspended and settle out when the water is left undisturbed.",
+          "valuePoints": [
+            "Salt solution and brass are homogeneous, with uniform composition throughout",
+            "Sand in water and muddy water are heterogeneous, with visible particles that settle"
+          ],
+          "rubric": [
+            {
+              "label": "Correct classification",
+              "marks": 1,
+              "descriptor": "All four correct; half a mark for two or three correct"
+            },
+            {
+              "label": "Reasons",
+              "marks": 1,
+              "descriptor": "Uniform composition against visible particles that settle; half a mark if only one idea is given"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-05-vsa3",
+          "kind": "vsa",
+          "outcome": "S9-05-2",
+          "difficulty": "MEDIUM",
+          "marks": 2,
+          "stem": "Blood cells cannot be seen with the naked eye, yet blood can be separated by centrifugation. Explain why blood is called a colloid rather than a solution or a true suspension.",
+          "answer": "Blood is not a solution, because the particles in a solution are smaller than 1 nm and can never be separated by filtration or centrifugation, whereas the components of blood can be spun out. It is not a true suspension either, because the particles of a suspension are larger than 1000 nm, are visible to the naked eye and settle out when the mixture is left undisturbed. The particles in blood lie between these two, in the colloidal range of 1 to 1000 nm: they are too small to be seen and do not settle on standing, so they stay uniformly dispersed, and yet they are large enough to be separated by spinning.",
+          "valuePoints": [
+            "Solution particles are less than 1 nm; suspension particles are more than 1000 nm and settle",
+            "Colloidal particles are 1 to 1000 nm, too small to see, and do not settle on standing",
+            "Blood fits the colloidal range and can still be separated by centrifugation"
+          ],
+          "rubric": [
+            {
+              "label": "Particle size",
+              "marks": 1,
+              "descriptor": "Places colloidal particles between those of a solution and those of a suspension, with figures or a clear comparison"
+            },
+            {
+              "label": "Behaviour",
+              "marks": 1,
+              "descriptor": "Does not settle on standing and is not visible, unlike a suspension; can be separated by centrifugation, unlike a solution"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-05-sa1",
+          "kind": "sa",
+          "outcome": "S9-05-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "(i) A brass alloy contains 70 % copper by mass. Calculate the masses of copper and of zinc present in 120 g of this brass. (ii) A saline drip is labelled 0.9 % m/v sodium chloride. State what this means, and find the mass of sodium chloride in 500 mL of the drip.",
+          "answer": "(i) Mass of copper = 70 % of 120 g = 70 × 120 / 100 = 84 g. Brass is a mixture of copper and zinc, so mass of zinc = 120 g − 84 g = 36 g. (ii) Mass by volume percentage tells us how many grams of the solute are present in 100 mL of the solution, so 0.9 % m/v means 0.9 g of sodium chloride in every 100 mL of the drip. In 500 mL the mass of sodium chloride = 0.9 g × (500/100) = 0.9 × 5 = 4.5 g.",
+          "valuePoints": [
+            "Copper = 70 × 120/100 = 84 g",
+            "Zinc = 120 − 84 = 36 g",
+            "0.9 % m/v means 0.9 g of salt in 100 mL of solution, so 500 mL contains 4.5 g"
+          ],
+          "rubric": [
+            {
+              "label": "Mass of copper",
+              "marks": 1,
+              "descriptor": "84 g with the working shown"
+            },
+            {
+              "label": "Mass of zinc",
+              "marks": 1,
+              "descriptor": "36 g, obtained by subtraction from the total mass"
+            },
+            {
+              "label": "Mass by volume percentage",
+              "marks": 1,
+              "descriptor": "Meaning stated (half) and 4.5 g in 500 mL (half)"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-05-sa2",
+          "kind": "sa",
+          "outcome": "S9-05-4",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A student accidentally mixes acetone and water, which are miscible liquids. Acetone boils at about 56 °C and water at 100 °C. Name the method you would use to separate them, describe how it works, and explain why this method succeeds for this particular pair of liquids.",
+          "answer": "The method is distillation. The mixture is taken in a distillation flask fitted with a thermometer and heated. The liquid with the lower boiling point, acetone, vaporises first. Its vapours are led into a condenser, where they are cooled by water circulating around the inner tube; the vapours condense back into pure liquid acetone, which is collected in a separate conical flask, while the water is left behind in the distillation flask. The method succeeds here because the two boiling points differ by 44 °C, which is well above the difference of about 25 °C that simple distillation needs. A large difference lets the acetone vaporise almost completely before any significant amount of water vapour is formed, so the liquid collected is essentially pure.",
+          "valuePoints": [
+            "Distillation, because the liquids are miscible and differ in boiling point",
+            "Heat the mixture; the lower-boiling acetone vaporises first, is cooled in a condenser and collected as a pure liquid; water remains behind",
+            "The boiling points differ by 44 °C, more than the 25 °C needed, so one liquid vaporises before the other"
+          ],
+          "rubric": [
+            {
+              "label": "Method named",
+              "marks": 1,
+              "descriptor": "Distillation"
+            },
+            {
+              "label": "How it works",
+              "marks": 1,
+              "descriptor": "Acetone vaporises first, condenses in the condenser and is collected; water stays in the flask"
+            },
+            {
+              "label": "Why it works here",
+              "marks": 1,
+              "descriptor": "Boiling points differ by about 44 °C, well above the minimum difference of about 25 °C"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-05-sa3",
+          "kind": "sa",
+          "outcome": "S9-05-4",
+          "difficulty": "HARD",
+          "marks": 3,
+          "stem": "The solubility of potassium nitrate is 62 g per 100 g of water at 40 °C, and the solubility of potassium chloride is 54 g per 100 g of water at 80 °C and 35 g per 100 g of water at 20 °C. (i) What mass of potassium nitrate is needed to make a saturated solution in 50 g of water at 40 °C? (ii) A saturated solution of potassium chloride is made in 100 g of water at 80 °C and then cooled slowly to 20 °C. What will be seen, and what mass of solid will separate out? Name the process.",
+          "answer": "(i) 100 g of water dissolves 62 g of potassium nitrate at 40 °C, so 50 g of water dissolves 62 × 50/100 = 31 g. A mass of 31 g of potassium nitrate is needed. (ii) At 80 °C the 100 g of water holds 54 g of potassium chloride. On cooling to 20 °C, only 35 g can stay dissolved, because the solubility of a solid in water generally decreases as the temperature falls. The rest separates out as a pure solid, usually as crystals: 54 g − 35 g = 19 g. The process is crystallization, and cooling slowly gives the particles time to come together, so the crystals formed are larger and better shaped.",
+          "valuePoints": [
+            "62 × 50/100 = 31 g of potassium nitrate",
+            "At 20 °C only 35 g can remain dissolved, so 54 − 35 = 19 g separates out",
+            "The process is crystallization; solubility of a solid generally falls as temperature falls"
+          ],
+          "rubric": [
+            {
+              "label": "Potassium nitrate calculation",
+              "marks": 1,
+              "descriptor": "31 g, scaled correctly from 100 g to 50 g of water"
+            },
+            {
+              "label": "Mass of solid separating",
+              "marks": 1,
+              "descriptor": "54 − 35 = 19 g"
+            },
+            {
+              "label": "Process named and explained",
+              "marks": 1,
+              "descriptor": "Crystallization, with the reason that solubility decreases on cooling"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-05-la1",
+          "kind": "la",
+          "outcome": "S9-05-4",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "You are given a mixture of sand, common salt and naphthalene. Describe, step by step, how you would separate the three components. Name the technique used at each step, state the property of the substance on which it depends, and say what you finally obtain in each case.",
+          "answer": "Step 1 — Sublimation. Heat the mixture gently in a china dish with an inverted funnel over it, the nozzle of the funnel plugged with cotton. Naphthalene changes directly from the solid state into vapour on heating, without passing through the liquid state; the vapour cools on the cold inner wall of the funnel and changes straight back into a solid, which is deposition. Naphthalene is thus collected as a white solid on the inside of the funnel, while sand and salt, which do not sublime, stay behind in the dish. Step 2 — Dissolving and filtration. Add water to the residue and stir. Common salt is soluble in water while sand is not, so the salt dissolves and the sand remains as a solid. Pour the mixture through a filter paper in a funnel: the sand is left on the filter paper as the residue and the salt solution passes through as the filtrate. Wash and dry the sand. Step 3 — Evaporation or crystallization. Heat the filtrate so that the water evaporates, leaving common salt behind; if pure, well-shaped crystals are wanted, make a saturated solution, filter it hot and let it cool slowly undisturbed, so that the salt separates as crystals. At the end we have three separate substances: naphthalene from the funnel, dry sand from the filter paper and common salt from the evaporating dish. The order matters: the naphthalene must be removed first, because once water has been added it would be difficult to sublime it out of a wet mixture.",
+          "valuePoints": [
+            "Step 1: sublimation removes naphthalene, which turns directly from solid to vapour and back on cooling",
+            "Step 2: add water — salt dissolves, sand does not — and filter; sand is the residue",
+            "Step 3: evaporate or crystallize the filtrate to recover common salt",
+            "Each step uses a different property: ability to sublime, solubility in water, and the fact that a dissolved solid is left when the solvent goes",
+            "Naphthalene must be removed before water is added"
+          ],
+          "rubric": [
+            {
+              "label": "Sublimation step",
+              "marks": 1.5,
+              "descriptor": "Naphthalene separated by sublimation (1) with the apparatus or the solid-to-vapour change described (half)"
+            },
+            {
+              "label": "Filtration step",
+              "marks": 1.5,
+              "descriptor": "Water added and the mixture filtered (1); sand identified as the residue (half)"
+            },
+            {
+              "label": "Recovering the salt",
+              "marks": 1,
+              "descriptor": "Evaporation or crystallization of the filtrate to obtain common salt"
+            },
+            {
+              "label": "Properties used",
+              "marks": 1,
+              "descriptor": "Names the property behind each step: sublimes, soluble or insoluble in water"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-05-la2",
+          "kind": "la",
+          "outcome": "S9-05-3",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "Three students prepare sugar solutions for an experiment. Student A dissolves 20 g of sugar in 80 g of water, Student B dissolves 20 g of sugar in 100 g of water, and Student C dissolves 30 g of sugar in 80 g of water. (i) Calculate the mass by mass percentage of sugar in each solution. (ii) State whose solution is the most concentrated and whose is the least, and explain why B's solution is weaker than A's although both used the same mass of sugar.",
+          "answer": "Mass by mass percentage = (mass of solute / mass of solution) × 100, where the mass of the solution is the mass of the solute plus the mass of the solvent. Student A: mass of solution = 20 + 80 = 100 g; percentage = (20/100) × 100 = 20 % m/m. Student B: mass of solution = 20 + 100 = 120 g; percentage = (20/120) × 100 = 16.67 % m/m. Student C: mass of solution = 30 + 80 = 110 g; percentage = (30/110) × 100 = 27.27 % m/m. (ii) Student C's solution is the most concentrated at about 27.3 % and Student B's is the least concentrated at about 16.7 %. B's solution is weaker than A's even though both used 20 g of sugar, because concentration is not the amount of solute alone but the amount of solute in a given amount of solution. B spread the same 20 g of sugar through a larger mass of water, so every 100 g of B's solution contains less sugar than every 100 g of A's.",
+          "valuePoints": [
+            "Mass of solution = mass of solute + mass of solvent",
+            "A: (20/100) × 100 = 20 % m/m",
+            "B: (20/120) × 100 = 16.67 % m/m",
+            "C: (30/110) × 100 = 27.27 % m/m",
+            "C is the most concentrated and B the least; concentration depends on the amount of solute in a given amount of solution, not on the solute alone"
+          ],
+          "rubric": [
+            {
+              "label": "Correct formula",
+              "marks": 1,
+              "descriptor": "Uses mass of solution = solute + solvent in the mass by mass percentage"
+            },
+            {
+              "label": "Student A",
+              "marks": 0.5,
+              "descriptor": "20 % m/m"
+            },
+            {
+              "label": "Student B",
+              "marks": 1,
+              "descriptor": "16.67 % m/m (accept about 16.7 %)"
+            },
+            {
+              "label": "Student C",
+              "marks": 1,
+              "descriptor": "27.27 % m/m (accept about 27.3 %)"
+            },
+            {
+              "label": "Comparison and explanation",
+              "marks": 1.5,
+              "descriptor": "C most and B least concentrated (half); explains that the same solute spread through more solvent gives a lower concentration (1)"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-05-case1",
+          "kind": "case",
+          "outcome": "S9-05-2",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "passage": "A class is divided into three groups. Group A stirs one spatula of common salt into 50 mL of water in a beaker. Group B stirs one spatula of chalk powder into 50 mL of water. Group C stirs a few drops of milk into 50 mL of water. Each group then shines a laser pointer through its beaker and looks from the side, at right angles to the beam, taking care never to look into the beam itself. In beaker A the path of the beam cannot be seen at all. In beakers B and C the path of the beam is clearly visible. The groups then leave the beakers undisturbed for some minutes and finally filter each mixture through a filter paper. Beaker B has left a residue on the paper; beakers A and C have left none.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "From these observations, the three beakers contain, in order A, B, C:",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "a colloid, a solution and a suspension",
+                  "correct": false
+                },
+                {
+                  "text": "a solution, a suspension and a colloid",
+                  "correct": true
+                },
+                {
+                  "text": "a suspension, a colloid and a solution",
+                  "correct": false
+                },
+                {
+                  "text": "a solution, a colloid and a suspension",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) — A shows no scattering and leaves no residue, so it is a solution; B scatters light, its particles are visible and it leaves a residue on filtering, so it is a suspension; C scatters light but passes through the filter paper and does not settle, so it is a colloid."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Name the effect seen in beakers B and C, and state who first explained it.",
+              "marks": 1,
+              "answer": "The scattering of light by the particles of the mixture, which makes the path of the beam visible, is called the Tyndall effect. It was first explained by the scientist John Tyndall."
+            },
+            {
+              "type": "sa",
+              "prompt": "Predict what the three beakers will look like if they are left undisturbed for a few hours, and explain the difference between beaker B and beaker C in terms of particle size.",
+              "marks": 2,
+              "answer": "Beaker A will stay clear and unchanged, and beaker C will still look uniform, but in beaker B the chalk particles will have settled at the bottom, leaving clearer liquid above (1 mark). This is because the particles of a suspension are larger than 1000 nm and heavy enough to settle under gravity and to be trapped by a filter paper, whereas the colloidal particles in beaker C are only 1 to 1000 nm across — large enough to scatter light but too small to settle or to be filtered out, so they stay evenly dispersed (1 mark)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "questions": [
+        {
+          "id": "iesc1-06-ar1",
+          "kind": "ar",
+          "outcome": "S9-06-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "For the same net force, a lighter object gets a larger acceleration than a heavier one.",
+          "reason": "One newton is defined as the force that produces an acceleration of 1 m s⁻² on an object of mass 1 kg.",
+          "answer": "b",
+          "explanation": "Both statements are true, but R is not the explanation of A. A follows from Newton's second law, a = F/m, in which the acceleration is inversely proportional to the mass. R only defines the unit of force; it does not say how acceleration depends on mass."
+        },
+        {
+          "id": "iesc1-06-ar2",
+          "kind": "ar",
+          "outcome": "S9-06-3",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "A fielder pulls their hands backwards along with the ball just after catching a fast-moving cricket ball.",
+          "reason": "Increasing the time in which the velocity of the ball falls to zero increases the force the fielder must apply.",
+          "answer": "c",
+          "explanation": "A is true. R is false — it states the opposite of what happens. Pulling the hands back increases the time over which the velocity falls to zero, which reduces the magnitude of the acceleration and therefore, by F = ma, reduces the force needed. That is exactly why the fielder does it, and why the catch hurts less."
+        },
+        {
+          "id": "iesc1-06-vsa1",
+          "kind": "vsa",
+          "outcome": "S9-06-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "State Newton's first law of motion. Use it to explain why passengers standing in a bus lean backwards when the bus suddenly starts moving.",
+          "answer": "Newton's first law of motion: an object at rest remains at rest, and an object in motion continues to move with a constant velocity, unless a net force acts upon the object. When the bus suddenly starts, the floor of the bus and the passengers' feet are carried forward by the bus, but the upper part of each passenger's body is not acted upon by any net force in the forward direction and so tends to stay where it was, at rest. The body therefore appears to lean backwards. This tendency of an object to resist a change in its state of rest or of uniform motion is called inertia.",
+          "valuePoints": [
+            "States the first law correctly, including that a net force is needed to change the state of rest or of constant velocity",
+            "The feet move forward with the bus while the upper body tends to remain at rest, so the passenger leans backwards",
+            "Names the tendency as inertia"
+          ],
+          "rubric": [
+            {
+              "label": "Statement of the law",
+              "marks": 1,
+              "descriptor": "Rest stays rest and motion stays uniform unless a net force acts"
+            },
+            {
+              "label": "Application to the bus",
+              "marks": 1,
+              "descriptor": "Upper body tends to stay at rest while the feet are carried forward; mentions inertia"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-06-vsa2",
+          "kind": "vsa",
+          "outcome": "S9-06-2",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "A block lies on a table. In case (i) two forces of 10 N and 6 N both act on it towards the right. In case (ii) a force of 10 N acts towards the right and a force of 6 N towards the left. Find the magnitude and the direction of the net force in each case.",
+          "answer": "(i) The two forces are in the same direction, so the magnitude of the net force is their sum: 10 N + 6 N = 16 N, acting towards the right. (ii) The two forces are opposite in direction and unequal in magnitude, so the magnitude of the net force is the difference between them: 10 N − 6 N = 4 N, acting towards the right, that is along the direction of the larger force.",
+          "valuePoints": [
+            "Same direction: net force = 10 + 6 = 16 N towards the right",
+            "Opposite directions: net force = 10 − 6 = 4 N, in the direction of the larger force, that is towards the right"
+          ],
+          "rubric": [
+            {
+              "label": "Case (i)",
+              "marks": 1,
+              "descriptor": "16 N towards the right, with the reason that forces in the same direction add"
+            },
+            {
+              "label": "Case (ii)",
+              "marks": 1,
+              "descriptor": "4 N towards the right, along the larger force"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-06-vsa3",
+          "kind": "vsa",
+          "outcome": "S9-06-5",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "A weightlifter holds a barbell steady above her head. The bar has a mass of 10 kg and a mass of 10 kg is fixed at each end of it. How much force is she applying, and in which direction? Take g = 9.8 m s⁻².",
+          "answer": "Total mass of the barbell = 10 kg + 10 kg + 10 kg = 30 kg. The gravitational force with which the Earth pulls it downwards is F = mg = 30 kg × 9.8 m s⁻² = 294 N. The barbell is held steady, so it is not accelerating and the forces on it must be balanced. The weightlifter therefore applies an equal force of 294 N in the upward direction.",
+          "valuePoints": [
+            "Total mass = 30 kg",
+            "F = mg = 30 × 9.8 = 294 N downwards, so she applies 294 N upwards to balance it"
+          ],
+          "rubric": [
+            {
+              "label": "Weight of the barbell",
+              "marks": 1,
+              "descriptor": "Total mass 30 kg and F = mg = 294 N"
+            },
+            {
+              "label": "Force applied",
+              "marks": 1,
+              "descriptor": "294 N upwards, with the reason that the forces must balance for it to stay steady"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-06-sa1",
+          "kind": "sa",
+          "outcome": "S9-06-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A student tries to push a stationary block of mass 25 kg along a horizontal floor. The maximum force of friction opposing the motion is 50 N. Find the displacement of the block in 2 s if the student pushes with a constant force of (i) 50 N and (ii) 55 N in the forward direction.",
+          "answer": "(i) The force applied is exactly equal to the opposing force of friction, so the two forces are balanced and the net force on the block is zero. By Newton's first law the block, which was at rest, stays at rest: its displacement in 2 s is 0 m. (ii) Net force = 55 N − 50 N = 5 N in the forward direction. By Newton's second law, a = F/m = 5 N / 25 kg = 0.2 m s⁻² in the forward direction. The block starts from rest, so u = 0, and s = ut + ½at² = 0 × 2 + ½ × 0.2 × 2² = ½ × 0.2 × 4 = 0.4 m. The displacement is 0.4 m in the forward direction.",
+          "valuePoints": [
+            "With 50 N the forces are balanced, the net force is zero and the block does not move: displacement 0 m",
+            "With 55 N the net force is 5 N, so a = 5/25 = 0.2 m s⁻²",
+            "s = ½at² = ½ × 0.2 × 4 = 0.4 m"
+          ],
+          "rubric": [
+            {
+              "label": "Case (i)",
+              "marks": 1,
+              "descriptor": "Net force zero, block stays at rest, displacement 0 m"
+            },
+            {
+              "label": "Acceleration in case (ii)",
+              "marks": 1,
+              "descriptor": "Net force 5 N and a = 0.2 m s⁻² from F = ma"
+            },
+            {
+              "label": "Displacement in case (ii)",
+              "marks": 1,
+              "descriptor": "0.4 m using s = ut + ½at² with u = 0"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-06-sa2",
+          "kind": "sa",
+          "outcome": "S9-06-5",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Calculate the gravitational force with which the Earth pulls (i) a sack of mass 12 kg and (ii) a stone of mass 0.5 kg, taking g = 9.8 m s⁻². (iii) The sack is much heavier than the stone. Does the Earth give them different accelerations when they fall freely? Give a reason.",
+          "answer": "(i) F = mg = 12 kg × 9.8 m s⁻² = 117.6 N, directed downwards, towards the Earth. (ii) F = mg = 0.5 kg × 9.8 m s⁻² = 4.9 N, also directed downwards. (iii) No. Although the force on the sack is much larger, its mass is larger in exactly the same proportion, and the acceleration is a = F/m = mg/m = g for both. The acceleration due to the gravitational force by the Earth does not depend on the mass of the object, so near the Earth's surface both fall with the same acceleration of 9.8 m s⁻².",
+          "valuePoints": [
+            "F = mg = 12 × 9.8 = 117.6 N downwards",
+            "F = mg = 0.5 × 9.8 = 4.9 N downwards",
+            "a = F/m = mg/m = g, so the acceleration is the same for both and does not depend on mass"
+          ],
+          "rubric": [
+            {
+              "label": "Force on the sack",
+              "marks": 1,
+              "descriptor": "117.6 N, with the direction downwards"
+            },
+            {
+              "label": "Force on the stone",
+              "marks": 1,
+              "descriptor": "4.9 N"
+            },
+            {
+              "label": "Same acceleration",
+              "marks": 1,
+              "descriptor": "States a = g for both and shows that the mass cancels in a = mg/m"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-06-sa3",
+          "kind": "sa",
+          "outcome": "S9-06-3",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "Explain each of the following in terms of the time taken for the velocity to change and the force that results: (i) an airbag inflates in a vehicle during a collision, (ii) a landing mat or sand bed is placed for a high jumper, (iii) a coconut brought down hard on a stone floor cracks open.",
+          "answer": "(i) In a collision the vehicle comes to an abrupt halt. The airbag inflates quickly into a soft, compressible cushion, so the passenger's head and chest push into the bag instead of striking the hard steering wheel or dashboard. The time over which the passenger's velocity falls to zero is increased, which reduces the acceleration and, by F = ma, the force acting on the person, thereby lowering the risk of serious injury. (ii) The landing mat or sand bed works the same way: it compresses as the athlete lands, so their velocity falls to zero over a longer time. The acceleration, and hence the force on the athlete, is smaller than it would be on hard ground. (iii) Here the effect is used the other way round. The coconut hits a hard surface at high velocity and stops in a very short time, so the change in its velocity is extremely rapid. To produce so large an acceleration the ground must exert a very large force on it, and it is this large force that breaks the shell.",
+          "valuePoints": [
+            "Airbag: increases the time in which the passenger stops, so acceleration and hence force are reduced",
+            "Landing mat: the same reasoning applied to the athlete's landing",
+            "Coconut: it stops in a very short time, so the acceleration and hence the force from the ground are very large, cracking the shell"
+          ],
+          "rubric": [
+            {
+              "label": "Airbag",
+              "marks": 1,
+              "descriptor": "Longer stopping time gives smaller acceleration and therefore smaller force"
+            },
+            {
+              "label": "Landing mat",
+              "marks": 1,
+              "descriptor": "Same explanation applied to the high jumper"
+            },
+            {
+              "label": "Coconut",
+              "marks": 1,
+              "descriptor": "Very short stopping time gives a very large force, which breaks the shell"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-06-la1",
+          "kind": "la",
+          "outcome": "S9-06-2",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "A sports car of mass 1500 kg is moving towards the east along a straight road. Its velocity-time graph consists of three straight portions: from 0 s to 5 s the velocity rises uniformly from 0 to 10 m s⁻¹; from 5 s to 10 s it stays at 10 m s⁻¹; from 10 s to 15 s it falls uniformly from 10 m s⁻¹ to 0. Calculate the force acting on the car during each of the three intervals, stating its direction, and explain what the sign of your answer means.",
+          "answer": "0 s to 5 s: the graph is a straight line inclined to the time axis, so the acceleration is constant. Using v = u + at with u = 0, v = 10 m s⁻¹ and t = 5 s, we get 10 = 0 + a × 5, so a = 2 m s⁻². By Newton's second law, F = ma = 1500 kg × 2 m s⁻² = 3000 N acting towards the east, that is in the direction of motion. 5 s to 10 s: the graph is parallel to the time axis, so the velocity is constant and the acceleration is zero. Therefore F = ma = 1500 × 0 = 0 N; no net force acts on the car. 10 s to 15 s: using v = u + at with u = 10 m s⁻¹, v = 0 and t = 5 s, we get 0 = 10 + a × 5, so a = −2 m s⁻². Then F = 1500 × (−2) = −3000 N. The negative sign means that this force acts in the direction opposite to the direction of motion, that is towards the west; it is the braking force, which is why the car slows down. Note that the car is moving fastest during the middle interval and yet no net force acts on it: a force is needed not to keep an object moving but to change its velocity.",
+          "valuePoints": [
+            "0 to 5 s: a = 2 m s⁻² and F = 1500 × 2 = 3000 N towards the east",
+            "5 to 10 s: constant velocity, a = 0, so the net force is zero",
+            "10 to 15 s: a = −2 m s⁻² and F = −3000 N, that is 3000 N towards the west",
+            "The negative sign means the force is opposite to the direction of motion",
+            "A high constant velocity needs no net force; force is needed only to change velocity"
+          ],
+          "rubric": [
+            {
+              "label": "First interval",
+              "marks": 1.5,
+              "descriptor": "a = 2 m s⁻² (half) and F = 3000 N east (1)"
+            },
+            {
+              "label": "Second interval",
+              "marks": 1,
+              "descriptor": "Zero acceleration and zero net force, with the reason from the shape of the graph"
+            },
+            {
+              "label": "Third interval",
+              "marks": 1.5,
+              "descriptor": "a = −2 m s⁻² (half) and F = 3000 N towards the west (1)"
+            },
+            {
+              "label": "Meaning of the sign",
+              "marks": 1,
+              "descriptor": "Force opposite to the direction of motion; a constant velocity needs no net force"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-06-la2",
+          "kind": "la",
+          "outcome": "S9-06-1",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "For a long time it was believed that a force is needed to keep an object moving at a constant velocity. Explain why everyday experience suggests this, describe the thought experiment in which the force of friction between an object and a horizontal floor is zero, and state what Newton's first law says instead. Then explain, using this law, (i) why you must keep pedalling a bicycle on a level road and (ii) why a person pushing a box at constant velocity is applying a force even though the net force is zero.",
+          "answer": "Everyday experience suggests that a force is needed because every moving object around us slows down and stops when we stop pushing it: a ball rolls to a halt, a bicycle stops if you stop pedalling. What is easy to miss is that the force of friction is always present between the surfaces in contact, acting opposite to the direction of motion, and it is this force that brings the object to rest. In the thought experiment we imagine an object and a horizontal floor so smooth that the force of friction between them is zero. If such an object were given a push and then released, nothing would act on it along the direction of its motion, its velocity would not decrease at all, and it would continue moving forever without ever coming to rest. Galileo argued in this way that if all impediments to the motion of a body along a horizontal plane are removed, it will continue to move indefinitely. Newton's first law of motion states this as: an object at rest remains at rest, and an object in motion continues to move with a constant velocity, unless a net force acts upon the object. In other words, if the net force is zero, the acceleration is zero. (i) On a level road, friction between the tyres and the road, and the friction of the air, act against the bicycle's motion. You must keep pedalling to apply a forward force that cancels these, so that the net force is zero and the velocity stays constant; if you stop, friction is the only force left, the net force is no longer zero, and the bicycle slows down. (ii) A person pushing a box at constant velocity is applying a force equal in magnitude and opposite in direction to the force of friction on the box. The two forces balance, so the net force on the box is zero and by the first law the box keeps moving at constant velocity. The person's force is real and necessary, but its whole task is to cancel friction, not to maintain the motion.",
+          "valuePoints": [
+            "Everyday objects stop because friction acts opposite to the motion, which hides the real rule",
+            "Thought experiment: with zero friction a moving object would never slow down and would keep moving forever",
+            "Newton's first law: rest stays rest and motion stays uniform unless a net force acts; zero net force means zero acceleration",
+            "Bicycle: pedalling supplies a forward force that cancels friction, keeping the net force zero",
+            "Pushing a box: the applied force balances friction, so the net force is zero and the velocity is constant"
+          ],
+          "rubric": [
+            {
+              "label": "Why experience misleads",
+              "marks": 1,
+              "descriptor": "Friction is always present and acts opposite to the motion, bringing objects to rest"
+            },
+            {
+              "label": "Thought experiment",
+              "marks": 1,
+              "descriptor": "With zero friction the object's velocity would not decrease and it would move on indefinitely"
+            },
+            {
+              "label": "Statement of the first law",
+              "marks": 1,
+              "descriptor": "Correct statement, including the condition of no net force"
+            },
+            {
+              "label": "The bicycle",
+              "marks": 1,
+              "descriptor": "Pedalling cancels friction so the net force is zero; stopping leaves friction as the only force"
+            },
+            {
+              "label": "The box",
+              "marks": 1,
+              "descriptor": "Applied force balances friction; net force zero, so constant velocity continues"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-06-case1",
+          "kind": "case",
+          "outcome": "S9-06-4",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "passage": "Four coins are stacked and taped together. A rubber band is held slightly stretched between the finger and thumb, with two marks A and B at its ends and a third mark C showing how far it will be pulled back. The stack of coins is pushed back against the band until it reaches C and is then released, and the distance the stack travels before coming to rest is measured. The whole procedure is repeated on three different level surfaces, stretching the band to C every time. The distances measured are: wooden table top 38 cm, laminated table top 61 cm, polished marble floor 96 cm. A spring balance is then used on each surface: a wooden block is attached to its hook and pulled with a gradually increasing force, and the reading is noted at the moment the block just begins to move. The readings are 2.6 N on the wooden top, 1.7 N on the laminated top and 1.1 N on the marble floor.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Which surface has the smallest force of friction acting between it and the object moving on it?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the wooden table top",
+                  "correct": false
+                },
+                {
+                  "text": "the laminated table top",
+                  "correct": false
+                },
+                {
+                  "text": "the polished marble floor",
+                  "correct": true
+                },
+                {
+                  "text": "the three surfaces cannot be compared from these readings",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) — the marble floor gives both the largest distance travelled by the stack of coins (96 cm) and the smallest spring balance reading (1.1 N). Both observations point the same way: less friction, so the velocity of the stack decreases more slowly and it travels further."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Why must the rubber band be stretched to the same mark C on every surface?",
+              "marks": 1,
+              "answer": "So that the same force, and therefore the same initial velocity, is given to the stack of coins each time. Only then can any difference in the distance travelled be attributed to the surface, which is the one thing being changed."
+            },
+            {
+              "type": "sa",
+              "prompt": "After the stack of coins loses contact with the rubber band it slows down and stops. Name the forces acting on it before and after it leaves the band, and explain what the spring balance reading measures.",
+              "marks": 2,
+              "answer": "While in contact with the band, the forward force of the stretched rubber band and the backward force of friction both act on the stack. The band's force is the larger, so a net force acts forward and the stack accelerates from rest. Once it loses contact, the band's force is gone and only the force of friction acts, opposite to the direction of motion; it gradually decreases the velocity and finally brings the stack to rest (1 mark). The spring balance reading taken at the instant the block just begins to move is an approximate measure of the force of friction between the block and that surface, because up to that instant the applied force and friction are balanced; a smaller reading means a smaller force of friction (1 mark)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "questions": [
+        {
+          "id": "iesc1-07-ar1",
+          "kind": "ar",
+          "outcome": "S9-07-1",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "A girl carrying a box on her head and walking on level ground does no work on the box by the upward force she applies to it.",
+          "reason": "The upward force she applies is perpendicular to the horizontal displacement of the box.",
+          "answer": "a",
+          "explanation": "Both are true and R explains A: work done by a force is the force multiplied by the displacement in the direction of the force. Here the box has no displacement in the direction of her upward force, so the work done by that force is zero — even though she feels tired."
+        },
+        {
+          "id": "iesc1-07-ar2",
+          "kind": "ar",
+          "outcome": "S9-07-2",
+          "difficulty": "MEDIUM",
+          "marks": 1,
+          "assertion": "If the magnitude of the velocity of a vehicle is doubled, its kinetic energy becomes four times as large.",
+          "reason": "The kinetic energy of an object is directly proportional to its mass.",
+          "answer": "b",
+          "explanation": "Both statements are true, but R is not the explanation of A. A follows from the dependence of kinetic energy on the square of the velocity in K = ½mv², so doubling v makes K four times as large. R describes the dependence on mass, which is not involved here since the mass is unchanged."
+        },
+        {
+          "id": "iesc1-07-vsa1",
+          "kind": "vsa",
+          "outcome": "S9-07-1",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "While saving a goal, a goalkeeper's hands move back by 15 cm as she stops the ball, applying a force of 200 N. How much work does she do on the ball? Explain the sign of your answer.",
+          "answer": "The goalkeeper applies a force in the direction opposite to the motion of the ball, so the displacement of the ball must be taken as negative with respect to the direction of the force: s = −0.15 m. Work done on the ball = force × displacement in the direction of the force = 200 N × (−0.15 m) = −30 J. The negative sign means that the work done by the goalkeeper on the ball is negative, because the displacement of the ball is opposite to the direction of the force she applies; this is why the ball loses energy and stops.",
+          "valuePoints": [
+            "15 cm converted to 0.15 m and taken as negative because it is opposite to the applied force",
+            "W = 200 × (−0.15) = −30 J",
+            "Negative work because force and displacement are in opposite directions, so the ball loses energy"
+          ],
+          "rubric": [
+            {
+              "label": "Calculation",
+              "marks": 1,
+              "descriptor": "W = 200 N × 0.15 m = 30 J in magnitude, with the conversion of cm to m"
+            },
+            {
+              "label": "Sign explained",
+              "marks": 1,
+              "descriptor": "−30 J, because displacement is opposite to the direction of the applied force"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-07-vsa2",
+          "kind": "vsa",
+          "outcome": "S9-07-3",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "A weightlifter lifts a 75 kg mass through a height of 2 m in 5 s. Find the work she does and the power required. Take g = 10 m s⁻².",
+          "answer": "Work done = force × displacement in the direction of the force. To lift the mass slowly she must apply an upward force equal to mg, so W = mgh = 75 kg × 10 m s⁻² × 2 m = 1500 J. Power is the rate at which work is done: P = W/t = 1500 J / 5 s = 300 W.",
+          "valuePoints": [
+            "W = mgh = 75 × 10 × 2 = 1500 J",
+            "P = W/t = 1500/5 = 300 W"
+          ],
+          "rubric": [
+            {
+              "label": "Work done",
+              "marks": 1,
+              "descriptor": "1500 J using W = mgh"
+            },
+            {
+              "label": "Power",
+              "marks": 1,
+              "descriptor": "300 W using P = W/t, with the unit watt"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-07-vsa3",
+          "kind": "vsa",
+          "outcome": "S9-07-2",
+          "difficulty": "EASY",
+          "marks": 2,
+          "stem": "A cricket ball of mass 0.2 kg is bowled at a velocity of 43 m s⁻¹. Calculate its kinetic energy at the moment of delivery.",
+          "answer": "Kinetic energy K = ½mv² = ½ × 0.2 kg × (43 m s⁻¹)² = ½ × 0.2 × 1849 = 184.9 J. The kinetic energy of the ball is 184.9 J.",
+          "valuePoints": [
+            "Uses K = ½mv²",
+            "½ × 0.2 × 1849 = 184.9 J"
+          ],
+          "rubric": [
+            {
+              "label": "Formula and substitution",
+              "marks": 1,
+              "descriptor": "K = ½mv² with m = 0.2 kg and v = 43 m s⁻¹"
+            },
+            {
+              "label": "Answer",
+              "marks": 1,
+              "descriptor": "184.9 J, with the unit"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-07-sa1",
+          "kind": "sa",
+          "outcome": "S9-07-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A stone of mass 2 kg is held at the top of a building 20 m high and then allowed to fall freely. Taking g = 10 m s⁻² and neglecting air resistance, find (i) its potential energy at the top, (ii) its kinetic energy just before it reaches the ground and (iii) its velocity just before it reaches the ground.",
+          "answer": "(i) Potential energy at the top, U = mgh = 2 kg × 10 m s⁻² × 20 m = 400 J. (ii) At the top the stone is at rest, so its kinetic energy is zero and its mechanical energy is 400 J. As it falls, its potential energy decreases and its kinetic energy increases by the same amount, the mechanical energy staying constant because only the gravitational force acts. Just before it reaches the ground its height is zero, so its potential energy is zero and all 400 J has become kinetic energy: K = 400 J. (iii) K = ½mv², so 400 = ½ × 2 × v², which gives v² = 400 and v = 20 m s⁻¹, directed downwards.",
+          "valuePoints": [
+            "U = mgh = 2 × 10 × 20 = 400 J",
+            "Mechanical energy is conserved, so all the potential energy becomes kinetic energy: K = 400 J",
+            "400 = ½ × 2 × v² gives v = 20 m s⁻¹"
+          ],
+          "rubric": [
+            {
+              "label": "Potential energy",
+              "marks": 1,
+              "descriptor": "400 J using U = mgh"
+            },
+            {
+              "label": "Kinetic energy at the bottom",
+              "marks": 1,
+              "descriptor": "400 J, justified by the conservation of mechanical energy"
+            },
+            {
+              "label": "Velocity",
+              "marks": 1,
+              "descriptor": "20 m s⁻¹ from K = ½mv²"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-07-sa2",
+          "kind": "sa",
+          "outcome": "S9-07-4",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A person uses a straight ramp to raise a load over a step 30 cm high. The foot of the ramp is 40 cm away from the step, so the sloping surface of the ramp is 50 cm long. Calculate the mechanical advantage of the ramp, and explain why using it does not reduce the total work the person must do.",
+          "answer": "For an inclined plane, mechanical advantage = load / effort = L / h, where L is the length of the sloping surface and h is the height raised. Here L = 50 cm and h = 30 cm, so mechanical advantage = 50/30 = 1.67 (to two decimal places). The effort needed is therefore about 1.67 times smaller than the load. Using the ramp does not reduce the total work, because work is the product of force and displacement. The force is smaller, but the load must be pushed through 50 cm along the ramp instead of being lifted through 30 cm, and the extra distance exactly makes up for the smaller force. A simple machine changes the magnitude or the direction of the force that must be applied; it makes the task easier, but it does not create energy and does not reduce the work to be done.",
+          "valuePoints": [
+            "Mechanical advantage of an inclined plane = L/h",
+            "50/30 = 1.67",
+            "Work is unchanged: the smaller force acts through a larger distance, and a machine does not create energy"
+          ],
+          "rubric": [
+            {
+              "label": "Correct relation",
+              "marks": 1,
+              "descriptor": "Mechanical advantage = load/effort = L/h for an inclined plane"
+            },
+            {
+              "label": "Value",
+              "marks": 1,
+              "descriptor": "50/30 = 1.67 (accept 5/3 or about 1.7)"
+            },
+            {
+              "label": "Work unchanged",
+              "marks": 1,
+              "descriptor": "Smaller force over a larger distance; a machine does not reduce the total work"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-07-sa3",
+          "kind": "sa",
+          "outcome": "S9-07-2",
+          "difficulty": "MEDIUM",
+          "marks": 3,
+          "stem": "A child slides down a smooth slide whose top is 3.2 m above the ground. Taking g = 10 m s⁻² and neglecting friction, find the magnitude of the child's velocity on reaching the bottom. Would a heavier child, or a slide of a different shape but the same height, change your answer? Give a reason.",
+          "answer": "At the top the child has potential energy mgh and no kinetic energy; at the bottom the height is zero, so all of it has become kinetic energy ½mv². Neglecting friction, mechanical energy is conserved, so ½mv² = mgh. The mass m cancels from both sides, giving v² = 2gh and v = the square root of (2gh) = the square root of (2 × 10 × 3.2) = the square root of 64 = 8 m s⁻¹. Neither a heavier child nor a differently shaped slide would change this answer. The mass cancels out of the equation, so it does not appear in the result; and the velocity depends only on the height h through which the child descends, not on the path taken to get down. A longer or more curved slide of the same height gives the same speed at the bottom (though in practice friction would reduce it).",
+          "valuePoints": [
+            "½mv² = mgh with the mass cancelling, so v = square root of 2gh",
+            "v = square root of (2 × 10 × 3.2) = 8 m s⁻¹",
+            "The answer depends only on the height, not on the mass or the shape of the slide"
+          ],
+          "rubric": [
+            {
+              "label": "Energy equation",
+              "marks": 1,
+              "descriptor": "Equates mgh with ½mv² and shows that m cancels"
+            },
+            {
+              "label": "Value of v",
+              "marks": 1,
+              "descriptor": "8 m s⁻¹"
+            },
+            {
+              "label": "Independence of mass and shape",
+              "marks": 1,
+              "descriptor": "States that v depends only on h, so neither the child's mass nor the shape of the slide matters"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-07-la1",
+          "kind": "la",
+          "outcome": "S9-07-2",
+          "difficulty": "HARD",
+          "marks": 5,
+          "stem": "A coconut of mass 1.5 kg falls from the top of a coconut tree 10 m tall onto wet sand on a beach, and comes to rest by making a depression in the sand. Take g = 10 m s⁻² and neglect air resistance. (i) Calculate its potential energy at the top of the tree. (ii) Calculate the magnitude of its velocity just before it hits the sand. (iii) If the average resistive force of the sand is 3000 N and all the coconut's energy is used in making the depression, calculate the depth of the depression. (iv) State what happens to the energy of the coconut in the end.",
+          "answer": "(i) Potential energy at the top, U = mgh = 1.5 kg × 10 m s⁻² × 10 m = 150 J. (ii) Mechanical energy is conserved during the fall, so just before impact all of this has become kinetic energy: ½mv² = 150 J, giving ½ × 1.5 × v² = 150, so v² = 200 and v = the square root of 200, about 14.1 m s⁻¹, directed downwards. (iii) Inside the sand the coconut is brought to rest, so its kinetic energy of 150 J must be reduced to zero. The sand applies a resistive force of 3000 N opposite to the motion, and the work done by this force over a depth d is 3000 N × d, taken as negative because the force opposes the displacement. Using the work-energy theorem, the magnitude of the work done by the sand equals the kinetic energy lost: 3000 N × d = 150 J, so d = 150/3000 = 0.05 m, that is 5 cm. (iv) The energy has not disappeared. Work done against the resistance of the sand pushes the grains apart and makes the depression; the rest of the energy appears as heat and sound in the sand and in the coconut. Energy has been transferred and changed in form, not destroyed.",
+          "valuePoints": [
+            "U = mgh = 1.5 × 10 × 10 = 150 J",
+            "½mv² = 150 J gives v² = 200, so v is about 14.1 m s⁻¹",
+            "Work done against the sand = 3000 × d, and by the work-energy theorem this equals 150 J",
+            "d = 150/3000 = 0.05 m = 5 cm",
+            "The energy is used in displacing the sand and appears as heat and sound; it is not destroyed"
+          ],
+          "rubric": [
+            {
+              "label": "Potential energy",
+              "marks": 1,
+              "descriptor": "150 J using U = mgh"
+            },
+            {
+              "label": "Velocity on impact",
+              "marks": 1,
+              "descriptor": "About 14.1 m s⁻¹ from ½mv² = 150 J"
+            },
+            {
+              "label": "Work-energy theorem applied",
+              "marks": 1,
+              "descriptor": "Work done by the resistive force over depth d set equal to the kinetic energy lost"
+            },
+            {
+              "label": "Depth",
+              "marks": 1,
+              "descriptor": "0.05 m, that is 5 cm"
+            },
+            {
+              "label": "Fate of the energy",
+              "marks": 1,
+              "descriptor": "Used in making the depression and changed into heat and sound; not destroyed"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-07-la2",
+          "kind": "la",
+          "outcome": "S9-07-4",
+          "difficulty": "MEDIUM",
+          "marks": 5,
+          "stem": "Simple machines make a task easier without reducing the work to be done. (i) Explain what a fixed pulley does for us and state its mechanical advantage, with a reason. (ii) Name the three parts of a lever and write the relation between effort, effort arm, load and load arm. (iii) A seesaw has a fulcrum at C and four seats: A and E at 2 m from C on opposite sides, and B and D at 1 m from C on opposite sides. A child of mass 15 kg sits at seat A. On which seat should a child of mass 30 kg sit so that the seesaw is balanced? Show your working.",
+          "answer": "(i) A fixed pulley is a wheel with a groove that guides a rope, fixed at the top. It does not reduce the magnitude of the force required; it only changes the direction in which the force must be applied, so that a load can be raised by pulling downwards on the rope instead of lifting upwards, which is far more convenient. Since the effort and the load are equal in magnitude, the mechanical advantage of a fixed pulley = load/effort = 1. (ii) The three parts of a lever are the fulcrum, the fixed point about which the lever rotates; the load, the force to be overcome; and the effort, the force applied. The distance of the load from the fulcrum is the load arm and the distance of the effort from the fulcrum is the effort arm. A lever balances when effort × effort arm = load × load arm, and its mechanical advantage = load/effort = effort arm / load arm. (iii) The seesaw is a lever with its fulcrum at C. Let the 30 kg child sit at a distance L from the fulcrum, on the side opposite to A. For balance, 15 kg × 2 m = 30 kg × L, so 30 = 30 × L and L = 1 m. A seat 1 m from the fulcrum, on the side opposite A, is seat D. The heavier child must sit nearer the fulcrum, on the shorter arm: the smaller force needs the longer arm.",
+          "valuePoints": [
+            "A fixed pulley changes only the direction of the effort, not its magnitude",
+            "Mechanical advantage of a fixed pulley = 1, since load and effort are equal",
+            "Lever: fulcrum, load and effort; effort × effort arm = load × load arm",
+            "15 × 2 = 30 × L gives L = 1 m",
+            "The 30 kg child should sit at seat D, nearer the fulcrum, on the opposite side"
+          ],
+          "rubric": [
+            {
+              "label": "What a fixed pulley does",
+              "marks": 1,
+              "descriptor": "Changes the direction of the effort for convenience, without reducing its magnitude"
+            },
+            {
+              "label": "Mechanical advantage of the pulley",
+              "marks": 1,
+              "descriptor": "1, because load and effort are equal in magnitude"
+            },
+            {
+              "label": "Parts of a lever",
+              "marks": 1,
+              "descriptor": "Fulcrum, load and effort named correctly"
+            },
+            {
+              "label": "Lever relation",
+              "marks": 1,
+              "descriptor": "effort × effort arm = load × load arm"
+            },
+            {
+              "label": "Seesaw calculation",
+              "marks": 1,
+              "descriptor": "15 × 2 = 30 × L giving L = 1 m, so seat D on the opposite side"
+            }
+          ]
+        },
+        {
+          "id": "iesc1-07-case1",
+          "kind": "case",
+          "outcome": "S9-07-3",
+          "difficulty": "MEDIUM",
+          "marks": 4,
+          "passage": "For a school science exhibition, two friends measure their own power on the staircase of their school block. The staircase rises through a vertical height of 4 m from the ground floor to the first floor. Rahul, whose mass is 50 kg, walks up steadily and a classmate times him at 8 s. Anjali, whose mass is 40 kg, runs up the same staircase and is timed at 5 s. The friends take the acceleration due to the gravitational force by the Earth as 10 m s⁻² and ignore any energy used in moving their arms and legs sideways. They then argue about who has done more work and who is more powerful.",
+          "fromBook": false,
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The work done by each of them against the gravitational force in climbing the staircase depends on",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "their mass and the time they took",
+                  "correct": false
+                },
+                {
+                  "text": "their mass and the vertical height climbed",
+                  "correct": true
+                },
+                {
+                  "text": "the number of steps and the time they took",
+                  "correct": false
+                },
+                {
+                  "text": "the length of the sloping staircase alone",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) — the work done against gravity is mgh, so it depends on the mass and on the vertical height gained, and not on how long it took or on the path followed."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Calculate the work done by Rahul in climbing the staircase.",
+              "marks": 1,
+              "answer": "Work done = mgh = 50 kg × 10 m s⁻² × 4 m = 2000 J."
+            },
+            {
+              "type": "sa",
+              "prompt": "Calculate the power developed by each friend, and use your answers to settle their argument.",
+              "marks": 2,
+              "answer": "Rahul: W = mgh = 50 × 10 × 4 = 2000 J, so P = W/t = 2000 J / 8 s = 250 W. Anjali: W = mgh = 40 × 10 × 4 = 1600 J, so P = 1600 J / 5 s = 320 W (1 mark for both calculations). Rahul does more work, 2000 J against Anjali's 1600 J, because he is heavier and raises a greater mass through the same height. Anjali is nevertheless more powerful, 320 W against 250 W, because power is the rate at which work is done and she did her work in a shorter time. Both are right about different quantities: doing more work and being more powerful are not the same thing (1 mark)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
