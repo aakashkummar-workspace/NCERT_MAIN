@@ -226,62 +226,138 @@ export async function listQuestions(
   });
 }
 
+const DETAIL_INCLUDE = {
+  subject: true,
+  chapter: true,
+  outcomes: true,
+  versions: { orderBy: { version: "desc" as const } },
+} satisfies Prisma.QuestionInclude;
+
 export async function getQuestion(organizationId: string, questionId: string) {
   return withTenant(organizationId, async (tx) => {
     const row = await tx.question.findFirst({
       where: { id: questionId, deletedAt: null },
-      include: {
-        subject: true,
-        chapter: true,
-        outcomes: true,
-        versions: { orderBy: { version: "desc" } },
-      },
+      include: DETAIL_INCLUDE,
     });
-    if (!row) return null;
+    return row ? toDetail(row) : null;
+  });
+}
 
-    const current = row.versions[0];
-    if (!current) return null;
+export type QuestionDetail = NonNullable<ReturnType<typeof toDetail>>;
 
-    const draft: QuestionDraft = {
-      type: row.type as QuestionType,
-      stem: current.stem,
-      options: (current.options as Option[] | null) ?? null,
-      answerKey: (current.answerKey as AnswerKey) ?? null,
-      explanation: current.explanation,
-      hint: current.hint,
-      marks: row.marks,
-      outcomeIds: row.outcomes.map((o) => o.learningOutcomeId),
-    };
+/**
+ * One question as a teacher reads it: the current version, its mark scheme,
+ * and the validator's verdict. Shared by the question page and the review
+ * queue, so "approvable" means the same thing on both.
+ */
+function toDetail(row: Prisma.QuestionGetPayload<{ include: typeof DETAIL_INCLUDE }>) {
+  const current = row.versions[0];
+  if (!current) return null;
 
+  const draft: QuestionDraft = {
+    type: row.type as QuestionType,
+    stem: current.stem,
+    options: (current.options as Option[] | null) ?? null,
+    answerKey: (current.answerKey as AnswerKey) ?? null,
+    explanation: current.explanation,
+    hint: current.hint,
+    marks: row.marks,
+    outcomeIds: row.outcomes.map((o) => o.learningOutcomeId),
+  };
+
+  return {
+    id: row.id,
+    status: row.status,
+    source: row.source,
+    /** Advice from the validator, never a block. See core/questions/generate. */
+    aiFlags: (row.aiFlags as { code: string; note: string }[] | null) ?? [],
+    visibility: row.visibility,
+    type: row.type as QuestionType,
+    difficulty: row.difficulty,
+    marks: row.marks,
+    expectedTimeSeconds: row.expectedTimeSeconds,
+    subjectId: row.subjectId,
+    subjectName: row.subject.name,
+    chapterId: row.chapterId,
+    chapterTitle: row.chapter?.title ?? null,
+    outcomeIds: row.outcomes.map((o) => o.learningOutcomeId),
+    version: current.version,
+    versionCount: row.versions.length,
+    stem: current.stem,
+    options: (current.options as Option[] | null) ?? null,
+    answerKey: (current.answerKey as AnswerKey) ?? null,
+    explanation: current.explanation,
+    hint: current.hint,
+    rubric: parseRubric(current.rubric),
+    approvedAt: row.approvedAt,
+    rejectionReason: row.rejectionReason,
+    chapterNumber: row.chapter?.number ?? null,
+    validation: validateQuestion(draft),
+  };
+}
+
+// ---------------------------------------------------------------------------
+// The review queue
+// ---------------------------------------------------------------------------
+
+export type ReviewFilters = Pick<BankFilters, "subjectId" | "chapterId" | "type">;
+
+/** A batch a reviewer works through without a round trip per question. */
+export const REVIEW_BATCH = 20;
+
+/**
+ * The next drafts to review, in the order a subject teacher reads a book:
+ * chapter by chapter, and within a chapter in the order they were written.
+ *
+ * `offset` counts the drafts the reviewer SKIPPED. Approving or rejecting takes
+ * a question out of the DRAFT set, so the next batch starts after only the ones
+ * passed over — a skipped question is not lost, it is further down the list.
+ *
+ * There is deliberately no "approve all". A reviewer who can approve forty
+ * questions with one press approves forty questions unread, and an approval
+ * nobody read is a claim that is untrue — the rule /admin/review already keeps
+ * for curriculum.
+ */
+export async function reviewQueue(
+  organizationId: string,
+  filters: ReviewFilters,
+  offset = 0,
+) {
+  return withTenant(organizationId, async (tx) => {
+    const where = bankWhere({ ...filters, status: "DRAFT" }, { status: true });
+    const [rows, remaining] = await Promise.all([
+      tx.question.findMany({
+        where,
+        include: DETAIL_INCLUDE,
+        orderBy: [{ chapter: { number: "asc" } }, { createdAt: "asc" }, { id: "asc" }],
+        skip: Math.max(offset, 0),
+        take: REVIEW_BATCH,
+      }),
+      tx.question.count({ where }),
+    ]);
     return {
-      id: row.id,
-      status: row.status,
-      source: row.source,
-      /** Advice from the validator, never a block. See core/questions/generate. */
-      aiFlags: (row.aiFlags as { code: string; note: string }[] | null) ?? [],
-      visibility: row.visibility,
-      type: row.type as QuestionType,
-      difficulty: row.difficulty,
-      marks: row.marks,
-      expectedTimeSeconds: row.expectedTimeSeconds,
-      subjectId: row.subjectId,
-      subjectName: row.subject.name,
-      chapterId: row.chapterId,
-      chapterTitle: row.chapter?.title ?? null,
-      outcomeIds: row.outcomes.map((o) => o.learningOutcomeId),
-      version: current.version,
-      versionCount: row.versions.length,
-      stem: current.stem,
-      options: (current.options as Option[] | null) ?? null,
-      answerKey: (current.answerKey as AnswerKey) ?? null,
-      explanation: current.explanation,
-      hint: current.hint,
-      rubric: parseRubric(current.rubric),
-      approvedAt: row.approvedAt,
-      rejectionReason: row.rejectionReason,
-      validation: validateQuestion(draft),
+      items: rows.map(toDetail).filter((item): item is QuestionDetail => item !== null),
+      remaining,
     };
   });
+}
+
+/** Drafts waiting, per subject and per chapter, for the queue's pickers. */
+export async function draftCounts(organizationId: string) {
+  const grouped = await withTenant(organizationId, (tx) =>
+    tx.question.groupBy({
+      by: ["subjectId", "chapterId"],
+      where: { deletedAt: null, status: "DRAFT" },
+      _count: true,
+    }),
+  );
+  const bySubject = new Map<string, number>();
+  const byChapter = new Map<string, number>();
+  for (const row of grouped) {
+    bySubject.set(row.subjectId, (bySubject.get(row.subjectId) ?? 0) + row._count);
+    if (row.chapterId) byChapter.set(row.chapterId, (byChapter.get(row.chapterId) ?? 0) + row._count);
+  }
+  return { bySubject, byChapter, total: grouped.reduce((sum, row) => sum + row._count, 0) };
 }
 
 /**

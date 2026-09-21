@@ -7,6 +7,7 @@ import type { Rubric } from "@/core/questions/rubric";
 import type { QuestionItemStats } from "@/core/itemstats";
 import { Alert, Badge, Button, Card, Row, type Tone } from "@/ui";
 import { QuestionEditor } from "../QuestionEditor";
+import { QuestionView } from "../QuestionView";
 import { ItemStatistics } from "./ItemStatistics";
 
 type Question = {
@@ -139,10 +140,6 @@ export function QuestionDetail({
     );
   }
 
-  const hasCorrectOption = (question.options ?? []).some(
-    (option) => option.isCorrect,
-  );
-
   return (
     <div className="ui-editor">
       <div className="ui-editor-main">
@@ -175,76 +172,7 @@ export function QuestionDetail({
         )}
 
         <Card>
-          <p className="ui-question-full">{question.stem}</p>
-
-          {question.options && question.options.length > 0 && (
-            <ul className="ui-answer-list">
-              {question.options.map((option) => (
-                <li key={option.key} data-correct={option.isCorrect || undefined}>
-                  <span className="ui-answer-key">{option.key}</span>
-                  <span>{option.text}</span>
-                  {option.isCorrect && <Badge tone="success">Correct</Badge>}
-                </li>
-              ))}
-            </ul>
-          )}
-
-          {question.answerKey?.kind === "boolean" && (
-            <p className="ui-answer-plain">
-              Answer:{" "}
-              <strong>{question.answerKey.correct ? "True" : "False"}</strong>
-            </p>
-          )}
-          {question.answerKey?.kind === "numeric" && (
-            <p className="ui-answer-plain">
-              Answer:{" "}
-              <strong className="tabular">{question.answerKey.value}</strong>{" "}
-              <span className="tabular">plus or minus {question.answerKey.tolerance}</span>
-            </p>
-          )}
-          {question.answerKey?.kind === "text" && (
-            <p className="ui-answer-plain">
-              Accepted: <strong>{question.answerKey.accepted.join(", ")}</strong>
-            </p>
-          )}
-          {!question.answerKey && !hasCorrectOption && (
-            <p className="ui-answer-plain">
-              Marked by a person — there is no automatic answer key for this type.
-            </p>
-          )}
-
-          {question.explanation && (
-            <div className="ui-explanation">
-              <span className="ui-explanation-label">Explanation</span>
-              <p>{question.explanation}</p>
-            </div>
-          )}
-
-          {question.hint && (
-            <div className="ui-explanation">
-              <span className="ui-explanation-label">Hint</span>
-              <p>{question.hint}</p>
-            </div>
-          )}
-
-          {question.rubric && (
-            <div className="ui-explanation">
-              <span className="ui-explanation-label">Mark scheme</span>
-              <ul className="ui-check-list">
-                {question.rubric.criteria.map((criterion) => (
-                  <li key={criterion.id}>
-                    <Badge tone="neutral">
-                      <span className="tabular">{criterion.marks}</span>
-                    </Badge>
-                    <span>
-                      <strong>{criterion.label}</strong>
-                      {criterion.descriptor ? ` — ${criterion.descriptor}` : ""}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <QuestionView question={question} />
         </Card>
 
         {stats && <ItemStatistics data={stats} />}

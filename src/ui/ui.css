@@ -2762,3 +2762,82 @@
     opacity: 0.6;
   }
 }
+
+/* ------------------------------------------------------------ Review queue -- */
+/* `ui-rq-*`: results.css already owns `.ui-review`, and one class name meaning
+   two components is how a table cell once rendered as a padded card. */
+
+.ui-rq {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ui-rq-progress {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.ui-rq-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+/* Chips wrap rather than scroll: a scrolling strip needs a tab stop and a name
+   to be reachable by keyboard, and wrapping needs neither. */
+.ui-rq-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.ui-rq-filter-label {
+  min-width: 64px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.ui-rq-filter a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--text-primary);
+  text-decoration: none;
+  background: var(--surface);
+}
+.ui-rq-filter a:hover {
+  border-color: var(--accent);
+}
+.ui-rq-filter a[aria-current="page"] {
+  background: var(--accent-wash);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+@media (max-width: 640px), (pointer: coarse) {
+  .ui-rq-filter a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+.ui-kbd {
+  display: inline-block;
+  min-width: 1.6em;
+  padding: 0 5px;
+  margin-left: 4px;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+  color: inherit;
+  opacity: 0.85;
+}

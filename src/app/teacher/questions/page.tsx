@@ -108,8 +108,19 @@ export default async function QuestionsPage({
     ...(chapter ? [{ label: `${chapter.number}. ${chapter.title}`, href: "" }] : []),
   ];
 
+  // The queue opens on the same subject and chapter the bank is showing.
+  const reviewQuery = new URLSearchParams();
+  if (filters.subjectId) reviewQuery.set("subjectId", filters.subjectId);
+  if (filters.chapterId) reviewQuery.set("chapterId", filters.chapterId);
+  const reviewHref = `/teacher/questions/review/${reviewQuery.size ? `?${reviewQuery}` : ""}`;
+
   const actions = (
     <>
+      {whole.draft > 0 && (
+        <Link href={reviewHref} className="ui-button" data-variant="secondary" data-size="md">
+          <span>Review drafts ({whole.draft})</span>
+        </Link>
+      )}
       <Link href="/teacher/questions/generate" className="ui-button" data-variant="secondary" data-size="md">
         <span>Generate drafts</span>
       </Link>
