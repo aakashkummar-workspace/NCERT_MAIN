@@ -342,22 +342,34 @@ export async function reviewQueue(
   });
 }
 
-/** Drafts waiting, per subject and per chapter, for the queue's pickers. */
-export async function draftCounts(organizationId: string) {
+/**
+ * Drafts waiting, per subject and per chapter, for the queue's pickers — and
+ * per type within the subject and chapter chosen, so the type filter offers
+ * only the kinds of question actually waiting there.
+ */
+export async function draftCounts(
+  organizationId: string,
+  scope: Pick<ReviewFilters, "subjectId" | "chapterId"> = {},
+) {
   const grouped = await withTenant(organizationId, (tx) =>
     tx.question.groupBy({
-      by: ["subjectId", "chapterId"],
+      by: ["subjectId", "chapterId", "type"],
       where: { deletedAt: null, status: "DRAFT" },
       _count: true,
     }),
   );
   const bySubject = new Map<string, number>();
   const byChapter = new Map<string, number>();
+  const byType = new Map<QuestionType, number>();
   for (const row of grouped) {
     bySubject.set(row.subjectId, (bySubject.get(row.subjectId) ?? 0) + row._count);
     if (row.chapterId) byChapter.set(row.chapterId, (byChapter.get(row.chapterId) ?? 0) + row._count);
+    const inScope =
+      (!scope.subjectId || row.subjectId === scope.subjectId) &&
+      (!scope.chapterId || row.chapterId === scope.chapterId);
+    if (inScope) byType.set(row.type as QuestionType, (byType.get(row.type as QuestionType) ?? 0) + row._count);
   }
-  return { bySubject, byChapter, total: grouped.reduce((sum, row) => sum + row._count, 0) };
+  return { bySubject, byChapter, byType, total: grouped.reduce((sum, row) => sum + row._count, 0) };
 }
 
 /**

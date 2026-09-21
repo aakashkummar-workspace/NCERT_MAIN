@@ -186,12 +186,22 @@ export function ReviewQueue({
             {more > 0
               ? `About ${more} more ${more === 1 ? "draft is" : "drafts are"} waiting after this batch.`
               : "That was the last batch for these filters."}
-            {counts.skipped > 0 && " Skipped drafts stay in the queue; they come round again later."}
+            {counts.skipped + skippedBefore > 0 && " Skipped drafts are still waiting — nothing skipped is lost."}
           </p>
           <Row>
             {more > 0 && (
               <Link href={`${batchHref}${batchHref.includes("?") ? "&" : "?"}skip=${skippedBefore + counts.skipped}`} className="ui-button" data-variant="primary" data-size="md">
                 <span>Next batch</span>
+              </Link>
+            )}
+            {/* The queue restarted from the top: everything decided has left
+                it, so what comes first is exactly what was passed over. */}
+            {counts.skipped + skippedBefore > 0 && (
+              <Link href={batchHref} className="ui-button" data-variant={more > 0 ? "secondary" : "primary"} data-size="md">
+                <span>
+                  Review the {counts.skipped + skippedBefore} skipped{" "}
+                  {counts.skipped + skippedBefore === 1 ? "draft" : "drafts"}
+                </span>
               </Link>
             )}
             <Button variant="ghost" onClick={() => setIndex(0)}>

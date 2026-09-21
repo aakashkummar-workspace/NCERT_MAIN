@@ -2085,6 +2085,10 @@
   font-size: 16px;
   line-height: 1.6;
   max-width: 74ch;
+  /* "Assertion (A): … / Reason (R): …", a case passage, a poem: the line
+     breaks are part of the question. A screenshot of the review queue showed
+     them collapsed into one paragraph. */
+  white-space: pre-wrap;
 }
 .ui-answer-list {
   list-style: none;
@@ -2136,6 +2140,8 @@
   line-height: 1.6;
   color: var(--text-secondary);
   max-width: 74ch;
+  /* A model answer followed by value points, one per line. */
+  white-space: pre-wrap;
 }
 
 .ui-facts {

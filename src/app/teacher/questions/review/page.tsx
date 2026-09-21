@@ -52,7 +52,7 @@ export default async function ReviewPage({
   const organizationId = session.actor.organizationId;
   const [queue, counts, picker] = await Promise.all([
     reviewQueue(organizationId, { subjectId: subjectId || undefined, chapterId: chapterId || undefined, type }, skip),
-    draftCounts(organizationId),
+    draftCounts(organizationId, { subjectId: subjectId || undefined, chapterId: chapterId || undefined }),
     questionPickerOptions(organizationId),
   ]);
 
@@ -117,9 +117,9 @@ export default async function ReviewPage({
           <Link href={href({ subjectId, chapterId })} aria-current={!type ? "page" : undefined}>
             All
           </Link>
-          {TYPES.map((t) => (
+          {TYPES.filter((t) => (counts.byType.get(t) ?? 0) > 0 || t === type).map((t) => (
             <Link key={t} href={href({ subjectId, chapterId, type: t })} aria-current={t === type ? "page" : undefined}>
-              {TYPE_LABEL[t]}
+              {TYPE_LABEL[t]} <span className="tabular">({counts.byType.get(t) ?? 0})</span>
             </Link>
           ))}
         </div>

@@ -782,6 +782,7 @@ check("teacher", [
   t("/teacher/questions/", () => "/teacher/questions/"),
   t("/teacher/questions/new/", () => "/teacher/questions/new/"),
   t("/teacher/questions/generate/", () => "/teacher/questions/generate/"),
+  t("/teacher/questions/review/", () => "/teacher/questions/review/"),
   t("/teacher/questions/[id]/", () => `/teacher/questions/${fx.ids.questionId}/`),
   t("/teacher/assessments/", () => "/teacher/assessments/"),
   t("/teacher/assessments/[id]/", () => `/teacher/assessments/${fx.ids.assessmentId}/`),
