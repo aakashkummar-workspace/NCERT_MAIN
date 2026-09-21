@@ -1316,6 +1316,64 @@ The lesson both times: **if a query must run before a tenant is known, it belong
 - **A full copy is about 8 seconds**, in 400-row transactions so no single one
   approaches `withTenant`'s timeout.
 
+### The written question banks (September 2026)
+
+- **Two source folders, two checkers, two importers.** `prisma/english-questions/`
+  (checked by `scripts/check-english-questions.mjs`, imported by
+  `scripts/import-english-questions.ts`) holds English: competency MCQs, extracts,
+  short and long answers for First Flight, Footprints and Kaveri, and the
+  grammar, writing and unseen-passage chapters of **English – Grammar and Writing**
+  (`ENGGW`, books `gw10`/`gw9`). `prisma/written-questions/` (checked by
+  `scripts/check-written-questions.mjs`, imported by `import-written-questions.ts`)
+  holds assertion–reason, VSA, SA, LA and case questions for Maths, Science and
+  SST. About 1,800 questions in all, every one a DRAFT.
+- **The checker is the gate; the importer refuses to run while it fails.** It
+  matches every quoted extract against the book word for word (in order, a few
+  intervening words allowed, because the PDFs splice margin glosses into the
+  text), checks the per-chapter pattern, marks, rubric totals, that each outcome
+  belongs to its chapter, CBSE's passage lengths, and that an assembled case
+  question stays under the app's 4,000-character stem limit.
+- **Search both extractions.** The two-column Social Science books come out of
+  `pdftotext -layout` with the columns interleaved, so a passage that IS in the
+  book fails to match there. `.ncert-text/plain/` keeps reading order; the checker
+  accepts a match in either. `.english-text/` and `.ncert-text/` are extraction
+  output and are git-ignored — regenerate them with pdftotext.
+- **An extract or case imports twice**: once as a CASE_STUDY a teacher marks
+  (a rubric row per part) and once per MCQ part as an MCQ a machine marks, so
+  those parts reach mastery without waiting for anybody.
+- **`--org <slug>` is required, and `--only book:chapter` limits a run.** Every
+  run re-checks existing questions by content hash — a remote round trip each —
+  so adding one chapter to 1,000 questions took forty minutes before `--only`.
+- **No provenance is stamped.** The English extracts quote NCERT, so the library
+  must not copy them onward until somebody decides it may.
+- **`ENGGW` is its own subject because a paper holds one subject.** Grammar and
+  writing belong to no book chapter; filing them as chapters of First Flight was
+  offered and declined. So grammar and writing are set in their own paper.
+  `scripts/add-grammar-writing-subject.ts` applies the subject and its chapters to
+  a live database without `npm run db:seed`, which would also reset every plan and
+  entitlement from code.
+- **The new Class 9 books and the CBSE syllabus disagree.** CBSE 2025-26 still
+  examines surds and the laws of exponents (M9-03-3, M9-03-4); Ganita Manjari
+  Part 1 teaches neither. Both outcomes were KEPT — 25 approved questions test
+  exactly that — and M9-03-5/6 were ADDED for what chapter 3 does teach. Before
+  "fixing" an outcome that looks stale, check the syllabus and the questions
+  tagged to it: rewording an outcome re-files every question under it.
+
+### The review queue
+
+- **`/teacher/questions/review` is where drafts are read and decided**, one at
+  a time, 20 to a batch, chapter by chapter. A / R / E / S-or-→ / ← are the keys,
+  ignored while typing or editing. `reviewQueue` and `draftCounts` in
+  `core/questions`.
+- **No approve-all, no multi-select.** Same rule as `/admin/review`: an approval
+  nobody read is a claim that is untrue.
+- **A skipped draft is not lost.** `?skip=` counts only the skipped: approving or
+  rejecting takes a question out of the DRAFT set, so the next batch starts after
+  the skipped ones, and a finished batch offers them again.
+- **The question page and the queue share `QuestionView` and `toDetail`**, so
+  what a question says and whether it is approvable cannot differ between them.
+- **Its classes are `ui-rq-*`**: results.css already owns `.ui-review`.
+
 ### Reviewing the curriculum
 
 - **`/admin/review` is where a subject teacher signs off the NCERT drafts** — outcome,
@@ -1372,6 +1430,18 @@ about sixty-five defects. The lessons are about where tests stop looking:
   nothing computes is a claim nobody checked.
 - **A malformed id is a 404, not a 500.** Prisma throws on a non-UUID, so every
   `[id]` route validates the id before querying.
+
+- **A case study could not be answered, and 145 were in the bank.** The player's
+  `TEXT_TYPES` omitted CASE_STUDY, so a passage and every part rendered and then
+  no box to write in. Scoring and the marking queue already treated it as
+  written; only a screenshot of the player showed it. When a question type is
+  added to the bank, open it in the player, not only in the bank.
+- **Line breaks are part of a question.** "Assertion (A): … / Reason (R): …", a
+  poem, a case passage and a model answer with value points all collapsed into
+  one paragraph in the bank and the review queue until `.ui-question-full` and
+  `.ui-explanation p` kept `white-space: pre-wrap`. The player already did.
+- **After Next, start at the top.** On a phone, a long passage left the next
+  question's number under the sticky clock bar; the player now scrolls up.
 
 ### Practice and the Mistake Bank on a bad connection
 
@@ -2205,6 +2275,13 @@ about sixty-five defects. The lessons are about where tests stop looking:
   portal's smoke check asking the question nineteen pages had never been asked.
   `/admin` had been built this way from the start; `/teacher`, `/student` and `/parent` now match it,
   because page twenty is written by somebody who has not read this file.
+- **The question pickers are cached for 60 seconds** (`app/_curriculum/picker.ts`,
+  over `pickerForBoard` in `core/curriculum/picker`). Every chapter and outcome of
+  a board was re-read on the bank, the review queue, a question's page and the
+  builder — 1.6s a page against a remote database — for lists that change only
+  when curriculum is authored. Nothing about any school is cached: the
+  curriculum plane has no tenant. A newly authored outcome reaches a picker
+  within a minute.
 - **`trailingSlash: true` applies to route handlers.** POST to `/api/x/` or Next 308s and
   the request body silently vanishes on the redirect.
 - **ESLint flat config merges last-wins per rule.** A later block setting

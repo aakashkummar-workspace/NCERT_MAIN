@@ -1116,6 +1116,19 @@
   color: var(--text-secondary);
 }
 
+/* A name or a paper title that is a link is a control, and on a touch screen
+   it must be 44x44 to hit. The e2e tap-target sweep caught these at 390px. */
+@media (max-width: 640px), (pointer: coarse) {
+  .ui-roster-name,
+  .ui-class-paper-title,
+  .ui-class-paper-facts a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
 /* ---------------------------------------------------------- Class papers -- */
 
 .ui-class-papers {
