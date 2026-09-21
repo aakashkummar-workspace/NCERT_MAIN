@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -37,11 +38,18 @@ export async function generateMetadata({
   const session = await getSession();
   if (!session) return { title: "Class Overview" };
   const { id } = await params;
-  const klass = await getClass(session.actor.organizationId, id);
+  const klass = await loadClass(session.actor.organizationId, id);
   return {
     title: klass ? `${klass.name} (${klass.gradeLabel})` : "Class Overview",
   };
 }
+
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+/** The page title and the page read the same class; one read per request. */
+const loadClass = cache((organizationId: string, classId: string) =>
+  UUID.test(classId) ? getClass(organizationId, classId) : Promise.resolve(null),
+);
 
 export default async function ClassPage({
   params,
@@ -55,27 +63,34 @@ export default async function ClassPage({
 
   const { id } = await params;
   const { practice: practiceConcept } = await searchParams;
-  const klass = await getClass(session.actor.organizationId, id);
+  // Checked here because the reads below run in parallel: a malformed id must
+  // be a 404, never a query Prisma throws on.
+  if (!UUID.test(id)) notFound();
+  const organizationId = session.actor.organizationId;
+
+  // Two rounds, not four. Everything that needs only the class id is read at
+  // once — against a database a network hop away, reading the class first and
+  // then the rest cost a full round of transactions for nothing.
+  const [klass, announcements, canPost, practiceSets, papers, learning, storedSetup] = await Promise.all([
+    loadClass(organizationId, id),
+    listAnnouncementsForClass(organizationId, id),
+    canPostToClass(session.actor, id),
+    listForClass(organizationId, id),
+    classPapers(organizationId, id),
+    listStudents(organizationId, { classId: id }),
+    classSetup(organizationId, id),
+  ]);
   if (!klass) notFound();
 
-  const [announcements, canPost, practiceSets, concepts, papers, learning] = await Promise.all([
-    listAnnouncementsForClass(session.actor.organizationId, id),
-    canPostToClass(session.actor, id),
-    listForClass(session.actor.organizationId, id),
+  const [concepts, weakestNames] = await Promise.all([
     // Only this class’s own subject: practice on a History idea in a Maths
     // class would file its evidence under a syllabus these students are not
     // measured on, so the picker cannot offer one.
     conceptsForSubjects([klass.subjectId]),
-    classPapers(session.actor.organizationId, id),
-    listStudents(
-      session.actor.organizationId,
-      klass.students.map((student) => student.userId),
-    ),
-  ]);
-
-  // The weakest concept is named on each row, so resolve the names once.
-  const weakestNames = await conceptContext([
-    ...new Set(learning.flatMap((row) => (row.weakest ? [row.weakest.conceptId] : []))),
+    // The weakest concept is named on each row, so resolve the names once.
+    conceptContext([
+      ...new Set(learning.flatMap((row) => (row.weakest ? [row.weakest.conceptId] : []))),
+    ]),
   ]);
   const rosterStatus: Record<string, RosterStatus> = Object.fromEntries(
     learning.map((row) => [
@@ -96,7 +111,7 @@ export default async function ClassPage({
 
   const withoutPhone = klass.students.filter((s) => !s.canSignIn).length;
   const hasStudents = klass.students.length > 0;
-  const setup = (await classSetup(session.actor.organizationId, id)) ?? {
+  const setup = storedSetup ?? {
     hasStudents,
     hasPublishedPaper: false,
     hasAssignment: false,

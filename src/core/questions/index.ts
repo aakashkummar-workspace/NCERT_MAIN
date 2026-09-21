@@ -250,7 +250,18 @@ export type QuestionDetail = NonNullable<ReturnType<typeof toDetail>>;
  * and the validator's verdict. Shared by the question page and the review
  * queue, so "approvable" means the same thing on both.
  */
-function toDetail(row: Prisma.QuestionGetPayload<{ include: typeof DETAIL_INCLUDE }>) {
+/** The queue needs only the current version, and a count of the rest. */
+const QUEUE_INCLUDE = {
+  subject: true,
+  chapter: true,
+  outcomes: true,
+  versions: { orderBy: { version: "desc" as const }, take: 1 },
+  _count: { select: { versions: true } },
+} satisfies Prisma.QuestionInclude;
+
+function toDetail(
+  row: Prisma.QuestionGetPayload<{ include: typeof DETAIL_INCLUDE }> & { _count?: { versions: number } },
+) {
   const current = row.versions[0];
   if (!current) return null;
 
@@ -282,7 +293,7 @@ function toDetail(row: Prisma.QuestionGetPayload<{ include: typeof DETAIL_INCLUD
     chapterTitle: row.chapter?.title ?? null,
     outcomeIds: row.outcomes.map((o) => o.learningOutcomeId),
     version: current.version,
-    versionCount: row.versions.length,
+    versionCount: row._count?.versions ?? row.versions.length,
     stem: current.stem,
     options: (current.options as Option[] | null) ?? null,
     answerKey: (current.answerKey as AnswerKey) ?? null,
@@ -323,23 +334,25 @@ export async function reviewQueue(
   filters: ReviewFilters,
   offset = 0,
 ) {
-  return withTenant(organizationId, async (tx) => {
-    const where = bankWhere({ ...filters, status: "DRAFT" }, { status: true });
-    const [rows, remaining] = await Promise.all([
+  const where = bankWhere({ ...filters, status: "DRAFT" }, { status: true });
+  // Two transactions side by side: inside one, Prisma sends its queries one
+  // after another, and each is a round trip to the database.
+  const [rows, remaining] = await Promise.all([
+    withTenant(organizationId, (tx) =>
       tx.question.findMany({
         where,
-        include: DETAIL_INCLUDE,
+        include: QUEUE_INCLUDE,
         orderBy: [{ chapter: { number: "asc" } }, { createdAt: "asc" }, { id: "asc" }],
         skip: Math.max(offset, 0),
         take: REVIEW_BATCH,
       }),
-      tx.question.count({ where }),
-    ]);
-    return {
-      items: rows.map(toDetail).filter((item): item is QuestionDetail => item !== null),
-      remaining,
-    };
-  });
+    ),
+    withTenant(organizationId, (tx) => tx.question.count({ where })),
+  ]);
+  return {
+    items: rows.map(toDetail).filter((item): item is QuestionDetail => item !== null),
+    remaining,
+  };
 }
 
 /**

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { getSession } from "@/core/identity/context";
-import { questionPickerOptions } from "@/core/curriculum/picker";
+import { cachedPickerOptions } from "@/app/_curriculum/picker";
 import { AppShell } from "@/ui/AppShell";
 import { PageHeader } from "@/ui";
 import { QuestionEditor } from "../QuestionEditor";
@@ -13,7 +13,7 @@ export default async function NewQuestionPage() {
   const session = await getSession();
   if (!session) redirect("/signin");
 
-  const { subjects, chapters, outcomes } = await questionPickerOptions();
+  const { subjects, chapters, outcomes } = await cachedPickerOptions();
 
   return (
     <AppShell

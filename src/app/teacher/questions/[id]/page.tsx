@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { getSession } from "@/core/identity/context";
 import { getQuestion } from "@/core/questions";
 import { questionItemStats } from "@/core/itemstats";
-import { questionPickerOptions } from "@/core/curriculum/picker";
+import { cachedPickerOptions } from "@/app/_curriculum/picker";
 import { AppShell } from "@/ui/AppShell";
 import { PageHeader } from "@/ui";
 import { QuestionDetail } from "./QuestionDetail";
@@ -23,7 +23,7 @@ export default async function QuestionPage({
   const question = await getQuestion(session.actor.organizationId, id);
   if (!question) notFound();
 
-  const { subjects, chapters, outcomes } = await questionPickerOptions();
+  const { subjects, chapters, outcomes } = await cachedPickerOptions();
 
   // Derived on every read, and written nowhere. A stored statistic is stale the
   // moment the next paper is marked — the same reason an assignment has no

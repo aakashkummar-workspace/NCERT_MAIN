@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { getSession } from "@/core/identity/context";
 import { draftCounts, reviewQueue } from "@/core/questions";
 import type { QuestionType } from "@/core/questions/validate";
-import { questionPickerOptions } from "@/core/curriculum/picker";
+import { cachedPickerOptions } from "@/app/_curriculum/picker";
 import { AppShell } from "@/ui/AppShell";
 import { PageHeader } from "@/ui";
 import { ReviewQueue } from "./ReviewQueue";
@@ -53,7 +53,7 @@ export default async function ReviewPage({
   const [queue, counts, picker] = await Promise.all([
     reviewQueue(organizationId, { subjectId: subjectId || undefined, chapterId: chapterId || undefined, type }, skip),
     draftCounts(organizationId, { subjectId: subjectId || undefined, chapterId: chapterId || undefined }),
-    questionPickerOptions(organizationId),
+    cachedPickerOptions(organizationId),
   ]);
 
   const subject = picker.subjects.find((s) => s.id === subjectId);

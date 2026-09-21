@@ -2,7 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { getSession } from "@/core/identity/context";
-import { questionPickerOptions } from "@/core/curriculum/picker";
+import { cachedPickerOptions } from "@/app/_curriculum/picker";
 import { AppShell } from "@/ui/AppShell";
 import { Alert, PageHeader } from "@/ui";
 import { GenerateForm } from "./GenerateForm";
@@ -15,7 +15,7 @@ export default async function GeneratePage() {
   const session = await getSession();
   if (!session) redirect("/signin");
 
-  const picker = await questionPickerOptions();
+  const picker = await cachedPickerOptions();
 
   // Only chapters with authored outcomes. A chapter without them has nothing to
   // ground a generator in, and offering it would produce plausible questions

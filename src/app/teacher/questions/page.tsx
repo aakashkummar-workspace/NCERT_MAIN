@@ -3,7 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { getSession } from "@/core/identity/context";
 import { bankCounts, bankSummary, searchQuestions, type BankFilters } from "@/core/questions";
-import { questionPickerOptions } from "@/core/curriculum/picker";
+import { cachedPickerOptions } from "@/app/_curriculum/picker";
 import { listGradesWithSubjects } from "@/core/curriculum";
 import { organizationBoardId } from "@/core/organizations";
 import { BANK_PAGE_SIZE } from "./page-size";
@@ -74,7 +74,7 @@ export default async function QuestionsPage({
   const [whole, picker, grades] = await Promise.all([
     // Unfiltered, for "is the bank empty at all".
     bankSummary(organizationId),
-    questionPickerOptions(organizationId),
+    cachedPickerOptions(organizationId),
     organizationBoardId(organizationId).then((boardId) => listGradesWithSubjects(boardId)),
   ]);
 

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { getSession } from "@/core/identity/context";
 import { getAssessment, publishCheck } from "@/core/assessments";
 import { listQuestions } from "@/core/questions";
-import { questionPickerOptions } from "@/core/curriculum/picker";
+import { cachedPickerOptions } from "@/app/_curriculum/picker";
 import { listAssignments } from "@/core/assignments";
 import { listClasses } from "@/core/classes";
 import { AppShell } from "@/ui/AppShell";
@@ -32,7 +32,7 @@ export default async function AssessmentPage({
   if (!assessment) notFound();
 
   const [picker, bank, classes, assignments] = await Promise.all([
-    questionPickerOptions(),
+    cachedPickerOptions(),
     // Only approved questions can go into a paper, so only those are offered.
     listQuestions(organizationId, {
       subjectId: assessment.subjectId,

@@ -31,8 +31,14 @@ const FIXTURE_CHAPTER_FLOOR = 1000;
 export async function questionPickerOptions(organizationId?: string) {
   const orgId =
     organizationId ?? (await requireSession()).actor.organizationId;
-  const boardId = await organizationBoardId(orgId);
+  return pickerForBoard(await organizationBoardId(orgId));
+}
 
+/**
+ * The same lists for one board. Curriculum only: no tenant, nothing about any
+ * school — which is what lets the app cache it across requests.
+ */
+export async function pickerForBoard(boardId: string) {
   const [chapters, subjects] = await Promise.all([
     prisma.chapter.findMany({
       // Fixture chapters (numbered 1000 and up, which no syllabus has) exist

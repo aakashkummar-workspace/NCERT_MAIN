@@ -37,13 +37,22 @@ export type StudentRow = {
 export async function listStudents(
   organizationId: string,
   /**
-   * Narrow to these students — the class page's roster. Still intersected with
-   * the organization's active student memberships, so an id that is not one of
-   * this school's students yields nothing rather than a row.
+   * Narrow to these students — the class page's roster — given as ids or as
+   * the class whose active enrolments they are. The class form lets the class
+   * page ask without first waiting for the class to be read. Either way it is
+   * intersected with the organization's active student memberships, so an id
+   * that is not one of this school's students yields nothing rather than a row.
    */
-  only?: string[],
+  only?: string[] | { classId: string },
 ): Promise<StudentRow[]> {
   return withTenant(organizationId, async (tx) => {
+    if (only && !Array.isArray(only)) {
+      const enrolled = await tx.classEnrolment.findMany({
+        where: { classId: only.classId, status: "ACTIVE" },
+        select: { studentUserId: true },
+      });
+      only = enrolled.map((row) => row.studentUserId);
+    }
     if (only && only.length === 0) return [];
     const memberships = await tx.membership.findMany({
       where: {
