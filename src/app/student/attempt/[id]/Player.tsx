@@ -92,6 +92,13 @@ export function Player({ initial }: { initial: Initial }) {
 
   const [questions, setQuestions] = useState(initial.questions);
   const [current, setCurrent] = useState(0);
+  // Moving to another question starts it at its heading. Leaving a long
+  // passage scrolled half-way down put the next question's number under the
+  // sticky clock bar on a phone.
+  const goTo = (next: (index: number) => number) => {
+    setCurrent(next);
+    window.scrollTo({ top: 0 });
+  };
   const [remainingMs, setRemainingMs] = useState(initial.remainingMs);
   const [queueDepth, setQueueDepth] = useState(0);
   const [reachable, setReachable] = useState(true);
@@ -746,10 +753,21 @@ export function Player({ initial }: { initial: Initial }) {
 
           {TEXT_TYPES.has(question.type) && (
             <>
+              {question.type === "CASE_STUDY" && (
+                // One box for several parts, so each answer carries its part
+                // number — the teacher marks against a rubric row per part.
+                <p className="ui-hint" id={`case-hint-${question.assessmentQuestionId}`}>
+                  Answer every part, each on its own line, starting with its number —
+                  for example &ldquo;(i) b&rdquo;, &ldquo;(ii) because…&rdquo;.
+                </p>
+              )}
               <textarea
                 className="ui-textarea ui-player-input"
                 rows={ROWS[question.type] ?? 3}
                 aria-label="Your answer"
+                aria-describedby={
+                  question.type === "CASE_STUDY" ? `case-hint-${question.assessmentQuestionId}` : undefined
+                }
                 value={
                   question.response?.kind === "text"
                     ? question.response.value
@@ -794,7 +812,7 @@ export function Player({ initial }: { initial: Initial }) {
               className="ui-button"
               data-variant="secondary"
               data-size="lg"
-              onClick={() => setCurrent((index) => Math.max(0, index - 1))}
+              onClick={() => goTo((index) => Math.max(0, index - 1))}
               disabled={current === 0}
             >
               <span>Previous</span>
@@ -824,7 +842,7 @@ export function Player({ initial }: { initial: Initial }) {
               data-variant="secondary"
               data-size="lg"
               onClick={() =>
-                setCurrent((index) => Math.min(questions.length - 1, index + 1))
+                goTo((index) => Math.min(questions.length - 1, index + 1))
               }
               disabled={current === questions.length - 1}
             >
@@ -848,7 +866,7 @@ export function Player({ initial }: { initial: Initial }) {
                       type="button"
                       className="ui-navigator-item"
                       data-state={index === current ? "current" : state}
-                      onClick={() => setCurrent(index)}
+                      onClick={() => goTo(() => index)}
                       aria-current={index === current ? "true" : undefined}
                       aria-label={`Question ${index + 1}, ${LABEL[state]}`}
                     >
@@ -927,7 +945,13 @@ export function Player({ initial }: { initial: Initial }) {
   );
 }
 
-const TEXT_TYPES = new Set(["FILL_BLANK", "VSA", "SA", "LA"]);
+/**
+ * The types answered by writing. CASE_STUDY was missing, so a case study or an
+ * unseen passage rendered its passage and every part and then offered nowhere
+ * to answer: a screenshot of the player caught it, after 145 of them had been
+ * imported. Scoring and the marking queue already treated it as written.
+ */
+const TEXT_TYPES = new Set(["FILL_BLANK", "VSA", "SA", "LA", "CASE_STUDY"]);
 
 /** Room to write roughly what the mark is worth. */
 const ROWS: Record<string, number> = {
@@ -935,6 +959,7 @@ const ROWS: Record<string, number> = {
   VSA: 3,
   SA: 6,
   LA: 10,
+  CASE_STUDY: 12,
 };
 
 const LABEL = {
