@@ -186,6 +186,13 @@
               "bloom": "UNDERSTAND",
               "competency": "UNDERSTANDING",
               "marks": 2
+            },
+            {
+              "code": "G10-03-5",
+              "statement": "Identifies and labels the major dams named in the CBSE map list — Salal, Bhakra Nangal, Tehri, Rana Pratap Sagar, Sardar Sarovar, Hirakud, Nagarjuna Sagar and Tungabhadra — on an outline map of India.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
             }
           ]
         }
@@ -202,7 +209,8 @@
           "outcomes": [
             "G10-03-2",
             "G10-03-3",
-            "G10-03-4"
+            "G10-03-4",
+            "G10-03-5"
           ]
         }
       ]
@@ -285,6 +293,13 @@
               "bloom": "UNDERSTAND",
               "competency": "UNDERSTANDING",
               "marks": 2
+            },
+            {
+              "code": "G10-05-5",
+              "statement": "Identifies and labels the iron-ore and coal mines named in the CBSE map list on an outline map of India.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
             }
           ]
         },
@@ -304,6 +319,13 @@
               "bloom": "UNDERSTAND",
               "competency": "UNDERSTANDING",
               "marks": 2
+            },
+            {
+              "code": "G10-05-6",
+              "statement": "Identifies and labels the oil fields and the thermal and nuclear power plants named in the CBSE map list on an outline map of India.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
             }
           ]
         }
@@ -313,14 +335,16 @@
           "name": "Minerals and their distribution",
           "outcomes": [
             "G10-05-1",
-            "G10-05-2"
+            "G10-05-2",
+            "G10-05-5"
           ]
         },
         {
           "name": "Conventional and non-conventional energy",
           "outcomes": [
             "G10-05-3",
-            "G10-05-4"
+            "G10-05-4",
+            "G10-05-6"
           ]
         }
       ]
@@ -344,6 +368,13 @@
               "bloom": "UNDERSTAND",
               "competency": "UNDERSTANDING",
               "marks": 2
+            },
+            {
+              "code": "G10-06-5",
+              "statement": "Identifies and labels the cotton textile centres, iron and steel plants and software technology parks named in the CBSE map list on an outline map of India.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
             }
           ]
         },
@@ -372,7 +403,8 @@
           "name": "Importance and location of industries",
           "outcomes": [
             "G10-06-1",
-            "G10-06-2"
+            "G10-06-2",
+            "G10-06-5"
           ]
         },
         {
@@ -403,6 +435,13 @@
               "bloom": "UNDERSTAND",
               "competency": "UNDERSTANDING",
               "marks": 2
+            },
+            {
+              "code": "G10-07-4",
+              "statement": "Identifies and labels the major sea ports and international airports named in the CBSE map list on an outline map of India.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
             }
           ]
         },
@@ -424,7 +463,8 @@
           "name": "Transport networks of India",
           "outcomes": [
             "G10-07-1",
-            "G10-07-2"
+            "G10-07-2",
+            "G10-07-4"
           ]
         },
         {

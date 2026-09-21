@@ -92,6 +92,13 @@
               "bloom": "UNDERSTAND",
               "competency": "UNDERSTANDING",
               "marks": 2
+            },
+            {
+              "code": "H10-02-6",
+              "statement": "Identifies and labels Champaran, Kheda, Ahmedabad, Jallianwala Bagh and the 1920 Congress sessions at Calcutta and Nagpur on an outline map of India.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
             }
           ]
         },
@@ -118,6 +125,13 @@
               "bloom": "UNDERSTAND",
               "competency": "UNDERSTANDING",
               "marks": 2
+            },
+            {
+              "code": "H10-02-7",
+              "statement": "Identifies and labels Dandi and the 1927 Madras session of the Congress on an outline map of India.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 1
             }
           ]
         }
@@ -127,7 +141,8 @@
           "name": "The Non-Cooperation Movement",
           "outcomes": [
             "H10-02-1",
-            "H10-02-2"
+            "H10-02-2",
+            "H10-02-6"
           ]
         },
         {
@@ -135,7 +150,8 @@
           "outcomes": [
             "H10-02-3",
             "H10-02-4",
-            "H10-02-5"
+            "H10-02-5",
+            "H10-02-7"
           ]
         }
       ]

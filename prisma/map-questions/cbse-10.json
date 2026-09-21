@@ -1,0 +1,125 @@
+{
+  "source": "CBSE Class X Social Science syllabus 2025-26, 'Map work' (.ncert-text/Social_Science_Sec_2025-26.txt). Every place is taken from that list; 'list' is its spelling there, which the importer checks.",
+  "questions": [
+    {
+      "id": "map10-geo-dams-1", "subject": "SST", "chapter": 3, "outcomes": ["G10-03-5"], "difficulty": "EASY",
+      "places": [
+        { "label": "Salal Dam", "list": "Salal", "where": "Jammu and Kashmir, on the Chenab" },
+        { "label": "Bhakra Nangal Dam", "list": "Bhakra Nangal", "where": "Himachal Pradesh–Punjab, on the Sutlej" },
+        { "label": "Tehri Dam", "list": "Tehri", "where": "Uttarakhand, on the Bhagirathi" },
+        { "label": "Sardar Sarovar Dam", "list": "Sardar Sarovar", "where": "Gujarat, on the Narmada" },
+        { "label": "Hirakud Dam", "list": "Hirakund", "where": "Odisha, on the Mahanadi" }
+      ]
+    },
+    {
+      "id": "map10-geo-dams-2", "subject": "SST", "chapter": 3, "outcomes": ["G10-03-5"], "difficulty": "MEDIUM",
+      "places": [
+        { "label": "Rana Pratap Sagar Dam", "list": "Rana Pratap Sagar", "where": "Rajasthan, on the Chambal" },
+        { "label": "Nagarjuna Sagar Dam", "list": "Nagarjun Sagar", "where": "on the Krishna, on the Telangana–Andhra Pradesh border" },
+        { "label": "Tungabhadra Dam", "list": "Tungabhadra", "where": "Karnataka, on the Tungabhadra" },
+        { "label": "Bhakra Nangal Dam", "list": "Bhakra Nangal", "where": "Himachal Pradesh–Punjab, on the Sutlej" },
+        { "label": "Tehri Dam", "list": "Tehri", "where": "Uttarakhand, on the Bhagirathi" }
+      ]
+    },
+    {
+      "id": "map10-geo-mines-1", "subject": "SST", "chapter": 5, "outcomes": ["G10-05-5"], "difficulty": "EASY",
+      "places": [
+        { "label": "Mayurbhanj iron-ore mines", "list": "Mayurbhanj", "where": "Odisha" },
+        { "label": "Bailadila iron-ore mines", "list": "Bailadila", "where": "Chhattisgarh" },
+        { "label": "Kudremukh iron-ore mines", "list": "Kudremukh", "where": "Karnataka, in the Western Ghats" },
+        { "label": "Raniganj coal mines", "list": "Raniganj", "where": "West Bengal" },
+        { "label": "Neyveli lignite mines", "list": "Neyveli", "where": "Tamil Nadu" }
+      ]
+    },
+    {
+      "id": "map10-geo-mines-2", "subject": "SST", "chapter": 5, "outcomes": ["G10-05-5"], "difficulty": "MEDIUM",
+      "places": [
+        { "label": "Durg iron-ore mines", "list": "Durg", "where": "Chhattisgarh" },
+        { "label": "Bellary iron-ore mines", "list": "Bellary", "where": "Karnataka" },
+        { "label": "Bokaro coal mines", "list": "Bokaro", "where": "Jharkhand" },
+        { "label": "Talcher coal mines", "list": "Talcher", "where": "Odisha" },
+        { "label": "Kudremukh iron-ore mines", "list": "Kudremukh", "where": "Karnataka, in the Western Ghats" }
+      ]
+    },
+    {
+      "id": "map10-geo-energy-1", "subject": "SST", "chapter": 5, "outcomes": ["G10-05-6"], "difficulty": "EASY",
+      "places": [
+        { "label": "Digboi oil field", "list": "Digboi", "where": "Assam" },
+        { "label": "Mumbai High oil field", "list": "Mumbai High", "where": "offshore, in the Arabian Sea off Maharashtra" },
+        { "label": "Kalol oil field", "list": "Kalol", "where": "Gujarat" },
+        { "label": "Tarapur nuclear power plant", "list": "Tarapur", "where": "Maharashtra" },
+        { "label": "Ramagundam thermal power plant", "list": "Ramagundam", "where": "Telangana" }
+      ]
+    },
+    {
+      "id": "map10-geo-energy-2", "subject": "SST", "chapter": 5, "outcomes": ["G10-05-6"], "difficulty": "MEDIUM",
+      "places": [
+        { "label": "Naharkatia oil field", "list": "Naharkatia", "where": "Assam" },
+        { "label": "Ankaleshwar oil field", "list": "Ankaleshwar", "where": "Gujarat" },
+        { "label": "Namrup thermal power plant", "list": "Namrup", "where": "Assam" },
+        { "label": "Narora nuclear power plant", "list": "Narora", "where": "Uttar Pradesh" },
+        { "label": "Kalpakkam nuclear power plant", "list": "Kalpakkam", "where": "Tamil Nadu" }
+      ]
+    },
+    {
+      "id": "map10-geo-industry-1", "subject": "SST", "chapter": 6, "outcomes": ["G10-06-5"], "difficulty": "EASY",
+      "places": [
+        { "label": "Surat — cotton textile industry", "list": "Surat", "where": "Gujarat" },
+        { "label": "Coimbatore — cotton textile industry", "list": "Coimbatore", "where": "Tamil Nadu" },
+        { "label": "Bhilai — iron and steel plant", "list": "Bhilai", "where": "Chhattisgarh" },
+        { "label": "Jamshedpur — iron and steel plant", "list": "Jamshedpur", "where": "Jharkhand" },
+        { "label": "Thiruvananthapuram — software technology park", "list": "Thiruvananthapuram", "where": "Kerala" }
+      ]
+    },
+    {
+      "id": "map10-geo-industry-2", "subject": "SST", "chapter": 6, "outcomes": ["G10-06-5"], "difficulty": "MEDIUM",
+      "places": [
+        { "label": "Kanpur — cotton textile industry", "list": "Kanpur", "where": "Uttar Pradesh" },
+        { "label": "Indore — cotton textile industry", "list": "Indore", "where": "Madhya Pradesh" },
+        { "label": "Durgapur — iron and steel plant", "list": "Durgapur", "where": "West Bengal" },
+        { "label": "Salem — iron and steel plant", "list": "Salem", "where": "Tamil Nadu" },
+        { "label": "Gandhinagar — software technology park", "list": "Gandhinagar","where": "Gujarat" }
+      ]
+    },
+    {
+      "id": "map10-geo-lifelines-1", "subject": "SST", "chapter": 7, "outcomes": ["G10-07-4"], "difficulty": "EASY",
+      "places": [
+        { "label": "Kandla (Deendayal) sea port", "list": "Kandla", "where": "Gujarat, in the Gulf of Kachchh" },
+        { "label": "Marmagao sea port", "list": "Marmagao", "where": "Goa" },
+        { "label": "Paradip sea port", "list": "Paradip", "where": "Odisha" },
+        { "label": "Haldia sea port", "list": "Haldia", "where": "West Bengal" },
+        { "label": "Sri Guru Ram Das Ji International Airport, Amritsar", "list": "Amritsar (Raja Sansi", "where": "Punjab" }
+      ]
+    },
+    {
+      "id": "map10-geo-lifelines-2", "subject": "SST", "chapter": 7, "outcomes": ["G10-07-4"], "difficulty": "MEDIUM",
+      "places": [
+        { "label": "Kochi sea port", "list": "Kochi", "where": "Kerala" },
+        { "label": "Tuticorin (V.O. Chidambaranar) sea port", "list": "Tuticorin", "where": "Tamil Nadu" },
+        { "label": "Visakhapatnam sea port", "list": "Visakhapatnam", "where": "Andhra Pradesh" },
+        { "label": "New Mangalore sea port", "list": "New Mangalore", "where": "Karnataka" },
+        { "label": "Netaji Subhash Chandra Bose International Airport, Kolkata", "list": "Kolkata (Netaji Subhash Chandra Bose)", "where": "West Bengal" }
+      ]
+    },
+    {
+      "id": "map10-his-nationalism-1", "subject": "SSTHI", "chapter": 2, "outcomes": ["H10-02-6"], "difficulty": "EASY",
+      "places": [
+        { "label": "Champaran — satyagraha of indigo planters, 1917", "list": "Champaran", "where": "Bihar" },
+        { "label": "Kheda — peasant satyagraha, 1918", "list": "Kheda", "where": "Gujarat" },
+        { "label": "Ahmedabad — cotton mill workers' satyagraha, 1918", "list": "Ahmedabad mill workers", "where": "Gujarat" },
+        { "label": "Jallianwala Bagh, 1919", "list": "Jallianwala Bagh", "where": "Amritsar, Punjab" },
+        { "label": "Nagpur — Congress session, December 1920", "list": "1920 Nagpur", "where": "Maharashtra" }
+      ]
+    },
+    {
+      "id": "map10-his-nationalism-2", "subject": "SSTHI", "chapter": 2, "outcomes": ["H10-02-6", "H10-02-7"], "difficulty": "MEDIUM",
+      "places": [
+        { "label": "Calcutta — Congress session, September 1920", "list": "1920 Calcutta", "where": "West Bengal" },
+        { "label": "Madras — Congress session, 1927", "list": "1927 Madras session", "where": "Tamil Nadu" },
+        { "label": "Dandi — end of the Salt March, 1930", "list": "Dandi March", "where": "Gujarat, on the coast" },
+        { "label": "Champaran — satyagraha of indigo planters, 1917", "list": "Champaran", "where": "Bihar" },
+        { "label": "Jallianwala Bagh, 1919", "list": "Jallianwala Bagh", "where": "Amritsar, Punjab" }
+      ]
+    }
+  ]
+}

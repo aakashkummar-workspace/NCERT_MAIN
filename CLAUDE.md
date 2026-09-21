@@ -1374,14 +1374,33 @@ The lesson both times: **if a query must run before a tenant is known, it belong
   sample papers' split. Questions are dealt chapter by chapter so a paper covers the
   syllabus, two papers for a subject share no question, and an "OR" alternative is
   taken from its partner's chapter where the bank allows.
-- **Social Science Section F, the map question, is left EMPTY**, so those papers
-  read 75 of 80 until a teacher adds one. The bank has no map questions, and an
-  ordinary long answer filed there would print "Map skill" above something that is
-  not one.
+- **Only a map question goes in Social Science Section F.** An ordinary long
+  answer filed there would print "Map skill" above something that is not one. The
+  map questions (`scripts/import-map-questions.ts`, `prisma/map-questions/`) are
+  5-mark LAs, one rubric mark per place, and the importer refuses any place not on
+  CBSE's own map list in `.ncert-text/Social_Science_Sec_2025-26.txt`. They are
+  filed against map outcomes (G10-03-5 … G10-07-4, H10-02-6/7) linked to each
+  chapter's existing concept rather than to one-outcome concepts that would never
+  gather evidence. The outcomes say "Identifies and labels", because "Locates" is
+  not in `checkOutcomeStatement`'s verb list and the rule is to reword, not loosen.
+- **Only Class 10 Geography and History have map work.** Economics and Political
+  Science have none, and the Class 9 map list follows the OLD books (the French
+  Revolution, India's relief and drainage) — the new Class 9 book names almost
+  none of it, so a Class 9 map question would test what the book does not teach.
+  Those papers use `SST_NO_MAP`: no Section F, one more long answer in Section D,
+  still 80 marks, and the pattern's label says so.
 - **Class 10 Social Science is four subjects**, and a paper holds one subject, so
-  Geography, Economics, History and Political Science each get their own paper in
-  the pattern. English has no pattern (`patternForSubject` leaves it out on
-  purpose), so it has no sample paper.
+  each discipline gets its own paper in the pattern.
+- **English is split along the subjects the board paper spans**: Reading, Grammar
+  and Writing (40), and literature — First Flight (28) and Footprints (12) in
+  Class 10, Kaveri (40) in Class 9 — each in the board's question shapes, with its
+  pattern defined in the script because `patternForSubject` rightly has none. A
+  single 80-mark English paper needs a paper to span subjects, which is a builder
+  change, not a script one. The two reading passages are one discursive and one
+  factual, told apart by length, as the checker's word limits define them.
+- **`--rebuild` re-lays an untouched draft in place**, and only that: a paper
+  whose questions were set more than once has been edited by a person and is left
+  alone, and one whose layout would not change is not rewritten.
 
 ### The review queue
 
@@ -2451,6 +2470,18 @@ about sixty-five defects. The lessons are about where tests stop looking:
   (`coerce.rs … Option::unwrap() on a None value`) rather than returning null. The
   attempt sweep reaches them through old "Attempt Org" tenants, so the panic in a smoke
   run's server log is that, not the page under test. Live data has none.
+- **Never run `npm run db:rls` or a migration while a test suite is running.**
+  `rls.sql` takes ACCESS EXCLUSIVE on every tenant table in one transaction, and
+  it deadlocks with an in-flight sign-up (`app_auth_bootstrap_org` holds
+  `organizations`, waits on `memberships`). Postgres kills the sign-up, and the
+  failure lands on whichever test's `makeWorld()` it was — "records a release,
+  and only on release" in webhooks, once, which looked exactly like a flaky
+  outbox test and was not. The Docker log (`docker logs sahayak-pg`) names the
+  deadlock; the test output does not. With two sessions in one checkout, ask
+  before running either.
+- **Two copies of the webhook suite at once break each other**:
+  `runWebhookDeliveries` claims jobs in every tenant, so one copy delivers the
+  other's jobs to the wrong fake receiver. One run at a time is fine.
 
 ## Things not to do
 
