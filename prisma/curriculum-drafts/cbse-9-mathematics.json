@@ -5,7 +5,8 @@
   "status": "DRAFT — for review by a Mathematics teacher before it is relied on",
   "source": "Drafted against NCERT Class IX Mathematics 'Ganita Manjari' Part 1 (iemh1) and the 497 questions imported from C:/dev/sirah_project/NCERT/data. Many of those questions are older NCERT and exemplar items mapped into the new book's chapters — Heron's formula in Chapter 6, circle theorems in Chapter 5 — so the outcomes cover what the questions test as well as what the new chapter titles announce.",
   "notes": [
-    "Prerequisites link several of these concepts to the Class 10 concepts they prepare for, so a Class 10 gap can name a Class 9 root cause."
+    "Prerequisites link several of these concepts to the Class 10 concepts they prepare for, so a Class 10 gap can name a Class 9 root cause.",
+    "Class 9 ch3 (Ganita Manjari, The World of Numbers) teaches density, distance, the irrationality of √2 and constructing irrational lengths, which M9-03-5 and M9-03-6 cover. M9-03-3 (surds, rationalisation) and M9-03-4 (laws of exponents) are kept: the CBSE 2025-26 Class IX syllabus still examines them, although Ganita Manjari Part 1 does not teach them."
   ],
   "chapters": [
     {
@@ -166,6 +167,25 @@
               "marks": 2
             }
           ]
+        },
+        {
+          "title": "The real number line: density, distance and irrational lengths",
+          "outcomes": [
+            {
+              "code": "M9-03-5",
+              "statement": "Proves by contradiction that √2 is irrational, and constructs lengths such as √2 and √3 to locate them on the number line.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 3
+            },
+            {
+              "code": "M9-03-6",
+              "statement": "Uses the density of rational numbers to find rational numbers between two given numbers, and uses absolute value to find the distance between two points on the number line.",
+              "bloom": "APPLY",
+              "competency": "APPLICATION",
+              "marks": 2
+            }
+          ]
         }
       ],
       "concepts": [
@@ -181,6 +201,13 @@
           "outcomes": [
             "M9-03-3",
             "M9-03-4"
+          ]
+        },
+        {
+          "name": "Irrational lengths and density of the number line",
+          "outcomes": [
+            "M9-03-5",
+            "M9-03-6"
           ]
         }
       ]

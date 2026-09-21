@@ -40,8 +40,16 @@
             "D in Quadrant III"
           ],
           "rubric": [
-            { "label": "A and B", "marks": 1, "descriptor": "A in Quadrant II and B in Quadrant IV; ½ mark for one of them" },
-            { "label": "C and D", "marks": 1, "descriptor": "C on the y-axis and D in Quadrant III; ½ mark for one of them" }
+            {
+              "label": "A and B",
+              "marks": 1,
+              "descriptor": "A in Quadrant II and B in Quadrant IV; ½ mark for one of them"
+            },
+            {
+              "label": "C and D",
+              "marks": 1,
+              "descriptor": "C on the y-axis and D in Quadrant III; ½ mark for one of them"
+            }
           ]
         },
         {
@@ -57,8 +65,16 @@
             "QR is vertical, so its length is the difference of the y-coordinates: 10 units"
           ],
           "rubric": [
-            { "label": "PQ", "marks": 1, "descriptor": "|11 − (−5)| = 16 units" },
-            { "label": "QR", "marks": 1, "descriptor": "|4 − (−6)| = 10 units" }
+            {
+              "label": "PQ",
+              "marks": 1,
+              "descriptor": "|11 − (−5)| = 16 units"
+            },
+            {
+              "label": "QR",
+              "marks": 1,
+              "descriptor": "|4 − (−6)| = 10 units"
+            }
           ]
         },
         {
@@ -74,8 +90,16 @@
             "AB = √(8² + 6²) = √100 = 10 units"
           ],
           "rubric": [
-            { "label": "Setting up", "marks": 1, "descriptor": "Writes the two shifts 10 − 2 = 8 and 3 − (−3) = 6, or writes the distance expression correctly" },
-            { "label": "Distance", "marks": 1, "descriptor": "AB = 10 units" }
+            {
+              "label": "Setting up",
+              "marks": 1,
+              "descriptor": "Writes the two shifts 10 − 2 = 8 and 3 − (−3) = 6, or writes the distance expression correctly"
+            },
+            {
+              "label": "Distance",
+              "marks": 1,
+              "descriptor": "AB = 10 units"
+            }
           ]
         },
         {
@@ -92,9 +116,21 @@
             "Area = 7 × 5 = 35 square units"
           ],
           "rubric": [
-            { "label": "Side lengths", "marks": 1, "descriptor": "PQ = 7 units and QR = 5 units" },
-            { "label": "Fourth vertex", "marks": 1, "descriptor": "S = (2, 6)" },
-            { "label": "Area", "marks": 1, "descriptor": "35 square units" }
+            {
+              "label": "Side lengths",
+              "marks": 1,
+              "descriptor": "PQ = 7 units and QR = 5 units"
+            },
+            {
+              "label": "Fourth vertex",
+              "marks": 1,
+              "descriptor": "S = (2, 6)"
+            },
+            {
+              "label": "Area",
+              "marks": 1,
+              "descriptor": "35 square units"
+            }
           ]
         },
         {
@@ -111,9 +147,21 @@
             "Equal distances from O means the points lie on one circle of radius √65 units"
           ],
           "rubric": [
-            { "label": "First distance", "marks": 1, "descriptor": "OA = √65 correctly computed" },
-            { "label": "Other two distances", "marks": 1, "descriptor": "OB = √65 and OC = √65" },
-            { "label": "Conclusion", "marks": 1, "descriptor": "States that equal distances from O put the points on one circle, radius √65 units" }
+            {
+              "label": "First distance",
+              "marks": 1,
+              "descriptor": "OA = √65 correctly computed"
+            },
+            {
+              "label": "Other two distances",
+              "marks": 1,
+              "descriptor": "OB = √65 and OC = √65"
+            },
+            {
+              "label": "Conclusion",
+              "marks": 1,
+              "descriptor": "States that equal distances from O put the points on one circle, radius √65 units"
+            }
           ]
         },
         {
@@ -130,9 +178,21 @@
             "Perimeter = 2(12 + 7) = 38 m"
           ],
           "rubric": [
-            { "label": "AB", "marks": 1, "descriptor": "AB = 12 m from the difference of the x-coordinates" },
-            { "label": "BC", "marks": 1, "descriptor": "BC = 7 m from the difference of the y-coordinates" },
-            { "label": "Fencing", "marks": 1, "descriptor": "38 m" }
+            {
+              "label": "AB",
+              "marks": 1,
+              "descriptor": "AB = 12 m from the difference of the x-coordinates"
+            },
+            {
+              "label": "BC",
+              "marks": 1,
+              "descriptor": "BC = 7 m from the difference of the y-coordinates"
+            },
+            {
+              "label": "Fencing",
+              "marks": 1,
+              "descriptor": "38 m"
+            }
           ]
         },
         {
@@ -150,11 +210,31 @@
             "All three sides are unequal, so the triangle is scalene"
           ],
           "rubric": [
-            { "label": "Method", "marks": 1, "descriptor": "Uses the Baudhāyana–Pythagoras Theorem on the shifts along the two axes" },
-            { "label": "AD", "marks": 1, "descriptor": "AD = 5 units" },
-            { "label": "DM", "marks": 1, "descriptor": "DM = √29 units" },
-            { "label": "MA", "marks": 1, "descriptor": "MA = √40 = 2√10 units" },
-            { "label": "Type of triangle", "marks": 1, "descriptor": "Scalene, because all three sides are of different length" }
+            {
+              "label": "Method",
+              "marks": 1,
+              "descriptor": "Uses the Baudhāyana–Pythagoras Theorem on the shifts along the two axes"
+            },
+            {
+              "label": "AD",
+              "marks": 1,
+              "descriptor": "AD = 5 units"
+            },
+            {
+              "label": "DM",
+              "marks": 1,
+              "descriptor": "DM = √29 units"
+            },
+            {
+              "label": "MA",
+              "marks": 1,
+              "descriptor": "MA = √40 = 2√10 units"
+            },
+            {
+              "label": "Type of triangle",
+              "marks": 1,
+              "descriptor": "Scalene, because all three sides are of different length"
+            }
           ]
         },
         {
@@ -172,11 +252,31 @@
             "PR = √(18² + 9²) = √405 = 9√5 m ≈ 20.12 m"
           ],
           "rubric": [
-            { "label": "Parallel sides explained", "marks": 1, "descriptor": "Equal y-coordinates give a horizontal side; equal x-coordinates give a vertical side" },
-            { "label": "Length and breadth", "marks": 1, "descriptor": "18 m and 9 m" },
-            { "label": "Area", "marks": 1, "descriptor": "162 m²" },
-            { "label": "Diagonal set up", "marks": 1, "descriptor": "PR = √(18² + 9²)" },
-            { "label": "Diagonal evaluated", "marks": 1, "descriptor": "√405 = 9√5 m ≈ 20.12 m" }
+            {
+              "label": "Parallel sides explained",
+              "marks": 1,
+              "descriptor": "Equal y-coordinates give a horizontal side; equal x-coordinates give a vertical side"
+            },
+            {
+              "label": "Length and breadth",
+              "marks": 1,
+              "descriptor": "18 m and 9 m"
+            },
+            {
+              "label": "Area",
+              "marks": 1,
+              "descriptor": "162 m²"
+            },
+            {
+              "label": "Diagonal set up",
+              "marks": 1,
+              "descriptor": "PR = √(18² + 9²)"
+            },
+            {
+              "label": "Diagonal evaluated",
+              "marks": 1,
+              "descriptor": "√405 = 9√5 m ≈ 20.12 m"
+            }
           ]
         },
         {
@@ -193,10 +293,22 @@
               "prompt": "In which quadrant of the plan does the market M(6, −3) lie?",
               "marks": 1,
               "options": [
-                { "text": "Quadrant I", "correct": false },
-                { "text": "Quadrant II", "correct": false },
-                { "text": "Quadrant III", "correct": false },
-                { "text": "Quadrant IV", "correct": true }
+                {
+                  "text": "Quadrant I",
+                  "correct": false
+                },
+                {
+                  "text": "Quadrant II",
+                  "correct": false
+                },
+                {
+                  "text": "Quadrant III",
+                  "correct": false
+                },
+                {
+                  "text": "Quadrant IV",
+                  "correct": true
+                }
               ],
               "answer": "(d) Quadrant IV — the x-coordinate is positive and the y-coordinate is negative."
             },
@@ -254,8 +366,16 @@
             "7s² − 4s + 6 at s = −3 gives 63 + 12 + 6 = 81"
           ],
           "rubric": [
-            { "label": "Linear polynomial", "marks": 1, "descriptor": "−8" },
-            { "label": "Quadratic polynomial", "marks": 1, "descriptor": "81, with the substitution shown" }
+            {
+              "label": "Linear polynomial",
+              "marks": 1,
+              "descriptor": "−8"
+            },
+            {
+              "label": "Quadratic polynomial",
+              "marks": 1,
+              "descriptor": "81, with the substitution shown"
+            }
           ]
         },
         {
@@ -271,8 +391,16 @@
             "y-intercept b = 4, so the line cuts the y-axis at (0, 4)"
           ],
           "rubric": [
-            { "label": "Slope", "marks": 1, "descriptor": "−3" },
-            { "label": "Intercept", "marks": 1, "descriptor": "y-intercept 4 and the point (0, 4)" }
+            {
+              "label": "Slope",
+              "marks": 1,
+              "descriptor": "−3"
+            },
+            {
+              "label": "Intercept",
+              "marks": 1,
+              "descriptor": "y-intercept 4 and the point (0, 4)"
+            }
           ]
         },
         {
@@ -288,8 +416,16 @@
             "x = 21, so the integers are 42 and 105"
           ],
           "rubric": [
-            { "label": "Equation", "marks": 1, "descriptor": "5x − 2x = 63 (or an equivalent equation)" },
-            { "label": "Integers", "marks": 1, "descriptor": "42 and 105" }
+            {
+              "label": "Equation",
+              "marks": 1,
+              "descriptor": "5x − 2x = 63 (or an equivalent equation)"
+            },
+            {
+              "label": "Integers",
+              "marks": 1,
+              "descriptor": "42 and 105"
+            }
           ]
         },
         {
@@ -306,9 +442,21 @@
             "12n + 6 = 150 gives n = 12 km"
           ],
           "rubric": [
-            { "label": "Rule", "marks": 1, "descriptor": "F = 12n + 6 (or 30 + 12(n − 2))" },
-            { "label": "Fare for 9 km", "marks": 1, "descriptor": "₹114" },
-            { "label": "Distance for ₹150", "marks": 1, "descriptor": "12 km" }
+            {
+              "label": "Rule",
+              "marks": 1,
+              "descriptor": "F = 12n + 6 (or 30 + 12(n − 2))"
+            },
+            {
+              "label": "Fare for 9 km",
+              "marks": 1,
+              "descriptor": "₹114"
+            },
+            {
+              "label": "Distance for ₹150",
+              "marks": 1,
+              "descriptor": "12 km"
+            }
           ]
         },
         {
@@ -325,9 +473,21 @@
             "x = 15, so Salil is 15 and his mother is 45"
           ],
           "rubric": [
-            { "label": "Setting up", "marks": 1, "descriptor": "Ages taken as x and 3x, ages after 5 years written correctly" },
-            { "label": "Equation and solution", "marks": 1, "descriptor": "4x + 10 = 70 leading to x = 15" },
-            { "label": "Both ages", "marks": 1, "descriptor": "15 years and 45 years" }
+            {
+              "label": "Setting up",
+              "marks": 1,
+              "descriptor": "Ages taken as x and 3x, ages after 5 years written correctly"
+            },
+            {
+              "label": "Equation and solution",
+              "marks": 1,
+              "descriptor": "4x + 10 = 70 leading to x = 15"
+            },
+            {
+              "label": "Both ages",
+              "marks": 1,
+              "descriptor": "15 years and 45 years"
+            }
           ]
         },
         {
@@ -344,9 +504,21 @@
             "Cuts the y-axis at (0, 2) and the x-axis at (−2/3, 0)"
           ],
           "rubric": [
-            { "label": "Two equations", "marks": 1, "descriptor": "a + b = 5 and 3a + b = 11" },
-            { "label": "Polynomial", "marks": 1, "descriptor": "p(x) = 3x + 2" },
-            { "label": "Intercept points", "marks": 1, "descriptor": "(0, 2) and (−2/3, 0); ½ mark for one of them" }
+            {
+              "label": "Two equations",
+              "marks": 1,
+              "descriptor": "a + b = 5 and 3a + b = 11"
+            },
+            {
+              "label": "Polynomial",
+              "marks": 1,
+              "descriptor": "p(x) = 3x + 2"
+            },
+            {
+              "label": "Intercept points",
+              "marks": 1,
+              "descriptor": "(0, 2) and (−2/3, 0); ½ mark for one of them"
+            }
           ]
         },
         {
@@ -365,11 +537,31 @@
             "Linear because the difference between consecutive terms is the constant 2 (degree 1 polynomial)"
           ],
           "rubric": [
-            { "label": "First five terms", "marks": 1, "descriptor": "1, 3, 5, 7, 9" },
-            { "label": "Rule", "marks": 1, "descriptor": "t = 2n − 1" },
-            { "label": "Stage 26", "marks": 1, "descriptor": "51 tiles" },
-            { "label": "Stage with 47 tiles", "marks": 1, "descriptor": "Stage 24" },
-            { "label": "Why linear", "marks": 1, "descriptor": "Constant difference of 2 between consecutive stages; 2n − 1 has degree 1" }
+            {
+              "label": "First five terms",
+              "marks": 1,
+              "descriptor": "1, 3, 5, 7, 9"
+            },
+            {
+              "label": "Rule",
+              "marks": 1,
+              "descriptor": "t = 2n − 1"
+            },
+            {
+              "label": "Stage 26",
+              "marks": 1,
+              "descriptor": "51 tiles"
+            },
+            {
+              "label": "Stage with 47 tiles",
+              "marks": 1,
+              "descriptor": "Stage 24"
+            },
+            {
+              "label": "Why linear",
+              "marks": 1,
+              "descriptor": "Constant difference of 2 between consecutive stages; 2n − 1 has degree 1"
+            }
           ]
         },
         {
@@ -388,11 +580,31 @@
             "A bill of ₹950 means 40 GB were used"
           ],
           "rubric": [
-            { "label": "Two equations", "marks": 1, "descriptor": "350 = 10a + b and 550 = 20a + b" },
-            { "label": "Solving", "marks": 1, "descriptor": "a = 20 and b = 150" },
-            { "label": "Meaning", "marks": 1, "descriptor": "₹20 per GB and ₹150 fixed rental" },
-            { "label": "Bill for 35 GB", "marks": 1, "descriptor": "₹850" },
-            { "label": "Data for ₹950", "marks": 1, "descriptor": "40 GB" }
+            {
+              "label": "Two equations",
+              "marks": 1,
+              "descriptor": "350 = 10a + b and 550 = 20a + b"
+            },
+            {
+              "label": "Solving",
+              "marks": 1,
+              "descriptor": "a = 20 and b = 150"
+            },
+            {
+              "label": "Meaning",
+              "marks": 1,
+              "descriptor": "₹20 per GB and ₹150 fixed rental"
+            },
+            {
+              "label": "Bill for 35 GB",
+              "marks": 1,
+              "descriptor": "₹850"
+            },
+            {
+              "label": "Data for ₹950",
+              "marks": 1,
+              "descriptor": "40 GB"
+            }
           ]
         },
         {
@@ -409,10 +621,22 @@
               "prompt": "The pattern described by the rule h = 3 − 0.5t is an example of",
               "marks": 1,
               "options": [
-                { "text": "linear growth", "correct": false },
-                { "text": "linear decay", "correct": true },
-                { "text": "a quadratic pattern", "correct": false },
-                { "text": "a constant polynomial", "correct": false }
+                {
+                  "text": "linear growth",
+                  "correct": false
+                },
+                {
+                  "text": "linear decay",
+                  "correct": true
+                },
+                {
+                  "text": "a quadratic pattern",
+                  "correct": false
+                },
+                {
+                  "text": "a constant polynomial",
+                  "correct": false
+                }
               ],
               "answer": "(b) linear decay — the height falls by the same fixed amount, 0.5 m, over every equal interval of one month."
             },
@@ -470,8 +694,16 @@
             "√12 is irrational; 1.01001000100001… is non-terminating and non-repeating, so irrational"
           ],
           "rubric": [
-            { "label": "Rational ones", "marks": 1, "descriptor": "√81 and 0.3333… identified as rational, with a reason" },
-            { "label": "Irrational ones", "marks": 1, "descriptor": "√12 and 1.01001000100001… identified as irrational, with a reason" }
+            {
+              "label": "Rational ones",
+              "marks": 1,
+              "descriptor": "√81 and 0.3333… identified as rational, with a reason"
+            },
+            {
+              "label": "Irrational ones",
+              "marks": 1,
+              "descriptor": "√12 and 1.01001000100001… identified as irrational, with a reason"
+            }
           ]
         },
         {
@@ -487,8 +719,16 @@
             "15 = 3 × 5 has the prime factor 3, so 4/15 is non-terminating and repeating"
           ],
           "rubric": [
-            { "label": "7/20", "marks": 1, "descriptor": "Terminating, because 20 = 2² × 5" },
-            { "label": "4/15", "marks": 1, "descriptor": "Non-terminating repeating, because 15 has the prime factor 3" }
+            {
+              "label": "7/20",
+              "marks": 1,
+              "descriptor": "Terminating, because 20 = 2² × 5"
+            },
+            {
+              "label": "4/15",
+              "marks": 1,
+              "descriptor": "Non-terminating repeating, because 15 has the prime factor 3"
+            }
           ]
         },
         {
@@ -504,8 +744,16 @@
             "99x = 45, so x = 45/99 = 5/11"
           ],
           "rubric": [
-            { "label": "Method", "marks": 1, "descriptor": "Multiplies by 100 and subtracts" },
-            { "label": "Answer", "marks": 1, "descriptor": "5/11 in lowest terms" }
+            {
+              "label": "Method",
+              "marks": 1,
+              "descriptor": "Multiplies by 100 and subtracts"
+            },
+            {
+              "label": "Answer",
+              "marks": 1,
+              "descriptor": "5/11 in lowest terms"
+            }
           ]
         },
         {
@@ -522,15 +770,27 @@
             "90x = 15, so x = 15/90 = 1/6"
           ],
           "rubric": [
-            { "label": "First shift", "marks": 1, "descriptor": "10x = 1.666…" },
-            { "label": "Second shift", "marks": 1, "descriptor": "100x = 16.666…" },
-            { "label": "Answer", "marks": 1, "descriptor": "90x = 15 and x = 1/6" }
+            {
+              "label": "First shift",
+              "marks": 1,
+              "descriptor": "10x = 1.666…"
+            },
+            {
+              "label": "Second shift",
+              "marks": 1,
+              "descriptor": "100x = 16.666…"
+            },
+            {
+              "label": "Answer",
+              "marks": 1,
+              "descriptor": "90x = 15 and x = 1/6"
+            }
           ]
         },
         {
           "id": "iemh1-03-sa2",
           "kind": "sa",
-          "outcome": "M9-03-2",
+          "outcome": "M9-03-6",
           "difficulty": "EASY",
           "marks": 3,
           "stem": "Find five rational numbers lying between 2/5 and 3/5, and explain the method you used.",
@@ -541,9 +801,21 @@
             "States that the numerators must differ by more than the number of rational numbers wanted"
           ],
           "rubric": [
-            { "label": "Common denominator", "marks": 1, "descriptor": "12/30 and 18/30 (or an equivalent choice)" },
-            { "label": "Five numbers", "marks": 1, "descriptor": "Any five distinct rational numbers strictly between them" },
-            { "label": "Explanation", "marks": 1, "descriptor": "Explains why the denominator had to be enlarged first" }
+            {
+              "label": "Common denominator",
+              "marks": 1,
+              "descriptor": "12/30 and 18/30 (or an equivalent choice)"
+            },
+            {
+              "label": "Five numbers",
+              "marks": 1,
+              "descriptor": "Any five distinct rational numbers strictly between them"
+            },
+            {
+              "label": "Explanation",
+              "marks": 1,
+              "descriptor": "Explains why the denominator had to be enlarged first"
+            }
           ]
         },
         {
@@ -560,15 +832,27 @@
             "1/7 = 0.142857142857… with a repeating block of six digits"
           ],
           "rubric": [
-            { "label": "Limited remainders", "marks": 1, "descriptor": "States that only q possible remainders exist" },
-            { "label": "The two cases", "marks": 1, "descriptor": "Remainder 0 terminates; a repeated remainder makes the digits repeat" },
-            { "label": "Illustration", "marks": 1, "descriptor": "1/7 = 0.142857… with the six-digit repeating block" }
+            {
+              "label": "Limited remainders",
+              "marks": 1,
+              "descriptor": "States that only q possible remainders exist"
+            },
+            {
+              "label": "The two cases",
+              "marks": 1,
+              "descriptor": "Remainder 0 terminates; a repeated remainder makes the digits repeat"
+            },
+            {
+              "label": "Illustration",
+              "marks": 1,
+              "descriptor": "1/7 = 0.142857… with the six-digit repeating block"
+            }
           ]
         },
         {
           "id": "iemh1-03-la1",
           "kind": "la",
-          "outcome": "M9-03-1",
+          "outcome": "M9-03-5",
           "difficulty": "HARD",
           "marks": 5,
           "stem": "Prove, by contradiction, that √2 is an irrational number.",
@@ -581,11 +865,31 @@
             "Concludes √2 is irrational"
           ],
           "rubric": [
-            { "label": "Assumption", "marks": 1, "descriptor": "√2 = p/q in lowest terms, q ≠ 0" },
-            { "label": "p is even", "marks": 1, "descriptor": "2q² = p² so p² is even, hence p is even" },
-            { "label": "q is even", "marks": 1, "descriptor": "Substitutes p = 2k to get q² = 2k², hence q is even" },
-            { "label": "Contradiction", "marks": 1, "descriptor": "Common factor 2 contradicts lowest terms" },
-            { "label": "Conclusion", "marks": 1, "descriptor": "States that √2 is therefore irrational" }
+            {
+              "label": "Assumption",
+              "marks": 1,
+              "descriptor": "√2 = p/q in lowest terms, q ≠ 0"
+            },
+            {
+              "label": "p is even",
+              "marks": 1,
+              "descriptor": "2q² = p² so p² is even, hence p is even"
+            },
+            {
+              "label": "q is even",
+              "marks": 1,
+              "descriptor": "Substitutes p = 2k to get q² = 2k², hence q is even"
+            },
+            {
+              "label": "Contradiction",
+              "marks": 1,
+              "descriptor": "Common factor 2 contradicts lowest terms"
+            },
+            {
+              "label": "Conclusion",
+              "marks": 1,
+              "descriptor": "States that √2 is therefore irrational"
+            }
           ]
         },
         {
@@ -604,11 +908,31 @@
             "y = 1, so 0.999… = 1"
           ],
           "rubric": [
-            { "label": "Shift of non-repeating digits", "marks": 1, "descriptor": "100x = 235.777…" },
-            { "label": "Shift of the repeating block", "marks": 1, "descriptor": "1000x = 2357.777…" },
-            { "label": "Fraction in lowest terms", "marks": 1, "descriptor": "2122/900 reduced to 1061/450" },
-            { "label": "Setting up 0.999…", "marks": 1, "descriptor": "y = 0.999… and 10y = 9.999…" },
-            { "label": "0.999… = 1", "marks": 1, "descriptor": "9y = 9, so y = 1" }
+            {
+              "label": "Shift of non-repeating digits",
+              "marks": 1,
+              "descriptor": "100x = 235.777…"
+            },
+            {
+              "label": "Shift of the repeating block",
+              "marks": 1,
+              "descriptor": "1000x = 2357.777…"
+            },
+            {
+              "label": "Fraction in lowest terms",
+              "marks": 1,
+              "descriptor": "2122/900 reduced to 1061/450"
+            },
+            {
+              "label": "Setting up 0.999…",
+              "marks": 1,
+              "descriptor": "y = 0.999… and 10y = 9.999…"
+            },
+            {
+              "label": "0.999… = 1",
+              "marks": 1,
+              "descriptor": "9y = 9, so y = 1"
+            }
           ]
         },
         {
@@ -625,10 +949,22 @@
               "prompt": "Why can the decimal expansion of 1/7 not terminate?",
               "marks": 1,
               "options": [
-                { "text": "Because 7 is an odd number", "correct": false },
-                { "text": "Because the remainder 0 never occurs in the division", "correct": true },
-                { "text": "Because 7 is a prime number", "correct": false },
-                { "text": "Because all six quotient digits are different", "correct": false }
+                {
+                  "text": "Because 7 is an odd number",
+                  "correct": false
+                },
+                {
+                  "text": "Because the remainder 0 never occurs in the division",
+                  "correct": true
+                },
+                {
+                  "text": "Because 7 is a prime number",
+                  "correct": false
+                },
+                {
+                  "text": "Because all six quotient digits are different",
+                  "correct": false
+                }
               ],
               "answer": "(b) — a decimal terminates exactly when the long division reaches a remainder of 0, and for 1 ÷ 7 that never happens."
             },
@@ -686,8 +1022,16 @@
             "104 × 96 = (100 + 4)(100 − 4) = 10000 − 16 = 9984"
           ],
           "rubric": [
-            { "label": "79²", "marks": 1, "descriptor": "6241, with the identity (a − b)² used" },
-            { "label": "104 × 96", "marks": 1, "descriptor": "9984, with the identity (a + b)(a − b) used" }
+            {
+              "label": "79²",
+              "marks": 1,
+              "descriptor": "6241, with the identity (a − b)² used"
+            },
+            {
+              "label": "104 × 96",
+              "marks": 1,
+              "descriptor": "9984, with the identity (a + b)(a − b) used"
+            }
           ]
         },
         {
@@ -703,8 +1047,16 @@
             "8x³ + 36x²y + 54xy² + 27y³"
           ],
           "rubric": [
-            { "label": "Identity applied", "marks": 1, "descriptor": "Correct substitution a = 2x, b = 3y into (a + b)³" },
-            { "label": "Expansion", "marks": 1, "descriptor": "8x³ + 36x²y + 54xy² + 27y³" }
+            {
+              "label": "Identity applied",
+              "marks": 1,
+              "descriptor": "Correct substitution a = 2x, b = 3y into (a + b)³"
+            },
+            {
+              "label": "Expansion",
+              "marks": 1,
+              "descriptor": "8x³ + 36x²y + 54xy² + 27y³"
+            }
           ]
         },
         {
@@ -720,8 +1072,16 @@
             "r² − r − 42 = (r − 7)(r + 6)"
           ],
           "rubric": [
-            { "label": "First factorisation", "marks": 1, "descriptor": "(x + 5)(x + 6)" },
-            { "label": "Second factorisation", "marks": 1, "descriptor": "(r − 7)(r + 6)" }
+            {
+              "label": "First factorisation",
+              "marks": 1,
+              "descriptor": "(x + 5)(x + 6)"
+            },
+            {
+              "label": "Second factorisation",
+              "marks": 1,
+              "descriptor": "(r − 7)(r + 6)"
+            }
           ]
         },
         {
@@ -738,9 +1098,21 @@
             "a³ + b³ = (a + b)³ − 3ab(a + b) = 343 − 210 = 133"
           ],
           "rubric": [
-            { "label": "Identity for a² + b²", "marks": 1, "descriptor": "Writes a² + b² = (a + b)² − 2ab" },
-            { "label": "Value of a² + b²", "marks": 1, "descriptor": "29" },
-            { "label": "Value of a³ + b³", "marks": 1, "descriptor": "133, from (a + b)³ − 3ab(a + b)" }
+            {
+              "label": "Identity for a² + b²",
+              "marks": 1,
+              "descriptor": "Writes a² + b² = (a + b)² − 2ab"
+            },
+            {
+              "label": "Value of a² + b²",
+              "marks": 1,
+              "descriptor": "29"
+            },
+            {
+              "label": "Value of a³ + b³",
+              "marks": 1,
+              "descriptor": "133, from (a + b)³ − 3ab(a + b)"
+            }
           ]
         },
         {
@@ -757,9 +1129,21 @@
             "Answer: (3a − b + 2c)²"
           ],
           "rubric": [
-            { "label": "Squares identified", "marks": 1, "descriptor": "9a² = (3a)², b² = (−b)², 4c² = (2c)²" },
-            { "label": "Cross terms matched", "marks": 1, "descriptor": "Shows 2xy, 2yz, 2zx agree with −6ab, −4bc, 12ac" },
-            { "label": "Answer", "marks": 1, "descriptor": "(3a − b + 2c)²" }
+            {
+              "label": "Squares identified",
+              "marks": 1,
+              "descriptor": "9a² = (3a)², b² = (−b)², 4c² = (2c)²"
+            },
+            {
+              "label": "Cross terms matched",
+              "marks": 1,
+              "descriptor": "Shows 2xy, 2yz, 2zx agree with −6ab, −4bc, 12ac"
+            },
+            {
+              "label": "Answer",
+              "marks": 1,
+              "descriptor": "(3a − b + 2c)²"
+            }
           ]
         },
         {
@@ -776,9 +1160,21 @@
             "Rejects x = −8; length 12 m and breadth 8 m"
           ],
           "rubric": [
-            { "label": "Equation", "marks": 1, "descriptor": "x² − 4x − 96 = 0" },
-            { "label": "Factorisation", "marks": 1, "descriptor": "(x − 12)(x + 8) = 0" },
-            { "label": "Dimensions", "marks": 1, "descriptor": "Length 12 m, breadth 8 m, with the negative root rejected" }
+            {
+              "label": "Equation",
+              "marks": 1,
+              "descriptor": "x² − 4x − 96 = 0"
+            },
+            {
+              "label": "Factorisation",
+              "marks": 1,
+              "descriptor": "(x − 12)(x + 8) = 0"
+            },
+            {
+              "label": "Dimensions",
+              "marks": 1,
+              "descriptor": "Length 12 m, breadth 8 m, with the negative root rejected"
+            }
           ]
         },
         {
@@ -797,11 +1193,31 @@
             "Factorised form (2n − 5m)³"
           ],
           "rubric": [
-            { "label": "Deriving (a − b)³", "marks": 1, "descriptor": "Substitutes −b for b and simplifies correctly" },
-            { "label": "Setting up 199³", "marks": 1, "descriptor": "Writes 199³ = (200 − 1)³ and expands" },
-            { "label": "Value of 199³", "marks": 1, "descriptor": "7880599" },
-            { "label": "Matching the cube", "marks": 1, "descriptor": "Identifies a = 2n and b = 5m with all four terms checked" },
-            { "label": "Factorisation", "marks": 1, "descriptor": "(2n − 5m)³" }
+            {
+              "label": "Deriving (a − b)³",
+              "marks": 1,
+              "descriptor": "Substitutes −b for b and simplifies correctly"
+            },
+            {
+              "label": "Setting up 199³",
+              "marks": 1,
+              "descriptor": "Writes 199³ = (200 − 1)³ and expands"
+            },
+            {
+              "label": "Value of 199³",
+              "marks": 1,
+              "descriptor": "7880599"
+            },
+            {
+              "label": "Matching the cube",
+              "marks": 1,
+              "descriptor": "Identifies a = 2n and b = 5m with all four terms checked"
+            },
+            {
+              "label": "Factorisation",
+              "marks": 1,
+              "descriptor": "(2n − 5m)³"
+            }
           ]
         },
         {
@@ -820,11 +1236,31 @@
             "x³ + y³ + z³ = 70 + 75 = 145"
           ],
           "rubric": [
-            { "label": "Square identity used", "marks": 1, "descriptor": "Writes 100 = 38 + 2(xy + yz + zx)" },
-            { "label": "Sum of products", "marks": 1, "descriptor": "xy + yz + zx = 31" },
-            { "label": "Cube identity quoted", "marks": 1, "descriptor": "x³ + y³ + z³ − 3xyz = (x + y + z)(x² + y² + z² − xy − yz − zx)" },
-            { "label": "Substitution", "marks": 1, "descriptor": "10 × (38 − 31) = 70" },
-            { "label": "Answer", "marks": 1, "descriptor": "145" }
+            {
+              "label": "Square identity used",
+              "marks": 1,
+              "descriptor": "Writes 100 = 38 + 2(xy + yz + zx)"
+            },
+            {
+              "label": "Sum of products",
+              "marks": 1,
+              "descriptor": "xy + yz + zx = 31"
+            },
+            {
+              "label": "Cube identity quoted",
+              "marks": 1,
+              "descriptor": "x³ + y³ + z³ − 3xyz = (x + y + z)(x² + y² + z² − xy − yz − zx)"
+            },
+            {
+              "label": "Substitution",
+              "marks": 1,
+              "descriptor": "10 × (38 − 31) = 70"
+            },
+            {
+              "label": "Answer",
+              "marks": 1,
+              "descriptor": "145"
+            }
           ]
         },
         {
@@ -841,10 +1277,22 @@
               "prompt": "The total area of all Saira's tiles, in square units, is",
               "marks": 1,
               "options": [
-                { "text": "x² + 8x + 15", "correct": true },
-                { "text": "x² + 15x + 8", "correct": false },
-                { "text": "8x² + x + 15", "correct": false },
-                { "text": "x² + 8x + 8", "correct": false }
+                {
+                  "text": "x² + 8x + 15",
+                  "correct": true
+                },
+                {
+                  "text": "x² + 15x + 8",
+                  "correct": false
+                },
+                {
+                  "text": "8x² + x + 15",
+                  "correct": false
+                },
+                {
+                  "text": "x² + 8x + 8",
+                  "correct": false
+                }
               ],
               "answer": "(a) x² + 8x + 15 — one tile of area x², eight strips of area x each, and fifteen unit squares."
             },
@@ -902,8 +1350,16 @@
             "Half the chord = √(169 − 25) = 12 cm, so the chord is 24 cm"
           ],
           "rubric": [
-            { "label": "Right triangle set up", "marks": 1, "descriptor": "Uses radius 13, distance 5 and half the chord in a right-angled triangle" },
-            { "label": "Length", "marks": 1, "descriptor": "24 cm" }
+            {
+              "label": "Right triangle set up",
+              "marks": 1,
+              "descriptor": "Uses radius 13, distance 5 and half the chord in a right-angled triangle"
+            },
+            {
+              "label": "Length",
+              "marks": 1,
+              "descriptor": "24 cm"
+            }
           ]
         },
         {
@@ -919,8 +1375,16 @@
             "Angle = 35°"
           ],
           "rubric": [
-            { "label": "Theorem", "marks": 1, "descriptor": "States the angle-at-the-centre theorem" },
-            { "label": "Angle", "marks": 1, "descriptor": "35°" }
+            {
+              "label": "Theorem",
+              "marks": 1,
+              "descriptor": "States the angle-at-the-centre theorem"
+            },
+            {
+              "label": "Angle",
+              "marks": 1,
+              "descriptor": "35°"
+            }
           ]
         },
         {
@@ -936,8 +1400,16 @@
             "Uses ∠B + ∠D = 180° to get ∠D = 70°"
           ],
           "rubric": [
-            { "label": "∠C", "marks": 1, "descriptor": "105°" },
-            { "label": "∠D", "marks": 1, "descriptor": "70°" }
+            {
+              "label": "∠C",
+              "marks": 1,
+              "descriptor": "105°"
+            },
+            {
+              "label": "∠D",
+              "marks": 1,
+              "descriptor": "70°"
+            }
           ]
         },
         {
@@ -954,9 +1426,21 @@
             "Radius = 10 cm"
           ],
           "rubric": [
-            { "label": "Half the chord", "marks": 1, "descriptor": "8 cm, quoting that the perpendicular from the centre bisects the chord" },
-            { "label": "Pythagoras", "marks": 1, "descriptor": "OA² = 6² + 8²" },
-            { "label": "Radius", "marks": 1, "descriptor": "10 cm" }
+            {
+              "label": "Half the chord",
+              "marks": 1,
+              "descriptor": "8 cm, quoting that the perpendicular from the centre bisects the chord"
+            },
+            {
+              "label": "Pythagoras",
+              "marks": 1,
+              "descriptor": "OA² = 6² + 8²"
+            },
+            {
+              "label": "Radius",
+              "marks": 1,
+              "descriptor": "10 cm"
+            }
           ]
         },
         {
@@ -973,9 +1457,21 @@
             "∠P = 86° and ∠R = 94°"
           ],
           "rubric": [
-            { "label": "Equation", "marks": 1, "descriptor": "(2x + 10) + (3x − 20) = 180" },
-            { "label": "Value of x", "marks": 1, "descriptor": "x = 38" },
-            { "label": "The two angles", "marks": 1, "descriptor": "∠P = 86° and ∠R = 94°" }
+            {
+              "label": "Equation",
+              "marks": 1,
+              "descriptor": "(2x + 10) + (3x − 20) = 180"
+            },
+            {
+              "label": "Value of x",
+              "marks": 1,
+              "descriptor": "x = 38"
+            },
+            {
+              "label": "The two angles",
+              "marks": 1,
+              "descriptor": "∠P = 86° and ∠R = 94°"
+            }
           ]
         },
         {
@@ -992,9 +1488,21 @@
             "Distance = 12 cm for each chord"
           ],
           "rubric": [
-            { "label": "Theorem", "marks": 1, "descriptor": "Equal chords are equidistant from the centre" },
-            { "label": "Working", "marks": 1, "descriptor": "d² = 13² − 5² using half the chord" },
-            { "label": "Distance", "marks": 1, "descriptor": "12 cm" }
+            {
+              "label": "Theorem",
+              "marks": 1,
+              "descriptor": "Equal chords are equidistant from the centre"
+            },
+            {
+              "label": "Working",
+              "marks": 1,
+              "descriptor": "d² = 13² − 5² using half the chord"
+            },
+            {
+              "label": "Distance",
+              "marks": 1,
+              "descriptor": "12 cm"
+            }
           ]
         },
         {
@@ -1013,11 +1521,31 @@
             "Adding gives ∠BCA = 2∠BDA"
           ],
           "rubric": [
-            { "label": "Construction and radii", "marks": 1, "descriptor": "Produces DC to E and states CA = CB = CD" },
-            { "label": "First isosceles triangle", "marks": 1, "descriptor": "∠BCE = ∠CBD + ∠CDB = 2∠BDC by the exterior angle theorem" },
-            { "label": "Second isosceles triangle", "marks": 1, "descriptor": "∠ACE = 2∠CDA" },
-            { "label": "Splitting the angles", "marks": 1, "descriptor": "∠BCA = ∠BCE + ∠ECA and ∠BDA = ∠BDC + ∠CDA" },
-            { "label": "Conclusion", "marks": 1, "descriptor": "∠BCA = 2∠BDA" }
+            {
+              "label": "Construction and radii",
+              "marks": 1,
+              "descriptor": "Produces DC to E and states CA = CB = CD"
+            },
+            {
+              "label": "First isosceles triangle",
+              "marks": 1,
+              "descriptor": "∠BCE = ∠CBD + ∠CDB = 2∠BDC by the exterior angle theorem"
+            },
+            {
+              "label": "Second isosceles triangle",
+              "marks": 1,
+              "descriptor": "∠ACE = 2∠CDA"
+            },
+            {
+              "label": "Splitting the angles",
+              "marks": 1,
+              "descriptor": "∠BCA = ∠BCE + ∠ECA and ∠BDA = ∠BDC + ∠CDA"
+            },
+            {
+              "label": "Conclusion",
+              "marks": 1,
+              "descriptor": "∠BCA = 2∠BDA"
+            }
           ]
         },
         {
@@ -1036,11 +1564,31 @@
             "r² = 144 + 25 = 169, so r = 13 cm"
           ],
           "rubric": [
-            { "label": "Half-chords", "marks": 1, "descriptor": "5 cm and 12 cm, with the bisection property quoted" },
-            { "label": "Two equations", "marks": 1, "descriptor": "p² = r² − 25 and q² = r² − 144" },
-            { "label": "Using the gap", "marks": 1, "descriptor": "p − q = 7 with the longer chord nearer the centre" },
-            { "label": "Distances", "marks": 1, "descriptor": "p = 12 cm and q = 5 cm" },
-            { "label": "Radius", "marks": 1, "descriptor": "13 cm" }
+            {
+              "label": "Half-chords",
+              "marks": 1,
+              "descriptor": "5 cm and 12 cm, with the bisection property quoted"
+            },
+            {
+              "label": "Two equations",
+              "marks": 1,
+              "descriptor": "p² = r² − 25 and q² = r² − 144"
+            },
+            {
+              "label": "Using the gap",
+              "marks": 1,
+              "descriptor": "p − q = 7 with the longer chord nearer the centre"
+            },
+            {
+              "label": "Distances",
+              "marks": 1,
+              "descriptor": "p = 12 cm and q = 5 cm"
+            },
+            {
+              "label": "Radius",
+              "marks": 1,
+              "descriptor": "13 cm"
+            }
           ]
         },
         {
@@ -1057,10 +1605,22 @@
               "prompt": "The angle ∠CPD between the two wires at the lamp post measures",
               "marks": 1,
               "options": [
-                { "text": "45°", "correct": false },
-                { "text": "60°", "correct": false },
-                { "text": "90°", "correct": true },
-                { "text": "120°", "correct": false }
+                {
+                  "text": "45°",
+                  "correct": false
+                },
+                {
+                  "text": "60°",
+                  "correct": false
+                },
+                {
+                  "text": "90°",
+                  "correct": true
+                },
+                {
+                  "text": "120°",
+                  "correct": false
+                }
               ],
               "answer": "(c) 90° — CD is a diameter, and the angle a diameter subtends at any point on the circle is a right angle."
             },
@@ -1118,8 +1678,16 @@
             "Distance = 176 × 100 = 17600 cm = 176 m"
           ],
           "rubric": [
-            { "label": "Circumference", "marks": 1, "descriptor": "176 cm" },
-            { "label": "Distance", "marks": 1, "descriptor": "176 m (or 17600 cm)" }
+            {
+              "label": "Circumference",
+              "marks": 1,
+              "descriptor": "176 cm"
+            },
+            {
+              "label": "Distance",
+              "marks": 1,
+              "descriptor": "176 m (or 17600 cm)"
+            }
           ]
         },
         {
@@ -1135,8 +1703,16 @@
             "Area = √(6 × 3 × 2 × 1) = 6 cm²"
           ],
           "rubric": [
-            { "label": "Semi-perimeter", "marks": 1, "descriptor": "s = 6 cm" },
-            { "label": "Area", "marks": 1, "descriptor": "6 cm² using Heron's formula" }
+            {
+              "label": "Semi-perimeter",
+              "marks": 1,
+              "descriptor": "s = 6 cm"
+            },
+            {
+              "label": "Area",
+              "marks": 1,
+              "descriptor": "6 cm² using Heron's formula"
+            }
           ]
         },
         {
@@ -1152,8 +1728,16 @@
             "Triangle: ½ × 12 × 7.5 = 45 cm², half the parallelogram"
           ],
           "rubric": [
-            { "label": "Parallelogram", "marks": 1, "descriptor": "90 cm²" },
-            { "label": "Triangle", "marks": 1, "descriptor": "45 cm²" }
+            {
+              "label": "Parallelogram",
+              "marks": 1,
+              "descriptor": "90 cm²"
+            },
+            {
+              "label": "Triangle",
+              "marks": 1,
+              "descriptor": "45 cm²"
+            }
           ]
         },
         {
@@ -1170,9 +1754,21 @@
             "Area = √(150 × 90 × 50 × 10) = 1500√3 ≈ 2598.08 m²"
           ],
           "rubric": [
-            { "label": "Sides", "marks": 1, "descriptor": "60 m, 100 m, 140 m" },
-            { "label": "Heron set up", "marks": 1, "descriptor": "s = 150 and the product 150 × 90 × 50 × 10" },
-            { "label": "Area", "marks": 1, "descriptor": "1500√3 m² ≈ 2598.08 m²" }
+            {
+              "label": "Sides",
+              "marks": 1,
+              "descriptor": "60 m, 100 m, 140 m"
+            },
+            {
+              "label": "Heron set up",
+              "marks": 1,
+              "descriptor": "s = 150 and the product 150 × 90 × 50 × 10"
+            },
+            {
+              "label": "Area",
+              "marks": 1,
+              "descriptor": "1500√3 m² ≈ 2598.08 m²"
+            }
           ]
         },
         {
@@ -1189,9 +1785,21 @@
             "Area = (22/7) × 441 × (1/6) = 231 cm²"
           ],
           "rubric": [
-            { "label": "Angle", "marks": 1, "descriptor": "60°" },
-            { "label": "Formula", "marks": 1, "descriptor": "Uses πr² × θ/360° with r = 21 cm" },
-            { "label": "Area", "marks": 1, "descriptor": "231 cm²" }
+            {
+              "label": "Angle",
+              "marks": 1,
+              "descriptor": "60°"
+            },
+            {
+              "label": "Formula",
+              "marks": 1,
+              "descriptor": "Uses πr² × θ/360° with r = 21 cm"
+            },
+            {
+              "label": "Area",
+              "marks": 1,
+              "descriptor": "231 cm²"
+            }
           ]
         },
         {
@@ -1208,9 +1816,21 @@
             "Subtracting gives area(ABP) = area(ACP)"
           ],
           "rubric": [
-            { "label": "First median", "marks": 1, "descriptor": "area(ABD) = area(ACD)" },
-            { "label": "Second median", "marks": 1, "descriptor": "area(PBD) = area(PCD)" },
-            { "label": "Subtraction", "marks": 1, "descriptor": "Subtracts correctly to reach area(ABP) = area(ACP)" }
+            {
+              "label": "First median",
+              "marks": 1,
+              "descriptor": "area(ABD) = area(ACD)"
+            },
+            {
+              "label": "Second median",
+              "marks": 1,
+              "descriptor": "area(PBD) = area(PCD)"
+            },
+            {
+              "label": "Subtraction",
+              "marks": 1,
+              "descriptor": "Subtracts correctly to reach area(ABP) = area(ACP)"
+            }
           ]
         },
         {
@@ -1229,11 +1849,31 @@
             "Perimeter 56 m and cost ₹2240"
           ],
           "rubric": [
-            { "label": "Semi-perimeter", "marks": 1, "descriptor": "s = 28 m" },
-            { "label": "Heron's area", "marks": 1, "descriptor": "84 m²" },
-            { "label": "Right angle shown", "marks": 1, "descriptor": "7² + 24² = 25²" },
-            { "label": "Second area", "marks": 1, "descriptor": "½ × 24 × 7 = 84 m²" },
-            { "label": "Cost", "marks": 1, "descriptor": "Perimeter 56 m, cost ₹2240" }
+            {
+              "label": "Semi-perimeter",
+              "marks": 1,
+              "descriptor": "s = 28 m"
+            },
+            {
+              "label": "Heron's area",
+              "marks": 1,
+              "descriptor": "84 m²"
+            },
+            {
+              "label": "Right angle shown",
+              "marks": 1,
+              "descriptor": "7² + 24² = 25²"
+            },
+            {
+              "label": "Second area",
+              "marks": 1,
+              "descriptor": "½ × 24 × 7 = 84 m²"
+            },
+            {
+              "label": "Cost",
+              "marks": 1,
+              "descriptor": "Perimeter 56 m, cost ₹2240"
+            }
           ]
         },
         {
@@ -1252,11 +1892,31 @@
             "Cost = 1694 × 150 = ₹2,54,100"
           ],
           "rubric": [
-            { "label": "Park area", "marks": 1, "descriptor": "3850 m²" },
-            { "label": "Outer radius", "marks": 1, "descriptor": "42 m" },
-            { "label": "Outer area", "marks": 1, "descriptor": "5544 m²" },
-            { "label": "Path area", "marks": 1, "descriptor": "1694 m² by subtraction" },
-            { "label": "Cost", "marks": 1, "descriptor": "₹2,54,100" }
+            {
+              "label": "Park area",
+              "marks": 1,
+              "descriptor": "3850 m²"
+            },
+            {
+              "label": "Outer radius",
+              "marks": 1,
+              "descriptor": "42 m"
+            },
+            {
+              "label": "Outer area",
+              "marks": 1,
+              "descriptor": "5544 m²"
+            },
+            {
+              "label": "Path area",
+              "marks": 1,
+              "descriptor": "1694 m² by subtraction"
+            },
+            {
+              "label": "Cost",
+              "marks": 1,
+              "descriptor": "₹2,54,100"
+            }
           ]
         },
         {
@@ -1273,10 +1933,22 @@
               "prompt": "The radius of the semicircular seating area is",
               "marks": 1,
               "options": [
-                { "text": "7 m", "correct": true },
-                { "text": "10 m", "correct": false },
-                { "text": "14 m", "correct": false },
-                { "text": "20 m", "correct": false }
+                {
+                  "text": "7 m",
+                  "correct": true
+                },
+                {
+                  "text": "10 m",
+                  "correct": false
+                },
+                {
+                  "text": "14 m",
+                  "correct": false
+                },
+                {
+                  "text": "20 m",
+                  "correct": false
+                }
               ],
               "answer": "(a) 7 m — the 14 m side of the court is the diameter, so the radius is half of it."
             },
@@ -1334,8 +2006,16 @@
             "n(S) = 12"
           ],
           "rubric": [
-            { "label": "Sample space", "marks": 1, "descriptor": "All twelve outcomes listed, none repeated" },
-            { "label": "Sample size", "marks": 1, "descriptor": "n(S) = 12" }
+            {
+              "label": "Sample space",
+              "marks": 1,
+              "descriptor": "All twelve outcomes listed, none repeated"
+            },
+            {
+              "label": "Sample size",
+              "marks": 1,
+              "descriptor": "n(S) = 12"
+            }
           ]
         },
         {
@@ -1351,8 +2031,16 @@
             "P(red) = 3/6 = 1/2 and P(not red) = 1 − 1/2 = 1/2"
           ],
           "rubric": [
-            { "label": "P(red)", "marks": 1, "descriptor": "1/2" },
-            { "label": "P(not red)", "marks": 1, "descriptor": "1/2, ideally shown as 1 − P(red)" }
+            {
+              "label": "P(red)",
+              "marks": 1,
+              "descriptor": "1/2"
+            },
+            {
+              "label": "P(not red)",
+              "marks": 1,
+              "descriptor": "1/2, ideally shown as 1 − P(red)"
+            }
           ]
         },
         {
@@ -1368,8 +2056,16 @@
             "Theoretical probability = 1/6"
           ],
           "rubric": [
-            { "label": "Experimental", "marks": 1, "descriptor": "1/4" },
-            { "label": "Theoretical", "marks": 1, "descriptor": "1/6" }
+            {
+              "label": "Experimental",
+              "marks": 1,
+              "descriptor": "1/4"
+            },
+            {
+              "label": "Theoretical",
+              "marks": 1,
+              "descriptor": "1/6"
+            }
           ]
         },
         {
@@ -1386,9 +2082,21 @@
             "P(not I) = 1 − 2/11 = 9/11"
           ],
           "rubric": [
-            { "label": "P(B)", "marks": 1, "descriptor": "2/11" },
-            { "label": "P(vowel)", "marks": 1, "descriptor": "4/11" },
-            { "label": "P(not I)", "marks": 1, "descriptor": "9/11" }
+            {
+              "label": "P(B)",
+              "marks": 1,
+              "descriptor": "2/11"
+            },
+            {
+              "label": "P(vowel)",
+              "marks": 1,
+              "descriptor": "4/11"
+            },
+            {
+              "label": "P(not I)",
+              "marks": 1,
+              "descriptor": "9/11"
+            }
           ]
         },
         {
@@ -1405,9 +2113,21 @@
             "P(exactly one head) = 2/4 = 1/2"
           ],
           "rubric": [
-            { "label": "Sample space", "marks": 1, "descriptor": "Tree diagram or list giving {HH, HT, TH, TT}" },
-            { "label": "At least one head", "marks": 1, "descriptor": "3/4" },
-            { "label": "Exactly one head", "marks": 1, "descriptor": "1/2" }
+            {
+              "label": "Sample space",
+              "marks": 1,
+              "descriptor": "Tree diagram or list giving {HH, HT, TH, TT}"
+            },
+            {
+              "label": "At least one head",
+              "marks": 1,
+              "descriptor": "3/4"
+            },
+            {
+              "label": "Exactly one head",
+              "marks": 1,
+              "descriptor": "1/2"
+            }
           ]
         },
         {
@@ -1424,9 +2144,21 @@
             "Estimate for the school = 0.225 × 800 = 180 students"
           ],
           "rubric": [
-            { "label": "Arts Club", "marks": 1, "descriptor": "11/40 (or 0.275)" },
-            { "label": "Sports Club probability", "marks": 1, "descriptor": "9/40 (or 0.225)" },
-            { "label": "Estimate", "marks": 1, "descriptor": "180 students" }
+            {
+              "label": "Arts Club",
+              "marks": 1,
+              "descriptor": "11/40 (or 0.275)"
+            },
+            {
+              "label": "Sports Club probability",
+              "marks": 1,
+              "descriptor": "9/40 (or 0.225)"
+            },
+            {
+              "label": "Estimate",
+              "marks": 1,
+              "descriptor": "180 students"
+            }
           ]
         },
         {
@@ -1445,11 +2177,31 @@
             "Prime sums greater than 5 are 7 and 11, giving P = 8/36 = 2/9"
           ],
           "rubric": [
-            { "label": "Sample size", "marks": 1, "descriptor": "36 outcomes" },
-            { "label": "Sum 7", "marks": 1, "descriptor": "1/6, with the six outcomes identified" },
-            { "label": "Sum greater than 9", "marks": 1, "descriptor": "1/6" },
-            { "label": "Doubles", "marks": 1, "descriptor": "1/6" },
-            { "label": "Prime sum greater than 5", "marks": 1, "descriptor": "2/9, with sums 7 and 11 identified" }
+            {
+              "label": "Sample size",
+              "marks": 1,
+              "descriptor": "36 outcomes"
+            },
+            {
+              "label": "Sum 7",
+              "marks": 1,
+              "descriptor": "1/6, with the six outcomes identified"
+            },
+            {
+              "label": "Sum greater than 9",
+              "marks": 1,
+              "descriptor": "1/6"
+            },
+            {
+              "label": "Doubles",
+              "marks": 1,
+              "descriptor": "1/6"
+            },
+            {
+              "label": "Prime sum greater than 5",
+              "marks": 1,
+              "descriptor": "2/9, with sums 7 and 11 identified"
+            }
           ]
         },
         {
@@ -1468,11 +2220,31 @@
             "P(different colours) = 5/18 + 5/18 = 5/9"
           ],
           "rubric": [
-            { "label": "First stage", "marks": 1, "descriptor": "Branches of probability 4/9 and 5/9" },
-            { "label": "Second stage", "marks": 1, "descriptor": "Denominator 8 on every second branch, with the four correct numerators" },
-            { "label": "Red then blue", "marks": 1, "descriptor": "5/18" },
-            { "label": "Both blue", "marks": 1, "descriptor": "5/18" },
-            { "label": "Different colours", "marks": 1, "descriptor": "5/9" }
+            {
+              "label": "First stage",
+              "marks": 1,
+              "descriptor": "Branches of probability 4/9 and 5/9"
+            },
+            {
+              "label": "Second stage",
+              "marks": 1,
+              "descriptor": "Denominator 8 on every second branch, with the four correct numerators"
+            },
+            {
+              "label": "Red then blue",
+              "marks": 1,
+              "descriptor": "5/18"
+            },
+            {
+              "label": "Both blue",
+              "marks": 1,
+              "descriptor": "5/18"
+            },
+            {
+              "label": "Different colours",
+              "marks": 1,
+              "descriptor": "5/9"
+            }
           ]
         },
         {
@@ -1489,10 +2261,22 @@
               "prompt": "The probability that a randomly chosen tyre from this record lasted less than 4000 km is",
               "marks": 1,
               "options": [
-                { "text": "0.02", "correct": true },
-                { "text": "0.2", "correct": false },
-                { "text": "0.045", "correct": false },
-                { "text": "0.445", "correct": false }
+                {
+                  "text": "0.02",
+                  "correct": true
+                },
+                {
+                  "text": "0.2",
+                  "correct": false
+                },
+                {
+                  "text": "0.045",
+                  "correct": false
+                },
+                {
+                  "text": "0.445",
+                  "correct": false
+                }
               ],
               "answer": "(a) 0.02 — there are 20 such tyres out of 1000, and 20/1000 = 0.02."
             },
@@ -1550,8 +2334,16 @@
             "t15 = 72"
           ],
           "rubric": [
-            { "label": "Tenth term", "marks": 1, "descriptor": "47" },
-            { "label": "Fifteenth term", "marks": 1, "descriptor": "72" }
+            {
+              "label": "Tenth term",
+              "marks": 1,
+              "descriptor": "47"
+            },
+            {
+              "label": "Fifteenth term",
+              "marks": 1,
+              "descriptor": "72"
+            }
           ]
         },
         {
@@ -1567,8 +2359,16 @@
             "t10 = 48 and t26 = 128"
           ],
           "rubric": [
-            { "label": "Formula and values of a, d", "marks": 1, "descriptor": "a = 3, d = 5 used in tn = a + (n − 1)d" },
-            { "label": "Both terms", "marks": 1, "descriptor": "48 and 128; ½ mark for one of them" }
+            {
+              "label": "Formula and values of a, d",
+              "marks": 1,
+              "descriptor": "a = 3, d = 5 used in tn = a + (n − 1)d"
+            },
+            {
+              "label": "Both terms",
+              "marks": 1,
+              "descriptor": "48 and 128; ½ mark for one of them"
+            }
           ]
         },
         {
@@ -1584,8 +2384,16 @@
             "t6 = 2 × 4⁵ = 2048"
           ],
           "rubric": [
-            { "label": "Common ratio", "marks": 1, "descriptor": "r = 4" },
-            { "label": "Sixth term", "marks": 1, "descriptor": "2048" }
+            {
+              "label": "Common ratio",
+              "marks": 1,
+              "descriptor": "r = 4"
+            },
+            {
+              "label": "Sixth term",
+              "marks": 1,
+              "descriptor": "2048"
+            }
           ]
         },
         {
@@ -1602,9 +2410,21 @@
             "24 − 3n = 0 gives n = 8, a natural number, so 0 is the 8th term"
           ],
           "rubric": [
-            { "label": "General term", "marks": 1, "descriptor": "tn = 21 + (n − 1)(−3) = 24 − 3n" },
-            { "label": "Position of −81", "marks": 1, "descriptor": "35th term" },
-            { "label": "Is 0 a term", "marks": 1, "descriptor": "Yes, the 8th term, because n = 8 is a natural number" }
+            {
+              "label": "General term",
+              "marks": 1,
+              "descriptor": "tn = 21 + (n − 1)(−3) = 24 − 3n"
+            },
+            {
+              "label": "Position of −81",
+              "marks": 1,
+              "descriptor": "35th term"
+            },
+            {
+              "label": "Is 0 a term",
+              "marks": 1,
+              "descriptor": "Yes, the 8th term, because n = 8 is a natural number"
+            }
           ]
         },
         {
@@ -1621,9 +2441,21 @@
             "Sum = 1411"
           ],
           "rubric": [
-            { "label": "Method", "marks": 1, "descriptor": "Expresses the sum as S58 − S24" },
-            { "label": "The two sums", "marks": 1, "descriptor": "1711 and 300" },
-            { "label": "Answer", "marks": 1, "descriptor": "1411" }
+            {
+              "label": "Method",
+              "marks": 1,
+              "descriptor": "Expresses the sum as S58 − S24"
+            },
+            {
+              "label": "The two sums",
+              "marks": 1,
+              "descriptor": "1711 and 300"
+            },
+            {
+              "label": "Answer",
+              "marks": 1,
+              "descriptor": "1411"
+            }
           ]
         },
         {
@@ -1640,9 +2472,21 @@
             "61 is the fifth term"
           ],
           "rubric": [
-            { "label": "Use of the rule", "marks": 1, "descriptor": "Substitutes n = 2, 3, 4, 5 correctly" },
-            { "label": "The five terms", "marks": 1, "descriptor": "1, 5, 13, 29, 61" },
-            { "label": "Is 61 a term", "marks": 1, "descriptor": "Yes, the fifth term" }
+            {
+              "label": "Use of the rule",
+              "marks": 1,
+              "descriptor": "Substitutes n = 2, 3, 4, 5 correctly"
+            },
+            {
+              "label": "The five terms",
+              "marks": 1,
+              "descriptor": "1, 5, 13, 29, 61"
+            },
+            {
+              "label": "Is 61 a term",
+              "marks": 1,
+              "descriptor": "Yes, the fifth term"
+            }
           ]
         },
         {
@@ -1661,11 +2505,31 @@
             "t29 = 8 + 28 × 2 = 64"
           ],
           "rubric": [
-            { "label": "First equation", "marks": 1, "descriptor": "a + 2d = 12" },
-            { "label": "Second equation", "marks": 1, "descriptor": "a + 49d = 106" },
-            { "label": "Common difference", "marks": 1, "descriptor": "d = 2" },
-            { "label": "First term", "marks": 1, "descriptor": "a = 8" },
-            { "label": "29th term", "marks": 1, "descriptor": "64" }
+            {
+              "label": "First equation",
+              "marks": 1,
+              "descriptor": "a + 2d = 12"
+            },
+            {
+              "label": "Second equation",
+              "marks": 1,
+              "descriptor": "a + 49d = 106"
+            },
+            {
+              "label": "Common difference",
+              "marks": 1,
+              "descriptor": "d = 2"
+            },
+            {
+              "label": "First term",
+              "marks": 1,
+              "descriptor": "a = 8"
+            },
+            {
+              "label": "29th term",
+              "marks": 1,
+              "descriptor": "64"
+            }
           ]
         },
         {
@@ -1684,11 +2548,31 @@
             "n = 45 gives S45 = 1035 > 1000, so the smallest n is 45"
           ],
           "rubric": [
-            { "label": "Sum of first 25", "marks": 1, "descriptor": "325" },
-            { "label": "Marbles", "marks": 1, "descriptor": "325, with the reason that the rows form 1 + 2 + … + 25" },
-            { "label": "Inequality", "marks": 1, "descriptor": "n(n + 1)/2 > 1000" },
-            { "label": "Testing n = 44", "marks": 1, "descriptor": "S44 = 990, not greater than 1000" },
-            { "label": "Answer", "marks": 1, "descriptor": "n = 45, with S45 = 1035" }
+            {
+              "label": "Sum of first 25",
+              "marks": 1,
+              "descriptor": "325"
+            },
+            {
+              "label": "Marbles",
+              "marks": 1,
+              "descriptor": "325, with the reason that the rows form 1 + 2 + … + 25"
+            },
+            {
+              "label": "Inequality",
+              "marks": 1,
+              "descriptor": "n(n + 1)/2 > 1000"
+            },
+            {
+              "label": "Testing n = 44",
+              "marks": 1,
+              "descriptor": "S44 = 990, not greater than 1000"
+            },
+            {
+              "label": "Answer",
+              "marks": 1,
+              "descriptor": "n = 45, with S45 = 1035"
+            }
           ]
         },
         {
@@ -1705,10 +2589,22 @@
               "prompt": "The numbers of bacteria at the end of each successive hour form",
               "marks": 1,
               "options": [
-                { "text": "an arithmetic progression with common difference 30", "correct": false },
-                { "text": "a geometric progression with common ratio 2", "correct": true },
-                { "text": "a geometric progression with common ratio 30", "correct": false },
-                { "text": "neither an arithmetic nor a geometric progression", "correct": false }
+                {
+                  "text": "an arithmetic progression with common difference 30",
+                  "correct": false
+                },
+                {
+                  "text": "a geometric progression with common ratio 2",
+                  "correct": true
+                },
+                {
+                  "text": "a geometric progression with common ratio 30",
+                  "correct": false
+                },
+                {
+                  "text": "neither an arithmetic nor a geometric progression",
+                  "correct": false
+                }
               ],
               "answer": "(b) — each term is obtained by multiplying the one before it by the fixed number 2, so the common ratio is 2."
             },
