@@ -4,7 +4,7 @@
   "subject": "ENGGW",
   "title": "English – Grammar and Writing",
   "status": "DRAFT — for review by an English teacher before any question is approved",
-  "source": "Written to the CBSE English Language and Literature (184) syllabus for 2025-26, Section B for Class IX: grammar assessed through gap filling, editing and transformation, and the descriptive paragraph and story or diary entry writing tasks. No book text is quoted.",
+  "source": "Written to the CBSE English Language and Literature (184) syllabus for 2025-26, Section B for Class IX: grammar assessed through gap filling, editing and transformation, and the descriptive paragraph and story or diary entry writing tasks. Section A reading comprehension: original unseen discursive and case-based factual passages. No book text is quoted.",
   "chapters": [
     {
       "number": 1,
@@ -3406,6 +3406,2339 @@
           "difficulty": "MEDIUM",
           "marks": 5,
           "outcome": "E9GW-07-2"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "questions": [
+        {
+          "id": "gw9-08-d1",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "The Case for Handwriting",
+          "outcome": "E9GW-08-1",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "In many classrooms today, a student can type an entire essay without once picking up a pen. Keyboards are fast, spelling is corrected automatically, and a page can be rearranged with a single click. It is tempting to conclude that handwriting has become a quaint habit, like sealing letters with wax. Yet there are good reasons to believe that writing by hand still deserves a place in our lives.\n\nThe first reason is memory. When we type, our fingers can copy words almost without thought, and many students end up recording a lesson word for word. Writing by hand is slower, and this slowness turns out to be useful. Because we cannot keep up with every word, we are forced to choose what matters, to put ideas in our own words and to link them together. That small effort of choosing is exactly what helps us remember.\n\nThe second reason is attention. A notebook has no notifications. It does not tempt us to check a message or open another window. For many learners, a sheet of paper is one of the few places left where the mind can stay with a single task for twenty minutes at a stretch.\n\nHandwriting also carries something personal. A birthday card from a friend, a recipe copied out by a grandmother, a teacher's comment in the margin of an answer sheet — each is clearly the work of one particular person. Printed text, however neat, can never hold that trace of the hand that made it. Families often treasure old letters long after they have forgotten what the letters actually said.\n\nNone of this means that we should give up keyboards. Typing is the right tool for drafting a long report, for sharing work with a group, or for anyone whose hands find writing painful. The point is not to choose one over the other but to see that they do different jobs. A carpenter does not throw away his chisel because he has bought a drill.\n\nSchools can help by giving handwriting a purpose instead of treating it as a drill in neat letters. Students might keep a handwritten journal, plan their essays on paper before typing them, or write short notes of thanks to people who help them. Handwriting that is used is handwriting that survives. If we let it fade altogether, we may lose not only a skill but also a way of thinking.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Why, according to the writer, does handwriting help memory?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "It is neater than typing",
+                  "correct": false
+                },
+                {
+                  "text": "It makes us select and rephrase ideas",
+                  "correct": true
+                },
+                {
+                  "text": "It records every word spoken",
+                  "correct": false
+                },
+                {
+                  "text": "It takes less time",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) It makes us select and rephrase ideas — paragraph 2: because we cannot keep up, we choose what matters and put it in our own words."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The carpenter in paragraph 5 is mentioned to show that",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "old tools are always better",
+                  "correct": false
+                },
+                {
+                  "text": "drills are hard to use",
+                  "correct": false
+                },
+                {
+                  "text": "each tool suits a different job",
+                  "correct": true
+                },
+                {
+                  "text": "skills fade without practice",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) each tool suits a different job — the point is 'not to choose one over the other' — typing and handwriting 'do different jobs'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which benefit of handwriting does the writer NOT claim?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Better memory",
+                  "correct": false
+                },
+                {
+                  "text": "Fewer distractions",
+                  "correct": false
+                },
+                {
+                  "text": "A personal touch",
+                  "correct": false
+                },
+                {
+                  "text": "Greater speed",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) Greater speed — the writer admits handwriting is slower (paragraph 2); the other three are paragraphs 2, 3 and 4."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The writer's attitude to typing is best described as",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "balanced",
+                  "correct": true
+                },
+                {
+                  "text": "hostile",
+                  "correct": false
+                },
+                {
+                  "text": "mocking",
+                  "correct": false
+                },
+                {
+                  "text": "uninterested",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) balanced — paragraph 5 names what typing is right for and says we should not give it up."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 1 that means 'charmingly old-fashioned'.",
+              "marks": 1,
+              "answer": "quaint"
+            },
+            {
+              "type": "vsa",
+              "prompt": "What, according to paragraph 4, do families often forget about old letters?",
+              "marks": 1,
+              "answer": "What the letters actually said."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does the writer think a notebook is a good place for learners to work? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "A notebook has no notifications and does not tempt us to check messages or open another window (1 mark), so the mind can stay with one task for twenty minutes at a stretch (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does the writer mean by 'Handwriting that is used is handwriting that survives'? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Handwriting will last only if it has a real purpose in our lives (1 mark), such as a journal, planning essays or thank-you notes, rather than practice in neat letters for its own sake (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-d2",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "Every Teenager Should Learn to Cook",
+          "outcome": "E9GW-08-1",
+          "difficulty": "EASY",
+          "marks": 10,
+          "passage": "Ask a group of fourteen-year-olds what they can cook, and many will answer with a laugh: instant noodles, perhaps, or a cup of tea. In a lot of homes the kitchen still belongs to one or two adults, and children are sent out of it to study. This is a pity, because learning to cook is one of the most useful things a young person can do.\n\nThe most obvious reason is independence. Sooner or later most of us leave home, for college, for work or simply because life moves on. A young adult who can make dal, rice and a simple vegetable will eat better and spend less than one who depends on packets and delivery apps. Cooking is not a luxury skill; it is as basic as knowing how to cross a road safely.\n\nCooking also teaches more than recipes. Measuring flour and water is arithmetic. Watching sugar melt or milk curdle is chemistry in action. Planning a meal so that everything is ready at the same time is a lesson in organisation that no timetable can match. And when a dish goes wrong — as it often will — the cook learns patience and the humility to try again.\n\nThere is a quieter benefit as well. A person who cooks begins to notice what food is made of. It becomes harder to ignore how much oil goes into a fried snack or how much sugar hides in a bottled drink. Such awareness does more for health than any number of lectures about balanced diets.\n\nSome parents worry that time in the kitchen is time taken away from studies. But cooking a simple meal once a week takes an hour, not a semester. Many families find, in fact, that preparing food together is when the real conversations happen, far from screens and homework.\n\nFinally, cooking connects us to our roots. Every region of India has dishes that are passed down through families rather than written in books. When a grandmother teaches her grandson how she makes her pickle, she is handing over a piece of family history. If the young do not learn these dishes, they may simply disappear.\n\nSo the next time someone offers to show you how to make a paratha, do not wander off. Stay, watch and roll one yourself. It may come out shaped like a map of some unknown country, but it will be yours.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "What is the writer's main purpose in this passage?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "To persuade young people to learn cooking",
+                  "correct": true
+                },
+                {
+                  "text": "To share favourite recipes",
+                  "correct": false
+                },
+                {
+                  "text": "To criticise parents",
+                  "correct": false
+                },
+                {
+                  "text": "To describe regional dishes",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) To persuade young people to learn cooking — every paragraph gives a reason why cooking is 'one of the most useful things a young person can do'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Measuring flour and water is compared to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "chemistry",
+                  "correct": false
+                },
+                {
+                  "text": "organisation",
+                  "correct": false
+                },
+                {
+                  "text": "arithmetic",
+                  "correct": true
+                },
+                {
+                  "text": "patience",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) arithmetic — paragraph 3: 'Measuring flour and water is arithmetic.'"
+            },
+            {
+              "type": "mcq",
+              "prompt": "According to paragraph 4, a person who cooks is more likely to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "eat more fried snacks",
+                  "correct": false
+                },
+                {
+                  "text": "listen to lectures on diet",
+                  "correct": false
+                },
+                {
+                  "text": "buy bottled drinks",
+                  "correct": false
+                },
+                {
+                  "text": "notice what is in food",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) notice what is in food — 'A person who cooks begins to notice what food is made of.'"
+            },
+            {
+              "type": "mcq",
+              "prompt": "How does the writer answer the parents' worry about studies?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "A weekly meal takes only an hour",
+                  "correct": true
+                },
+                {
+                  "text": "Studies matter less than cooking",
+                  "correct": false
+                },
+                {
+                  "text": "Children cook better than adults",
+                  "correct": false
+                },
+                {
+                  "text": "Cooking can replace homework",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) A weekly meal takes only an hour — paragraph 5: 'cooking a simple meal once a week takes an hour, not a semester.'"
+            },
+            {
+              "type": "mcq",
+              "prompt": "The last line about the paratha shows the writer's",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "disappointment",
+                  "correct": false
+                },
+                {
+                  "text": "gentle humour",
+                  "correct": true
+                },
+                {
+                  "text": "anger",
+                  "correct": false
+                },
+                {
+                  "text": "confusion",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) gentle humour — the map joke makes light of a first attempt while encouraging the reader."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 3 that means 'a modest view of one's own ability'.",
+              "marks": 1,
+              "answer": "humility"
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does the writer say cooking is 'not a luxury skill'? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Most of us leave home some day (1 mark), and someone who can cook simple food eats better and spends less than someone who depends on packets and delivery apps, so it is a basic need (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "How, according to the writer, does cooking connect us to our roots? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Many regional dishes are passed down in families, not written in books (1 mark); when elders teach the young to make them, family history is handed on, and otherwise the dishes may disappear (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-d3",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "The Games Our Ancestors Played",
+          "outcome": "E9GW-08-1",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "Long before video games, Indian children and adults gathered around boards drawn on floors, cloth and stone. Many of the games they played are still with us, though we rarely stop to think where they came from. Looking at them closely tells us a surprising amount about the people who invented them.\n\nSnakes and ladders is the best-known example. It is believed to have begun in India as a game about right and wrong conduct, often called Moksha Patam. The ladders stood for good actions that carried a player upward, and the snakes for bad ones that dragged a player down. What most of us now play as a simple game of luck was once, in part, a lesson in how to live.\n\nOther games trained the mind rather than the conscience. Pallanguzhi, played in the south on a wooden board with fourteen pits, asks players to sow and capture seeds or shells. A good player must count quickly and think several moves ahead. Chaupar, played with cowrie shells and cloth boards, mixed luck with careful planning, and it was popular enough to appear in old stories and paintings. Chess itself is widely believed to have grown out of an old Indian game called chaturanga.\n\nSuch games also brought people together. They needed no electricity and very little equipment: a few shells, some seeds, lines scratched on the ground. A grandmother and a six-year-old could play on equal terms, and a whole courtyard might gather to watch a close finish. The games were a way of passing time, but also of passing on patience, fairness and the ability to lose without sulking.\n\nToday many of these games are fading. Children are more likely to recognise a character from a mobile game than a pallanguzhi board. This is not entirely their fault; the old games are simply not placed in front of them. Yet where schools and families have brought them back, children often take to them at once. There is something deeply satisfying about holding real seeds in your hand and hearing them drop into a pit.\n\nReviving these games need not be a solemn duty. They are fun, cheap and sociable, and they sharpen skills that every student needs. A school could hold a traditional games afternoon; a family could keep a board beside the television. In doing so, we would keep alive not just a set of rules but a small window into how our ancestors thought, played and lived.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "What did the snakes stand for in Moksha Patam?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Good luck",
+                  "correct": false
+                },
+                {
+                  "text": "Bad actions",
+                  "correct": true
+                },
+                {
+                  "text": "Wise elders",
+                  "correct": false
+                },
+                {
+                  "text": "Wild animals",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) Bad actions — paragraph 2: the snakes stood for bad actions that 'dragged a player down'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Pallanguzhi mainly trains a player to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "behave well",
+                  "correct": false
+                },
+                {
+                  "text": "run fast",
+                  "correct": false
+                },
+                {
+                  "text": "count and plan ahead",
+                  "correct": true
+                },
+                {
+                  "text": "paint boards",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) count and plan ahead — paragraph 3: 'count quickly and think several moves ahead'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why could a grandmother and a child play 'on equal terms'?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "The rules favoured the young",
+                  "correct": false
+                },
+                {
+                  "text": "They played only for money",
+                  "correct": false
+                },
+                {
+                  "text": "Elders let children win",
+                  "correct": false
+                },
+                {
+                  "text": "The games needed little strength or equipment",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) The games needed little strength or equipment — paragraph 4 stresses shells, seeds and lines on the ground — nothing that favours one age."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Whom does the writer mainly hold responsible for the fading of these games?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Nobody places the games before children",
+                  "correct": true
+                },
+                {
+                  "text": "Children who dislike old things",
+                  "correct": false
+                },
+                {
+                  "text": "Game makers abroad",
+                  "correct": false
+                },
+                {
+                  "text": "Teachers who ban games",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) Nobody places the games before children — paragraph 5: 'This is not entirely their fault; the old games are simply not placed in front of them.'"
+            },
+            {
+              "type": "mcq",
+              "prompt": "The phrase 'a small window into' (last paragraph) means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "a narrow escape from",
+                  "correct": false
+                },
+                {
+                  "text": "a glimpse of",
+                  "correct": true
+                },
+                {
+                  "text": "a doorway to",
+                  "correct": false
+                },
+                {
+                  "text": "a picture of a house",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) a glimpse of — the games let us see a little of how our ancestors thought and lived."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 6 that means 'serious and formal'.",
+              "marks": 1,
+              "answer": "solemn"
+            },
+            {
+              "type": "sa",
+              "prompt": "What values, besides skill, did traditional games pass on? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "They passed on patience and fairness (1 mark) and the ability to lose without sulking, while also bringing people of different ages together (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What evidence does the writer give that children would still enjoy these games? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Where schools and families have brought the games back, children take to them at once (1 mark), and handling real seeds and hearing them drop into a pit is described as deeply satisfying (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-d4",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "Learning to Lose",
+          "outcome": "E9GW-08-1",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "Every sports day ends the same way. A few students climb onto the podium, and a much larger number walk back to their seats with nothing. We talk a great deal about how to win, but we rarely teach young people how to lose. That is a strange gap, because losing is something every one of us will do far more often than winning.\n\nThink about the arithmetic. In a race of eight runners, seven will not finish first. In a knockout tournament of sixteen teams, fifteen will be beaten at some stage. Even the greatest players in any sport lose regularly; they simply lose less often than the rest. A young person who believes that only victory counts has set himself up for disappointment on most days of his life.\n\nLosing well does not mean pretending not to care. It is natural to feel angry or upset after a defeat, and those feelings show that we took the contest seriously. What matters is what happens next. A good loser shakes hands with the winner, resists the urge to blame the referee or the weather, and later asks an honest question: what could I have done better?\n\nThat question is where improvement begins. A defeat often teaches more than a victory, because it shows us exactly where our weaknesses lie. A badminton player who loses every long rally knows she must work on her stamina. A cricket team bowled out by spin knows what it must practise. Winners are sometimes tempted to change nothing, while losers have every reason to learn.\n\nAdults play a large part in this. A parent who shouts at a referee, or a coach who sulks after a loss, teaches children that defeat is a disgrace to be explained away. On the other hand, a coach who says, 'You played well; now let us work on your serve,' teaches them that losing is simply part of the journey.\n\nSchools could help by praising effort and fair play as loudly as results. A certificate for the best team spirit, or a word of thanks to the side that lost gracefully, sends a clear message. The aim is not to make children indifferent to winning, but to make them strong enough to keep playing when they do not.\n\nIn the end, the real test of a sportsperson is not how they celebrate but how they behave on the days that go wrong. Those days will come. It is better to be ready for them.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The 'arithmetic' in paragraph 2 is used to show that",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "losing is far more common than winning",
+                  "correct": true
+                },
+                {
+                  "text": "races are unfair",
+                  "correct": false
+                },
+                {
+                  "text": "tournaments are too long",
+                  "correct": false
+                },
+                {
+                  "text": "great players rarely lose",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) losing is far more common than winning — seven of eight runners and fifteen of sixteen teams lose; even the greatest 'lose regularly'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "According to the writer, feeling upset after a defeat",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "is a sign of weakness",
+                  "correct": false
+                },
+                {
+                  "text": "should be hidden",
+                  "correct": false
+                },
+                {
+                  "text": "shows we took the contest seriously",
+                  "correct": true
+                },
+                {
+                  "text": "helps us blame the referee",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) shows we took the contest seriously — paragraph 3: those feelings 'show that we took the contest seriously'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why can a defeat teach more than a victory?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Losers practise less",
+                  "correct": false
+                },
+                {
+                  "text": "Winners are always lucky",
+                  "correct": false
+                },
+                {
+                  "text": "Referees favour winners",
+                  "correct": false
+                },
+                {
+                  "text": "It shows exactly where our weaknesses lie",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) It shows exactly where our weaknesses lie — paragraph 4 says so directly, with the badminton and cricket examples."
+            },
+            {
+              "type": "mcq",
+              "prompt": "A coach who sulks after a loss teaches children that defeat is",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "a disgrace to be explained away",
+                  "correct": true
+                },
+                {
+                  "text": "part of the journey",
+                  "correct": false
+                },
+                {
+                  "text": "a chance to improve",
+                  "correct": false
+                },
+                {
+                  "text": "unimportant",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) a disgrace to be explained away — paragraph 5 uses these words for the parent who shouts and the coach who sulks."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 6 that means 'not caring either way'.",
+              "marks": 1,
+              "answer": "indifferent"
+            },
+            {
+              "type": "vsa",
+              "prompt": "Name one thing a school might reward besides results, according to paragraph 6.",
+              "marks": 1,
+              "answer": "Team spirit (a certificate for the best team spirit) or losing gracefully / effort and fair play."
+            },
+            {
+              "type": "sa",
+              "prompt": "What, according to the writer, does a good loser do after a defeat? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "A good loser shakes hands with the winner and does not blame the referee or the weather (1 mark), and later honestly asks what he or she could have done better (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does the writer mean by 'the real test of a sportsperson'? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "A sportsperson is truly judged not by how they celebrate wins (1 mark) but by how they behave when things go wrong, which will certainly happen (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-d5",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "Sitting With Our Grandparents",
+          "outcome": "E9GW-08-3",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "In many Indian homes, grandparents live just one room away, and yet their grandchildren can go a whole week without a real conversation with them. The young are busy with school, tuition and screens; the old sit by the window or in front of the television. The distance between them is not measured in metres but in attention, and it is a distance worth closing.\n\nGrandparents are, first of all, living history books. A grandfather may remember the day electricity first reached his village, or the excitement of a family's first radio. A grandmother may describe a childhood without refrigerators, when food had to be bought fresh each day and nothing was wasted. These are not dull anecdotes. They show how quickly the world has changed, and they make the facts in a history textbook feel real.\n\nThey also have a different kind of wisdom. Having lived through illness, loss, poor harvests and good years, many elders take small setbacks calmly. A teenager who is devastated by one bad mark may be surprised to hear how often a grandparent failed, struggled and started again. Such stories do not lecture; they simply show that life is long and that difficulties pass.\n\nThe benefit is not one-sided. Many older people feel lonely even in a crowded house, because they sense that nobody really needs them any more. When a grandchild asks for a story, a recipe or advice, the elder feels valued again. Doctors often observe that older people who stay connected to family and friends remain healthier and more alert.\n\nGrandchildren, in turn, can offer something useful. They can teach a grandparent to make a video call to a relative far away, to read the news on a phone, or to pay a bill online. Such small lessons can make an elder more independent and less anxious about a world that seems to change every day.\n\nClosing the gap does not need grand plans. Ten minutes of tea together after school, a walk in the evening, or a question about an old photograph is enough to begin. The important thing is to listen patiently, even when a story is being told for the third time. Put the phone away while you do so; half-listening is easily noticed.\n\nOne day, these voices will fall silent, and the questions we never asked will stay unanswered for ever. It is far better to sit down and ask them now.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The 'distance' in paragraph 1 is mainly a lack of",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "space",
+                  "correct": false
+                },
+                {
+                  "text": "attention",
+                  "correct": true
+                },
+                {
+                  "text": "money",
+                  "correct": false
+                },
+                {
+                  "text": "furniture",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) attention — 'not measured in metres but in attention'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The word 'anecdotes' (paragraph 2) most nearly means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "long lectures",
+                  "correct": false
+                },
+                {
+                  "text": "old photographs",
+                  "correct": false
+                },
+                {
+                  "text": "short personal stories",
+                  "correct": true
+                },
+                {
+                  "text": "history textbooks",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) short personal stories — the examples are brief personal memories — electricity reaching a village, a first radio."
+            },
+            {
+              "type": "mcq",
+              "prompt": "In paragraph 3, 'devastated' suggests the teenager is",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "slightly annoyed",
+                  "correct": false
+                },
+                {
+                  "text": "quietly pleased",
+                  "correct": false
+                },
+                {
+                  "text": "curious",
+                  "correct": false
+                },
+                {
+                  "text": "extremely upset",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) extremely upset — one bad mark causes the teenager great distress, set against elders who take setbacks calmly."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why do many older people feel lonely 'even in a crowded house'?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "They feel nobody needs them",
+                  "correct": true
+                },
+                {
+                  "text": "Their rooms are too small",
+                  "correct": false
+                },
+                {
+                  "text": "They dislike television",
+                  "correct": false
+                },
+                {
+                  "text": "They live far away",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) They feel nobody needs them — paragraph 4: 'they sense that nobody really needs them any more'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 4 that means 'mentally quick and aware'.",
+              "marks": 1,
+              "answer": "alert"
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which phrase in paragraph 2 describes grandparents as a source of the past?",
+              "marks": 1,
+              "answer": "living history books"
+            },
+            {
+              "type": "sa",
+              "prompt": "How can grandchildren help their grandparents, according to paragraph 5? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "They can teach them to make video calls, read news on a phone or pay bills online (1 mark), which makes the elders more independent and less anxious about a fast-changing world (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does the writer urge readers to ask their questions 'now'? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Grandparents will not be with us for ever (1 mark); once their voices fall silent, the questions we never asked can never be answered (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-d6",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "Why Learn Another Indian Language",
+          "outcome": "E9GW-08-1",
+          "difficulty": "HARD",
+          "marks": 10,
+          "passage": "Most Indian students already speak two languages, and many speak three. Even so, few of us make the effort to learn a language from another part of the country. A student in Lucknow rarely picks up Tamil, and a student in Chennai rarely learns Bengali. We treat such a choice as an unusual hobby. It deserves to be seen as something far more valuable.\n\nThe first argument is simply practical. Indians travel and move for work more than ever before. A family from Bihar may settle in Bengaluru; a young engineer from Kerala may take a job in Pune. Someone who can greet a neighbour, bargain at a market or read a bus board in the local language settles in faster and is treated less like an outsider. Even a few hundred words change the way people respond to you.\n\nThe second argument is about understanding. A language is not merely a set of labels for things; it carries a people's jokes, songs, proverbs and ways of seeing the world. Reading even a short poem in its original language reveals shades of meaning that no translation can fully capture. To learn another Indian language is to be admitted, in a small way, into another region's inner life.\n\nThere is also evidence that learning languages is good for the brain. Switching between languages seems to train attention and memory, and people who speak several languages are often better at noticing patterns. Indian children, who grow up moving between a home language, a regional language and English, already have a head start. It would be a pity to stop at the point where learning becomes easiest.\n\nCritics say that students already carry too heavy a load, and that English is enough for a career. The first point is fair; nobody should be forced to cram vocabulary for marks. But a language learnt through songs, films, friendships and short daily practice is not a burden. The second point misses the purpose. The aim is not a better salary but a better understanding of the country we live in.\n\nA start can be modest. Pen-friends from a partner school, a weekly language club, or simply asking a classmate to teach you ten words of their mother tongue are all good beginnings. Over a few years, such small efforts could produce a generation that feels at home not in one corner of India but across all of it.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Why does a student who knows the local language 'settle in faster'?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "People treat them less like outsiders",
+                  "correct": true
+                },
+                {
+                  "text": "They earn a higher salary",
+                  "correct": false
+                },
+                {
+                  "text": "They avoid learning English",
+                  "correct": false
+                },
+                {
+                  "text": "They can travel for free",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) People treat them less like outsiders — paragraph 2: they are 'treated less like an outsider'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What does the writer mean by a language's 'inner life' of a region?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Its government rules",
+                  "correct": false
+                },
+                {
+                  "text": "Its geography",
+                  "correct": false
+                },
+                {
+                  "text": "Its humour, songs and outlook",
+                  "correct": true
+                },
+                {
+                  "text": "Its population figures",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) Its humour, songs and outlook — paragraph 3 lists jokes, songs, proverbs and ways of seeing the world."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why do Indian children have 'a head start'?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "They study more hours",
+                  "correct": false
+                },
+                {
+                  "text": "They travel abroad often",
+                  "correct": false
+                },
+                {
+                  "text": "They start school earlier",
+                  "correct": false
+                },
+                {
+                  "text": "They already switch between languages",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) They already switch between languages — paragraph 4: they grow up moving between a home language, a regional language and English."
+            },
+            {
+              "type": "mcq",
+              "prompt": "How does the writer respond to the critics' first point?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "He accepts it but says learning need not be a burden",
+                  "correct": true
+                },
+                {
+                  "text": "He rejects it completely",
+                  "correct": false
+                },
+                {
+                  "text": "He ignores it",
+                  "correct": false
+                },
+                {
+                  "text": "He agrees that English is enough",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) He accepts it but says learning need not be a burden — 'The first point is fair' — but learning through songs, films and friendships 'is not a burden'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The writer's main purpose is to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "compare Indian languages",
+                  "correct": false
+                },
+                {
+                  "text": "encourage learning another Indian language",
+                  "correct": true
+                },
+                {
+                  "text": "criticise the use of English",
+                  "correct": false
+                },
+                {
+                  "text": "describe life in Bengaluru",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) encourage learning another Indian language — the passage argues this throughout and ends with ways to begin."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 6 that means 'small and simple'.",
+              "marks": 1,
+              "answer": "modest"
+            },
+            {
+              "type": "sa",
+              "prompt": "Why, according to the writer, is English 'enough for a career' the wrong reply? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "The argument misses the purpose (1 mark): learning another Indian language is meant to help us understand the country we live in, not to earn a better salary (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What might happen if students made the small efforts suggested in paragraph 6? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Over some years (1 mark) we could have a generation that feels at home across the whole of India rather than in only one corner of it (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-d7",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "Mend It, Don't End It",
+          "outcome": "E9GW-08-3",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "When a school bag's zip breaks, or a pair of headphones stops working in one ear, what do most of us do? Very often we throw the thing away and buy another. Our parents and grandparents would have been puzzled by this. For them, repairing things was an ordinary part of life, and there are good reasons to revive the habit.\n\nThe first reason is the obvious one: waste. Every discarded object has to go somewhere, and much of it ends up in overflowing landfills. Electronic goods are particularly harmful, because they contain metals and chemicals that can seep into soil and water. A phone repaired and used for two more years is one less phone in a heap of rubbish.\n\nRepair also saves money, though this is sometimes hidden. A new zip costs a fraction of a new bag. A loose sole can be stitched back by the cobbler at the corner for less than the price of a snack. Families that mend things are not being miserly; they are being sensible, and the money saved can go towards something that really matters to them.\n\nPerhaps the most interesting benefit, however, is what repair does to the person who attempts it. To fix something, you must first understand how it works. You open it up, look carefully and ask questions. Why does this button no longer click? Where has this wire come loose? This kind of curiosity is exactly what science lessons try to encourage, and a broken torch can be as instructive as a textbook.\n\nRepair builds confidence as well. Many young people feel helpless in front of machines, as if they were sealed boxes to be used but never understood. The first time you sew on a button, change a bicycle tube or reattach a loose handle, that feeling begins to fade. You realise that objects are made by people, and that people can also mend them.\n\nOf course, not everything can or should be repaired at home. Some devices are dangerous to open, and some jobs need an expert. But between the throwaway habit and the expert's workshop lies a wide middle ground of small, safe repairs that anyone can learn.\n\nSome cities now hold 'repair cafés', where volunteers help people fix their belongings free of charge. Schools could run something similar once a term. The motto is simple and worth remembering: mend it, don't end it.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Why would our grandparents have been 'puzzled'?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "They could not afford new things",
+                  "correct": false
+                },
+                {
+                  "text": "Repairing was an ordinary habit for them",
+                  "correct": true
+                },
+                {
+                  "text": "They disliked headphones",
+                  "correct": false
+                },
+                {
+                  "text": "They never used bags",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) Repairing was an ordinary habit for them — paragraph 1: 'For them, repairing things was an ordinary part of life.'"
+            },
+            {
+              "type": "mcq",
+              "prompt": "The word 'seep' (paragraph 2) means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "burn quickly",
+                  "correct": false
+                },
+                {
+                  "text": "break apart",
+                  "correct": false
+                },
+                {
+                  "text": "leak slowly",
+                  "correct": true
+                },
+                {
+                  "text": "rise up",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) leak slowly — harmful chemicals slowly find their way into soil and water."
+            },
+            {
+              "type": "mcq",
+              "prompt": "In paragraph 3, 'miserly' describes someone who",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "spends wisely",
+                  "correct": false
+                },
+                {
+                  "text": "shops often",
+                  "correct": false
+                },
+                {
+                  "text": "earns a lot",
+                  "correct": false
+                },
+                {
+                  "text": "hates spending money",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) hates spending money — the writer contrasts it with 'sensible' — families that mend are not simply stingy."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'A broken torch can be as instructive as a textbook' means it can",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "teach us something",
+                  "correct": true
+                },
+                {
+                  "text": "be read like a book",
+                  "correct": false
+                },
+                {
+                  "text": "light up a classroom",
+                  "correct": false
+                },
+                {
+                  "text": "be sold for money",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) teach us something — opening it up to see how it works encourages the curiosity science lessons aim for."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 2 that means 'thrown away'.",
+              "marks": 1,
+              "answer": "discarded"
+            },
+            {
+              "type": "vsa",
+              "prompt": "What, according to paragraph 7, are 'repair cafés'?",
+              "marks": 1,
+              "answer": "Places where volunteers help people fix their belongings free of charge."
+            },
+            {
+              "type": "sa",
+              "prompt": "How does repairing things build a young person's confidence? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Many young people feel helpless before machines, treating them as sealed boxes (1 mark); after a first small repair they realise objects are made by people and can be mended by people, so the helplessness fades (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What is the 'wide middle ground' the writer mentions in paragraph 6? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "It lies between throwing things away and sending them to an expert (1 mark): the many small, safe repairs that anyone can learn to do at home (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-d8",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "Look Up at Night",
+          "outcome": "E9GW-08-1",
+          "difficulty": "EASY",
+          "marks": 10,
+          "passage": "Most of us spend our days looking down — at books, at phones, at the road ahead. Rarely do we tilt our heads back and look at the night sky. Yet the sky above us is the oldest and the largest show on earth, and it is free for anyone who takes the trouble to look.\n\nPeople have always looked up. Farmers once used the rising of certain stars to decide when to sow their crops. Sailors crossing the ocean found their way by the stars long before there were compasses or satellites. Ancient Indian astronomers studied the movements of the moon and planets with such care that their calendars are still used to fix festival dates today. The great stone observatories built in Jaipur and Delhi show how seriously the sky was once studied.\n\nFor students, star-gazing is also an easy door into science. Once you notice that the moon rises at a different time each night, you want to know why. Once you spot a bright 'star' that does not twinkle, you discover that you are looking at a planet. A single clear evening can raise more questions than a week of reading, and those questions stay with you because you asked them yourself.\n\nThe sky also offers a lesson in scale. The light from some of the stars we see left them hundreds of years ago, and the earth is a small planet circling an ordinary star. Thinking about this can be calming. The worry about tomorrow's test does not disappear, but it takes its proper place in a very large universe.\n\nUnfortunately, the night sky is disappearing for many of us. Bright street lights, lit hoardings and glowing buildings throw so much light upwards that city dwellers may see only a handful of stars. This is called light pollution, and it affects not only star-gazers but also birds and insects that depend on darkness.\n\nStill, a great deal can be seen with patience. Switch off the lights on your terrace, wait fifteen minutes for your eyes to adjust, and the sky will slowly fill. A simple star chart or a free app will help you name what you see. If possible, spend a night in a village or on a hillside, where the Milky Way still stretches across the sky like a pale river.\n\nLooking up costs nothing and needs no special equipment. All it needs is a clear night and a little curiosity. Try it tonight.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "How did farmers once use the stars?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "To decide when to sow crops",
+                  "correct": true
+                },
+                {
+                  "text": "To find their way at sea",
+                  "correct": false
+                },
+                {
+                  "text": "To fix festival dates",
+                  "correct": false
+                },
+                {
+                  "text": "To count the years",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) To decide when to sow crops — paragraph 2: 'the rising of certain stars' told them when to sow."
+            },
+            {
+              "type": "mcq",
+              "prompt": "A bright 'star' that does not twinkle is probably",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the moon",
+                  "correct": false
+                },
+                {
+                  "text": "a satellite",
+                  "correct": false
+                },
+                {
+                  "text": "a planet",
+                  "correct": true
+                },
+                {
+                  "text": "a street light",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) a planet — paragraph 3: you discover 'you are looking at a planet'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why can thinking about the size of the universe be 'calming'?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "It makes tests easier",
+                  "correct": false
+                },
+                {
+                  "text": "It stops us worrying at all",
+                  "correct": false
+                },
+                {
+                  "text": "It removes all our problems",
+                  "correct": false
+                },
+                {
+                  "text": "It puts our worries in proportion",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) It puts our worries in proportion — paragraph 4: the worry 'takes its proper place in a very large universe'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Light pollution harms",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "star-gazers, birds and insects",
+                  "correct": true
+                },
+                {
+                  "text": "only astronomers",
+                  "correct": false
+                },
+                {
+                  "text": "only city buildings",
+                  "correct": false
+                },
+                {
+                  "text": "farmers' crops",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) star-gazers, birds and insects — paragraph 5 names star-gazers, birds and insects that depend on darkness."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The tone of the last paragraph is",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "sad",
+                  "correct": false
+                },
+                {
+                  "text": "encouraging",
+                  "correct": true
+                },
+                {
+                  "text": "angry",
+                  "correct": false
+                },
+                {
+                  "text": "doubtful",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) encouraging — it urges the reader warmly and simply: 'Try it tonight.'"
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 5 that means 'people who live in a particular place'.",
+              "marks": 1,
+              "answer": "dwellers"
+            },
+            {
+              "type": "sa",
+              "prompt": "Why do questions raised by star-gazing 'stay with you'? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Star-gazing makes you notice things, such as the moon rising at different times, and wonder why (1 mark); because you asked these questions yourself, they stay with you longer than facts you only read (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What advice does the writer give to someone living in a city who wants to see stars? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Switch off terrace lights and wait about fifteen minutes for the eyes to adjust (1 mark), use a star chart or app to name things, and if possible visit a village or hillside (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-f1",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "How We Reach School",
+          "outcome": "E9GW-08-2",
+          "difficulty": "EASY",
+          "marks": 10,
+          "passage": "The eco-club of a city school asked all 400 students of Class 9 one question: how do you usually reach school? The answers, collected over a week, were as follows.\n\nSchool bus: 120 students (30%)\nWalking: 104 students (26%)\nBicycle: 72 students (18%)\nPrivate car: 56 students (14%)\nAuto-rickshaw or van: 32 students (8%)\nPublic bus: 16 students (4%)\n\nThe club noticed that 176 students, or 44%, came to school under their own power, on foot or by bicycle. The number of cyclists had risen sharply: a similar survey two years earlier had counted only 40. Club members linked this rise to a new cycle stand near the gate and a painted cycle lane on the main road outside.\n\nAt the other end, 56 students arrived by car, often one child to a vehicle. During the morning rush these cars caused long queues at the gate. The club has suggested a 'walking bus', in which a parent volunteer leads a group of children who live along the same route, so that some families might leave the car at home.\n\nThe findings will be put up on the school notice board, and the survey will be repeated next year to see whether the suggestions have made a difference.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Which is the most common way of reaching school?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Walking",
+                  "correct": false
+                },
+                {
+                  "text": "Private car",
+                  "correct": false
+                },
+                {
+                  "text": "Bicycle",
+                  "correct": false
+                },
+                {
+                  "text": "School bus",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) School bus — 120 students (30%), more than any other mode."
+            },
+            {
+              "type": "mcq",
+              "prompt": "By how many has the number of cyclists grown in two years?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "40",
+                  "correct": false
+                },
+                {
+                  "text": "72",
+                  "correct": false
+                },
+                {
+                  "text": "32",
+                  "correct": true
+                },
+                {
+                  "text": "18",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) 32 — 72 now against 40 before: 72 − 40 = 32."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which two groups together equal the share using the school bus?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Car and auto-rickshaw",
+                  "correct": false
+                },
+                {
+                  "text": "Bicycle and car",
+                  "correct": false
+                },
+                {
+                  "text": "Bicycle and auto-rickshaw",
+                  "correct": false
+                },
+                {
+                  "text": "Walking and public bus",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) Walking and public bus — walking 26% + public bus 4% = 30%, the same as the school bus."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The rise in cycling is linked to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "a cycle stand and a cycle lane",
+                  "correct": true
+                },
+                {
+                  "text": "cheaper bicycles",
+                  "correct": false
+                },
+                {
+                  "text": "fewer school buses",
+                  "correct": false
+                },
+                {
+                  "text": "a walking bus",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) a cycle stand and a cycle lane — paragraph 3 names the new cycle stand and the painted cycle lane."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The main aim of the 'walking bus' is to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "replace the school bus",
+                  "correct": false
+                },
+                {
+                  "text": "reduce the number of car trips",
+                  "correct": true
+                },
+                {
+                  "text": "train parent volunteers",
+                  "correct": false
+                },
+                {
+                  "text": "count students more easily",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) reduce the number of car trips — it is suggested so that 'some families might leave the car at home'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What percentage of students come by some motor vehicle (bus, car, auto or van)?",
+              "marks": 1,
+              "answer": "56% (30 + 14 + 8 + 4)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does the club see the car figure as a problem? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "56 students come by car, often one child to a vehicle (1 mark), and during the morning rush these cars cause long queues at the school gate (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why will the survey be repeated next year? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "To find out whether the club's suggestions, such as the walking bus (1 mark), have actually changed how students travel — a second set of figures can be compared with this one (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-f2",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "What Class 9 Borrowed",
+          "outcome": "E9GW-08-2",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "A school librarian kept a record of every book borrowed by Class 9 during the first term. In all, 600 books were issued, against 480 in the same term last year — a rise of one quarter. By type, the books borrowed were:\n\nAdventure: 150 (25%)\nMystery and detective: 132 (22%)\nComics and graphic novels: 108 (18%)\nScience and nature: 90 (15%)\nBiography: 72 (12%)\nPoetry: 48 (8%)\n\nAdventure and mystery together made up nearly half of all borrowing. The librarian was not surprised: these are the books students recommend to one another most often. More pleasing to her was the poetry figure. Only 24 poetry books had been borrowed in the same term last year; this year the number doubled after a poetry week in which students read their favourite poems aloud in the assembly.\n\nScience and nature books did less well than she had hoped, even though the library had bought 40 new titles on the subject. She believes that many students have not yet noticed them, because they sit on a lower shelf at the back of the room.\n\nNext term the librarian plans to move the science shelf near the entrance and to invite a few students to review their favourite science books in the school magazine.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "How many books did Class 9 borrow last year in the same term?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "600",
+                  "correct": false
+                },
+                {
+                  "text": "480",
+                  "correct": true
+                },
+                {
+                  "text": "120",
+                  "correct": false
+                },
+                {
+                  "text": "450",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) 480 — the passage gives 480; this year's 600 is a rise of 120."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which type of book was borrowed exactly 90 times?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Biography",
+                  "correct": false
+                },
+                {
+                  "text": "Comics",
+                  "correct": false
+                },
+                {
+                  "text": "Science and nature",
+                  "correct": true
+                },
+                {
+                  "text": "Poetry",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) Science and nature — the list gives science and nature 90 (15%)."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What share of borrowing did adventure and mystery make together?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "40%",
+                  "correct": false
+                },
+                {
+                  "text": "50%",
+                  "correct": false
+                },
+                {
+                  "text": "43%",
+                  "correct": false
+                },
+                {
+                  "text": "47%",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) 47% — 25% + 22% = 47%, which the passage calls 'nearly half'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What caused the rise in poetry borrowing?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "A poetry week in the assembly",
+                  "correct": true
+                },
+                {
+                  "text": "New poetry books",
+                  "correct": false
+                },
+                {
+                  "text": "A school magazine review",
+                  "correct": false
+                },
+                {
+                  "text": "A lower shelf",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) A poetry week in the assembly — the number doubled 'after a poetry week' of poems read aloud."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why does the librarian think science books did poorly?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Students dislike science",
+                  "correct": false
+                },
+                {
+                  "text": "They are placed where few notice them",
+                  "correct": true
+                },
+                {
+                  "text": "The books were too old",
+                  "correct": false
+                },
+                {
+                  "text": "There were too few titles",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) They are placed where few notice them — they sit 'on a lower shelf at the back of the room'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How many more comics than biographies were borrowed?",
+              "marks": 1,
+              "answer": "36 (108 − 72)."
+            },
+            {
+              "type": "sa",
+              "prompt": "How does the poetry figure support the librarian's plan for science books? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Poetry borrowing doubled, from 24 to 48, once poetry was brought to students' attention (1 mark); this suggests that making science books more visible, near the entrance and in the magazine, could raise their borrowing too (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why was the librarian not surprised by the adventure and mystery figures? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Together they made up nearly half the borrowing, 47% (1 mark), and these are the books students most often recommend to one another (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-f3",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "Every Drop on the Roof",
+          "outcome": "E9GW-08-2",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "Two years ago, a school in a dry district fitted pipes to carry rainwater from its roofs into an underground tank. Last year a second tank was added. The science club measured how much water was collected in each month of this year's monsoon:\n\nJune: 42,000 litres\nJuly: 96,000 litres\nAugust: 88,000 litres\nSeptember: 34,000 litres\n\nIn all, 260,000 litres were collected, compared with 215,000 litres last year when only one tank was in use — an increase of 45,000 litres. July and August together provided 184,000 litres, a little over 70% of the season's total. June's rains arrived late, and in September the showers were short and scattered.\n\nThe school uses about 13,000 litres a week for its garden and toilets. The water stored this monsoon is therefore enough for about 20 weeks, which means the school will not need to buy water from tankers until well after the winter holidays. Last year the tanker lorries were back in early December.\n\nThe club has one worry. Leaves and dust from the roof block the filter, and on two occasions in July water overflowed and was lost. Students have now drawn up a rota to clean the filter after every heavy shower, and they hope next year's total will be higher still.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "In which month was the most water collected?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "June",
+                  "correct": false
+                },
+                {
+                  "text": "September",
+                  "correct": false
+                },
+                {
+                  "text": "August",
+                  "correct": false
+                },
+                {
+                  "text": "July",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) July — July: 96,000 litres, the highest figure."
+            },
+            {
+              "type": "mcq",
+              "prompt": "How much more water was collected this year than last year?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "215,000 litres",
+                  "correct": false
+                },
+                {
+                  "text": "13,000 litres",
+                  "correct": false
+                },
+                {
+                  "text": "45,000 litres",
+                  "correct": true
+                },
+                {
+                  "text": "62,000 litres",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) 45,000 litres — 260,000 − 215,000 = 45,000 litres."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why were the June and September figures low?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "The filter was blocked",
+                  "correct": false
+                },
+                {
+                  "text": "The tank was full",
+                  "correct": false
+                },
+                {
+                  "text": "Water was sold",
+                  "correct": false
+                },
+                {
+                  "text": "The rains were late or scattered",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) The rains were late or scattered — June's rains arrived late; September's showers were short and scattered."
+            },
+            {
+              "type": "mcq",
+              "prompt": "About how long will this monsoon's water last the school?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "20 weeks",
+                  "correct": true
+                },
+                {
+                  "text": "13 weeks",
+                  "correct": false
+                },
+                {
+                  "text": "26 weeks",
+                  "correct": false
+                },
+                {
+                  "text": "10 weeks",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) 20 weeks — 260,000 ÷ 13,000 = 20 weeks."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The increase this year is mainly due to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "a hotter summer",
+                  "correct": false
+                },
+                {
+                  "text": "the second tank",
+                  "correct": true
+                },
+                {
+                  "text": "less use of water",
+                  "correct": false
+                },
+                {
+                  "text": "tanker lorries",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) the second tank — last year 'only one tank was in use'; a second was added."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How much water did July and August provide together?",
+              "marks": 1,
+              "answer": "184,000 litres (96,000 + 88,000), a little over 70% of the total."
+            },
+            {
+              "type": "sa",
+              "prompt": "What problem did the club find, and how are students dealing with it? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Leaves and dust block the filter, so water overflowed and was lost twice in July (1 mark); students have made a rota to clean the filter after every heavy shower (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What is the practical benefit of this year's collection for the school? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "The stored water covers about 20 weeks of garden and toilet use (1 mark), so the school need not buy tanker water until after the winter holidays, whereas last year tankers returned in early December (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-f4",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "The Fruit First Week",
+          "outcome": "E9GW-08-2",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "A school canteen noticed that most of what it sold was fried. With the help of Class 9, it ran a 'Fruit First' campaign: fruit cups were placed at the front of the counter, their price was cut by five rupees, and students made posters about healthy snacks. The canteen counted its sales in one week before the campaign and in one week a month after it began.\n\nSamosas: 420 before, 300 after\nPacket chips: 310 before, 220 after\nFruit cups: 90 before, 250 after\nSprouts chaat: 60 before, 110 after\n\nThe total number of items sold stayed exactly the same, at 880 a week. What changed was the mix. Sales of the two fried items fell from 730 to 520, while sales of the two healthy items rose from 150 to 360. Fruit cups showed the biggest change of all, rising by 160.\n\nThe canteen manager admits he was nervous at first, since fruit spoils quickly and he feared he would have to throw much of it away. In practice, very little was wasted because he now orders fresh fruit every morning in smaller amounts.\n\nFried snacks remain the most popular items — samosas are still the single best-seller. But the campaign shows that where a healthy choice is placed, and what it costs, can change what students buy.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Which item is still the single best-seller after the campaign?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Fruit cups",
+                  "correct": false
+                },
+                {
+                  "text": "Samosas",
+                  "correct": true
+                },
+                {
+                  "text": "Packet chips",
+                  "correct": false
+                },
+                {
+                  "text": "Sprouts chaat",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) Samosas — samosas sold 300, more than any other item."
+            },
+            {
+              "type": "mcq",
+              "prompt": "By how many did sales of fried items fall?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "120",
+                  "correct": false
+                },
+                {
+                  "text": "160",
+                  "correct": false
+                },
+                {
+                  "text": "210",
+                  "correct": true
+                },
+                {
+                  "text": "90",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) 210 — 730 − 520 = 210."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which was NOT part of the campaign?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Fruit at the front of the counter",
+                  "correct": false
+                },
+                {
+                  "text": "A lower fruit price",
+                  "correct": false
+                },
+                {
+                  "text": "Student posters",
+                  "correct": false
+                },
+                {
+                  "text": "Banning fried snacks",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) Banning fried snacks — fried snacks were still sold; the other three are named in paragraph 1."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why did the total of 880 items stay the same?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Students switched from fried to healthy snacks",
+                  "correct": true
+                },
+                {
+                  "text": "Fewer students ate",
+                  "correct": false
+                },
+                {
+                  "text": "Prices rose",
+                  "correct": false
+                },
+                {
+                  "text": "The canteen closed early",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) Students switched from fried to healthy snacks — fried sales fell by 210 and healthy sales rose by 210, so the total was unchanged."
+            },
+            {
+              "type": "mcq",
+              "prompt": "How did the manager avoid wasting fruit?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "He sold it cheaply",
+                  "correct": false
+                },
+                {
+                  "text": "He ordered smaller amounts each morning",
+                  "correct": true
+                },
+                {
+                  "text": "He made juice",
+                  "correct": false
+                },
+                {
+                  "text": "He stopped selling it",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) He ordered smaller amounts each morning — paragraph 4: he orders fresh fruit every morning in smaller amounts."
+            },
+            {
+              "type": "vsa",
+              "prompt": "By how much did samosa sales fall?",
+              "marks": 1,
+              "answer": "120 (420 − 300)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does the campaign show about students' choices of snack? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Placing healthy food prominently and making it cheaper (1 mark) changed what students bought: healthy sales rose from 150 to 360 while the total stayed at 880 (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why was the manager nervous at first, and was his fear justified? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "He feared fruit would spoil and have to be thrown away (1 mark); it was not justified, as very little was wasted once he ordered smaller amounts each morning (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-f5",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "Five Evening Hours",
+          "outcome": "E9GW-08-2",
+          "difficulty": "HARD",
+          "marks": 10,
+          "passage": "How do teenagers spend the hours between school and sleep? A group of Class 9 students asked 50 classmates to keep a diary of their evenings from 5 pm to 10 pm on five school days. That is 300 minutes each evening. The average time spent on each activity was:\n\nHomework and study: 95 minutes\nPhone, television and games: 80 minutes\nMeals and household chores: 55 minutes\nOutdoor play or sport: 30 minutes\nTuition or coaching classes: 25 minutes\nReading for pleasure: 15 minutes\n\nScreens took up almost as much time as homework: only 15 minutes separated the two. Adding tuition to homework, study-related work came to 120 minutes, or two hours. Outdoor play and reading together amounted to 45 minutes, a little over half the time spent on screens.\n\nThe diaries also showed something the averages hide. On evenings with a test the next day, screen time dropped sharply, but on Fridays it rose to well over two hours for many students. Several wrote that they used their phones 'just for a minute' and then lost track of time.\n\nThe group presented its findings in the assembly. It did not ask anyone to give up screens, but suggested that students keep a phone out of their room during homework and try one 'screen-free' evening each week.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "How many minutes a day did students spend on study-related work?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "95",
+                  "correct": false
+                },
+                {
+                  "text": "105",
+                  "correct": false
+                },
+                {
+                  "text": "80",
+                  "correct": false
+                },
+                {
+                  "text": "120",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) 120 — homework 95 + tuition 25 = 120 minutes."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which activity took the least time?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Outdoor play",
+                  "correct": false
+                },
+                {
+                  "text": "Tuition",
+                  "correct": false
+                },
+                {
+                  "text": "Reading for pleasure",
+                  "correct": true
+                },
+                {
+                  "text": "Chores",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) Reading for pleasure — reading for pleasure: 15 minutes, the smallest figure."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Outdoor play and reading together were about",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "twice screen time",
+                  "correct": false
+                },
+                {
+                  "text": "equal to screen time",
+                  "correct": false
+                },
+                {
+                  "text": "a third of screen time",
+                  "correct": false
+                },
+                {
+                  "text": "half of screen time",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) half of screen time — 30 + 15 = 45 minutes, a little over half of 80."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What do the averages 'hide', according to the diaries?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Screen time changed a lot from day to day",
+                  "correct": true
+                },
+                {
+                  "text": "Students never studied",
+                  "correct": false
+                },
+                {
+                  "text": "Tuition took three hours",
+                  "correct": false
+                },
+                {
+                  "text": "Chores were shared equally",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) Screen time changed a lot from day to day — screen time dropped before tests and rose above two hours on Fridays."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The group's suggestions in the assembly were",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "strict and severe",
+                  "correct": false
+                },
+                {
+                  "text": "practical and moderate",
+                  "correct": true
+                },
+                {
+                  "text": "angry",
+                  "correct": false
+                },
+                {
+                  "text": "unrelated to screens",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) practical and moderate — it did not ask anyone to give up screens, only to keep phones away during homework and try one screen-free evening."
+            },
+            {
+              "type": "vsa",
+              "prompt": "For how many minutes in all did each student keep the diary each evening?",
+              "marks": 1,
+              "answer": "300 minutes (5 pm to 10 pm)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does the phrase 'just for a minute' reveal about phone use? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Students meant to use the phone briefly (1 mark) but lost track of time, so screen time grew without their noticing (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Is the average screen time a fair picture of a Friday evening? Give a reason from the data. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "No (1 mark): the average is 80 minutes, but on Fridays many students spent well over two hours on screens (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-f6",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "What the River Gave Back",
+          "outcome": "E9GW-08-2",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "On a Sunday morning, 60 students of Class 9 spent three hours cleaning a 500-metre stretch of a riverbank near their town. Everything they picked up was sorted and weighed. The total came to 250 kilograms:\n\nPlastic bottles: 70 kg (28%)\nPlastic bags and wrappers: 55 kg (22%)\nGlass: 40 kg (16%)\nPaper and cardboard: 35 kg (14%)\nCloth: 20 kg (8%)\nMetal cans: 15 kg (6%)\nOther waste: 15 kg (6%)\n\nPlastic of one kind or another made up exactly half the load, 125 kilograms. The students found the thin bags and wrappers the hardest to collect, because they were tangled in roots and half buried in mud. Many were torn into small pieces that could not be picked up by hand at all.\n\nThe glass, paper and metal, 90 kilograms in all, were sold to a local recycler, and the money was used to buy gloves and sacks for the next drive. The rest, 35 kilograms of cloth and other waste, went to the municipal collection point.\n\nWhen the students returned two weeks later, fresh bottles and bags had already appeared on the bank. They have written to the town council asking for dustbins along the path and a sign asking visitors to take their rubbish home.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Which type of waste weighed the most?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Plastic bags and wrappers",
+                  "correct": false
+                },
+                {
+                  "text": "Plastic bottles",
+                  "correct": true
+                },
+                {
+                  "text": "Glass",
+                  "correct": false
+                },
+                {
+                  "text": "Paper and cardboard",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) Plastic bottles — plastic bottles: 70 kg (28%)."
+            },
+            {
+              "type": "mcq",
+              "prompt": "How much waste was sold to the recycler?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "125 kg",
+                  "correct": false
+                },
+                {
+                  "text": "35 kg",
+                  "correct": false
+                },
+                {
+                  "text": "90 kg",
+                  "correct": true
+                },
+                {
+                  "text": "70 kg",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) 90 kg — glass 40 + paper 35 + metal 15 = 90 kg."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why were bags and wrappers hardest to collect?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "They were too heavy",
+                  "correct": false
+                },
+                {
+                  "text": "They floated away",
+                  "correct": false
+                },
+                {
+                  "text": "They were very few",
+                  "correct": false
+                },
+                {
+                  "text": "They were tangled, buried or torn",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) They were tangled, buried or torn — tangled in roots, half buried in mud and torn into small pieces."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What did the students find two weeks later?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "New rubbish on the bank",
+                  "correct": true
+                },
+                {
+                  "text": "A clean bank",
+                  "correct": false
+                },
+                {
+                  "text": "New dustbins",
+                  "correct": false
+                },
+                {
+                  "text": "A council sign",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) New rubbish on the bank — 'fresh bottles and bags had already appeared'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Glass and paper together make up what share of the waste?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "28%",
+                  "correct": false
+                },
+                {
+                  "text": "30%",
+                  "correct": true
+                },
+                {
+                  "text": "36%",
+                  "correct": false
+                },
+                {
+                  "text": "22%",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) 30% — 16% + 14% = 30%."
+            },
+            {
+              "type": "vsa",
+              "prompt": "What was the money from the recycler used for?",
+              "marks": 1,
+              "answer": "To buy gloves and sacks for the next drive."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why have the students written to the town council? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Rubbish returned within two weeks, so cleaning alone is not enough (1 mark); they want dustbins along the path and a sign asking visitors to take their rubbish home (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does the plastic figure tell us about the problem on the riverbank? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Plastic was exactly half the waste, 125 of 250 kg (1 mark), so plastic is the biggest single problem, and much of it — torn wrappers — cannot even be collected by hand (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-f7",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "Numbers From Sports Day",
+          "outcome": "E9GW-08-2",
+          "difficulty": "HARD",
+          "marks": 10,
+          "passage": "At this year's inter-house athletics meet, the four houses of a school entered 240 students from Class 9 and 10 between them and won 66 medals. The figures for each house were:\n\nGanga: 64 students entered, 18 medals\nYamuna: 58 students entered, 21 medals\nKaveri: 72 students entered, 15 medals\nNarmada: 46 students entered, 12 medals\n\nKaveri sent the largest team by far, 26 more athletes than Narmada, and its captain had hoped that numbers alone would carry the house to the trophy. It did not work out that way. Yamuna, with the second-smallest team, won the most medals and lifted the trophy. Roughly one Yamuna athlete in three came home with a medal, while for Kaveri it was closer to one in five.\n\nThe Yamuna captain explained the difference simply. Instead of entering everyone in every event, the house held trials a month early and sent each student to the one or two events that suited them best. Those athletes then trained together every morning.\n\nThe Kaveri captain says she does not regret her approach. Many of her athletes were running in a competition for the first time, and several of them have now joined the school's athletics club. 'We lost the trophy,' she said, 'but we found some runners.'",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Which house won the trophy?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Kaveri",
+                  "correct": false
+                },
+                {
+                  "text": "Narmada",
+                  "correct": false
+                },
+                {
+                  "text": "Ganga",
+                  "correct": false
+                },
+                {
+                  "text": "Yamuna",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) Yamuna — Yamuna won the most medals, 21, and lifted the trophy."
+            },
+            {
+              "type": "mcq",
+              "prompt": "How many more athletes did Kaveri enter than Narmada?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "18",
+                  "correct": false
+                },
+                {
+                  "text": "14",
+                  "correct": false
+                },
+                {
+                  "text": "26",
+                  "correct": true
+                },
+                {
+                  "text": "8",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) 26 — 72 − 46 = 26."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which house had the smallest team?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Yamuna",
+                  "correct": false
+                },
+                {
+                  "text": "Kaveri",
+                  "correct": false
+                },
+                {
+                  "text": "Ganga",
+                  "correct": false
+                },
+                {
+                  "text": "Narmada",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) Narmada — Narmada entered 46, the fewest."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What mainly explains Yamuna's success?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Early trials and focused training",
+                  "correct": true
+                },
+                {
+                  "text": "The largest team",
+                  "correct": false
+                },
+                {
+                  "text": "Entering every event",
+                  "correct": false
+                },
+                {
+                  "text": "Older athletes",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) Early trials and focused training — trials a month early, one or two best events each, training every morning."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'We found some runners' suggests Kaveri gained",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "more medals",
+                  "correct": false
+                },
+                {
+                  "text": "new athletes for the future",
+                  "correct": true
+                },
+                {
+                  "text": "a new captain",
+                  "correct": false
+                },
+                {
+                  "text": "a second trophy",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) new athletes for the future — several first-timers have joined the athletics club."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How many medals did Ganga and Narmada win together?",
+              "marks": 1,
+              "answer": "30 (18 + 12)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Do the figures show that a larger team wins more medals? Give evidence. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "No (1 mark): Kaveri had the largest team, 72, but won only 15 medals, while Yamuna won 21 with 58 athletes (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "How are the two captains' aims different? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "The Yamuna captain aimed to win, choosing the best athletes for each event (1 mark); the Kaveri captain gave many students a first chance to compete, finding new runners for the club (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw9-08-f8",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "Saplings That Survived",
+          "outcome": "E9GW-08-2",
+          "difficulty": "EASY",
+          "marks": 10,
+          "passage": "For three monsoons in a row, Class 9 students of a school have planted saplings on the land around their campus. Each year, a year after planting, they counted how many were still alive:\n\n2023: 120 planted, 72 survived (60%)\n2024: 150 planted, 105 survived (70%)\n2025: 160 planted, 136 survived (85%)\n\nAltogether 430 saplings have been planted and 313 are alive today. The students are proudest not of the numbers planted but of the rising survival rate.\n\nIn the first year, many saplings were eaten by goats or dried out in the hot months after the rains, and 48 were lost. In 2024 the students fixed bamboo guards around every sapling and drew up a watering rota, so that each group of four students cared for a set of trees through the summer holidays. Losses fell to 45 even though more trees were planted. In 2025 they also spread dry leaves around the base of each sapling to keep the soil moist, and only 24 were lost.\n\nThe teacher in charge says the lesson is clear: planting a tree takes ten minutes, but keeping it alive takes a year of care. This monsoon the students plan to plant fewer saplings, only 100, so that each one can be looked after properly.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "How many saplings survived in 2024?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "150",
+                  "correct": false
+                },
+                {
+                  "text": "105",
+                  "correct": true
+                },
+                {
+                  "text": "72",
+                  "correct": false
+                },
+                {
+                  "text": "136",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) 105 — the table gives 2024: 105 survived (70%)."
+            },
+            {
+              "type": "mcq",
+              "prompt": "How many saplings died in 2025?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "48",
+                  "correct": false
+                },
+                {
+                  "text": "45",
+                  "correct": false
+                },
+                {
+                  "text": "24",
+                  "correct": true
+                },
+                {
+                  "text": "36",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) 24 — 160 − 136 = 24, as the passage states."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What were the students proudest of?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "The number planted",
+                  "correct": false
+                },
+                {
+                  "text": "The bamboo guards",
+                  "correct": false
+                },
+                {
+                  "text": "The dry leaves",
+                  "correct": false
+                },
+                {
+                  "text": "The rising survival rate",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) The rising survival rate — paragraph 3 says so directly."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What was new in 2025?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Dry leaves spread round each sapling",
+                  "correct": true
+                },
+                {
+                  "text": "Bamboo guards",
+                  "correct": false
+                },
+                {
+                  "text": "A watering rota",
+                  "correct": false
+                },
+                {
+                  "text": "More goats",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) Dry leaves spread round each sapling — the guards and rota began in 2024; dry leaves were added in 2025."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why will the students plant only 100 saplings this year?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "They have run out of land",
+                  "correct": false
+                },
+                {
+                  "text": "So each can be cared for properly",
+                  "correct": true
+                },
+                {
+                  "text": "Saplings cost too much",
+                  "correct": false
+                },
+                {
+                  "text": "Goats have gone",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) So each can be cared for properly — 'so that each one can be looked after properly'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How many saplings in all have been planted over the three years?",
+              "marks": 1,
+              "answer": "430 (120 + 150 + 160)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why did so many saplings die in the first year? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Many were eaten by goats (1 mark) and many dried out in the hot months after the rains, so 48 of 120 were lost (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Explain the teacher's lesson in your own words. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Putting a sapling in the ground is quick and easy (1 mark), but it survives only if it is protected and watered for a whole year afterwards (1 mark)."
+            }
+          ]
         }
       ]
     }

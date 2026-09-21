@@ -48,6 +48,17 @@ import { validateQuestion } from "../src/core/questions/validate";
 
 const QUESTIONS_DIR = "prisma/english-questions";
 const TEXT_DIR = ".english-text";
+/**
+ * `--only gw10:8,gw9:8` imports just those book chapters. A full run re-checks
+ * every question already imported — a round trip each to a remote database —
+ * so adding one chapter no longer costs the time of re-importing all of them.
+ */
+function onlyArg(): Set<string> | null {
+  const at = process.argv.indexOf("--only");
+  const value = at !== -1 ? process.argv[at + 1] : undefined;
+  return value ? new Set(value.split(",").map((part) => part.trim())) : null;
+}
+
 function organizationArg(): string | undefined {
   const at = process.argv.indexOf("--org");
   return at !== -1 ? process.argv[at + 1] : undefined;
@@ -82,10 +93,11 @@ type SourceQuestion =
   | { id: string; kind: "extract"; source: string; outcome: string; difficulty: Difficulty; marks: number; extract: string; parts: Part[] }
   | { id: string; kind: "short" | "long"; lifeSkill?: string; outcome: string; difficulty: Difficulty; marks: number; stem: string; valuePoints: string[]; rubric: Criterion[] }
   | { id: string; kind: "grammar"; task: string; outcome: string; difficulty: Difficulty; marks: number; stem: string; options: Choice[]; explanation: string }
-  | { id: string; kind: "writing"; form: string; outcome: string; difficulty: Difficulty; marks: number; stem: string; valuePoints: string[]; rubric: Criterion[] };
+  | { id: string; kind: "writing"; form: string; outcome: string; difficulty: Difficulty; marks: number; stem: string; valuePoints: string[]; rubric: Criterion[] }
+  | { id: string; kind: "reading"; passageType: "discursive" | "factual"; title: string; outcome: string; difficulty: Difficulty; marks: number; passage: string; parts: Part[] };
 type BookFile = { book: string; chapters: { number: number; questions: SourceQuestion[] }[] };
 
-const ROMAN = ["i", "ii", "iii", "iv", "v", "vi"];
+const ROMAN = ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"];
 const KEYS = ["A", "B", "C", "D"];
 
 const toOptions = (choices: Choice[]) =>
@@ -105,6 +117,54 @@ function build(question: SourceQuestion, base: Pick<QuestionInput, "subjectId" |
       label: question.id,
       input: { ...common, type: "MCQ", marks: 1, expectedTimeSeconds: SECONDS.mcq, stem: question.stem.trim(), options: toOptions(question.options), explanation: question.explanation.trim() },
     }];
+  }
+
+  if (question.kind === "reading") {
+    // An unseen passage: the whole of it as one 10-mark question, and each mcq
+    // part again on its own so a machine can mark it — the extract's shape.
+    const intro = "Read the passage below and answer the questions that follow.";
+    const passage = `${question.title.trim()}\n\n${question.passage.trim()}`;
+    const partText = question.parts.map((part, index) => {
+      const lines = [`(${ROMAN[index]}) ${part.prompt.trim()} (${part.marks} ${part.marks === 1 ? "mark" : "marks"})`];
+      if (part.type === "mcq" && part.options) {
+        part.options.forEach((option, optionIndex) => lines.push(`    (${"abcd"[optionIndex]}) ${option.text.trim()}`));
+      }
+      return lines.join("\n");
+    });
+    const caseStudy: QuestionInput = {
+      ...common,
+      type: "CASE_STUDY",
+      marks: 10,
+      expectedTimeSeconds: question.passageType === "discursive" ? 1200 : 900,
+      stem: `${intro}\n\n${passage}\n\n${partText.join("\n\n")}`,
+      rubric: {
+        criteria: question.parts.map((part, index) => ({
+          id: `p${index + 1}`,
+          label: `Part (${ROMAN[index]})`,
+          marks: part.marks,
+          descriptor: `${part.prompt.trim()} — ${part.answer.trim()}`,
+        })),
+      },
+      explanation: `Expected answers:\n${question.parts.map((part, index) => `(${ROMAN[index]}) ${part.answer.trim()}`).join("\n")}`,
+      answerKey: null,
+    };
+    const mcqs = question.parts.flatMap((part, index) =>
+      part.type === "mcq" && part.options
+        ? [{
+            label: `${question.id}-mcq${index + 1}`,
+            input: {
+              ...common,
+              type: "MCQ" as const,
+              marks: 1,
+              expectedTimeSeconds: SECONDS.mcq * 3,
+              stem: `${intro}\n\n${passage}\n\n${part.prompt.trim()}`,
+              options: toOptions(part.options),
+              explanation: part.answer.trim(),
+            },
+          }]
+        : [],
+    );
+    return [{ label: question.id, input: caseStudy }, ...mcqs];
   }
 
   if (question.kind === "extract") {
@@ -197,6 +257,7 @@ async function main() {
   const db = new PrismaClient({ datasources: { db: { url: process.env.DIRECT_URL } } });
   // Required, and a slug. A default found by name silently changed target when
   // the library organization was renamed away from "Sirah Digital".
+  const only = onlyArg();
   const slug = organizationArg();
   if (!slug) throw new Error("Pass --org <slug>, e.g. --org sirah-digital (the question library).");
   const organization = await db.organization.findUniqueOrThrow({
@@ -231,6 +292,7 @@ async function main() {
     if (!book) throw new Error(`${file}: unknown book ${data.book}`);
 
     for (const chapterSource of data.chapters) {
+      if (only && !only.has(`${data.book}:${chapterSource.number}`)) continue;
       const chapter = await db.chapter.findFirst({
         where: { number: chapterSource.number, subject: { code: book.code, grade: { number: book.grade, board: { code: "CBSE" } } } },
         select: { id: true, subjectId: true },

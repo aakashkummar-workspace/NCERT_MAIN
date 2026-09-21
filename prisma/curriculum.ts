@@ -85,6 +85,7 @@ export const CHAPTERS: Record<string, Record<string, ChapterSeed[]>> = {
       { number: 5, title: "Reported Speech" },
       { number: 6, title: "Formal Letter" },
       { number: 7, title: "Analytical Paragraph" },
+      { number: 8, title: "Reading Comprehension" },
     ],
     ENGFP: [
       { number: 1, title: "A Triumph of Surgery" },
@@ -225,6 +226,7 @@ export const CHAPTERS: Record<string, Record<string, ChapterSeed[]>> = {
       { number: 5, title: "Reported Speech" },
       { number: 6, title: "Descriptive Paragraph" },
       { number: 7, title: "Story and Diary Entry" },
+      { number: 8, title: "Reading Comprehension" },
     ],
     ENG: [
       { number: 1, title: "How I Taught My Grandmother to Read" },

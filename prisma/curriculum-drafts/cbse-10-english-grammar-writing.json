@@ -3,7 +3,7 @@
   "grade": 10,
   "subject": "English – Grammar and Writing",
   "status": "DRAFT — for review by an English teacher before it is relied on",
-  "source": "Drafted against the CBSE English Language and Literature (184) syllabus for 2025-26, Section B for Class X: the grammar items (determiners, tenses, modals, subject–verb concord, reported speech) assessed through gap filling, editing and transformation, and the formal letter and analytical paragraph writing tasks.",
+  "source": "Drafted against the CBSE English Language and Literature (184) syllabus for 2025-26, Section B for Class X: the grammar items (determiners, tenses, modals, subject–verb concord, reported speech) assessed through gap filling, editing and transformation, and the formal letter and analytical paragraph writing tasks, and Section A reading comprehension through unseen discursive and case-based factual passages.",
   "notes": [
     "Concept names carry the class, because the same grammar item is taught in both years and concept names must be unique across the curriculum."
   ],
@@ -275,6 +275,47 @@
           "outcomes": [
             "E10GW-07-1",
             "E10GW-07-2"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "topics": [
+        {
+          "title": "Reading unseen passages",
+          "outcomes": [
+            {
+              "code": "E10GW-08-1",
+              "statement": "Identifies the main idea, the supporting details and the writer’s purpose in an unseen discursive passage of 400–450 words.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            },
+            {
+              "code": "E10GW-08-2",
+              "statement": "Interprets the data in a table or chart within a factual passage and draws inferences the data supports.",
+              "bloom": "ANALYSE",
+              "competency": "ANALYSIS",
+              "marks": 2
+            },
+            {
+              "code": "E10GW-08-3",
+              "statement": "Explains the meaning of words and phrases in an unseen passage from the context in which they are used.",
+              "bloom": "UNDERSTAND",
+              "competency": "UNDERSTANDING",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "concepts": [
+        {
+          "name": "Reading comprehension (Class 10)",
+          "outcomes": [
+            "E10GW-08-1",
+            "E10GW-08-2",
+            "E10GW-08-3"
           ]
         }
       ]

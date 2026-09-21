@@ -58,6 +58,16 @@
  *                        diary-entry), `stem` carrying the full situation or
  *                        data, `valuePoints`, `rubric` summing to 5.
  *
+ * Reading comprehension (chapter 8 of gw10 and gw9): 16 `reading` questions —
+ * 8 `discursive` passages of 400–450 words and 8 `factual` case-based passages
+ * of 200–250 words carrying a table or chart in words, as CBSE Section A sets
+ * them.
+ *
+ *   kind "reading"     — 10 marks. `passageType` (discursive | factual),
+ *                        `title`, `passage`, `parts` (mcq 1 mark with four
+ *                        options, vsa 1 mark, sa 2 marks, each with `answer`)
+ *                        summing to 10, at least four mcq parts.
+ *
  * The marks are the CBSE English (184) paper design: extracts of 5 with MCQ,
  * one-sentence and 30–40 word parts; short answers of 3 in 40–50 words; long
  * answers of 6 in 100–120 words "beyond the text and across the text".
@@ -125,7 +135,11 @@ const FIRST_FLIGHT_POEMS = {
 const ONE_EXTRACT_POEMS = new Set(["Fog", "Dust of Snow"]);
 
 const COUNTS = { competency: 5, short: 6, long: 3 };
-const MARKS = { competency: 1, extract: 5, short: 3, long: 6, grammar: 1, writing: 5 };
+const MARKS = { competency: 1, extract: 5, short: 3, long: 6, grammar: 1, writing: 5, reading: 10 };
+/** CBSE's passage lengths, with a little room either side. */
+const PASSAGE_WORDS = { discursive: [380, 470], factual: [180, 270] };
+/** The app refuses a stem over 4,000 characters; the whole case question must fit. */
+const STEM_LIMIT = 3900;
 const MAX_GAP = 12;
 
 const errors = [];
@@ -372,8 +386,9 @@ function checkGrammarChapter(book, number, where, questions) {
   const draftChapter = draftFor(book).chapters.find((c) => c.number === number);
   const outcomes = new Set((draftChapter?.topics ?? []).flatMap((topic) => topic.outcomes.map((o) => o.code)));
   if (outcomes.size === 0) fail(where, "no outcomes in the curriculum draft for this chapter");
-  const kind = number <= 5 ? "grammar" : "writing";
-  const expected = kind === "grammar" ? 20 : 8;
+  const kind = number <= 5 ? "grammar" : number <= 7 ? "writing" : "reading";
+  const expected = kind === "grammar" ? 20 : kind === "writing" ? 8 : 16;
+  const passageTypes = { discursive: 0, factual: 0 };
   const correct = (positions[book] ??= [0, 0, 0, 0]);
   const tasks = {};
   let count = 0;
@@ -390,7 +405,13 @@ function checkGrammarChapter(book, number, where, questions) {
     if (question.marks !== MARKS[kind]) fail(at, `${kind} is worth ${MARKS[kind]} marks (got ${question.marks})`);
     if (!outcomes.has(question.outcome)) fail(at, `outcome "${question.outcome}" is not in this chapter`);
     if (!["EASY", "MEDIUM", "HARD"].includes(question.difficulty)) fail(at, "difficulty must be EASY, MEDIUM or HARD");
-    if (!(question.stem?.trim().length >= 10)) fail(at, "stem is missing or too short");
+    if (kind !== "reading" && !(question.stem?.trim().length >= 10)) fail(at, "stem is missing or too short");
+
+    if (kind === "reading") {
+      checkReading(at, question, correct);
+      if (question.passageType in passageTypes) passageTypes[question.passageType]++;
+      continue;
+    }
 
     if (kind === "grammar") {
       if (!GRAMMAR_TASKS.has(question.task)) fail(at, "task must be gap-filling, editing or transformation");
@@ -411,11 +432,51 @@ function checkGrammarChapter(book, number, where, questions) {
   }
 
   if (count !== expected) fail(where, `${count} ${kind} questions, the pattern is ${expected}`);
+  if (kind === "reading") {
+    for (const [type, n] of Object.entries(passageTypes)) {
+      if (n !== 8) fail(where, `${n} ${type} passages, the pattern is 8`);
+    }
+  }
   if (kind === "grammar") {
     for (const task of GRAMMAR_TASKS) {
       if (!(tasks[task] >= 4)) fail(where, `only ${tasks[task] ?? 0} ${task} questions; set at least 4 of each task`);
     }
   }
+}
+
+function checkReading(at, question, correct) {
+  if (!["discursive", "factual"].includes(question.passageType)) {
+    return fail(at, "passageType must be discursive or factual");
+  }
+  if (!question.title?.trim()) fail(at, "a passage needs a title");
+  const passage = question.passage ?? "";
+  const length = countWords(passage);
+  const [min, max] = PASSAGE_WORDS[question.passageType];
+  if (length < min || length > max) fail(at, `${question.passageType} passage is ${length} words; CBSE sets ${min + 20}–${max - 20}`);
+  if (question.passageType === "factual" && (passage.match(/\d[\d,.]*/g) ?? []).length < 6) {
+    fail(at, "a case-based factual passage carries its data — a table or chart written out with its figures");
+  }
+  const parts = question.parts ?? [];
+  if (parts.length < 5 || parts.length > 8) fail(at, "a reading passage has 5 to 8 parts");
+  const sum = parts.reduce((total, part) => total + (part.marks ?? 0), 0);
+  if (sum !== 10) fail(at, `parts add to ${sum}, not 10`);
+  if (parts.filter((part) => part.type === "mcq").length < 4) fail(at, "needs at least four mcq parts");
+  let stemLength = passage.length + 80;
+  parts.forEach((part, index) => {
+    const partAt = `${at} part ${index + 1}`;
+    if (!["mcq", "vsa", "sa"].includes(part.type)) fail(partAt, "type must be mcq, vsa or sa");
+    if (!part.prompt?.trim()) fail(partAt, "no prompt");
+    if (!part.answer?.trim()) fail(partAt, "no answer");
+    const expectedMarks = part.type === "sa" ? 2 : 1;
+    if (part.marks !== expectedMarks) fail(partAt, `${part.type} parts are worth ${expectedMarks}`);
+    stemLength += (part.prompt ?? "").length + 20;
+    if (part.type === "mcq") {
+      const position = checkOptions(partAt, part.options);
+      if (position >= 0) correct[position]++;
+      stemLength += (part.options ?? []).reduce((total, option) => total + String(option.text ?? "").length + 12, 0);
+    }
+  });
+  if (stemLength > STEM_LIMIT) fail(at, `the whole question would be about ${stemLength} characters; the app's limit is 4,000 — shorten the passage or the options`);
 }
 
 for (const [book, counts] of Object.entries(positions)) {

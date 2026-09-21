@@ -4,7 +4,7 @@
   "subject": "ENGGW",
   "title": "English – Grammar and Writing",
   "status": "DRAFT — for review by an English teacher before any question is approved",
-  "source": "Written to the CBSE English Language and Literature (184) syllabus for 2025-26, Section B for Class X: grammar assessed through gap filling, editing and transformation, and the formal letter and analytical paragraph writing tasks. No book text is quoted.",
+  "source": "Written to the CBSE English Language and Literature (184) syllabus for 2025-26, Section B for Class X: grammar assessed through gap filling, editing and transformation, and the formal letter and analytical paragraph writing tasks. Section A reading comprehension: original unseen discursive and case-based factual passages. No book text is quoted.",
   "chapters": [
     {
       "number": 1,
@@ -3410,6 +3410,2411 @@
           "difficulty": "HARD",
           "marks": 5,
           "outcome": "E10GW-07-2"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "questions": [
+        {
+          "id": "gw10-08-d1",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "Why Failure Deserves a Place in the Timetable",
+          "outcome": "E10GW-08-1",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "Ask any Class 10 student what they fear most about the year ahead and the answer is rarely a particular subject. It is the prospect of getting something wrong in public — a low mark read out, a wrong answer on the board, a science project that refuses to work on exhibition day. Our schools, often without meaning to, have taught a generation that a mistake is a verdict rather than a stage.\n\nYet almost everything worth knowing was learnt through error. A child learning to walk falls hundreds of times, and no parent concludes that the child is \"bad at walking\". Scientists design experiments expecting most of them to fail; the failures narrow the field until the one idea that survives can be trusted. Even the finest batsmen are dismissed far more often than they score centuries, and they study each dismissal with care. In these fields, failure is not the opposite of success but the raw material from which it is made.\n\nThe trouble begins when failure becomes expensive. When every test counts towards a final grade, a student has every reason to avoid risk: to choose the easy question, to stay silent rather than offer an answer that might be wrong. Such caution is perfectly rational, and it is also ruinous, because the student who never attempts anything difficult never discovers what they can actually do.\n\nSome teachers have found a simple remedy. They set frequent low-stakes tasks that carry no marks at all, and they treat a wrong answer as information — a map of what needs to be taught next — rather than as a judgement on the child. Students in such classrooms tend to ask more questions and, curiously, to perform better when the marks finally do count. Having practised being wrong, they are no longer paralysed by the fear of it.\n\nNone of this means that standards should fall or that every effort deserves praise. Carelessness is not the same as honest failure, and a student who does not prepare learns nothing from a poor result except that preparation matters. The distinction is between a mistake made while reaching for something just beyond one's grasp and a mistake made because one did not reach at all.\n\nIf we want young people who will attempt hard problems, we must make it safe for them to fail at easy ones first. A timetable that leaves room for error is not a lax one. It is simply honest about how people learn.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "What do students fear most, according to the writer?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "One particular subject",
+                  "correct": false
+                },
+                {
+                  "text": "The length of the syllabus",
+                  "correct": false
+                },
+                {
+                  "text": "Disappointing their parents",
+                  "correct": false
+                },
+                {
+                  "text": "Being wrong in front of others",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) Being wrong in front of others — paragraph 1: 'the prospect of getting something wrong in public'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The example of the batsmen shows that",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "success needs talent",
+                  "correct": false
+                },
+                {
+                  "text": "records matter most",
+                  "correct": false
+                },
+                {
+                  "text": "cricket is a good teacher",
+                  "correct": false
+                },
+                {
+                  "text": "even the best fail often and learn from it",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) even the best fail often and learn from it — they are dismissed far more often than they score centuries and study each dismissal (paragraph 2)."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why is the students' caution harmful, though sensible?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "It lowers their marks at once",
+                  "correct": false
+                },
+                {
+                  "text": "It annoys their teachers",
+                  "correct": false
+                },
+                {
+                  "text": "They never find out what they can do",
+                  "correct": true
+                },
+                {
+                  "text": "It wastes time in examinations",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) They never find out what they can do — paragraph 3: the student who never attempts anything difficult never discovers what they can do."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which statement would the writer DISAGREE with?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Wrong answers can guide teaching",
+                  "correct": false
+                },
+                {
+                  "text": "Every effort deserves praise",
+                  "correct": true
+                },
+                {
+                  "text": "Low-stakes tasks reduce fear",
+                  "correct": false
+                },
+                {
+                  "text": "Carelessness differs from honest failure",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) Every effort deserves praise — paragraph 5 says plainly that not every effort deserves praise."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The writer's main purpose is to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "criticise strict teachers",
+                  "correct": false
+                },
+                {
+                  "text": "describe how scientists work",
+                  "correct": false
+                },
+                {
+                  "text": "urge students to prepare harder",
+                  "correct": false
+                },
+                {
+                  "text": "argue that schools should allow honest failure",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) argue that schools should allow honest failure — the whole passage builds to 'we must make it safe for them to fail' (paragraph 6)."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 4 that means 'unable to act or move'.",
+              "marks": 1,
+              "answer": "paralysed"
+            },
+            {
+              "type": "sa",
+              "prompt": "How do low-stakes tasks help students (paragraph 4)? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Wrong answers become information that guides teaching rather than a judgement on the child (1 mark); students ask more questions and do better when marks count, because they are no longer afraid of being wrong (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "How does honest failure differ from carelessness? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Honest failure is a mistake made while reaching for something just beyond one's grasp (1 mark); carelessness is failing because one did not prepare or reach at all, and teaches only that preparation matters (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-d2",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "Stepwells: An Old Answer to a New Thirst",
+          "outcome": "E10GW-08-1",
+          "difficulty": "HARD",
+          "marks": 10,
+          "passage": "Across Gujarat and Rajasthan, flights of stone steps descend into the earth, sometimes seven or eight storeys deep, to reach water that the surface could not hold. These stepwells, known as vavs and baolis, were built over many centuries, and visitors today tend to admire them as architecture — carved pillars, cool galleries, geometry that seems to fold in on itself. What they were, first of all, was a water policy set in stone.\n\nThe logic was simple. In a region where almost all the year's rain falls in a few monsoon weeks, the problem is not the total amount of water but its timing. A stepwell captured the monsoon and stored it for the dry months, while its depth kept the water cool and slowed evaporation. Because the level fell steadily through the year, the steps allowed people to follow it down, so that the well remained usable long after an open tank would have been abandoned.\n\nStepwells were also public places. Many were paid for by wealthy patrons, frequently women, as acts of charity, and they served travellers, animals and whole neighbourhoods. The shaded galleries became places to rest, to meet and to pray. Water, in other words, was treated as a shared responsibility rather than a private possession.\n\nThat idea faded with the arrival of piped supply and, later, the electric borewell. Once water could be pumped from deep underground by any household that could afford a motor, there seemed little reason to maintain a community structure. Many stepwells silted up or became dumping grounds. Meanwhile the groundwater they had once helped to replenish began to fall, in some districts by several metres a decade.\n\nIt would be sentimental to suggest that India can return to drawing water by hand. The population the old wells served was a fraction of today's. But the principle behind them — catch rain where it falls, store it close to where it is used, and share the duty of maintaining it — remains sound, and it is precisely what modern rainwater harvesting attempts. Several towns have cleared old stepwells and found that they fill again after a good monsoon.\n\nThe lesson is less about stone than about attitude. A society that sees water as something that simply arrives through a pipe will waste it. One that sees water as a seasonal gift, to be collected, guarded and shared, has a far better chance of having enough.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "The region's main water problem was that",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the total rainfall was too low",
+                  "correct": false
+                },
+                {
+                  "text": "the rain came in a short season",
+                  "correct": true
+                },
+                {
+                  "text": "the soil was too salty",
+                  "correct": false
+                },
+                {
+                  "text": "wells were too costly to dig",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) the rain came in a short season — paragraph 2: 'not the total amount of water but its timing'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The steps of a stepwell allowed people to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "keep animals away",
+                  "correct": false
+                },
+                {
+                  "text": "follow the falling water level",
+                  "correct": true
+                },
+                {
+                  "text": "sit in the shade",
+                  "correct": false
+                },
+                {
+                  "text": "measure the rainfall",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) follow the falling water level — paragraph 2: the level fell through the year and the steps let people follow it down."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'A water policy set in stone' suggests stepwells were",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "merely decorative",
+                  "correct": false
+                },
+                {
+                  "text": "a planned answer to water supply",
+                  "correct": true
+                },
+                {
+                  "text": "built by the government",
+                  "correct": false
+                },
+                {
+                  "text": "hard for people to use",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) a planned answer to water supply — they were first of all a deliberate way of storing water, not just architecture."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Patrons are mentioned mainly to show that water was",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "costly to buy",
+                  "correct": false
+                },
+                {
+                  "text": "controlled by the rich",
+                  "correct": false
+                },
+                {
+                  "text": "used only for prayer",
+                  "correct": false
+                },
+                {
+                  "text": "shared as a public good",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) shared as a public good — paragraph 3: water was 'a shared responsibility rather than a private possession'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The writer's view of returning to hand-drawn water is",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "enthusiastic and hopeful",
+                  "correct": false
+                },
+                {
+                  "text": "doubtful, though the principle is valued",
+                  "correct": true
+                },
+                {
+                  "text": "angry and bitter",
+                  "correct": false
+                },
+                {
+                  "text": "indifferent",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) doubtful, though the principle is valued — paragraph 5 calls it sentimental but says the principle 'remains sound'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 4 that means 'to fill up again'.",
+              "marks": 1,
+              "answer": "replenish"
+            },
+            {
+              "type": "sa",
+              "prompt": "Give two reasons why stepwells fell out of use. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Piped supply and electric borewells let households pump their own water (1 mark), so there seemed no reason to maintain a community structure, and the wells silted up or became dumping grounds (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does the writer mean by 'The lesson is less about stone than about attitude'? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "What matters is not rebuilding stepwells but how we think about water (1 mark): treated as a gift to be collected, guarded and shared, it lasts; taken for granted as something from a pipe, it is wasted (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-d3",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "Sleep: The Homework Nobody Sets",
+          "outcome": "E10GW-08-1",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "Indian teenagers are among the most tired anywhere, and many of them are proud of it. Staying up past midnight to finish an assignment or revise for a test is treated as a sign of commitment; the student who sleeps nine hours is quietly suspected of not trying hard enough. This is exactly backwards.\n\nSleep is not a pause in learning. It is one of its stages. During the deep phases of the night, the brain replays what it met during the day and moves it from short-term storage into long-term memory. A student who reads a chapter at eleven and sleeps well is likely to remember more of it the next morning than one who reads it twice and sleeps for five hours. Cutting sleep to create study time is rather like tearing pages out of a notebook to make room for more notes.\n\nThe effects of chronic tiredness go well beyond memory. Poorly rested adolescents find it harder to concentrate, are more irritable, and make riskier decisions, including on the road. They are more likely to reach for sugary snacks and caffeine to stay alert, which in turn makes it harder to fall asleep the following night. What begins as one late evening becomes a cycle that can last an entire academic year.\n\nPart of the problem is biological. During the teenage years the body's internal clock shifts later, so that a fifteen-year-old genuinely does not feel sleepy until well after ten. Schools that start at half past seven therefore ask adolescents to function at an hour when their bodies are still, in effect, in the middle of the night. Part of the problem, however, is plainly habit: the phone kept beside the pillow, the \"five more minutes\" of scrolling that turns into fifty.\n\nThe solutions are unglamorous. A fixed time to switch off screens, a bedroom that is dark and cool, and a refusal to treat an all-night study session as heroic would do more for most students' marks than another hour of coaching. Parents and schools could help by spacing out deadlines so that three assignments do not fall due on the same morning.\n\nWe would not expect an athlete to win a race after skipping training, and we should not expect a tired mind to perform well in an examination. Sleep is the homework nobody sets — and the one that makes all the others worth doing.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "How is late-night study commonly viewed, according to paragraph 1?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "As a sign of commitment",
+                  "correct": true
+                },
+                {
+                  "text": "As a sign of laziness",
+                  "correct": false
+                },
+                {
+                  "text": "As rare among teenagers",
+                  "correct": false
+                },
+                {
+                  "text": "As harmful by most parents",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) As a sign of commitment — paragraph 1: staying up past midnight 'is treated as a sign of commitment'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The comparison with tearing pages out of a notebook means that cutting sleep",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "helps students organise their notes",
+                  "correct": false
+                },
+                {
+                  "text": "is a harmless habit",
+                  "correct": false
+                },
+                {
+                  "text": "undoes the learning it was meant to serve",
+                  "correct": true
+                },
+                {
+                  "text": "saves time for revision",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) undoes the learning it was meant to serve — sleep is when learning is stored, so losing it destroys what the extra study was for."
+            },
+            {
+              "type": "mcq",
+              "prompt": "According to paragraph 3, sugary snacks and caffeine",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "improve concentration for days",
+                  "correct": false
+                },
+                {
+                  "text": "help students fall asleep",
+                  "correct": false
+                },
+                {
+                  "text": "are harmless in small amounts",
+                  "correct": false
+                },
+                {
+                  "text": "make the next night's sleep harder",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) make the next night's sleep harder — they keep students alert, which 'makes it harder to fall asleep the following night'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which cause of tiredness does the writer call biological?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "The body clock shifting later",
+                  "correct": true
+                },
+                {
+                  "text": "Phones kept beside the pillow",
+                  "correct": false
+                },
+                {
+                  "text": "Too much coaching",
+                  "correct": false
+                },
+                {
+                  "text": "Deadlines on the same day",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) The body clock shifting later — paragraph 4: 'the body's internal clock shifts later'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The tone of paragraph 5 is best described as",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "practical and direct",
+                  "correct": true
+                },
+                {
+                  "text": "mocking",
+                  "correct": false
+                },
+                {
+                  "text": "despairing",
+                  "correct": false
+                },
+                {
+                  "text": "nostalgic",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) practical and direct — it lists plain, workable steps — 'the solutions are unglamorous'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 3 that means 'easily annoyed'.",
+              "marks": 1,
+              "answer": "irritable"
+            },
+            {
+              "type": "sa",
+              "prompt": "Why, according to the writer, does one late evening often turn into a cycle? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "A tired student reaches for sugary snacks and caffeine to stay alert (1 mark), and these make it harder to fall asleep the next night, so the tiredness repeats and can last the whole year (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Mention two changes the writer suggests to help students sleep better. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Any two (1 mark each): a fixed time to switch off screens; a dark, cool bedroom; not treating all-night study as heroic; parents and schools spacing out deadlines."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-d4",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "The Comfortable Cage of the Feed",
+          "outcome": "E10GW-08-3",
+          "difficulty": "HARD",
+          "marks": 10,
+          "passage": "Every time you pause on a video, like a post or search for a song, an algorithm takes note. It is not malicious. Its task is modest and relentless: to predict what will keep you on the screen a little longer, and then to show you more of it. The result is a feed that feels uncannily personal, as though someone who knew you very well had chosen it by hand.\n\nThat intimacy is precisely what makes it worth examining. A recommendation system learns from what you have already chosen, so it tends to offer more of the same. Enjoy one cricket highlight and you will soon be shown fifty. Linger on one angry argument about politics and the feed concludes that anger is what you want. Over months, the range of what reaches you narrows, not because anyone has censored anything, but because the machine has been too eager to please.\n\nWriters on technology call this a \"filter bubble\": a comfortable enclosure in which your existing tastes and opinions are reflected back at you, polished and amplified. Inside it, disagreement becomes rare, and therefore startling. People who meet an opposing view only occasionally tend to treat it not as a different conclusion honestly reached, but as evidence of stupidity or bad faith. The bubble does not merely limit what we know; it hardens how we feel about those who think differently.\n\nIt would be easy to blame the companies alone, and they certainly bear responsibility for designing systems that reward outrage. But the algorithm is a mirror as much as a manipulator. It responds to what we click, and we click on what flatters us. A feed full of noise and quarrels is, in part, a record of our own impulses.\n\nThe remedy therefore begins with the user. Deliberately following people who think differently, searching for topics outside one's usual interests, and sometimes choosing a long article over a thirty-second clip all send the machine new signals. So does the simplest act of all: closing the app once one has seen what one came for. Curiosity, it turns out, is a habit that has to be protected.\n\nNone of this requires abandoning technology altogether. The same tools that can confine us can also open doors to libraries, lectures and conversations our grandparents could not have imagined. The question is whether we use the feed or allow it to use us.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "In paragraph 1, 'relentless' most nearly means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "unkind",
+                  "correct": false
+                },
+                {
+                  "text": "careless",
+                  "correct": false
+                },
+                {
+                  "text": "never letting up",
+                  "correct": true
+                },
+                {
+                  "text": "short-lived",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) never letting up — the algorithm's task goes on constantly, with every pause and click."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'Uncannily personal' suggests the feed seems",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "poorly designed",
+                  "correct": false
+                },
+                {
+                  "text": "strangely well suited to you",
+                  "correct": true
+                },
+                {
+                  "text": "openly hostile",
+                  "correct": false
+                },
+                {
+                  "text": "shared with friends",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) strangely well suited to you — 'uncannily' means in a strange, almost eerie way — as if someone who knew you had chosen it."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why does the range of content narrow?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Companies censor many posts",
+                  "correct": false
+                },
+                {
+                  "text": "Users ask for less variety",
+                  "correct": false
+                },
+                {
+                  "text": "The system eagerly repeats what you chose",
+                  "correct": true
+                },
+                {
+                  "text": "The law limits what is shown",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) The system eagerly repeats what you chose — paragraph 2: not censorship, but 'the machine has been too eager to please'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'A mirror as much as a manipulator' means the algorithm",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "reflects our choices as well as steering them",
+                  "correct": true
+                },
+                {
+                  "text": "is completely harmless",
+                  "correct": false
+                },
+                {
+                  "text": "copies other apps",
+                  "correct": false
+                },
+                {
+                  "text": "shows only pictures",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) reflects our choices as well as steering them — paragraph 4: it responds to what we click, so a noisy feed records our own impulses."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The writer's main purpose is to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "warn readers and suggest how to widen their feeds",
+                  "correct": true
+                },
+                {
+                  "text": "persuade readers to give up technology",
+                  "correct": false
+                },
+                {
+                  "text": "praise recommendation systems",
+                  "correct": false
+                },
+                {
+                  "text": "blame only the companies",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) warn readers and suggest how to widen their feeds — paragraph 5 offers remedies and paragraph 6 rejects abandoning technology."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 3 that means 'made louder or stronger'.",
+              "marks": 1,
+              "answer": "amplified"
+            },
+            {
+              "type": "sa",
+              "prompt": "Why do people inside a filter bubble react badly to opposing views? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Because disagreement rarely reaches them, it is startling when it does (1 mark), so they treat it as stupidity or bad faith rather than as a conclusion honestly reached (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Mention two things the writer suggests users can do to escape the bubble. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Any two (1 mark each): follow people who think differently; search for topics outside their usual interests; choose a long article over a short clip; close the app once they have seen what they came for."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-d5",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "Let Every Child Play a Team Sport Badly",
+          "outcome": "E10GW-08-1",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "School sport in India is often organised around a small group of stars. The fastest runners are picked for the relay, the tallest for basketball, the most gifted for the cricket eleven, and everyone else is left to watch from the boundary or is quietly excused to the library. The assumption is that sport is for those who are good at it. That assumption deserves to be challenged.\n\nThe benefits of playing a team game have very little to do with winning. A child who plays football badly still learns to read the movements of others, to communicate under pressure and to keep going when the score is hopeless. She learns that a mistake by one player is absorbed by the whole side, and that her own errors will be forgiven if she forgives those of others. No classroom teaches these lessons as vividly, because nowhere else are the consequences of cooperation so immediate.\n\nThere are physical reasons too. Regular exercise strengthens the heart, improves sleep and has been linked to better concentration in lessons. Yet the students who most need that exercise — those who are least active to begin with — are precisely the ones a selection-based system leaves out. By the age of fourteen many have concluded that they are \"not sporty\", a label they carry into adulthood along with the sedentary habits that come with it.\n\nSome schools have responded by creating house leagues in which every student must play, teams are mixed by ability, and results count for less than attendance and effort. The matches are sometimes chaotic and rarely beautiful. But teachers report that children who once dreaded the games period begin to look forward to it, and that confident players become more patient when they must pass to teammates who might drop the ball.\n\nCompetitive sport for the talented has its place, and nobody is suggesting that the school team should be abolished. The argument is only that it should not be the whole of the programme. A school that measures its sporting success purely by trophies has confused the achievement of a few with the education of many.\n\nSo let every child play, badly if need be, and often. The goal that sails wide, the catch that is dropped, the race finished last but finished — these are not failures of a sports programme. They are the programme working exactly as it should.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Which assumption does the writer challenge?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "That sport wastes study time",
+                  "correct": false
+                },
+                {
+                  "text": "That girls dislike games",
+                  "correct": false
+                },
+                {
+                  "text": "That study matters more",
+                  "correct": false
+                },
+                {
+                  "text": "That sport is only for those good at it",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) That sport is only for those good at it — paragraph 1: 'The assumption is that sport is for those who are good at it.'"
+            },
+            {
+              "type": "mcq",
+              "prompt": "According to paragraph 2, a mistake in a team game",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "is punished by the coach",
+                  "correct": false
+                },
+                {
+                  "text": "is absorbed by the whole team",
+                  "correct": true
+                },
+                {
+                  "text": "ends a player's chances",
+                  "correct": false
+                },
+                {
+                  "text": "should be hidden from others",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) is absorbed by the whole team — 'a mistake by one player is absorbed by the whole side'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why does selection fail the students who most need exercise?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "It leaves out the least active",
+                  "correct": true
+                },
+                {
+                  "text": "It tires the best players",
+                  "correct": false
+                },
+                {
+                  "text": "It costs too much money",
+                  "correct": false
+                },
+                {
+                  "text": "It ignores their studies",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) It leaves out the least active — paragraph 3: those least active 'are precisely the ones a selection-based system leaves out'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which is NOT a feature of the house leagues?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Results matter more than effort",
+                  "correct": true
+                },
+                {
+                  "text": "Every student must play",
+                  "correct": false
+                },
+                {
+                  "text": "Teams are mixed by ability",
+                  "correct": false
+                },
+                {
+                  "text": "Attendance counts",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) Results matter more than effort — paragraph 4 says results count for LESS than attendance and effort."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The last sentence of paragraph 5 means the school has",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "hired too many coaches",
+                  "correct": false
+                },
+                {
+                  "text": "given every child a trophy",
+                  "correct": false
+                },
+                {
+                  "text": "taken winners' success for everyone's learning",
+                  "correct": true
+                },
+                {
+                  "text": "mixed up sport and studies",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) taken winners' success for everyone's learning — trophies won by a few say nothing about whether most children learnt through sport."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 3 that means 'involving much sitting and little activity'.",
+              "marks": 1,
+              "answer": "sedentary"
+            },
+            {
+              "type": "sa",
+              "prompt": "Name two lessons a team game teaches even when played badly. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Any two (1 mark each): reading others' movements; communicating under pressure; keeping going when the score is hopeless; that a mistake is absorbed by the side and errors are forgiven if one forgives others."
+            },
+            {
+              "type": "sa",
+              "prompt": "How did house leagues change (i) reluctant students and (ii) confident players? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "(i) Children who once dreaded the games period began to look forward to it (1 mark); (ii) confident players became more patient when they had to pass to less able teammates (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-d6",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "Repair, Don't Replace",
+          "outcome": "E10GW-08-1",
+          "difficulty": "HARD",
+          "marks": 10,
+          "passage": "A generation ago, when a radio stopped working, it was taken to the repairer at the corner of the market, who opened it up, found the loose wire and sent it home again for a few rupees. Today, when a phone screen cracks or a charging port fails, the usual response is to buy a new phone. The old one goes into a drawer, and eventually into a heap of electronic waste that is among the fastest-growing streams of rubbish on the planet.\n\nSome of this is the manufacturers' doing. Many devices are now glued rather than screwed together, spare parts are hard to find, and batteries that once slid out of a slot are sealed inside. Software updates that slow older models make an upgrade feel less like a choice than a necessity. The effect, whether intended or not, is to make repair awkward and replacement easy.\n\nThe cost is paid elsewhere. A single smartphone contains dozens of elements, some mined in conditions that are dangerous for workers and destructive for landscapes. Discarded devices that are not recycled properly can leak lead and mercury into soil and water. Much of the world's e-waste is dismantled by hand in informal yards, often by people with no protection at all. Every device kept in use for an extra two or three years postpones a share of that harm.\n\nA growing movement argues for a \"right to repair\": laws that would require companies to sell spare parts, publish repair manuals and design products that can be opened with ordinary tools. Supporters point out that such rules would also help India's vast informal repair sector, which already keeps millions of devices working and employs many skilled technicians without formal training.\n\nConsumers have a part to play as well. Choosing a phone partly for how easily it can be mended, using a case and a screen guard, and resisting the yearly temptation of a slightly faster model are small decisions for any one person. Multiplied across a country of hundreds of millions of mobile users, they are not small at all.\n\nThere is something else at stake, which is harder to measure. A culture that repairs is a culture that understands how things work, values skill and respects the materials it has been given. A culture that only replaces loses all three. The screwdriver, it turns out, is as much a tool of citizenship as of mechanics.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Paragraph 1 contrasts",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "cheap and costly phones",
+                  "correct": false
+                },
+                {
+                  "text": "repairing then with replacing now",
+                  "correct": true
+                },
+                {
+                  "text": "towns and villages",
+                  "correct": false
+                },
+                {
+                  "text": "radios and televisions",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) repairing then with replacing now — a generation ago the radio was mended; today a new phone is bought."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which is NOT given as something that discourages repair?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Parts glued together",
+                  "correct": false
+                },
+                {
+                  "text": "Sealed batteries",
+                  "correct": false
+                },
+                {
+                  "text": "Scarce spare parts",
+                  "correct": false
+                },
+                {
+                  "text": "High recycling charges",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) High recycling charges — paragraph 2 names glue, scarce parts, sealed batteries and slowing updates — not recycling charges."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'The cost is paid elsewhere' means the harm falls on",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "the manufacturers",
+                  "correct": false
+                },
+                {
+                  "text": "local repair shops",
+                  "correct": false
+                },
+                {
+                  "text": "people and places far from the buyer",
+                  "correct": true
+                },
+                {
+                  "text": "the buyer's savings",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) people and places far from the buyer — paragraph 3: miners, landscapes, soil, water and unprotected e-waste workers."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Supporters say a right to repair would also",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "end mining altogether",
+                  "correct": false
+                },
+                {
+                  "text": "lower phone prices at once",
+                  "correct": false
+                },
+                {
+                  "text": "ban new models",
+                  "correct": false
+                },
+                {
+                  "text": "support India's informal repairers",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) support India's informal repairers — paragraph 4: it 'would also help India's vast informal repair sector'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The last sentence suggests that repairing",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "should be every citizen's job",
+                  "correct": false
+                },
+                {
+                  "text": "reflects values a society needs",
+                  "correct": true
+                },
+                {
+                  "text": "requires expensive tools",
+                  "correct": false
+                },
+                {
+                  "text": "is a kind of voting",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) reflects values a society needs — a repairing culture understands, values skill and respects materials — civic qualities."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 3 that means 'thrown away'.",
+              "marks": 1,
+              "answer": "discarded"
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does the writer say consumers' small decisions 'are not small at all'? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Each choice — a repairable phone, a case, skipping a yearly upgrade — seems minor for one person (1 mark), but multiplied across hundreds of millions of users it greatly reduces e-waste and its harm (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does a culture that repairs have, according to the writer, and what does a replacing culture lose? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "It understands how things work, values skill and respects the materials it has (1 mark); a culture that only replaces loses all three (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-d7",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "Preparing for Jobs That Do Not Yet Exist",
+          "outcome": "E10GW-08-3",
+          "difficulty": "HARD",
+          "marks": 10,
+          "passage": "Ask a room of adults what they wanted to be at fifteen, and very few are doing it. Some of their jobs — social-media manager, drone pilot, data analyst — did not exist when they sat their board examinations. It is a sobering thought for anyone choosing a stream after Class 10: many of the careers open to you in 2040 have not yet been named.\n\nThis uncertainty is often used to make students anxious. It need not. If the precise job cannot be predicted, the sensible strategy is not to guess more cleverly but to cultivate abilities that remain valuable whatever the job turns out to be. Employers, asked what those abilities are, give a strikingly consistent list, and it is shorter than one might expect.\n\nThe first is the capacity to learn quickly and unaided — to pick up a new tool, read the manual, and be useful with it within a week. The second is clear communication: writing an email that is understood the first time, explaining a problem to someone who does not share your expertise. The third is the ability to work with people unlike yourself, across languages, ages and temperaments. None of these is a subject on the timetable, yet all of them are practised, or neglected, in every subject.\n\nThere is a paradox here. The more machines take over routine tasks, the more valuable distinctly human skills become. Software can already calculate, translate and summarise with remarkable fluency. What it does poorly is judge which question is worth asking, persuade a doubtful colleague, or notice that a customer is upset before they say so. Such skills are called soft, but they are not optional. They may prove the hardest of all to replace.\n\nNone of this makes subject knowledge obsolete. A doctor still needs anatomy and an engineer still needs mathematics; no amount of communication replaces them. But knowledge that is merely memorised has a short shelf life, while the habit of understanding things deeply transfers from one field to another. A student who has truly grasped why a proof works has learnt something about reasoning that will outlast the proof itself.\n\nSo the question for a fifteen-year-old is not only \"Which career should I choose?\" but \"What kind of learner am I becoming?\" The first may have no answer yet. The second is answered every day, in every lesson, whether one notices or not.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "In paragraph 1, 'sobering' means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "cheerful",
+                  "correct": false
+                },
+                {
+                  "text": "making one think seriously",
+                  "correct": true
+                },
+                {
+                  "text": "confusing",
+                  "correct": false
+                },
+                {
+                  "text": "tiresome",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) making one think seriously — the thought that future careers are unnamed makes a student pause and think."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The writer's answer to the uncertainty is to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "guess future jobs more cleverly",
+                  "correct": false
+                },
+                {
+                  "text": "build abilities that suit any job",
+                  "correct": true
+                },
+                {
+                  "text": "choose science to be safe",
+                  "correct": false
+                },
+                {
+                  "text": "ignore career planning",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) build abilities that suit any job — paragraph 2: 'cultivate abilities that remain valuable whatever the job'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'A strikingly consistent list' means the list is",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "very long",
+                  "correct": false
+                },
+                {
+                  "text": "surprisingly new",
+                  "correct": false
+                },
+                {
+                  "text": "hard to follow",
+                  "correct": false
+                },
+                {
+                  "text": "remarkably similar across employers",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) remarkably similar across employers — different employers name the same abilities."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The 'paradox' in paragraph 4 is that",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "automation raises the value of human skills",
+                  "correct": true
+                },
+                {
+                  "text": "machines cannot calculate",
+                  "correct": false
+                },
+                {
+                  "text": "soft skills are optional",
+                  "correct": false
+                },
+                {
+                  "text": "software is too expensive",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) automation raises the value of human skills — the more machines do routine work, the more human skills are worth."
+            },
+            {
+              "type": "mcq",
+              "prompt": "'Has a short shelf life' suggests memorised knowledge",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "is costly to gain",
+                  "correct": false
+                },
+                {
+                  "text": "soon stops being useful",
+                  "correct": true
+                },
+                {
+                  "text": "is stored safely",
+                  "correct": false
+                },
+                {
+                  "text": "is easily shared",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) soon stops being useful — like goods that expire; deep understanding, by contrast, lasts and transfers."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Find a word in paragraph 3 that means 'without help'.",
+              "marks": 1,
+              "answer": "unaided"
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does the writer think 'soft' skills may be the hardest to replace? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Machines already calculate, translate and summarise well (1 mark), but they do poorly at judging which question matters, persuading people, or noticing someone is upset — human skills that grow more valuable (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "How do the two questions in the last paragraph differ? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "'Which career?' may have no answer yet, as future jobs are unknown (1 mark); 'What kind of learner am I becoming?' is answered daily, in every lesson, through one's habits (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-d8",
+          "kind": "reading",
+          "passageType": "discursive",
+          "title": "In Praise of Doubt",
+          "outcome": "E10GW-08-1",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "Science is usually taught as a collection of answers: the boiling point of water, the charge on an electron, the formula for the area of a circle. Students copy them down, learn them by heart and reproduce them in examinations. It is an efficient way of passing on knowledge, and it hides almost everything that makes science worth doing.\n\nWhat distinguishes science from other ways of knowing is not its answers but its attitude towards them. A scientific claim is always provisional. It is accepted because the evidence supports it, and it remains accepted only for as long as the evidence continues to do so. When astronomers refined their calculations of planetary motion over many centuries, or when physicists abandoned the idea of an invisible \"ether\" filling space, they were not failing. They were doing exactly what science requires: changing their minds when the facts demanded it.\n\nDoubt, in this sense, is not the enemy of knowledge but its engine. A good scientist asks of every result: How do we know? Could it be measured differently? What would prove this wrong? These questions are uncomfortable, because they threaten conclusions one may have grown fond of. But they are the only protection against error, which is why scientific papers are checked by other experts before publication and why experiments must be repeatable by strangers.\n\nHealthy doubt is different from cynicism. The cynic dismisses every claim as equally unreliable, which is as lazy as believing everything. The scientist weighs evidence, recognises that some conclusions — that the earth orbits the sun, that vaccines prevent disease — rest on so much of it that doubting them would be unreasonable, and saves scepticism for claims that have not yet earned trust.\n\nThis habit of mind matters well beyond the laboratory. Every day, young people are offered miracle diets, investment schemes that cannot fail and messages forwarded \"from a reliable source\". The student who has learnt to ask what the evidence is, and who gathered it, is far harder to deceive than one who has learnt only to memorise.\n\nSchools could teach this habit far more directly than they do. An experiment whose result surprises the class, a lesson on how a famous theory was overturned, or simply a teacher willing to say \"I am not sure — let us find out\" would show that uncertainty is the starting point of inquiry, not a sign of ignorance.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Teaching science only as a list of answers, the writer says,",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "is the most honest method",
+                  "correct": false
+                },
+                {
+                  "text": "is too slow to be useful",
+                  "correct": false
+                },
+                {
+                  "text": "confuses most students",
+                  "correct": false
+                },
+                {
+                  "text": "hides what makes science worthwhile",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) hides what makes science worthwhile — paragraph 1: it is efficient but 'hides almost everything that makes science worth doing'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "In paragraph 2, 'provisional' means",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "proved beyond all doubt",
+                  "correct": false
+                },
+                {
+                  "text": "accepted for now, open to change",
+                  "correct": true
+                },
+                {
+                  "text": "officially approved",
+                  "correct": false
+                },
+                {
+                  "text": "easy to understand",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) accepted for now, open to change — a claim stays accepted 'only for as long as the evidence continues' to support it."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The example of the 'ether' shows scientists",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "failing at their work",
+                  "correct": false
+                },
+                {
+                  "text": "changing their minds on evidence",
+                  "correct": true
+                },
+                {
+                  "text": "ignoring older ideas",
+                  "correct": false
+                },
+                {
+                  "text": "trusting their instincts",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) changing their minds on evidence — they 'were not failing' but changing their minds 'when the facts demanded it'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "How does the scientist differ from the cynic?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "The scientist believes everything",
+                  "correct": false
+                },
+                {
+                  "text": "The cynic trusts every expert",
+                  "correct": false
+                },
+                {
+                  "text": "The scientist weighs the evidence",
+                  "correct": true
+                },
+                {
+                  "text": "The cynic tests every claim",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) The scientist weighs the evidence — paragraph 4: the cynic dismisses all claims; the scientist weighs evidence."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The writer's main aim is to",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "criticise science teachers",
+                  "correct": false
+                },
+                {
+                  "text": "explain how vaccines work",
+                  "correct": false
+                },
+                {
+                  "text": "list famous discoveries",
+                  "correct": false
+                },
+                {
+                  "text": "show why doubt should be taught",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) show why doubt should be taught — the passage praises doubt and ends by asking schools to teach it directly."
+            },
+            {
+              "type": "vsa",
+              "prompt": "Which word in paragraph 3 shows doubt drives knowledge?",
+              "marks": 1,
+              "answer": "engine"
+            },
+            {
+              "type": "sa",
+              "prompt": "Why are papers checked and experiments repeated by others? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Questioning results is the only protection against error (1 mark); checking by other experts and repetition by strangers test whether a result holds up, even when its authors are fond of it (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "How does doubt help young people outside the laboratory? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "They are offered miracle diets, sure-fire schemes and forwarded messages (1 mark); asking what the evidence is and who gathered it makes them far harder to deceive (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-f1",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "How Long Do We Spend on Screens?",
+          "outcome": "E10GW-08-2",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "A student council at a senior secondary school surveyed 400 students of Classes 9 and 10 about how long they spend on screens for leisure on a school day — phones, tablets, television and games, but not online homework. The results were:\n\nLess than 1 hour: 48 students (12%)\n1 to 2 hours: 112 students (28%)\n2 to 3 hours: 136 students (34%)\nMore than 3 hours: 104 students (26%)\n\nThe most common band was two to three hours, and 60% of students reported more than two hours a day. When the same question was put to a similar group two years earlier, only 15% had reported more than three hours, so that group has grown by 11 percentage points.\n\nStudents were also asked what they mostly did on screens. Short videos came first (41%), followed by gaming (27%), messaging friends (22%) and reading or learning apps (10%).\n\nThe council noted that students in the highest band were twice as likely as others to say they often felt tired in the first period. It has proposed a voluntary 'screens-off hour' from 9 to 10 p.m. and will repeat the survey next year to see whether anything changes.\n\nThe survey relied on students' own estimates, which may understate real use.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Which band had the most students?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Less than 1 hour",
+                  "correct": false
+                },
+                {
+                  "text": "2 to 3 hours",
+                  "correct": true
+                },
+                {
+                  "text": "1 to 2 hours",
+                  "correct": false
+                },
+                {
+                  "text": "More than 3 hours",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) 2 to 3 hours — 136 students (34%)."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What percentage used screens for more than two hours?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "34%",
+                  "correct": false
+                },
+                {
+                  "text": "26%",
+                  "correct": false
+                },
+                {
+                  "text": "60%",
+                  "correct": true
+                },
+                {
+                  "text": "40%",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) 60% — 34% + 26% = 60%."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The 'more than 3 hours' group grew from",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "12% to 26%",
+                  "correct": false
+                },
+                {
+                  "text": "15% to 26%",
+                  "correct": true
+                },
+                {
+                  "text": "26% to 34%",
+                  "correct": false
+                },
+                {
+                  "text": "11% to 26%",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) 15% to 26% — 15% two years earlier, 26% now: 11 percentage points."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What share mostly used screens for reading or learning?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "22%",
+                  "correct": false
+                },
+                {
+                  "text": "27%",
+                  "correct": false
+                },
+                {
+                  "text": "10%",
+                  "correct": true
+                },
+                {
+                  "text": "41%",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) 10% — reading or learning apps came last at 10%."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The figures may be too low because",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "homework was included",
+                  "correct": false
+                },
+                {
+                  "text": "only Class 10 was asked",
+                  "correct": false
+                },
+                {
+                  "text": "students estimated their own use",
+                  "correct": true
+                },
+                {
+                  "text": "the sample was very small",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) students estimated their own use — the last line: the survey relied on students' own estimates."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How many students spent less than two hours a day on screens?",
+              "marks": 1,
+              "answer": "160 (48 + 112)"
+            },
+            {
+              "type": "sa",
+              "prompt": "What has the council proposed, and what finding led to it? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "A voluntary screens-off hour from 9 to 10 p.m. (1 mark), because students using screens over three hours were twice as likely to feel tired in the first period (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why will the council repeat the survey next year? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "To see whether the screens-off hour changes anything (1 mark) — comparing new figures with these, as it compared them with the survey two years earlier, shows whether use has fallen (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-f2",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "What the Canteen Throws Away",
+          "outcome": "E10GW-08-2",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "For one week in July, the eco-club of a large day school weighed all the food thrown away by its canteen, which serves about 700 lunches a day. The daily totals were:\n\nMonday: 16 kg\nTuesday: 12 kg\nWednesday: 22 kg\nThursday: 10 kg\nFriday: 20 kg\n\nThe week's waste came to 80 kg, an average of 16 kg a day. The club also sorted what it collected. Half of it (40 kg) was food left on students' plates; 30% (24 kg) was peelings and trimmings from the kitchen; and the remaining 20% (16 kg) was food cooked but never sold.\n\nWednesday, the heaviest day, is when the canteen serves a fixed rice meal in a single large portion, which many younger students could not finish. Thursday, the lightest, is the day students choose their own portions at a counter.\n\nThe club recommended smaller standard portions with free second helpings, and posters asking students to take only what they would eat. It set a target of cutting waste by a quarter, to 60 kg a week. When the audit was repeated a month later, the total was 62 kg — a fall of 18 kg, or 22.5%, just short of the target.\n\nThe club also points out that the kitchen's peelings could be composted for the school garden instead of being thrown away.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "What was the average daily waste?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "20 kg",
+                  "correct": false
+                },
+                {
+                  "text": "22 kg",
+                  "correct": false
+                },
+                {
+                  "text": "12 kg",
+                  "correct": false
+                },
+                {
+                  "text": "16 kg",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) 16 kg — 80 kg over five days = 16 kg a day."
+            },
+            {
+              "type": "mcq",
+              "prompt": "How much of the waste was cooked but never sold?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "30%",
+                  "correct": false
+                },
+                {
+                  "text": "20%",
+                  "correct": true
+                },
+                {
+                  "text": "50%",
+                  "correct": false
+                },
+                {
+                  "text": "10%",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) 20% — the remaining 20% (16 kg)."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Wednesday and Thursday together suggest that",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "rice is unpopular",
+                  "correct": false
+                },
+                {
+                  "text": "Thursday has fewer students",
+                  "correct": false
+                },
+                {
+                  "text": "choosing portions reduces waste",
+                  "correct": true
+                },
+                {
+                  "text": "older students waste more",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) choosing portions reduces waste — the fixed large portion day was heaviest; the self-served day lightest."
+            },
+            {
+              "type": "mcq",
+              "prompt": "By how much did the second audit miss the target?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "18 kg",
+                  "correct": false
+                },
+                {
+                  "text": "20 kg",
+                  "correct": false
+                },
+                {
+                  "text": "2 kg",
+                  "correct": true
+                },
+                {
+                  "text": "22 kg",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) 2 kg — target 60 kg, result 62 kg."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which suggestion deals with kitchen waste, not plate waste?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Composting the peelings",
+                  "correct": true
+                },
+                {
+                  "text": "Smaller standard portions",
+                  "correct": false
+                },
+                {
+                  "text": "Free second helpings",
+                  "correct": false
+                },
+                {
+                  "text": "Posters for students",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) Composting the peelings — peelings and trimmings come from the kitchen."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How many kilograms of the week's waste was left on plates?",
+              "marks": 1,
+              "answer": "40 kg"
+            },
+            {
+              "type": "sa",
+              "prompt": "How do the figures support the club's view that portion size matters? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Wednesday, with one large fixed portion, had the most waste, 22 kg (1 mark), while Thursday, when students chose portions, had the least, 10 kg; and plate leftovers were half of all waste (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Was the campaign a success? Give a reason using figures. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Largely yes: waste fell from 80 kg to 62 kg, a cut of 18 kg or 22.5% (1 mark); but it just missed the target of 60 kg, a cut of a quarter, by 2 kg (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-f3",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "Getting to School",
+          "outcome": "E10GW-08-2",
+          "difficulty": "HARD",
+          "marks": 10,
+          "passage": "A school with 600 students surveyed how its pupils travel to school, first in 2022 and again in 2025. The number of students was the same in both years. The results were:\n\nWalking: 150 (25%) in 2022; 120 (20%) in 2025\nBicycle: 90 (15%); 132 (22%)\nSchool bus: 180 (30%); 168 (28%)\nPrivate car: 120 (20%); 138 (23%)\nAuto-rickshaw and others: 60 (10%); 42 (7%)\n\nThe most striking change is in cycling, which rose by 42 riders, an increase of nearly half. In 2023 the school built a covered cycle stand and the local council painted a protected cycle lane along the main road; students interviewed said they would not have cycled without the lane.\n\nThe number arriving by car also grew, by 18, and walking fell by 30. The report links the fall in walking to families moving to new housing on the edge of town, too far away to walk from.\n\nThe school bus remained the most common way to reach school in both years, though its share slipped by two percentage points.\n\nThe report recommends a 'walking bus' — groups of students walking together with a parent volunteer — on two routes, and asks the council for a second cycle lane. It warns that if car journeys keep rising, the morning jam at the school gate will become a safety risk.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Which way of travelling was most common in both years?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Walking",
+                  "correct": false
+                },
+                {
+                  "text": "School bus",
+                  "correct": true
+                },
+                {
+                  "text": "Private car",
+                  "correct": false
+                },
+                {
+                  "text": "Bicycle",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) School bus — 180 in 2022 and 168 in 2025."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What share of students cycled in 2025?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "15%",
+                  "correct": false
+                },
+                {
+                  "text": "22%",
+                  "correct": true
+                },
+                {
+                  "text": "20%",
+                  "correct": false
+                },
+                {
+                  "text": "28%",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) 22% — 132 of 600."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What do students credit for the rise in cycling?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "The protected cycle lane",
+                  "correct": true
+                },
+                {
+                  "text": "The walking bus",
+                  "correct": false
+                },
+                {
+                  "text": "Cheaper bicycles",
+                  "correct": false
+                },
+                {
+                  "text": "The new housing",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) The protected cycle lane — they 'would not have cycled without the lane'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which two groups together lost as many students as cycling gained?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Walking and others",
+                  "correct": false
+                },
+                {
+                  "text": "Walking and school bus",
+                  "correct": true
+                },
+                {
+                  "text": "Bus and others",
+                  "correct": false
+                },
+                {
+                  "text": "Car and others",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) Walking and school bus — walking lost 30 and the bus 12: 42, the cycling gain."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The report explains the fall in walking by",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "unsafe footpaths",
+                  "correct": false
+                },
+                {
+                  "text": "the new cycle stand",
+                  "correct": false
+                },
+                {
+                  "text": "families moving further away",
+                  "correct": true
+                },
+                {
+                  "text": "bad weather",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) families moving further away — families moved to new housing on the edge of town."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How many students came by auto-rickshaw and other means in 2025?",
+              "marks": 1,
+              "answer": "42"
+            },
+            {
+              "type": "sa",
+              "prompt": "What is a 'walking bus', and how might it help the school? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Groups of students walking together with a parent volunteer (1 mark); it could win back some of the 30 lost walkers and slow the rise in car journeys (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does the report warn about car journeys? Use a figure. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Car journeys rose by 18, from 120 to 138 (20% to 23%) (1 mark); if they keep rising, the morning jam at the gate will become a safety risk (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-f4",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "What We Borrow",
+          "outcome": "E10GW-08-2",
+          "difficulty": "HARD",
+          "marks": 10,
+          "passage": "The librarian of a secondary school compared the number of books borrowed by Classes 9 and 10 in the first and second terms of the year. Between the terms, the library set up a 'science corner' near the entrance, displaying new titles on space, robotics and the human body. The figures were:\n\nFiction: 420 in Term 1; 380 in Term 2\nGraphic novels and comics: 180; 240\nScience and technology: 150; 210\nBiographies: 90; 120\nPoetry: 60; 50\n\nTotal borrowing rose from 900 books to 1,000. Fiction remained by far the most borrowed category, but its share fell from almost half of all loans (46.7%) to 38%. Graphic novels and science books each gained 60 loans; for science, that was a rise of 40%, the largest proportional increase in any category.\n\nThe librarian believes the science corner explains much of the change, since more than half of the science books borrowed in Term 2 were titles from the display. Biographies may have benefited from a school assembly series on Indian scientists and sportspersons.\n\nPoetry was the only category besides fiction to decline. The librarian plans a poetry-reading afternoon in Term 3 and will ask students to recommend titles for the shelves.\n\nShe adds a note of caution: Term 2 was two weeks longer, so part of the overall rise may simply reflect the extra time.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "What share of Term 2 loans was fiction?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "38%",
+                  "correct": true
+                },
+                {
+                  "text": "46.7%",
+                  "correct": false
+                },
+                {
+                  "text": "42%",
+                  "correct": false
+                },
+                {
+                  "text": "50%",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) 38% — 380 of 1,000."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which categories declined in Term 2?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Fiction and poetry",
+                  "correct": true
+                },
+                {
+                  "text": "Poetry only",
+                  "correct": false
+                },
+                {
+                  "text": "Fiction and biographies",
+                  "correct": false
+                },
+                {
+                  "text": "Poetry and comics",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) Fiction and poetry — fiction 420 to 380; poetry 60 to 50."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Science rose by the same number as graphic novels but by a larger percentage because it",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "suits older readers",
+                  "correct": false
+                },
+                {
+                  "text": "is more popular",
+                  "correct": false
+                },
+                {
+                  "text": "started from a smaller number",
+                  "correct": true
+                },
+                {
+                  "text": "was borrowed for longer",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) started from a smaller number — 60 on 150 is 40%; 60 on 180 is about 33%."
+            },
+            {
+              "type": "mcq",
+              "prompt": "By roughly what percentage did biographies rise?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "30%",
+                  "correct": false
+                },
+                {
+                  "text": "33%",
+                  "correct": true
+                },
+                {
+                  "text": "25%",
+                  "correct": false
+                },
+                {
+                  "text": "40%",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) 33% — 90 to 120: 30 on 90, about 33%."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The librarian's note of caution suggests that the overall rise",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "is too small to matter",
+                  "correct": false
+                },
+                {
+                  "text": "came only from fiction",
+                  "correct": false
+                },
+                {
+                  "text": "may partly reflect a longer term",
+                  "correct": true
+                },
+                {
+                  "text": "was wrongly counted",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) may partly reflect a longer term — Term 2 was two weeks longer."
+            },
+            {
+              "type": "vsa",
+              "prompt": "By how many books did total borrowing rise?",
+              "marks": 1,
+              "answer": "100 (900 to 1,000)"
+            },
+            {
+              "type": "sa",
+              "prompt": "What evidence links the science corner to the change in borrowing? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Science loans rose by 60, from 150 to 210, the largest proportional rise at 40% (1 mark), and more than half of the Term 2 science loans were titles from the display (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What does the librarian plan for poetry, and why? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "A poetry-reading afternoon in Term 3 and students recommending titles (1 mark), because poetry fell from 60 to 50 loans — the only category besides fiction to decline (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-f5",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "Catching the Monsoon",
+          "outcome": "E10GW-08-2",
+          "difficulty": "HARD",
+          "marks": 10,
+          "passage": "In a housing society of three apartment blocks, residents installed rooftop pipes and filters in 2024 to channel rainwater into an underground tank and a recharge pit beside the society's borewell. A residents' committee recorded the water collected in the first full monsoon:\n\nJune: 90,000 litres\nJuly: 180,000 litres\nAugust: 150,000 litres\nSeptember: 60,000 litres\n\nIn all, 480,000 litres were collected in four months. July, the wettest month, supplied 37.5% of the total on its own, and July and August together accounted for more than two-thirds.\n\nAbout a quarter of the water, 120,000 litres, was stored in the tank and used for washing cars and watering the garden. The remaining 360,000 litres went into the recharge pit to replenish the groundwater.\n\nThe effect showed after the rains. From October to December the year before, the society had bought 30 water tankers because the borewell ran low. In the same months this year it needed only 18, a fall of 40%. At ₹1,500 a tanker, that saved ₹18,000 in three months, against an installation cost of ₹2,40,000.\n\nThe committee admits that one good monsoon proves little, and that a dry year could give very different figures. But it has asked two neighbouring societies to join the scheme, arguing that groundwater is shared and one society cannot recharge it alone.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "In which month was the least water collected?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "June",
+                  "correct": false
+                },
+                {
+                  "text": "August",
+                  "correct": false
+                },
+                {
+                  "text": "September",
+                  "correct": true
+                },
+                {
+                  "text": "July",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) September — 60,000 litres."
+            },
+            {
+              "type": "mcq",
+              "prompt": "July and August together supplied",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "more than two-thirds of the total",
+                  "correct": true
+                },
+                {
+                  "text": "exactly half of the total",
+                  "correct": false
+                },
+                {
+                  "text": "37.5% of the total",
+                  "correct": false
+                },
+                {
+                  "text": "a quarter of the total",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) more than two-thirds of the total — 330,000 of 480,000 litres is about 69%."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Most of the water collected was",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "used for washing cars",
+                  "correct": false
+                },
+                {
+                  "text": "stored in the tank",
+                  "correct": false
+                },
+                {
+                  "text": "sold to neighbours",
+                  "correct": false
+                },
+                {
+                  "text": "sent into the recharge pit",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) sent into the recharge pit — 360,000 of 480,000 litres — three-quarters."
+            },
+            {
+              "type": "mcq",
+              "prompt": "How many fewer tankers were bought from October to December?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "18",
+                  "correct": false
+                },
+                {
+                  "text": "30",
+                  "correct": false
+                },
+                {
+                  "text": "12",
+                  "correct": true
+                },
+                {
+                  "text": "40",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) 12 — 30 last year, 18 this year."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Neighbouring societies were asked to join because",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "groundwater is shared by all",
+                  "correct": true
+                },
+                {
+                  "text": "the tank was too small",
+                  "correct": false
+                },
+                {
+                  "text": "tankers were too costly",
+                  "correct": false
+                },
+                {
+                  "text": "the pipes needed repair",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) groundwater is shared by all — one society 'cannot recharge it alone'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How much did the society save on tankers from October to December?",
+              "marks": 1,
+              "answer": "₹18,000"
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does the committee say one good monsoon 'proves little'? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "The figures come from a single season (1 mark); a dry year could produce very different collections and tanker savings, so a lasting trend cannot yet be claimed (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Will the tanker saving alone repay the installation cost quickly? Explain with figures. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "No (1 mark): ₹18,000 was saved in three months against a cost of ₹2,40,000, so it would take more than thirteen such periods to recover the cost (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-f6",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "Who Plays, and Who Does Not",
+          "outcome": "E10GW-08-2",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "A co-educational school of 500 students — 260 boys and 240 girls — asked every student whether they play a sport regularly, meaning at least twice a week outside the compulsory games period.\n\nBoys: 182 of 260 play regularly (70%)\nGirls: 108 of 240 play regularly (45%)\nAll students: 290 of 500 (58%)\n\nThe 25-percentage-point gap between boys and girls prompted a second question to the 132 girls who do not play regularly, asking for their main reason:\n\nNo time after tuition classes: 50\nNo team for the sport they would choose: 40\nFeel self-conscious playing in front of others: 26\nNot interested in sport: 16\n\nOnly 16 of the 132, about one in eight, said they were not interested. Most of the others named obstacles the school could remove. Several girls who wanted to play badminton or kabaddi pointed out that the school fields teams only in football, cricket and basketball.\n\nThe sports department will now start badminton and kabaddi teams, open to all, and move one practice to the lunch break so that students with evening tuition can attend. It will also hold one girls-only session a week for those uncomfortable at mixed practices.\n\nThe survey will be repeated at the end of the year. The department's aim is not to make every student an athlete, but to ensure that no one who wants to play is kept out.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "What percentage of all students play regularly?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "45%",
+                  "correct": false
+                },
+                {
+                  "text": "58%",
+                  "correct": true
+                },
+                {
+                  "text": "70%",
+                  "correct": false
+                },
+                {
+                  "text": "25%",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) 58% — 290 of 500."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What was the most common reason girls gave for not playing?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "No suitable team",
+                  "correct": false
+                },
+                {
+                  "text": "Feeling self-conscious",
+                  "correct": false
+                },
+                {
+                  "text": "No time after tuition",
+                  "correct": true
+                },
+                {
+                  "text": "No interest in sport",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) No time after tuition — 50 of the 132 girls."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What fraction of the non-playing girls were not interested?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "About one in four",
+                  "correct": false
+                },
+                {
+                  "text": "About one in three",
+                  "correct": false
+                },
+                {
+                  "text": "About half",
+                  "correct": false
+                },
+                {
+                  "text": "About one in eight",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) About one in eight — 16 of 132 is about 12%."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which step answers the girls who feel self-conscious?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "New kabaddi teams",
+                  "correct": false
+                },
+                {
+                  "text": "A girls-only session",
+                  "correct": true
+                },
+                {
+                  "text": "Lunch-break practice",
+                  "correct": false
+                },
+                {
+                  "text": "Repeating the survey",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) A girls-only session — it is for those 'uncomfortable at mixed practices'."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Moving a practice to the lunch break is meant to help",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "students with evening tuition",
+                  "correct": true
+                },
+                {
+                  "text": "the cricket team",
+                  "correct": false
+                },
+                {
+                  "text": "younger students",
+                  "correct": false
+                },
+                {
+                  "text": "the games teachers",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) students with evening tuition — so that 'students with evening tuition can attend'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How many boys do not play a sport regularly?",
+              "marks": 1,
+              "answer": "78 (260 − 182)"
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does the report suggest the gap is not mainly about lack of interest? Use figures. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Only 16 of the 132 non-playing girls, about one in eight, said they were not interested (1 mark); the other 116 named obstacles such as tuition timings, no team or self-consciousness, which the school can remove (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Explain the department's stated aim in your own words. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "It does not want to turn everyone into a sportsperson (1 mark); it wants every student who wishes to play to have the chance, without timings, teams or discomfort keeping them out (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-f7",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "Where the Pocket Money Goes",
+          "outcome": "E10GW-08-2",
+          "difficulty": "MEDIUM",
+          "marks": 10,
+          "passage": "A group of Class 10 students surveyed 250 classmates and juniors about their monthly pocket money and how they spend it. The average amount received was ₹800 a month, divided on average as follows:\n\nSnacks and eating out: ₹240 (30%)\nMobile recharge and apps: ₹160 (20%)\nStationery and books: ₹120 (15%)\nEntertainment and games: ₹120 (15%)\nSaved: ₹160 (20%)\n\nFood was thus the largest single item, taking nearly a third of the money, and with recharges and entertainment it accounted for 65% — almost two rupees in every three. Students spent as much on entertainment as on stationery and books.\n\nOnly 90 of the 250 students (36%) said they kept any written or digital record of their spending. Asked how much they had saved the previous month, many of the others could only guess, and several said they 'ran out' before the month ended.\n\nThe team also asked what students were saving for. The commonest goals were a new phone or gadget, a gift for a family member and, in a few cases, a course or a trip.\n\nThe team has suggested a short session on budgeting during a class period, including how to keep a simple spending record. Its report argues that learning to manage ₹800 a month is practice for managing much larger sums later, and that mistakes are far cheaper to make now.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Which was the largest single item of spending?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Snacks and eating out",
+                  "correct": true
+                },
+                {
+                  "text": "Mobile recharge and apps",
+                  "correct": false
+                },
+                {
+                  "text": "Entertainment and games",
+                  "correct": false
+                },
+                {
+                  "text": "Stationery and books",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) Snacks and eating out — ₹240, or 30%."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Which two items received equal amounts?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "Entertainment and stationery",
+                  "correct": true
+                },
+                {
+                  "text": "Snacks and savings",
+                  "correct": false
+                },
+                {
+                  "text": "Recharge and entertainment",
+                  "correct": false
+                },
+                {
+                  "text": "Stationery and savings",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) Entertainment and stationery — ₹120 each."
+            },
+            {
+              "type": "mcq",
+              "prompt": "On average, how much of the ₹800 was spent rather than saved?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "₹640",
+                  "correct": true
+                },
+                {
+                  "text": "₹520",
+                  "correct": false
+                },
+                {
+                  "text": "₹160",
+                  "correct": false
+                },
+                {
+                  "text": "₹560",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) ₹640 — ₹800 − ₹160 saved."
+            },
+            {
+              "type": "mcq",
+              "prompt": "What percentage of students kept a record of their spending?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "20%",
+                  "correct": false
+                },
+                {
+                  "text": "64%",
+                  "correct": false
+                },
+                {
+                  "text": "30%",
+                  "correct": false
+                },
+                {
+                  "text": "36%",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) 36% — 90 of 250."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The report argues that budgeting should be learnt now because",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "pocket money will stop",
+                  "correct": false
+                },
+                {
+                  "text": "mistakes cost less at this age",
+                  "correct": true
+                },
+                {
+                  "text": "phones are expensive",
+                  "correct": false
+                },
+                {
+                  "text": "parents demand it",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) mistakes cost less at this age — 'mistakes are far cheaper to make now'."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How many students kept no record of their spending?",
+              "marks": 1,
+              "answer": "160 (250 − 90)"
+            },
+            {
+              "type": "sa",
+              "prompt": "Show how food, recharges and entertainment make up 'almost two rupees in every three'. Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "₹240 + ₹160 + ₹120 = ₹520, which is 65% of ₹800 (1 mark); two rupees in three would be about 66.7%, so 65% is almost that (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "What do the students who 'ran out' suggest, and how does the team plan to help? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "They had not tracked or planned their spending and could only guess what they saved (1 mark); the team suggests a class session on budgeting, including keeping a simple spending record (1 mark)."
+            }
+          ]
+        },
+        {
+          "id": "gw10-08-f8",
+          "kind": "reading",
+          "passageType": "factual",
+          "title": "Winter Visitors at the Town Lake",
+          "outcome": "E10GW-08-2",
+          "difficulty": "HARD",
+          "marks": 10,
+          "passage": "Every January for five years, the nature club of a school in a lakeside town has counted the migratory birds that spend the winter on the town lake. Members count at dawn from six fixed points on the same weekend each year. Their totals were:\n\n2021: 4,200 birds of 34 species\n2022: 3,900 birds of 33 species\n2023: 3,100 birds of 29 species\n2024: 2,600 birds of 26 species\n2025: 3,400 birds of 31 species\n\nBetween 2021 and 2024 the count fell by 1,600 birds, or about 38%, and eight species stopped appearing altogether. The steepest single drop, of 800 birds, came between 2022 and 2023, the year a boating jetty opened and motorboats began running in the mornings.\n\nIn 2024 the town council, acting partly on the club's figures, banned motorboats before noon in the winter months, and volunteers cleared plastic waste from the shallow edges where many birds feed. The 2025 count rose by 800 birds, recovering half of the loss since 2021, and five of the missing species returned.\n\nThe club is careful not to overstate its case. One year's rise may have other causes, such as the weather further north along the birds' routes. But the counts are carried out the same way every year, which makes the trend more reliable than any single figure.",
+          "parts": [
+            {
+              "type": "mcq",
+              "prompt": "Between which years was the steepest fall?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "2021 and 2022",
+                  "correct": false
+                },
+                {
+                  "text": "2023 and 2024",
+                  "correct": false
+                },
+                {
+                  "text": "2022 and 2023",
+                  "correct": true
+                },
+                {
+                  "text": "2024 and 2025",
+                  "correct": false
+                }
+              ],
+              "answer": "(c) 2022 and 2023 — 3,900 to 3,100: a drop of 800."
+            },
+            {
+              "type": "mcq",
+              "prompt": "By about what percentage did the count fall from 2021 to 2024?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "38%",
+                  "correct": true
+                },
+                {
+                  "text": "16%",
+                  "correct": false
+                },
+                {
+                  "text": "26%",
+                  "correct": false
+                },
+                {
+                  "text": "62%",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) 38% — 1,600 of 4,200 is about 38%."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The 2025 count recovered",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "all of the loss since 2021",
+                  "correct": false
+                },
+                {
+                  "text": "a quarter of the loss",
+                  "correct": false
+                },
+                {
+                  "text": "the 2022 level",
+                  "correct": false
+                },
+                {
+                  "text": "half of the loss since 2021",
+                  "correct": true
+                }
+              ],
+              "answer": "(d) half of the loss since 2021 — 800 of the 1,600 lost."
+            },
+            {
+              "type": "mcq",
+              "prompt": "The club links the decline to boating because",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "boats frightened the members",
+                  "correct": false
+                },
+                {
+                  "text": "the worst drop came as motorboats began",
+                  "correct": true
+                },
+                {
+                  "text": "the jetty was built on a feeding ground",
+                  "correct": false
+                },
+                {
+                  "text": "boats cleared the plastic",
+                  "correct": false
+                }
+              ],
+              "answer": "(b) the worst drop came as motorboats began — the steepest drop came the year the jetty opened."
+            },
+            {
+              "type": "mcq",
+              "prompt": "Why does the club avoid overstating its case?",
+              "marks": 1,
+              "options": [
+                {
+                  "text": "The rise may have other causes",
+                  "correct": true
+                },
+                {
+                  "text": "The counts were careless",
+                  "correct": false
+                },
+                {
+                  "text": "The council disagreed",
+                  "correct": false
+                },
+                {
+                  "text": "Too few birds were seen",
+                  "correct": false
+                }
+              ],
+              "answer": "(a) The rise may have other causes — e.g. weather further north along the routes."
+            },
+            {
+              "type": "vsa",
+              "prompt": "How many fewer species were seen in 2025 than in 2021?",
+              "marks": 1,
+              "answer": "3 (34 − 31)"
+            },
+            {
+              "type": "sa",
+              "prompt": "What two steps were taken in 2024, and what followed? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Motorboats were banned before noon in winter and plastic was cleared from the shallow feeding edges (1 mark); in 2025 the count rose by 800 birds and five missing species returned (1 mark)."
+            },
+            {
+              "type": "sa",
+              "prompt": "Why does counting the same way every year matter? Answer in 30–40 words.",
+              "marks": 2,
+              "answer": "Counting at dawn from the same six points on the same weekend makes the years comparable (1 mark), so the trend over five years is more reliable than any single year's figure (1 mark)."
+            }
+          ]
         }
       ]
     }
