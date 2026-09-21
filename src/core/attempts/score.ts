@@ -33,6 +33,13 @@ export type Response =
   | { kind: "boolean"; value: boolean }
   | { kind: "numeric"; value: number }
   | { kind: "text"; value: string }
+  /**
+   * A written answer that exists on a paper script, recorded by the teacher
+   * for a sitting done on paper. It says only that the student wrote
+   * something — never what — so a marker is sent to the script, and no
+   * words are ever put in a student's mouth.
+   */
+  | { kind: "paper" }
   | null;
 
 export type Marked = {

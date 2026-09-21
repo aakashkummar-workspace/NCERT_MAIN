@@ -22,6 +22,10 @@ import { ClockIcon, CheckIcon, AlertTriangleIcon } from "@/ui/icons";
 type Question = {
   assessmentQuestionId: string;
   position: number;
+  /** Printed number; the two halves of an "OR" pair share one. */
+  number: number;
+  section: string | null;
+  choiceGroup: number | null;
   marks: number;
   type: string;
   stem: string;
@@ -560,9 +564,27 @@ export function Player({ initial }: { initial: Initial }) {
     if (!existing) return;
     const merged = { ...existing, ...patch };
 
+    // An internal choice: answering one alternative clears the other, through
+    // the same queue, so the paper never holds two answers to one "OR". The
+    // server would count only the first anyway — clearing it here means the
+    // student sees the rule rather than meeting it in their result.
+    const cleared =
+      merged.choiceGroup !== null && hasAnswer(merged.response)
+        ? questions.filter(
+            (item) =>
+              item.choiceGroup === merged.choiceGroup &&
+              item.assessmentQuestionId !== questionId &&
+              hasAnswer(item.response),
+          )
+        : [];
+
     setQuestions((all) =>
       all.map((item) =>
-        item.assessmentQuestionId === questionId ? merged : item,
+        item.assessmentQuestionId === questionId
+          ? merged
+          : cleared.some((other) => other.assessmentQuestionId === item.assessmentQuestionId)
+            ? { ...item, response: null }
+            : item,
       ),
     );
 
@@ -571,13 +593,40 @@ export function Player({ initial }: { initial: Initial }) {
       markedForReview: merged.markedForReview,
     });
     enqueue(questionId);
+    for (const other of cleared) {
+      answersRef.current.set(other.assessmentQuestionId, {
+        response: null,
+        markedForReview: other.markedForReview,
+      });
+      enqueue(other.assessmentQuestionId);
+    }
   };
 
   const question = questions[current];
   if (!question) return null;
 
-  const answered = questions.filter((item) => hasAnswer(item.response)).length;
-  const blank = questions.length - answered;
+  // Counted by NUMBER, not by row: an "OR" pair is one question to answer,
+  // and "3 still blank" must not count the alternative a student skipped on
+  // purpose.
+  const numbersAnswered = new Set(
+    questions.filter((item) => hasAnswer(item.response)).map((item) => item.number),
+  );
+  const totalNumbers = new Set(questions.map((item) => item.number)).size;
+  const answered = numbersAnswered.size;
+  const blank = totalNumbers - answered;
+  const alternative =
+    question.choiceGroup === null
+      ? null
+      : questions.findIndex(
+          (item) =>
+            item.choiceGroup === question.choiceGroup &&
+            item.assessmentQuestionId !== question.assessmentQuestionId,
+        );
+  const isSecondAlternative =
+    question.choiceGroup !== null &&
+    alternative !== null &&
+    alternative >= 0 &&
+    alternative < current;
   const minutes = Math.floor(remainingMs / 60_000);
   const seconds = Math.floor((remainingMs % 60_000) / 1000);
   const urgent = remainingMs > 0 && remainingMs < 5 * 60_000;
@@ -637,12 +686,29 @@ export function Player({ initial }: { initial: Initial }) {
         <main className="ui-player-question">
           <div className="ui-player-meta">
             <span>
-              Question {current + 1} of {questions.length}
+              {question.section && <>Section {question.section} · </>}
+              Question {question.number}
+              {question.choiceGroup !== null && (isSecondAlternative ? " (second choice)" : " (first choice)")} of{" "}
+              {totalNumbers}
             </span>
             <span className="tabular">
               {question.marks} {question.marks === 1 ? "mark" : "marks"}
             </span>
           </div>
+
+          {alternative !== null && alternative >= 0 && (
+            <p className="ui-player-choice">
+              <strong>Internal choice.</strong> Answer this question <em>or</em> the other
+              question {question.number} — not both. Answering one clears the other.{" "}
+              <button
+                type="button"
+                className="ui-link-button"
+                onClick={() => goTo(() => alternative)}
+              >
+                See the other choice
+              </button>
+            </p>
+          )}
 
           <p className="ui-player-stem">{question.stem}</p>
 
@@ -868,9 +934,15 @@ export function Player({ initial }: { initial: Initial }) {
                       data-state={index === current ? "current" : state}
                       onClick={() => goTo(() => index)}
                       aria-current={index === current ? "true" : undefined}
-                      aria-label={`Question ${index + 1}, ${LABEL[state]}`}
+                      aria-label={`Question ${item.number}${
+                        item.choiceGroup !== null ? " (choice)" : ""
+                      }, ${LABEL[state]}`}
                     >
-                      {index + 1}
+                      {item.number}
+                      {item.choiceGroup !== null &&
+                        (questions.findIndex((other) => other.choiceGroup === item.choiceGroup) === index
+                          ? "a"
+                          : "b")}
                     </button>
                   </li>
                 );
@@ -879,7 +951,7 @@ export function Player({ initial }: { initial: Initial }) {
           </nav>
 
           <p className="ui-player-progress tabular">
-            {answered} of {questions.length} answered
+            {answered} of {totalNumbers} answered
           </p>
 
           <button

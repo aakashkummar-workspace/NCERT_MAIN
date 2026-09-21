@@ -37,6 +37,8 @@ export type StudentAssignment = {
   /** A finished sitting, when the teacher has allowed them to see it. */
   finishedAttemptId: string | null;
   canStart: boolean;
+  /** Sat on paper in the room; never started here. */
+  onPaper: boolean;
   resultVisible: boolean;
 };
 
@@ -114,9 +116,11 @@ export async function studentAssignments(
           inProgressAttemptId: inProgress?.id ?? null,
           finishedAttemptId: finished?.id ?? null,
           canStart:
+            assignment.deliveryMode !== "PAPER" &&
             status === "OPEN" &&
             (Boolean(inProgress) ||
               assignment.attempts.length < assignment.maxAttempts),
+          onPaper: assignment.deliveryMode === "PAPER",
           resultVisible,
         };
       });

@@ -33,6 +33,11 @@ export type CreateInput = {
   durationOverrideMinutes?: number | null;
   maxAttempts: number;
   resultsPolicy: "IMMEDIATE" | "AFTER_CLOSE" | "MANUAL";
+  /**
+   * PAPER: sat in the room on paper, and recorded by the teacher afterwards.
+   * Students cannot start it in the player. See core/paper.
+   */
+  deliveryMode?: "ONLINE" | "PAPER";
   /** Empty means the whole class, including anyone who joins tomorrow. */
   studentUserIds?: string[];
 };
@@ -138,6 +143,7 @@ export async function createAssignment(
         durationOverrideMinutes: input.durationOverrideMinutes ?? null,
         maxAttempts: input.maxAttempts,
         resultsPolicy: input.resultsPolicy,
+        deliveryMode: input.deliveryMode ?? "ONLINE",
       },
     });
 
@@ -259,10 +265,17 @@ export async function getAssignment(organizationId: string, id: string) {
     const targeted = new Set(row.targets.map((t) => t.studentUserId));
     const studentIds = await expectedStudentIds(tx, row);
 
-    const students = await tx.user.findMany({
-      where: { id: { in: studentIds } },
-      select: { id: true, fullName: true, phone: true },
-    });
+    const [students, cards] = await Promise.all([
+      tx.user.findMany({
+        where: { id: { in: studentIds } },
+        select: { id: true, fullName: true, phone: true },
+      }),
+      tx.loginCard.findMany({
+        where: { studentUserId: { in: studentIds }, revokedAt: null },
+        select: { studentUserId: true },
+      }),
+    ]);
+    const carded = new Set(cards.map((card) => card.studentUserId));
 
     const attempts = await tx.attempt.findMany({
       where: { assignmentId: id },
@@ -296,6 +309,7 @@ export async function getAssignment(organizationId: string, id: string) {
       durationOverrideMinutes: row.durationOverrideMinutes,
       maxAttempts: row.maxAttempts,
       resultsPolicy: row.resultsPolicy,
+      deliveryMode: row.deliveryMode,
       resultsReleasedAt: row.resultsReleasedAt,
       cancelledAt: row.cancelledAt,
       series: row.examSeries ? { id: row.examSeries.id, name: row.examSeries.name } : null,
@@ -303,9 +317,9 @@ export async function getAssignment(organizationId: string, id: string) {
       students: students.map((student) => ({
         userId: student.id,
         fullName: student.fullName,
-        // A student with no mobile cannot receive a sign-in code, so they
-        // cannot sit this. Surfaced here rather than discovered on the day.
-        canSignIn: Boolean(student.phone),
+        // With neither a mobile nor a printed card a student cannot sign in,
+        // so cannot sit this. Surfaced here rather than discovered on the day.
+        canSignIn: Boolean(student.phone) || carded.has(student.id),
         attemptStatus: attemptStatusOf(latest.get(student.id)),
       })),
     };

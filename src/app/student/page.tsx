@@ -306,12 +306,18 @@ function TestsSection({
               </p>
 
               <div className="ui-test-actions">
-                <StartTest
-                  assignmentId={assignment.assignmentId}
-                  canStart={assignment.canStart}
-                  resuming={assignment.inProgressAttemptId !== null}
-                  inProgressAttemptId={assignment.inProgressAttemptId}
-                />
+                {assignment.onPaper ? (
+                  <p className="ui-hint" lang={ui.content}>
+                    {t("home.test.onPaper")}
+                  </p>
+                ) : (
+                  <StartTest
+                    assignmentId={assignment.assignmentId}
+                    canStart={assignment.canStart}
+                    resuming={assignment.inProgressAttemptId !== null}
+                    inProgressAttemptId={assignment.inProgressAttemptId}
+                  />
+                )}
                 {assignment.resultVisible && assignment.finishedAttemptId && (
                   <Link
                     href={`/student/results/${assignment.finishedAttemptId}`}

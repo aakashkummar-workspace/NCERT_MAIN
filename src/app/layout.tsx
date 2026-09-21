@@ -9,6 +9,7 @@ import "@/ui/results.css";
 import "@/ui/institute.css";
 import "@/ui/report.css";
 import "@/ui/paper.css";
+import "@/ui/paper-tools.css";
 import "@/ui/live.css";
 import "@/ui/readiness.css";
 import "@/ui/webhooks.css";

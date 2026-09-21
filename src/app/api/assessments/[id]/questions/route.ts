@@ -5,7 +5,24 @@ import { fail, failValidation, ok } from "../../../_lib/respond";
 
 export const runtime = "nodejs";
 
-const Body = z.object({ questionIds: z.array(z.uuid()).max(100) });
+/**
+ * Either the plain list of ids, or the layout: each question with its section
+ * and, for an internal choice, the group it shares with its alternative.
+ */
+const Body = z.union([
+  z.object({ questionIds: z.array(z.uuid()).max(100) }),
+  z.object({
+    items: z
+      .array(
+        z.object({
+          questionId: z.uuid(),
+          section: z.string().max(4).nullable().optional(),
+          choiceGroup: z.number().int().min(1).max(1000).nullable().optional(),
+        }),
+      )
+      .max(100),
+  }),
+]);
 
 export async function PUT(
   request: Request,
@@ -28,7 +45,7 @@ export async function PUT(
   const result = await setQuestions(
     check.session.actor,
     id,
-    parsed.data.questionIds,
+    "items" in parsed.data ? parsed.data.items : parsed.data.questionIds,
   );
   if (!result.ok && result.error === "NOT_FOUND") return notFound("assessment");
   if (!result.ok) return fail("CONFLICT", result.error);

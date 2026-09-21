@@ -76,6 +76,11 @@ export function StudentSignInView({
           />
 
           <p className="ui-auth-foot">
+            {t("signin.card.prompt")}{" "}
+            <Link href="/signin/card">{t("signin.card.link")}</Link>
+          </p>
+
+          <p className="ui-auth-foot">
             {t("signin.teacherPrompt")}{" "}
             <Link href={brand ? `/school/${brand.slug}` : "/signin"}>
               {t("signin.teacherLink")}

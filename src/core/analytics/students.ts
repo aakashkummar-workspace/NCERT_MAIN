@@ -65,7 +65,7 @@ export async function listStudents(
     const studentIds = memberships.map((membership) => membership.userId);
     if (studentIds.length === 0) return [];
 
-    const [users, enrolments, mastery, attempts] = await Promise.all([
+    const [users, enrolments, mastery, attempts, cards] = await Promise.all([
       tx.user.findMany({
         where: { id: { in: studentIds } },
         select: { id: true, fullName: true, phone: true },
@@ -82,7 +82,12 @@ export async function listStudents(
         where: { studentUserId: { in: studentIds }, status: { not: "IN_PROGRESS" } },
         select: { studentUserId: true, submittedAt: true },
       }),
+      tx.loginCard.findMany({
+        where: { studentUserId: { in: studentIds }, revokedAt: null },
+        select: { studentUserId: true },
+      }),
     ]);
+    const carded = new Set(cards.map((card) => card.studentUserId));
 
     const classesByStudent = new Map<string, string[]>();
     for (const enrolment of enrolments) {
@@ -134,10 +139,10 @@ export async function listStudents(
         studentUserId: user.id,
         fullName: user.fullName,
         classNames: classesByStudent.get(user.id) ?? [],
-        // Surfaced here as well as on the class page. A student with no number
-        // cannot sit anything, and discovering that on exam day is the failure
-        // this keeps catching.
-        canSignIn: Boolean(user.phone),
+        // Surfaced here as well as on the class page. A student with neither a
+        // number nor a printed card cannot sit anything, and discovering that
+        // on exam day is the failure this keeps catching.
+        canSignIn: Boolean(user.phone) || carded.has(user.id),
         sittings: sittings?.count ?? 0,
         measuredConcepts: measured.length,
         struggling: measured.filter(

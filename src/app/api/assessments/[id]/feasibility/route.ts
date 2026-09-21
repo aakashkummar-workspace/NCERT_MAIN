@@ -1,4 +1,4 @@
-import { checkFeasibility, getAssessment } from "@/core/assessments";
+import { checkFeasibility, checkPatternFeasibility, getAssessment } from "@/core/assessments";
 import { describeShortfalls } from "@/core/assessments/blueprint";
 import { guard, notFound } from "../../../_lib/guard";
 import { fail, failValidation, ok } from "../../../_lib/respond";
@@ -33,10 +33,24 @@ export async function POST(
   const parsed = BlueprintSchema.safeParse(raw);
   if (!parsed.success) return failValidation(parsed.error);
 
+  const blueprint = parsed.data as Parameters<typeof checkFeasibility>[2];
+
+  // A sectioned pattern is answered per section, by type and marks; the
+  // difficulty-by-type grid means nothing to a paper laid out in sections.
+  if (blueprint.pattern) {
+    return ok(
+      await checkPatternFeasibility(
+        check.session.actor.organizationId,
+        assessment.subjectId,
+        blueprint,
+      ),
+    );
+  }
+
   const feasibility = await checkFeasibility(
     check.session.actor.organizationId,
     assessment.subjectId,
-    parsed.data as Parameters<typeof checkFeasibility>[2],
+    blueprint,
   );
 
   return ok({ ...feasibility, messages: describeShortfalls(feasibility) });

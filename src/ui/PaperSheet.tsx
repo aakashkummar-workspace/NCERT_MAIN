@@ -23,6 +23,10 @@
 
 export type PaperSheetQuestion = {
   position: number;
+  /** Printed beside it; the two halves of an internal choice share one. */
+  number: number;
+  section: string | null;
+  choiceGroup: number | null;
   marks: number;
   type: string;
   stem: string;
@@ -43,6 +47,23 @@ export type PaperSheetHeader = {
 
 /** The written types, which need answer space rather than options. */
 const WRITTEN = new Set(["VSA", "SA", "LA", "CASE_STUDY", "NUMERIC", "FILL_BLANK"]);
+
+/**
+ * What goes above a question: a section heading when the section changes, and
+ * "OR" when this is the second half of an internal choice. Printed the way a
+ * board paper prints them, because that is the paper this one rehearses.
+ */
+function lead(questions: PaperSheetQuestion[], index: number) {
+  const question = questions[index]!;
+  const previous = index > 0 ? questions[index - 1]! : null;
+  return {
+    section:
+      question.section && question.section !== (previous?.section ?? null)
+        ? question.section
+        : null,
+    or: question.choiceGroup !== null && previous?.choiceGroup === question.choiceGroup,
+  };
+}
 
 /** Ruled lines for a written answer: enough for the marks, capped at a page. */
 function lines(marks: number): number {
@@ -110,7 +131,11 @@ export function PaperSheet({
       <section className="ui-paper-instructions">
         <h2>General instructions</h2>
         <ol>
-          <li>All questions are compulsory.</li>
+          <li>
+            {questions.some((question) => question.choiceGroup !== null)
+              ? "All questions are compulsory. Where a question offers a choice (OR), answer only one of the alternatives."
+              : "All questions are compulsory."}
+          </li>
           <li>Marks for each question are shown against it.</li>
           <li>Write your answers in the space provided.</li>
           {instructions && <li>{instructions}</li>}
@@ -118,10 +143,16 @@ export function PaperSheet({
       </section>
 
       <ol className="ui-paper-questions">
-        {questions.map((question) => (
+        {questions.map((question, index) => (
           <li key={question.position} className="ui-paper-question">
+            {lead(questions, index).section && (
+              <h2 className="ui-paper-section">Section {question.section}</h2>
+            )}
+            {lead(questions, index).or && <p className="ui-paper-or">OR</p>}
             <div className="ui-paper-question-head">
-              <span className="ui-paper-number tabular">{question.position}.</span>
+              <span className="ui-paper-number tabular">
+                {lead(questions, index).or ? "" : `${question.number}.`}
+              </span>
               <span className="ui-paper-stem">{question.stem}</span>
               <span className="ui-paper-marks tabular">[{question.marks}]</span>
             </div>
@@ -181,10 +212,16 @@ export function AnswerKeySheet({
       </p>
 
       <ol className="ui-paper-questions">
-        {questions.map((question) => (
+        {questions.map((question, index) => (
           <li key={question.position} className="ui-paper-question">
+            {lead(questions, index).section && (
+              <h2 className="ui-paper-section">Section {question.section}</h2>
+            )}
+            {lead(questions, index).or && <p className="ui-paper-or">OR</p>}
             <div className="ui-paper-question-head">
-              <span className="ui-paper-number tabular">{question.position}.</span>
+              <span className="ui-paper-number tabular">
+                {lead(questions, index).or ? "" : `${question.number}.`}
+              </span>
               <span className="ui-paper-stem">{question.stem}</span>
               <span className="ui-paper-marks tabular">[{question.marks}]</span>
             </div>

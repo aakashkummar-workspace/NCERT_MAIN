@@ -11,6 +11,7 @@ import { canStart } from "@/core/assignments/window";
 import type { AnswerKey, Option, QuestionType } from "@/core/questions/validate";
 import { markAnswer, summarise, type Response } from "./score";
 import { isBlankResponse, normaliseResponse } from "./response";
+import { alternativesToDrop, displayNumbers } from "@/core/assessments/pattern";
 
 /**
  * Attempts: the student's sitting.
@@ -82,6 +83,17 @@ export async function startAttempt(
       // 404-shaped: no reason to confirm the test exists to someone who is not
       // meant to sit it.
       return { ok: false, code: "NOT_FOUND", message: "We could not find that test." };
+    }
+
+    // Sat on paper in the room: there is no sitting to start here, and a
+    // second, online sitting of the same paper would leave the teacher two
+    // answers to one paper and no way to say which counts.
+    if (assignment.deliveryMode === "PAPER") {
+      return {
+        ok: false,
+        code: "CLOSED",
+        message: "This test is sat on paper in class. Your teacher records it.",
+      };
     }
 
     // Resume before anything else: the same client id means the same sitting.
@@ -227,6 +239,18 @@ export async function startAttempt(
 export type PlayerQuestion = {
   assessmentQuestionId: string;
   position: number;
+  /**
+   * The number printed beside it. Alternatives in an "OR" pair share one, so
+   * it is not the position.
+   */
+  number: number;
+  /** "A", "B" … on a sectioned paper. */
+  section: string | null;
+  /**
+   * Shared with its alternative when this is half of an internal choice. The
+   * student answers one; answering the other clears the first.
+   */
+  choiceGroup: number | null;
   marks: number;
   type: QuestionType;
   stem: string;
@@ -304,6 +328,8 @@ export async function getPlayer(
     const answerByQuestion = new Map(
       answerRows.map((answer) => [answer.assessmentQuestionId, answer]),
     );
+    const numbers = displayNumbers(placements);
+    const numberOf = new Map(placements.map((placement, index) => [placement.id, numbers[index]!]));
 
     const questions: PlayerQuestion[] = placements.flatMap((placement) => {
       const answer = answerByQuestion.get(placement.id);
@@ -321,6 +347,9 @@ export async function getPlayer(
         {
           assessmentQuestionId: placement.id,
           position: placement.position,
+          number: numberOf.get(placement.id) ?? placement.position,
+          section: placement.section,
+          choiceGroup: placement.choiceGroup,
           marks: placement.marks,
           type: placement.question.type as QuestionType,
           stem: version.stem,
@@ -532,9 +561,41 @@ export async function submitAttempt(
       });
       const placementById = new Map(placements.map((p) => [p.id, p]));
 
+      // An internal choice: the alternative the student did not take is
+      // removed before anything is marked. Scored as a blank it would be a
+      // zero in their total, a mistake in their bank and evidence against a
+      // concept they were never asked about. See core/assessments/pattern.ts.
+      const dropPositions = new Set(
+        alternativesToDrop(
+          attempt.answers.flatMap((answer) => {
+            const placement = placementById.get(answer.assessmentQuestionId);
+            return placement
+              ? [
+                  {
+                    position: placement.position,
+                    choiceGroup: placement.choiceGroup,
+                    answered: !isBlankResponse(answer.response),
+                  },
+                ]
+              : [];
+          }),
+        ),
+      );
+      const dropped = attempt.answers.filter((answer) => {
+        const placement = placementById.get(answer.assessmentQuestionId);
+        return placement !== undefined && dropPositions.has(placement.position);
+      });
+      if (dropped.length > 0) {
+        await tx.attemptAnswer.deleteMany({
+          where: { id: { in: dropped.map((answer) => answer.id) } },
+        });
+      }
+      const droppedIds = new Set(dropped.map((answer) => answer.id));
+
       const marks = [];
 
       for (const answer of attempt.answers) {
+        if (droppedIds.has(answer.id)) continue;
         const placement = placementById.get(answer.assessmentQuestionId);
         if (!placement) continue;
 

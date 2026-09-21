@@ -44,6 +44,21 @@ export const hi = {
     "आपके सभी टेस्ट एक ही जगह, और बचा हुआ समय हमेशा स्क्रीन पर।",
   "signin.aside.subtitle": "कक्षा 9 और 10।",
 
+  // -- Signing in with a printed card --------------------------------------
+  "signin.card.prompt": "क्या शिक्षक ने आपको साइन-इन कार्ड दिया है?",
+  "signin.card.link": "कार्ड से साइन इन करें",
+  "signin.card.pageTitle": "कार्ड से साइन इन",
+  "signin.card.description":
+    "अपने कार्ड पर छपा कोड लिखें, या फ़ोन के कैमरे से उसका QR कोड स्कैन करें।",
+  "signin.card.label": "कार्ड कोड",
+  "signin.card.hint": "बारह अक्षर और अंक। बीच के डैश लिखना ज़रूरी नहीं है।",
+  "signin.card.checking": "आपके कार्ड से साइन इन हो रहा है…",
+  "signin.card.sharedDevice": {
+    one: "साझा कंप्यूटर पर काम ख़त्म होने पर साइन आउट करें। कार्ड से किया गया साइन इन {count} घंटे बाद अपने-आप भी ख़त्म हो जाता है।",
+    other: "साझा कंप्यूटर पर काम ख़त्म होने पर साइन आउट करें। कार्ड से किया गया साइन इन {count} घंटे बाद अपने-आप भी ख़त्म हो जाता है।",
+  },
+  "signin.card.usePhone": "इसके बजाय मोबाइल नंबर से साइन इन करें",
+
   // -- Step one: the number ------------------------------------------------
   "signin.phone.label": "मोबाइल नंबर",
   "signin.phone.placeholder": "10 अंकों का मोबाइल नंबर",
@@ -110,6 +125,8 @@ export const hi = {
   "home.test.minutes": { one: "{count} मिनट", other: "{count} मिनट" },
   "home.test.attempts": "कोशिशें",
   "home.test.attemptsOf": "{max} में से {used}",
+  "home.test.onPaper":
+    "यह टेस्ट कक्षा में काग़ज़ पर होगा। आपके उत्तर शिक्षक दर्ज करेंगे, और परिणाम यहीं दिखेगा।",
   "home.test.seeResult": "नतीजा देखें",
   "home.test.notTaken": "आपने यह टेस्ट नहीं दिया।",
   "home.test.notReleased": "आपके शिक्षक ने अभी नतीजा जारी नहीं किया है।",

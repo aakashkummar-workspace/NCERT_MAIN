@@ -61,6 +61,7 @@ export function AssignPanel({
   const [resultsPolicy, setResultsPolicy] = useState<
     "IMMEDIATE" | "AFTER_CLOSE" | "MANUAL"
   >("AFTER_CLOSE");
+  const [onPaper, setOnPaper] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -89,6 +90,7 @@ export function AssignPanel({
           closesAt: new Date(closesAt).toISOString(),
           maxAttempts,
           resultsPolicy,
+          deliveryMode: onPaper ? "PAPER" : "ONLINE",
         }),
       });
       const payload = await response.json().catch(() => null);
@@ -242,6 +244,19 @@ export function AssignPanel({
                   </Select>
                 </Field>
               </div>
+
+              <label className="ui-outcome-choice" style={{ marginTop: 14 }}>
+                <input
+                  type="checkbox"
+                  checked={onPaper}
+                  onChange={(event) => setOnPaper(event.target.checked)}
+                />
+                <span>
+                  <strong>Sat on paper in class.</strong> Students will not start it on a
+                  device. Afterwards you type in or scan each student&rsquo;s answer sheet,
+                  and it counts exactly like an online sitting.
+                </span>
+              </label>
 
               {problems.length > 0 && (
                 <ul className="ui-check-list" style={{ marginTop: 14 }}>

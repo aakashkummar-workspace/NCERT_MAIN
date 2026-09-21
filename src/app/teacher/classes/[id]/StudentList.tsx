@@ -27,6 +27,7 @@ type Student = {
   rollNumber: string | null;
   joinedAt: Date;
   canSignIn: boolean;
+  hasCard: boolean;
 };
 
 export function StudentList({
@@ -118,8 +119,10 @@ export function StudentList({
                   <span style={{ fontFamily: "var(--font-mono, monospace)" }}>
                     {student.phone}
                   </span>
+                ) : student.hasCard ? (
+                  <Badge tone="neutral">Sign-in card</Badge>
                 ) : (
-                  <Badge tone="warning">No mobile</Badge>
+                  <Badge tone="warning">No mobile or card</Badge>
                 )}
               </span>
               <Button

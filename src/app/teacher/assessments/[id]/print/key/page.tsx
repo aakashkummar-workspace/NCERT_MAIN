@@ -84,6 +84,9 @@ export default async function PrintAnswerKeyPage({
             }}
             questions={result.questions.map((question) => ({
               position: question.position,
+              number: question.number,
+              section: question.section,
+              choiceGroup: question.choiceGroup,
               marks: question.marks,
               type: question.type,
               stem: question.stem,

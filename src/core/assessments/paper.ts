@@ -4,6 +4,7 @@ import type { QuestionType } from "@prisma/client";
 import type { AnswerKey, Option } from "@/core/questions/validate";
 import type { Rubric } from "@/core/questions/rubric";
 import { DEFAULT_SETTINGS, type AssessmentSettings } from "./index";
+import { answerableMarks, displayNumbers } from "./pattern";
 
 /**
  * A paper, for printing on paper.
@@ -37,6 +38,10 @@ import { DEFAULT_SETTINGS, type AssessmentSettings } from "./index";
 
 export type PaperQuestion = {
   position: number;
+  /** The printed number; an "OR" pair shares one. */
+  number: number;
+  section: string | null;
+  choiceGroup: number | null;
   marks: number;
   type: QuestionType;
   stem: string;
@@ -103,13 +108,17 @@ export async function paperForPrint(
   );
   const byId = new Map(versions.map((version) => [version.id, version]));
 
+  const numbers = displayNumbers(row.questions);
   const questions: PaperQuestion[] = [];
-  for (const item of row.questions) {
+  for (const [index, item] of row.questions.entries()) {
     const version = item.questionVersionId ? byId.get(item.questionVersionId) : undefined;
     if (!version) continue;
     const options = (version.options ?? null) as Option[] | null;
     questions.push({
       position: item.position,
+      number: numbers[index]!,
+      section: item.section,
+      choiceGroup: item.choiceGroup,
       marks: Number(item.marks),
       type: version.question.type,
       stem: version.stem,
@@ -132,7 +141,9 @@ export async function paperForPrint(
       publishedAt: row.publishedAt,
       settings: { ...DEFAULT_SETTINGS, ...(row.settings as object) } as AssessmentSettings,
       questions,
-      questionMarks: questions.reduce((sum, question) => sum + question.marks, 0),
+      // An "OR" pair counts once, or every paper with a choice would print a
+      // warning that its marks do not add up.
+      questionMarks: answerableMarks(questions),
     },
   };
 }

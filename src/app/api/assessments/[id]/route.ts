@@ -28,6 +28,42 @@ export const BlueprintSchema = z.object({
   }),
   typeMix: z.record(z.string(), z.number().min(0).max(100)),
   outcomeIds: z.array(z.uuid()).max(60),
+  pattern: z
+    .object({
+      key: z.string().max(40),
+      label: z.string().max(120),
+      sections: z
+        .array(
+          z.object({
+            name: z.string().trim().min(1).max(4),
+            title: z.string().max(80),
+            types: z
+              .array(
+                z.enum([
+                  "MCQ",
+                  "MULTI_SELECT",
+                  "TRUE_FALSE",
+                  "NUMERIC",
+                  "FILL_BLANK",
+                  "ASSERTION_REASON",
+                  "VSA",
+                  "SA",
+                  "LA",
+                  "CASE_STUDY",
+                ]),
+              )
+              .min(1)
+              .max(10),
+            count: z.number().int().min(1).max(100),
+            marksEach: z.number().int().min(1).max(20),
+            internalChoices: z.number().int().min(0).max(100),
+          }),
+        )
+        .min(1)
+        .max(10),
+    })
+    .nullable()
+    .optional(),
 });
 
 const PatchBody = z.object({

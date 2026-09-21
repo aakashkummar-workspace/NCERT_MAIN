@@ -54,11 +54,11 @@ export default async function StudentsPage() {
       {cannotSignIn > 0 && (
         <Alert
           tone="warning"
-          title={`${cannotSignIn} ${cannotSignIn === 1 ? "student has" : "students have"} no mobile number`}
+          title={`${cannotSignIn} ${cannotSignIn === 1 ? "student cannot" : "students cannot"} sign in`}
         >
-          A phone number is the only way a student signs in, so these ones cannot
-          sit anything. Add numbers on the class page before the next window
-          opens.
+          They have no mobile number and no printed sign-in card, so they cannot
+          sit anything. Add a number, or print cards, from the class page before
+          the next window opens.
         </Alert>
       )}
 
@@ -83,7 +83,7 @@ export default async function StudentsPage() {
                 </span>
 
                 <span className="ui-student-row-tags">
-                  {!student.canSignIn && <Badge tone="warning">No mobile</Badge>}
+                  {!student.canSignIn && <Badge tone="warning">No mobile or card</Badge>}
 
                   {student.measuredConcepts === 0 ? (
                     // Not a zero. Nothing has been measured, which is a

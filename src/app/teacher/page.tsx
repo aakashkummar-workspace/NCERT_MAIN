@@ -203,9 +203,9 @@ export default async function TeacherDashboard() {
             tone="warning"
             title={`${cannotSignIn} ${cannotSignIn === 1 ? "student cannot" : "students cannot"} sign in`}
           >
-            A mobile number is the only way a student signs in, so{" "}
+            With no mobile number and no printed sign-in card,{" "}
             {cannotSignIn === 1 ? "this student" : "these students"} cannot sit any
-            paper yet. Add the numbers on the class page:{" "}
+            paper yet. Add a number, or print a card, from the class page:{" "}
             {workload.cannotSignIn.slice(0, 3).map((row, index) => (
               <span key={row.classId}>
                 {index > 0 && " · "}

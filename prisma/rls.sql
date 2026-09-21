@@ -177,7 +177,11 @@ declare
     -- ordinary tenant tables. The branded sign-in page reads them before any
     -- tenant is known, and does so through `app_public_branding` below rather
     -- than through an exception here.
-    'organization_branding', 'organization_logos'
+    'organization_branding', 'organization_logos',
+    -- Printed sign-in cards. A teacher issues and revokes them inside their own
+    -- school; sign-in reads them before a tenant is known, through
+    -- `app_auth_consume_card` below rather than through an exception here.
+    'login_cards'
   ];
 begin
   foreach t in array tenant_tables loop
@@ -972,6 +976,70 @@ begin
   return true;
 end;
 $$;
+
+-- ---------------------------------------------------------------------------
+-- Printed sign-in cards: the seventh pre-tenant read
+-- ---------------------------------------------------------------------------
+-- A student with no phone of their own signs in with a card their teacher
+-- printed. The card is what tells us the tenant, so the lookup cannot already
+-- be inside one: sign-in's ordering problem again, answered the same way. An
+-- exact hash in, at most one row of auth columns out, no enumeration.
+--
+-- There is no guess counter, unlike a login code, and that is arithmetic
+-- rather than an omission: a code is six digits and lives five minutes, a card
+-- is ~59 bits and there is nothing to lock — a counter would have to be per
+-- card, and a wrong guess names no card.
+--
+-- It refuses a revoked card, a suspended membership and a deleted or inactive
+-- user, so removing a student from the school stops their card on the very
+-- next sign-in without anybody remembering to revoke it.
+create or replace function app_auth_consume_card(p_code_hash bytea)
+  returns table (
+    user_id         uuid,
+    organization_id uuid,
+    membership_id   uuid,
+    role            text
+  )
+  language plpgsql
+  security definer
+  set search_path = public, pg_temp
+as $$
+declare
+  v_card login_cards%rowtype;
+begin
+  select * into v_card
+  from login_cards c
+  where c.code_hash = p_code_hash
+    and c.revoked_at is null
+  limit 1;
+
+  if not found then
+    return;
+  end if;
+
+  return query
+    select u.id, m.organization_id, m.id, m.role::text
+    from memberships m
+    join users u on u.id = m.user_id
+    join organizations o on o.id = m.organization_id
+    where m.id = v_card.membership_id
+      and m.user_id = v_card.student_user_id
+      and m.organization_id = v_card.organization_id
+      and m.role = 'STUDENT'
+      and m.status = 'ACTIVE'
+      and m.left_at is null
+      and u.deleted_at is null
+      and u.status = 'ACTIVE'
+      and o.deleted_at is null;
+
+  if found then
+    update login_cards set last_used_at = now() where id = v_card.id;
+  end if;
+end;
+$$;
+
+revoke all on function app_auth_consume_card(bytea) from public;
+grant execute on function app_auth_consume_card(bytea) to sahayak_app;
 
 -- ---------------------------------------------------------------------------
 -- The SMS ledger, before a tenant is known

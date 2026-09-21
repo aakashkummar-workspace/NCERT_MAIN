@@ -12,6 +12,15 @@ import {
   type Blueprint,
   type Feasibility,
 } from "./blueprint";
+import {
+  answerableMarks,
+  checkLayout,
+  describeSectionShortfalls,
+  orderBySection,
+  patternForSubject,
+  sectionFeasibility,
+  sectionFor,
+} from "./pattern";
 
 /**
  * Assessments.
@@ -82,7 +91,7 @@ export async function getAssessment(organizationId: string, id: string) {
       where: { id, deletedAt: null },
       include: {
         subject: true,
-        grade: true,
+        grade: { include: { board: { select: { code: true } } } },
         class: true,
         questions: {
           orderBy: { position: "asc" },
@@ -108,6 +117,10 @@ export async function getAssessment(organizationId: string, id: string) {
       status: row.status,
       subjectId: row.subjectId,
       subjectName: row.subject.name,
+      subjectCode: row.subject.code,
+      boardCode: row.grade.board.code,
+      /** The board pattern this subject could follow, offered at step 3. */
+      boardPattern: patternForSubject(row.grade.board.code, row.subject.code),
       gradeId: row.gradeId,
       gradeLabel: row.grade.label,
       classId: row.classId,
@@ -123,6 +136,8 @@ export async function getAssessment(organizationId: string, id: string) {
         questionId: item.questionId,
         position: item.position,
         marks: item.marks,
+        section: item.section,
+        choiceGroup: item.choiceGroup,
         frozenVersionId: item.questionVersionId,
         status: item.question.status,
         type: item.question.type as QuestionType,
@@ -175,6 +190,58 @@ export async function bankInventory(
     }
     return [...counts.values()];
   });
+}
+
+/**
+ * What the bank holds by type and marks, the two things a section asks for.
+ * Same scope and the same APPROVED-only rule as `bankInventory`.
+ */
+export async function bankByTypeAndMarks(
+  organizationId: string,
+  subjectId: string,
+  outcomeIds: string[],
+): Promise<{ type: QuestionType; marks: number; count: number }[]> {
+  const rows = await withTenant(organizationId, (tx) =>
+    tx.question.groupBy({
+      by: ["type", "marks"],
+      where: {
+        deletedAt: null,
+        status: "APPROVED",
+        subjectId,
+        ...(outcomeIds.length > 0
+          ? { outcomes: { some: { learningOutcomeId: { in: outcomeIds } } } }
+          : {}),
+      },
+      _count: { _all: true },
+    }),
+  );
+  return rows.map((row) => ({
+    type: row.type as QuestionType,
+    marks: row.marks,
+    count: row._count._all,
+  }));
+}
+
+/**
+ * Feasibility of a sectioned pattern: per section, not per difficulty, because
+ * "Section D needs six long answers and the bank has one" is the sentence a
+ * teacher can act on.
+ */
+export async function checkPatternFeasibility(
+  organizationId: string,
+  subjectId: string,
+  blueprint: Blueprint,
+): Promise<{ supplied: number; wanted: number; messages: string[] }> {
+  const sections = blueprint.pattern?.sections ?? [];
+  const supply = sectionFeasibility(
+    sections,
+    await bankByTypeAndMarks(organizationId, subjectId, blueprint.outcomeIds),
+  );
+  return {
+    supplied: supply.reduce((sum, row) => sum + Math.min(row.wanted, row.available), 0),
+    wanted: supply.reduce((sum, row) => sum + row.wanted, 0),
+    messages: describeSectionShortfalls(supply),
+  };
 }
 
 export async function checkFeasibility(
@@ -320,11 +387,31 @@ export async function updateDraft(
   return { ok: true };
 }
 
+export type LayoutInput = {
+  questionId: string;
+  /** Omitted: placed by the pattern, when the paper has one. */
+  section?: string | null;
+  choiceGroup?: number | null;
+};
+
+/**
+ * Set the paper's questions, in order, optionally with sections and "OR"
+ * pairs.
+ *
+ * A bare list of ids is still accepted, and under a pattern each question is
+ * placed in its section by type and marks. The rows are then ordered section
+ * by section, so Section B can never print between two Section A questions
+ * because of the order somebody ticked the boxes in.
+ */
 export async function setQuestions(
   actor: Actor,
   id: string,
-  questionIds: string[],
+  input: string[] | LayoutInput[],
 ): Promise<{ ok: true; count: number } | { ok: false; error: string }> {
+  const items: LayoutInput[] = input.map((entry) =>
+    typeof entry === "string" ? { questionId: entry } : entry,
+  );
+  const questionIds = items.map((item) => item.questionId);
   const result = await withTenant(actor.organizationId, async (tx) => {
     const assessment = await tx.assessment.findFirst({
       where: { id, deletedAt: null },
@@ -337,7 +424,7 @@ export async function setQuestions(
     const unique = [...new Set(questionIds)];
     const questions = await tx.question.findMany({
       where: { id: { in: unique }, deletedAt: null },
-      select: { id: true, marks: true, subjectId: true, status: true },
+      select: { id: true, marks: true, subjectId: true, status: true, type: true },
     });
 
     if (questions.length !== unique.length) {
@@ -349,17 +436,52 @@ export async function setQuestions(
       return "One of those questions belongs to a different subject.";
     }
 
+    const byId = new Map(questions.map((q) => [q.id, q]));
+    const blueprint = { ...DEFAULT_BLUEPRINT, ...(assessment.blueprint as object) } as Blueprint;
+    const sections = blueprint.pattern?.sections ?? null;
+    const sectionNames = new Set((sections ?? []).map((section) => section.name));
+    const seen = new Set<string>();
+
+    const placed = items
+      .filter((item) => {
+        if (seen.has(item.questionId)) return false;
+        seen.add(item.questionId);
+        return true;
+      })
+      .map((item) => {
+        const question = byId.get(item.questionId)!;
+        // A section is taken from the request only when the pattern has one
+        // by that name; otherwise it is placed by type and marks. Nothing is
+        // sectioned on a paper with no pattern.
+        const section = sections
+          ? item.section && sectionNames.has(item.section)
+            ? item.section
+            : sectionFor(sections, question.type as QuestionType, question.marks)
+          : null;
+        return {
+          questionId: item.questionId,
+          marks: question.marks,
+          section,
+          choiceGroup: item.choiceGroup ?? null,
+        };
+      });
+
+    const ordered = sections ? orderBySection(sections, placed) : placed;
+    const layout = checkLayout(sections, ordered);
+    if (layout.errors.length > 0) return layout.errors[0]!;
+
     await tx.assessmentQuestion.deleteMany({ where: { assessmentId: id } });
 
-    const byId = new Map(questions.map((q) => [q.id, q]));
     await tx.assessmentQuestion.createMany({
-      data: unique.map((questionId, index) => ({
+      data: ordered.map((item, index) => ({
         id: randomUUID(),
         organizationId: actor.organizationId,
         assessmentId: id,
-        questionId,
+        questionId: item.questionId,
         position: index + 1,
-        marks: byId.get(questionId)!.marks,
+        marks: item.marks,
+        section: item.section,
+        choiceGroup: item.choiceGroup,
       })),
     });
 
@@ -404,7 +526,8 @@ export async function publishCheck(
   if (!assessment) return null;
 
   const problems: string[] = [];
-  const marksTotal = assessment.questions.reduce((sum, q) => sum + q.marks, 0);
+  // An "OR" pair counts once: a student answers one of the two.
+  const marksTotal = answerableMarks(assessment.questions);
 
   if (assessment.questions.length === 0) {
     problems.push("The paper has no questions yet.");
@@ -422,6 +545,12 @@ export async function publishCheck(
       `The questions add up to ${marksTotal} marks, but the paper is set to ${assessment.totalMarks}. Change one or the other.`,
     );
   }
+
+  // The layout is checked at save, and again here, because a paper saved
+  // before a rule existed must not publish past it.
+  problems.push(
+    ...checkLayout(assessment.blueprint.pattern?.sections ?? null, assessment.questions).errors,
+  );
 
   const unmapped = assessment.questions.filter((q) => q.outcomeCount === 0);
   if (unmapped.length > 0) {
@@ -515,6 +644,8 @@ export async function duplicateAssessment(
           questionId: q.questionId,
           position: index + 1,
           marks: q.marks,
+          section: q.section,
+          choiceGroup: q.choiceGroup,
           // Deliberately NOT copying the frozen version: a copy is a new draft
           // and will freeze afresh when it is published.
         })),

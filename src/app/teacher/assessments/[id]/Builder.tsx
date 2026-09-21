@@ -10,6 +10,19 @@ import {
   type Difficulty,
 } from "@/core/assessments/blueprint";
 import { checkBasics } from "@/core/assessments/basics";
+import {
+  answerableMarks,
+  buildLayout,
+  checkLayout,
+  displayNumbers,
+  patternMarks,
+  patternQuestionCount,
+  sectionFor,
+  togglePair,
+  type LayoutItem,
+  type PaperPattern,
+  type SectionPlan,
+} from "@/core/assessments/pattern";
 import type { QuestionType } from "@/core/questions/validate";
 import { Alert, Badge, Button, Card, Field, Input, Select } from "@/ui";
 
@@ -42,7 +55,15 @@ type Assessment = {
   durationMinutes: number;
   totalMarks: number;
   blueprint: Blueprint;
-  questions: { questionId: string; marks: number; stem: string }[];
+  /** The board pattern this subject could follow, or null. */
+  boardPattern: PaperPattern | null;
+  questions: {
+    questionId: string;
+    marks: number;
+    stem: string;
+    section: string | null;
+    choiceGroup: number | null;
+  }[];
   readiness: { ready: boolean; problems: string[]; marksTotal: number } | null;
 };
 
@@ -119,6 +140,20 @@ export function Builder({
   const [savedIds, setSavedIds] = useState<string[]>(
     assessment.questions.map((q) => q.questionId),
   );
+  /**
+   * The saved paper's layout: order, sections and "OR" pairs. What the server
+   * last accepted, rebuilt locally with the same pure functions it uses.
+   */
+  const [layout, setLayout] = useState<LayoutItem[]>(
+    assessment.questions.map((q) => ({
+      questionId: q.questionId,
+      marks: q.marks,
+      section: q.section,
+      choiceGroup: q.choiceGroup,
+    })),
+  );
+  const [pairError, setPairError] = useState<string | null>(null);
+  const sections: SectionPlan[] | null = blueprint.pattern?.sections ?? null;
 
   const basicsErrors = checkBasics({ title, durationMinutes: duration, totalMarks });
   const fieldError = (name: keyof typeof basicsErrors) =>
@@ -166,14 +201,119 @@ export function Builder({
     selected.filter((id) => byId.get(id)?.difficulty === level).length;
 
   const savedById = new Map(assessment.questions.map((q) => [q.questionId, q]));
-  const reviewRows = savedIds.flatMap((questionId) => {
-    const saved = savedById.get(questionId);
-    const fromBank = byId.get(questionId);
-    const stem = saved?.stem ?? fromBank?.stem;
-    const marks = saved?.marks ?? fromBank?.marks;
-    return stem === undefined || marks === undefined ? [] : [{ questionId, stem, marks }];
+  const layoutIds = new Set(layout.map((item) => item.questionId));
+  const reviewRows = (
+    layout.length > 0 && savedIds.every((id) => layoutIds.has(id))
+      ? layout
+      : savedIds.map((questionId) => ({
+          questionId,
+          marks: byId.get(questionId)?.marks ?? savedById.get(questionId)?.marks ?? 0,
+          section: null,
+          choiceGroup: null,
+        }))
+  ).flatMap((item) => {
+    const stem = savedById.get(item.questionId)?.stem ?? byId.get(item.questionId)?.stem;
+    return stem === undefined ? [] : [{ ...item, stem }];
   });
-  const reviewMarks = reviewRows.reduce((sum, row) => sum + row.marks, 0);
+  const reviewNumbers = displayNumbers(reviewRows);
+  // An "OR" pair counts once towards the paper's marks.
+  const reviewMarks = answerableMarks(reviewRows);
+  const layoutWarnings = checkLayout(sections, reviewRows).warnings;
+
+  // Step 3's per-section tally: questions chosen that fit each section,
+  // against what the section prints (answered plus alternatives).
+  const chosenBySection = new Map<string, number>();
+  if (sections) {
+    for (const id of selected) {
+      const question = byId.get(id);
+      const name = question ? sectionFor(sections, question.type, question.marks) : null;
+      if (name) chosenBySection.set(name, (chosenBySection.get(name) ?? 0) + 1);
+    }
+  }
+
+  function layoutForSelection(): LayoutItem[] {
+    return buildLayout(
+      sections,
+      selected.flatMap((id) => {
+        const question = byId.get(id) ?? null;
+        const saved = savedById.get(id);
+        if (question) return [{ questionId: id, type: question.type, marks: question.marks }];
+        // A saved question no longer in the approved bank keeps its place.
+        return saved ? [{ questionId: id, type: "MCQ" as QuestionType, marks: saved.marks }] : [];
+      }),
+      layout,
+    );
+  }
+
+  async function saveLayout(items: LayoutItem[]): Promise<string | null> {
+    try {
+      const response = await fetch(`/api/assessments/${assessment.id}/questions/`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          items: items.map((item) => ({
+            questionId: item.questionId,
+            section: item.section,
+            choiceGroup: item.choiceGroup,
+          })),
+        }),
+      });
+      if (!response.ok) {
+        const payload = await response.json().catch(() => null);
+        return payload?.error?.message ?? "Those questions did not save.";
+      }
+      setLayout(items);
+      setSavedIds(items.map((item) => item.questionId));
+      router.refresh();
+      return null;
+    } catch {
+      return "We could not reach the server. Nothing was saved.";
+    }
+  }
+
+  async function pair(index: number) {
+    setPairError(null);
+    const result = togglePair(reviewRows, index);
+    if (!result.ok) {
+      setPairError(result.message);
+      return;
+    }
+    setBusy(true);
+    const problem = await saveLayout(result.items);
+    setBusy(false);
+    if (problem) setPairError(problem);
+  }
+
+  function applyPattern(pattern: PaperPattern | null) {
+    setBlueprint((current) =>
+      pattern
+        ? {
+            ...current,
+            pattern: { key: pattern.key, label: pattern.label, sections: pattern.sections },
+            totalQuestions: patternQuestionCount(pattern.sections),
+          }
+        : { ...current, pattern: null, totalQuestions: Math.max(1, selected.length || current.totalQuestions) },
+    );
+    if (pattern) {
+      setTotalMarks(patternMarks(pattern.sections));
+      setDuration(pattern.durationMinutes);
+    }
+  }
+
+  function editSection(name: string, field: "count" | "marksEach" | "internalChoices", value: number) {
+    if (!blueprint.pattern) return;
+    const nextSections = blueprint.pattern.sections.map((section) =>
+      section.name === name ? { ...section, [field]: value } : section,
+    );
+    // Marks and question count follow the sections; typing them separately is
+    // how a paper ends up set to 80 with sections adding to 76.
+    setTotalMarks(patternMarks(nextSections));
+    setBlueprint({
+      ...blueprint,
+      pattern: { ...blueprint.pattern, sections: nextSections },
+      totalQuestions: patternQuestionCount(nextSections),
+    });
+  }
 
   const save = useCallback(
     async (patch: Record<string, unknown>) => {
@@ -243,27 +383,19 @@ export function Builder({
         saved = await save({ title, durationMinutes: duration, totalMarks });
       }
     }
-    if (step === 1 || step === 2) saved = await save({ blueprint, totalMarks });
+    if (step === 1 || step === 2) {
+      saved = await save({
+        blueprint,
+        totalMarks,
+        // A board pattern sets its own three hours; saved with it so the
+        // paper and its duration cannot disagree.
+        ...(step === 2 && blueprint.pattern ? { durationMinutes: duration } : {}),
+      });
+    }
     if (step === 3) {
-      try {
-        const response = await fetch(
-          `/api/assessments/${assessment.id}/questions/`,
-          {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ questionIds: selected }),
-          },
-        );
-        if (!response.ok) {
-          const payload = await response.json().catch(() => null);
-          setError(payload?.error?.message ?? "Those questions did not save.");
-          saved = false;
-        } else {
-          setSavedIds(selected);
-          router.refresh();
-        }
-      } catch {
-        setError("We could not reach the server. Nothing was saved.");
+      const problem = await saveLayout(layoutForSelection());
+      if (problem) {
+        setError(problem);
         saved = false;
       }
     }
@@ -418,6 +550,71 @@ export function Builder({
 
       {step === 2 && (
         <>
+          {(assessment.boardPattern || blueprint.pattern) && (
+            <Card
+              title={blueprint.pattern ? blueprint.pattern.label : "Follow the board pattern?"}
+              description={
+                blueprint.pattern
+                  ? `${patternQuestionCount(blueprint.pattern.sections)} questions printed, ${patternMarks(blueprint.pattern.sections)} marks, in sections. The paper prints section headings and "OR" between alternatives, like the board paper.`
+                  : `Sections A to ${assessment.boardPattern!.sections.at(-1)!.name}, internal choices and ${patternMarks(assessment.boardPattern!.sections)} marks in ${assessment.boardPattern!.durationMinutes / 60} hours — the shape of the paper your class sits in March.`
+              }
+              action={
+                blueprint.pattern ? (
+                  <Button variant="ghost" size="sm" onClick={() => applyPattern(null)}>
+                    Stop using sections
+                  </Button>
+                ) : (
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    onClick={() => applyPattern(assessment.boardPattern)}
+                  >
+                    Use the board pattern
+                  </Button>
+                )
+              }
+            >
+              {blueprint.pattern && (
+                <div className="ui-pattern-table" role="table" aria-label="Sections" tabIndex={0}>
+                  <div className="ui-pattern-row" role="row" data-head="true">
+                    <span role="columnheader">Section</span>
+                    <span role="columnheader">Questions to answer</span>
+                    <span role="columnheader">Marks each</span>
+                    <span role="columnheader">With a choice</span>
+                  </div>
+                  {blueprint.pattern.sections.map((section) => (
+                    <div className="ui-pattern-row" role="row" key={section.name}>
+                      <span role="cell">
+                        <strong>{section.name}</strong>
+                        <span className="ui-hint"> {section.title}</span>
+                      </span>
+                      {(["count", "marksEach", "internalChoices"] as const).map((field) => (
+                        <span role="cell" key={field}>
+                          <Input
+                            type="number"
+                            min={field === "internalChoices" ? 0 : 1}
+                            max={field === "marksEach" ? 20 : 100}
+                            aria-label={`Section ${section.name}: ${
+                              field === "count"
+                                ? "questions to answer"
+                                : field === "marksEach"
+                                  ? "marks each"
+                                  : "internal choices"
+                            }`}
+                            value={section[field]}
+                            onChange={(event) =>
+                              editSection(section.name, field, Number(event.target.value))
+                            }
+                          />
+                        </span>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </Card>
+          )}
+
           <Card
             title="Blueprint"
             description="The shape of the paper. The mix is a target, not a rule — you can still change any question later."
@@ -478,7 +675,8 @@ export function Builder({
               ))}
             </div>
 
-            <h4>Question types</h4>
+            {!blueprint.pattern && <h4>Question types</h4>}
+            {!blueprint.pattern && (
             <div className="ui-mix">
               {Object.keys(TYPE_LABEL).map((type) => (
                 <Field key={type} label={TYPE_LABEL[type]!} htmlFor={`type-${type}`}>
@@ -501,6 +699,7 @@ export function Builder({
                 </Field>
               ))}
             </div>
+            )}
 
             {blueprintProblems.map((problem, index) => (
               <p
@@ -572,6 +771,25 @@ export function Builder({
             </Link>
           }
         >
+          {sections && (
+            <div className="ui-mix" style={{ marginBottom: 8 }} aria-label="Chosen by section">
+              {sections.map((section) => {
+                const wanted = section.count + section.internalChoices;
+                const chosen = chosenBySection.get(section.name) ?? 0;
+                return (
+                  <Badge
+                    key={section.name}
+                    tone={chosen === wanted ? "success" : chosen > wanted ? "warning" : "neutral"}
+                  >
+                    Section {section.name}:{" "}
+                    <span className="tabular">
+                      {chosen} of {wanted}
+                    </span>
+                  </Badge>
+                );
+              })}
+            </div>
+          )}
           <div className="ui-mix" style={{ marginBottom: 12 }}>
             {(["EASY", "MEDIUM", "HARD"] as Difficulty[]).map((level) => {
               const wanted = wantedByDifficulty[level] ?? 0;
@@ -667,6 +885,13 @@ export function Builder({
                             : "No chapter"}
                         </span>
                         <span>{TYPE_LABEL[question.type] ?? question.type}</span>
+                        {sections && (
+                          <span>
+                            {sectionFor(sections, question.type, question.marks)
+                              ? `Section ${sectionFor(sections, question.type, question.marks)}`
+                              : "Fits no section"}
+                          </span>
+                        )}
                         <span>
                           {question.difficulty.charAt(0) +
                             question.difficulty.slice(1).toLowerCase()}
@@ -691,24 +916,66 @@ export function Builder({
       {step === 4 && (
         <Card
           title="Review"
-          description={`${reviewRows.length} questions · ${reviewMarks} of ${totalMarks} marks`}
+          description={`${new Set(reviewNumbers).size} questions · ${reviewMarks} of ${totalMarks} marks`}
         >
           {reviewRows.length === 0 ? (
             <p className="ui-hint">
               Nothing saved yet. Go back a step and choose some questions.
             </p>
           ) : (
-            <ol className="ui-review-list">
-              {reviewRows.map((question, index) => (
-                <li key={question.questionId}>
-                  <span className="ui-review-number tabular">{index + 1}</span>
-                  <span>{question.stem}</span>
-                  <span className="ui-review-marks tabular">
-                    {question.marks}
-                  </span>
-                </li>
-              ))}
-            </ol>
+            <>
+              <p className="ui-hint" style={{ margin: "0 0 12px" }}>
+                To give an internal choice, press <strong>OR with next</strong> on a
+                question: it and the one below become alternatives, and a student
+                answers one. Alternatives share a number and count once towards the
+                total, so they must carry the same marks.
+              </p>
+              {pairError && <Alert tone="warning">{pairError}</Alert>}
+              <ol className="ui-review-list ui-review-layout">
+                {reviewRows.map((question, index) => {
+                  const previous = index > 0 ? reviewRows[index - 1] : null;
+                  const isSecond =
+                    question.choiceGroup !== null && previous?.choiceGroup === question.choiceGroup;
+                  const startsSection =
+                    question.section !== null && question.section !== (previous?.section ?? null);
+                  return (
+                    <li
+                      key={question.questionId}
+                      data-choice={question.choiceGroup !== null || undefined}
+                    >
+                      {startsSection && (
+                        <span className="ui-review-section">Section {question.section}</span>
+                      )}
+                      <span className="ui-review-number tabular">
+                        {isSecond ? "OR" : reviewNumbers[index]}
+                      </span>
+                      <span>{question.stem}</span>
+                      <span className="ui-review-marks tabular">{question.marks}</span>
+                      {assessment.status === "DRAFT" && !isSecond && (
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          disabled={busy || (question.choiceGroup === null && index === reviewRows.length - 1)}
+                          onClick={() => pair(index)}
+                        >
+                          {question.choiceGroup !== null ? "Undo OR" : "OR with next"}
+                        </Button>
+                      )}
+                    </li>
+                  );
+                })}
+              </ol>
+              {layoutWarnings.length > 0 && (
+                <ul className="ui-check-list" style={{ marginTop: 12 }}>
+                  {layoutWarnings.map((warning) => (
+                    <li key={warning}>
+                      <Badge tone="warning">Pattern</Badge>
+                      <span>{warning}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
           )}
         </Card>
       )}

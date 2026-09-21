@@ -316,3 +316,32 @@
     gap: 16pt;
   }
 }
+
+/* ---- Sections and internal choice ------------------------------------- */
+/* A board paper prints "SECTION B" above its first question and "OR" between
+   the two halves of an internal choice. The paper this one rehearses. */
+
+.ui-paper-section {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin: 8px 0 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+.ui-paper-or {
+  text-align: center;
+  font-weight: 700;
+  margin: -6px 0 10px;
+}
+@media print {
+  .ui-paper-section {
+    break-after: avoid;
+    border-bottom-color: #000000;
+  }
+  .ui-paper-or {
+    break-after: avoid;
+  }
+}

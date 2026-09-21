@@ -50,6 +50,26 @@ export const en = {
     "Your tests, in one place, with the time you have left always on screen.",
   "signin.aside.subtitle": "Class 9 and 10.",
 
+  // -- Signing in with a printed card --------------------------------------
+  "signin.card.prompt": "Have a sign-in card from your teacher?",
+  "signin.card.link": "Use your card",
+  "signin.card.pageTitle": "Sign in with your card",
+  "signin.card.description":
+    "Type the code printed on your card, or scan its QR code with a phone camera.",
+  "signin.card.label": "Card code",
+  "signin.card.hint": "Twelve letters and numbers. The dashes are optional.",
+  "signin.card.checking": "Signing you in with your card…",
+  /**
+   * Plural, because the count is real — `CARD_SESSION_MS` in
+   * `core/identity/login-cards.ts` — and a literal "12" here would be the
+   * sentence that goes stale first.
+   */
+  "signin.card.sharedDevice": {
+    one: "On a shared computer, sign out when you finish. A card sign-in also ends by itself after {count} hour.",
+    other: "On a shared computer, sign out when you finish. A card sign-in also ends by itself after {count} hours.",
+  },
+  "signin.card.usePhone": "Sign in with a phone number instead",
+
   // -- Step one: the number ------------------------------------------------
   "signin.phone.label": "Phone number",
   "signin.phone.placeholder": "10-digit mobile number",
@@ -143,6 +163,8 @@ export const en = {
   "home.test.attempts": "Attempts",
   "home.test.attemptsOf": "{used} of {max}",
   "home.test.seeResult": "See result",
+  "home.test.onPaper":
+    "Sat on paper in class. Your teacher records your answers, and the result appears here.",
   "home.test.notTaken": "You did not take this one.",
   "home.test.notReleased": "Your teacher has not released the result yet.",
   "home.finished.heading": "Finished",

@@ -18,6 +18,7 @@
  */
 
 import type { QuestionType } from "@/core/questions/validate";
+import { patternMarks, patternQuestionCount, validatePattern, type SectionPlan } from "./pattern";
 
 export type Difficulty = "EASY" | "MEDIUM" | "HARD";
 
@@ -30,11 +31,17 @@ export type Blueprint = {
   typeMix: Partial<Record<QuestionType, number>>;
   /** The curriculum scope: which outcomes the paper may draw on. */
   outcomeIds: string[];
+  /**
+   * A sectioned pattern — the CBSE board shape, say. When present it REPLACES
+   * the type mix: the sections name the types, and the question count and
+   * marks are the pattern's own. See core/assessments/pattern.ts.
+   */
+  pattern?: { key: string; label: string; sections: SectionPlan[] } | null;
 };
 
 export type BlueprintProblem = {
   severity: "error" | "warning";
-  field: "totalQuestions" | "totalMarks" | "difficultyMix" | "typeMix" | "scope";
+  field: "totalQuestions" | "totalMarks" | "difficultyMix" | "typeMix" | "scope" | "pattern";
   message: string;
 };
 
@@ -92,8 +99,11 @@ export function validateBlueprint(blueprint: Blueprint): BlueprintProblem[] {
     error("totalMarks", "More than 200 marks is not a class test.");
   }
 
-  // Marks must be reachable with whole-mark questions.
+  // Marks must be reachable with whole-mark questions. Not asked of a
+  // pattern: its alternatives are counted in the questions and not in the
+  // marks, and the pattern's own check below is the exact one.
   if (
+    !blueprint.pattern &&
     Number.isInteger(blueprint.totalQuestions) &&
     Number.isInteger(blueprint.totalMarks) &&
     blueprint.totalQuestions > 0 &&
@@ -114,14 +124,37 @@ export function validateBlueprint(blueprint: Blueprint): BlueprintProblem[] {
     );
   }
 
-  const typeValues = Object.values(blueprint.typeMix).filter(
-    (value): value is number => typeof value === "number",
-  );
-  const typeSum = sum(typeValues);
-  if (typeValues.length === 0) {
-    error("typeMix", "Choose at least one question type.");
-  } else if (typeSum !== 100) {
-    error("typeMix", `The question-type split adds up to ${typeSum}%, not 100%.`);
+  if (blueprint.pattern) {
+    // The sections name the types, so there is no type mix to check — and the
+    // totals are the pattern's, so a paper set to 60 marks under an 80-mark
+    // pattern is told so here rather than at publish.
+    for (const problem of validatePattern(blueprint.pattern.sections)) {
+      error("pattern", problem.message);
+    }
+    const marks = patternMarks(blueprint.pattern.sections);
+    if (Number.isInteger(blueprint.totalMarks) && marks !== blueprint.totalMarks) {
+      error(
+        "totalMarks",
+        `The sections add up to ${marks} marks, but the paper is set to ${blueprint.totalMarks}. Change one or the other.`,
+      );
+    }
+    const questions = patternQuestionCount(blueprint.pattern.sections);
+    if (Number.isInteger(blueprint.totalQuestions) && questions !== blueprint.totalQuestions) {
+      error(
+        "totalQuestions",
+        `The sections print ${questions} questions (alternatives included), but the blueprint says ${blueprint.totalQuestions}.`,
+      );
+    }
+  } else {
+    const typeValues = Object.values(blueprint.typeMix).filter(
+      (value): value is number => typeof value === "number",
+    );
+    const typeSum = sum(typeValues);
+    if (typeValues.length === 0) {
+      error("typeMix", "Choose at least one question type.");
+    } else if (typeSum !== 100) {
+      error("typeMix", `The question-type split adds up to ${typeSum}%, not 100%.`);
+    }
   }
 
   if (blueprint.outcomeIds.length === 0) {

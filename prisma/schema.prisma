@@ -918,7 +918,14 @@ model AssessmentQuestion {
   questionVersionId String? @map("question_version_id") @db.Uuid
   position          Int
   marks             Int
+  /// "A", "B" … when the paper follows a sectioned pattern. See
+  /// core/assessments/pattern.ts.
   section           String?
+  /// Two rows sharing a group are an internal choice — "21. … OR …". The
+  /// student answers one; the pair counts once towards the total and the
+  /// alternative not taken is dropped at submission, so it is neither a blank
+  /// nor a mark. Null for an ordinary question.
+  choiceGroup       Int?    @map("choice_group")
 
   assessment Assessment @relation(fields: [assessmentId], references: [id], onDelete: Cascade)
   question   Question   @relation(fields: [questionId], references: [id])
@@ -932,6 +939,16 @@ model AssessmentQuestion {
 // ===========================================================================
 // Slice 6: assignments
 // ===========================================================================
+
+/// How a class sits an assignment.
+enum DeliveryMode {
+  /// In the test player, on a device.
+  ONLINE
+  /// On paper, in the room. Students cannot start it in the player; the
+  /// teacher records each sitting afterwards — by typing, or by scanning the
+  /// printed answer sheets — and it becomes evidence like any other paper.
+  PAPER
+}
 
 enum ResultsPolicy {
   /// The student sees the score the moment they submit.
@@ -966,6 +983,7 @@ model Assignment {
 
   maxAttempts   Int           @default(1) @map("max_attempts")
   resultsPolicy ResultsPolicy @default(AFTER_CLOSE) @map("results_policy")
+  deliveryMode  DeliveryMode  @default(ONLINE) @map("delivery_mode")
 
   /// Set when a teacher releases results by hand, or when the window shuts
   /// under AFTER_CLOSE. Read by the student result page in a later slice.
@@ -1075,6 +1093,8 @@ enum SubmitReason {
   TIMEOUT
   /// The clock ran out while the page was closed; the cron sweep finished it.
   SWEEP
+  /// Sat on paper in the room and recorded by a teacher afterwards.
+  PAPER
 }
 
 enum GradeSource {
@@ -1213,6 +1233,34 @@ model LoginCode {
   @@index([phone, createdAt])
   @@index([expiresAt])
   @@map("login_codes")
+}
+
+/// A printed sign-in card, for a student who has no phone of their own.
+///
+/// The card IS the credential: twelve characters from a 31-letter alphabet
+/// (about 59 bits), printed once and never shown again, because only the
+/// SHA-256 is stored. A lost card is replaced, and replacing revokes — a
+/// student has at most one card that works.
+///
+/// A tenant table, because a teacher issues and revokes cards inside their own
+/// school. Sign-in reads it before any tenant is known, through
+/// `app_auth_consume_card` in rls.sql, the same seam login codes use.
+model LoginCard {
+  id             String    @id @default(uuid()) @db.Uuid
+  organizationId String    @map("organization_id") @db.Uuid
+  studentUserId  String    @map("student_user_id") @db.Uuid
+  membershipId   String    @map("membership_id") @db.Uuid
+  codeHash       Bytes     @unique @map("code_hash")
+  /// The last four characters, so a teacher holding two printouts can tell
+  /// which one is current without the code ever being stored.
+  hint           String
+  issuedById     String    @map("issued_by_id") @db.Uuid
+  createdAt      DateTime  @default(now()) @map("created_at")
+  lastUsedAt     DateTime? @map("last_used_at")
+  revokedAt      DateTime? @map("revoked_at")
+
+  @@index([organizationId, studentUserId])
+  @@map("login_cards")
 }
 
 // ===========================================================================

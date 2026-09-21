@@ -110,6 +110,7 @@ export default async function ClassPage({
   );
 
   const withoutPhone = klass.students.filter((s) => !s.canSignIn).length;
+  const cardHolders = klass.students.filter((s) => s.hasCard).length;
   const hasStudents = klass.students.length > 0;
   const setup = storedSetup ?? {
     hasStudents,
@@ -209,15 +210,17 @@ export default async function ClassPage({
                     <div style={{ flex: 1, fontSize: 13.5 }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
                         <Badge tone="warning">
-                          {withoutPhone} of {klass.students.length} students without mobile
+                          {withoutPhone} of {klass.students.length} students cannot sign in
                         </Badge>
                       </div>
                       <span style={{ color: "var(--text-secondary)", lineHeight: 1.4 }}>
                         {withoutPhone === 1
-                          ? "One student has no mobile number."
-                          : `${withoutPhone} students have no mobile number.`}{" "}
-                        A mobile number is the only way a student signs in, so they
-                        cannot sit a test until one is added.
+                          ? "One student has no mobile number and no sign-in card."
+                          : `${withoutPhone} students have no mobile number and no sign-in card.`}{" "}
+                        They cannot sit a test until one of the two exists.{" "}
+                        <Link href={`/teacher/classes/${klass.id}/cards`}>
+                          Print sign-in cards
+                        </Link>
                       </span>
                     </div>
                   </div>
@@ -257,6 +260,26 @@ export default async function ClassPage({
 
         <Stack>
           <JoinCode classId={klass.id} code={klass.joinCode} className={klass.name} />
+
+          {hasStudents && (
+            <Card
+              title="Sign-in cards"
+              description={
+                cardHolders === 0
+                  ? "For students without a phone, or a computer lab: a printed card signs a student in with no SMS."
+                  : `${cardHolders} of ${klass.students.length} students hold a card.`
+              }
+            >
+              <Link
+                href={`/teacher/classes/${klass.id}/cards`}
+                className="ui-button"
+                data-variant="secondary"
+                data-size="sm"
+              >
+                <span>{cardHolders === 0 ? "Print sign-in cards" : "Manage cards"}</span>
+              </Link>
+            </Card>
+          )}
 
           <Announcements
             classId={klass.id}

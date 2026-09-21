@@ -1,0 +1,391 @@
+/*
+ * Paper tools: printed sign-in cards, printed OMR answer sheets, and the
+ * screens that bring a paper sitting back in (marks entry and scanning).
+ *
+ * Everything here is either printed or used beside a pile of paper, so the
+ * print rules are the feature. Class names are `ui-signin-card-*`,
+ * `ui-cards-*`, `ui-omr-*` and `ui-entry-*`; grep the other stylesheets before
+ * adding one — `.ui-result-score` and `.ui-student-name` both collided once.
+ */
+
+/* ---- Sign-in cards ---------------------------------------------------- */
+
+.ui-cards-roster {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ui-cards-roster li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 8px 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.ui-cards-roster li:last-child {
+  border-bottom: 0;
+}
+.ui-cards-roster-name {
+  font-weight: 500;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.ui-cards-roster-status {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ui-cards-roster-actions {
+  display: flex;
+  gap: 4px;
+}
+@media (max-width: 640px) {
+  /* The destructive button shares a row with the name it acts on, never a
+     line of its own under somebody else's. */
+  .ui-cards-roster li {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .ui-cards-roster-status {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+.ui-cards-sheet {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.ui-signin-card {
+  background: #ffffff;
+  color: #111111;
+  border: 1.5px dashed #555555;
+  border-radius: 8px;
+  padding: 12px 14px;
+  break-inside: avoid;
+}
+.ui-signin-card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #999999;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+.ui-signin-card-body {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.ui-signin-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.ui-signin-card-name {
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+.ui-signin-card-roll {
+  font-size: 12px;
+}
+.ui-signin-card-code {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.ui-signin-card-help {
+  font-size: 11px;
+  line-height: 1.4;
+  margin: 8px 0 0;
+}
+.ui-qr {
+  flex: none;
+}
+
+.ui-card-code-input {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media print {
+  .ui-cards-actions {
+    display: none !important;
+  }
+  .ui-cards-sheet {
+    grid-template-columns: 1fr 1fr;
+    gap: 6mm;
+    margin: 0;
+  }
+  .ui-signin-card {
+    height: 58mm;
+    overflow: hidden;
+  }
+}
+
+/* ---- Internal choice, in the player ------------------------------------ */
+
+.ui-player-choice {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-left: 3px solid var(--primary-600);
+  background: var(--surface-sunken);
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ---- The builder: sections and "OR" pairs ----------------------------- */
+
+.ui-pattern-table {
+  display: grid;
+  gap: 6px;
+  overflow-x: auto;
+}
+.ui-pattern-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 2fr) repeat(3, minmax(72px, 1fr));
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+}
+.ui-pattern-row[data-head] {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ui-review-layout li {
+  grid-template-columns: 34px minmax(0, 1fr) 32px auto;
+  align-items: center;
+}
+.ui-review-layout li[data-choice] {
+  background: var(--surface-sunken);
+}
+.ui-review-section {
+  grid-column: 1 / -1;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+@media (max-width: 640px) {
+  .ui-review-layout li {
+    grid-template-columns: 34px minmax(0, 1fr) 32px;
+  }
+  .ui-review-layout li > .ui-button {
+    grid-column: 2 / -1;
+    justify-self: start;
+  }
+}
+
+/* ---- Printed answer sheets -------------------------------------------- */
+
+.ui-omr-actions {
+  margin-bottom: 16px;
+}
+.ui-omr-page {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 8px;
+  margin: 0 auto 16px;
+  max-width: 190mm;
+}
+.ui-omr-sheet {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media print {
+  .ui-omr-actions {
+    display: none !important;
+  }
+  .ui-omr-page {
+    border: 0;
+    padding: 0;
+    margin: 0 auto;
+    /* Slightly under A4 so any printer's margin fits: the scanner maps
+       through the corner squares, so the scale never matters. */
+    width: 180mm;
+    max-width: none;
+    break-after: page;
+  }
+  .ui-omr-page:last-of-type {
+    break-after: auto;
+  }
+}
+
+/* ---- Recording a paper sitting ---------------------------------------- */
+
+.ui-entry {
+  display: grid;
+  gap: 16px;
+}
+.ui-entry-top {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: end;
+}
+.ui-entry-progress {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.ui-entry-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  margin-top: 14px;
+}
+.ui-entry-letters {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  flex: 1 1 320px;
+  min-width: 0;
+}
+.ui-entry-letters .ui-field {
+  flex: 1;
+  min-width: 0;
+}
+.ui-entry-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ui-entry-list li {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  gap: 8px 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.ui-entry-list li:last-child {
+  border-bottom: 0;
+}
+.ui-entry-list li[data-flag] {
+  background: var(--surface-sunken);
+  box-shadow: inset 3px 0 0 var(--warning);
+  padding-left: 8px;
+}
+.ui-entry-section {
+  grid-column: 1 / -1;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+.ui-entry-or {
+  grid-column: 1 / -1;
+  font-weight: 700;
+  font-size: 13px;
+}
+.ui-entry-number {
+  font-weight: 700;
+  align-self: start;
+  padding-top: 2px;
+}
+.ui-entry-question {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.ui-entry-stem {
+  font-size: 14px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.ui-entry-flag {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.ui-entry-control {
+  display: flex;
+  justify-content: flex-end;
+}
+.ui-entry-choices {
+  display: flex;
+  gap: 4px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-inline-size: 0;
+  flex-wrap: wrap;
+}
+.ui-entry-choice {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  border: 1px solid var(--border-strong, var(--border));
+  border-radius: var(--radius-control);
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+.ui-entry-choice input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.ui-entry-choice[data-checked] {
+  background: var(--primary-600);
+  border-color: var(--primary-600);
+  color: #ffffff;
+}
+.ui-entry-choice:focus-within {
+  outline: 2px solid var(--primary-600);
+  outline-offset: 2px;
+}
+.ui-entry-written {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.ui-entry-written .ui-input {
+  width: 80px;
+}
+@media (max-width: 640px) {
+  .ui-entry-top {
+    grid-template-columns: 1fr;
+  }
+  .ui-entry-list li {
+    grid-template-columns: 32px minmax(0, 1fr);
+  }
+  .ui-entry-control {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+  .ui-entry-choice {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+@media (pointer: coarse) {
+  .ui-entry-choice {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}

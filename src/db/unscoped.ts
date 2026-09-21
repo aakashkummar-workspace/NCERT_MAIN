@@ -307,3 +307,27 @@ export async function smsSentToday(): Promise<number> {
   `;
   return Number(rows[0]?.app_sms_sent_today ?? 0);
 }
+
+export type CardPrincipalRow = {
+  user_id: string;
+  organization_id: string;
+  membership_id: string;
+  role: string;
+};
+
+/**
+ * Resolve a printed sign-in card, before any tenant is known.
+ *
+ * The seventh pre-tenant read, and the same shape as the rest: an exact hash
+ * in, at most one row of auth columns out. The card is what tells us the
+ * tenant, so the lookup cannot already be inside one. It returns nothing for a
+ * revoked card, a suspended membership or a deleted student.
+ */
+export async function consumeLoginCard(
+  codeHash: Buffer,
+): Promise<CardPrincipalRow | null> {
+  const rows = await prisma.$queryRaw<CardPrincipalRow[]>`
+    select * from app_auth_consume_card(${codeHash})
+  `;
+  return rows[0] ?? null;
+}

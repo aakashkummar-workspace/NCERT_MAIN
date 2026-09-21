@@ -18,6 +18,7 @@ const Body = z.object({
     .enum(["IMMEDIATE", "AFTER_CLOSE", "MANUAL"])
     .default("AFTER_CLOSE"),
   studentUserIds: z.array(z.uuid()).max(500).optional(),
+  deliveryMode: z.enum(["ONLINE", "PAPER"]).default("ONLINE"),
 });
 
 export async function GET(request: Request) {

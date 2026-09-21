@@ -91,10 +91,15 @@ export async function getClass(organizationId: string, classId: string) {
     });
 
     const studentIds = enrolments.map((e) => e.studentUserId);
-    const [users, profiles] = await Promise.all([
+    const [users, profiles, cards] = await Promise.all([
       tx.user.findMany({ where: { id: { in: studentIds } } }),
       tx.studentProfile.findMany({ where: { userId: { in: studentIds } } }),
+      tx.loginCard.findMany({
+        where: { studentUserId: { in: studentIds }, revokedAt: null },
+        select: { studentUserId: true },
+      }),
     ]);
+    const carded = new Set(cards.map((card) => card.studentUserId));
 
     const byId = new Map(users.map((u) => [u.id, u]));
     const profileById = new Map(profiles.map((p) => [p.userId, p]));
@@ -110,9 +115,10 @@ export async function getClass(organizationId: string, classId: string) {
           phone: user.phone,
           rollNumber: profile?.rollNumber ?? null,
           joinedAt: enrolment.joinedAt,
-          // A student with no phone cannot receive a sign-in code, so they
-          // cannot take a test. Surfaced rather than discovered on exam day.
-          canSignIn: Boolean(user.phone),
+          hasCard: carded.has(user.id),
+          // A phone or a printed card: a student with neither cannot sign in,
+          // so cannot take a test. Surfaced rather than discovered on exam day.
+          canSignIn: Boolean(user.phone) || carded.has(user.id),
         },
       ];
     });

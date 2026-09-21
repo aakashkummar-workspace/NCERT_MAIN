@@ -160,7 +160,11 @@ export async function markingQueue(
         const response = answer.response as { kind?: string; value?: unknown } | null;
         if (response === null) continue;
         const text =
-          response.kind === "text" ? String(response.value ?? "") : JSON.stringify(response);
+          response.kind === "text"
+            ? String(response.value ?? "")
+            : response.kind === "paper"
+              ? "Written on the paper script. Mark it from the script."
+              : JSON.stringify(response);
         if (text.trim().length === 0) continue;
 
         answers.push({

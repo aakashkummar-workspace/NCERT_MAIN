@@ -56,7 +56,9 @@ export default async function AssignmentPage({
   const assignment = await getAssignment(session.actor.organizationId, id);
   if (!assignment) notFound();
 
-  const cannotSignIn = assignment.students.filter((s) => !s.canSignIn).length;
+  const onPaper = assignment.deliveryMode === "PAPER";
+  // Signing in matters only to a paper sat on a device.
+  const cannotSignIn = onPaper ? 0 : assignment.students.filter((s) => !s.canSignIn).length;
 
   return (
     <AppShell
@@ -95,6 +97,39 @@ export default async function AssignmentPage({
 
       <div className="ui-class-layout">
         <Stack>
+          {onPaper && (
+            <Card
+              title="Sat on paper"
+              description="Students sit this in the room. Afterwards, record each sitting: type the letters, or photograph each printed answer sheet. It then counts exactly like an online sitting — marks, mastery, gaps and the Mistake Bank."
+            >
+              <div className="ui-row" style={{ gap: 10, flexWrap: "wrap" }}>
+                <Link
+                  href={`/teacher/assignments/${assignment.id}/paper`}
+                  className="ui-button"
+                  data-variant="primary"
+                  data-size="md"
+                >
+                  <span>Record answers</span>
+                </Link>
+                <Link
+                  href={`/teacher/assignments/${assignment.id}/sheets`}
+                  className="ui-button"
+                  data-variant="secondary"
+                  data-size="md"
+                >
+                  <span>Print answer sheets</span>
+                </Link>
+                <Link
+                  href={`/teacher/assessments/${assignment.assessmentId}/print`}
+                  className="ui-button"
+                  data-variant="ghost"
+                  data-size="md"
+                >
+                  <span>Print the question paper</span>
+                </Link>
+              </div>
+            </Card>
+          )}
           {cannotSignIn > 0 && (
             <Card>
               <div className="ui-row" style={{ gap: 12 }}>
@@ -104,12 +139,16 @@ export default async function AssignmentPage({
                 <span style={{ fontSize: 14 }}>
                   <strong>
                     {cannotSignIn === 1
-                      ? "One student has no mobile number."
-                      : `${cannotSignIn} students have no mobile number.`}
+                      ? "One student cannot sign in."
+                      : `${cannotSignIn} students cannot sign in.`}
                   </strong>{" "}
                   <span style={{ color: "var(--text-secondary)" }}>
-                    They cannot receive a sign-in code, so they cannot sit this.
-                    Add numbers before the window opens.
+                    With no mobile number and no printed card, they cannot sit
+                    this. Add numbers, or{" "}
+                    <Link href={`/teacher/classes/${assignment.classId}/cards`}>
+                      print sign-in cards
+                    </Link>
+                    , before the window opens.
                   </span>
                 </span>
               </div>
@@ -133,8 +172,8 @@ export default async function AssignmentPage({
                 {assignment.students.map((student) => (
                   <li key={student.userId}>
                     <span className="ui-sitter-name">{student.fullName}</span>
-                    {!student.canSignIn ? (
-                      <Badge tone="warning">No mobile</Badge>
+                    {!onPaper && !student.canSignIn ? (
+                      <Badge tone="warning">No mobile or card</Badge>
                     ) : (
                       <Badge tone={SITTER_TONE[student.attemptStatus]}>
                         {SITTER_LABEL[student.attemptStatus]}

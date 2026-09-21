@@ -109,6 +109,9 @@ export function isBlankResponse(response: unknown): boolean {
       return typeof value.value !== "number" || !Number.isFinite(value.value);
     case "boolean":
       return typeof value.value !== "boolean";
+    case "paper":
+      // Written on a paper script: an answer, just not one held here.
+      return false;
     default:
       return true;
   }

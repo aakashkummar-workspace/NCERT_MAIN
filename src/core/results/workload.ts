@@ -203,9 +203,22 @@ export async function teacherWorkload(
               })
             ).map((user) => user.id),
           );
+    // A printed card is a way in too, so a student holding one is not stuck.
+    const carded =
+      noPhone.size === 0
+        ? new Set<string>()
+        : new Set(
+            (
+              await tx.loginCard.findMany({
+                where: { studentUserId: { in: [...noPhone] }, revokedAt: null },
+                select: { studentUserId: true },
+              })
+            ).map((card) => card.studentUserId),
+          );
     const byClass = new Map<string, CannotSignInRow>();
     for (const enrolment of enrolments) {
       if (!noPhone.has(enrolment.studentUserId)) continue;
+      if (carded.has(enrolment.studentUserId)) continue;
       const row = byClass.get(enrolment.class.id) ?? {
         classId: enrolment.class.id,
         className: enrolment.class.name,

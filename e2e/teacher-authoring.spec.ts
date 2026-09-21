@@ -270,7 +270,7 @@ test("flow 3: a roster imports from a paste, and a bad phone costs the row its s
   // And the consequence is surfaced where it will be discovered in time,
   // rather than on exam day: the student is on the roster, marked as unable to
   // receive a code.
-  await expect(page.getByText("One student has no mobile number.")).toBeVisible();
+  await expect(page.getByText("One student has no mobile number and no sign-in card.")).toBeVisible();
   await expect(page.getByText("No mobile", { exact: true })).toBeVisible();
 
   expect(crashes).toEqual([]);
