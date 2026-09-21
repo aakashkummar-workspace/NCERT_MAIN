@@ -1238,6 +1238,12 @@ The lesson both times: **if a query must run before a tenant is known, it belong
   prompts are abbreviated for a reviewer ("Carpooling case study. (i) Distance
   between B and C.") — no student could answer one — so a teacher completes the
   wording from the paper before approving.
+- **"Sirah Digital" was two organizations, and the library one was renamed.** The
+  question library's source (slug `sirah-digital`) is now "Sirah Digital — Question
+  Library"; the school people sign into is slug `sirah-digital-ea8a1`, still named
+  "Sirah Digital" and branded "Sirah School". A lookup by name picked one silently and
+  sent 881 questions to the copy nobody uses, so every importer now takes `--org <slug>`,
+  required. Never find an organization by name in a script.
 - **A script that imports `core/` needs `npx tsx --conditions=react-server`.**
   `server-only` throws under any other condition.
 - **The bank is NOT shared beyond Sirah Digital, and that is a legal gate, not

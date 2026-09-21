@@ -3,8 +3,7 @@
  * questions (prisma/english-questions/*.json) into Sirah Digital as DRAFTS.
  *
  *     node scripts/check-english-questions.mjs --text .english-text
- *     npx tsx --conditions=react-server scripts/import-english-questions.ts
- *     npx tsx --conditions=react-server scripts/import-english-questions.ts --commit
+ *     npx tsx --conditions=react-server scripts/import-english-questions.ts --org <slug>
  *     npx tsx --conditions=react-server scripts/import-english-questions.ts --org <slug> --commit
  *
  * `--org` names the school by SLUG. Two organizations are called "Sirah
@@ -49,8 +48,6 @@ import { validateQuestion } from "../src/core/questions/validate";
 
 const QUESTIONS_DIR = "prisma/english-questions";
 const TEXT_DIR = ".english-text";
-const ORGANIZATION_NAME = "Sirah Digital";
-
 function organizationArg(): string | undefined {
   const at = process.argv.indexOf("--org");
   return at !== -1 ? process.argv[at + 1] : undefined;
@@ -198,9 +195,12 @@ async function main() {
   }
 
   const db = new PrismaClient({ datasources: { db: { url: process.env.DIRECT_URL } } });
+  // Required, and a slug. A default found by name silently changed target when
+  // the library organization was renamed away from "Sirah Digital".
   const slug = organizationArg();
-  const organization = await db.organization.findFirstOrThrow({
-    where: slug ? { slug } : { name: ORGANIZATION_NAME },
+  if (!slug) throw new Error("Pass --org <slug>, e.g. --org sirah-digital (the question library).");
+  const organization = await db.organization.findUniqueOrThrow({
+    where: { slug },
     select: { id: true, name: true, slug: true },
   });
   // The author the NCERT bank already lives under — live, imported rows only,
