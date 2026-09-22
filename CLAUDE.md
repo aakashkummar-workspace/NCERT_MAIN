@@ -950,6 +950,15 @@ The lesson both times: **if a query must run before a tenant is known, it belong
   unmentioned (`what: "elimination"`). Setting ONE or two aside stays allowed —
   "this is not an SSS case" is teaching — and a lone capital in prose
   ("triangle A") still counts as a figure's label, not an option.
+- **Working out a step is also giving it away, and only the PROMPT stops it.**
+  On "sec A = 41/40, find tan A" the third rung computed 41² − 40² = 81, so 9;
+  told not to, it wrote "4/6" as an example on a question whose answer is 2/3,
+  then "9, 40, 41 is a known triple". Each got its own sentence in the system
+  prompt (no value from this question's figures, not as an example, not as a
+  known result). No guard backs this one: a number check flags harmless
+  examples ("1/3" shares digits with 2/3), so it would fall back to the
+  authored hint constantly. Re-test with the real model after touching the
+  prompt — the leak moves rather than stops.
 - **Three named rungs, never one "Help" button.** Hint, then method, then the
   idea said another way, each button naming what the student is agreeing to see.
   One button would let somebody who wanted a nudge land on a full walkthrough —
