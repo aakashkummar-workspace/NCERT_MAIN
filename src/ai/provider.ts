@@ -1,5 +1,6 @@
 import type { ZodType } from "zod";
 import type { ModelTier, TokenUsage } from "./models";
+import { claudeCodeAllowed } from "./local-database";
 
 /**
  * The provider seam.
@@ -79,7 +80,10 @@ export const NO_USAGE: TokenUsage = {
   cachedInputTokens: 0,
 };
 
-/** Whether a real provider is configured at all. */
+/**
+ * Whether a real provider is configured at all: an API key, or the
+ * development-only Claude Code provider on a local database (src/ai/claude-code.ts).
+ */
 export function hasProviderCredentials(): boolean {
-  return Boolean(process.env.ANTHROPIC_API_KEY);
+  return Boolean(process.env.ANTHROPIC_API_KEY) || claudeCodeAllowed();
 }

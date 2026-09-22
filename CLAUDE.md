@@ -2757,6 +2757,28 @@ about sixty-five defects. The lessons are about where tests stop looking:
   on its next visit. The manifest is not branded per school: an installed app
   keeps the manifest it was installed with.
 
+### Testing AI locally through a Claude Code login
+
+- **`AI_PROVIDER="claude-code"` answers through the developer's own Claude
+  Code login** (`src/ai/claude-code.ts`, the Claude Agent SDK, a
+  devDependency) so the AI features can be tried with real answers and no API
+  key. It is a provider behind the gateway like the API one: same tiers, same
+  structured output (the Zod schema goes over as draft-07 JSON Schema, because
+  the CLI refuses a 2020-12 `$schema` before any call), images included.
+- **Local testing only, and that is Anthropic's rule.** The Agent SDK docs:
+  "Unless previously approved, Anthropic does not allow third party developers
+  to offer claude.ai login or rate limits for their products, including agents
+  built on the Claude Agent SDK." So it runs only when `DATABASE_URL` is on this
+  machine — a FATAL boot finding otherwise, and the gateway checks again — and
+  never inside Vitest, because the suites rely on the mock being the default.
+  Production uses `ANTHROPIC_API_KEY`.
+- **The subprocess is a model call and nothing else**: no tools, no settings
+  files, no session on disk, a temp directory as its working directory, and an
+  environment with every credential and connection string removed.
+- **It is slow.** Each call starts Claude Code: generating two questions and
+  checking them took about 90 seconds. Fine for trying a feature, not a
+  benchmark of what the API provider does.
+
 ## Things not to do
 
 - Do not read `organization_id` or a role from a request body, query string or header.

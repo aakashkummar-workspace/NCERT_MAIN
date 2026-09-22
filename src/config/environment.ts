@@ -1,3 +1,5 @@
+import { isLocalDatabaseUrl } from "@/ai/local-database";
+
 /**
  * What this deployment can and cannot do, decided once, out loud.
  *
@@ -160,7 +162,27 @@ export function checkEnvironment(
 
   // --- Capabilities that are legitimately off ------------------------------
 
-  if (has("ANTHROPIC_API_KEY")) {
+  // AI_PROVIDER="claude-code" answers through the developer's own Claude Code
+  // login. Anthropic does not allow a subscription login to power a product
+  // other people use, so it is for local testing only: on any database that is
+  // not on this machine it is a contradiction, and fatal. See src/ai/claude-code.ts.
+  const aiProvider = (env.AI_PROVIDER ?? "").trim().toLowerCase();
+  if (aiProvider !== "" && aiProvider !== "claude-code") {
+    fatal.push({
+      key: "AI_PROVIDER",
+      message: `AI_PROVIDER is "${aiProvider}", which is not a provider this product knows.`,
+      fix: 'Leave AI_PROVIDER empty to use ANTHROPIC_API_KEY, or set "claude-code" for local testing.',
+    });
+  } else if (aiProvider === "claude-code" && !isLocalDatabaseUrl(env.DATABASE_URL)) {
+    fatal.push({
+      key: "AI_PROVIDER",
+      message:
+        'AI_PROVIDER is "claude-code" but the database is not on this machine. A Claude Code login may power local testing only, never a product schools use.',
+      fix: "Remove AI_PROVIDER and set ANTHROPIC_API_KEY for a real deployment.",
+    });
+  } else if (aiProvider === "claude-code") {
+    live.push("AI: Claude Code login (local testing only)");
+  } else if (has("ANTHROPIC_API_KEY")) {
     live.push("AI: Anthropic");
   } else {
     degraded.push({

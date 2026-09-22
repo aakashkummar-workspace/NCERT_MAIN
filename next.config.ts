@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   // Route handlers honour this too: POST to /api/x/ or Next 308s and the body
   // silently vanishes on the redirect. See API_SPEC.md section 1.
   trailingSlash: true,
+  // Loaded at runtime, never bundled: it ships a native Claude Code binary and
+  // is a devDependency used only by the local-testing provider (src/ai/claude-code.ts).
+  serverExternalPackages: ["@anthropic-ai/claude-agent-sdk"],
   reactStrictMode: true,
   poweredByHeader: false,
   devIndicators: false,

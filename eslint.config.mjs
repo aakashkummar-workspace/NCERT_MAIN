@@ -13,6 +13,17 @@ const NO_DIRECT_SDK = {
 };
 
 /**
+ * The Claude Agent SDK drives a developer's own Claude Code login, which may
+ * power local testing and nothing else (src/ai/claude-code.ts). It gets the
+ * same fence as the API SDK, for the same reasons plus that one.
+ */
+const NO_AGENT_SDK = {
+  name: "@anthropic-ai/claude-agent-sdk",
+  message:
+    "Only src/ai/claude-code.ts may use the Agent SDK. It is a local-testing provider behind the gateway, never a way around it.",
+};
+
+/**
  * The SMS layer is the same shape of problem as the AI layer: a paid external
  * provider, on a path that must not fail, sending something a regulator has
  * approved the exact wording of.
@@ -49,7 +60,7 @@ const config = [
     files: ["src/**/*.{ts,tsx}", "scripts/**/*.ts"],
     ignores: ["src/sms/**"],
     rules: {
-      "no-restricted-imports": ["error", { paths: [NO_DIRECT_SDK, NO_DIRECT_SMS] }],
+      "no-restricted-imports": ["error", { paths: [NO_DIRECT_SDK, NO_AGENT_SDK, NO_DIRECT_SMS] }],
     },
   },
   {
@@ -59,7 +70,7 @@ const config = [
       "no-restricted-imports": [
         "error",
         {
-          paths: [NO_DIRECT_SDK, NO_DIRECT_SMS],
+          paths: [NO_DIRECT_SDK, NO_AGENT_SDK, NO_DIRECT_SMS],
           patterns: [
             {
               group: ["@/core/*", "@/core", "@/db/*", "@/db"],
@@ -78,7 +89,7 @@ const config = [
       "no-restricted-imports": [
         "error",
         {
-          paths: [NO_DIRECT_SDK, NO_DIRECT_SMS],
+          paths: [NO_DIRECT_SDK, NO_AGENT_SDK, NO_DIRECT_SMS],
           patterns: [
             {
               group: ["@/app/*", "@/app", "@/ui/*", "@/ui"],
@@ -156,6 +167,7 @@ const config = [
           paths: [
             NO_DIRECT_SMS,
             NO_DIRECT_SDK,
+            NO_AGENT_SDK,
             {
               name: "@/db/unscoped",
               message:
@@ -195,7 +207,7 @@ const config = [
     // per rule, so this block REPLACES the earlier no-restricted-imports rather
     // than subtracting from it. Dropping the paths here would quietly let the
     // provider reach the database.
-    files: ["src/ai/anthropic.ts"],
+    files: ["src/ai/anthropic.ts", "src/ai/claude-code.ts"],
     rules: {
       "no-restricted-imports": [
         "error",
@@ -253,6 +265,7 @@ const config = [
           paths: [
             NO_DIRECT_SMS,
             NO_DIRECT_SDK,
+            NO_AGENT_SDK,
             {
               name: "@/db/client",
               message:

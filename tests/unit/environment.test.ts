@@ -206,3 +206,31 @@ describe("WhatsApp", () => {
     expect(report.degraded.map((finding) => finding.key)).toContain("WHATSAPP_PROVIDER");
   });
 });
+
+describe("the Claude Code provider is for local testing only", () => {
+  const SUPABASE = "postgres://app.ref@aws-0-ap-northeast-1.pooler.supabase.com:5432/postgres";
+
+  it("is live on a local database, and says it is for testing", () => {
+    const report = checkEnvironment(env({ AI_PROVIDER: "claude-code" }));
+    expect(report.fatal).toHaveLength(0);
+    expect(report.live).toContain("AI: Claude Code login (local testing only)");
+  });
+
+  it("is fatal on any database that is not on this machine", () => {
+    // Anthropic does not allow a subscription login to power a product other
+    // people use, and every real deployment has a remote database.
+    const report = checkEnvironment(env({ AI_PROVIDER: "claude-code", DATABASE_URL: SUPABASE }));
+    expect(keys(report.fatal)).toContain("AI_PROVIDER");
+  });
+
+  it("is fatal when the provider name is not one this product knows", () => {
+    const report = checkEnvironment(env({ AI_PROVIDER: "claude" }));
+    expect(keys(report.fatal)).toContain("AI_PROVIDER");
+  });
+
+  it("leaves the API key path exactly as it was when unset", () => {
+    const report = checkEnvironment(env({ ANTHROPIC_API_KEY: "sk-x", DATABASE_URL: SUPABASE }));
+    expect(keys(report.fatal)).not.toContain("AI_PROVIDER");
+    expect(report.live).toContain("AI: Anthropic");
+  });
+});

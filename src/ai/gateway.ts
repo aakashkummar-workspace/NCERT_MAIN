@@ -7,6 +7,7 @@ import { checkForLeaks, scrub, type SafeValue } from "./scrub";
 import { can, recordUse } from "@/core/billing/entitlements";
 import { MockProvider } from "./mock";
 import { AnthropicProvider } from "./anthropic";
+import { ClaudeCodeProvider, claudeCodeAllowed } from "./claude-code";
 import {
   hasProviderCredentials,
   textOf,
@@ -119,7 +120,16 @@ let cached: AIProvider | null = null;
  */
 export function provider(): AIProvider {
   if (cached) return cached;
-  cached = hasProviderCredentials() ? new AnthropicProvider() : new MockProvider();
+  // The Claude Code provider is for a developer's own testing and only runs on
+  // a local database; asked for anywhere else it is ignored, loudly.
+  if (process.env.AI_PROVIDER?.trim() === "claude-code" && !claudeCodeAllowed()) {
+    console.error('[ai] AI_PROVIDER="claude-code" ignored: the database is not local. Using the default provider.');
+  }
+  cached = claudeCodeAllowed()
+    ? new ClaudeCodeProvider()
+    : process.env.ANTHROPIC_API_KEY
+      ? new AnthropicProvider()
+      : new MockProvider();
   return cached;
 }
 
