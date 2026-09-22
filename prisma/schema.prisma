@@ -1680,6 +1680,8 @@ enum AIFeature {
   CLASSIFICATION
   /// A draft of the marks for one written answer — see core/marking-assist.
   MARKING_ASSIST
+  /// A teacher's sentence turned into paper-builder settings — see core/assessments/from-request.
+  PAPER_PLANNING
 }
 
 enum AIGenerationStatus {

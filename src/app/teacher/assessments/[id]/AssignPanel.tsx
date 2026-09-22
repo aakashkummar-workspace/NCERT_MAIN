@@ -44,17 +44,29 @@ export function AssignPanel({
   durationMinutes,
   classes,
   existing,
+  requested,
 }: {
   assessmentId: string;
   durationMinutes: number;
   classes: ClassOption[];
   existing: Existing[];
+  /**
+   * What a teacher asked for when the paper was drafted from a sentence ("due
+   * Friday", "for 10-A"): offered here as the starting values, never applied.
+   * The page has already checked the window is real and the class is one this
+   * paper can be assigned to.
+   */
+  requested?: { classId: string | null; opensAt: string; closesAt: string } | null;
 }) {
   const router = useRouter();
-  const suggested = suggestWindow(durationMinutes);
+  const suggested = requested
+    ? { opensAt: new Date(requested.opensAt), closesAt: new Date(requested.closesAt) }
+    : suggestWindow(durationMinutes);
 
   const [open, setOpen] = useState(existing.length === 0);
-  const [classId, setClassId] = useState(classes[0]?.id ?? "");
+  const [classId, setClassId] = useState(
+    classes.find((klass) => klass.id === requested?.classId)?.id ?? classes[0]?.id ?? "",
+  );
   const [opensAt, setOpensAt] = useState(toLocalInput(suggested.opensAt));
   const [closesAt, setClosesAt] = useState(toLocalInput(suggested.closesAt));
   const [maxAttempts, setMaxAttempts] = useState(1);

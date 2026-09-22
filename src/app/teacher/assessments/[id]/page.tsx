@@ -17,13 +17,16 @@ export const metadata: Metadata = { title: "Assessment" };
 
 export default async function AssessmentPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ id: string }>;
+  searchParams: Promise<{ class?: string | string[]; opens?: string | string[]; closes?: string | string[] }>;
 }) {
   const session = await getSession();
   if (!session) redirect("/signin");
 
   const { id } = await params;
+  const query = await searchParams;
   const organizationId = session.actor.organizationId;
 
   const [assessment, readiness, review] = await Promise.all([
@@ -121,6 +124,7 @@ export default async function AssessmentPage({
               name: klass.name,
               studentCount: klass.studentCount,
             }))}
+            requested={requestedWindow(query, eligibleClasses.map((klass) => klass.id), assessment.durationMinutes)}
             existing={assignments.map((assignment) => ({
               id: assignment.id,
               className: assignment.className,
@@ -163,4 +167,26 @@ export default async function AssessmentPage({
       />
     </AppShell>
   );
+}
+
+/**
+ * The window and class a paper drafted from a sentence asked for, carried in
+ * the URL to the assign panel. It came from a URL, so it is checked, not
+ * trusted: real instants, still in the future, long enough for the paper, and
+ * a class this paper can actually be assigned to — otherwise the panel falls
+ * back to its own suggestion. It is only ever a starting value.
+ */
+function requestedWindow(
+  query: { class?: string | string[]; opens?: string | string[]; closes?: string | string[] },
+  eligibleClassIds: string[],
+  durationMinutes: number,
+): { classId: string | null; opensAt: string; closesAt: string } | null {
+  if (typeof query.opens !== "string" || typeof query.closes !== "string") return null;
+  const opensAt = new Date(query.opens);
+  const closesAt = new Date(query.closes);
+  if (Number.isNaN(opensAt.getTime()) || Number.isNaN(closesAt.getTime())) return null;
+  const start = Math.max(opensAt.getTime(), Date.now());
+  if (closesAt.getTime() - start < durationMinutes * 60_000) return null;
+  const classId = typeof query.class === "string" && eligibleClassIds.includes(query.class) ? query.class : null;
+  return { classId, opensAt: new Date(start).toISOString(), closesAt: closesAt.toISOString() };
 }

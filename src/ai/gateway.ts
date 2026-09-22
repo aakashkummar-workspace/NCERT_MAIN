@@ -48,7 +48,8 @@ export type AIFeature =
   | "REPORT_GENERATION"
   | "RECOMMENDATION"
   | "CLASSIFICATION"
-  | "MARKING_ASSIST";
+  | "MARKING_ASSIST"
+  | "PAPER_PLANNING";
 
 export type TaskRequest<T> = {
   organizationId: string;

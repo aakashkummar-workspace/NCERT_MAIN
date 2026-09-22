@@ -2794,6 +2794,36 @@ about sixty-five defects. The lessons are about where tests stop looking:
   checking them took about 90 seconds. Fine for trying a feature, not a
   benchmark of what the API provider does.
 
+### A paper from a sentence
+
+- **The model decides the PLAN, never the questions.** "A 20-mark MCQ test on
+  Triangles and Circles for 10-A, due Friday" becomes a class, chapters, a
+  shape, a length and a window (`src/ai/tasks/plan-paper.ts`, FAST tier,
+  metered as one generation, ledger feature `PAPER_PLANNING`). Classes and
+  chapters are named by index, and an index not offered is dropped, never
+  clamped; a chapter outside the class's subject is dropped too.
+- **The questions are picked by rule, from APPROVED bank questions only**
+  (`core/assessments/auto-fill.ts`, pure): spread across the chapters in turn,
+  repeatable for a seed. The draft is written through `createAssessment`,
+  `updateDraft` and `setQuestions`, so it passes exactly what a hand-built
+  paper passes — including the school's paper review, which an AI-drafted
+  paper does not skip.
+- **It fits the bank and SAYS so.** A difficulty that runs out is topped up
+  from the nearest one of the same type, ties going easier (the `pickNearest`
+  rule); a type with no approved questions on those chapters is re-shared
+  over the types that exist. Every change is listed under "Changed to fit your
+  bank". Nothing reaches for another chapter; what is still short is reported
+  in the teacher's own numbers ("asked for 4, the bank had 1"). The first
+  version refused to top up, and a teacher who asked for fifteen questions got
+  nine.
+- **Nothing is published or assigned.** It lands as a DRAFT. The window asked
+  for ("due Friday" closes at 20:00 IST, the assign panel's own hour) travels
+  in the URL to the assign panel as a starting value, re-checked by the page,
+  never applied.
+- **Today's date goes in the request, not the system prompt** — the cache
+  rule. The teacher's sentence never reaches the ledger or the audit row;
+  only counts do.
+
 ## Things not to do
 
 - Do not read `organization_id` or a role from a request body, query string or header.

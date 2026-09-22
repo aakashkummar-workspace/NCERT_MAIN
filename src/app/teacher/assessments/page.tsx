@@ -11,6 +11,7 @@ import { listClasses } from "@/core/classes";
 import { AppShell } from "@/ui/AppShell";
 import { Badge, Card, EmptyState, PageHeader, Stack } from "@/ui";
 import { NewAssessment } from "./NewAssessment";
+import { PaperFromRequest } from "./PaperFromRequest";
 
 export const metadata: Metadata = { title: "Assessments" };
 
@@ -72,6 +73,13 @@ export default async function AssessmentsPage({
           />
         }
       />
+
+      {/* A paper from a sentence: a draft from approved questions, never sent. */}
+      {classes.length > 0 && (
+        <div style={{ marginBottom: 16 }}>
+          <PaperFromRequest />
+        </div>
+      )}
 
       {/* Owners and admins, when the school checks papers before publishing. */}
       {toReview.length > 0 && (

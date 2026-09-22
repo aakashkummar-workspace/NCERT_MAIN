@@ -637,3 +637,28 @@
 .ui-report-holistic dd {
   margin: 0;
 }
+
+/* ---------------------------------------------------- A paper from a sentence */
+
+.ui-paper-ask-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ui-paper-ask-result {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.ui-paper-ask-result ul {
+  margin: 8px 0;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.ui-paper-ask-title {
+  margin: 0;
+}
