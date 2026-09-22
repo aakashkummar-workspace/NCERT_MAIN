@@ -42,8 +42,15 @@ const nextConfig: NextConfig = {
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           {
+            // microphone=(self): voice input for written answers is the
+            // browser's speech recognition, which needs the microphone. With
+            // `microphone=()` the browser reported it blocked on every page and
+            // dictation could never start. `self` allows this origin only — no
+            // embedded frame. The camera stays off: photo answers use a file
+            // input with `capture`, which hands off to the phone's own camera
+            // app and needs no permission here.
             key: "Permissions-Policy",
-            value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+            value: "camera=(), microphone=(self), geolocation=(), interest-cohort=()",
           },
           {
             key: "Strict-Transport-Security",
