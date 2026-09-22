@@ -1,6 +1,6 @@
 import "server-only";
 import { platformPrisma } from "@/db/platform";
-import { suggestConcepts, type Proposal } from "@/ai/tasks/suggest-concepts";
+import { suggestConcepts, type Link, type Proposal } from "@/ai/tasks/suggest-concepts";
 import { checkConceptName } from "./concept-rules";
 import { uncoveredOutcomes } from "./concept-admin";
 
@@ -46,8 +46,17 @@ export type Draft = {
   flags: string[];
 };
 
+/** Outcomes proposed for a concept that already exists. */
+export type LinkDraft = {
+  conceptId: string;
+  conceptName: string;
+  rationale: string;
+  outcomes: Draft["outcomes"];
+  flags: string[];
+};
+
 export type SuggestResult =
-  | { ok: true; drafts: Draft[]; considered: number; discarded: number }
+  | { ok: true; drafts: Draft[]; links: LinkDraft[]; considered: number; discarded: number }
   | { ok: false; reason: "nothing-uncovered" | "unavailable"; message: string };
 
 /** More than this in one call and the model is being asked to hold too much. */
@@ -88,7 +97,10 @@ export async function draftConcepts(
         some: { outcome: { topic: { chapter: { subjectId: input.subjectId } } } },
       },
     },
-    select: { name: true },
+    select: { id: true, name: true },
+    // Sorted: the list sits above the cache breakpoint, and it is also what
+    // `conceptIndex` refers to, so its order has to be the same every time.
+    orderBy: { name: "asc" },
   });
   const everyName = await platformPrisma.concept.findMany({ select: { name: true } });
   const takenNames = new Set(
@@ -120,9 +132,13 @@ export async function draftConcepts(
 
   const drafts: Draft[] = [];
   let discarded = 0;
+  // An outcome goes in one place. The same answer counting towards two
+  // concepts splits the evidence for both — the rule the concept editor
+  // enforces by offering only uncovered outcomes.
+  const used = new Set<string>();
 
   for (const proposal of outcome.value.proposals) {
-    const draft = accept(proposal, uncovered, takenNames);
+    const draft = accept(proposal, uncovered, takenNames, used);
     if (draft === null) {
       discarded++;
       continue;
@@ -130,14 +146,92 @@ export async function draftConcepts(
     // A model proposing the same name twice in one batch is the same problem as
     // proposing one that already exists.
     takenNames.add(draft.name.trim().toLowerCase());
+    for (const row of draft.outcomes) used.add(row.id);
     drafts.push(draft);
+  }
+
+  const links: LinkDraft[] = [];
+  for (const proposed of outcome.value.links) {
+    const link = acceptLink(proposed, uncovered, existing, used);
+    if (link === null) {
+      discarded++;
+      continue;
+    }
+    for (const row of link.outcomes) used.add(row.id);
+    links.push(link);
   }
 
   return {
     ok: true,
     drafts,
-    considered: outcome.value.proposals.length,
+    links,
+    considered: outcome.value.proposals.length + outcome.value.links.length,
     discarded,
+  };
+}
+
+type Offered = { id: string; code: string; statement: string; chapterTitle: string };
+
+/**
+ * The outcomes a proposal names, resolved against the list the prompt offered.
+ * An index out of range is dropped rather than clamped — clamping would
+ * silently attach the grouping to a different outcome — and one already used
+ * elsewhere in this batch is dropped too.
+ */
+function resolveOutcomes(indexes: number[], offered: Offered[], used: Set<string>) {
+  const seen = new Set<number>();
+  const outcomes: Draft["outcomes"] = [];
+  let missing = 0;
+  let taken = 0;
+  for (const index of indexes) {
+    if (index < 0 || index >= offered.length) {
+      missing++;
+      continue;
+    }
+    if (seen.has(index)) continue;
+    seen.add(index);
+    const row = offered[index]!;
+    if (used.has(row.id)) {
+      taken++;
+      continue;
+    }
+    outcomes.push({
+      id: row.id,
+      code: row.code,
+      statement: row.statement,
+      chapterTitle: row.chapterTitle,
+    });
+  }
+  const flags: string[] = [];
+  if (missing > 0) {
+    // Said out loud rather than silently trimmed: a reviewer should know the
+    // grouping they are looking at is not quite the one that was proposed.
+    flags.push("Some of the outcomes it named did not exist and were dropped from this grouping.");
+  }
+  if (taken > 0) {
+    flags.push("An outcome it named is already in another proposal here, and was left out of this one.");
+  }
+  return { outcomes, flags };
+}
+
+function acceptLink(
+  link: Link,
+  offered: Offered[],
+  existing: { id: string; name: string }[],
+  used: Set<string>,
+): LinkDraft | null {
+  // A concept index that was not offered is not clamped to the nearest one,
+  // for the reason an outcome index is not.
+  const concept = existing[link.conceptIndex];
+  if (!concept) return null;
+  const { outcomes, flags } = resolveOutcomes(link.outcomeIndexes, offered, used);
+  if (outcomes.length === 0) return null;
+  return {
+    conceptId: concept.id,
+    conceptName: concept.name,
+    rationale: link.rationale.trim(),
+    outcomes,
+    flags,
   };
 }
 
@@ -153,6 +247,7 @@ function accept(
     chapterTitle: string;
   }[],
   takenNames: Set<string>,
+  used: Set<string>,
 ): Draft | null {
   const name = proposal.name.trim();
 
@@ -161,23 +256,8 @@ function accept(
   }
   if (takenNames.has(name.toLowerCase())) return null;
 
-  // Indexes the prompt actually offered, de-duplicated. An index out of range
-  // is dropped rather than clamped: clamping would silently attach the grouping
-  // to a different outcome, which is the failure mode this check exists for.
-  const seen = new Set<number>();
-  const outcomes: Draft["outcomes"] = [];
-  for (const index of proposal.outcomeIndexes) {
-    if (index < 0 || index >= offered.length) continue;
-    if (seen.has(index)) continue;
-    seen.add(index);
-    const row = offered[index]!;
-    outcomes.push({
-      id: row.id,
-      code: row.code,
-      statement: row.statement,
-      chapterTitle: row.chapterTitle,
-    });
-  }
+  const resolved = resolveOutcomes(proposal.outcomeIndexes, offered, used);
+  const outcomes = resolved.outcomes;
   if (outcomes.length === 0) return null;
 
   const flags: string[] = [];
@@ -193,13 +273,7 @@ function accept(
   for (const problem of checkConceptName(name)) {
     if (problem.severity === "warning") flags.push(problem.message);
   }
-  if (proposal.outcomeIndexes.length !== outcomes.length) {
-    // Said out loud rather than silently trimmed: a reviewer should know the
-    // grouping they are looking at is not quite the one that was proposed.
-    flags.push(
-      "Some of the outcomes it named did not exist and were dropped from this grouping.",
-    );
-  }
+  flags.push(...resolved.flags);
 
   return {
     name,

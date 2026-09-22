@@ -313,6 +313,71 @@ export async function createConceptWithOutcomes(
   return { ok: true, id: created.id, linked };
 }
 
+/**
+ * Add uncovered outcomes to a concept that already exists — what the review
+ * screen presses to accept a suggested link.
+ *
+ * Two refusals the editor gets by construction and this route has to make
+ * itself, because the proposal was drafted a minute ago and the ids arrive in
+ * a request:
+ *
+ * - **Only an outcome nothing covers.** Somebody may have linked it since, and
+ *   the same answer counting towards two concepts splits the evidence for both.
+ * - **Only a concept that already measures this subject.** A proposal is drawn
+ *   from one subject's concepts; a Mathematics outcome attached to a Science
+ *   concept would file its evidence under a syllabus nobody is taught.
+ *
+ * Each link goes through `linkOutcome`, so it is audited and clears the
+ * concept's review stamp like any other edit.
+ */
+export async function linkUncoveredOutcomes(
+  actor: Actor,
+  conceptId: string,
+  outcomeIds: string[],
+): Promise<{ ok: true; id: string; linked: number } | { ok: false; problems: Problem[] }> {
+  const refuse = (message: string) => ({
+    ok: false as const,
+    problems: [{ field: "outcomeIds", message, severity: "error" as const }],
+  });
+  if (!isUuid(conceptId) || outcomeIds.length === 0 || !outcomeIds.every(isUuid)) {
+    return refuse("No such concept or outcome.");
+  }
+
+  const [concept, outcomes] = await Promise.all([
+    platformPrisma.concept.findUnique({
+      where: { id: conceptId },
+      include: { outcomes: { include: { outcome: { include: { topic: { include: { chapter: true } } } } } } },
+    }),
+    platformPrisma.learningOutcome.findMany({
+      where: { id: { in: outcomeIds } },
+      include: { concepts: { select: { conceptId: true } }, topic: { include: { chapter: true } } },
+    }),
+  ]);
+  if (!concept || outcomes.length !== new Set(outcomeIds).size) {
+    return refuse("No such concept or outcome.");
+  }
+
+  const covered = outcomes.filter((outcome) => outcome.concepts.length > 0);
+  if (covered.length > 0) {
+    return refuse(
+      `${covered.map((outcome) => outcome.code).join(", ")} ${covered.length === 1 ? "is" : "are"} already measured by a concept. Draft again to see what is still uncovered.`,
+    );
+  }
+
+  const conceptSubjects = new Set(concept.outcomes.map((link) => link.outcome.topic.chapter.subjectId));
+  const elsewhere = outcomes.filter((outcome) => !conceptSubjects.has(outcome.topic.chapter.subjectId));
+  if (elsewhere.length > 0) {
+    return refuse(`"${concept.name}" does not measure this subject, so these outcomes cannot be added to it.`);
+  }
+
+  let linked = 0;
+  for (const outcome of outcomes) {
+    const link = await linkOutcome(actor, conceptId, outcome.id, 1);
+    if (link.ok) linked++;
+  }
+  return { ok: true, id: conceptId, linked };
+}
+
 export async function renameConcept(
   actor: Actor,
   id: string,

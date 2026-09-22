@@ -283,6 +283,16 @@ The lesson both times: **if a query must run before a tenant is known, it belong
   better left uncovered and visible than filed under a concept somebody has to
   unpick later: an uncovered outcome is a known hole, a wrong concept is a wrong
   measurement that looks right.
+- **It can also propose adding an outcome to a concept that EXISTS.** Before,
+  an outcome like "finds the nth term of an AP" had no good home when "nth term
+  of an arithmetic progression" already existed: a duplicate is refused, so the
+  model left it out and it stayed uncovered with nothing said. Now `links`
+  name an existing concept by the index it was listed under (the list is sorted
+  by name — it sits above the cache breakpoint). Each outcome goes in ONE place
+  across all proposals and links. Accepting a link (`linkUncoveredOutcomes`)
+  refuses an outcome something has covered since and a concept that does not
+  already measure this subject, then goes through `linkOutcome`, so it is
+  audited and clears the concept's review.
 - **It refuses before it spends.** A subject with nothing uncovered never
   reaches the provider.
 - **This is the one AI task in the product with no personal data in it at
@@ -1124,6 +1134,11 @@ The lesson both times: **if a query must run before a tenant is known, it belong
 - **Unsupported means the control is ABSENT, not disabled.** The API is missing in
   Firefox and inconsistent elsewhere. A dead button costs a student thirty seconds
   mid-exam deciding whether the fault is theirs.
+- **`Permissions-Policy` must say `microphone=(self)`.** It said
+  `microphone=()` for months, which the browser reports as blocked on every
+  page, so dictation could never start in production and no test looked.
+  `tests/unit/permissions-policy.test.ts` pins it. The camera stays `()`: photo
+  answers use a file input with `capture`, which needs no permission.
 - **Dictation appends and never replaces**, and an empty final result returns the
   answer untouched rather than queueing an autosave for nothing.
 - **It routes through the textarea's own `record()` handler.** No second

@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { draftConcepts } from "@/core/curriculum/concept-suggest";
-import { createConceptWithOutcomes } from "@/core/curriculum/concept-admin";
+import { createConceptWithOutcomes, linkUncoveredOutcomes } from "@/core/curriculum/concept-admin";
 import { guardPlatform } from "../../../../_lib/platform";
 import { fail, failValidation, ok } from "../../../../_lib/respond";
 
@@ -19,6 +19,13 @@ const Body = z.discriminatedUnion("action", [
     action: z.literal("accept"),
     name: z.string().trim().min(1),
     description: z.string().trim().max(500).optional(),
+    outcomeIds: z.array(z.uuid()).min(1).max(12),
+  }),
+  // Accepting a suggested link to a concept that already exists. The concept
+  // and outcomes are ids from the draft, so they are re-checked, not trusted.
+  z.object({
+    action: z.literal("link"),
+    conceptId: z.uuid(),
     outcomeIds: z.array(z.uuid()).min(1).max(12),
   }),
 ]);
@@ -48,6 +55,14 @@ export async function POST(request: Request) {
     });
     if (!result.ok) return fail("CONFLICT", result.message);
     return ok(result);
+  }
+
+  if (parsed.data.action === "link") {
+    const linked = await linkUncoveredOutcomes(actor, parsed.data.conceptId, parsed.data.outcomeIds);
+    if (!linked.ok) {
+      return fail("VALIDATION_FAILED", linked.problems[0]!.message, { problems: linked.problems });
+    }
+    return ok(linked);
   }
 
   const created = await createConceptWithOutcomes(actor, {

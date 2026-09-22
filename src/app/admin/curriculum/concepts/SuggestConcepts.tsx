@@ -24,6 +24,15 @@ type Draft = {
   flags: string[];
 };
 
+/** Uncovered outcomes proposed for a concept that already exists. */
+type LinkDraft = {
+  conceptId: string;
+  conceptName: string;
+  rationale: string;
+  outcomes: Draft["outcomes"];
+  flags: string[];
+};
+
 export function SuggestConcepts({
   subjects,
 }: {
@@ -34,6 +43,7 @@ export function SuggestConcepts({
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [drafts, setDrafts] = useState<Draft[] | null>(null);
+  const [links, setLinks] = useState<LinkDraft[]>([]);
   const [discarded, setDiscarded] = useState(0);
   const [accepted, setAccepted] = useState<Record<string, "done" | "busy">>({});
 
@@ -41,6 +51,7 @@ export function SuggestConcepts({
     setPending(true);
     setError(null);
     setDrafts(null);
+    setLinks([]);
     setAccepted({});
     try {
       const response = await fetch("/api/admin/curriculum/concepts/suggest/", {
@@ -54,6 +65,7 @@ export function SuggestConcepts({
         return;
       }
       setDrafts(json.drafts as Draft[]);
+      setLinks((json.links ?? []) as LinkDraft[]);
       setDiscarded(json.discarded ?? 0);
     } catch {
       setError("We could not reach the server.");
@@ -87,6 +99,40 @@ export function SuggestConcepts({
         return;
       }
       setAccepted((current) => ({ ...current, [draftItem.name]: "done" }));
+      router.refresh();
+    } catch {
+      setError("We could not reach the server.");
+    }
+  }
+
+  /** Keyed by concept, so two links to one concept cannot share a button state. */
+  const linkKey = (item: LinkDraft) => `link:${item.conceptId}:${item.outcomes.map((o) => o.id).join(",")}`;
+
+  async function acceptLink(item: LinkDraft) {
+    const key = linkKey(item);
+    setAccepted((current) => ({ ...current, [key]: "busy" }));
+    setError(null);
+    try {
+      const response = await fetch("/api/admin/curriculum/concepts/suggest/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "link",
+          conceptId: item.conceptId,
+          outcomeIds: item.outcomes.map((outcome) => outcome.id),
+        }),
+      });
+      const json = await response.json().catch(() => null);
+      if (!response.ok) {
+        setError(json?.error?.message ?? "We could not add those outcomes.");
+        setAccepted((current) => {
+          const next = { ...current };
+          delete next[key];
+          return next;
+        });
+        return;
+      }
+      setAccepted((current) => ({ ...current, [key]: "done" }));
       router.refresh();
     } catch {
       setError("We could not reach the server.");
@@ -133,7 +179,7 @@ export function SuggestConcepts({
 
       {error && <p className="ui-concept-error">{error}</p>}
 
-      {drafts !== null && drafts.length === 0 && (
+      {drafts !== null && drafts.length === 0 && links.length === 0 && (
         <p className="ui-hint">
           Nothing proposed. That is a real answer: outcomes that share no idea
           are better left uncovered and visible than filed under a concept
@@ -147,7 +193,8 @@ export function SuggestConcepts({
         <p className="ui-hint">
           {discarded} {discarded === 1 ? "proposal was" : "proposals were"}{" "}
           discarded before you saw {discarded === 1 ? "it" : "them"} — a name
-          that already exists, or outcomes that were not on the list.
+          that already exists, a concept or outcomes that were not on the list,
+          or outcomes already proposed elsewhere.
         </p>
       )}
 
@@ -205,6 +252,63 @@ export function SuggestConcepts({
             </li>
           ))}
         </ul>
+      )}
+
+      {links.length > 0 && (
+        <>
+          <h3 className="ui-platform-heading">Add to a concept that already exists</h3>
+          <p className="ui-hint">
+            These outcomes look like the same idea as a concept this subject already
+            measures. Accepting adds them to it — and, like any edit, clears that
+            concept&rsquo;s review.
+          </p>
+          <ul className="ui-draft-list">
+            {links.map((item) => {
+              const key = linkKey(item);
+              return (
+                <li key={key} className="ui-draft">
+                  <div className="ui-draft-head">
+                    <div>
+                      <h3 className="ui-draft-name">{item.conceptName}</h3>
+                      <p className="ui-draft-description">Existing concept</p>
+                    </div>
+                    <button
+                      type="button"
+                      className="ui-button"
+                      data-variant={accepted[key] === "done" ? "ghost" : "primary"}
+                      data-size="sm"
+                      disabled={Boolean(accepted[key])}
+                      onClick={() => void acceptLink(item)}
+                    >
+                      <span>
+                        {accepted[key] === "done"
+                          ? "Added"
+                          : accepted[key] === "busy"
+                            ? "Adding…"
+                            : `Add · ${item.outcomes.length}`}
+                      </span>
+                    </button>
+                  </div>
+                  <p className="ui-draft-rationale">{item.rationale}</p>
+                  {item.flags.map((flag) => (
+                    <p key={flag} className="ui-concept-warning">
+                      {flag}
+                    </p>
+                  ))}
+                  <ul className="ui-draft-outcomes">
+                    {item.outcomes.map((outcome) => (
+                      <li key={outcome.id}>
+                        <span className="ui-uncovered-code tabular">{outcome.code}</span>
+                        <span className="ui-uncovered-statement">{outcome.statement}</span>
+                        <span className="ui-uncovered-where">{outcome.chapterTitle}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              );
+            })}
+          </ul>
+        </>
       )}
     </section>
   );

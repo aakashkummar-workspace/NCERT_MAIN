@@ -4,6 +4,7 @@ import { draftConcepts } from "@/core/curriculum/concept-suggest";
 import {
   createConcept,
   createConceptWithOutcomes,
+  linkUncoveredOutcomes,
   uncoveredOutcomes,
 } from "@/core/curriculum/concept-admin";
 import { MAX_OUTCOMES_PER_CALL } from "@/core/curriculum/concept-suggest";
@@ -368,5 +369,110 @@ describe("accepting a draft", () => {
     for (const outcome of outcomes) {
       expect(stillUncovered.map((row) => row.id)).toContain(outcome.id);
     }
+  });
+});
+
+/** What the model is shown as existing concepts, in the order `conceptIndex` refers to. */
+async function existingInSubject() {
+  return platformPrisma.concept.findMany({
+    where: { outcomes: { some: { outcome: { topic: { chapter: { subjectId } } } } } },
+    select: { id: true, name: true },
+    orderBy: { name: "asc" },
+  });
+}
+
+describe("adding an outcome to a concept that already exists", () => {
+  it("resolves the concept by the index it was listed under", async () => {
+    await makeOutcomes(1);
+    const offered = await uncoveredOutcomes(subjectId, MAX_OUTCOMES_PER_CALL);
+    const existing = await existingInSubject();
+    expect(existing.length).toBeGreaterThan(1);
+    mock.script(
+      proposals({
+        proposals: [],
+        links: [{ conceptIndex: 1, outcomeIndexes: [0], rationale: "This outcome is the same idea as that concept." }],
+      }),
+    );
+
+    const result = await draftConcepts(actor, { subjectId });
+    if (!result.ok) throw new Error(result.message);
+    expect(result.links).toHaveLength(1);
+    // Resolved against the list the model was shown — never an id it echoed.
+    expect(result.links[0]!.conceptId).toBe(existing[1]!.id);
+    expect(result.links[0]!.conceptName).toBe(existing[1]!.name);
+    expect(result.links[0]!.outcomes.map((row) => row.id)).toEqual([offered[0]!.id]);
+  });
+
+  it("drops a link to a concept that was not on the list, and counts it", async () => {
+    await makeOutcomes(1);
+    const existing = await existingInSubject();
+    mock.script(
+      proposals({
+        proposals: [],
+        links: [{ conceptIndex: existing.length + 5, outcomeIndexes: [0], rationale: "Points at nothing that was offered." }],
+      }),
+    );
+    const result = await draftConcepts(actor, { subjectId });
+    if (!result.ok) throw new Error(result.message);
+    expect(result.links).toHaveLength(0);
+    expect(result.discarded).toBe(1);
+  });
+
+  it("puts an outcome in one place, never a new concept and a link at once", async () => {
+    await makeOutcomes(2);
+    mock.script(
+      proposals({
+        proposals: [
+          {
+            name: `One place ${randomUUID().slice(0, 8)}`,
+            description: "Claims the first two outcomes.",
+            outcomeIndexes: [0, 1],
+            rationale: "Both apply the same relationship.",
+          },
+        ],
+        links: [{ conceptIndex: 0, outcomeIndexes: [0], rationale: "Claims an outcome the proposal already has." }],
+      }),
+    );
+    const result = await draftConcepts(actor, { subjectId });
+    if (!result.ok) throw new Error(result.message);
+    expect(result.drafts).toHaveLength(1);
+    // Its only outcome was already taken, so nothing was left to link.
+    expect(result.links).toHaveLength(0);
+    expect(result.discarded).toBe(1);
+  });
+
+  it("accepts a link only for an uncovered outcome and a concept in this subject", async () => {
+    // A concept of this suite's own, never a real one: concepts have no tenant,
+    // and a link written to a real concept would be permanent and global.
+    const [first, second] = await makeOutcomes(2);
+    const concept = await createConceptWithOutcomes(actor, {
+      name: `Link target ${randomUUID().slice(0, 8)}`,
+      outcomeIds: [first!.id],
+    });
+    if (!concept.ok) throw new Error(JSON.stringify(concept.problems));
+
+    const linked = await linkUncoveredOutcomes(actor, concept.id, [second!.id]);
+    expect(linked.ok).toBe(true);
+    expect(await outcomeIdsFor(concept.id)).toEqual(expect.arrayContaining([first!.id, second!.id]));
+
+    // Covered now, so a second accept of the same proposal is refused.
+    const again = await linkUncoveredOutcomes(actor, concept.id, [second!.id]);
+    expect(again.ok).toBe(false);
+
+    // A concept that measures a different subject.
+    const science = await platformPrisma.subject.findFirstOrThrow({
+      where: { code: "SCI", grade: { number: 10, board: { code: "CBSE" } } },
+    });
+    const elsewhere = await fixtureChapter({ subjectId: science.id, label: "Link elsewhere" });
+    const scienceOutcome = await fixtureOutcome(elsewhere.topicId, "SGX");
+    const scienceConcept = await createConceptWithOutcomes(actor, {
+      name: `Science target ${randomUUID().slice(0, 8)}`,
+      outcomeIds: [scienceOutcome.id],
+    });
+    if (!scienceConcept.ok) throw new Error(JSON.stringify(scienceConcept.problems));
+    const [maths] = await makeOutcomes(1);
+    const crossed = await linkUncoveredOutcomes(actor, scienceConcept.id, [maths!.id]);
+    expect(crossed.ok).toBe(false);
+    if (!crossed.ok) expect(crossed.problems[0]!.message).toMatch(/does not measure this subject/);
   });
 });

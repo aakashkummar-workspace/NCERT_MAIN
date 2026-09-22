@@ -62,6 +62,24 @@ const Proposal = z.object({
 
 export type Proposal = z.infer<typeof Proposal>;
 
+/**
+ * An uncovered outcome that belongs to a concept which ALREADY exists.
+ *
+ * Without this the model had two bad choices for an outcome like "Finds the
+ * nth term of an AP" when "nth term of an arithmetic progression" already
+ * exists: propose a duplicate (refused, rightly) or leave it out — which left
+ * it uncovered with nothing said. The concept is named by the index it was
+ * listed under, never by id, for the reason outcomes are.
+ */
+const Link = z.object({
+  conceptIndex: z.number().int().min(0),
+  outcomeIndexes: z.array(z.number().int().min(0)).min(1).max(12),
+  /** Why these outcomes measure that concept, for the reviewer. */
+  rationale: z.string().min(10).max(300),
+});
+
+export type Link = z.infer<typeof Link>;
+
 export const ConceptProposals = z.object({
   /**
    * Empty is a real answer.
@@ -71,6 +89,8 @@ export const ConceptProposals = z.object({
    * one that quietly fragments the evidence for the rest.
    */
   proposals: z.array(Proposal).max(12),
+  /** Outcomes that belong under an existing concept. Empty is a real answer too. */
+  links: z.array(Link).max(20).default([]),
 });
 
 export type ConceptProposals = z.infer<typeof ConceptProposals>;
@@ -84,7 +104,11 @@ export type SuggestContext = {
   subjectName: string;
   /** Outcomes nothing measures, in the order the indexes refer to. */
   outcomes: { code: string; statement: string; chapterTitle: string }[];
-  /** Concepts that already exist in this subject, so nothing is proposed twice. */
+  /**
+   * Concepts that already exist in this subject, in the order `conceptIndex`
+   * refers to. Sorted by the caller: this list sits above the cache
+   * breakpoint, and an unsorted list there changes the prefix on every call.
+   */
   existingNames: string[];
 };
 
@@ -108,8 +132,14 @@ WHAT TO REFUSE
 
 Return an empty list rather than inventing a grouping. Outcomes that share nothing are better left uncovered and visible than filed under a concept somebody has to unpick later — an uncovered outcome is a known hole, and a wrong concept is a wrong measurement that looks right.
 
-Do not propose a concept that already exists. These are already in this subject:
-${context.existingNames.length > 0 ? context.existingNames.map((name) => `  - ${name}`).join("\n") : "  (none yet)"}
+Do not propose a concept that already exists. These are already in this subject, each with the number you refer to it by:
+${context.existingNames.length > 0 ? context.existingNames.map((name, index) => `  [C${index}] ${name}`).join("\n") : "  (none yet)"}
+
+ADDING TO A CONCEPT THAT EXISTS
+
+If an outcome measures exactly the idea one of those existing concepts names, do not leave it out and do not invent a new concept for it: put it in "links", with the concept's number (the digits after C) as conceptIndex and the outcome's index. Only link when the outcome and the concept are the same idea — a neighbouring idea in the same chapter is not enough, and a wrong link is a wrong measurement.
+
+Each outcome goes in at most one place: one new concept, or one link, or nowhere.
 
 HOW TO WRITE THEM
 
@@ -126,7 +156,7 @@ export function buildRequest(context: SuggestContext): string {
     )
     .join("\n");
 
-  return `Here are ${context.outcomes.length} learning outcomes that no concept currently measures. Group the ones that share an idea, and refer to them by the index in brackets.
+  return `Here are ${context.outcomes.length} learning outcomes that no concept currently measures. Group the ones that share an idea into new concepts, link the ones that belong to an existing concept, and refer to outcomes by the index in brackets.
 
 Not every outcome has to be used. Leaving one out is better than forcing it somewhere.
 
