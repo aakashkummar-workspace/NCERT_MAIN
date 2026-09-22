@@ -272,8 +272,21 @@ export async function makeWorld(
   // An outcome a concept actually covers, so evidence can reach mastery. Most
   // outcomes are covered by nothing, which is the product's own largest gap.
   const sql = await db();
+  //
+  // In a stable order, from a REAL chapter — never "the first row". An
+  // unordered `limit 1` returned whatever row sat first on disk, which was
+  // sometimes another suite's fixture chapter (numbered 1000+) that the next
+  // teardown deletes. Anything a suite needs beyond one covered outcome it
+  // authors for itself, in its own fixture chapter.
   const covered = await sql.query<{ id: string }>(
-    "select co.learning_outcome_id as id from concept_outcomes co limit 1",
+    `select co.learning_outcome_id as id
+       from concept_outcomes co
+       join learning_outcomes lo on lo.id = co.learning_outcome_id
+       join topics t on t.id = lo.topic_id
+       join chapters ch on ch.id = t.chapter_id
+      where ch.number < 1000
+      order by ch.id, lo.code
+      limit 1`,
   );
   if (covered.rows.length === 0) {
     throw new Error("makeWorld: no outcome is covered by a concept");

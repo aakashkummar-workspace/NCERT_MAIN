@@ -13,6 +13,7 @@ import {
 } from "@playwright/test";
 import pg from "pg";
 import { expectNoViolations } from "./support/axe";
+import { fixtureChapterNumber } from "../scripts/lib/fixture-curriculum.mjs";
 import {
   closeDb,
   grantFullPlan,
@@ -109,6 +110,10 @@ type Ids = {
   mistakeId: string | null;
   practiceSessionId: string | null;
   reportId: string | null;
+  /** A class-scope learning gap, for /teacher/gaps/[gapId]/reteach. */
+  gapId: string | null;
+  /** The chapter the measured concepts were authored into. */
+  fixtureChapterId: string;
   inviteToken: string | null;
   /**
    * A throwaway account for the keyboard sign-in flow. Storage state is a
@@ -350,7 +355,13 @@ async function buildWorld(browser: Browser): Promise<Ids> {
   const notes: Record<string, string> = {};
 
   const teacher = await browser.newContext();
-  const world = await makeWorld(teacher, { questionCount: 2 });
+  // Five students: two for the ordinary fixtures, and three more who get the
+  // measured paper wrong so the class has a detected gap. Class scope needs a
+  // fraction AND a floor of three, the shape flow 13 in results-gaps uses.
+  const world = await makeWorld(teacher, {
+    questionCount: 2,
+    studentNames: ["Arun Kumar", "Meera Nair", "Nikhil Rao", "Priya Das", "Sana Khan"],
+  });
   await grantFullPlan(world.teacher.organizationId);
 
   const client = await db();
@@ -364,29 +375,46 @@ async function buildWorld(browser: Browser): Promise<Ids> {
   const conceptId = conceptRow.rows[0]!.concept_id;
 
   // A report refuses below three measured concepts, and a concept needs four
-  // undecayed answers. So: three outcomes in the same chapter, each covered by
-  // a DIFFERENT concept at full mapping weight, five questions apiece.
-  const spread = await client.query<{ outcome_id: string; concept_id: string }>(
-    `select co.learning_outcome_id as outcome_id, min(co.concept_id::text) as concept_id
-       from concept_outcomes co
-       join learning_outcomes lo on lo.id = co.learning_outcome_id
-       join topics t on t.id = lo.topic_id
-      where t.chapter_id = $1 and co.weight = 1.00
-      group by co.learning_outcome_id
-      limit 60`,
-    [world.chapterId],
-  );
-
+  // undecayed answers. No real chapter has three concepts (the NCERT drafts
+  // hold at most two), and borrowing another suite's leftovers is how this
+  // fixture used to pass by luck. So it is AUTHORED, the smoke suite's way:
+  // a fixture chapter of the world's own subject (numbered 1000+, which every
+  // teardown sweeps), three outcomes, three concepts at full weight.
+  const seed = stamp();
+  const fixtureChapterId = (
+    await client.query<{ id: string }>(
+      `insert into chapters (id, subject_id, number, title, source)
+       values (gen_random_uuid(), $1, $2, 'A11y measured fixture', 'a11y.spec.ts — removed by any fixture teardown')
+       returning id`,
+      [world.subjectId, fixtureChapterNumber()],
+    )
+  ).rows[0]!.id;
+  const topicId = (
+    await client.query<{ id: string }>(
+      `insert into topics (id, chapter_id, title, sort_order)
+       values (gen_random_uuid(), $1, 'A11y measured topic', 0) returning id`,
+      [fixtureChapterId],
+    )
+  ).rows[0]!.id;
   const chosen: { outcome_id: string; concept_id: string }[] = [];
-  const usedConcepts = new Set<string>();
-  for (const row of spread.rows) {
-    if (usedConcepts.has(row.concept_id)) continue;
-    usedConcepts.add(row.concept_id);
-    chosen.push(row);
-    if (chosen.length === 3) break;
+  for (const index of [1, 2, 3]) {
+    const outcome = await client.query<{ id: string }>(
+      `insert into learning_outcomes (id, topic_id, code, statement, bloom_level, sort_order, created_at, updated_at)
+       values (gen_random_uuid(), $1, $2, $3, 'APPLY', $4, now(), now()) returning id`,
+      [topicId, `A11Y-${seed}-${index}`, `Apply the ${index}th accessibility idea to a worked problem.`, index],
+    );
+    const concept = await client.query<{ id: string }>(
+      `insert into concepts (id, slug, name, created_at)
+       values (gen_random_uuid(), $1, $2, now()) returning id`,
+      [`a11y-concept-${seed}-${index}`, `A11y concept ${index} ${seed}`],
+    );
+    await client.query(
+      `insert into concept_outcomes (concept_id, learning_outcome_id, weight) values ($1, $2, 1)`,
+      [concept.rows[0]!.id, outcome.rows[0]!.id],
+    );
+    chosen.push({ outcome_id: outcome.rows[0]!.id, concept_id: concept.rows[0]!.id });
   }
 
-  const seed = stamp();
   const request = teacher.request;
 
   let reportId: string | null = null;
@@ -403,7 +431,7 @@ async function buildWorld(browser: Browser): Promise<Ids> {
         measuredQuestions.push(
           await createApprovedQuestion(request, {
             subjectId: world.subjectId,
-            chapterId: world.chapterId,
+            chapterId: fixtureChapterId,
             outcomeId: row.outcome_id,
             difficulty: n % 2 === 0 ? "MEDIUM" : "HARD",
             stem: `A11y measured item ${index}-${n} ${seed} — which criterion settles it?`,
@@ -467,6 +495,29 @@ async function buildWorld(browser: Browser): Promise<Ids> {
     answer: null,
     submit: false,
   });
+
+  // ---- a learning gap ----------------------------------------------------
+  // Three students wrong on every measured question, beside the first one who
+  // got them right: three of four measured below the line.
+  let gapId: string | null = null;
+  if (measuredAssignmentId) {
+    for (const behind of world.students.slice(2, 5)) {
+      const context = await browser.newContext();
+      await signInStudent(context, behind.phone);
+      await sit(context.request, measuredAssignmentId, { answer: "B", submit: true });
+      await context.close();
+    }
+    const gap = await (await db()).query<{ id: string }>(
+      `select id from learning_gaps
+        where organization_id = $1 and scope = 'CLASS' and scope_id = $2
+        order by detected_at limit 1`,
+      [world.teacher.organizationId, world.classId],
+    );
+    gapId = gap.rows[0]?.id ?? null;
+    if (!gapId) notes.gap = "three students below the line did not produce a class gap";
+  } else {
+    notes.gap = "no measured paper, so nothing could open a gap";
+  }
 
   // ---- the mistake bank --------------------------------------------------
   let mistakeId: string | null = null;
@@ -596,6 +647,8 @@ async function buildWorld(browser: Browser): Promise<Ids> {
     mistakeId,
     practiceSessionId,
     reportId,
+    gapId,
+    fixtureChapterId,
     inviteToken,
     signin: { email: keyboardTeacher.email, password: keyboardTeacher.password },
     notes,
@@ -622,6 +675,9 @@ function cached(): Ids | null {
   try {
     const ids = JSON.parse(readFileSync(CACHE_FILE, "utf8")) as Ids;
     if (Date.now() - ids.createdAt > CACHE_MAX_AGE_MS) return null;
+    // A world cached before a fixture existed is rebuilt, not reused with
+    // the fixture silently missing.
+    if (!("gapId" in ids) || !("fixtureChapterId" in ids)) return null;
     return ids;
   } catch {
     return null;
@@ -642,6 +698,13 @@ test.beforeAll(async ({ browser }) => {
   test.setTimeout(300_000);
 
   let ids = cached();
+
+  // Another suite's teardown removes every fixture chapter, and with it the
+  // concepts the cached report and gap were measured on. Rebuild if it went.
+  if (ids) {
+    const still = await (await db()).query("select 1 from chapters where id = $1", [ids.fixtureChapterId]);
+    if (still.rowCount === 0) ids = null;
+  }
 
   if (ids) {
     const teacher = await browser.newContext({ storageState: ids.states.teacher });
@@ -808,6 +871,12 @@ check("teacher", [
   t("/teacher/settings/", () => "/teacher/settings/"),
   t("/teacher/copilot/", () => "/teacher/copilot/"),
   t("/teacher/reports/", () => "/teacher/reports/"),
+  {
+    route: "/teacher/gaps/[gapId]/reteach/",
+    url: () => `/teacher/gaps/${fx.ids.gapId}/reteach/`,
+    context: () => fx.teacher,
+    blocked: () => (fx.ids.gapId ? null : (fx.ids.notes.gap ?? "no gap was detected")),
+  },
   {
     route: "/teacher/reports/[id]/",
     url: () => `/teacher/reports/${fx.ids.reportId}/`,
