@@ -69,7 +69,7 @@ function containsWord(haystack: string, needle: string): boolean {
 
 export type LeakVerdict =
   | { leaked: false }
-  | { leaked: true; what: "option" | "boolean" | "numeric" | "text" };
+  | { leaked: true; what: "option" | "elimination" | "boolean" | "numeric" | "text" };
 
 /**
  * Whether a tutor turn hands over the answer.
@@ -100,6 +100,22 @@ export function leaksAnswer(
       if (key.length > 0 && namesTheKey(text, key)) {
         return { leaked: true, what: "option" };
       }
+    }
+
+    // Ruling out every wrong option says which one is right without naming it.
+    // The real-model walkthrough found exactly this on the third rung: an
+    // "explain it differently" that went through A, C and D in turn and left B
+    // standing. Naming ONE wrong option is still teaching ("this is not an SSS
+    // case"); naming all of them while leaving the right one unmentioned is the
+    // answer by subtraction.
+    const wrong = options.filter((option) => !option.isCorrect);
+    if (
+      correct.length > 0 &&
+      wrong.length > 0 &&
+      wrong.every((option) => mentionsOption(text, option)) &&
+      correct.some((option) => !mentionsOption(text, option))
+    ) {
+      return { leaked: true, what: "elimination" };
     }
     return { leaked: false };
   }
@@ -163,6 +179,35 @@ function namesTheKey(text: string, key: string): boolean {
     new RegExp(`\\bit(?:'s|\\s+is)\\s+\\(?${k}\\)?\\b`, "i"),
   ];
   return patterns.some((pattern) => pattern.test(text));
+}
+
+/**
+ * Whether the reply refers to an option at all — its text, or its key used as
+ * a label.
+ *
+ * Wider than `namesTheKey`, because here the reply is not declaring a verdict:
+ * "(A) fails because…", "options A, C and D", or a line opening "C." all point
+ * at an option. A lone capital in prose ("triangle A") still does not — the
+ * geometry rule again — and keys match case-sensitively for the same reason.
+ */
+function mentionsOption(text: string, option: Option): boolean {
+  if (containsWord(text, option.text)) return true;
+  const key = option.key.trim();
+  if (key.length === 0) return false;
+  const k = escapeRegExp(key);
+  const K = "\\(?[A-Za-z0-9]{1,2}\\)?";
+  const list = new RegExp(
+    `\\b(?:[Oo]ptions?|[Cc]hoices?)\\s+(${K}(?:(?:\\s*,\\s*(?:and\\s+|or\\s+)?|\\s+(?:and|or|nor)\\s+|\\s*\\/\\s*)${K})*)`,
+    "g",
+  );
+  for (const match of text.matchAll(list)) {
+    const keys = match[1]!.split(/[\s,/()]+|\band\b|\bor\b|\bnor\b/).filter(Boolean);
+    if (keys.includes(key)) return true;
+  }
+  return (
+    new RegExp(`\\(${k}\\)`).test(text) ||
+    new RegExp(`(?:^|\\n)\\s*[-*•]?\\s*${k}[.):]\\s`).test(text)
+  );
 }
 
 export type Level = "HINT" | "STEPS" | "EXPLAIN";

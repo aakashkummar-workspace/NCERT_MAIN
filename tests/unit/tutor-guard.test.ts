@@ -68,6 +68,33 @@ describe("leaksAnswer, on multiple choice", () => {
     expect(leaksAnswer("This is not an SSS case.", OPTIONS, null).leaked).toBe(false);
   });
 
+  it("catches the answer given by ruling out every other option", () => {
+    // Found in the real-model walkthrough on the third rung: nothing names B,
+    // and B is all that is left.
+    for (const said of [
+      "AA is for similarity, not congruence. SSS needs all three sides, and RHS needs a right angle — you have neither.",
+      "Options A, C and D each need something the question does not give you.",
+      "(A) is about shape only. (C) needs a third side. (D) needs a right angle.",
+      "A. Only shape.\nC. Needs three sides.\nD. Needs a right angle.",
+    ]) {
+      expect(leaksAnswer(said, OPTIONS, null), said).toEqual({ leaked: true, what: "elimination" });
+    }
+  });
+
+  it("does NOT catch ruling out SOME of the options", () => {
+    // One or two set aside is still a student left to decide.
+    expect(leaksAnswer("AA and SSS need something the question does not give you.", OPTIONS, null).leaked)
+      .toBe(false);
+    expect(leaksAnswer("Options A and C both need more than you are given.", OPTIONS, null).leaked)
+      .toBe(false);
+  });
+
+  it("does NOT read a figure's labels as options", () => {
+    expect(
+      leaksAnswer("Triangle A, triangle C and point D are all on the figure. Compare them.", OPTIONS, null).leaked,
+    ).toBe(false);
+  });
+
   it("does NOT catch the concept, the theorem or the formula", () => {
     const teaching = [
       "Look at which pair of sides you have been given, and what sits between them.",
