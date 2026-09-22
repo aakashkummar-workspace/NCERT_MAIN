@@ -43,6 +43,11 @@ export type PaperSheetHeader = {
   durationMinutes: number;
   totalMarks: number;
   questionMarks: number;
+  /**
+   * A worksheet for practice in class, not a paper: no time, no maximum
+   * marks, and so no marks-mismatch warning either.
+   */
+  worksheet?: boolean;
 };
 
 /** The written types, which need answer space rather than options. */
@@ -87,10 +92,12 @@ function Header({ header }: { header: PaperSheetHeader }) {
         {header.className ? ` · ${header.className}` : ""}
       </p>
 
-      <div className="ui-paper-figures">
-        <span>Time: {header.durationMinutes} minutes</span>
-        <span>Maximum marks: {header.totalMarks}</span>
-      </div>
+      {!header.worksheet && (
+        <div className="ui-paper-figures">
+          <span>Time: {header.durationMinutes} minutes</span>
+          <span>Maximum marks: {header.totalMarks}</span>
+        </div>
+      )}
 
       {/*
         Said on the sheet rather than silently reconciled. A blueprint of 20
@@ -98,7 +105,7 @@ function Header({ header }: { header: PaperSheetHeader }) {
         before it is sat, and the person holding the printout is the one who
         can — a teacher checking the photocopies the evening before.
       */}
-      {header.questionMarks !== header.totalMarks && (
+      {!header.worksheet && header.questionMarks !== header.totalMarks && (
         <p className="ui-paper-warning">
           The questions below carry {header.questionMarks} marks, not{" "}
           {header.totalMarks}. Check the paper before it is sat.
@@ -131,12 +138,15 @@ export function PaperSheet({
       <section className="ui-paper-instructions">
         <h2>General instructions</h2>
         <ol>
-          <li>
-            {questions.some((question) => question.choiceGroup !== null)
-              ? "All questions are compulsory. Where a question offers a choice (OR), answer only one of the alternatives."
-              : "All questions are compulsory."}
-          </li>
-          <li>Marks for each question are shown against it.</li>
+          {/* A worksheet is practice: nothing on it is compulsory or scored. */}
+          {!header.worksheet && (
+            <li>
+              {questions.some((question) => question.choiceGroup !== null)
+                ? "All questions are compulsory. Where a question offers a choice (OR), answer only one of the alternatives."
+                : "All questions are compulsory."}
+            </li>
+          )}
+          {!header.worksheet && <li>Marks for each question are shown against it.</li>}
           <li>Write your answers in the space provided.</li>
           {instructions && <li>{instructions}</li>}
         </ol>
@@ -183,7 +193,9 @@ export function PaperSheet({
         ))}
       </ol>
 
-      <footer className="ui-paper-foot">End of question paper</footer>
+      <footer className="ui-paper-foot">
+        {header.worksheet ? "End of worksheet" : "End of question paper"}
+      </footer>
     </article>
   );
 }

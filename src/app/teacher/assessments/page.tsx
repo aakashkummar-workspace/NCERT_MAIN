@@ -3,12 +3,13 @@ import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { getSession } from "@/core/identity/context";
 import { listAssessments } from "@/core/assessments";
+import { reviewQueue } from "@/core/assessments/review";
 import { listGradesWithSubjects } from "@/core/curriculum";
 import { organizationBoardId } from "@/core/organizations";
 import { currentAcademicYear } from "@/core/curriculum";
 import { listClasses } from "@/core/classes";
 import { AppShell } from "@/ui/AppShell";
-import { Badge, EmptyState, PageHeader, Stack } from "@/ui";
+import { Badge, Card, EmptyState, PageHeader, Stack } from "@/ui";
 import { NewAssessment } from "./NewAssessment";
 
 export const metadata: Metadata = { title: "Assessments" };
@@ -37,10 +38,11 @@ export default async function AssessmentsPage({
   // against a syllabus this school does not teach.
   const boardId = await organizationBoardId(session.actor.organizationId);
 
-  const [assessments, grades, classes] = await Promise.all([
+  const [assessments, grades, classes, toReview] = await Promise.all([
     listAssessments(session.actor.organizationId),
     listGradesWithSubjects(boardId),
     listClasses(session.actor.organizationId),
+    reviewQueue(session.actor),
   ]);
 
   return (
@@ -70,6 +72,29 @@ export default async function AssessmentsPage({
           />
         }
       />
+
+      {/* Owners and admins, when the school checks papers before publishing. */}
+      {toReview.length > 0 && (
+        <div style={{ marginBottom: 16 }}>
+          <Card
+            title={`Waiting for review (${toReview.length})`}
+            description="Papers a colleague has sent to be checked before a class sits them."
+          >
+            <ul className="ui-reteach-list">
+              {toReview.map((row) => (
+                <li key={row.id}>
+                  <Link href={`/teacher/assessments/${row.id}/review`}>{row.title}</Link>
+                  <span className="ui-hint">
+                    {" "}
+                    · {row.gradeLabel} {row.subjectName} · from{" "}
+                    {row.mine ? "you (another owner or admin must review it)" : row.authorName}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </Card>
+        </div>
+      )}
 
       {assessments.length === 0 ? (
         <EmptyState

@@ -57,6 +57,12 @@ export function validateWindow(input: {
   durationMinutes: number;
   durationOverrideMinutes?: number | null;
   maxAttempts: number;
+  /**
+   * A paper sat on paper may already have been sat: the teacher records last
+   * Tuesday's test today. Only a paper a student must START here needs a
+   * window that is still open.
+   */
+  onPaper?: boolean;
   now?: Date;
 }): WindowProblem[] {
   const problems: WindowProblem[] = [];
@@ -93,7 +99,7 @@ export function validateWindow(input: {
 
   // A window that closed before it was created is almost certainly a typo, and
   // it is unrecoverable for a student: they never get to sit it.
-  if (input.closesAt <= now) {
+  if (!input.onPaper && input.closesAt <= now) {
     problems.push({
       field: "closesAt",
       message: "That window has already closed. Nobody would be able to take it.",

@@ -12,6 +12,7 @@ import type { AnswerKey, Option, QuestionType } from "@/core/questions/validate"
 import { markAnswer, summarise, type Response } from "./score";
 import { isBlankResponse, normaliseResponse } from "./response";
 import { alternativesToDrop, displayNumbers } from "@/core/assessments/pattern";
+import { accommodationsFor, extendedMinutes } from "@/core/roster/accommodations";
 
 /**
  * Attempts: the student's sitting.
@@ -144,8 +145,13 @@ export async function startAttempt(
       };
     }
 
-    const durationMinutes =
-      assignment.durationOverrideMinutes ?? assignment.assessment.durationMinutes;
+    // Extra time, for a student granted it, stamped into the clock at the
+    // start like everything else about the clock.
+    const { extraTimePercent } = await accommodationsFor(tx, actor.userId);
+    const durationMinutes = extendedMinutes(
+      assignment.durationOverrideMinutes ?? assignment.assessment.durationMinutes,
+      extraTimePercent,
+    );
     const durationMs = durationMinutes * 60_000;
 
     // The window can close before the paper's own duration runs out. The
@@ -271,6 +277,8 @@ export type PlayerQuestion = {
   timeSpentSeconds: number;
   /** Times this question has been opened so far, carried across a reload. */
   visitCount: number;
+  /** Photos of written working the student has added, by id. */
+  images: string[];
 };
 
 export type PlayerState = {
@@ -283,6 +291,8 @@ export type PlayerState = {
   /** Milliseconds left, computed here so the client never has to guess. */
   remainingMs: number;
   totalMarks: number;
+  /** This student may have questions read aloud, on the device. */
+  readAloud: boolean;
   questions: PlayerQuestion[];
 };
 
@@ -330,6 +340,11 @@ export async function getPlayer(
     );
     const numbers = displayNumbers(placements);
     const numberOf = new Map(placements.map((placement, index) => [placement.id, numbers[index]!]));
+    const photos = await tx.answerImage.findMany({
+      where: { attemptAnswerId: { in: answerRows.map((row) => row.id) } },
+      select: { id: true, attemptAnswerId: true },
+      orderBy: { createdAt: "asc" },
+    });
 
     const questions: PlayerQuestion[] = placements.flatMap((placement) => {
       const answer = answerByQuestion.get(placement.id);
@@ -366,6 +381,9 @@ export async function getPlayer(
           clientSeq: answer.clientSeq,
           timeSpentSeconds: answer.timeSpentSeconds,
           visitCount: answer.visitCount,
+          images: photos
+            .filter((photo) => photo.attemptAnswerId === answer.id)
+            .map((photo) => photo.id),
         },
       ];
     });
@@ -380,6 +398,7 @@ export async function getPlayer(
       // Derived, every time. Never accumulated, never cached.
       remainingMs: Math.max(0, attempt.expiresAt.getTime() - now.getTime()),
       totalMarks: attempt.assignment.assessment.totalMarks,
+      readAloud: (await accommodationsFor(tx, actor.userId)).readAloud,
       questions,
     };
   });
@@ -560,6 +579,26 @@ export async function submitAttempt(
         },
       });
       const placementById = new Map(placements.map((p) => [p.id, p]));
+
+      // A written answer given as a photo, with nothing typed, is an answer.
+      // The box is empty because the working is in a notebook; scored as
+      // blank it would be settled at nothing and never reach the marker.
+      const photographed = new Set(
+        (
+          await tx.answerImage.findMany({
+            where: { attemptAnswerId: { in: attempt.answers.map((a) => a.id) } },
+            select: { attemptAnswerId: true },
+          })
+        ).map((row) => row.attemptAnswerId),
+      );
+      for (const answer of attempt.answers) {
+        if (!photographed.has(answer.id) || !isBlankResponse(answer.response)) continue;
+        answer.response = { kind: "paper" };
+        await tx.attemptAnswer.update({
+          where: { id: answer.id },
+          data: { response: { kind: "paper" } },
+        });
+      }
 
       // An internal choice: the alternative the student did not take is
       // removed before anything is marked. Scored as a blank it would be a

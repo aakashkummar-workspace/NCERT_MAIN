@@ -144,6 +144,16 @@ export async function prerequisitesOf(
  * because the raw client is what reaching across the plane costs and this
  * module is the one that pays it.
  */
+/** A concept's outcome statements, in code order — what "secure" means for it. */
+export async function outcomeStatementsFor(conceptId: string): Promise<string[]> {
+  const rows = await prisma.learningOutcome.findMany({
+    where: { concepts: { some: { conceptId } } },
+    select: { statement: true },
+    orderBy: { code: "asc" },
+  });
+  return rows.map((row) => row.statement);
+}
+
 export async function outcomeIdsFor(conceptId: string): Promise<string[]> {
   const links = await prisma.conceptOutcome.findMany({
     where: { conceptId },

@@ -48,6 +48,16 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        // Never cached, so a deploy's worker reaches every installed phone on
+        // its next visit rather than whenever an HTTP cache happens to expire.
+        source: "/sw.js",
+        headers: [
+          { key: "Cache-Control", value: "no-cache, no-store, must-revalidate" },
+          { key: "Content-Type", value: "application/javascript; charset=utf-8" },
+          { key: "Content-Security-Policy", value: "default-src 'self'; script-src 'self'" },
+        ],
+      },
     ];
   },
 };

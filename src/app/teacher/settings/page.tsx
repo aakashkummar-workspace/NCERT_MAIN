@@ -17,6 +17,8 @@ import {
 } from "@/core/benchmarks";
 import { AppShell } from "@/ui/AppShell";
 import { Alert, Badge, Card, PageHeader, Stack } from "@/ui";
+import { PaperReviewToggle } from "./PaperReviewToggle";
+import { paperReviewRequired } from "@/core/assessments/review";
 
 export const metadata: Metadata = { title: "Settings" };
 
@@ -80,6 +82,8 @@ export default async function SettingsPage() {
   ]);
 
   const students = classes.reduce((sum, klass) => sum + klass.studentCount, 0);
+  const canManage = session.actor.role === "OWNER" || session.actor.role === "ADMIN";
+  const reviewOn = canManage ? await paperReviewRequired(session.actor.organizationId) : false;
 
   return (
     <AppShell
@@ -196,6 +200,14 @@ export default async function SettingsPage() {
               )}
             </p>
           </Card>
+          {canManage && (
+            <Card
+              title="Checking papers"
+              description="The head-of-department sign-off, if your school uses one."
+            >
+              <PaperReviewToggle initial={reviewOn} />
+            </Card>
+          )}
         </Stack>
 
         <Stack>

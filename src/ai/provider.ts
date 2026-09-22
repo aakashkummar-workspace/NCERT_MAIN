@@ -11,7 +11,24 @@ import type { ModelTier, TokenUsage } from "./models";
  * check and PII scrubbing at the same moment.
  */
 
-export type AIMessage = { role: "user" | "assistant"; content: string };
+/**
+ * One piece of a message. An image is a photograph of a student's written
+ * answer, sent for marking assistance and nothing else — see
+ * core/marking-assist. It is bytes the leak check cannot read, which is why
+ * the only caller photographs the answer and not the page it sits on.
+ */
+export type AIContentPart =
+  | { type: "text"; text: string }
+  | { type: "image"; mediaType: "image/jpeg" | "image/png" | "image/webp"; data: string };
+
+export type AIMessage = { role: "user" | "assistant"; content: string | AIContentPart[] };
+
+/** The text of a message, for the leak check and the ledger. Images are not text. */
+export function textOf(message: AIMessage): string {
+  return typeof message.content === "string"
+    ? message.content
+    : message.content.flatMap((part) => (part.type === "text" ? [part.text] : [])).join(" ");
+}
 
 export type AIRequest<T> = {
   tier: ModelTier;

@@ -21,6 +21,7 @@ import "@/ui/question-bank.css";
 import "@/ui/landing.css";
 import "@/ui/announcements.css";
 import "@/ui/branding.css";
+import { ServiceWorker } from "./ServiceWorker";
 
 /**
  * Inter, self-hosted by next/font. Not a Google Fonts <link>: that is a
@@ -63,6 +64,9 @@ export const metadata: Metadata = {
   },
   description:
     "AI assessment and personalised learning for CBSE Class 9 and 10. Assess, find the gaps, practise what matters, measure the improvement.",
+  // The manifest itself is src/app/manifest.ts; iOS reads only these.
+  appleWebApp: { capable: true, title: "Sahayak", statusBarStyle: "default" },
+  icons: { apple: "/icons/apple-touch-icon.png" },
 };
 
 export const viewport: Viewport = {
@@ -70,6 +74,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   // Never disable zoom. A student reading questions for three hours may need it.
   maximumScale: 5,
+  themeColor: "#4a56d2",
 };
 
 export default function RootLayout({
@@ -106,6 +111,7 @@ export default function RootLayout({
           <NavigationProgress />
         </Suspense>
         {children}
+        <ServiceWorker />
       </body>
     </html>
   );

@@ -220,6 +220,14 @@ export type Item = {
    * the class holds, rather than reporting that they found the question hard.
    */
   topDistractor: { key: string; chosen: number } | null;
+  /**
+   * Wrong options a real share of the class chose, with WHO — so the teacher
+   * can have the conversation with the five who hold that idea rather than
+   * reteach thirty. Listed whether or not it beat the key: "6 of 30 think
+   * the ratio flips" is worth a word even when 20 got it right. Staff-only,
+   * like this whole page.
+   */
+  sharedWrong: { key: string; text: string; chosen: number; names: string[] }[];
   /** Worth a teacher's attention: most of the class did not get it. */
   needsAttention: boolean;
 };
@@ -247,6 +255,14 @@ export async function itemAnalysis(
         question: { include: { versions: { orderBy: { version: "desc" } } } },
       },
     });
+    const people = await tx.user.findMany({
+      where: { id: { in: [...new Set(attempts.map((attempt) => attempt.studentUserId))] } },
+      select: { id: true, fullName: true },
+    });
+    const nameOf = new Map(people.map((person) => [person.id, person.fullName]));
+    const ownerOf = new Map(
+      attempts.flatMap((attempt) => attempt.answers.map((answer) => [answer.id, attempt.studentUserId] as const)),
+    );
 
     const items: Item[] = placements.map((placement) => {
       const type = placement.question.type as QuestionType;
@@ -315,6 +331,14 @@ export async function itemAnalysis(
           worst && key && worst.chosen > key.chosen
             ? { key: worst.key, chosen: worst.chosen }
             : null,
+        sharedWrong: sharedWrong(
+          distractors,
+          answers.map((answer) => ({
+            response: answer.response,
+            name: nameOf.get(ownerOf.get(answer.id) ?? "") ?? "A student",
+          })),
+          attempted,
+        ),
         // Below 40% of the marks available, on a question enough people sat to
         // mean anything. Under five papers, one strong student moves the
         // number by twenty points and the flag is noise.
@@ -328,6 +352,37 @@ export async function itemAnalysis(
 }
 
 type RawOption = { key: string; text: string; isCorrect?: boolean };
+
+/** Two students, and a fifth of those who answered: a shared idea, not a slip. */
+export const SHARED_MIN_STUDENTS = 2;
+export const SHARED_MIN_SHARE = 0.2;
+
+export function sharedWrong(
+  distractors: OptionCount[],
+  answers: { response: unknown; name: string }[],
+  attempted: number,
+): Item["sharedWrong"] {
+  return distractors
+    .filter(
+      (option) =>
+        option.chosen >= SHARED_MIN_STUDENTS &&
+        attempted > 0 &&
+        option.chosen / attempted >= SHARED_MIN_SHARE,
+    )
+    .sort((a, b) => b.chosen - a.chosen)
+    .map((option) => ({
+      key: option.key,
+      text: option.text,
+      chosen: option.chosen,
+      names: answers
+        .filter((answer) => {
+          const response = answer.response as { kind?: string; keys?: string[] } | null;
+          return response?.kind === "choice" && (response.keys ?? []).includes(option.key);
+        })
+        .map((answer) => answer.name)
+        .sort((a, b) => a.localeCompare(b)),
+    }));
+}
 
 function countOptions(
   options: RawOption[] | null,

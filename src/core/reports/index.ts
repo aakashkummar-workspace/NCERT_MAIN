@@ -1,4 +1,7 @@
 import "server-only";
+import { holisticFor } from "./holistic";
+import { buildMeetingBrief, type MeetingBrief } from "./meeting";
+import { bookLinksForConcepts } from "@/core/curriculum/book-links";
 import { randomUUID } from "node:crypto";
 import { withTenant } from "@/db/tenant";
 import { can } from "@/core/billing/entitlements";
@@ -54,7 +57,12 @@ export type Actor = { organizationId: string; userId: string };
  * refuses — a half-drawn document is worse than one that admits it cannot be
  * shown here.
  */
-export const PAYLOAD_VERSION = 2;
+/**
+ * 3 added `holistic` — the teacher's observations beyond marks. Optional, so
+ * versions 1 and 2 still render: the sheet accepts anything up to what it
+ * knows.
+ */
+export const PAYLOAD_VERSION = 3;
 
 export type GenerateResult =
   | { ok: true; reportId: string; payload: ReportPayload }
@@ -100,6 +108,16 @@ export async function generateReport(
   // renders exactly as reports always have.
   const letterhead = await letterheadFor(actor.organizationId);
 
+  // Beyond marks: the latest observation per area within the period, stamped
+  // with everything else so a later observation cannot change this document.
+  const holistic = await holisticFor(
+    actor.organizationId,
+    input.studentUserId,
+    input.periodStart,
+    input.periodEnd,
+  );
+  const payload = holistic.length > 0 ? { ...built.payload, holistic } : built.payload;
+
   const reportId = await withTenant(actor.organizationId, async (tx) => {
     const id = randomUUID();
     await tx.report.createMany({
@@ -114,7 +132,7 @@ export async function generateReport(
           periodEnd: input.periodEnd,
           generatedById: actor.userId,
           generatedAt: now,
-          payload: built.payload as unknown as object,
+          payload: payload as unknown as object,
           payloadVersion: PAYLOAD_VERSION,
           ...(letterhead ? { letterhead: letterhead as unknown as object } : {}),
         },
@@ -123,7 +141,7 @@ export async function generateReport(
     return id;
   });
 
-  return { ok: true, reportId, payload: built.payload };
+  return { ok: true, reportId, payload };
 }
 
 export type ClassRunRow = {
@@ -530,4 +548,58 @@ async function gather(
     sittings: perPaper,
     openingEstimates,
   };
+}
+
+/**
+ * The parent–teacher meeting brief for one student — see ./meeting.ts. Derived
+ * on every read and stored nowhere; not plan-gated, because a meeting happens
+ * whatever plan a school is on.
+ */
+export async function meetingBrief(
+  actor: Actor,
+  studentUserId: string,
+  periodStart: Date,
+  periodEnd: Date,
+): Promise<MeetingBrief | null> {
+  const gathered = await gather(actor, { studentUserId, periodStart, periodEnd });
+  if (!gathered) return null;
+
+  const extras = await withTenant(actor.organizationId, async (tx) => {
+    const [openMistakes, resolvedMistakes, practiceDone, enrolments] = await Promise.all([
+      tx.studentMistake.count({ where: { studentUserId, status: { not: "RESOLVED" } } }),
+      tx.studentMistake.count({
+        where: { studentUserId, status: "RESOLVED", resolvedAt: { gte: periodStart, lte: periodEnd } },
+      }),
+      tx.practiceSession.count({
+        where: { studentUserId, completedAt: { gte: periodStart, lte: periodEnd } },
+      }),
+      tx.classEnrolment.findMany({
+        where: { studentUserId, status: "ACTIVE" },
+        select: { classId: true },
+      }),
+    ]);
+    const assigned = await tx.assignedPractice.findMany({
+      where: { classId: { in: enrolments.map((row) => row.classId) }, cancelledAt: null },
+      select: { id: true },
+    });
+    const done = await tx.practiceSession.findMany({
+      where: { studentUserId, assignedPracticeId: { in: assigned.map((row) => row.id) }, completedAt: { not: null } },
+      select: { assignedPracticeId: true },
+    });
+    const finished = new Set(done.map((row) => row.assignedPracticeId));
+    return {
+      openMistakes,
+      resolvedMistakes,
+      practiceDone,
+      assignedOutstanding: assigned.filter((row) => !finished.has(row.id)).length,
+    };
+  });
+
+  const weakest = gathered.concepts
+    .filter((concept) => concept.band === "CRITICAL" || concept.band === "FRAGILE")
+    .map((concept) => concept.conceptId);
+  const links = await bookLinksForConcepts(weakest, "student");
+  const bookLines = new Map([...links].map(([conceptId, link]) => [conceptId, link.label]));
+
+  return buildMeetingBrief(gathered, { ...extras, bookLines });
 }

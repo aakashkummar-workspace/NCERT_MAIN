@@ -100,12 +100,23 @@ const TYPE_LABEL: Record<string, string> = {
  * a teacher who realises at step 4 that the mix was wrong should not have to
  * start again.
  */
+type Review =
+  | { required: false }
+  | {
+      required: true;
+      status: "NOT_SENT" | "WAITING" | "CHANGES_REQUESTED" | "APPROVED";
+      note: string | null;
+      reviewerName: string | null;
+    };
+
 export function Builder({
   assessment,
   chapters,
   outcomes,
   bank,
+  review = { required: false },
 }: {
+  review?: Review;
   assessment: Assessment;
   chapters: Chapter[];
   outcomes: Outcome[];
@@ -403,6 +414,24 @@ export function Builder({
     if (!saved) return;
     setError(null);
     setStep((current) => Math.min(current + 1, STEPS.length - 1));
+  }
+
+  async function sendForReview() {
+    setBusy(true);
+    setError(null);
+    try {
+      const response = await fetch(`/api/assessments/${assessment.id}/review/`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "request" }),
+      });
+      const payload = await response.json().catch(() => null);
+      if (!response.ok) setError(payload?.error?.message ?? "It could not be sent for review.");
+      else router.refresh();
+    } catch {
+      setError("We could not reach the server. Nothing was sent.");
+    }
+    setBusy(false);
   }
 
   async function publish() {
@@ -951,15 +980,20 @@ export function Builder({
                       </span>
                       <span>{question.stem}</span>
                       <span className="ui-review-marks tabular">{question.marks}</span>
-                      {assessment.status === "DRAFT" && !isSecond && (
+                      {assessment.status === "DRAFT" &&
+                      !isSecond &&
+                      (question.choiceGroup !== null || index < reviewRows.length - 1) ? (
                         <Button
                           size="sm"
                           variant="ghost"
-                          disabled={busy || (question.choiceGroup === null && index === reviewRows.length - 1)}
+                          disabled={busy}
                           onClick={() => pair(index)}
                         >
                           {question.choiceGroup !== null ? "Undo OR" : "OR with next"}
                         </Button>
+                      ) : (
+                        // Holds the column, so the marks stay in line.
+                        <span aria-hidden="true" />
                       )}
                     </li>
                   );
@@ -988,12 +1022,57 @@ export function Builder({
               the way it does today even if the questions are edited later.
               Assign it to a class below.
             </Alert>
+          ) : review.required && review.status !== "APPROVED" ? (
+            /*
+              The school checks papers before a class sits them. Whatever
+              else the publish check objects to is listed too, so the
+              reviewer is not sent a paper that could not be published anyway.
+            */
+            <>
+              {review.status === "WAITING" ? (
+                <Alert tone="info" title="Waiting for review">
+                  An owner or admin has been asked to check this paper. It can be
+                  published once they approve it. Editing it now withdraws it from
+                  review.
+                </Alert>
+              ) : (
+                <>
+                  {review.status === "CHANGES_REQUESTED" && (
+                    <Alert tone="warning" title={`${review.reviewerName ?? "The reviewer"} asked for changes`}>
+                      {review.note}
+                    </Alert>
+                  )}
+                  <p style={{ margin: "0 0 14px", fontSize: 14 }}>
+                    Your school checks papers before they are published. Send this
+                    one to an owner or admin; once they approve it, you can publish.
+                  </p>
+                  <Button variant="primary" loading={busy} loadingLabel="Sending…" onClick={sendForReview}>
+                    {review.status === "CHANGES_REQUESTED" ? "Send for review again" : "Send for review"}
+                  </Button>
+                </>
+              )}
+              {(assessment.readiness?.problems ?? []).filter((problem) => !/review/i.test(problem)).length > 0 && (
+                <ul className="ui-check-list" style={{ marginTop: 14 }}>
+                  {(assessment.readiness?.problems ?? [])
+                    .filter((problem) => !/review/i.test(problem))
+                    .map((problem, index) => (
+                      <li key={index}>
+                        <Badge tone="danger">Must fix</Badge>
+                        <span>{problem}</span>
+                      </li>
+                    ))}
+                </ul>
+              )}
+            </>
           ) : assessment.readiness?.ready ? (
             <>
               <p style={{ margin: "0 0 14px", fontSize: 14 }}>
-                Everything checks out. Publishing freezes the wording of every
-                question, so a paper a class has already sat can never change
-                underneath them.
+                Everything checks out
+                {review.required && review.status === "APPROVED"
+                  ? `, and ${review.reviewerName ?? "a reviewer"} approved it`
+                  : ""}
+                . Publishing freezes the wording of every question, so a paper a
+                class has already sat can never change underneath them.
               </p>
               <Button
                 variant="primary"

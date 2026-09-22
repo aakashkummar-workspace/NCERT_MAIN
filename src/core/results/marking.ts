@@ -1,4 +1,5 @@
 import "server-only";
+import { acceptDraft, draftView, type DraftView } from "@/core/marking-assist";
 import { withTenant } from "@/db/tenant";
 import { writeAudit } from "@/core/identity/audit";
 import { isObjective, type QuestionType } from "@/core/questions/validate";
@@ -50,6 +51,10 @@ export type MarkableAnswer = {
   gradeSource: string | null;
   /** What was awarded per criterion, once marked against a scheme. */
   rubricScores: CriterionScore[] | null;
+  /** Photos of the answer, by id: the student's own, or of a paper script. */
+  images: string[];
+  /** A model's suggested marks, if the teacher asked for one. Never a mark. */
+  draft: DraftView | null;
 };
 
 export type MarkingGroup = {
@@ -178,6 +183,8 @@ export async function markingQueue(
           feedback: answer.feedback,
           gradeSource: answer.gradeSource,
           rubricScores: parseScores(answer.rubricScores),
+          images: [],
+          draft: null,
         });
       }
 
@@ -206,6 +213,31 @@ export async function markingQueue(
       });
     }
 
+    // Photos and drafts for everything listed, in two reads rather than one
+    // per answer. Ids only for photos — the bytes are fetched per photo.
+    const listed = groups.flatMap((group) => group.answers);
+    const listedIds = listed.map((answer) => answer.answerId);
+    if (listedIds.length > 0) {
+      const [images, drafts] = await Promise.all([
+        tx.answerImage.findMany({
+          where: { attemptAnswerId: { in: listedIds } },
+          select: { id: true, attemptAnswerId: true },
+          orderBy: { createdAt: "asc" },
+        }),
+        tx.markingDraft.findMany({ where: { attemptAnswerId: { in: listedIds } } }),
+      ]);
+      const draftOf = new Map(drafts.map((row) => [row.attemptAnswerId, draftView(row)]));
+      for (const answer of listed) {
+        answer.images = images
+          .filter((image) => image.attemptAnswerId === answer.answerId)
+          .map((image) => image.id);
+        answer.draft = draftOf.get(answer.answerId) ?? null;
+        if (answer.images.length > 0 && answer.response.startsWith("Written on the paper script")) {
+          answer.response = "The answer is in the photo below.";
+        }
+      }
+    }
+
     return {
       assignmentId,
       title: assignment.assessment.title,
@@ -232,6 +264,14 @@ export async function awardMarks(
   answerId: string,
   awardedMarks: number,
   feedback?: string | null,
+  options: {
+    /**
+     * The teacher saved marks they started from a model's draft. The mark is
+     * still theirs — only a person writes here — and it is stamped
+     * AI_ASSISTED so the product can say how many marks a model suggested.
+     */
+    assisted?: boolean;
+  } = {},
 ): Promise<AwardResult> {
   const now = new Date();
 
@@ -272,11 +312,13 @@ export async function awardMarks(
           // neither — a 2 out of 3 recorded as `false` would tell the analytics
           // the student got it wrong.
           isCorrect: awardedMarks >= max ? true : awardedMarks <= 0 ? false : null,
-          gradeSource: "TEACHER",
+          gradeSource: options.assisted ? "AI_ASSISTED" : "TEACHER",
           gradedAt: now,
           feedback: feedback?.trim() ? feedback.trim().slice(0, 2000) : null,
         },
       });
+
+      if (options.assisted) await acceptDraft(tx, answerId, now);
 
       const summary = await rescoreAttempt(tx, answer.attemptId, now);
 
@@ -344,6 +386,7 @@ export async function awardByRubric(
   answerId: string,
   scores: CriterionScore[],
   feedback?: string | null,
+  options: { assisted?: boolean } = {},
 ): Promise<AwardResult> {
   const prepared = await withTenant<
     | { ok: false; message: string }
@@ -411,7 +454,7 @@ export async function awardByRubric(
     }),
   );
 
-  return awardMarks(actor, answerId, prepared.total, feedback);
+  return awardMarks(actor, answerId, prepared.total, feedback, options);
 }
 
 /** The stored breakdown for one answer, or null. */

@@ -29,7 +29,7 @@
  * out.
  */
 
-export const KNOWN_PAYLOAD_VERSION = 2;
+export const KNOWN_PAYLOAD_VERSION = 3;
 
 export type ReportSheetConcept = {
   conceptId: string;
@@ -74,6 +74,8 @@ export type ReportSheetPayload = {
   awaitingMarking: number;
   summary: string;
   suggestions: string[];
+  /** Optional: versions 1 and 2 carried no holistic section. */
+  holistic?: { domain: string; label: string; level: string; note: string | null }[];
 };
 
 /**
@@ -434,6 +436,27 @@ export function ReportSheet({
               <li key={suggestion}>{suggestion}</li>
             ))}
           </ul>
+        </section>
+      )}
+
+      {payload.holistic && payload.holistic.length > 0 && (
+        <section className="ui-report-block">
+          <h2 className="ui-report-heading">Beyond marks</h2>
+          <p className="ui-report-note">
+            What the teacher has seen, in words. These are observations, not
+            scores, and are never added to anything above.
+          </p>
+          <dl className="ui-report-holistic">
+            {payload.holistic.map((line) => (
+              <div key={line.domain}>
+                <dt>{line.label}</dt>
+                <dd>
+                  <strong>{line.level}</strong>
+                  {line.note ? ` — ${line.note}` : ""}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </section>
       )}
 

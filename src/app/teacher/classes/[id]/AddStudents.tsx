@@ -157,7 +157,7 @@ export function AddStudents({
     const csvContent =
       "data:text/csv;charset=utf-8," +
       encodeURIComponent(
-        "Full Name,Mobile Number,Roll Number\nSample Student One,,101\nSample Student Two,,102\nSample Student Three,,103",
+        "Full Name,Mobile Number,Roll Number,APAAR ID\nSample Student One,,101,\nSample Student Two,,102,\nSample Student Three,,103,",
       );
     const link = document.createElement("a");
     link.setAttribute("href", csvContent);

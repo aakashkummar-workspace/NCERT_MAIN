@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { bookLinksForConcepts } from "@/core/curriculum/book-links";
 import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { getSession } from "@/core/identity/context";
@@ -32,14 +33,16 @@ export default async function PracticeSessionPage({
   );
   if (!practice) notFound();
 
-  const [helpOffered, saved] = await Promise.all([
+  const [helpOffered, saved, books] = await Promise.all([
     tutorOffered(session.actor.organizationId),
     savedQuestionIds(
       session.actor.organizationId,
       session.actor.userId,
       practice.questions.map((question) => question.questionId),
     ),
+    bookLinksForConcepts(practice.conceptId ? [practice.conceptId] : [], "student"),
   ]);
+  const book = books.get(practice.conceptId);
 
   return (
     <StudentShell
@@ -71,6 +74,13 @@ export default async function PracticeSessionPage({
           correctKeys: question.correctKeys,
         }))}
       />
+
+      {/* The book, not the answer — so it can sit here from the start. */}
+      {book && (
+        <p className="ui-hint" style={{ marginTop: 16 }}>
+          This idea is in your book: <Link href={book.href}>{book.label}</Link>
+        </p>
+      )}
     </StudentShell>
   );
 }

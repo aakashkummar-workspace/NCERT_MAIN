@@ -262,6 +262,9 @@ function describeResponse(
   if (value.kind === "boolean") return value.value === true ? "True" : "False";
   if (value.kind === "numeric") return String(value.value ?? "");
   if (value.kind === "text") return String(value.value ?? "").slice(0, 600);
+  // Sat on paper: something was written, and the words are on the script.
+  // Saying "blank" here would tell the classifier they did not try.
+  if (value.kind === "paper") return "(written on a paper script, which is not held here)";
   return null;
 }
 

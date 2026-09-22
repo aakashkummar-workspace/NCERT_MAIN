@@ -4,6 +4,12 @@ import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { getSession } from "@/core/identity/context";
 import { studentProfile } from "@/core/analytics/student";
+import { getAccommodations } from "@/core/roster/accommodations";
+import { AccommodationsForm } from "./AccommodationsForm";
+import { getApaar } from "@/core/roster/apaar";
+import { ApaarForm } from "./ApaarForm";
+import { HolisticForm } from "./HolisticForm";
+import { DOMAINS, LEVELS, recentHolistic } from "@/core/reports/holistic";
 import { MIN_EVIDENCE } from "@/core/mastery/estimate";
 import { AppShell } from "@/ui/AppShell";
 import { Badge, Card, EmptyState, PageHeader, Stack } from "@/ui";
@@ -25,7 +31,12 @@ export default async function StudentPage({
   const { id } = await params;
   // A malformed id is a page that does not exist, not a database error.
   if (!z.uuid().safeParse(id).success) notFound();
-  const profile = await studentProfile(session.actor.organizationId, id);
+  const [profile, accommodations, holistic, apaarId] = await Promise.all([
+    studentProfile(session.actor.organizationId, id),
+    getAccommodations(session.actor.organizationId, id),
+    recentHolistic(session.actor.organizationId, id),
+    getApaar(session.actor.organizationId, id),
+  ]);
   if (!profile) notFound();
 
   return (
@@ -41,6 +52,16 @@ export default async function StudentPage({
           profile.classNames.length > 0
             ? profile.classNames.join(" · ")
             : "Not enrolled in any class."
+        }
+        actions={
+          <Link
+            href={`/teacher/students/${id}/meeting`}
+            className="ui-button"
+            data-variant="secondary"
+            data-size="md"
+          >
+            <span>Meeting brief</span>
+          </Link>
         }
       />
 
@@ -125,6 +146,29 @@ export default async function StudentPage({
               consent page's promise — the centre can take this access away at
               any time — could not be kept from the product. */}
           <ParentLinks studentId={id} studentName={profile.fullName} />
+          <Card
+            title="Exam accommodations"
+            description="For a student entitled to them — CBSE's extra time and reader. Seen by staff only."
+          >
+            <AccommodationsForm studentId={id} initial={accommodations} />
+          </Card>
+          <Card
+            title="APAAR ID"
+            description="The national student ID. Used only to match marks exports to the registry — never to sign in."
+          >
+            <ApaarForm studentId={id} initial={apaarId} />
+          </Card>
+          <Card
+            title="Beyond marks"
+            description="What you see in class that a test cannot. Words, not scores — printed on the next term report as written."
+          >
+            <HolisticForm
+              studentId={id}
+              domains={DOMAINS.map((domain) => ({ key: domain.key, label: domain.label }))}
+              levels={[...LEVELS]}
+              latest={Object.fromEntries(holistic.map((line) => [line.domain, { level: line.level, note: line.note }]))}
+            />
+          </Card>
         </Stack>
       </div>
     </AppShell>

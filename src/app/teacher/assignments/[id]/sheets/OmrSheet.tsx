@@ -39,6 +39,10 @@ export function OmrSheet({
   offSheet: string[];
 }) {
   const bits = encodeSheetId(sheetCode);
+  // The name gets the left half of the header; the instructions the right.
+  // A long name is set smaller rather than allowed to run into them — a
+  // screenshot of "Ananya Krishnamurthy Venkataraman" caught it touching.
+  const nameSize = Math.min(5.2, 92 / Math.max(1, studentName.length * 0.56));
   const half = FIDUCIAL_SIZE / 2;
 
   return (
@@ -67,7 +71,7 @@ export function OmrSheet({
         <text x={105} y={33} textAnchor="middle" fontSize={4.2}>
           {title} · {className}
         </text>
-        <text x={18} y={45} fontSize={5.2} fontWeight={700}>
+        <text x={18} y={45} fontSize={nameSize} fontWeight={700}>
           {studentName}
         </text>
         <text x={18} y={52} fontSize={4}>

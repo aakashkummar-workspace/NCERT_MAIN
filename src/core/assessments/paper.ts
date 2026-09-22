@@ -237,7 +237,7 @@ export async function answerKeyForPrint(
  * Null means there is no key at all, which is an ordinary state for a written
  * question and must not be printed as if the key were missing by mistake.
  */
-function answerLabelFor(
+export function answerLabelFor(
   type: QuestionType,
   options: Option[] | null,
   answer: AnswerKey | null,

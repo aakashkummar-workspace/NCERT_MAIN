@@ -90,7 +90,7 @@ describe("a capability that is legitimately off", () => {
     expect(keys(report.degraded)).toContain("SMS_PROVIDER");
     // The consequence, in the words somebody needs to hear it in.
     expect(report.degraded.find((f) => f.key === "SMS_PROVIDER")!.message).toMatch(
-      /no student can sign in/i,
+      /no student can sign in by phone/i,
     );
   });
 
@@ -116,6 +116,7 @@ describe("a capability that is legitimately off", () => {
         ANTHROPIC_API_KEY: "sk-x",
         CRON_SECRET: "c",
         SMS_PROVIDER: "log",
+        WHATSAPP_PROVIDER: "log",
         QUESTION_LIBRARY_SOURCE: "sirah-digital",
       }),
     );
@@ -148,6 +149,9 @@ describe("a message that arrives nowhere is worse than one that fails", () => {
         SMS_SENDER_ID: "SAHYAK",
         SMS_TEMPLATE_LOGIN_CODE: "17071",
         SMS_TEMPLATE_PARENT_INVITE: "17072",
+        WHATSAPP_PROVIDER: "meta",
+        WHATSAPP_TOKEN: "t",
+        WHATSAPP_PHONE_NUMBER_ID: "123",
         ANTHROPIC_API_KEY: "sk-x",
         CRON_SECRET: "c",
         QUESTION_LIBRARY_SOURCE: "sirah-digital",
@@ -187,5 +191,18 @@ describe("the question library", () => {
     expect(
       checkEnvironment(env({ QUESTION_LIBRARY_SOURCE: "s", QUESTION_LIBRARY_INCLUDE_EXEMPLAR: "true" })).live,
     ).toContain("Question library (including NCERT Exemplar)");
+  });
+});
+
+describe("WhatsApp", () => {
+  it("is fatal when Meta is named without its credentials", () => {
+    const report = checkEnvironment(env({ WHATSAPP_PROVIDER: "meta" }));
+    expect(report.fatal.map((finding) => finding.key)).toContain("WHATSAPP_PROVIDER");
+  });
+
+  it("is only reported when it is off", () => {
+    const report = checkEnvironment(env());
+    expect(report.fatal.map((finding) => finding.key)).not.toContain("WHATSAPP_PROVIDER");
+    expect(report.degraded.map((finding) => finding.key)).toContain("WHATSAPP_PROVIDER");
   });
 });

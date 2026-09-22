@@ -17,6 +17,8 @@ export type ParsedStudent = {
   fullName: string;
   rollNumber?: string;
   phone?: string;
+  /** Twelve digits, from a column headed "APAAR". Never guessed without a header. */
+  apaarId?: string;
   raw: string;
 };
 
@@ -35,6 +37,16 @@ export type RosterParse = {
 };
 
 const MAX_ROWS = 500;
+
+/**
+ * An APAAR ID: twelve digits, as printed with spaces or hyphens between the
+ * groups. Anything else is null — a wrong ID stored is worse than none, because
+ * it is what the office will match against the national registry.
+ */
+export function normaliseApaar(input: string): string | null {
+  const digits = input.trim().replace(/[\s-]/g, "");
+  return /^\d{12}$/.test(digits) ? digits : null;
+}
 
 /**
  * Indian mobile numbers. Accepts the shapes people actually paste — +91, 0091,
@@ -92,7 +104,8 @@ export function parseRoster(input: string): RosterParse {
   // not the data: read the numbers from where they are, and say which column
   // they came from so the teacher can check.
   if (hadHeader && index.phone === -1) {
-    const found = phoneColumnByContent(bodyCells, [index.name]);
+    // Not the APAAR column: twelve digits look like a phone to a digit count.
+    const found = phoneColumnByContent(bodyCells, [index.name, index.apaar]);
     if (found !== -1) {
       index.phone = found;
       if (index.roll === found) index.roll = -1;
@@ -139,6 +152,20 @@ export function parseRoster(input: string): RosterParse {
 
     const rollRaw = pick(cells, index.roll);
     const phoneRaw = pick(cells, index.phone);
+    const apaarRaw = pick(cells, index.apaar);
+    let apaarId: string | undefined;
+    if (apaarRaw) {
+      const normalised = normaliseApaar(apaarRaw);
+      if (normalised) {
+        apaarId = normalised;
+      } else {
+        problems.push({
+          line,
+          raw,
+          message: `"${apaarRaw}" is not a 12-digit APAAR ID. The student was still added, without it.`,
+        });
+      }
+    }
 
     let phone: string | undefined;
     if (phoneRaw) {
@@ -171,7 +198,7 @@ export function parseRoster(input: string): RosterParse {
       seen.set(key, line);
     }
 
-    students.push({ line, fullName, rollNumber, phone, raw });
+    students.push({ line, fullName, rollNumber, phone, ...(apaarId ? { apaarId } : {}), raw });
   }
 
   return {
@@ -284,6 +311,7 @@ function inferColumns(rows: string[][]): {
   name: number;
   roll: number;
   phone: number;
+  apaar: number;
 } {
   const width = Math.max(1, ...rows.map((cells) => cells.length));
   const phone = phoneColumnByContent(rows, [0]);
@@ -296,7 +324,8 @@ function inferColumns(rows: string[][]): {
     }
   }
 
-  return { name: 0, roll, phone };
+  // Never an APAAR column without a header: twelve digits could be a phone.
+  return { name: 0, roll, phone, apaar: -1 };
 }
 
 /**
@@ -318,7 +347,7 @@ function phoneColumnByContent(rows: string[][], skip: number[]): number {
   return -1;
 }
 
-type HeaderRole = "name" | "roll" | "phone" | null;
+type HeaderRole = "name" | "roll" | "phone" | "apaar" | null;
 
 /**
  * What a header cell names, matched by the words in it rather than exactly.
@@ -333,6 +362,10 @@ function headerRole(cell: string): HeaderRole {
   if (!h) return null;
   // Anchored whole-cell patterns, not substrings: a names-only list whose
   // first student is "Cellina" or "Nameeta" must not be read as a header.
+  // APAAR first: "APAAR ID" must not fall to the roll pattern's bare "id".
+  if (/^(apaar|apaarid|apaarno|apaarnumber|abcid)$/.test(h)) {
+    return "apaar";
+  }
   if (
     /^((student|parent|guardian|father|mother)s?)?(mobile|phone|contact|whatsapp|cell)(phone)?(no|num|number)?$/.test(h)
   ) {
@@ -347,12 +380,13 @@ function headerRole(cell: string): HeaderRole {
   return null;
 }
 
-function headerColumns(columns: string[]): { name: number; roll: number; phone: number } {
+function headerColumns(columns: string[]): { name: number; roll: number; phone: number; apaar: number } {
   const roles = columns.map(headerRole);
   return {
     name: roles.indexOf("name"),
     roll: roles.indexOf("roll"),
     phone: roles.indexOf("phone"),
+    apaar: roles.indexOf("apaar"),
   };
 }
 

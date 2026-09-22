@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { normalisePhone, parseRoster } from "@/core/roster/parse";
+import { normaliseApaar, normalisePhone, parseRoster } from "@/core/roster/parse";
 
 describe("normalisePhone", () => {
   it("accepts the shapes people actually paste", () => {
@@ -290,6 +290,15 @@ describe("parseRoster — which column is the phone", () => {
     expect(result.problems).toEqual([]);
   });
 
+  it("reads the sample template's empty APAAR column without a problem", () => {
+    const result = parseRoster(
+      "Full Name,Mobile Number,Roll Number,APAAR ID\nSample Student One,,101,\nSample Student Two,,102,",
+    );
+    expect(result.students).toHaveLength(2);
+    expect(result.students[0]?.apaarId).toBeUndefined();
+    expect(result.problems).toEqual([]);
+  });
+
   it.each([
     ["Student Name", "Phone Number", "Roll No"],
     ["Name", "Mobile No.", "Roll no"],
@@ -323,5 +332,42 @@ describe("parseRoster — which column is the phone", () => {
     const result = parseRoster("Name, Phone, Roll\nArun Kumar, 9876543210, 12");
     expect(result.students[0]?.phone).toBe("9876543210");
     expect(result.students[0]?.rollNumber).toBe("12");
+  });
+});
+
+describe("APAAR IDs", () => {
+  it("normalises the printed grouping to twelve digits", () => {
+    expect(normaliseApaar("1234 5678 9012")).toBe("123456789012");
+    expect(normaliseApaar("1234-5678-9012")).toBe("123456789012");
+    expect(normaliseApaar(" 123456789012 ")).toBe("123456789012");
+  });
+
+  it("refuses anything that is not exactly twelve digits", () => {
+    expect(normaliseApaar("12345678901")).toBeNull();
+    expect(normaliseApaar("1234567890123")).toBeNull();
+    expect(normaliseApaar("12345678901A")).toBeNull();
+    expect(normaliseApaar("")).toBeNull();
+  });
+
+  it.each(["APAAR", "APAAR ID", "Apaar No", "APAAR Number", "ABC ID"])(
+    "reads a %s column, and it does not become the roll number",
+    (heading) => {
+      const result = parseRoster(`Name,Roll No,${heading}\nArun Kumar,12,1234 5678 9012`);
+      expect(result.students[0]).toMatchObject({ rollNumber: "12", apaarId: "123456789012" });
+      expect(result.students[0]?.phone).toBeUndefined();
+    },
+  );
+
+  it("adds the student without it when the ID is malformed, and says so", () => {
+    const result = parseRoster("Name,APAAR ID\nArun Kumar,12345");
+    expect(result.students[0]?.fullName).toBe("Arun Kumar");
+    expect(result.students[0]?.apaarId).toBeUndefined();
+    expect(result.problems[0]?.message).toMatch(/12-digit APAAR ID/);
+  });
+
+  it("never guesses an APAAR column without a header", () => {
+    // Twelve digits with no header is ambiguous; it is not stored as an APAAR ID.
+    const result = parseRoster("Arun Kumar, 123456789012");
+    expect(result.students[0]?.apaarId).toBeUndefined();
   });
 });

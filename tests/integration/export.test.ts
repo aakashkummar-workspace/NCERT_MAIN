@@ -118,9 +118,9 @@ describe("a class's register", () => {
     const file = await classMarksCsv(teacherOf(world), world.classId, YEAR);
     expect(file).not.toBeNull();
     const header = cells(file!.csv, 0);
-    expect(header.slice(0, 2)).toEqual(["roll_number", "student"]);
+    expect(header.slice(0, 3)).toEqual(["roll_number", "apaar_id", "student"]);
     // Title and "out of" for the world's one paper.
-    expect(header.length).toBe(4);
+    expect(header.length).toBe(5);
 
     const rows = file!.csv.replace(/^﻿/, "").trimEnd().split("\r\n").slice(1);
     expect(rows.length).toBe(2); // the world has two students

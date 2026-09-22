@@ -120,6 +120,11 @@ model Organization {
   /// the same thing twice: once in money and once in data.
   benchmarksOptedInAt DateTime? @map("benchmarks_opted_in_at")
 
+  /// Papers are checked by an owner or admin before they can be published —
+  /// the head-of-department sign-off most schools already run on paper. Off
+  /// by default: a solo teacher has nobody to ask. See core/assessments/review.
+  paperReviewRequired Boolean @default(false) @map("paper_review_required")
+
   createdAt DateTime  @default(now()) @map("created_at")
   updatedAt DateTime  @default(now()) @updatedAt @map("updated_at")
   deletedAt DateTime? @map("deleted_at")
@@ -494,10 +499,22 @@ model StudentProfile {
   rollNumber     String?  @map("roll_number")
   guardianPhone  String?  @map("guardian_phone")
   admissionYear  String?  @map("admission_year")
+  /// Extra time on every paper, as a percentage: 0, 25, 33 (CBSE's twenty
+  /// minutes an hour) or 50. Applied when a sitting STARTS, so a paper
+  /// already under way is not changed underneath the student.
+  extraTimePercent Int     @default(0) @map("extra_time_percent")
+  /// The player offers to read each question aloud, on the device.
+  readAloud        Boolean @default(false) @map("read_aloud")
+  /// APAAR ID (Automated Permanent Academic Account Registry, "One Nation One
+  /// Student ID"): twelve digits, unique within a school. Carried so records
+  /// and exports can be matched to the national registry; never used to sign
+  /// in, and never sent to an AI provider.
+  apaarId          String? @map("apaar_id")
   createdAt      DateTime @default(now()) @map("created_at")
   updatedAt      DateTime @default(now()) @updatedAt @map("updated_at")
 
   @@unique([organizationId, rollNumber])
+  @@unique([organizationId, apaarId])
   @@index([organizationId])
   @@map("student_profiles")
 }
@@ -887,6 +904,19 @@ model Assessment {
   settings Json @default("{}")
 
   status      AssessmentStatus @default(DRAFT)
+
+  /// Sent for review, and by whom. Cleared by any edit to the draft, because a
+  /// review is given to the paper as it stood — the rule curriculum review and
+  /// question approval already follow.
+  reviewRequestedAt   DateTime? @map("review_requested_at")
+  reviewRequestedById String?   @map("review_requested_by_id") @db.Uuid
+  /// "APPROVED" or "CHANGES_REQUESTED", by somebody who is not the author.
+  reviewDecision      String?   @map("review_decision")
+  reviewedById        String?   @map("reviewed_by_id") @db.Uuid
+  reviewedAt          DateTime? @map("reviewed_at")
+  /// What the reviewer wants changed, in their words, for the author.
+  reviewNote          String?   @map("review_note") @db.VarChar(2000)
+
   publishedAt DateTime?        @map("published_at")
   closedAt    DateTime?        @map("closed_at")
   createdAt   DateTime         @default(now()) @map("created_at")
@@ -1233,6 +1263,60 @@ model LoginCode {
   @@index([phone, createdAt])
   @@index([expiresAt])
   @@map("login_codes")
+}
+
+/// A photograph of a written answer: taken by the student in the player, or by
+/// the teacher from a paper script.
+///
+/// `bytea`, typed by its first bytes and never by the upload's Content-Type,
+/// the rule school logos follow. Immutable — a better photo is a new row.
+model AnswerImage {
+  id              String   @id @default(uuid()) @db.Uuid
+  organizationId  String   @map("organization_id") @db.Uuid
+  attemptAnswerId String   @map("attempt_answer_id") @db.Uuid
+  mime            String
+  bytes           Bytes
+  byteSize        Int      @map("byte_size")
+  sha256          String
+  uploadedById    String   @map("uploaded_by_id") @db.Uuid
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  @@index([organizationId, attemptAnswerId])
+  @@map("answer_images")
+}
+
+/// A model's DRAFT of the marks for one written answer. Never a mark.
+///
+/// It is shown to the teacher marking, beside the answer, and to nobody else:
+/// nothing here reaches a student, a parent, the evidence ledger or a total.
+/// A mark exists only when a person presses Save — at which point the answer
+/// is stamped `AI_ASSISTED` and this row `acceptedAt`. Regenerating replaces
+/// the draft; the ledger row in `ai_generations` keeps the history.
+model MarkingDraft {
+  id              String    @id @default(uuid()) @db.Uuid
+  organizationId  String    @map("organization_id") @db.Uuid
+  attemptAnswerId String    @unique @map("attempt_answer_id") @db.Uuid
+  generationId    String?   @map("generation_id") @db.Uuid
+  /// False when the model could not read the answer. Then nothing else is set.
+  readable        Boolean
+  /// What the model read, so the teacher can check it read the right thing.
+  transcript      String?
+  /// Derived from `criteria` when there is a scheme, never taken from the
+  /// model's own sum.
+  total           Decimal?  @db.Decimal(5, 2)
+  /// `[{ criterionId, marks, reason }]`, one per scheme row, or null.
+  criteria        Json?
+  reason          String?
+  feedback        String?
+  confidence      String
+  /// Things the teacher should look at: "the final answer is illegible".
+  concerns        Json      @default("[]")
+  requestedById   String    @map("requested_by_id") @db.Uuid
+  createdAt       DateTime  @default(now()) @map("created_at")
+  acceptedAt      DateTime? @map("accepted_at")
+
+  @@index([organizationId])
+  @@map("marking_drafts")
 }
 
 /// A printed sign-in card, for a student who has no phone of their own.
@@ -1594,6 +1678,8 @@ enum AIFeature {
   REPORT_GENERATION
   RECOMMENDATION
   CLASSIFICATION
+  /// A draft of the marks for one written answer — see core/marking-assist.
+  MARKING_ASSIST
 }
 
 enum AIGenerationStatus {
@@ -2242,6 +2328,11 @@ model ParentStudentLink {
   revokedAt DateTime? @map("revoked_at")
   revokedBy String?   @map("revoked_by") @db.Uuid
 
+  /// When the PARENT asked for a weekly WhatsApp summary about this child.
+  /// Null is the default: WhatsApp's own rules and ours both need the phone's
+  /// owner to opt in, and a teacher cannot do it for them. See core/digest.
+  whatsappDigestAt DateTime? @map("whatsapp_digest_at")
+
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
 
@@ -2859,4 +2950,53 @@ model SavedQuestion {
   @@unique([studentUserId, questionId])
   @@index([organizationId, studentUserId, createdAt])
   @@map("saved_questions")
+}
+
+/// One WhatsApp message a school sent a parent — written before the send, so a
+/// process that dies mid-flight leaves evidence rather than silence (the SMS
+/// ledger's rule). No phone number and no message text: the parent row holds
+/// the number, and the text is rebuilt from `template` if anybody asks.
+model WhatsappMessage {
+  id                String    @id @default(uuid()) @db.Uuid
+  organizationId    String    @map("organization_id") @db.Uuid
+  parentUserId      String    @map("parent_user_id") @db.Uuid
+  studentUserId     String    @map("student_user_id") @db.Uuid
+  template          String
+  /// The Monday of the week this digest covers. With the link it is unique,
+  /// so a job run twice in a week sends one message, not two.
+  weekOf            DateTime  @map("week_of") @db.Date
+  provider          String?
+  status            String
+  providerMessageId String?   @map("provider_message_id")
+  error             String?
+  createdAt         DateTime  @default(now()) @map("created_at")
+  sentAt            DateTime? @map("sent_at")
+
+  @@unique([parentUserId, studentUserId, template, weekOf])
+  @@index([organizationId, createdAt])
+  @@map("whatsapp_messages")
+}
+
+/// A teacher's observation of a student BEYOND marks — curiosity,
+/// collaboration, communication and the rest — for the holistic section of a
+/// term report (NEP 2020's "360-degree" progress card).
+///
+/// Append-only: saving writes new rows, and a report stamps the latest one per
+/// domain inside its period, so what a parent was handed in September does not
+/// move when a teacher writes again in December. Never averaged, never scored.
+model HolisticObservation {
+  id             String   @id @default(uuid()) @db.Uuid
+  organizationId String   @map("organization_id") @db.Uuid
+  studentUserId  String   @map("student_user_id") @db.Uuid
+  /// One of core/reports/holistic.ts#DOMAINS.
+  domain         String
+  /// One of the four LEVELS there — a word, not a number.
+  level          String
+  /// What the teacher saw, in a sentence. Optional; printed as written.
+  note           String?  @db.VarChar(400)
+  observedById   String   @map("observed_by_id") @db.Uuid
+  observedAt     DateTime @default(now()) @map("observed_at")
+
+  @@index([organizationId, studentUserId, observedAt])
+  @@map("holistic_observations")
 }

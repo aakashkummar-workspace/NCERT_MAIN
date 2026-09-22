@@ -43,7 +43,7 @@ export async function assignmentMarksCsv(
   const results = await assignmentResults(actor.organizationId, assignmentId);
   if (!results) return null;
 
-  const rollByStudent = await rollNumbers(
+  const idsByStudent = await studentIdentifiers(
     actor.organizationId,
     results.rows.map((row) => row.studentUserId),
   );
@@ -51,6 +51,7 @@ export async function assignmentMarksCsv(
   const rows: Cell[][] = [
     [
       "roll_number",
+      "apaar_id",
       "student",
       "status",
       "marks",
@@ -60,7 +61,8 @@ export async function assignmentMarksCsv(
       "submitted_at",
     ],
     ...results.rows.map((row) => [
-      rollByStudent.get(row.studentUserId) ?? "",
+      idsByStudent.get(row.studentUserId)?.roll ?? "",
+      idsByStudent.get(row.studentUserId)?.apaar ?? "",
       row.fullName,
       row.status.toLowerCase(),
       // Blank, not 0, for a paper nobody sat or nobody has finished marking.
@@ -165,17 +167,18 @@ export async function classMarksCsv(
     }
   }
 
-  const header: Cell[] = ["roll_number", "student"];
+  const header: Cell[] = ["roll_number", "apaar_id", "student"];
   for (const assignment of data.assignments) {
     header.push(assignment.assessment.title, `${assignment.assessment.title} (out of)`);
   }
 
-  const rollByStudent = await rollNumbers(actor.organizationId, data.students.map((s) => s.id));
+  const idsByStudent = await studentIdentifiers(actor.organizationId, data.students.map((s) => s.id));
   const sorted = [...data.students].sort((a, b) => a.fullName.localeCompare(b.fullName));
 
   const rows: Cell[][] = [header];
   for (const student of sorted) {
-    const row: Cell[] = [rollByStudent.get(student.id) ?? "", student.fullName];
+    const ids = idsByStudent.get(student.id);
+    const row: Cell[] = [ids?.roll ?? "", ids?.apaar ?? "", student.fullName];
     for (const assignment of data.assignments) {
       const entry = best.get(`${student.id}:${assignment.id}`);
       // Three states, three different cells: never sat (blank), sat and part
@@ -216,20 +219,23 @@ export async function classMarksCsv(
   };
 }
 
-async function rollNumbers(
+/**
+ * Roll number and APAAR ID per student. The APAAR column is what lets a
+ * school's office match this file to the national registry without retyping
+ * names — the one place a spelling difference silently loses a child.
+ */
+async function studentIdentifiers(
   organizationId: string,
   studentIds: string[],
-): Promise<Map<string, string>> {
+): Promise<Map<string, { roll: string | null; apaar: string | null }>> {
   if (studentIds.length === 0) return new Map();
   const profiles = await withTenant(organizationId, (tx) =>
     tx.studentProfile.findMany({
       where: { userId: { in: studentIds } },
-      select: { userId: true, rollNumber: true },
+      select: { userId: true, rollNumber: true, apaarId: true },
     }),
   );
   return new Map(
-    profiles
-      .filter((profile) => profile.rollNumber !== null)
-      .map((profile) => [profile.userId, profile.rollNumber as string]),
+    profiles.map((profile) => [profile.userId, { roll: profile.rollNumber, apaar: profile.apaarId }]),
   );
 }

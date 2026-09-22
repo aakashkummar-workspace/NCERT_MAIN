@@ -127,8 +127,34 @@ export function checkEnvironment(
     degraded.push({
       key: "SMS_PROVIDER",
       message:
-        "No SMS provider. Sign-in codes are issued and delivered nowhere, so no student can sign in.",
+        "No SMS provider. Sign-in codes are issued and delivered nowhere, so no student can sign in by phone — only with a printed sign-in card.",
       fix: 'Set SMS_PROVIDER="log" for development, or "msg91" with credentials.',
+    });
+  }
+
+  // WhatsApp: the same three states as SMS. "meta" without a token is a typo
+  // behind a working-looking deployment, so it is fatal; "none" is a real
+  // state and only reported.
+  const whatsappProvider = (env.WHATSAPP_PROVIDER ?? "none").trim().toLowerCase();
+  if (whatsappProvider === "meta") {
+    const missing = ["WHATSAPP_TOKEN", "WHATSAPP_PHONE_NUMBER_ID"].filter((name) => !has(name));
+    if (missing.length > 0) {
+      fatal.push({
+        key: "WHATSAPP_PROVIDER",
+        message: `WHATSAPP_PROVIDER is "meta" but ${missing.join(" and ")} ${missing.length === 1 ? "is" : "are"} not set. Parents who asked for a weekly summary would receive nothing.`,
+        fix: `Set ${missing.join(" and ")}, or set WHATSAPP_PROVIDER="none".`,
+      });
+    } else {
+      live.push("WhatsApp: Meta Cloud API (weekly parent digest)");
+    }
+  } else if (whatsappProvider === "log") {
+    live.push("WhatsApp: log (digests print to this terminal)");
+  } else {
+    degraded.push({
+      key: "WHATSAPP_PROVIDER",
+      message:
+        "No WhatsApp provider. Parents are not offered the weekly WhatsApp summary.",
+      fix: 'Register the "weekly_progress_digest" template with Meta, then set WHATSAPP_PROVIDER="meta" with WHATSAPP_TOKEN and WHATSAPP_PHONE_NUMBER_ID.',
     });
   }
 

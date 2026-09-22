@@ -7,6 +7,7 @@ import {
 } from "@/core/assignments/window";
 import type { Response } from "./score";
 import { isBlankResponse } from "./response";
+import { displayNumbers } from "@/core/assessments/pattern";
 import { parseRubric } from "@/core/questions/rubric";
 import { parseScores } from "@/core/results/marking";
 
@@ -160,6 +161,8 @@ export type StudentResult = {
   reviewable: boolean;
   breakdown: {
     position: number;
+    /** The number printed on the paper — an "OR" pair shares one. */
+    number: number;
     stem: string;
     marks: number;
     awardedMarks: number | null;
@@ -249,6 +252,15 @@ export async function studentResult(
     const answerByQuestion = new Map(
       attempt.answers.map((a) => [a.assessmentQuestionId, a]),
     );
+    // Numbered over the whole paper, not over the rows left: the alternative
+    // a student did not take is gone from their answers but still printed.
+    const paper = await tx.assessmentQuestion.findMany({
+      where: { assessmentId: attempt.assignment.assessmentId },
+      orderBy: { position: "asc" },
+      select: { position: true, choiceGroup: true },
+    });
+    const printed = displayNumbers(paper);
+    const numberAt = new Map(paper.map((row, index) => [row.position, printed[index]!]));
 
     const pending = placements.reduce((total, placement) => {
       const answer = answerByQuestion.get(placement.id);
@@ -284,6 +296,7 @@ export async function studentResult(
         return [
           {
             position: placement.position,
+            number: numberAt.get(placement.position) ?? placement.position,
             stem: version?.stem ?? "",
             marks: placement.marks,
             awardedMarks:

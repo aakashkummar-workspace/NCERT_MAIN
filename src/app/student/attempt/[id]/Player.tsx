@@ -18,6 +18,8 @@ import {
 } from "@/core/attempts/response";
 import { VoiceInput } from "@/ui/VoiceInput";
 import { ClockIcon, CheckIcon, AlertTriangleIcon } from "@/ui/icons";
+import { PhotoAnswer } from "./PhotoAnswer";
+import { ReadAloud } from "./ReadAloud";
 
 type Question = {
   assessmentQuestionId: string;
@@ -36,6 +38,8 @@ type Question = {
   clientSeq: number;
   timeSpentSeconds: number;
   visitCount: number;
+  /** Photos of written working, by id. Uploaded at once, never queued. */
+  images: string[];
 };
 
 type Pending = {
@@ -54,6 +58,8 @@ type Initial = {
   expiresAt: string;
   remainingMs: number;
   totalMarks: number;
+  /** An accommodation: this student may have questions read aloud. */
+  readAloud?: boolean;
   questions: Question[];
 };
 
@@ -609,7 +615,9 @@ export function Player({ initial }: { initial: Initial }) {
   // and "3 still blank" must not count the alternative a student skipped on
   // purpose.
   const numbersAnswered = new Set(
-    questions.filter((item) => hasAnswer(item.response)).map((item) => item.number),
+    questions
+      .filter((item) => hasAnswer(item.response) || item.images.length > 0)
+      .map((item) => item.number),
   );
   const totalNumbers = new Set(questions.map((item) => item.number)).size;
   const answered = numbersAnswered.size;
@@ -711,6 +719,15 @@ export function Player({ initial }: { initial: Initial }) {
           )}
 
           <p className="ui-player-stem">{question.stem}</p>
+          {initial.readAloud && (
+            <ReadAloud
+              questionKey={question.assessmentQuestionId}
+              text={[
+                `Question ${question.number}. ${question.stem}`,
+                ...(question.options ?? []).map((option) => `Option ${option.key}. ${option.text}`),
+              ].join(" ")}
+            />
+          )}
 
           {question.options && (
             <fieldset className="ui-player-options">
@@ -869,6 +886,20 @@ export function Player({ initial }: { initial: Initial }) {
                   })
                 }
               />
+              <PhotoAnswer
+                attemptId={initial.attemptId}
+                questionId={question.assessmentQuestionId}
+                images={question.images}
+                onChange={(images) =>
+                  setQuestions((all) =>
+                    all.map((item) =>
+                      item.assessmentQuestionId === question.assessmentQuestionId
+                        ? { ...item, images }
+                        : item,
+                    ),
+                  )
+                }
+              />
             </>
           )}
 
@@ -923,7 +954,7 @@ export function Player({ initial }: { initial: Initial }) {
               {questions.map((item, index) => {
                 const state = item.markedForReview
                   ? "review"
-                  : hasAnswer(item.response)
+                  : hasAnswer(item.response) || item.images.length > 0
                     ? "answered"
                     : "blank";
                 return (

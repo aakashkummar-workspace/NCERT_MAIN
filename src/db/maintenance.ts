@@ -108,3 +108,11 @@ export async function organizationsNeedingLibrary(
   `;
   return rows.map((row) => row.organization_id);
 }
+
+/** Schools with at least one parent opted in to the WhatsApp digest. Ids only. */
+export async function organizationsWithDigestLinks(): Promise<string[]> {
+  const rows = await prisma.$queryRaw<{ organization_id: string }[]>`
+    select * from app_maint_orgs_with_digest_links()
+  `;
+  return rows.map((row) => row.organization_id);
+}

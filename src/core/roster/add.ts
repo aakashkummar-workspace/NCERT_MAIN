@@ -96,6 +96,7 @@ export async function addStudents(
           userId,
           organizationId,
           rollNumber: student.rollNumber ?? null,
+          apaarId: student.apaarId ?? null,
         })),
       });
 
@@ -162,6 +163,8 @@ type Existing = {
   /** Normalised name → whether ANY current member with that name has no phone. */
   names: Map<string, boolean>;
   rolls: Set<string>;
+  /** APAAR IDs already on a student here, and those claimed earlier in this list. */
+  apaars: Set<string>;
   takenPhones: Set<string>;
 };
 
@@ -170,7 +173,7 @@ async function loadExisting(
   classId: string,
   students: ParsedStudent[],
 ): Promise<Existing> {
-  const { names, rolls } = await withTenant(organizationId, async (tx) => {
+  const { names, rolls, apaars } = await withTenant(organizationId, async (tx) => {
     const enrolments = await tx.classEnrolment.findMany({
       where: { classId, status: "ACTIVE" },
       select: { studentUserId: true },
@@ -184,7 +187,7 @@ async function loadExisting(
       }),
       tx.studentProfile.findMany({
         where: { organizationId },
-        select: { rollNumber: true },
+        select: { rollNumber: true, apaarId: true },
       }),
     ]);
 
@@ -199,6 +202,7 @@ async function loadExisting(
       rolls: new Set(
         profiles.flatMap((p) => (p.rollNumber ? [p.rollNumber.toLowerCase()] : [])),
       ),
+      apaars: new Set(profiles.flatMap((p) => (p.apaarId ? [p.apaarId] : []))),
     };
   });
 
@@ -212,7 +216,7 @@ async function loadExisting(
     if (await identifierTaken(null, phone)) takenPhones.add(phone);
   }
 
-  return { names, rolls, takenPhones };
+  return { names, rolls, apaars, takenPhones };
 }
 
 function plan(
@@ -244,6 +248,7 @@ function plan(
     if (left !== null) left--;
     if (student.phone) seenPhones.add(student.phone);
     if (student.rollNumber) seenRolls.add(student.rollNumber.toLowerCase());
+    if (student.apaarId) existing.apaars.add(student.apaarId);
     const sameName = existing.names.has(normaliseName(student.fullName));
     outcomes.push({
       line: student.line,
@@ -280,6 +285,11 @@ function rowProblem(
     if (existing.rolls.has(roll) || seenRolls.has(roll)) {
       return `Roll number ${student.rollNumber} is already used in this organisation.`;
     }
+  }
+
+  // The same APAAR ID twice in one school is the same child twice.
+  if (student.apaarId && existing.apaars.has(student.apaarId)) {
+    return `APAAR ID ${student.apaarId} is already on a student in this organisation.`;
   }
 
   if (student.phone && existing.takenPhones.has(student.phone)) {

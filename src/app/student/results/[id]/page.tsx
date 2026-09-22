@@ -151,7 +151,7 @@ export default async function ResultPage({
                   </span>
                   <span className="ui-breakdown-body">
                     <span className="ui-breakdown-position tabular">
-                      Q{item.position}
+                      Q{item.number}
                     </span>
                     <span className="ui-breakdown-stem">{item.stem}</span>
                   </span>
@@ -331,6 +331,8 @@ function describeResponse(response: Response): string | null {
   if (response.kind === "choice") {
     return response.keys.length > 0 ? response.keys.join(", ") : null;
   }
+  // A paper sat on paper: the answer is on their script, not here.
+  if (response.kind === "paper") return "Written on your answer script.";
   return null;
 }
 

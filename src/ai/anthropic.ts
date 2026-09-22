@@ -70,7 +70,21 @@ export class AnthropicProvider implements AIProvider {
         : request.system,
       messages: request.messages.map((message) => ({
         role: message.role,
-        content: message.content,
+        content:
+          typeof message.content === "string"
+            ? message.content
+            : message.content.map((part) =>
+                part.type === "text"
+                  ? { type: "text" as const, text: part.text }
+                  : {
+                      type: "image" as const,
+                      source: {
+                        type: "base64" as const,
+                        media_type: part.mediaType,
+                        data: part.data,
+                      },
+                    },
+              ),
       })),
       thinking: { type: "adaptive" as const },
       output_config: {

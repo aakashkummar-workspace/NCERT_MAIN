@@ -21,6 +21,7 @@ import {
   sectionFeasibility,
   sectionFor,
 } from "./pattern";
+import { CLEAR_REVIEW, reviewBlocksPublishing } from "./review";
 
 /**
  * Assessments.
@@ -362,9 +363,23 @@ export async function updateDraft(
       return "A published assessment cannot be changed. Duplicate it instead.";
     }
 
+    // A review is of the paper as it stood. Clearing it on a save that
+    // changed nothing would undo an approval because somebody clicked through
+    // the builder's steps.
+    const changed =
+      (patch.title !== undefined && patch.title.trim() !== assessment.title) ||
+      (patch.durationMinutes !== undefined && patch.durationMinutes !== assessment.durationMinutes) ||
+      (patch.totalMarks !== undefined && patch.totalMarks !== assessment.totalMarks) ||
+      (patch.classId !== undefined && patch.classId !== assessment.classId) ||
+      (patch.blueprint !== undefined &&
+        JSON.stringify(sortKeys(patch.blueprint)) !== JSON.stringify(sortKeys(assessment.blueprint))) ||
+      (patch.settings !== undefined &&
+        JSON.stringify(sortKeys(patch.settings)) !== JSON.stringify(sortKeys(assessment.settings)));
+
     await tx.assessment.update({
       where: { id },
       data: {
+        ...(changed ? CLEAR_REVIEW : {}),
         ...(patch.title !== undefined ? { title: patch.title.trim() } : {}),
         ...(patch.durationMinutes !== undefined
           ? { durationMinutes: patch.durationMinutes }
@@ -470,6 +485,23 @@ export async function setQuestions(
     const layout = checkLayout(sections, ordered);
     if (layout.errors.length > 0) return layout.errors[0]!;
 
+    const before = await tx.assessmentQuestion.findMany({
+      where: { assessmentId: id },
+      orderBy: { position: "asc" },
+      select: { questionId: true, section: true, choiceGroup: true },
+    });
+    const sameLayout =
+      before.length === ordered.length &&
+      before.every(
+        (row, index) =>
+          row.questionId === ordered[index]!.questionId &&
+          row.section === ordered[index]!.section &&
+          row.choiceGroup === ordered[index]!.choiceGroup,
+      );
+    if (!sameLayout) {
+      await tx.assessment.update({ where: { id }, data: CLEAR_REVIEW });
+    }
+
     await tx.assessmentQuestion.deleteMany({ where: { assessmentId: id } });
 
     await tx.assessmentQuestion.createMany({
@@ -545,6 +577,9 @@ export async function publishCheck(
       `The questions add up to ${marksTotal} marks, but the paper is set to ${assessment.totalMarks}. Change one or the other.`,
     );
   }
+
+  const review = await reviewBlocksPublishing(organizationId, id);
+  if (review) problems.push(review);
 
   // The layout is checked at save, and again here, because a paper saved
   // before a rule existed must not publish past it.
@@ -691,3 +726,16 @@ export async function closeAssessment(
 
 export { validateBlueprint, planSlots, DEFAULT_BLUEPRINT };
 export type { Blueprint, Feasibility };
+
+/** JSON with its keys in order, so two equal objects compare equal as text. */
+function sortKeys(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(sortKeys);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.entries(value as Record<string, unknown>)
+        .sort(([a], [b]) => a.localeCompare(b))
+        .map(([key, inner]) => [key, sortKeys(inner)]),
+    );
+  }
+  return value;
+}

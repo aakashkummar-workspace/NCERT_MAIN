@@ -191,6 +191,14 @@ export default async function ClassPage({
               <SparklesIcon size={15} />
               <span>Class Analytics</span>
             </Link>
+            <Link
+              href={`/teacher/classes/${klass.id}/meeting`}
+              className="ui-button"
+              data-variant="secondary"
+              data-size="md"
+            >
+              <span>PTM briefs</span>
+            </Link>
           </div>
         }
       />

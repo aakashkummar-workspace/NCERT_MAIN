@@ -3,6 +3,7 @@ import { randomUUID } from "node:crypto";
 import { withTenant } from "@/db/tenant";
 import { writeAudit } from "@/core/identity/audit";
 import { expectedStudentIds } from "./cohort";
+import { windowShortForExtraTime } from "@/core/roster/accommodations";
 import {
   assignmentStatus,
   validateWindow,
@@ -124,9 +125,29 @@ export async function createAssignment(
     durationMinutes: prepared.assessment.durationMinutes,
     durationOverrideMinutes: input.durationOverrideMinutes,
     maxAttempts: input.maxAttempts,
+    onPaper: input.deliveryMode === "PAPER",
   });
   if (problems.length > 0) {
     return { ok: false, message: problems[0]!.message, problems };
+  }
+
+  // A window long enough for the paper may still be too short for a student
+  // with extra time. Refused, like a window shorter than the paper: the
+  // sitting cannot run past the window without releasing results to the rest
+  // of the class while this student is still writing.
+  if (input.deliveryMode !== "PAPER") {
+    const shortfall = await withTenant(actor.organizationId, async (tx) =>
+      windowShortForExtraTime(
+        tx,
+        await expectedStudentIds(tx, {
+          classId: input.classId,
+          targets: prepared.targets.map((studentUserId) => ({ studentUserId })),
+        }),
+        input.durationOverrideMinutes ?? prepared.assessment.durationMinutes,
+        (input.closesAt.getTime() - input.opensAt.getTime()) / 60_000,
+      ),
+    );
+    if (shortfall) return { ok: false, message: shortfall };
   }
 
   const id = randomUUID();
@@ -381,11 +402,30 @@ export async function updateAssignment(
     durationMinutes: current.durationMinutes,
     durationOverrideMinutes: override,
     maxAttempts,
+    onPaper: current.deliveryMode === "PAPER",
     // An already-open window may legitimately be extended, so the
     // already-closed rule is measured against the NEW closing time only.
     now: new Date(),
   });
   if (problems.length > 0) return { ok: false, message: problems[0]!.message };
+
+  if (current.deliveryMode !== "PAPER") {
+    const shortfall = await withTenant(actor.organizationId, async (tx) => {
+      const row = await tx.assignment.findFirst({
+        where: { id },
+        select: { classId: true, targets: { select: { studentUserId: true } } },
+      });
+      return row
+        ? windowShortForExtraTime(
+            tx,
+            await expectedStudentIds(tx, row),
+            override ?? current.durationMinutes,
+            (closesAt.getTime() - opensAt.getTime()) / 60_000,
+          )
+        : null;
+    });
+    if (shortfall) return { ok: false, message: shortfall };
+  }
 
   await withTenant(actor.organizationId, (tx) =>
     tx.assignment.updateMany({

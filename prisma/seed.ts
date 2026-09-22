@@ -421,6 +421,13 @@ const PLANS: {
       // shared allowance one student can spend in an afternoon is not a limit,
       // it is a race.
       { key: "tutor_hints_per_month", limit: 500 },
+      // Drafted marks for written answers. Its own key, for the Copilot's
+      // reason: a teacher who drafts marks for a stack of scripts must not
+      // find they can no longer generate a paper. Priced against the marking
+      // it saves — two hundred students, a written question or two each a
+      // month. Free has no row: a draft reads a photograph, which is not the
+      // cheap end of what a model costs.
+      { key: "ai_marking_per_month", limit: 300 },
       { key: "analytics", limit: 0, unlimited: true },
       { key: "parent_reports", limit: 0, unlimited: true },
     ],
@@ -438,6 +445,7 @@ const PLANS: {
       { key: "ai_generations_per_month", limit: 1000 },
       { key: "copilot_questions_per_month", limit: 300 },
       { key: "tutor_hints_per_month", limit: 5000 },
+      { key: "ai_marking_per_month", limit: 3000 },
       { key: "analytics", limit: 0, unlimited: true },
       { key: "parent_reports", limit: 0, unlimited: true },
       { key: "admin_console", limit: 0, unlimited: true },

@@ -3,6 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { getSession } from "@/core/identity/context";
 import { getAssessment, publishCheck } from "@/core/assessments";
+import { reviewState } from "@/core/assessments/review";
 import { listQuestions } from "@/core/questions";
 import { cachedPickerOptions } from "@/app/_curriculum/picker";
 import { listAssignments } from "@/core/assignments";
@@ -25,9 +26,10 @@ export default async function AssessmentPage({
   const { id } = await params;
   const organizationId = session.actor.organizationId;
 
-  const [assessment, readiness] = await Promise.all([
+  const [assessment, readiness, review] = await Promise.all([
     getAssessment(organizationId, id),
     publishCheck(organizationId, id),
+    reviewState(organizationId, id),
   ]);
   if (!assessment) notFound();
 
@@ -134,6 +136,16 @@ export default async function AssessmentPage({
 
       <Builder
         assessment={{ ...assessment, readiness }}
+        review={
+          review.required
+            ? {
+                required: true,
+                status: review.status,
+                note: review.note,
+                reviewerName: review.reviewerName,
+              }
+            : { required: false }
+        }
         chapters={chapters}
         outcomes={outcomes}
         bank={bank.map((question) => ({

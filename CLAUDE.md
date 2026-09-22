@@ -53,6 +53,18 @@ Hindi. The drafts await a teacher's review, and the bank must not reach any
 school but Sirah Digital until NCERT grants permission. See "The NCERT import"
 below.
 
+**Four features for a typical CBSE school, added September 2026:** printed
+sign-in cards (a way in with no SMS and no phone), papers sat on paper and
+brought back in (typed or scanned from a printed OMR sheet), the CBSE board
+pattern with sections and internal "OR" choices, and AI-drafted marks for
+written answers, typed or photographed. See the four sections before "Things
+not to do".
+
+**Then, for the school year around them:** a parent–teacher meeting brief,
+a weekly WhatsApp digest for parents who opt in, a "Beyond marks" section on
+the term report, the APAAR ID on the roster and in marks exports, and an
+installable app with an honest offline page.
+
 ## Running it
 
 ```bash
@@ -1508,8 +1520,9 @@ about sixty-five defects. The lessons are about where tests stop looking:
   copy says "Saved on this device… it will go up by itself when you are back —
   nothing is lost, and you will get the answer then", which is the whole truth
   in one sentence.
-- **There is no service worker, so there is no offline document.** With the
-  connection down the browser cannot fetch the page at all — an e2e reload
+- **The service worker keeps no copy of any page** (see "The installable
+  app"), so with the connection down a reload shows `/offline/`, not the
+  set — and in a browser that has not installed the worker, an e2e reload
   fails with `ERR_INTERNET_DISCONNECTED`, which is why that step is not in the
   test. What the queue buys is the tab dying, the phone locking, and the
   student coming back later: all of those reload WITH a connection, and the
@@ -2482,6 +2495,267 @@ about sixty-five defects. The lessons are about where tests stop looking:
 - **Two copies of the webhook suite at once break each other**:
   `runWebhookDeliveries` claims jobs in every tenant, so one copy delivers the
   other's jobs to the wrong fake receiver. One run at a time is fine.
+
+### Printed sign-in cards
+
+- **The card IS the credential.** Twelve characters from a 31-letter alphabet
+  with no 0/O/1/I/L (about 59 bits), so it needs no PIN beside it and no guess
+  counter — a counter would have to be per card, and a wrong guess names no
+  card. `core/identity/card-code.ts` is pure and pins the arithmetic in a test.
+- **Shown once, stored as a hash.** Printing is therefore ISSUING, and issuing
+  revokes the student's previous card in the same transaction: a student has
+  at most one card that works. The audit row names a count, never a code.
+- **`app_auth_consume_card` is the seventh pre-tenant read**, reached only
+  from `src/db/unscoped.ts`. It refuses a suspended membership, so removing a
+  student stops their card without anybody remembering to revoke it.
+- **A card session lasts 12 hours**, not a student's 30 days: cards are for
+  shared lab machines. There is no sliding renewal to undo that.
+- **The QR code points at `/signin/card#CODE`.** A fragment never reaches the
+  server, so the code is not in an access log; the page posts it and clears
+  the address bar. That page replaces a signed-in STUDENT's session (the next
+  child in the lab queue) but sends a teacher home rather than signing them out.
+- **`canSignIn` is now phone OR card**, in four places (class, assignment,
+  students index, workload). The "no mobile" wording became "no mobile or card"
+  everywhere it was a claim about signing in.
+
+### Sections and internal choice (the CBSE board pattern)
+
+- **`core/assessments/pattern.ts` is pure and is the one place a question's
+  number is decided** (`displayNumbers`): builder, player, printout, paper
+  entry and OMR sheet all call it, so Q21 is Q21 everywhere.
+- **A pattern replaces the type mix.** `blueprint.pattern` names sections by
+  type and marks; feasibility is answered per section. Offered only for CBSE
+  Maths, Science and Social Science — not ICSE, not languages.
+- **An "OR" pair is two adjacent rows sharing `choice_group`**, same section,
+  same marks — refused at save otherwise, because a choice between a 2-marker
+  and a 3-marker makes the total depend on which was picked. It counts ONCE
+  (`answerableMarks`), which is what the publish check and the printed
+  marks-mismatch warning now use.
+- **The alternative not taken is DELETED at submission** (`alternativesToDrop`),
+  never scored as blank: a blank is a zero, a Mistake Bank card and evidence
+  against a concept the student was never asked about. When both were
+  answered the FIRST in paper order counts — CBSE's own examiner instruction,
+  and the rule that cannot be gamed. The player clears the other alternative
+  when one is answered, so the student sees the rule rather than meeting it.
+- **Pairs survive re-saving from step 3** (`buildLayout`) and quietly dissolve
+  when one half is un-ticked; the halves are pulled back together.
+
+### Papers sat on paper
+
+- **An assignment has a `delivery_mode`: ONLINE or PAPER.** A PAPER paper
+  cannot be started in the player (the student is told it is sat in class), is
+  never a "Sit …" item in the study plan, and may have a window in the past —
+  a teacher records last Tuesday's test today. `validateWindow({ onPaper })`.
+- **Recording goes through the same machinery as a submit**: `markAnswer` on
+  the frozen key, `rescoreAttempt`, then the four hooks. Objective answers are
+  ENTERED as the letter chosen and marked by the product; a teacher cannot type
+  a mark that disagrees with the key.
+- **A written answer on paper is `{kind: "paper"}`** — "something was written,
+  and it is on the script". It says nothing about what, so no words are put in
+  a child's mouth, and it joins the marking queue with that sentence. Every
+  describer that used to say "you left this blank" for a non-text response now
+  says "written on your answer script" instead.
+- **Dated to the day it was sat.** `submittedAt` is the exam day, because the
+  evidence ledger dates from it.
+- **Recording again corrects IN PLACE**: one attempt, rows updated, the
+  attempt's evidence deleted and rewritten, and every concept that lost
+  evidence recomputed. A correction must never double a child's evidence.
+- **The OMR sheet and the scanner share `core/omr/layout.ts`**, so a bubble
+  cannot be printed in one place and looked for in another. The reader
+  (`core/omr/read.ts`) is pure and runs in the teacher's browser — a photo of
+  a child's sheet never leaves the phone. It finds the four corner squares,
+  fits a homography, tries all four rotations and keeps the one whose 24-bit
+  identity strip passes its checksum.
+- **The scanner NEVER guesses.** Two filled bubbles are `multiple`, a faint
+  one `unclear`; the row is flagged and Save is refused until the teacher has
+  chosen. A wrong answer recorded as a child's becomes a mistake and evidence.
+- **The sheet code is derived, not stored**: 20 bits of a hash of assignment
+  and student, resolved against THIS paper's roster only. Two students sharing
+  one is possible and the screen then asks.
+- **`tests/unit/omr.test.ts` photographs a synthetic sheet** — perspective,
+  rotation, a dark table, noise, header text — and reads it back. Change the
+  layout or the thresholds and it tells you.
+
+### Photos of written answers, and drafted marks
+
+- **A photo belongs to an answer row** (`answer_images`, `bytea`, typed by its
+  first bytes, SVG refused — the logo rules). A student adds one in the player
+  while writing; a teacher adds one of a paper script in the marking queue. It
+  is served to staff and to its author only; a parent gets the 404 a missing
+  photo gets.
+- **Photos are uploaded at once, never queued.** A typed answer is bytes the
+  player can hold through a dropped connection; a photo is hundreds of KB and
+  would push the typed answers out of localStorage. The screen says so.
+- **A photo-only written answer is an answer**: at submit a blank written
+  response with a photo becomes `{kind: "paper"}`, or it would be settled as
+  blank and never reach the marker.
+- **A draft is never a mark.** `marking_drafts` is read by the marking board
+  and nothing else — not the student, the parent, the ledger or a total. It
+  becomes a mark only when the teacher saves, and that mark is stamped
+  `AI_ASSISTED` with the draft `accepted_at`.
+- **`checkDraft` refuses, never clamps.** Criteria are sent by POSITION and an
+  index not offered, a row marked twice or missed, or a mark above a row's
+  worth or not in halves discards the whole draft. The total is derived from
+  the rows; the model's own sum is not read.
+- **The photo is bytes the leak check cannot read.** The prompt says to ignore
+  and never repeat anything personal, the screens ask for the ANSWER to be
+  photographed and not the name, and the ledger's `input_summary` holds counts
+  only. That is mitigation, not a guarantee, and it is written down here so
+  nobody mistakes it for one.
+- **Metered on `ai_marking_per_month`**, its own key (300 on Teacher Pro, 3000
+  on Institute, no row on Free). Re-run `npm run db:seed` on a deployment to add
+  it — without the row the button says the plan does not include it.
+- **`AIMessage.content` may now carry image parts.** `textOf()` is what the
+  leak check reads; only `src/ai/anthropic.ts` knows the SDK's shape for them.
+
+### Textbook links
+
+- **`core/curriculum/book-link.ts` names a section only when it is sure**, and
+  the chapter otherwise — a wrong pointer sends a student to reread a page that
+  does not help. Words are weighted by rarity across the chapter's sections;
+  words in the chapter's own title do not vote; the winning heading must carry
+  half the concept NAME's words; and it must lead the runner-up by 1.5×. Those
+  bars were measured, not chosen: run over all 197 concepts, every link checked
+  by hand as right led by ≥1.6× and every wrong one by <1.5×. Today 31 concepts
+  get a section and the rest their chapter. Change a threshold and re-read the
+  list, not only the tests.
+- Links open `/student/syllabus#ch-<chapterId>-s-<n>`; the syllabus gives every
+  section that anchor. Shown on the Mistake Bank after the retry (never before
+  it) and on a practice set.
+- **Chapter contents must be imported for any of this to appear** —
+  `scripts/import-chapter-contents.ts --commit`. A database without them links
+  nothing, silently.
+
+### Reteach brief and worksheet
+
+- **`/teacher/gaps/[gapId]/reteach` is deterministic — no model**: the book
+  section, the outcome statements, the wrong options this class shared (two or
+  more students), who is below the line NOW, and a worksheet. A model would
+  invent a misconception now and then, and a teacher reteaching the wrong one
+  loses a lesson.
+- **The worksheet and its key are two pages**, the paper rule. The question
+  list travels in `?q=` so the key prints exactly those; every id is checked
+  against the concept before it is shown. Unseen-by-this-class first, then
+  easiest first (`pickWorksheet`, pure).
+
+### Shared wrong answers, by name
+
+- `itemAnalysis` now returns `sharedWrong`: any distractor chosen by ≥2 students
+  and ≥20% of those who answered, with WHO. Listed even when the key won — "6
+  of 30 think the ratio flips" is a conversation with six. The advice flips to
+  "reteach" when it is most of the class. Staff-only, like the whole page.
+
+### Papers checked before publishing
+
+- **`organizations.paper_review_required`, off by default.** On, a draft must be
+  approved by an OWNER or ADMIN who is NOT its author before `publishCheck`
+  passes. Changes-requested needs a note.
+- **An edit clears the approval — only a real edit.** The builder saves on
+  every Continue, so `updateDraft` compares before clearing and `setQuestions`
+  compares the layout; otherwise clicking through the steps would silently
+  withdraw an approval.
+- The reviewer's page (`/teacher/assessments/[id]/review`) shows the draft with
+  its answers from the CURRENT versions — nothing is frozen before publish,
+  which is exactly why edits clear the approval.
+
+### Exam accommodations
+
+- **`student_profiles.extra_time_percent` (0/25/33/50) and `read_aloud`.**
+  Extra time is applied when a sitting STARTS; a running clock never changes.
+- **The window stays a hard end.** Running past `closesAt` would release an
+  AFTER_CLOSE result and the answer key to the class while this student is
+  still writing. So assigning (and editing) a window too short for a student
+  with extra time is refused with the minutes they need — the rule a window
+  shorter than the paper already had. Paper sittings are exempt.
+- **Read-aloud is the browser's speech synthesis**, on the device, and ABSENT
+  where unsupported (the voice-input rule). Staff-only to set and to see.
+
+### The parent–teacher meeting brief
+
+- **Derived at read time, stored nowhere** — the study plan's rule. It is a
+  sheet for a conversation this week; a report is what is stamped and handed
+  over. `buildMeetingBrief` is pure over the same `ReportInput` a report is
+  built from, so the two cannot disagree about a child.
+- **It is built even below three measured concepts**, where a report refuses:
+  a meeting happens whether or not the evidence is thick, and the brief's first
+  talking point then SAYS the picture is early. Refusing would send a teacher
+  into the room with nothing.
+- **Talking points are assembled from figures, never written by a model** —
+  the report's rule, for the report's reason.
+- The period defaults to the academic year (1 April, IST). `/teacher/classes/[id]/meeting`
+  prints one sheet per student for a PTM day.
+
+### The weekly WhatsApp digest
+
+- **`src/whatsapp/` has the shape `src/sms/` has**: an intent, one directory
+  naming a vendor, `sendWhatsapp()` as the only door, never throws. Providers
+  `none` (the default, a real state), `log`, and `meta` (Cloud API). `meta`
+  with a missing token or phone-number id is FATAL at boot — a contradiction,
+  not an absence.
+- **A registered template, four variables**, and `buildBody`-style arity is
+  checked. WhatsApp, like DLT, delivers only approved text; changing a word
+  means re-registering `weekly_progress_digest`.
+- **Opt-in per child, by the parent**, stamped on `parent_student_links.whatsapp_digest_at`.
+  The toggle appears only when a provider is configured — a switch for a
+  message that can never be sent is a promise the product breaks weekly.
+- **It reads through the parent's scope**: released results only (the
+  `resultsVisible()` gate), no free text, no Mistake Bank, no tutor. A revoked
+  link stops the next digest because the job re-derives the link.
+- **One per parent, child and week** (`whatsapp_messages` unique on
+  `weekOf`), so a cron that fires twice sends once. The ledger holds status
+  and a provider id, never the number and never the text.
+- A quiet week sends nothing. "No new results" every Sunday is how a parent
+  learns to mute the number.
+
+### Beyond marks (the holistic section of a report)
+
+- **Words, not scores.** Six areas, four levels (Beginning / Growing /
+  Confident / Leading) and an optional sentence. A number here would be a score
+  for curiosity — the composite this product refuses everywhere, in its most
+  absurd form.
+- **Recorded by a person who has seen the child, never inferred** from test
+  data, and never averaged across areas.
+- **Stamped into the report payload** (`PAYLOAD_VERSION` 3), latest per area
+  within the period. A later observation does not change a report already
+  handed over — an integration test records one after and asserts it did not
+  follow. Observations are append-only: a new round, never an edit.
+- It does not claim to be PARAKH's official Holistic Progress Card.
+
+### APAAR ID
+
+- **`student_profiles.apaar_id`, twelve digits, unique per school** — the same
+  ID twice in one school is the same child twice. The same ID in two schools
+  is allowed (a transfer).
+- **A record-keeping identifier and nothing else.** It never signs anybody in,
+  never reaches an AI provider, never goes in a webhook payload, and the audit
+  row records THAT it was set, not the number.
+- **It is a column in both marks exports**, beside the roll number. That is
+  what it is for: an office matching a file to the registry by name loses the
+  child whose name is spelled two ways.
+- **Imported only from a column with a header** ("APAAR", "APAAR ID", "ABC
+  ID" …). Twelve digits with no header could be anything, and a wrong ID is
+  worse than none because it is the one the office trusts. A malformed one is
+  a problem line and the student is still added — a bad phone's rule.
+
+### The installable app
+
+- **`src/app/manifest.ts` and `public/sw.js`.** Installable from Chrome on
+  Android (and "Add to Home Screen" on iOS). The icons are generated by
+  `scripts/make-pwa-icons.mjs` from the app bar's mark.
+- **The service worker caches no page and no API response, deliberately.** A
+  large share of students sign in on a phone that is not theirs, and a cached
+  dashboard is one the next person can open with the connection off. It caches
+  content-hashed `/_next/static` files, the icons, and ONE page — `/offline/`,
+  static and sessionless — which it shows when a navigation fails.
+- **The offline page says only what is true everywhere**: answers already
+  given were written to the device first (the player, practice and the Mistake
+  Bank retry all do this) and go up when the same page is opened with a
+  connection.
+- **Registered in production builds only.** Under `next dev` a worker serving
+  cached chunks is a stale page that looks like a bug in what was just edited.
+- **`/sw.js` is served `no-store`**, so a deploy reaches every installed phone
+  on its next visit. The manifest is not branded per school: an installed app
+  keeps the manifest it was installed with.
 
 ## Things not to do
 

@@ -72,6 +72,7 @@ export function AssignPanel({
     closesAt: new Date(closesAt),
     durationMinutes,
     maxAttempts,
+    onPaper,
   });
 
   const klass = classes.find((c) => c.id === classId);

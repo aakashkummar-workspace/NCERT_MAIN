@@ -164,8 +164,11 @@
 }
 
 .ui-review-layout li {
-  grid-template-columns: 34px minmax(0, 1fr) 32px auto;
+  grid-template-columns: 34px minmax(0, 1fr) 32px 120px;
   align-items: center;
+}
+.ui-review-layout li > .ui-button {
+  justify-self: end;
 }
 .ui-review-layout li[data-choice] {
   background: var(--surface-sunken);
@@ -182,7 +185,8 @@
   .ui-review-layout li {
     grid-template-columns: 34px minmax(0, 1fr) 32px;
   }
-  .ui-review-layout li > .ui-button {
+  .ui-review-layout li > .ui-button,
+  .ui-review-layout li > span[aria-hidden] {
     grid-column: 2 / -1;
     justify-self: start;
   }
@@ -388,4 +392,248 @@
     min-width: 44px;
     min-height: 44px;
   }
+}
+
+/* ---- Marking: photos of answers and a model's draft ------------------- */
+/* `ui-mark-draft*` and `ui-answer-photo*` are new; grep before reusing them. */
+
+.ui-answer-photos {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+.ui-answer-photo {
+  display: block;
+  width: 120px;
+  height: 160px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--surface-sunken);
+}
+.ui-answer-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ui-answer-assist {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 6px 0;
+}
+.ui-mark-draft {
+  border: 1px dashed var(--border-strong, var(--border));
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 8px 0;
+  font-size: 13.5px;
+  background: var(--surface-sunken);
+}
+.ui-mark-draft-head {
+  margin: 0 0 6px;
+}
+.ui-mark-draft-transcript {
+  white-space: pre-wrap;
+  margin: 6px 0;
+}
+.ui-mark-draft-criteria,
+.ui-mark-draft-concerns {
+  margin: 6px 0;
+  padding-left: 18px;
+}
+.ui-mark-draft-reason {
+  margin: 6px 0;
+  color: var(--text-secondary);
+}
+.ui-mark[data-suggested]:not([data-chosen]) {
+  outline: 2px dashed var(--primary-600);
+  outline-offset: 1px;
+}
+
+/* ---- A photo of written working, in the player ------------------------ */
+
+.ui-photo-answer {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+.ui-photo-answer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.ui-photo-answer-list li {
+  display: grid;
+  gap: 4px;
+  justify-items: start;
+}
+.ui-photo-answer-list img {
+  width: 96px;
+  height: 128px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+/* ---- A gap's reteach brief -------------------------------------------- */
+
+.ui-reteach-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.ui-reteach-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.ui-reteach-who {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 6px 16px;
+  font-size: 14px;
+}
+@media print {
+  .ui-reteach-actions {
+    display: none !important;
+  }
+}
+
+/* ---- Parent–teacher meeting brief ------------------------------------- */
+
+.ui-meeting-actions {
+  margin-bottom: 16px;
+}
+.ui-meeting {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 24px 28px;
+  max-width: 190mm;
+  margin: 0 auto 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.ui-meeting h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 16px 0 6px;
+}
+.ui-meeting ul,
+.ui-meeting ol {
+  margin: 0;
+  padding-left: 20px;
+}
+.ui-meeting-head {
+  border-bottom: 2px solid var(--text-primary);
+  padding-bottom: 10px;
+}
+.ui-meeting-school {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.ui-meeting-name {
+  font-size: 20px;
+  margin: 2px 0;
+}
+.ui-meeting-meta {
+  margin: 0;
+  color: var(--text-secondary);
+}
+.ui-meeting-points li {
+  margin-bottom: 4px;
+}
+.ui-meeting-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0 24px;
+}
+.ui-meeting-empty,
+.ui-meeting-book {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+.ui-meeting-coverage {
+  margin: 14px 0 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.ui-meeting-papers {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.ui-meeting-papers td {
+  border-bottom: 1px solid var(--border);
+  padding: 4px 6px 4px 0;
+}
+.ui-meeting-notes {
+  display: grid;
+  gap: 18px;
+}
+@media print {
+  .ui-meeting-actions {
+    display: none !important;
+  }
+  .ui-meeting {
+    border: 0;
+    padding: 0;
+    max-width: none;
+    break-after: page;
+  }
+  .ui-meeting:last-of-type {
+    break-after: auto;
+  }
+}
+
+/* ---- Beyond marks: holistic observations ------------------------------ */
+
+.ui-holistic-form {
+  display: grid;
+  gap: 10px;
+}
+.ui-holistic-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) minmax(120px, 160px) minmax(0, 2fr);
+  gap: 8px;
+  align-items: center;
+}
+.ui-holistic-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+@media (max-width: 640px) {
+  .ui-holistic-row {
+    grid-template-columns: 1fr;
+  }
+}
+.ui-report-holistic {
+  margin: 8px 0 0;
+  display: grid;
+  gap: 6px;
+}
+.ui-report-holistic div {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) 2fr;
+  gap: 12px;
+}
+.ui-report-holistic dt {
+  font-weight: 600;
+}
+.ui-report-holistic dd {
+  margin: 0;
 }

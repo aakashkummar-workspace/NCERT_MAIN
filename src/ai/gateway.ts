@@ -9,6 +9,7 @@ import { MockProvider } from "./mock";
 import { AnthropicProvider } from "./anthropic";
 import {
   hasProviderCredentials,
+  textOf,
   type AIMessage,
   type AIProvider,
   type AIResult,
@@ -45,7 +46,8 @@ export type AIFeature =
   | "STUDENT_TUTOR"
   | "REPORT_GENERATION"
   | "RECOMMENDATION"
-  | "CLASSIFICATION";
+  | "CLASSIFICATION"
+  | "MARKING_ASSIST";
 
 export type TaskRequest<T> = {
   organizationId: string;
@@ -230,7 +232,7 @@ export async function runTask<T>(request: TaskRequest<T>): Promise<TaskOutcome<T
   // --- The prompt leaves the building --------------------------------------
 
   const leak = checkForLeaks(
-    [request.system, ...request.messages.map((m) => m.content)].join("\n"),
+    [request.system, ...request.messages.map(textOf)].join("\n"),
   );
   if (!leak.ok) {
     await finish(request, generationId, "FAILED", "UNSAFE_PROMPT", now);

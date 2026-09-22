@@ -129,6 +129,9 @@ const config = [
       // The question-library sweep: it has to find the CBSE schools still
       // waiting for the library before it can copy anything into one.
       "src/core/library/sync.ts",
+      // The weekly WhatsApp digest: it has to find the schools with a parent
+      // who asked for one before it can build any.
+      "src/core/digest/jobs.ts",
       // A school's branded sign-in page is shown to somebody with no session,
       // so its name, colours and logo are a pre-tenant read — exact slug in,
       // the columns the page draws out, nothing about the school's work.

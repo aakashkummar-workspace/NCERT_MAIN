@@ -230,6 +230,21 @@ export default async function ResultsPage({
                         against, not a hard question.
                       </p>
                     )}
+
+                    {item.sharedWrong.map((wrong) => (
+                      <p key={wrong.key} className="ui-item-note">
+                        <strong className="tabular">
+                          {wrong.chosen} of {item.attempted}
+                        </strong>{" "}
+                        chose <strong>{wrong.key}</strong> ({wrong.text}):{" "}
+                        {wrong.names.join(", ")}.
+                        {/* The advice changes with the share: a minority is a
+                            conversation; most of the class is a lesson. */}
+                        {wrong.chosen * 2 < item.attempted
+                          ? " Worth a word with them, rather than reteaching everyone."
+                          : " That is most of the class — worth reteaching."}
+                      </p>
+                    ))}
                   </li>
                 ))}
               </ol>

@@ -181,7 +181,18 @@ declare
     -- Printed sign-in cards. A teacher issues and revokes them inside their own
     -- school; sign-in reads them before a tenant is known, through
     -- `app_auth_consume_card` below rather than through an exception here.
-    'login_cards'
+    'login_cards',
+    -- Photographs of written answers, and a model's draft marks for them. A
+    -- student's own work, tenant-scoped like the answer it belongs to; who
+    -- may see a photo (the teacher, the student themselves) is checked on
+    -- top, and a draft is read by staff only — see core/marking-assist.
+    'answer_images', 'marking_drafts',
+    -- The WhatsApp ledger. Unlike the SMS one it always belongs to a school:
+    -- a digest is sent about a child, from their school, never before sign-in.
+    'whatsapp_messages',
+    -- A teacher's observations beyond marks, for a report's holistic section.
+    -- A student's own record, tenant-scoped like their marks.
+    'holistic_observations'
   ];
 begin
   foreach t in array tenant_tables loop
@@ -1614,6 +1625,25 @@ $$;
 
 revoke all on function app_maint_orgs_with_webhook_work(timestamptz) from public;
 grant execute on function app_maint_orgs_with_webhook_work(timestamptz) to sahayak_app;
+
+-- Which schools have a parent who asked for the weekly WhatsApp digest. Ids
+-- only; the digest itself is built inside each school's own tenant.
+create or replace function app_maint_orgs_with_digest_links()
+  returns table (organization_id uuid)
+  language sql
+  security definer
+  set search_path = public, pg_temp
+  stable
+as $$
+  select distinct l.organization_id
+  from parent_student_links l
+  where l.whatsapp_digest_at is not null
+    and l.revoked_at is null
+    and l.consent_granted_at is not null
+$$;
+
+revoke all on function app_maint_orgs_with_digest_links() from public;
+grant execute on function app_maint_orgs_with_digest_links() to sahayak_app;
 
 -- ---------------------------------------------------------------------------
 -- The shared question library

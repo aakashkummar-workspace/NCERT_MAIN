@@ -236,6 +236,17 @@ function GapCard({
         for it belong in the same place. A closed gap has nothing new to
         start, but what was already running on it can still be measured.
       */}
+      {/*
+        Before anything is measured, the lesson: where it is in the book,
+        what the class chose, who, and a worksheet to teach it with.
+      */}
+      {!closed && gap.scope === "CLASS" && (
+        <p className="ui-gap-cause">
+          <Link href={`/teacher/gaps/${gap.id}/reteach`}>Reteach brief and worksheet</Link>{" "}
+          — the book section, the wrong answers this class chose, and a sheet to print.
+        </p>
+      )}
+
       {(!closed || intervention) && (
         <InterventionPanel
           gapId={gap.id}

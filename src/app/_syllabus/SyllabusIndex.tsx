@@ -1,9 +1,10 @@
 import type { SyllabusGrade } from "@/core/curriculum/syllabus";
 import type { ChapterContents } from "@/core/curriculum/chapter-contents";
 import { Badge } from "@/ui";
+import { sectionAnchor } from "@/core/curriculum/book-link";
 
 /** What the chapter contains, as read from the NCERT book. */
-function BookContents({ contents }: { contents: ChapterContents }) {
+function BookContents({ contents, chapterId }: { contents: ChapterContents; chapterId: string }) {
   // Hindi books are coded ih… / jh…; their contents are written in Hindi.
   const lang = /^[ij]h/.test(contents.book) ? "hi-IN" : "en-IN";
   const byline = [contents.form, contents.author].filter(Boolean).join(" · ");
@@ -19,7 +20,9 @@ function BookContents({ contents }: { contents: ChapterContents }) {
       {contents.sections.length > 0 && (
         <ol className="ui-syl-sections">
           {contents.sections.map((section, index) => (
-            <li key={index}>
+            // An anchor per section, so "revisit §6.4" from the Mistake Bank
+            // opens the chapter at the section rather than at the top.
+            <li key={index} id={section.number ? sectionAnchor(chapterId, section.number) : undefined}>
               <p className="ui-syl-section-title">
                 {section.number && <span className="tabular">{section.number} </span>}
                 {section.title}
@@ -34,7 +37,7 @@ function BookContents({ contents }: { contents: ChapterContents }) {
               {section.subsections.length > 0 && (
                 <ol className="ui-syl-sections" data-level="2">
                   {section.subsections.map((sub, i) => (
-                    <li key={i}>
+                    <li key={i} id={sub.number ? sectionAnchor(chapterId, sub.number) : undefined}>
                       <p className="ui-syl-section-title">
                         {sub.number && <span className="tabular">{sub.number} </span>}
                         {sub.title}
@@ -180,7 +183,7 @@ export function SyllabusIndex({
                 <ol className="ui-syl-chapters">
                   {subject.chapters.map((chapter) => (
                     <li key={chapter.id}>
-                      <details className="ui-syl-chapter">
+                      <details className="ui-syl-chapter" id={sectionAnchor(chapter.id, null)}>
                         <summary>
                           <span className="ui-syl-chapter-number tabular">{chapter.number}</span>
                           <span className="ui-syl-chapter-title" lang="en-IN">
@@ -194,7 +197,7 @@ export function SyllabusIndex({
                         </summary>
 
                         <div className="ui-syl-chapter-body">
-                          {chapter.contents && <BookContents contents={chapter.contents} />}
+                          {chapter.contents && <BookContents contents={chapter.contents} chapterId={chapter.id} />}
                           {chapter.contents && chapter.topics.length > 0 && (
                             <h4 className="ui-syl-part-title">Learning outcomes</h4>
                           )}

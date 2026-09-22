@@ -1,7 +1,20 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { shrinkPhoto } from "@/app/_photos/shrink";
+
+type Draft = {
+  readable: boolean;
+  transcript: string | null;
+  total: number | null;
+  criteria: { criterionId: string; marks: number; reason: string }[] | null;
+  reason: string | null;
+  feedback: string | null;
+  confidence: "low" | "medium" | "high";
+  concerns: string[];
+  acceptedAt: string | null;
+};
 
 type Answer = {
   answerId: string;
@@ -13,6 +26,10 @@ type Answer = {
   feedback: string | null;
   gradeSource: string | null;
   rubricScores: { criterionId: string; marks: number; note?: string | null }[] | null;
+  /** Photo ids: the student's own, or of a paper script. */
+  images: string[];
+  /** A model's suggested marks. Never a mark until the teacher saves. */
+  draft: Draft | null;
 };
 
 type Criterion = {
@@ -65,6 +82,7 @@ export function MarkingBoard({ groups }: { groups: Group[] }) {
       | { awardedMarks: number }
       | { scores: { criterionId: string; marks: number }[] },
     feedback: string,
+    assisted: boolean,
   ) {
     setBusy(answer.answerId);
     setErrors((all) => ({ ...all, [answer.answerId]: "" }));
@@ -73,7 +91,7 @@ export function MarkingBoard({ groups }: { groups: Group[] }) {
       const response = await fetch(`/api/marking/${answer.answerId}/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...payload, feedback: feedback || null }),
+        body: JSON.stringify({ ...payload, feedback: feedback || null, assisted }),
       });
       const body = await response.json().catch(() => null);
 
@@ -177,7 +195,9 @@ export function MarkingBoard({ groups }: { groups: Group[] }) {
             error={errors[answer.answerId]}
             busy={busy === answer.answerId}
             rubric={group.rubric}
-            onAward={(payload, feedback) => void award(answer, payload, feedback)}
+            onAward={(payload, feedback, assisted) =>
+              void award(answer, payload, feedback, assisted)
+            }
           />
         ))}
       </ol>
@@ -207,9 +227,59 @@ function AnswerRow({
       | { awardedMarks: number }
       | { scores: { criterionId: string; marks: number }[] },
     feedback: string,
+    assisted: boolean,
   ) => void;
 }) {
+  const router = useRouter();
   const settled = savedMarks ?? answer.awardedMarks;
+  const [images, setImages] = useState(answer.images);
+  const [draft, setDraft] = useState<Draft | null>(answer.draft);
+  const [drafting, setDrafting] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [assistError, setAssistError] = useState<string | null>(null);
+  /** The marks on screen started from the draft: saved as AI_ASSISTED. */
+  const [usedDraft, setUsedDraft] = useState(false);
+  const photoRef = useRef<HTMLInputElement>(null);
+
+  async function addPhoto(file: File) {
+    setUploading(true);
+    setAssistError(null);
+    try {
+      const body = await shrinkPhoto(file);
+      const response = await fetch(`/api/marking/${answer.answerId}/images/`, {
+        method: "POST",
+        headers: { "Content-Type": "image/jpeg" },
+        body,
+      });
+      const payload = await response.json().catch(() => null);
+      if (!response.ok) {
+        setAssistError(payload?.error?.message ?? "That photo could not be added.");
+      } else {
+        setImages((current) => [...current, payload.id as string]);
+        router.refresh();
+      }
+    } catch {
+      setAssistError("That photo could not be opened or sent. Try again.");
+    }
+    setUploading(false);
+  }
+
+  async function askForDraft() {
+    setDrafting(true);
+    setAssistError(null);
+    try {
+      const response = await fetch(`/api/marking/${answer.answerId}/draft/`, { method: "POST" });
+      const payload = await response.json().catch(() => null);
+      if (!response.ok) {
+        setAssistError(payload?.error?.message ?? "No draft this time. Mark it yourself.");
+      } else {
+        setDraft(payload.draft as Draft);
+      }
+    } catch {
+      setAssistError("We could not reach the server. Nothing was drafted.");
+    }
+    setDrafting(false);
+  }
   const [feedback, setFeedback] = useState(answer.feedback ?? "");
   // Open when there is already something to read; a link otherwise.
   const [commenting, setCommenting] = useState(Boolean(answer.feedback));
@@ -254,6 +324,134 @@ function AnswerRow({
       </div>
 
       <p className="ui-answer-text">{answer.response}</p>
+
+      {images.length > 0 && (
+        <div className="ui-answer-photos">
+          {images.map((id, photoIndex) => (
+            <a
+              key={id}
+              href={`/api/answer-images/${id}/`}
+              target="_blank"
+              rel="noreferrer"
+              className="ui-answer-photo"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`/api/answer-images/${id}/`}
+                alt={`Photo ${photoIndex + 1} of this answer`}
+                loading="lazy"
+              />
+            </a>
+          ))}
+        </div>
+      )}
+
+      <div className="ui-answer-assist">
+        <input
+          ref={photoRef}
+          type="file"
+          accept="image/*"
+          capture="environment"
+          className="sr-only"
+          tabIndex={-1}
+          aria-hidden="true"
+          onChange={(event) => {
+            const file = event.target.files?.[0];
+            event.target.value = "";
+            if (file) void addPhoto(file);
+          }}
+        />
+        {images.length < 3 && (
+          <button
+            type="button"
+            className="ui-link-button"
+            disabled={uploading}
+            onClick={() => photoRef.current?.click()}
+          >
+            {uploading ? "Adding the photo…" : "Add a photo of the script"}
+          </button>
+        )}
+        <button
+          type="button"
+          className="ui-link-button"
+          disabled={drafting}
+          onClick={() => void askForDraft()}
+        >
+          {drafting ? "Reading the answer…" : draft ? "Draft again" : "✦ Draft marks with AI"}
+        </button>
+      </div>
+      {assistError && (
+        <p className="ui-hint" role="alert">
+          {assistError}
+        </p>
+      )}
+
+      {draft && (
+        <aside className="ui-mark-draft" aria-label="Suggested marks">
+          <p className="ui-mark-draft-head">
+            <strong>Suggested, not saved.</strong>{" "}
+            {draft.readable
+              ? `${draft.total} / ${answer.marks} · ${draft.confidence} confidence`
+              : "The model could not read this answer."}
+          </p>
+          {draft.transcript && (
+            <details>
+              <summary>What it read</summary>
+              <p className="ui-mark-draft-transcript">{draft.transcript}</p>
+            </details>
+          )}
+          {draft.criteria && rubric && (
+            <ul className="ui-mark-draft-criteria">
+              {draft.criteria.map((row) => (
+                <li key={row.criterionId}>
+                  <span className="tabular">
+                    {row.marks} / {rubric.criteria.find((c) => c.id === row.criterionId)?.marks ?? "?"}
+                  </span>{" "}
+                  <strong>{rubric.criteria.find((c) => c.id === row.criterionId)?.label}</strong>
+                  {row.reason && <> — {row.reason}</>}
+                </li>
+              ))}
+            </ul>
+          )}
+          {draft.reason && <p className="ui-mark-draft-reason">{draft.reason}</p>}
+          {draft.concerns.length > 0 && (
+            <ul className="ui-mark-draft-concerns">
+              {draft.concerns.map((concern) => (
+                <li key={concern}>⚠ {concern}</li>
+              ))}
+            </ul>
+          )}
+          {draft.readable && (
+            <button
+              type="button"
+              className="ui-button"
+              data-variant="secondary"
+              data-size="sm"
+              onClick={() => {
+                if (draft.criteria) {
+                  setCriterionMarks(
+                    Object.fromEntries(draft.criteria.map((row) => [row.criterionId, row.marks])),
+                  );
+                }
+                if (draft.feedback) {
+                  setFeedback(draft.feedback);
+                  setCommenting(true);
+                }
+                setUsedDraft(true);
+              }}
+            >
+              <span>Use these marks</span>
+            </button>
+          )}
+          {usedDraft && (
+            <p className="ui-hint" style={{ margin: "6px 0 0" }}>
+              {rubric
+                ? "Filled in below. Check them, change anything, then save."
+                : `Suggested ${draft.total}: it is marked below. Press it, or another mark, to save.`}
+            </p>
+          )}
+        </aside>
+      )}
 
       {rubric ? (
         /*
@@ -323,6 +521,7 @@ function AnswerRow({
                     })),
                   },
                   feedback,
+                  usedDraft,
                 )
               }
             >
@@ -338,8 +537,9 @@ function AnswerRow({
               type="button"
               className="ui-mark"
               data-chosen={settled === value || undefined}
+              data-suggested={(usedDraft && draft?.total === value) || undefined}
               disabled={busy}
-              onClick={() => onAward({ awardedMarks: value }, feedback)}
+              onClick={() => onAward({ awardedMarks: value }, feedback, usedDraft)}
             >
               {value}
             </button>
@@ -372,9 +572,10 @@ function AnswerRow({
                   })),
                 },
                 feedback,
+                usedDraft,
               );
             } else if (!rubric) {
-              onAward({ awardedMarks: settled }, feedback);
+              onAward({ awardedMarks: settled }, feedback, usedDraft);
             }
           }}
         />

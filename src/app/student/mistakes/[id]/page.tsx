@@ -3,6 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { getSession } from "@/core/identity/context";
 import { getMistake, retryMessage } from "@/core/mistakes/read";
+import { bookLinksForConcepts } from "@/core/curriculum/book-links";
 import { helpSoFar, tutorOffered } from "@/core/tutor";
 import { StudentShell } from "@/ui/StudentShell";
 import { Badge, PageHeader } from "@/ui";
@@ -36,6 +37,7 @@ function describeResponse(
   if (value.kind === "boolean") return value.value === true ? "True" : "False";
   if (value.kind === "numeric") return String(value.value ?? "");
   if (value.kind === "text") return String(value.value ?? "");
+  if (value.kind === "paper") return "Written on your answer script.";
   return null;
 }
 
@@ -62,11 +64,13 @@ export default async function MistakePage({
     organizationId: session.actor.organizationId,
     userId: session.actor.userId,
   };
-  const [help, offered, saved] = await Promise.all([
+  const [help, offered, saved, books] = await Promise.all([
     helpSoFar(actor, mistake.questionId),
     tutorOffered(actor.organizationId),
     savedQuestionIds(actor.organizationId, actor.userId, [mistake.questionId]),
+    bookLinksForConcepts(mistake.conceptId ? [mistake.conceptId] : [], "student"),
   ]);
+  const book = mistake.conceptId ? books.get(mistake.conceptId) : undefined;
 
   const given = describeResponse(mistake.originalResponse, mistake.options);
 
@@ -189,6 +193,17 @@ export default async function MistakePage({
           )}
           {mistake.explanation && (
             <p className="ui-mistake-detail-explanation">{mistake.explanation}</p>
+          )}
+          {/*
+            Where it is in their own book, after the explanation and never
+            before the retry: reading the section is how the next DIFFERENT
+            question on this idea gets answered, which is what closes it.
+          */}
+          {book && (
+            <p className="ui-mistake-detail-given">
+              <span className="ui-mistake-detail-label">Go over it in your book</span>
+              <Link href={book.href}>{book.label}</Link>
+            </p>
           )}
           {mistake.status !== "RESOLVED" && (
             <p className="ui-hint" style={{ marginTop: 12 }}>

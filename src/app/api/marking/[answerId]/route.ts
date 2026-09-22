@@ -25,6 +25,8 @@ const Body = z.object({
     .max(8)
     .optional(),
   feedback: z.string().max(2000).nullable().optional(),
+  /** Built from a model's draft: stamped AI_ASSISTED. Still the teacher's mark. */
+  assisted: z.boolean().optional(),
 });
 
 /**
@@ -71,9 +73,10 @@ export async function POST(
     );
   }
 
+  const options = { assisted: parsed.data.assisted === true };
   const result = hasScores
-    ? await awardByRubric(actor, answerId, parsed.data.scores!, parsed.data.feedback)
-    : await awardMarks(actor, answerId, parsed.data.awardedMarks!, parsed.data.feedback);
+    ? await awardByRubric(actor, answerId, parsed.data.scores!, parsed.data.feedback, options)
+    : await awardMarks(actor, answerId, parsed.data.awardedMarks!, parsed.data.feedback, options);
 
   // A mark outside the question's range is the teacher's mistake to see, not
   // something to clamp silently.

@@ -45,6 +45,7 @@ export default async function AttemptPage({
         expiresAt: player.expiresAt.toISOString(),
         remainingMs: player.remainingMs,
         totalMarks: player.totalMarks,
+        readAloud: player.readAloud,
         questions: player.questions,
       }}
     />

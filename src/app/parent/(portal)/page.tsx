@@ -3,6 +3,9 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getSession } from "@/core/identity/context";
 import { childView, linkedStudents } from "@/core/parent/read";
+import { digestState } from "@/core/digest";
+import { whatsappConfigured } from "@/whatsapp/gateway";
+import { WhatsappDigestToggle } from "./WhatsappDigestToggle";
 import { ParentShell } from "@/ui/ParentShell";
 import { Badge, EmptyState, PageHeader, type Tone } from "@/ui";
 
@@ -66,6 +69,9 @@ export default async function ParentHome({
   if (!view) redirect("/parent");
 
   const firstName = view.fullName.split(/\s+/)[0] ?? view.fullName;
+  // Offered only where a provider is configured: a switch that promises
+  // messages nobody will send is worse than no switch.
+  const digestOn = whatsappConfigured() ? await digestState(actor, selected.studentUserId) : null;
 
   return (
     <ParentShell
@@ -226,6 +232,16 @@ export default async function ParentHome({
       <p className="ui-plan-link" style={{ marginTop: 18 }}>
         <Link href="/parent/reports">See term reports</Link>
       </p>
+
+      {digestOn !== null && (
+        <div style={{ marginTop: 18 }}>
+          <WhatsappDigestToggle
+            studentUserId={selected.studentUserId}
+            firstName={firstName}
+            initial={digestOn}
+          />
+        </div>
+      )}
 
       <p className="ui-hint" style={{ marginTop: 18 }}>
         {/*
