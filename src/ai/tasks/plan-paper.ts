@@ -80,7 +80,7 @@ WHEN TO REFUSE
 
 If the request is not about setting a paper, or names a subject none of the classes study, set understood to false, explain in one sentence in note, and fill the other fields with any valid values. Never invent a class or a chapter that is not listed.
 
-note: when understood is true, one short sentence stating any assumption you made that the teacher should check (for example, which class you picked), or an empty string.`;
+note: when understood is true, one short sentence stating any assumption you made that the teacher should check (for example, which class you picked), or an empty string. Name classes and chapters by their names, never by their numbers in the lists — the teacher never sees the numbers.`;
 }
 
 export function buildRequest(context: PlanContext): string {

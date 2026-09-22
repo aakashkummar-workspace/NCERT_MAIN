@@ -662,3 +662,14 @@
 .ui-paper-ask-title {
   margin: 0;
 }
+
+/* ----------------------------------------------------- Practice from a sentence */
+
+/* Scoped under the result so it beats `.ui-paper-ask-result ul`, which adds bullets. */
+.ui-paper-ask-result .ui-practice-ask-list {
+  list-style: none;
+  margin: 12px 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}

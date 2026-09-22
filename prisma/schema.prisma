@@ -1682,6 +1682,8 @@ enum AIFeature {
   MARKING_ASSIST
   /// A teacher's sentence turned into paper-builder settings — see core/assessments/from-request.
   PAPER_PLANNING
+  /// A teacher's sentence turned into practice sets to propose — see core/practice/from-request.
+  PRACTICE_PLANNING
 }
 
 enum AIGenerationStatus {

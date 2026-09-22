@@ -942,6 +942,14 @@ The lesson both times: **if a query must run before a tenant is known, it belong
   **"The answer is B"**, which is the single likeliest sentence a model would
   write if it were going to leak at all. A unit test caught it before anything
   shipped, which is the whole argument for the file existing.
+- **Ruling out every wrong option is a leak too.** The real-model walkthrough
+  found an "explain it differently" that went through A, C and D in turn and
+  left B standing — nothing named B, and `namesTheKey` passed it. The guard now
+  also refuses a reply that mentions every wrong option (by its text, "(C)",
+  "options A, C and D", or a line opening "D.") while leaving a correct one
+  unmentioned (`what: "elimination"`). Setting ONE or two aside stays allowed —
+  "this is not an SSS case" is teaching — and a lone capital in prose
+  ("triangle A") still counts as a figure's label, not an option.
 - **Three named rungs, never one "Help" button.** Hint, then method, then the
   idea said another way, each button naming what the student is agreeing to see.
   One button would let somebody who wanted a nudge land on a full walkthrough —
@@ -2823,6 +2831,26 @@ about sixty-five defects. The lessons are about where tests stop looking:
 - **Today's date goes in the request, not the system prompt** — the cache
   rule. The teacher's sentence never reaches the ledger or the audit row;
   only counts do.
+
+### Practice from a sentence
+
+- **It PROPOSES and writes nothing.** A paper has a draft state; assigned
+  practice does not — `assignPractice` puts a card on every student's home
+  page the moment it runs. So `core/practice/from-request.ts` returns proposed
+  sets (class, one set per idea, count, day) and the teacher presses Set on
+  the Assessments page ("Describe practice"), which posts each ticked set to
+  the class page's own route. Nothing reaches a class that a person did not send.
+- **One set per idea, at most five.** A chapter named in the sentence becomes
+  its ideas, each with its own bank count — never one set pretending to be
+  several (the "per concept, never per chapter" rule).
+- **The bank is counted by `practiceAvailable`**, the function
+  `assignPractice`'s refusal now uses, so the preview cannot say ready and the
+  press refuse. An idea the class already has open practice on is SAID and left
+  unticked, not refused — setting would accept it, and the preview must not be
+  stricter than the commit either.
+- Concepts and classes go to the model by index, sorted so an index is stable;
+  a count is clamped to a set's 4–10 and a date already over is dropped, both
+  said. Metered as one generation; ledger feature `PRACTICE_PLANNING`.
 
 ## Things not to do
 

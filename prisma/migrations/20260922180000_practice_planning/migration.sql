@@ -1,0 +1,2 @@
+-- AlterEnum
+ALTER TYPE "AIFeature" ADD VALUE 'PRACTICE_PLANNING';

@@ -57,6 +57,37 @@ export function clampCount(wanted: number): number {
   return Math.min(MAX_SET, Math.max(MIN_SET, Math.round(wanted)));
 }
 
+type Tx = Parameters<Parameters<typeof withTenant>[1]>[0];
+
+/**
+ * How many APPROVED, machine-markable questions this school holds on each
+ * concept. Practice cannot serve a written answer: there is nobody waiting to
+ * mark it, so serving one would promise feedback that never arrives.
+ *
+ * One function for the refusal below and for the proposal a sentence produces
+ * (./from-request.ts), so the preview cannot promise what setting refuses.
+ */
+export async function practiceAvailable(
+  tx: Tx,
+  organizationId: string,
+  conceptIds: string[],
+): Promise<Map<string, number>> {
+  if (conceptIds.length === 0) return new Map();
+  const rows = await tx.$queryRaw<{ concept_id: string; n: bigint }[]>`
+    select co.concept_id::text as concept_id, count(distinct q.id) as n
+    from questions q
+    join question_outcomes qo on qo.question_id = q.id
+    join concept_outcomes co on co.learning_outcome_id = qo.learning_outcome_id
+    where q.organization_id = ${organizationId}::uuid
+      and q.status = 'APPROVED'
+      and q.deleted_at is null
+      and q.type in ('MCQ', 'MULTI_SELECT', 'TRUE_FALSE', 'NUMERIC', 'FILL_BLANK')
+      and co.concept_id = any(${conceptIds}::uuid[])
+    group by co.concept_id
+  `;
+  return new Map(rows.map((row) => [row.concept_id, Number(row.n)]));
+}
+
 export async function assignPractice(
   actor: TeacherActor,
   input: AssignInput,
@@ -70,21 +101,8 @@ export async function assignPractice(
     });
     if (!klass) return { error: "not-found" as const };
 
-    // How many APPROVED, machine-markable questions this school holds on the
-    // concept. Practice cannot serve a written answer: there is nobody waiting
-    // to mark it, so serving one would promise feedback that never arrives.
-    const available = await tx.$queryRaw<{ n: bigint }[]>`
-      select count(distinct q.id) as n
-      from questions q
-      join question_outcomes qo on qo.question_id = q.id
-      join concept_outcomes co on co.learning_outcome_id = qo.learning_outcome_id
-      where q.organization_id = ${actor.organizationId}::uuid
-        and q.status = 'APPROVED'
-        and q.deleted_at is null
-        and q.type in ('MCQ', 'MULTI_SELECT', 'TRUE_FALSE', 'NUMERIC', 'FILL_BLANK')
-        and co.concept_id = ${input.conceptId}::uuid
-    `;
-    return { klass, available: Number(available[0]?.n ?? 0) };
+    const available = await practiceAvailable(tx, actor.organizationId, [input.conceptId]);
+    return { klass, available: available.get(input.conceptId) ?? 0 };
   });
 
   if ("error" in prepared) {

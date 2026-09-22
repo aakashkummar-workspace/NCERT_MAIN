@@ -12,6 +12,7 @@ import { AppShell } from "@/ui/AppShell";
 import { Badge, Card, EmptyState, PageHeader, Stack } from "@/ui";
 import { NewAssessment } from "./NewAssessment";
 import { PaperFromRequest } from "./PaperFromRequest";
+import { PracticeFromRequest } from "./PracticeFromRequest";
 
 export const metadata: Metadata = { title: "Assessments" };
 
@@ -78,6 +79,12 @@ export default async function AssessmentsPage({
       {classes.length > 0 && (
         <div style={{ marginBottom: 16 }}>
           <PaperFromRequest />
+        </div>
+      )}
+      {/* Practice from a sentence: proposed sets, set only when the teacher presses Set. */}
+      {classes.length > 0 && (
+        <div style={{ marginBottom: 16 }}>
+          <PracticeFromRequest />
         </div>
       )}
 
