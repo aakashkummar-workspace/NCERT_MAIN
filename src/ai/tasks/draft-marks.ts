@@ -87,7 +87,9 @@ HOW TO MARK
 
 Mark the way a careful CBSE examiner marks: against the scheme you are given, one row at a time, giving credit for correct method even when the final answer is wrong, and for a correct answer reached by a different valid method. Marks go in halves: 0, 0.5, 1, 1.5 and so on. Never give more than a row is worth.
 
-If there is no scheme, give one total out of the question's marks, in halves.
+If there is no scheme, give one total out of the question's marks, in halves, marking against the model answer: each distinct step or point it makes carries part of the marks. An answer that stops before the conclusion the question asks for does not get full marks, however good the working before it.
+
+Your total and your feedback must agree. If your feedback tells the student to add something the answer needed, the total is below full marks.
 
 Be exact about what is on the page. If a step is missing, say which. If the final answer is wrong, say what it should have been only in "reason", which the teacher reads — never in "feedback".
 
@@ -105,7 +107,7 @@ criteria: one entry for EVERY scheme row, using the row's number as given (0, 1,
 
 feedback: two or three sentences TO the student, in the second person: what they did well and the one thing to fix. Plain Indian school English. No praise for effort, no exclamation marks, never "wrong answer".
 
-confidence: high only if the answer is clearly legible and the scheme applies without judgement calls.
+confidence: high only if the answer is clearly legible and the scheme applies without judgement calls. With no written scheme, confidence is never high.
 
 PRIVACY
 

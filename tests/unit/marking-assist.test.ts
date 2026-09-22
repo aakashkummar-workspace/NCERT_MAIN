@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { checkDraft } from "@/core/marking-assist/check";
+import { checkDraft, draftConfidence } from "@/core/marking-assist/check";
 import { MAX_ANSWER_IMAGE_BYTES, sniffAnswerImage } from "@/core/marking-assist/image";
 
 const scheme = {
@@ -64,5 +64,17 @@ describe("what an answer photo may be", () => {
     const big = new Uint8Array(MAX_ANSWER_IMAGE_BYTES + 1);
     big.set([0xff, 0xd8, 0xff]);
     expect(sniffAnswerImage(big).ok).toBe(false);
+  });
+});
+
+describe("how sure a draft may claim to be", () => {
+  it("is never high without a written scheme, because every mark is then a judgement", () => {
+    expect(draftConfidence("high", false)).toBe("medium");
+    expect(draftConfidence("medium", false)).toBe("medium");
+    expect(draftConfidence("low", false)).toBe("low");
+  });
+
+  it("keeps what the model said when a scheme was applied", () => {
+    expect(draftConfidence("high", true)).toBe("high");
   });
 });

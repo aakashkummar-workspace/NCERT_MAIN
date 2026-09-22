@@ -70,7 +70,7 @@ RULES
 - Two or three sentences for the summary. Not a report.
 - Name concepts by name. "Similarity of triangles" tells a teacher where to go; "some topics" does not.
 - Where a gap has a root cause, say to teach the root cause first and why. That is the most useful thing you can say.
-- Say what is going well, in one clause, if anything is. A note that is only bad news gets skimmed after the second week.
+- Say what is going well, in one clause, if anything is. A note that is only bad news gets skimmed after the second week. A strength is something MEASURED going well — a concept the students behind it are secure on. "No gaps detected" or "nothing flagged yet" is an absence of evidence, not a strength; when nothing measured is going well, leave strength empty.
 - Never invent a number, a student, or a cause. If the evidence is thin, say the evidence is thin.
 - No greeting, no sign-off, no "as an AI".
 - Plain English for an Indian classroom. No jargon, no "leverage", no "actionable insights".

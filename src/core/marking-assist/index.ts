@@ -6,7 +6,7 @@ import { writeAudit } from "@/core/identity/audit";
 import { isObjective, type AnswerKey, type QuestionType } from "@/core/questions/validate";
 import { parseRubric } from "@/core/questions/rubric";
 import { draftMarksWithModel } from "@/ai/tasks/draft-marks";
-import { checkDraft } from "./check";
+import { checkDraft, draftConfidence } from "./check";
 import { MAX_IMAGES_PER_ANSWER, sniffAnswerImage } from "./image";
 
 /**
@@ -368,7 +368,7 @@ export async function draftMarks(actor: Actor, answerId: string): Promise<DraftR
     criteria: (checked.criteria ?? Prisma.DbNull) as Prisma.InputJsonValue | typeof Prisma.DbNull,
     reason: value.reason.trim() || null,
     feedback: checked.readable ? value.feedback.trim() || null : null,
-    confidence: value.confidence,
+    confidence: draftConfidence(value.confidence, Boolean(rubric)),
     concerns: value.concerns.map((concern) => concern.trim()).filter(Boolean),
     requestedById: actor.userId,
     createdAt: new Date(),

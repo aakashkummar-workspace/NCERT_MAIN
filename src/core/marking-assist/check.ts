@@ -20,6 +20,19 @@ export type DraftInput = {
 
 export type SchemeRow = { id: string; marks: number };
 
+/**
+ * How sure a draft may claim to be. Without a written scheme every draft is a
+ * judgement about how many marks an answer is worth, and a teacher reading
+ * "high" beside it would take the number on trust. The prompt says the same;
+ * this is the rule that does not depend on the model reading it.
+ */
+export function draftConfidence(
+  claimed: "low" | "medium" | "high",
+  hasScheme: boolean,
+): "low" | "medium" | "high" {
+  return !hasScheme && claimed === "high" ? "medium" : claimed;
+}
+
 export type CheckedDraft =
   | {
       ok: true;
