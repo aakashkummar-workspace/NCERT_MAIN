@@ -7,6 +7,8 @@ import type { QuestionType } from "@/core/questions/validate";
 import { cachedPickerOptions } from "@/app/_curriculum/picker";
 import { AppShell } from "@/ui/AppShell";
 import { PageHeader } from "@/ui";
+import { boardPaperNeeds } from "@/core/questions/board-needs";
+import { BoardNeeds } from "./BoardNeeds";
 import { ReviewQueue } from "./ReviewQueue";
 
 export const metadata: Metadata = { title: "Review drafts" };
@@ -50,10 +52,11 @@ export default async function ReviewPage({
   const skip = Math.max(Number.parseInt(one("skip"), 10) || 0, 0);
 
   const organizationId = session.actor.organizationId;
-  const [queue, counts, picker] = await Promise.all([
+  const [queue, counts, picker, needs] = await Promise.all([
     reviewQueue(organizationId, { subjectId: subjectId || undefined, chapterId: chapterId || undefined, type }, skip),
     draftCounts(organizationId, { subjectId: subjectId || undefined, chapterId: chapterId || undefined }),
     cachedPickerOptions(organizationId),
+    boardPaperNeeds(organizationId),
   ]);
 
   const subject = picker.subjects.find((s) => s.id === subjectId);
@@ -85,6 +88,14 @@ export default async function ReviewPage({
       <PageHeader
         title="Review drafts"
         description={`${counts.total} ${counts.total === 1 ? "draft is" : "drafts are"} waiting in the bank. A draft cannot go in a paper until someone approves it.`}
+      />
+
+      {/* Where to start: the sections a review would unlock. Nothing here
+          approves anything — it only orders the reading. */}
+      <BoardNeeds
+        needs={needs}
+        href={(next) => href({ subjectId: next.subjectId, type: next.type })}
+        subjectLabel={(id) => picker.subjects.find((s) => s.id === id)?.label ?? "This subject"}
       />
 
       <nav className="ui-rq-filters" aria-label="Filter the drafts">

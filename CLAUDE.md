@@ -1459,6 +1459,24 @@ The lesson both times: **if a query must run before a tenant is known, it belong
   the skipped ones, and a finished batch offers them again.
 - **The question page and the queue share `QuestionView` and `toDetail`**, so
   what a question says and whether it is approvable cannot differ between them.
+- **"What a board paper still needs" says where to start.** The imported bank
+  is approved multiple choice and DRAFT everything else, so a board-pattern
+  paper fills Section A and stops — and the queue's own order (chapter by
+  chapter) cannot tell a reviewer that. `sectionNeeds` (pure, in
+  `core/assessments/pattern.ts`) reports each section's printed count against
+  what the bank holds APPROVED and what is waiting in DRAFT, built on
+  `sectionFeasibility` so the panel and the builder place a question the same
+  way. Short sections with drafts waiting sort first, biggest gap first; each
+  links to the queue filtered to those drafts. It changes where a reviewer
+  begins and nothing else — still one question at a time, still no approve-all.
+- **A section an earlier one always claims is MERGED.** Social Science files
+  its map question as a 5-mark long answer, which is Section D's own type and
+  marks, so D takes every one and F alone would read "none approved" however
+  much was reviewed. It shows as "Section D and F", wanting nine.
+- **Only subjects with drafts waiting are listed; the rest are a COUNT.** Ten
+  subjects of four sections is forty lines saying the same thing — a console
+  is not a dump, the rule the concept console's alert already follows. A school
+  with nothing written gets one sentence and a link to generation.
 - **Its classes are `ui-rq-*`**: results.css already owns `.ui-review`.
 
 ### Reviewing the curriculum

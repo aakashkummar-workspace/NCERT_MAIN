@@ -2860,3 +2860,37 @@
   color: inherit;
   opacity: 0.85;
 }
+
+/* The review queue's "what a board paper still needs" panel. */
+.ui-rq-needs-subject + .ui-rq-needs-subject {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.ui-rq-needs-title {
+  margin: 0 0 6px;
+}
+.ui-rq-needs-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+.ui-rq-needs-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  font-size: 14px;
+}
+.ui-rq-needs-section {
+  min-width: 260px;
+  flex: 1 1 260px;
+}
+@media (max-width: 640px) {
+  .ui-rq-needs-section {
+    min-width: 0;
+    flex-basis: 100%;
+  }
+}

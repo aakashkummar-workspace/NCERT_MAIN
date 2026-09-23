@@ -221,6 +221,84 @@ export function sectionFeasibility(
   }));
 }
 
+export type SectionNeed = {
+  /** "B", or "D and F" when two sections draw on the same questions. */
+  names: string;
+  title: string;
+  /** The first type the section takes that has drafts waiting, else its first type — for the queue link. */
+  type: QuestionType;
+  marksEach: number;
+  /** Printed on ONE paper, alternatives included. */
+  wanted: number;
+  approved: number;
+  /** Drafts of a kind this section takes, waiting in the review queue. */
+  drafts: number;
+};
+
+/**
+ * What stands between a school and one board-pattern paper, section by
+ * section — the review queue's "most needed" panel.
+ *
+ * Built on `sectionFeasibility`, so a draft counts towards the section the
+ * builder would place it in and this panel cannot disagree with the builder.
+ * A section no question can ever reach, because an earlier one with the same
+ * type and marks claims them all (Social Science's map section behind its long
+ * answers), is merged into that earlier one: shown alone it would read "none
+ * approved" forever, whatever anybody reviewed.
+ *
+ * Ordered by what reviewing would unlock: short sections with drafts waiting
+ * first, the biggest gap first; short with nothing to review next; full last.
+ */
+export function sectionNeeds(
+  sections: SectionPlan[],
+  approved: { type: QuestionType; marks: number; count: number }[],
+  drafts: { type: QuestionType; marks: number; count: number }[],
+): SectionNeed[] {
+  const have = sectionFeasibility(sections, approved);
+  const waiting = sectionFeasibility(sections, drafts);
+  const draftTypes = (section: SectionPlan) =>
+    section.types.find((type) =>
+      drafts.some((row) => row.count > 0 && row.type === type && sectionFor(sections, row.type, row.marks) === section.name),
+    );
+
+  const rows: SectionNeed[] = [];
+  const byName = new Map<string, SectionNeed>();
+  sections.forEach((section, index) => {
+    const owner = sections
+      .slice(0, index)
+      .find((earlier) => earlier.marksEach === section.marksEach && section.types.every((type) => earlier.types.includes(type)));
+    if (owner) {
+      const merged = byName.get(owner.name)!;
+      merged.names = `${merged.names} and ${section.name}`;
+      merged.wanted += section.count + section.internalChoices;
+      byName.set(section.name, merged);
+      return;
+    }
+    const row: SectionNeed = {
+      names: section.name,
+      title: section.title,
+      type: draftTypes(section) ?? section.types[0]!,
+      marksEach: section.marksEach,
+      wanted: have[index]!.wanted,
+      approved: have[index]!.available,
+      drafts: waiting[index]!.available,
+    };
+    rows.push(row);
+    byName.set(section.name, row);
+  });
+
+  const rank = (row: SectionNeed) => (row.approved >= row.wanted ? 2 : row.drafts > 0 ? 0 : 1);
+  return rows
+    .map((row, index) => ({ row, index }))
+    .sort(
+      (a, b) =>
+        rank(a.row) - rank(b.row) ||
+        (b.row.wanted - b.row.approved) - (a.row.wanted - a.row.approved) ||
+        a.index - b.index,
+    )
+    .map(({ row }) => row);
+}
+
 export function describeSectionShortfalls(supply: SectionSupply[]): string[] {
   return supply
     .filter((row) => row.available < row.wanted)
